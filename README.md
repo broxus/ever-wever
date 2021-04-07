@@ -10,7 +10,7 @@ convert FreeTON WTONs into the Ethereum WTONs at the 1:1 ratio and back.
 ## How can I wrap my TONs into WTONs?
 
 It's simple! First of all, you should use the latest FreeTON Crystal wallet ([link](https://l1.broxus.com/freeton/wallet)).
-Make sure you have the latest version by clicking on the left-upper icon, than "Settings".
+Make sure you have the latest version by clicking on the right-upper icon, than "Settings".
 
 1. Open Crystal wallet and click on TON section
 2. Send as much TONs as you want to the WTON Vault address - 
@@ -43,11 +43,11 @@ automatically detects that the Ethereum address was used and create the cross-ch
 ## How can I transfer WTONs from Ethereum to FreeTON?
 
 1. Go to the [https://tonbridge.io](https://tonbridge.io)
-2. Connect you Wallet
+2. Connect your Wallet
 3. Choose the ETH-TON tab, specify the "Wrapped TON Crystal, WTON" token from the dropdown
 4. Specify the amount of WTONs to send to the FreeTON and click Next
 5. Specify the FreeTON address you want to send WTONs to.
-    1. Open crystal Crystal Wallet
+    1. Open Crystal Wallet
     2. Click on the TON section
     3. Click receive and copy address. It looks like `0:...`
     4. Paste your FreeTON address into the "Recipient TON address" input and click Next
