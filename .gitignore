@@ -1,0 +1,7 @@
+node_modules/
+*.env
+.idea/
+ethereum/cache
+ethereum/artifacts
+ethereum/.openzeppelin
+*.log

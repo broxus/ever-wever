@@ -1,0 +1,1638 @@
+.macro constructor
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+;; constructor protection
+GETGLOB 6
+THROWIF 51
+PUSHINT 1
+SETGLOB 6
+;; end constructor protection
+; Decode input parameters
+; Decode owner_
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode root
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode root_tunnel
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode receive_safe_fee
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+; Decode settings_deploy_wallet_grams
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+; Decode initial_balance
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+ENDS
+;; param: owner_
+;; param: root
+;; param: root_tunnel
+;; param: receive_safe_fee
+;; param: settings_deploy_wallet_grams
+;; param: initial_balance
+; constructor WrappedTONVault
+;; push identifier wrong_msg_key
+GETGLOB 13
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+GETGLOB 2
+;; ==
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+EQUAL
+THROWANYIFNOT
+ACCEPT
+;; push identifier owner_
+PUSH S5
+CALLREF {
+	CALL $_transferOwnership_internal_macro$
+}
+; expValue
+;; fetch configuration
+GETGLOB 18
+; end expValue
+;; push identifier root
+PUSH S5
+; colValue
+SETINDEX 1
+SETGLOB 18
+; end colValue
+; expValue
+;; fetch configuration
+GETGLOB 18
+; end expValue
+;; push identifier root_tunnel
+PUSH S4
+; colValue
+SETINDEX 0
+SETGLOB 18
+; end colValue
+; expValue
+;; fetch configuration
+GETGLOB 18
+; end expValue
+;; push identifier receive_safe_fee
+PUSH S3
+; colValue
+SETINDEX 2
+SETGLOB 18
+; end colValue
+; expValue
+;; fetch configuration
+GETGLOB 18
+; end expValue
+;; push identifier settings_deploy_wallet_grams
+PUSH S2
+; colValue
+SETINDEX 3
+SETGLOB 18
+; end colValue
+; expValue
+;; fetch configuration
+GETGLOB 18
+; end expValue
+;; push identifier initial_balance
+PUSH S1
+; colValue
+SETINDEX 4
+SETGLOB 18
+; end colValue
+CALLREF {
+	CALL $setUpTokenWallet_internal_macro$
+}
+; end constructor WrappedTONVault
+BLKDROP 6
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.globl	setUpTokenWallet_internal
+.type	setUpTokenWallet_internal, @function
+CALL $setUpTokenWallet_internal_macro$
+
+.macro setUpTokenWallet_internal_macro
+; function setUpTokenWallet
+;; Remote call IRootTokenContract.deployEmptyWallet
+;; get member root
+;; push identifier configuration
+GETGLOB 18
+INDEX 1
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHSLICE x43b9aca00000000000000000000000000004_
+STSLICER
+STSLICECONST 0
+STSLICECONST 1
+NEWC
+STSLICECONST x542b1672
+;; deploy_grams
+;; get member settings_deploy_wallet_grams
+;; push identifier configuration
+GETGLOB 18
+INDEX 3
+STUR 128
+;; wallet_public_key
+PUSHINT 0
+STUR 256
+;; owner_address
+MYADDR
+STSLICER
+;; gas_back_address
+MYADDR
+STSLICER
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+;; Remote call IRootTokenContract.getWalletAddress
+;; get member root
+;; push identifier configuration
+GETGLOB 18
+INDEX 1
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHSLICE x43b9aca00000000000000000000000000004_
+STSLICER
+STSLICECONST 0
+STSLICECONST 1
+NEWC
+STSLICECONST x069a08f8
+STSLICECONST x50bfca9f
+;; wallet_public_key
+PUSHINT 0
+STUR 256
+;; owner_address
+MYADDR
+STSLICER
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+; end function setUpTokenWallet
+
+.macro drain
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode receiver
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+ENDS
+;; param: receiver
+CALLREF {
+	CALL $drain_internal_macro$
+}
+IFREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.globl	drain_internal
+.type	drain_internal, @function
+CALL $drain_internal_macro$
+
+.macro drain_internal_macro
+;; param: receiver
+; modifier onlyOwner
+;; get member sender
+GETGLOB 9
+PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
+NEWC
+STSLICE
+ENDC
+;; push identifier owner
+GETGLOB 16
+;; push identifier addr
+PUSH S2
+SDEQ
+THROWARGIFNOT 123
+; function drain
+;; push identifier total_wrapped
+GETGLOB 20
+;; +
+;; get member initial_balance
+;; push identifier configuration
+GETGLOB 18
+INDEX 4
+ADD
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+;; transfer()
+;; push identifier receiver
+PUSH S1
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 109
+STZEROES
+STSLICECONST 0
+STSLICECONST 0
+ENDC
+PUSHINT 129
+SENDRAWMSG
+; end function drain
+DROP
+; end modifier onlyOwner
+DROP
+
+.macro setConfiguration
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode _configuration
+;; decode struct Configuration _configuration
+;; decode Configuration.root_tunnel
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+;; decode Configuration.root
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+;; decode Configuration.receive_safe_fee
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+;; decode Configuration.settings_deploy_wallet_grams
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+;; decode Configuration.initial_balance
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+;; build struct Configuration ss:6
+BLKSWAP 5, 1
+TUPLE 5
+SWAP
+ENDS
+;; param: _configuration
+; modifier onlyOwner
+;; get member sender
+GETGLOB 9
+PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
+NEWC
+STSLICE
+ENDC
+;; push identifier owner
+GETGLOB 16
+;; push identifier addr
+PUSH S2
+SDEQ
+THROWARGIFNOT 123
+; function setConfiguration
+;; get member root
+;; push identifier configuration
+GETGLOB 18
+INDEX 1
+;; decl: previous_root
+; expValue
+; end expValue
+;; push identifier _configuration
+PUSH S2
+; colValue
+SETGLOB 18
+; end colValue
+;; if
+;; get member root
+;; push identifier configuration
+GETGLOB 18
+INDEX 1
+;; push identifier previous_root
+PUSH S1
+SDEQ
+PUSHCONT {
+	CALLREF {
+		CALL $setUpTokenWallet_internal_macro$
+	}
+}
+IFNOT
+;; end if
+DROP
+; end function setConfiguration
+DROP
+; end modifier onlyOwner
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro receiveTokenWalletAddress
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode wallet
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+ENDS
+;; param: wallet
+; function receiveTokenWalletAddress
+;; push identifier wrong_root
+GETGLOB 11
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; get member sender
+GETGLOB 9
+;; get member root
+;; push identifier configuration
+GETGLOB 18
+INDEX 1
+SDEQ
+THROWANYIFNOT
+; expValue
+; end expValue
+;; push identifier wallet
+DUP
+; colValue
+SETGLOB 19
+; end colValue
+; end function receiveTokenWalletAddress
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro setTokenWalletReceive
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+ENDS
+; modifier onlyOwner
+;; get member sender
+GETGLOB 9
+PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
+NEWC
+STSLICE
+ENDC
+;; push identifier owner
+GETGLOB 16
+;; push identifier addr
+PUSH S2
+SDEQ
+THROWARGIFNOT 123
+; function setTokenWalletReceive
+;; Remote call ITONTokenWallet.setReceiveCallback
+;; push identifier token_wallet
+GETGLOB 19
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHSLICE x3989680000000000000000000000000004_
+STSLICER
+STSLICECONST 0
+STSLICECONST 0
+STSLICECONST x71eee875
+;; receive_callback
+MYADDR
+STSLICER
+;; allow_non_notifiable
+FALSE
+STIR 1
+ENDC
+PUSHINT 0
+SENDRAWMSG
+; end function setTokenWalletReceive
+DROP
+; end modifier onlyOwner
+IFREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro receive_macro
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; function receive
+;; push identifier msg_value_too_low
+GETGLOB 10
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; get member value
+CALLREF {
+	CALL $message_balance_macro$
+}
+;; >
+;; get member receive_safe_fee
+;; push identifier configuration
+GETGLOB 18
+INDEX 2
+GREATER
+THROWANYIFNOT
+;; get member value
+CALLREF {
+	CALL $message_balance_macro$
+}
+;; -
+;; get member receive_safe_fee
+;; push identifier configuration
+GETGLOB 18
+INDEX 2
+SUB
+UFITS 128
+;; decl: tokens
+;; push identifier tokens
+DUP
+CALLREF {
+	CALL $updateTotalWrapped_internal_macro$
+}
+;; push identifier total_wrapped
+GETGLOB 20
+;; +
+;; get member initial_balance
+;; push identifier configuration
+GETGLOB 18
+INDEX 4
+ADD
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+;; Remote call IRootTokenContract.deployWallet
+;; get member root_tunnel
+;; push identifier configuration
+GETGLOB 18
+INDEX 0
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 109
+STZEROES
+STSLICECONST 0
+STSLICECONST 1
+NEWC
+STSLICECONST x66211c6f
+;; tokens
+;; push identifier tokens
+PUSH S2
+STUR 128
+;; deploy_grams
+;; get member settings_deploy_wallet_grams
+;; push identifier configuration
+GETGLOB 18
+INDEX 3
+STUR 128
+;; wallet_public_key
+PUSHINT 0
+STUR 256
+;; owner_address
+;; get member sender
+GETGLOB 9
+STSLICER
+NEWC
+;; gas_back_address
+;; get member sender
+GETGLOB 9
+STSLICER
+STBREFR
+STBREFR
+ENDC
+PUSHINT 128
+SENDRAWMSG
+DROP
+; end function receive
+CALLREF {
+	CALL $c7_to_c4$
+}
+
+.globl	updateTotalWrapped_internal
+.type	updateTotalWrapped_internal, @function
+CALL $updateTotalWrapped_internal_macro$
+
+.macro updateTotalWrapped_internal_macro
+;; param: change
+; function updateTotalWrapped
+;; push identifier change
+DUP
+; expValue
+;; fetch total_wrapped
+GETGLOB 20
+; end expValue
+SWAP
+ADD
+UFITS 128
+; colValue
+SETGLOB 20
+; end colValue
+; end function updateTotalWrapped
+DROP
+
+.macro wrap
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode tokens
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+; Decode wallet_public_key
+LDUQ 256
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 256
+}
+IFNOT
+; Decode owner_address
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode gas_back_address
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+ENDS
+;; param: tokens
+;; param: wallet_public_key
+;; param: owner_address
+;; param: gas_back_address
+; function wrap
+;; push identifier msg_value_too_low
+GETGLOB 10
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; get member value
+CALLREF {
+	CALL $message_balance_macro$
+}
+;; >=
+;; push identifier tokens
+PUSH S5
+;; +
+;; get member receive_safe_fee
+;; push identifier configuration
+GETGLOB 18
+INDEX 2
+ADD
+UFITS 128
+GEQ
+THROWANYIFNOT
+;; push identifier tokens
+PUSH S3
+CALLREF {
+	CALL $updateTotalWrapped_internal_macro$
+}
+;; push identifier total_wrapped
+GETGLOB 20
+;; +
+;; get member initial_balance
+;; push identifier configuration
+GETGLOB 18
+INDEX 4
+ADD
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+;; Remote call IRootTokenContract.deployWallet
+;; get member root_tunnel
+;; push identifier configuration
+GETGLOB 18
+INDEX 0
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 109
+STZEROES
+STSLICECONST 0
+STSLICECONST 1
+NEWC
+STSLICECONST x66211c6f
+;; tokens
+;; push identifier tokens
+PUSH S5
+STUR 128
+;; deploy_grams
+;; get member settings_deploy_wallet_grams
+;; push identifier configuration
+GETGLOB 18
+INDEX 3
+STUR 128
+;; wallet_public_key
+;; push identifier wallet_public_key
+PUSH S4
+STUR 256
+;; owner_address
+;; push identifier owner_address
+PUSH S3
+STSLICER
+NEWC
+;; gas_back_address
+;; push identifier gas_back_address
+PUSH S3
+STSLICER
+STBREFR
+STBREFR
+ENDC
+PUSHINT 128
+SENDRAWMSG
+; end function wrap
+BLKDROP 4
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro tokensReceivedCallback
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode token_wallet_
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode token_root_
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode tokens_amount
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+; Decode 
+LDUQ 256
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 256
+}
+IFNOT
+; Decode 
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode 
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode original_gas_to
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+; Decode 
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+; Decode 
+;; decode TvmCell
+LDREF
+ENDS
+;; param: token_wallet_
+;; param: token_root_
+;; param: tokens_amount
+;; param: 
+;; param: 
+;; param: 
+;; param: original_gas_to
+;; param: 
+;; param: 
+; function tokensReceivedCallback
+;; push identifier wrong_root
+GETGLOB 11
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; push identifier token_root_
+PUSH S8
+;; get member root
+;; push identifier configuration
+GETGLOB 18
+INDEX 1
+SDEQ
+THROWANYIFNOT
+;; push identifier wrong_token_wallet
+GETGLOB 14
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; push identifier token_wallet
+GETGLOB 19
+;; push identifier token_wallet_
+PUSH S10
+SDEQ
+THROWANYIFNOT
+;; push identifier wrong_token_wallet
+GETGLOB 14
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; get member sender
+GETGLOB 9
+;; push identifier token_wallet
+GETGLOB 19
+SDEQ
+THROWANYIFNOT
+;; -
+;; push identifier tokens_amount
+PUSH S6
+NEGATE
+CALLREF {
+	CALL $updateTotalWrapped_internal_macro$
+}
+;; push identifier total_wrapped
+GETGLOB 20
+;; +
+;; get member initial_balance
+;; push identifier configuration
+GETGLOB 18
+INDEX 4
+ADD
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+NEWC
+ENDC
+;; decl: empty
+;; Remote call IBurnableByOwnerTokenWallet.burnByOwner
+;; push identifier token_wallet
+GETGLOB 19
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 109
+STZEROES
+STSLICECONST 0
+STSLICECONST 1
+NEWC
+STSLICECONST x1047c904
+;; tokens
+;; push identifier tokens_amount
+PUSH S9
+STUR 128
+;; grams
+PUSHINT 0
+STUR 128
+;; send_gas_to
+;; push identifier original_gas_to
+PUSH S5
+STSLICER
+;; callback_address
+;; address.makeAddrStd()
+PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+STSLICER
+;; callback_payload
+;; push identifier empty
+PUSH S2
+STREFR
+STBREFR
+ENDC
+PUSHINT 128
+SENDRAWMSG
+DROP
+; end function tokensReceivedCallback
+BLKDROP 9
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.globl	_transferOwnership_internal
+.type	_transferOwnership_internal, @function
+CALL $_transferOwnership_internal_macro$
+
+.macro _transferOwnership_internal_macro
+;; param: owner_
+; function _transferOwnership
+; expValue
+; end expValue
+;; push identifier owner_
+DUP
+; colValue
+SETGLOB 16
+; end colValue
+; end function _transferOwnership
+DROP
+
+.macro transferOwnership
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode owner_
+LDMSGADDRQ
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
+ENDS
+;; param: owner_
+; modifier onlyOwner
+;; get member sender
+GETGLOB 9
+PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
+NEWC
+STSLICE
+ENDC
+;; push identifier owner
+GETGLOB 16
+;; push identifier addr
+PUSH S2
+SDEQ
+THROWARGIFNOT 123
+; function transferOwnership
+;; push identifier owner_
+PUSH S1
+CALLREF {
+	CALL $_transferOwnership_internal_macro$
+}
+; end function transferOwnership
+DROP
+; end modifier onlyOwner
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro renounceOwnership
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+ENDS
+; modifier onlyOwner
+;; get member sender
+GETGLOB 9
+PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
+NEWC
+STSLICE
+ENDC
+;; push identifier owner
+GETGLOB 16
+;; push identifier addr
+PUSH S2
+SDEQ
+THROWARGIFNOT 123
+; function renounceOwnership
+;; address.makeAddrStd()
+PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+CALLREF {
+	CALL $_transferOwnership_internal_macro$
+}
+; end function renounceOwnership
+DROP
+; end modifier onlyOwner
+CALLREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro c7_to_c4
+GETGLOB 2
+NEWC
+STU 256
+GETGLOB 3
+STUR 64
+GETGLOB 6
+STUR 1
+NEWC
+GETGLOB 19
+GETGLOB 20
+XCHG s2
+STSLICE
+STU 128
+GETGLOB 10
+GETGLOB 11
+GETGLOB 12
+GETGLOB 13
+GETGLOB 14
+GETGLOB 15
+GETGLOB 16
+GETGLOB 17
+GETGLOB 18
+REVERSE 11, 0
+STBREF
+STU 16
+STU 16
+STU 16
+STU 16
+STU 16
+STU 16
+STSLICE
+STU 256
+SWAP
+UNTUPLE 5
+NEWC
+PUSH S5
+STSLICER
+PUSH S4
+STSLICER
+PUSH S3
+STUR 128
+PUSH S2
+STUR 128
+PUSH S1
+STUR 128
+BLKDROP2 5, 1
+STBREFR
+ENDC
+POP C4
+
+.macro c4_to_c7
+PUSHROOT
+CTOS        ; c4
+LDU 256      ; pubkey c4
+LDU 64      ; pubkey timestamp c4
+LDU 1       ; pubkey [timestamp] constructor_flag memory
+LDREFRTOS
+LDMSGADDR
+PLDU 128
+SETGLOB 20
+SETGLOB 19
+LDU 16
+LDU 16
+LDU 16
+LDU 16
+LDU 16
+LDU 16
+LDMSGADDR
+LDU 256
+LDREFRTOS
+NIP
+LDMSGADDR
+LDMSGADDR
+LDU 128
+LDU 128
+PLDU 128
+TUPLE 5
+SETGLOB 18
+SETGLOB 17
+SETGLOB 16
+SETGLOB 15
+SETGLOB 14
+SETGLOB 13
+SETGLOB 12
+SETGLOB 11
+SETGLOB 10
+TRUE
+SETGLOB 1   ; pubkey [timestamp] constructor_flag
+SETGLOB 6   ; pubkey [timestamp]
+SETGLOB 3   ; D
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS        ; c4
+DUP        ; c4 c4
+SBITS      ; c4 bits
+GTINT 1    ; c4 bits>1
+PUSHCONT {
+	LDU 256      ; pubkey c4
+	LDU 64      ; pubkey timestamp c4
+	LDU 1       ; pubkey [timestamp] constructor_flag memory
+	LDREFRTOS
+	LDMSGADDR
+	PLDU 128
+	SETGLOB 20
+	SETGLOB 19
+	LDU 16
+	LDU 16
+	LDU 16
+	LDU 16
+	LDU 16
+	LDU 16
+	LDMSGADDR
+	LDU 256
+	LDREFRTOS
+	NIP
+	LDMSGADDR
+	LDMSGADDR
+	LDU 128
+	LDU 128
+	PLDU 128
+	TUPLE 5
+	SETGLOB 18
+	SETGLOB 17
+	SETGLOB 16
+	SETGLOB 15
+	SETGLOB 14
+	SETGLOB 13
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
+	TRUE
+	SETGLOB 1   ; pubkey [timestamp] constructor_flag
+	SETGLOB 6   ; pubkey [timestamp]
+	SETGLOB 3   ; D
+	SETGLOB 2
+}
+PUSHCONT {
+	PLDDICT   ; D
+	; init msg_value_too_low
+	PUSHINT 0
+	SETGLOB 10
+	; init wrong_root
+	PUSHINT 0
+	SETGLOB 11
+	; init wrong_callback
+	PUSHINT 0
+	SETGLOB 12
+	; init wrong_msg_key
+	PUSHINT 0
+	SETGLOB 13
+	; init wrong_token_wallet
+	PUSHINT 0
+	SETGLOB 14
+	; init already_drained
+	PUSHINT 0
+	SETGLOB 15
+	; init owner
+	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+	SETGLOB 16
+	; init _randomNonce
+	PUSHINT 1
+	PUSH S1
+	PUSHINT 64
+	DICTUGET
+	PUSHCONT {
+		PLDU 256
+	}
+	PUSHCONT {
+		PUSHINT 0
+	}
+	IFELSE
+	SETGLOB 17
+	; init configuration
+	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+	PUSHINT 0
+	PUSHINT 0
+	PUSHINT 0
+	TUPLE 5
+	SETGLOB 18
+	; init token_wallet
+	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+	SETGLOB 19
+	; init total_wrapped
+	PUSHINT 0
+	SETGLOB 20
+	; set contract pubkey
+	PUSHINT 0
+	SWAP
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+	PUSHINT 0 ; constructor_flag
+	SETGLOB 6
+	TRUE
+	SETGLOB 1
+	;; init state var: msg_value_too_low
+	PUSHINT 101
+	SETGLOB 10
+	;; init state var: wrong_root
+	PUSHINT 102
+	SETGLOB 11
+	;; init state var: wrong_callback
+	PUSHINT 103
+	SETGLOB 12
+	;; init state var: wrong_msg_key
+	PUSHINT 104
+	SETGLOB 13
+	;; init state var: wrong_token_wallet
+	PUSHINT 105
+	SETGLOB 14
+	;; init state var: already_drained
+	PUSHINT 106
+	SETGLOB 15
+}
+IFELSE
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Function: main_internal
+;; param: contract_balance
+;; param: msg_balance
+;; param: int_msg_info
+;; param: msg_body_slice
+PUSHINT 0  ; main_external trans id
+PUSH S2
+CTOS
+LDU 4       ; bounced tail
+LDMSGADDR   ; bounced src tail
+DROP
+SETGLOB 9
+MODPOW2 1
+IFRET
+PUSH S1    ; body
+SEMPTY     ; isEmpty
+DUP        ; isEmpty isEmpty
+PUSHCONT {
+	DROP    ;
+	PUSH S1 ; body
+	LDU 32  ; funcId body'
+	PUSH S1 ; funcId body' funcId
+	EQINT 0 ; funcId body' isZero
+	DUP     ; funcId body' isZero isZero
+	PUSHCONT {
+ 		; funcId body' isZero
+		BLKDROP2 2, 1; isZero
+	}
+	IF
+}
+IFNOT
+; [funcId body'] doReceive
+PUSHCONT {
+	CALL $receive_macro$
+}
+IFJMP
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+GETGLOB 7
+ISNULL
+THROWIF 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHINT -1 ; main_external trans id
+PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+SETGLOB 9
+PUSH S1
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHINT 512
+	LDSLICEX ; signatureSlice msgSlice
+	DUP      ; signatureSlice msgSlice msgSlice
+	HASHSU   ; signatureSlice msgSlice hashMsgSlice
+	SWAP  ; signatureSlice hashMsgSlice msgSlice
+	LDU 1 ; signatureSlice hashMsgSlice havePubkey msgSlice
+	SWAP  ; signatureSlice hashMsgSlice msgSlice havePubkey
+	PUSHCONT {
+		LDU 256       ; signatureSlice hashMsgSlice pubkey msgSlice
+		XCHG s3
+		SWAP
+	}
+	PUSHCONT {
+		XCHG s2
+		GETGLOB 2
+	}
+	IFELSE
+	DUP
+	SETGLOB 5
+	CHKSIGNU      ; msgSlice isSigned
+	THROWIFNOT 40 ; msgSlice
+}
+PUSHCONT {
+	LDU 1      ; havePubkey msgSlice
+	SWAP       ; msgSlice havePubkey
+	THROWIF 58 ; msgSlice
+}
+IFELSE
+LDU 64                         ; timestamp msgSlice
+SWAP                           ; msgSlice timestamp
+CALL $replay_protection_macro$ ; msgSlice
+LDU 32  ; expireAt msgSlice
+SWAP    ; msgSlice expireAt
+NOW     ; msgSlice expireAt now
+GREATER ; msgSlice expireAt>now
+THROWIFNOT 57
+LDU  32 ; funcId body
+SWAP    ; body funcId
+CALLREF {
+	CALL $public_function_selector$
+}
+GETGLOB 7
+ISNULL
+THROWIF 60
+
+.macro owner
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 16
+NEWC
+PUSHSLICE xc0000000000000000000000002_
+STSLICER
+STSLICECONST 0
+STSLICECONST 0
+STSLICECONST xdf0bcfde
+PUSH S1
+STSLICER
+ENDC
+PUSHINT 0
+SENDRAWMSG
+TRUE
+SETGLOB 7
+
+.macro configuration
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 18
+NEWC
+PUSHSLICE xc0000000000000000000000002_
+STSLICER
+STSLICECONST 0
+STSLICECONST 1
+NEWC
+STSLICECONST x8f439147
+PUSH S2
+UNTUPLE 5
+BLKSWAP 1, 5
+PUSH S5
+STSLICER
+PUSH S4
+STSLICER
+PUSH S3
+STUR 128
+PUSH S2
+STUR 128
+PUSH S1
+STUR 128
+BLKDROP2 5, 1
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+TRUE
+SETGLOB 7
+
+.macro token_wallet
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 19
+NEWC
+PUSHSLICE xc0000000000000000000000002_
+STSLICER
+STSLICECONST 0
+STSLICECONST 0
+STSLICECONST x9af72ec9
+PUSH S1
+STSLICER
+ENDC
+PUSHINT 0
+SENDRAWMSG
+TRUE
+SETGLOB 7
+
+.macro total_wrapped
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 20
+NEWC
+PUSHSLICE xc0000000000000000000000002_
+STSLICER
+STSLICECONST 0
+STSLICECONST 0
+STSLICECONST xe7948292
+PUSH S1
+STUR 128
+ENDC
+PUSHINT 0
+SENDRAWMSG
+TRUE
+SETGLOB 7
+
+.macro public_function_selector
+DUP
+PUSHINT 256086343
+LEQ
+PUSHCONT {
+	DUP
+	PUSHINT 118585564
+	EQUAL
+	IFJMPREF {
+		CALL $setTokenWalletReceive$
+	}
+	DUP
+	PUSHINT 154467053
+	EQUAL
+	IFJMPREF {
+		CALL $setConfiguration$
+	}
+	DUP
+	PUSHINT 235197086
+	EQUAL
+	IFJMPREF {
+		CALL $transferOwnership$
+	}
+	DUP
+	PUSHINT 256086343
+	EQUAL
+	IFJMPREF {
+		CALL $configuration$
+	}
+}
+IFJMP
+DUP
+PUSHINT 1138845633
+LEQ
+PUSHCONT {
+	DUP
+	PUSHINT 447738777
+	EQUAL
+	IFJMPREF {
+		CALL $drain$
+	}
+	DUP
+	PUSHINT 452406985
+	EQUAL
+	IFJMPREF {
+		CALL $token_wallet$
+	}
+	DUP
+	PUSHINT 724033212
+	EQUAL
+	IFJMPREF {
+		CALL $constructor$
+	}
+	DUP
+	PUSHINT 1138845633
+	EQUAL
+	IFJMPREF {
+		CALL $wrap$
+	}
+}
+IFJMP
+DUP
+PUSHINT 1729444094
+LEQ
+PUSHCONT {
+	DUP
+	PUSHINT 1354746527
+	EQUAL
+	IFJMPREF {
+		CALL $receiveTokenWalletAddress$
+	}
+	DUP
+	PUSHINT 1497440185
+	EQUAL
+	IFJMPREF {
+		CALL $tokensReceivedCallback$
+	}
+	DUP
+	PUSHINT 1594609630
+	EQUAL
+	IFJMPREF {
+		CALL $owner$
+	}
+	DUP
+	PUSHINT 1729444094
+	EQUAL
+	IFJMPREF {
+		CALL $renounceOwnership$
+	}
+}
+IFJMP
+DUP
+PUSHINT 1737786002
+EQUAL
+IFJMPREF {
+	CALL $total_wrapped$
+}
