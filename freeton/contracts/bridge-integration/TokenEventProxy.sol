@@ -155,8 +155,7 @@ contract TokenEventProxy is
             }
 
             if (is_outdated_tokens) {
-                // TODO: ...
-                IRootTokenContract(msg.sender).deployWallet{ value: 0, flag: 128}(
+                IRootTokenContract(config.token_root_address).deployWallet{ value: 0, flag: 128}(
                     tokens,
                     config.settings_deploy_wallet_grams,
                     sender_public_key,

@@ -52,7 +52,7 @@ describe('Test wTON', async function() {
       vaultWTONBalance: vaultTokenWallet ? (await vaultTokenWallet.call({ method: 'balance' })) : 0,
       vaultTONBalance: vault ? (await locklift.ton.getBalance(vault.address)) : 0,
       vaultTotalWrapped: vault ? (await vault.call({ method: 'total_wrapped' })) : 0,
-      wTONTotalSupply: root ? (await root.call({ method: 'total_supply' })) : 0,
+      wTONTotalSupply: root ? (await root.call({ method: 'getTotalSupply' })) : 0,
     };
   };
   
