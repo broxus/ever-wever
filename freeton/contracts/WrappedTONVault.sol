@@ -112,6 +112,24 @@ contract WrappedTONVault is
     }
 
     /*
+        @notice Withdraw TONs from the vault
+        @dev Can be called only by owner
+        @dev TONs are send to the owner wallet
+        @param value How much TONs to withdraw
+    */
+    function withdraw(
+        uint128 value
+    ) external view onlyOwner(msg.sender) {
+        owner.transfer({ value: value + msg.value });
+    }
+
+    /*
+        @notice Send TONs to the vault without issuing TONs
+        @dev Be careful! Since you don't have WTON tokens, you can't redeem granted TONs
+    */
+    function grant() external view {}
+
+    /*
         @notice Store vault's token wallet address
         @dev Only root can call with correct params
         @param wallet Vault's token wallet

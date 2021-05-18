@@ -430,6 +430,91 @@ CALLREF {
 TRUE
 SETGLOB 7
 
+.macro withdraw
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+; Decode value
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
+ENDS
+;; param: value
+; modifier onlyOwner
+;; get member sender
+GETGLOB 9
+PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
+NEWC
+STSLICE
+ENDC
+;; push identifier owner
+GETGLOB 16
+;; push identifier addr
+PUSH S2
+SDEQ
+THROWARGIFNOT 123
+; function withdraw
+;; transfer()
+;; push identifier value
+PUSH S1
+;; +
+;; get member value
+CALLREF {
+	CALL $message_balance_macro$
+}
+ADD
+UFITS 128
+;; push identifier owner
+GETGLOB 16
+NEWC
+STSLICECONST x62_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 105
+STZEROES
+STSLICECONST 0
+STSLICECONST 0
+ENDC
+PUSHINT 0
+SENDRAWMSG
+; end function withdraw
+DROP
+; end modifier onlyOwner
+DROP
+IFREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
+.macro grant
+DROP
+GETGLOB 1
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+; Decode input parameters
+ENDS
+; function grant
+; end function grant
+IFREF {
+	CALL $c7_to_c4$
+}
+TRUE
+SETGLOB 7
+
 .macro receiveTokenWalletAddress
 DROP
 GETGLOB 1
@@ -1571,9 +1656,15 @@ PUSHCONT {
 }
 IFJMP
 DUP
-PUSHINT 1138845633
+PUSHINT 569177215
 LEQ
 PUSHCONT {
+	DUP
+	PUSHINT 313391878
+	EQUAL
+	IFJMPREF {
+		CALL $withdraw$
+	}
 	DUP
 	PUSHINT 447738777
 	EQUAL
@@ -1587,6 +1678,18 @@ PUSHCONT {
 		CALL $token_wallet$
 	}
 	DUP
+	PUSHINT 569177215
+	EQUAL
+	IFJMPREF {
+		CALL $grant$
+	}
+}
+IFJMP
+DUP
+PUSHINT 1497440185
+LEQ
+PUSHCONT {
+	DUP
 	PUSHINT 724033212
 	EQUAL
 	IFJMPREF {
@@ -1598,12 +1701,6 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $wrap$
 	}
-}
-IFJMP
-DUP
-PUSHINT 1729444094
-LEQ
-PUSHCONT {
 	DUP
 	PUSHINT 1354746527
 	EQUAL
@@ -1616,6 +1713,12 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $tokensReceivedCallback$
 	}
+}
+IFJMP
+DUP
+PUSHINT 1737786002
+LEQ
+PUSHCONT {
 	DUP
 	PUSHINT 1594609630
 	EQUAL
@@ -1628,11 +1731,11 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $renounceOwnership$
 	}
+	DUP
+	PUSHINT 1737786002
+	EQUAL
+	IFJMPREF {
+		CALL $total_wrapped$
+	}
 }
 IFJMP
-DUP
-PUSHINT 1737786002
-EQUAL
-IFJMPREF {
-	CALL $total_wrapped$
-}
