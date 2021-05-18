@@ -37,13 +37,13 @@ const data = {
   bridge: '0:fe823b5e869ab06396ae5cdf798cac3cd5eb90e2ae379a20b37ce93573b30277',
   ethereumEvent: {
     eventAddress: new BigNumber('0xdceeae4492732c04b5224841286bf7146aa299df'.toLowerCase()),
-    eventBlocksToConfirm: 1,
-    // Apr-02-2021 08:35:08 PM +UTC
-    startBlockNumber: 12162314,
+    eventBlocksToConfirm: 12,
+    // May-18-2021 11:44:47 PM +UTC
+    startBlockNumber: 12461417,
   },
   tonEvent: {
     proxyAddress: new BigNumber('0xdceeae4492732c04b5224841286bf7146aa299df'.toLowerCase()),
-    startTimestamp: 1617395781,
+    startTimestamp: 1621381526,
   },
   multisig: '0:ad091843febdbaf72308bf9c45067817e254965c28a692b5c4187f8c7fab6c81',
 };
