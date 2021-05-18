@@ -32,6 +32,21 @@
 			]
 		},
 		{
+			"name": "withdraw",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "grant",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "receiveTokenWalletAddress",
 			"inputs": [
 				{"name":"wallet","type":"address"}

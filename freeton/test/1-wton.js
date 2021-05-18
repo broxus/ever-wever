@@ -76,6 +76,28 @@ describe('Test wTON', async function() {
     logger.log(`wTON total supply change: ${change.wTONTotalSupply}`);
   };
   
+  const logGiverBalance = async function() {
+    const giverBalance = await locklift.ton.getBalance(locklift.networkConfig.giver.address);
+    
+    logger.log(`Giver balance: ${convertCrystal(giverBalance, 'ton')}`);
+    
+    return giverBalance;
+  };
+  
+  let initialGiverBalance;
+
+  before(async function() {
+    initialGiverBalance = await logGiverBalance();
+  });
+
+  after(async function() {
+    const finalGiverBalance = await logGiverBalance();
+
+    logger.log(`Giver balance change: ${
+      convertCrystal(initialGiverBalance - finalGiverBalance, 'ton')
+    }`);
+  });
+  
   describe('Setup contracts', async function() {
     describe('Wrapped TON token', async function() {
       it('Deploy wTON root', async function() {
@@ -610,6 +632,244 @@ describe('Test wTON', async function() {
       });
     });
   });
+
+  describe('Test granting', async function() {
+    it('Grant TONs to the vault', async function() {
+      const initialMetrics = await getWTONMetrics(
+        userTokenWallet,
+        user,
+        vaultTokenWallet,
+        vault,
+        root,
+      );
+  
+      await user.runTarget({
+        contract: vault,
+        method: 'grant',
+        params: {},
+        value: convertCrystal(5, 'nano')
+      });
+  
+      const finalMetrics = await getWTONMetrics(
+        userTokenWallet,
+        user,
+        vaultTokenWallet,
+        vault,
+        root,
+      );
+  
+      const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
+  
+      logMetricsChange(metricsChange);
+  
+      expect(metricsChange.userWTONBalance)
+        .to.be.equal(0, 'Wrong user wTON balance change');
+  
+      expect(metricsChange.userTONBalance)
+        .to.be.below(-5, 'Too low user TON balance change')
+        .to.be.above(-5.5, 'Too high user TON balance change');
+  
+      expect(metricsChange.vaultWTONBalance)
+        .to.be.equal(0, 'Wrong vault wTON balance change');
+  
+      expect(metricsChange.vaultTONBalance)
+        .to.be.above(
+        4.5,
+        'Vault TON balance change differs from granted'
+      );
+  
+      expect(metricsChange.vaultTotalWrapped)
+        .to.be.equal(
+        0,
+        'Vault total wrapped change should not change'
+      );
+  
+      expect(metricsChange.wTONTotalSupply)
+        .to.be.equal(
+        0,
+        'wTON total supply should not change'
+      );
+    });
+  });
+  
+  describe('Test TONs withdraw', async function() {
+    it('Withdraw with owner account', async function() {
+      const initialMetrics = await getWTONMetrics(
+        userTokenWallet,
+        user,
+        vaultTokenWallet,
+        vault,
+        root,
+      );
+  
+      await user.runTarget({
+        contract: vault,
+        method: 'withdraw',
+        params: {
+          value: convertCrystal(3, 'nano'),
+        }
+      });
+  
+      const finalMetrics = await getWTONMetrics(
+        userTokenWallet,
+        user,
+        vaultTokenWallet,
+        vault,
+        root,
+      );
+  
+      const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
+  
+      logMetricsChange(metricsChange);
+  
+      expect(metricsChange.userWTONBalance)
+        .to.be.equal(0, 'Wrong user wTON balance change');
+  
+      expect(metricsChange.userTONBalance)
+        .to.be.below(3.5, 'Too low user TON balance change')
+        .to.be.above(2.9, 'Too high user TON balance change');
+  
+      expect(metricsChange.vaultWTONBalance)
+        .to.be.equal(0, 'Wrong vault wTON balance change');
+  
+      expect(metricsChange.vaultTONBalance)
+        .to.be.above(
+        -4,
+        'Vault TON balance change too low'
+        ).to.be.below(
+        -3,
+        'Vault TON balance change too high'
+      );
+  
+      expect(metricsChange.vaultTotalWrapped)
+        .to.be.equal(
+        0,
+        'Vault total wrapped change should not change'
+      );
+  
+      expect(metricsChange.wTONTotalSupply)
+        .to.be.equal(
+        0,
+        'wTON total supply should not change'
+      );
+    });
+
+    it('Try to withdraw with non owner', async function() {
+      const Account = await locklift.factory.getAccount();
+      const [keyPair] = await locklift.keys.getKeyPairs();
+
+      const wrongOwner = await locklift.giver.deployContract({
+        contract: Account,
+        constructorParams: {},
+        initParams: {
+          _randomNonce: getRandomNonce(),
+        },
+        keyPair,
+      }, convertCrystal(30, 'nano'));
+
+      wrongOwner.afterRun = afterRun;
+
+      wrongOwner.setKeyPair(keyPair);
+  
+      await wrongOwner.runTarget({
+        contract: root,
+        method: 'deployEmptyWallet',
+        params: {
+          deploy_grams: convertCrystal(1, 'nano'),
+          wallet_public_key_: 0,
+          owner_address_: wrongOwner.address,
+          gas_back_address: wrongOwner.address,
+        },
+        value: convertCrystal(2, 'nano'),
+      });
+  
+      const wrongOwnerTokenWalletAddress = await root.call({
+        method: 'getWalletAddress',
+        params: {
+          wallet_public_key_: 0,
+          owner_address_: wrongOwner.address
+        },
+      });
+  
+      // Wait until user token wallet is presented into the GraphQL
+      await locklift.ton.client.net.wait_for_collection({
+        collection: 'accounts',
+        filter: {
+          id: { eq: wrongOwnerTokenWalletAddress },
+          balance: { gt: `0x0` }
+        },
+        result: 'balance'
+      });
+  
+      logger.log(`Wrong owner token wallet: ${wrongOwnerTokenWalletAddress}`);
+  
+      const wrongOwnerTokenWallet = await locklift.factory.getContract(
+        'TONTokenWallet',
+        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
+      );
+  
+      wrongOwnerTokenWallet.setAddress(wrongOwnerTokenWalletAddress);
+  
+      const initialMetrics = await getWTONMetrics(
+        wrongOwnerTokenWallet,
+        wrongOwner,
+        vaultTokenWallet,
+        vault,
+        root,
+      );
+  
+      await wrongOwner.runTarget({
+        contract: vault,
+        method: 'withdraw',
+        params: {
+          value: convertCrystal(3, 'nano'),
+        }
+      });
+  
+      const finalMetrics = await getWTONMetrics(
+        wrongOwnerTokenWallet,
+        wrongOwner,
+        vaultTokenWallet,
+        vault,
+        root,
+      );
+  
+      const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
+  
+      logMetricsChange(metricsChange);
+  
+  
+      expect(metricsChange.userWTONBalance)
+        .to.be.equal(0, 'Wrong user wTON balance change');
+  
+      expect(metricsChange.userTONBalance)
+        .to.be.below(0.01, 'Too low user TON balance change');
+  
+      expect(metricsChange.vaultWTONBalance)
+        .to.be.equal(0, 'Wrong vault wTON balance change');
+  
+      expect(metricsChange.vaultTONBalance)
+        .to.be.above(
+        -0.0001,
+        'Vault TON balance change too low'
+      ).to.be.below(
+        0,
+        'Vault TON balance change too high'
+      );
+  
+      expect(metricsChange.vaultTotalWrapped)
+        .to.be.equal(
+        0,
+        'Vault total wrapped change should not change'
+      );
+  
+      expect(metricsChange.wTONTotalSupply)
+        .to.be.equal(
+        0,
+        'wTON total supply should not change'
+      );
+    });
+  });
   
   describe('Test bridge integration', async function() {
     let ethereumEventConfiguration;
@@ -1129,7 +1389,6 @@ describe('Test wTON', async function() {
       });
     });
   });
-  
   
   describe('Test vault update to new token', async function() {
     let root2;
