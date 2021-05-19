@@ -86,7 +86,7 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair,
-  }, locklift.utils.convertCrystal(30, 'nano'));
+  }, locklift.utils.convertCrystal(20, 'nano'));
  
   owner.setKeyPair(keyPair);
   owner.afterRun = afterRun;
@@ -140,7 +140,7 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair,
-  });
+  }, convertCrystal(5, 'nano'));
   
   logger.success(`Tunnel address: ${tunnel.address}`);
   
@@ -165,20 +165,10 @@ async function main() {
   });
 
   logger.success(`Vault address: ${vault.address}`);
-
-  logger.log(`Setting vault token wallet receive callback`);
-  
-  let tx = await owner.runTarget({
-    contract: vault,
-    method: 'setTokenWalletReceive',
-    params: {},
-  });
-  
-  logTx(tx);
   
   logger.log(`Transferring root ownership to tunnel`);
   
-  tx = await root.run({
+  let tx = await root.run({
     method: 'transferOwner',
     params: {
       root_public_key_: 0,
@@ -228,7 +218,7 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair
-  });
+  }, convertCrystal(5, 'nano'));
   
   logger.success(`Token event proxy: ${tokenEventProxy.address}`);
   
@@ -275,7 +265,7 @@ async function main() {
       }
     },
     keyPair,
-  }, convertCrystal(50, 'nano'));
+  }, convertCrystal(20, 'nano'));
   
   logger.success(`Ethereum event configuration: ${ethereumEventConfiguration.address}`);
   
@@ -314,7 +304,7 @@ async function main() {
       }
     },
     keyPair,
-  }, convertCrystal(50, 'nano'));
+  }, convertCrystal(20, 'nano'));
   
   logger.success(`Ton event configuration: ${tonEventConfiguration.address}`);
   

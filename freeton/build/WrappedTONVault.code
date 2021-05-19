@@ -464,29 +464,34 @@ PUSH S2
 SDEQ
 THROWARGIFNOT 123
 ; function withdraw
-;; transfer()
-;; push identifier value
-PUSH S1
+;; push identifier total_wrapped
+GETGLOB 20
 ;; +
-;; get member value
-CALLREF {
-	CALL $message_balance_macro$
-}
+;; get member initial_balance
+;; push identifier configuration
+GETGLOB 18
+INDEX 4
 ADD
 UFITS 128
+;; -
+;; push identifier value
+PUSH S2
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+;; transfer()
 ;; push identifier owner
 GETGLOB 16
 NEWC
 STSLICECONST x62_
 STSLICE
-SWAP
-STGRAMS
-PUSHINT 105
+PUSHINT 109
 STZEROES
 STSLICECONST 0
 STSLICECONST 0
 ENDC
-PUSHINT 0
+PUSHINT 128
 SENDRAWMSG
 ; end function withdraw
 DROP
@@ -506,10 +511,83 @@ IFREF {
 	CALL $c4_to_c7$
 }
 ; Decode input parameters
+; Decode amount
+LDUQ 128
+PUSHCONT {
+	;; load next cell
+	LDREF
+	ENDS
+	CTOS
+	LDU 128
+}
+IFNOT
 ENDS
+;; param: amount
 ; function grant
+;; push identifier msg_value_too_low
+GETGLOB 10
+DUP
+LESSINT 2
+PUSHCONT {
+	DROP
+	PUSHINT 100
+}
+IF
+;; push identifier amount
+PUSH S1
+;; <=
+;; get member value
+CALLREF {
+	CALL $message_balance_macro$
+}
+;; +
+PUSHINT 1000000000
+ADD
+UFITS 128
+LEQ
+THROWANYIFNOT
+;; push identifier amount
+DUP
+; expValue
+;; fetch configuration
+GETGLOB 18
+DUP
+INDEX 4
+; end expValue
+ROT
+ADD
+UFITS 128
+; colValue
+SETINDEX 4
+SETGLOB 18
+; end colValue
+;; push identifier total_wrapped
+GETGLOB 20
+;; +
+;; get member initial_balance
+;; push identifier configuration
+GETGLOB 18
+INDEX 4
+ADD
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+;; transfer()
+;; get member sender
+GETGLOB 9
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 109
+STZEROES
+STSLICECONST 0
+STSLICECONST 0
+ENDC
+PUSHINT 128
+SENDRAWMSG
 ; end function grant
-IFREF {
+DROP
+CALLREF {
 	CALL $c7_to_c4$
 }
 TRUE
@@ -560,37 +638,6 @@ DUP
 ; colValue
 SETGLOB 19
 ; end colValue
-; end function receiveTokenWalletAddress
-DROP
-CALLREF {
-	CALL $c7_to_c4$
-}
-TRUE
-SETGLOB 7
-
-.macro setTokenWalletReceive
-DROP
-GETGLOB 1
-ISNULL
-IFREF {
-	CALL $c4_to_c7$
-}
-; Decode input parameters
-ENDS
-; modifier onlyOwner
-;; get member sender
-GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
-GETGLOB 16
-;; push identifier addr
-PUSH S2
-SDEQ
-THROWARGIFNOT 123
-; function setTokenWalletReceive
 ;; Remote call ITONTokenWallet.setReceiveCallback
 ;; push identifier token_wallet
 GETGLOB 19
@@ -611,10 +658,9 @@ STIR 1
 ENDC
 PUSHINT 0
 SENDRAWMSG
-; end function setTokenWalletReceive
+; end function receiveTokenWalletAddress
 DROP
-; end modifier onlyOwner
-IFREF {
+CALLREF {
 	CALL $c7_to_c4$
 }
 TRUE
@@ -1662,15 +1708,9 @@ SETGLOB 7
 
 .macro public_function_selector
 DUP
-PUSHINT 256086343
+PUSHINT 313391878
 LEQ
 PUSHCONT {
-	DUP
-	PUSHINT 118585564
-	EQUAL
-	IFJMPREF {
-		CALL $setTokenWalletReceive$
-	}
 	DUP
 	PUSHINT 154467053
 	EQUAL
@@ -1689,18 +1729,18 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $configuration$
 	}
-}
-IFJMP
-DUP
-PUSHINT 569177215
-LEQ
-PUSHCONT {
 	DUP
 	PUSHINT 313391878
 	EQUAL
 	IFJMPREF {
 		CALL $withdraw$
 	}
+}
+IFJMP
+DUP
+PUSHINT 973828957
+LEQ
+PUSHCONT {
 	DUP
 	PUSHINT 447738777
 	EQUAL
@@ -1714,7 +1754,13 @@ PUSHCONT {
 		CALL $token_wallet$
 	}
 	DUP
-	PUSHINT 569177215
+	PUSHINT 724033212
+	EQUAL
+	IFJMPREF {
+		CALL $constructor$
+	}
+	DUP
+	PUSHINT 973828957
 	EQUAL
 	IFJMPREF {
 		CALL $grant$
@@ -1722,15 +1768,9 @@ PUSHCONT {
 }
 IFJMP
 DUP
-PUSHINT 1497440185
+PUSHINT 1594609630
 LEQ
 PUSHCONT {
-	DUP
-	PUSHINT 724033212
-	EQUAL
-	IFJMPREF {
-		CALL $constructor$
-	}
 	DUP
 	PUSHINT 1138845633
 	EQUAL
@@ -1749,18 +1789,18 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $tokensReceivedCallback$
 	}
-}
-IFJMP
-DUP
-PUSHINT 1737786002
-LEQ
-PUSHCONT {
 	DUP
 	PUSHINT 1594609630
 	EQUAL
 	IFJMPREF {
 		CALL $owner$
 	}
+}
+IFJMP
+DUP
+PUSHINT 1737786002
+LEQ
+PUSHCONT {
 	DUP
 	PUSHINT 1729444094
 	EQUAL

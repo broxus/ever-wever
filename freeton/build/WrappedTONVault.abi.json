@@ -42,6 +42,7 @@
 		{
 			"name": "grant",
 			"inputs": [
+				{"name":"amount","type":"uint128"}
 			],
 			"outputs": [
 			]
@@ -50,13 +51,6 @@
 			"name": "receiveTokenWalletAddress",
 			"inputs": [
 				{"name":"wallet","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "setTokenWalletReceive",
-			"inputs": [
 			],
 			"outputs": [
 			]

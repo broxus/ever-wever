@@ -120,14 +120,28 @@ contract WrappedTONVault is
     function withdraw(
         uint128 value
     ) external view onlyOwner(msg.sender) {
-        owner.transfer({ value: value + msg.value });
+        tvm.rawReserve(total_wrapped + configuration.initial_balance - value, 2);
+
+        owner.transfer({ value: 0, flag: 128 });
     }
 
     /*
         @notice Send TONs to the vault without issuing TONs
+        @dev Increases initial balance value
+        so the granted TONs won't be withdrawn on the wrapping / unwrapping
         @dev Be careful! Since you don't have WTON tokens, you can't redeem granted TONs
     */
-    function grant() external view {}
+    function grant(
+        uint128 amount
+    ) external {
+        require(amount <= msg.value + 1 ton, msg_value_too_low);
+
+        configuration.initial_balance += amount;
+
+        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+
+        msg.sender.transfer({ value: 0, flag: 128 });
+    }
 
     /*
         @notice Store vault's token wallet address
@@ -140,13 +154,7 @@ contract WrappedTONVault is
         require(msg.sender == configuration.root, wrong_root);
 
         token_wallet = wallet;
-    }
 
-    /*
-        @notice Set vault as a receiver for token wallet
-        @dev Can be called only by owner
-    */
-    function setTokenWalletReceive() external view onlyOwner(msg.sender) {
         ITONTokenWallet(token_wallet)
             .setReceiveCallback(address(this), false);
     }
@@ -233,7 +241,6 @@ contract WrappedTONVault is
         uint128 /*updated_balance*/,
         TvmCell /*payload*/
     ) override external {
-        // TODO: fix auth
         require(token_root_ == configuration.root, wrong_root);
         require(token_wallet == token_wallet_, wrong_token_wallet);
         require(msg.sender == token_wallet, wrong_token_wallet);
