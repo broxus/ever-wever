@@ -13,7 +13,7 @@ It's simple! First of all, you should use the latest FreeTON Crystal wallet ([li
 
 
 1. Open your Crystal wallet and click on the TON section
-2. Send as many TONs as you want to the WTON Vault address - [0:136CC9FABCECFA251FAE61A0FA727E1B65FE68EDD2512BEB671582189367FAED](https://ton-explorer.com/accounts/0:136CC9FABCECFA251FAE61A0FA727E1B65FE68EDD2512BEB671582189367FAED).
+2. Send as many TONs as you want to the WTON Vault address - [0:d0936a9fc29b5175487208b1d07ab8042ce7ddbc2de7e271c4087ca833b865cc](https://ton-explorer.com/accounts/0:d0936a9fc29b5175487208b1d07ab8042ce7ddbc2de7e271c4087ca833b865cc).
 3. In about a minute the WTON tokens will appear in your Crystal wallet in the quantity of `(amount - fee)`
 
 ### 
@@ -65,7 +65,7 @@ As of 7 Apr 2021, by sending 10 TONs to the Vault, you receive
 
 1. Open your Crystal wallet and click on the WTON token section
 2. Click "Send" and specify the amount of WTONs you want to convert into TONs.
-3. As a recipient, specify the Vault address (`0:136cc9fabcecfa251fae61a0fa727e1b65fe68edd2512beb671582189367faed`)
+3. As a recipient, specify the Vault address (`0:d0936a9fc29b5175487208b1d07ab8042ce7ddbc2de7e271c4087ca833b865cc`)
 4. Make sure you have some TONs to pay fees
 5. Send transaction. After confirmation, your WTON balance will decrease and your TON balance will increase.
 
@@ -78,13 +78,13 @@ As of 7 Apr 2021, by sending 10 TONs to the Vault, you receive
 
 *   ERC20 WTON token ([0xdB3C2515Da400e11Bcaf84f3b5286f18ffF1868F](https://etherscan.io/token/0xdB3C2515Da400e11Bcaf84f3b5286f18ffF1868F))
 *   TokenMint proxy ([0xdceeae4492732c04b5224841286bf7146aa299df](https://etherscan.io/address/0xdceeae4492732c04b5224841286bf7146aa299df))
-*   [Uniswap WTON-USDT pool](https://info.uniswap.org/pair/0x5811ec00d774de2c72a51509257d50d1305358aa) ([0x5811Ec00d774dE2c72A51509257d50d1305358AA](https://etherscan.io/address/0x5811ec00d774de2c72a51509257d50d1305358aa))
+*   [Uniswap WTON-USDT pool](https://v2.info.uniswap.org/pair/0x5811ec00d774de2c72a51509257d50d1305358aa) ([0x5811Ec00d774dE2c72A51509257d50d1305358AA](https://etherscan.io/address/0x5811ec00d774de2c72a51509257d50d1305358aa))
 
 ### 
 **FreeTON**
 
-*   TIP3 WTON root ([0:eed3f331634d49a5da2b546f4652dd4889487a187c2ef9dd2203cff17b584e3d](https://ton-explorer.com/accounts/0:EED3F331634D49A5DA2B546F4652DD4889487A187C2EF9DD2203CFF17B584E3D))
-*   WTON vault ([0:136cc9fabcecfa251fae61a0fa727e1b65fe68edd2512beb671582189367faed](https://ton-explorer.com/accounts/0:136CC9FABCECFA251FAE61A0FA727E1B65FE68EDD2512BEB671582189367FAED))
+*   TIP3 WTON root ([0:0ee39330eddb680ce731cd6a443c71d9069db06d149a9bec9569d1eb8d04eb37](https://ton-explorer.com/accounts/0:0ee39330eddb680ce731cd6a443c71d9069db06d149a9bec9569d1eb8d04eb37))
+*   WTON vault ([0:d0936a9fc29b5175487208b1d07ab8042ce7ddbc2de7e271c4087ca833b865cc](https://ton-explorer.com/accounts/0:d0936a9fc29b5175487208b1d07ab8042ce7ddbc2de7e271c4087ca833b865cc))
 
 ## 
 **Links**
