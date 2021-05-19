@@ -34,7 +34,7 @@
 		{
 			"name": "withdraw",
 			"inputs": [
-				{"name":"value","type":"uint128"}
+				{"name":"amount","type":"uint128"}
 			],
 			"outputs": [
 			]

@@ -118,9 +118,11 @@ contract WrappedTONVault is
         @param value How much TONs to withdraw
     */
     function withdraw(
-        uint128 value
-    ) external view onlyOwner(msg.sender) {
-        tvm.rawReserve(total_wrapped + configuration.initial_balance - value, 2);
+        uint128 amount
+    ) external onlyOwner(msg.sender) {
+        updateTotalWrapped(-amount);
+
+        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
         owner.transfer({ value: 0, flag: 128 });
     }
@@ -136,7 +138,7 @@ contract WrappedTONVault is
     ) external {
         require(amount <= msg.value + 1 ton, msg_value_too_low);
 
-        configuration.initial_balance += amount;
+        updateTotalWrapped(amount);
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 

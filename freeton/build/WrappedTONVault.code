@@ -438,7 +438,7 @@ IFREF {
 	CALL $c4_to_c7$
 }
 ; Decode input parameters
-; Decode value
+; Decode amount
 LDUQ 128
 PUSHCONT {
 	;; load next cell
@@ -449,7 +449,7 @@ PUSHCONT {
 }
 IFNOT
 ENDS
-;; param: value
+;; param: amount
 ; modifier onlyOwner
 ;; get member sender
 GETGLOB 9
@@ -464,6 +464,13 @@ PUSH S2
 SDEQ
 THROWARGIFNOT 123
 ; function withdraw
+;; -
+;; push identifier amount
+PUSH S1
+NEGATE
+CALLREF {
+	CALL $updateTotalWrapped_internal_macro$
+}
 ;; push identifier total_wrapped
 GETGLOB 20
 ;; +
@@ -472,11 +479,6 @@ GETGLOB 20
 GETGLOB 18
 INDEX 4
 ADD
-UFITS 128
-;; -
-;; push identifier value
-PUSH S2
-SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
@@ -497,7 +499,7 @@ SENDRAWMSG
 DROP
 ; end modifier onlyOwner
 DROP
-IFREF {
+CALLREF {
 	CALL $c7_to_c4$
 }
 TRUE
@@ -548,19 +550,9 @@ LEQ
 THROWANYIFNOT
 ;; push identifier amount
 DUP
-; expValue
-;; fetch configuration
-GETGLOB 18
-DUP
-INDEX 4
-; end expValue
-ROT
-ADD
-UFITS 128
-; colValue
-SETINDEX 4
-SETGLOB 18
-; end colValue
+CALLREF {
+	CALL $updateTotalWrapped_internal_macro$
+}
 ;; push identifier total_wrapped
 GETGLOB 20
 ;; +

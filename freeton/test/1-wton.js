@@ -480,8 +480,8 @@ describe('Test wTON', async function() {
 
       expect(metricsChange.vaultTotalWrapped)
         .to.be.equal(
-        0,
-        'Vault total wrapped change should not change'
+        4,
+        'Wrong vault total wrapped'
       );
 
       expect(metricsChange.wTONTotalSupply)
@@ -1609,7 +1609,7 @@ describe('Test wTON', async function() {
         contract: vault,
         method: 'withdraw',
         params: {
-          value: convertCrystal(3, 'nano'),
+          amount: convertCrystal(3, 'nano'),
         }
       });
       
@@ -1643,8 +1643,8 @@ describe('Test wTON', async function() {
       
       expect(metricsChange.vaultTotalWrapped)
         .to.be.equal(
-        0,
-        'Vault total wrapped change should not change'
+        -3,
+        'Wrong vault total wrapped change'
       );
       
       expect(metricsChange.wTONTotalSupply)
@@ -1722,7 +1722,7 @@ describe('Test wTON', async function() {
         contract: vault,
         method: 'withdraw',
         params: {
-          value: convertCrystal(3, 'nano'),
+          amount: convertCrystal(3, 'nano'),
         }
       });
       
