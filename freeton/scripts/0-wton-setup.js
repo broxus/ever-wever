@@ -34,7 +34,8 @@ const logTx = (tx) => logger.success(`Transaction: ${tx.transaction.id}`);
 
 // TODO: check before run!
 const data = {
-  bridge: '0:fe823b5e869ab06396ae5cdf798cac3cd5eb90e2ae379a20b37ce93573b30277',
+  bridge: '0:5e3a8f4f1650718a536f5278fd8b200e3b01a32d2b546c6b009c9e9f3ef68438',
+  rootMetaFactory: '0:48024844faae071f53ac7bba0e5eac2fe06a722e5fd8100392673581486455cc',
   ethereumEvent: {
     eventAddress: new BigNumber('0xdceeae4492732c04b5224841286bf7146aa299df'.toLowerCase()),
     eventBlocksToConfirm: 12,
@@ -55,6 +56,24 @@ async function main() {
   const [keyPair] = await locklift.keys.getKeyPairs();
 
   logger.log(`Owner keypair: ${JSON.stringify(keyPair)}`);
+  
+  logger.log(`Deploying cell encoder`);
+  
+  const CellEncoder = await locklift.factory.getContract(
+    'CellEncoder',
+    './../node_modules/ethereum-freeton-bridge-contracts/free-ton/build'
+  );
+  
+  const cellEncoder = await locklift.giver.deployContract({
+    contract: CellEncoder,
+    constructorParams: {},
+    initParams: {
+      _randomNonce: getRandomNonce(),
+    },
+    keyPair,
+  }, convertCrystal(1, 'nano'));
+  
+  logger.success(`Cell encoder: ${cellEncoder.address}`);
   
   logger.log(`Deploying owner`);
   
@@ -213,24 +232,6 @@ async function main() {
   
   logger.success(`Token event proxy: ${tokenEventProxy.address}`);
   
-  logger.log(`Deploying cell encoder`);
-  
-  const CellEncoder = await locklift.factory.getContract(
-    'CellEncoder',
-    './../node_modules/ethereum-freeton-bridge-contracts/free-ton/build'
-  );
-  
-  const cellEncoder = await locklift.giver.deployContract({
-    contract: CellEncoder,
-    constructorParams: {},
-    initParams: {
-      _randomNonce: getRandomNonce(),
-    },
-    keyPair,
-  });
-  
-  logger.success(`Cell encoder: ${cellEncoder.address}`);
-  
   const eventMeta = await cellEncoder.call({
     method: 'encodeConfigurationMeta',
     params: {
@@ -346,6 +347,70 @@ async function main() {
     params: {
       source: tokenEventProxy.address,
       destination: root.address,
+    }
+  });
+  
+  logTx(tx);
+  
+  logger.log(`Deploy root meta`);
+  
+  const rootMetaFactory = await locklift.factory.getContract('RootMetaFactory');
+
+  rootMetaFactory.setAddress(data.rootMetaFactory);
+  
+  tx = await owner.runTarget({
+    contract: rootMetaFactory,
+    method: 'deploy',
+    params: {
+      owner: owner.address,
+      root: root.address,
+    }
+  });
+  
+  logTx(tx);
+  
+  const rootMetaAddress = await rootMetaFactory.call({
+    method: 'deploy',
+    params: {
+      owner: owner.address,
+      root: root.address
+    }
+  });
+  
+  logger.success(`Root meta: ${rootMetaAddress}`);
+  
+  logger.log(`Setup token event proxy in root meta`);
+  
+  const rootMeta = await locklift.factory.getContract('RootMeta');
+  rootMeta.setAddress(rootMetaAddress);
+  
+  const encodedEventProxy = await cellEncoder.call({
+    method: 'encodeConfigurationMeta',
+    params: {
+      rootToken: tokenEventProxy.address,
+    }
+  });
+  
+  logger.log(`Encoded token event proxy: ${encodedEventProxy}`);
+  
+  tx = await owner.runTarget({
+    contract: rootMeta,
+    method: 'setValue',
+    params: {
+      key: 0,
+      value: encodedEventProxy,
+    }
+  });
+  
+  logTx(tx);
+  
+  logger.log(`Transferring root meta ownership to multisig`);
+  
+  tx = await owner.runTarget({
+    contract: rootMeta,
+    method: 'transferOwnership',
+    params: {
+      owner_: data.multisig
     }
   });
   
