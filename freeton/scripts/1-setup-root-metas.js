@@ -99,7 +99,7 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair,
-  }, locklift.utils.convertCrystal(30, 'nano'));
+  }, locklift.utils.convertCrystal(40, 'nano'));
   
   logger.success(`Owner: ${owner.address}`);
   
@@ -162,7 +162,7 @@ async function main() {
           owner: owner.address,
           root
         },
-        value: locklift.utils.convertCrystal('0.5', 'nano')
+        value: locklift.utils.convertCrystal('1.0', 'nano')
       });
   
       // Wait twice more time so root meta will be deployed 100% before calling it
