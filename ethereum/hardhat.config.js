@@ -1,25 +1,55 @@
+require('hardhat-deploy');
+require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-web3");
-require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-etherscan");
-// require("hardhat-gas-reporter");
+require("hardhat-gas-reporter");
+require("@nomiclabs/hardhat-vyper");
 require('hardhat-abi-exporter');
+require("@nomiclabs/hardhat-web3");
 
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
+  vyper: {
+    version: "0.2.12",
+  },
   solidity: {
-    version: '0.7.3',
+    version: '0.8.2',
     settings: {
       optimizer: {
         enabled: true
       }
     }
   },
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
+    owner: {
+      default: 1,
+    },
+    bridge: {
+      default: 2,
+    },
+    alice: {
+      default: 3,
+    },
+    bob: {
+      default: 4,
+    },
+    eve: {
+      default: 5,
+    },
+    mia: {
+      default: 6,
+    },
+  },
   networks: {
-    hardhat: {},
+    hardhat: {
+      chainId: 1111,
+    },
   },
   gasReporter: {
     currency: 'USD',
@@ -33,5 +63,5 @@ module.exports = {
     clear: true,
     flat: true,
     spacing: 2
-  }
+  },
 };

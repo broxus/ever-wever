@@ -1,16 +1,14 @@
+.version sol 0.49.0
+
 .macro constructor
 DROP
-GETGLOB 1
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7_with_init_storage$
 }
-;; constructor protection
 GETGLOB 6
 THROWIF 51
-PUSHINT 1
-SETGLOB 6
-;; end constructor protection
 ENDS
 ACCEPT
 CALLREF {
@@ -24,53 +22,44 @@ SETGLOB 7
 CALL $_transferOwnership_internal_macro$
 
 .macro _transferOwnership_internal_macro
-;; param: owner_
-; function _transferOwnership
-; expValue
-; end expValue
-;; push identifier owner_
-DUP
-; colValue
+.loc ../contracts/utils/Ownable.sol, 13
 SETGLOB 10
-; end colValue
-; end function _transferOwnership
-DROP
+.loc ../contracts/utils/Ownable.sol, 0
 
 .macro transferOwnership
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
-; Decode owner_
-LDMSGADDR
+.loc ../contracts/utils/Ownable.sol, 16
+LDMSGADDRQ
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+	LDMSGADDR
+}
+IFNOT
 ENDS
-;; param: owner_
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/utils/Ownable.sol, 0
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; function transferOwnership
-;; push identifier owner_
-PUSH S1
+.loc ../contracts/utils/Ownable.sol, 17
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
-; end function transferOwnership
-DROP
-; end modifier onlyOwner
-DROP
+.loc ../contracts/utils/Ownable.sol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -79,35 +68,31 @@ SETGLOB 7
 
 .macro renounceOwnership
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
+.loc ../contracts/utils/Ownable.sol, 20
 ENDS
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/utils/Ownable.sol, 0
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; function renounceOwnership
-;; address.makeAddrStd()
+.loc ../contracts/utils/Ownable.sol, 21
 PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
-; end function renounceOwnership
-DROP
-; end modifier onlyOwner
+.loc ../contracts/utils/Ownable.sol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -115,57 +100,45 @@ TRUE
 SETGLOB 7
 
 .macro c7_to_c4
+GETGLOB 10
+GETGLOB 3
 GETGLOB 2
 NEWC
 STU 256
-GETGLOB 3
-STUR 64
-GETGLOB 6
-STUR 1
-GETGLOB 10
-SWAP
+STU 64
+STONE
 STSLICE
 ENDC
-POP C4
+POPROOT
 
 .macro c4_to_c7
 PUSHROOT
-CTOS        ; c4
-LDU 256      ; pubkey c4
-LDU 64      ; pubkey timestamp c4
-LDU 1       ; pubkey [timestamp] constructor_flag memory
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDMSGADDR
+ENDS
 SETGLOB 10
-TRUE
-SETGLOB 1   ; pubkey [timestamp] constructor_flag
-SETGLOB 6   ; pubkey [timestamp]
-SETGLOB 3   ; D
+SETGLOB 3
 SETGLOB 2
 
 .macro c4_to_c7_with_init_storage
 PUSHROOT
-CTOS        ; c4
-DUP        ; c4 c4
-SBITS      ; c4 bits
-GTINT 1    ; c4 bits>1
-PUSHCONT {
-	LDU 256      ; pubkey c4
-	LDU 64      ; pubkey timestamp c4
-	LDU 1       ; pubkey [timestamp] constructor_flag memory
-	SETGLOB 10
-	TRUE
-	SETGLOB 1   ; pubkey [timestamp] constructor_flag
-	SETGLOB 6   ; pubkey [timestamp]
-	SETGLOB 3   ; D
-	SETGLOB 2
+CTOS
+SBITS
+GTINT 1
+PUSHREFCONT {
+	CALL $c4_to_c7$
 }
 PUSHCONT {
-	PLDDICT   ; D
-	; init owner
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
 	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 	SETGLOB 10
-	; set contract pubkey
-	PUSHINT 0
-	SWAP
 	PUSHINT 64
 	DICTUGET
 	THROWIFNOT 61
@@ -173,37 +146,38 @@ PUSHCONT {
 	SETGLOB 2
 	PUSHINT 0 ; timestamp
 	SETGLOB 3
-	PUSHINT 0 ; constructor_flag
-	SETGLOB 6
-	TRUE
-	SETGLOB 1
 }
 IFELSE
 
 .internal-alias :main_internal, 0
 .internal :main_internal
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Function: main_internal
-;; param: contract_balance
-;; param: msg_balance
-;; param: int_msg_info
-;; param: msg_body_slice
-PUSHINT 0  ; main_external trans id
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
 PUSH S2
 CTOS
-LDU 4       ; bounced tail
-LDMSGADDR   ; bounced src tail
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
 DROP
 SETGLOB 9
 MODPOW2 1
 IFRET
-PUSH S1    ; body
-SEMPTY     ; isEmpty
-IFRET
-PUSH S1 ; body
-LDU 32  ; funcId body'
-PUSH S1 ; funcId body' funcId
-IFNOTRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60 ; funcId body'
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
 SWAP
 CALLREF {
 	CALL $public_function_selector$
@@ -214,10 +188,14 @@ THROWIF 60
 
 .internal-alias :main_external, -1
 .internal :main_external
-PUSHINT -1 ; main_external trans id
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
 PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 SETGLOB 9
-PUSH S1
+OVER
 CALLREF {
 	CALL $c4_to_c7_with_init_storage$
 }
@@ -226,19 +204,19 @@ SWAP
 PUSHCONT {
 	PUSHINT 512
 	LDSLICEX ; signatureSlice msgSlice
-	DUP      ; signatureSlice msgSlice msgSlice
-	HASHSU   ; signatureSlice msgSlice hashMsgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
 	ROT
 	GETGLOB 2
-	CHKSIGNU      ; msgSlice isSigned
+	CHKSIGNU ; msgSlice isSigned
 	THROWIFNOT 40 ; msgSlice
 }
 IF
-LDU 64                         ; timestamp msgSlice
-SWAP                           ; msgSlice timestamp
-CALL $replay_protection_macro$ ; msgSlice
-LDU  32 ; funcId body
-SWAP    ; body funcId
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; funcId body
+SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
@@ -252,25 +230,18 @@ ENDS
 CALLREF {
 	CALL $c4_to_c7$
 }
-;; emitting 1 value
-DUP
-EQINT -1
+GETGLOB 10
+OVER
 PUSHCONT {
-	GETGLOB 10
+	PUSHSLICE xc0000000000000000000000000df0bcfde
 	NEWC
-	PUSHSLICE xc0000000000000000000000002_
-	STSLICER
-	STSLICECONST 0
-	STSLICECONST 0
-	STSLICECONST xdf0bcfde
-	PUSH S1
-	STSLICER
+	STSLICE
+	STSLICE
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
 }
 IF
-DROP
 TRUE
 SETGLOB 7
 
@@ -299,3 +270,4 @@ EQUAL
 IFJMPREF {
 	CALL $constructor$
 }
+

@@ -1,0 +1,925 @@
+[
+  {
+    "name": "Deposit",
+    "inputs": [
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false
+      },
+      {
+        "name": "wid",
+        "type": "int128",
+        "indexed": false
+      },
+      {
+        "name": "addr",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "NewDeposit",
+    "inputs": [
+      {
+        "name": "sender",
+        "type": "address",
+        "indexed": false
+      },
+      {
+        "name": "recipientWid",
+        "type": "int128",
+        "indexed": false
+      },
+      {
+        "name": "recipientAddr",
+        "type": "uint256",
+        "indexed": false
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false
+      },
+      {
+        "name": "pendingWithdrawalRecipient",
+        "type": "address",
+        "indexed": false
+      },
+      {
+        "name": "pendingWithdrawalId",
+        "type": "uint256",
+        "indexed": false
+      },
+      {
+        "name": "sendTransferToTon",
+        "type": "bool",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "InstantWithdrawal",
+    "inputs": [
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": false
+      },
+      {
+        "name": "payloadId",
+        "type": "bytes32",
+        "indexed": false
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateBridge",
+    "inputs": [
+      {
+        "name": "bridge",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateWrapper",
+    "inputs": [
+      {
+        "name": "wrapper",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateConfiguration",
+    "inputs": [
+      {
+        "name": "wid",
+        "type": "int128",
+        "indexed": false
+      },
+      {
+        "name": "addr",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateTargetDecimals",
+    "inputs": [
+      {
+        "name": "targetDecimals",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "ForceWithdraw",
+    "inputs": [
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": false
+      },
+      {
+        "name": "id",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateRewards",
+    "inputs": [
+      {
+        "name": "wid",
+        "type": "int128",
+        "indexed": false
+      },
+      {
+        "name": "addr",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateStrategyRewards",
+    "inputs": [
+      {
+        "name": "strategy",
+        "type": "address",
+        "indexed": false
+      },
+      {
+        "name": "wid",
+        "type": "int128",
+        "indexed": false
+      },
+      {
+        "name": "addr",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateDepositFee",
+    "inputs": [
+      {
+        "name": "step",
+        "type": "uint256",
+        "indexed": false
+      },
+      {
+        "name": "size",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateWithdrawFee",
+    "inputs": [
+      {
+        "name": "step",
+        "type": "uint256",
+        "indexed": false
+      },
+      {
+        "name": "size",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateGovernance",
+    "inputs": [
+      {
+        "name": "governance",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "NewPendingGovernance",
+    "inputs": [
+      {
+        "name": "governance",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateManagement",
+    "inputs": [
+      {
+        "name": "management",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateDepositLimit",
+    "inputs": [
+      {
+        "name": "depositLimit",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdatePerformanceFee",
+    "inputs": [
+      {
+        "name": "performanceFee",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateManagementFee",
+    "inputs": [
+      {
+        "name": "managementFee",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "UpdateGuardian",
+    "inputs": [
+      {
+        "name": "guardian",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "name": "EmergencyShutdown",
+    "inputs": [
+      {
+        "name": "active",
+        "type": "bool",
+        "indexed": false
+      }
+    ],
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "initialize",
+    "inputs": [
+      {
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "name": "governance",
+        "type": "address"
+      },
+      {
+        "name": "bridge",
+        "type": "address"
+      },
+      {
+        "name": "wrapper",
+        "type": "address"
+      },
+      {
+        "name": "guardian",
+        "type": "address"
+      },
+      {
+        "name": "management",
+        "type": "address"
+      },
+      {
+        "name": "targetDecimals",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [],
+    "gas": 368392
+  },
+  {
+    "stateMutability": "pure",
+    "type": "function",
+    "name": "apiVersion",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "gas": 5946
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setTargetDecimals",
+    "inputs": [
+      {
+        "name": "targetDecimals",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [],
+    "gas": 37505
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setDepositFee",
+    "inputs": [
+      {
+        "name": "fee",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "step",
+            "type": "uint256"
+          },
+          {
+            "name": "size",
+            "type": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "gas": 77144
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setWithdrawFee",
+    "inputs": [
+      {
+        "name": "fee",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "step",
+            "type": "uint256"
+          },
+          {
+            "name": "size",
+            "type": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "gas": 77174
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setWrapper",
+    "inputs": [
+      {
+        "name": "wrapper",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+    "gas": 39045
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setConfiguration",
+    "inputs": [
+      {
+        "name": "configuration",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "name": "addr",
+            "type": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "gas": 74719
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setGovernance",
+    "inputs": [
+      {
+        "name": "governance",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+    "gas": 39101
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "acceptGovernance",
+    "inputs": [],
+    "outputs": [],
+    "gas": 39027
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setManagement",
+    "inputs": [
+      {
+        "name": "management",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+    "gas": 39165
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setRewards",
+    "inputs": [
+      {
+        "name": "rewards",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "name": "addr",
+            "type": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "gas": 74839
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setDepositLimit",
+    "inputs": [
+      {
+        "name": "limit",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [],
+    "gas": 39125
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setGuardian",
+    "inputs": [
+      {
+        "name": "guardian",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+    "gas": 41773
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "setEmergencyShutdown",
+    "inputs": [
+      {
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "outputs": [],
+    "gas": 41844
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "totalAssets",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "gas": 1480
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "deposit",
+    "inputs": [
+      {
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "name": "recipient",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "name": "addr",
+            "type": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "name": "pendingWithdrawalId",
+        "type": "tuple",
+        "components": [
+          {
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "name": "id",
+            "type": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "sendTransferToTon",
+        "type": "bool"
+      }
+    ],
+    "outputs": [],
+    "gas": 212091
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "saveWithdraw",
+    "inputs": [
+      {
+        "name": "payloadId",
+        "type": "bytes32"
+      },
+      {
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "name": "bounty",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [],
+    "gas": 165240
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "availableDepositLimit",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "gas": 6765
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "sweep",
+    "inputs": [
+      {
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "name": "sweep",
+    "inputs": [
+      {
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "token",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "gas": 2958
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "governance",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "gas": 2988
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "management",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "gas": 3018
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "guardian",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "gas": 3048
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "withdrawIds",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "bytes32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "gas": 3193
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "wrapper",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "gas": 3108
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "bridge",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "gas": 3138
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "configuration",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "wid",
+        "type": "int128"
+      },
+      {
+        "name": "addr",
+        "type": "uint256"
+      }
+    ],
+    "gas": 5702
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "rewards",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "wid",
+        "type": "int128"
+      },
+      {
+        "name": "addr",
+        "type": "uint256"
+      }
+    ],
+    "gas": 5732
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "depositFee",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "step",
+        "type": "uint256"
+      },
+      {
+        "name": "size",
+        "type": "uint256"
+      }
+    ],
+    "gas": 5762
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "withdrawFee",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "step",
+        "type": "uint256"
+      },
+      {
+        "name": "size",
+        "type": "uint256"
+      }
+    ],
+    "gas": 5792
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "emergencyShutdown",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "gas": 3288
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "depositLimit",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "gas": 3318
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "activation",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "gas": 3348
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "tokenDecimals",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "gas": 3378
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "targetDecimals",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "gas": 3408
+  }
+]

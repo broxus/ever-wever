@@ -1,5 +1,6 @@
 {
 	"ABI version": 2,
+	"version": "2.1",
 	"header": ["pubkey", "time", "expire"],
 	"functions": [
 		{
@@ -85,7 +86,7 @@
 		{
 			"name": "transferOwnership",
 			"inputs": [
-				{"name":"owner_","type":"address"}
+				{"name":"newOwner","type":"address"}
 			],
 			"outputs": [
 			]
@@ -95,6 +96,14 @@
 			"inputs": [
 			],
 			"outputs": [
+			]
+		},
+		{
+			"name": "_randomNonce",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_randomNonce","type":"uint256"}
 			]
 		},
 		{
@@ -134,5 +143,24 @@
 		{"key":1,"name":"_randomNonce","type":"uint256"}
 	],
 	"events": [
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_randomNonce","type":"uint256"},
+		{"name":"owner","type":"address"},
+		{"components":[{"name":"root_tunnel","type":"address"},{"name":"root","type":"address"},{"name":"receive_safe_fee","type":"uint128"},{"name":"settings_deploy_wallet_grams","type":"uint128"},{"name":"initial_balance","type":"uint128"}],"name":"configuration","type":"tuple"},
+		{"name":"token_wallet","type":"address"},
+		{"name":"total_wrapped","type":"uint128"}
 	]
 }

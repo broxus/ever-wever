@@ -1,4 +1,4 @@
-pragma ton-solidity ^0.39.0;
+pragma ton-solidity >= 0.39.0;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
@@ -9,8 +9,13 @@ import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interf
 import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/ITONTokenWallet.sol';
 import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/IBurnableByOwnerTokenWallet.sol';
 
+import '../../node_modules/@broxus/contracts/contracts/utils/RandomNonce.sol';
+import '../../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.sol';
+import '../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol';
+
+
 import './ErrorCodes.sol';
-import "./utils/Ownable.sol";
+
 
 /*
     @title Wrapped TON vault.
@@ -19,12 +24,11 @@ import "./utils/Ownable.sol";
     @notice Receives wTONs, burn it and releases TONs
 */
 contract WrappedTONVault is
-    ErrorCodes,
-    Ownable,
-    ITokensReceivedCallback
+    ITokensReceivedCallback,
+    RandomNonce,
+    CheckPubKey,
+    InternalOwner
 {
-    uint256 static _randomNonce;
-
     struct Configuration {
         address root_tunnel;
         address root;
@@ -46,11 +50,10 @@ contract WrappedTONVault is
         uint128 receive_safe_fee,
         uint128 settings_deploy_wallet_grams,
         uint128 initial_balance
-    ) public {
-        require(tvm.pubkey() == msg.pubkey(), wrong_msg_key);
+    ) public checkPubKey {
         tvm.accept();
 
-        _transferOwnership(owner_);
+        setOwnership(owner_);
 
         configuration.root = root;
         configuration.root_tunnel = root_tunnel;
@@ -88,7 +91,7 @@ contract WrappedTONVault is
         @dev Can be called only by owner
         @param receiver Address to send odd TONs to
     */
-    function drain(address receiver) onlyOwner(msg.sender) public view {
+    function drain(address receiver) onlyOwner public view {
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
         receiver.transfer({ value: 0, flag: 129 });
@@ -101,7 +104,7 @@ contract WrappedTONVault is
     */
     function setConfiguration(
         Configuration _configuration
-    ) external onlyOwner(msg.sender) {
+    ) external onlyOwner {
         address previous_root = configuration.root;
 
         configuration = _configuration;
@@ -119,7 +122,7 @@ contract WrappedTONVault is
     */
     function withdraw(
         uint128 amount
-    ) external onlyOwner(msg.sender) {
+    ) external onlyOwner {
         updateTotalWrapped(-amount);
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
@@ -136,7 +139,7 @@ contract WrappedTONVault is
     function grant(
         uint128 amount
     ) external {
-        require(amount <= msg.value + 1 ton, msg_value_too_low);
+        require(amount <= msg.value + 1 ton, ErrorCodes.MSG_VALUE_TOO_LOW);
 
         updateTotalWrapped(amount);
 
@@ -153,7 +156,7 @@ contract WrappedTONVault is
     function receiveTokenWalletAddress(
         address wallet
     ) external {
-        require(msg.sender == configuration.root, wrong_root);
+        require(msg.sender == configuration.root, ErrorCodes.WRONG_ROOT);
 
         token_wallet = wallet;
 
@@ -169,7 +172,7 @@ contract WrappedTONVault is
         @dev Rest of the TONs will be sent back
     */
     receive() external {
-        require(msg.value > configuration.receive_safe_fee, msg_value_too_low);
+        require(msg.value > configuration.receive_safe_fee, ErrorCodes.MSG_VALUE_TOO_LOW);
 
         uint128 tokens = msg.value - configuration.receive_safe_fee;
 
@@ -211,7 +214,7 @@ contract WrappedTONVault is
     ) external {
         require(
             msg.value >= tokens + configuration.receive_safe_fee,
-            msg_value_too_low
+            ErrorCodes.MSG_VALUE_TOO_LOW
         );
 
         updateTotalWrapped(tokens);
@@ -243,9 +246,9 @@ contract WrappedTONVault is
         uint128 /*updated_balance*/,
         TvmCell /*payload*/
     ) override external {
-        require(token_root_ == configuration.root, wrong_root);
-        require(token_wallet == token_wallet_, wrong_token_wallet);
-        require(msg.sender == token_wallet, wrong_token_wallet);
+        require(token_root_ == configuration.root, ErrorCodes.WRONG_ROOT);
+        require(token_wallet == token_wallet_, ErrorCodes.WRONG_TOKEN_WALLET);
+        require(msg.sender == token_wallet, ErrorCodes.WRONG_TOKEN_WALLET);
 
         updateTotalWrapped(-tokens_amount);
 

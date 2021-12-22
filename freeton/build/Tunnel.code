@@ -1,33 +1,26 @@
+.version sol 0.49.0
+
 .macro constructor
 DROP
-GETGLOB 1
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7_with_init_storage$
 }
-;; constructor protection
 GETGLOB 6
 THROWIF 51
-PUSHINT 1
-SETGLOB 6
-;; end constructor protection
-; Decode input parameters
-; Decode sources
 LDU 32
 LDDICT
 ROTREV
 PAIR
 SWAP
-; Decode destinations
 LDU 32
 LDDICT
 ROTREV
 PAIR
 SWAP
-; Decode owner_
 LDMSGADDRQ
 PUSHCONT {
-	;; load next cell
 	LDREF
 	ENDS
 	CTOS
@@ -35,16 +28,11 @@ PUSHCONT {
 }
 IFNOT
 ENDS
-;; param: sources
-;; param: destinations
-;; param: owner_
-; constructor Tunnels
-PUSHSLICE x54756e6e656c3a2057726f6e67206465706c6f79206b6579
-NEWC
-STSLICE
-ENDC
+.loc ../contracts/additional/Tunnel.sol, 35
+PUSHREF {
+	.blob x54756e6e656c3a2057726f6e67206465706c6f79206b6579
+}
 GETGLOB 2
-;; ==
 GETGLOB 5
 DUP
 ISNULL
@@ -55,82 +43,54 @@ PUSHCONT {
 IF
 EQUAL
 THROWARGIFNOT 101
-PUSHSLICE x54756e6e656c3a20736f7572636520616e642064657374696e6174696f6e732073697a6520646966666572656e74
-NEWC
-STSLICE
-ENDC
-;; get member length
-;; push identifier sources
+.loc ../contracts/additional/Tunnel.sol, 36
+PUSHREF {
+	.blob x54756e6e656c3a20736f7572636520616e642064657374696e6174696f6e732073697a6520646966666572656e74
+}
 PUSH S3
 INDEX 0
-;; ==
-;; get member length
-;; push identifier destinations
 PUSH S3
 INDEX 0
 EQUAL
 THROWARGIFNOT 101
+.loc ../contracts/additional/Tunnel.sol, 37
 ACCEPT
-;; push identifier owner_
-DUP
+.loc ../contracts/additional/Tunnel.sol, 39
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
-; for
+.loc ../contracts/additional/Tunnel.sol, 41
 PUSHINT 0
-;; decl: i
 PUSHCONT {
-	;; push identifier i
-	DUP
-	;; <
-	;; get member length
-	;; push identifier sources
-	PUSH S4
+	PUSH2 S0, S2
 	INDEX 0
 	LESS
 }
 PUSHCONT {
-	; expValue
-	;; fetch tunnels
+	.loc ../contracts/additional/Tunnel.sol, 42
 	GETGLOB 13
-	;; index
-	;; push identifier i
-	PUSH S1
-	;; push identifier sources
-	PUSH S5
+	PUSH2 S1, S3
 	INDEX 1
 	PUSHINT 32
 	DICTUGET
 	THROWIFNOT 50
 	SWAP
-	; end expValue
-	;; index
-	;; push identifier i
-	PUSH S2
-	;; push identifier destinations
-	PUSH S5
+	PUSH2 S2, S3
 	INDEX 1
 	PUSHINT 32
 	DICTUGET
 	THROWIFNOT 50
-	; colValue
 	ROTREV
 	PUSHINT 267
 	DICTSET
 	SETGLOB 13
-	; end colValue
-	;; ++
-	; expValue
-	; end expValue
+	.loc ../contracts/additional/Tunnel.sol, 41
 	INC
-	; colValue
-	; end colValue
+	.loc ../contracts/additional/Tunnel.sol, 0
 }
 WHILE
-DROP
-; end for
-; end constructor Tunnels
 BLKDROP 3
+.loc ../contracts/additional/Tunnel.sol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -138,63 +98,44 @@ TRUE
 SETGLOB 7
 
 .macro fallback_macro
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; modifier onlySource
-;; get member sender
+PUSHREF {
+	.blob x54756e6e656c3a204e6f7420736f75726365
+}
 GETGLOB 9
-PUSHSLICE x54756e6e656c3a204e6f7420736f75726365
-NEWC
-STSLICE
-ENDC
-;; map.exists
-;; push identifier source
-PUSH S1
-;; push identifier tunnels
+.loc ../contracts/additional/Tunnel.sol, 26
 GETGLOB 13
 PUSHINT 267
 DICTGET
-DUP
-PUSHCONT {
-	NIP
-}
-IF
+NULLSWAPIFNOT
+NIP
 THROWARGIFNOT 101
-; function fallback
-;; get member balance
+.loc ../contracts/additional/Tunnel.sol, 47
 GETPARAM 7
 INDEX 0
-;; -
-;; get member value
-CALLREF {
-	CALL $message_balance_macro$
-}
+DEPTH
+ADDCONST -2
+PICK
 SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
+.loc ../contracts/additional/Tunnel.sol, 49
 NEWC
-;; decl: payload
-; expValue
-DUP
-; end expValue
-;; get member data
+.loc ../contracts/additional/Tunnel.sol, 50
 DEPTH
-PUSHINT 4
-SUB
+ADDCONST -4
 PICK
-STSLICER
-; colValue
-NIP
-; end colValue
-;; transfer()
-;; index
-;; get member sender
+SWAP
+STSLICE
+.loc ../contracts/additional/Tunnel.sol, 52
 GETGLOB 9
-;; push identifier tunnels
 GETGLOB 13
 PUSHINT 267
 DICTGET
@@ -205,40 +146,33 @@ IFNOT
 NEWC
 STSLICECONST x62_
 STSLICE
-PUSHINT 109
-STZEROES
-STSLICECONST 0
-STSLICECONST 1
-;; push identifier payload
-PUSH S1
-ENDC
-STREFR
+PUSHINT 1
+STUR 111
+STBREF
 ENDC
 PUSHINT 128
 SENDRAWMSG
-DROP
-; end function fallback
-DROP
-; end modifier onlySource
+.loc ../contracts/additional/Tunnel.sol, 0
 IFREF {
 	CALL $c7_to_c4$
 }
 
 .macro __getTunnels
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
+.loc ../contracts/additional/Tunnel.sol, 55
 ENDS
+.loc ../contracts/additional/Tunnel.sol, 0
 CALLREF {
 	CALL $__getTunnels_internal_macro$
 }
-;; emitting 2 value(s)
 PUSH S2
-EQINT -1
 PUSHCONT {
 	PUSH S4
 	CTOS
@@ -249,27 +183,28 @@ PUSHCONT {
 	NEWC
 	STSLICECONST xc
 	STSLICE
-	PUSHINT 96
+	PUSHINT 98
 	STZEROES
-	STSLICECONST 0
-	STSLICECONST 0
+	REVERSE 2, 1
 	STSLICECONST x869c0210
-	PUSH S2
+	SWAP
 	UNPAIR
-	XCHG s2
+	XCHG S2
 	STU 32
 	STDICT
-	PUSH S1
+	SWAP
 	UNPAIR
-	XCHG s2
+	XCHG S2
 	STU 32
 	STDICT
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
 }
-IF
-DROP2
+PUSHCONT {
+	DROP2
+}
+IFELSE
 IFREF {
 	CALL $c7_to_c4$
 }
@@ -281,130 +216,94 @@ SETGLOB 7
 CALL $__getTunnels_internal_macro$
 
 .macro __getTunnels_internal_macro
-;; ret param: sources
+.loc ../contracts/additional/Tunnel.sol, 55
 PUSHINT 0
 NEWDICT
 PAIR
-;; ret param: destinations
 PUSHINT 0
 NEWDICT
 PAIR
-; function __getTunnels
-;; push identifier tunnels
+.loc ../contracts/additional/Tunnel.sol, 59
 GETGLOB 13
 DUP
 PUSHINT 267
 DICTMIN
-NULLSWAPIFNOT
 PUSHCONT {
-	SWAP
-	TUPLE 2
+	DUP
+	ROT
 }
-IF
-DUP
-ISNULL
 PUSHCONT {
 	NULL
 	NULL
-}
-PUSHCONT {
-	UNTUPLE 2
-	PUSH S1
+	NULL
 }
 IFELSE
 PUSHCONT {
-	DUP
+	PUSH S2
 	ISNULL
 	NOT
 }
 PUSHCONT {
-	; expValue
-	PUSH S5
-	; end expValue
-	;; push identifier source
-	PUSH S3
-	;; array.push(..)
-	SWAP
+	.loc ../contracts/additional/Tunnel.sol, 60
+	PUSH2 S1, S5
 	UNPAIR
-	PUSH S1
+	OVER
 	INC
-	XCHG s3
-	ROTREV
+	ROLLREV 3
 	PUSHINT 32
 	DICTUSET
 	PAIR
-	; colValue
 	POP S6
-	; end colValue
-	; expValue
-	PUSH S4
-	; end expValue
-	;; push identifier destination
-	PUSH S2
-	;; array.push(..)
-	SWAP
+	.loc ../contracts/additional/Tunnel.sol, 61
+	PUSH2 S0, S4
 	UNPAIR
-	PUSH S1
+	OVER
 	INC
-	XCHG s3
-	ROTREV
+	ROLLREV 3
 	PUSHINT 32
 	DICTUSET
 	PAIR
-	; colValue
 	POP S5
-	; end colValue
-	DUP
-	PUSH S4
+	.loc ../contracts/additional/Tunnel.sol, 0
+	PUSH2 S2, S3
 	PUSHINT 267
 	DICTGETNEXT
-	NULLSWAPIFNOT
 	PUSHCONT {
-		SWAP
-		TUPLE 2
-	}
-	IF
-	DUP
-	ISNULL
-	PUSHCONT {
-		POP S1
-	}
-	PUSHCONT {
-		UNTUPLE 2
-		POP S3
 		DUP
-		POP S4
-		POP S1
+		ROT
+	}
+	PUSHCONT {
+		NULL
+		NULL
+		NULL
 	}
 	IFELSE
+	BLKDROP2 3, 3
 }
 WHILE
 BLKDROP 4
-; end for
-; end function __getTunnels
+.loc ../contracts/additional/Tunnel.sol, 0
 
 .macro __updateTunnel
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
-; Decode source
+.loc ../contracts/additional/Tunnel.sol, 65
 LDMSGADDRQ
 PUSHCONT {
-	;; load next cell
 	LDREF
 	ENDS
 	CTOS
 	LDMSGADDR
 }
 IFNOT
-; Decode destination
 LDMSGADDRQ
 PUSHCONT {
-	;; load next cell
 	LDREF
 	ENDS
 	CTOS
@@ -412,8 +311,7 @@ PUSHCONT {
 }
 IFNOT
 ENDS
-;; param: source
-;; param: destination
+.loc ../contracts/additional/Tunnel.sol, 0
 CALLREF {
 	CALL $__updateTunnel_internal_macro$
 }
@@ -428,54 +326,36 @@ SETGLOB 7
 CALL $__updateTunnel_internal_macro$
 
 .macro __updateTunnel_internal_macro
-;; param: source
-;; param: destination
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/additional/Tunnel.sol, 65
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; function __updateTunnel
-; expValue
-;; fetch tunnels
-GETGLOB 13
-;; push identifier source
-PUSH S3
+.loc ../contracts/additional/Tunnel.sol, 69
 SWAP
-; end expValue
-;; push identifier destination
-PUSH S3
-; colValue
-ROTREV
+GETGLOB 13
 PUSHINT 267
 DICTSET
 SETGLOB 13
-; end colValue
-; end function __updateTunnel
-DROP
-; end modifier onlyOwner
-DROP2
+.loc ../contracts/additional/Tunnel.sol, 0
 
 .macro __removeTunnel
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
-; Decode source
+.loc ../contracts/additional/Tunnel.sol, 72
 LDMSGADDRQ
 PUSHCONT {
-	;; load next cell
 	LDREF
 	ENDS
 	CTOS
@@ -483,7 +363,7 @@ PUSHCONT {
 }
 IFNOT
 ENDS
-;; param: source
+.loc ../contracts/additional/Tunnel.sol, 0
 CALLREF {
 	CALL $__removeTunnel_internal_macro$
 }
@@ -498,52 +378,36 @@ SETGLOB 7
 CALL $__removeTunnel_internal_macro$
 
 .macro __removeTunnel_internal_macro
-;; param: source
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/additional/Tunnel.sol, 72
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; function __removeTunnel
-;; delete
-; expValue
-;; fetch tunnels
+.loc ../contracts/additional/Tunnel.sol, 75
 GETGLOB 13
-;; push identifier source
-PUSH S2
-SWAP
-; end expValue
-PUSH S1
-SWAP
 PUSHINT 267
 DICTDEL
 DROP
-; colValue
-NIP
 SETGLOB 13
-; end colValue
-; end function __removeTunnel
-DROP
-; end modifier onlyOwner
-DROP
+.loc ../contracts/additional/Tunnel.sol, 0
 
 .macro pause
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
+.loc ../contracts/utils/Pausable.sol, 31
 ENDS
+.loc ../contracts/utils/Pausable.sol, 0
 CALLREF {
 	CALL $pause_internal_macro$
 }
@@ -558,60 +422,46 @@ SETGLOB 7
 CALL $pause_internal_macro$
 
 .macro pause_internal_macro
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/utils/Pausable.sol, 31
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; modifier whenNotPaused
-PUSHSLICE x5061757361626c653a206e6f7420756e706175736564
-NEWC
-STSLICE
-ENDC
-;; !
-;; push identifier paused
+.loc ../contracts/utils/Pausable.sol, 16
+PUSHREF {
+	.blob x5061757361626c653a206e6f7420756e706175736564
+}
 GETGLOB 11
 NOT
 THROWARGIFNOT 101
-; function pause
-; expValue
-; end expValue
+.loc ../contracts/utils/Pausable.sol, 32
 TRUE
-; colValue
 SETGLOB 11
-; end colValue
-;; emit Pause
-NEWC
-PUSHSLICE xc0000000000000000000000002_
-STSLICER
-STSLICECONST 0
-STSLICECONST 0
-STSLICECONST x1a441a60
-ENDC
+.loc ../contracts/utils/Pausable.sol, 33
+PUSHREF {
+	.blob xc00000000000000000000000001a441a60
+}
 PUSHINT 0
 SENDRAWMSG
-; end function pause
-; end modifier whenNotPaused
-DROP
-; end modifier onlyOwner
+.loc ../contracts/utils/Pausable.sol, 0
 
 .macro unpause
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
+.loc ../contracts/utils/Pausable.sol, 39
 ENDS
+.loc ../contracts/utils/Pausable.sol, 0
 CALLREF {
 	CALL $unpause_internal_macro$
 }
@@ -626,78 +476,54 @@ SETGLOB 7
 CALL $unpause_internal_macro$
 
 .macro unpause_internal_macro
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/utils/Pausable.sol, 39
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; modifier whenPaused
-PUSHSLICE x5061757361626c653a206e6f7420706175736564
-NEWC
-STSLICE
-ENDC
-;; push identifier paused
+.loc ../contracts/utils/Pausable.sol, 24
+PUSHREF {
+	.blob x5061757361626c653a206e6f7420706175736564
+}
 GETGLOB 11
 THROWARGIFNOT 101
-; function unpause
-; expValue
-; end expValue
+.loc ../contracts/utils/Pausable.sol, 40
 FALSE
-; colValue
 SETGLOB 11
-; end colValue
-;; emit Unpause
-NEWC
-PUSHSLICE xc0000000000000000000000002_
-STSLICER
-STSLICECONST 0
-STSLICECONST 0
-STSLICECONST x11d865d4
-ENDC
+.loc ../contracts/utils/Pausable.sol, 41
+PUSHREF {
+	.blob xc000000000000000000000000011d865d4
+}
 PUSHINT 0
 SENDRAWMSG
-; end function unpause
-; end modifier whenPaused
-DROP
-; end modifier onlyOwner
+.loc ../contracts/utils/Pausable.sol, 0
 
 .globl	_transferOwnership_internal
 .type	_transferOwnership_internal, @function
 CALL $_transferOwnership_internal_macro$
 
 .macro _transferOwnership_internal_macro
-;; param: owner_
-; function _transferOwnership
-; expValue
-; end expValue
-;; push identifier owner_
-DUP
-; colValue
+.loc ../contracts/utils/Ownable.sol, 13
 SETGLOB 10
-; end colValue
-; end function _transferOwnership
-DROP
+.loc ../contracts/utils/Ownable.sol, 0
 
 .macro transferOwnership
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
-; Decode owner_
+.loc ../contracts/utils/Ownable.sol, 16
 LDMSGADDRQ
 PUSHCONT {
-	;; load next cell
 	LDREF
 	ENDS
 	CTOS
@@ -705,30 +531,21 @@ PUSHCONT {
 }
 IFNOT
 ENDS
-;; param: owner_
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/utils/Ownable.sol, 0
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; function transferOwnership
-;; push identifier owner_
-PUSH S1
+.loc ../contracts/utils/Ownable.sol, 17
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
-; end function transferOwnership
-DROP
-; end modifier onlyOwner
-DROP
+.loc ../contracts/utils/Ownable.sol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -737,35 +554,31 @@ SETGLOB 7
 
 .macro renounceOwnership
 DROP
-GETGLOB 1
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-; Decode input parameters
+.loc ../contracts/utils/Ownable.sol, 20
 ENDS
-; modifier onlyOwner
-;; get member sender
+.loc ../contracts/utils/Ownable.sol, 0
 GETGLOB 9
-PUSHSLICE x4f776e61626c653a206e6f74206f776e6572
-NEWC
-STSLICE
-ENDC
-;; push identifier owner
+.loc ../contracts/utils/Ownable.sol, 8
+PUSHREF {
+	.blob x4f776e61626c653a206e6f74206f776e6572
+}
 GETGLOB 10
-;; push identifier addr
-PUSH S2
+ROT
 SDEQ
 THROWARGIFNOT 123
-; function renounceOwnership
-;; address.makeAddrStd()
+.loc ../contracts/utils/Ownable.sol, 21
 PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
-; end function renounceOwnership
-DROP
-; end modifier onlyOwner
+.loc ../contracts/utils/Ownable.sol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -773,80 +586,67 @@ TRUE
 SETGLOB 7
 
 .macro c7_to_c4
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
 GETGLOB 2
 NEWC
 STU 256
-GETGLOB 3
-STUR 64
-GETGLOB 6
-STUR 1
-GETGLOB 10
-GETGLOB 11
-GETGLOB 12
-GETGLOB 13
-REVERSE 5, 0
+STU 64
+STONE
 STSLICE
 STI 1
+ROTREV
+NEWC
 STU 256
 STDICT
+STBREFR
 ENDC
-POP C4
+POPROOT
 
 .macro c4_to_c7
 PUSHROOT
-CTOS        ; c4
-LDU 256      ; pubkey c4
-LDU 64      ; pubkey timestamp c4
-LDU 1       ; pubkey [timestamp] constructor_flag memory
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
 LDMSGADDR
 LDI 1
+LDREF
+ENDS
+CTOS
 LDU 256
-PLDDICT
+LDDICT
+ENDS
 SETGLOB 13
 SETGLOB 12
 SETGLOB 11
 SETGLOB 10
-TRUE
-SETGLOB 1   ; pubkey [timestamp] constructor_flag
-SETGLOB 6   ; pubkey [timestamp]
-SETGLOB 3   ; D
+SETGLOB 3
 SETGLOB 2
 
 .macro c4_to_c7_with_init_storage
 PUSHROOT
-CTOS        ; c4
-DUP        ; c4 c4
-SBITS      ; c4 bits
-GTINT 1    ; c4 bits>1
-PUSHCONT {
-	LDU 256      ; pubkey c4
-	LDU 64      ; pubkey timestamp c4
-	LDU 1       ; pubkey [timestamp] constructor_flag memory
-	LDMSGADDR
-	LDI 1
-	LDU 256
-	PLDDICT
-	SETGLOB 13
-	SETGLOB 12
-	SETGLOB 11
-	SETGLOB 10
-	TRUE
-	SETGLOB 1   ; pubkey [timestamp] constructor_flag
-	SETGLOB 6   ; pubkey [timestamp]
-	SETGLOB 3   ; D
-	SETGLOB 2
+CTOS
+SBITS
+GTINT 1
+PUSHREFCONT {
+	CALL $c4_to_c7$
 }
 PUSHCONT {
-	PLDDICT   ; D
-	; init owner
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
 	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 	SETGLOB 10
-	; init paused
 	PUSHINT 0
 	SETGLOB 11
-	; init _randomNonce
 	PUSHINT 1
-	PUSH S1
+	OVER
 	PUSHINT 64
 	DICTUGET
 	PUSHCONT {
@@ -857,12 +657,8 @@ PUSHCONT {
 	}
 	IFELSE
 	SETGLOB 12
-	; init tunnels
 	NEWDICT
 	SETGLOB 13
-	; set contract pubkey
-	PUSHINT 0
-	SWAP
 	PUSHINT 64
 	DICTUGET
 	THROWIFNOT 61
@@ -870,11 +666,6 @@ PUSHCONT {
 	SETGLOB 2
 	PUSHINT 0 ; timestamp
 	SETGLOB 3
-	PUSHINT 0 ; constructor_flag
-	SETGLOB 6
-	TRUE
-	SETGLOB 1
-	;; init state var: paused
 	FALSE
 	SETGLOB 11
 }
@@ -882,28 +673,40 @@ IFELSE
 
 .internal-alias :main_internal, 0
 .internal :main_internal
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Function: main_internal
-;; param: contract_balance
-;; param: msg_balance
-;; param: int_msg_info
-;; param: msg_body_slice
-PUSHINT 0  ; main_external trans id
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
 PUSH S2
 CTOS
-LDU 4       ; bounced tail
-LDMSGADDR   ; bounced src tail
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
 DROP
 SETGLOB 9
 MODPOW2 1
 IFRET
-PUSH S1    ; body
-SEMPTY     ; isEmpty
-IFRET
-PUSH S1 ; body
-LDU 32  ; funcId body'
-PUSH S1 ; funcId body' funcId
-IFNOTRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+PUSHCONT {
+	DROP
+	CALLREF {
+		CALL $fallback_macro$
+	}
+	THROW 0
+}
+IFNOT
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
 SWAP
 CALLREF {
 	CALL $public_function_selector$
@@ -911,7 +714,7 @@ CALLREF {
 GETGLOB 7
 ISNULL
 PUSHCONT {
-	DROP2 ; funcId and restSlice
+	DROP2
 	CALLREF {
 		CALL $fallback_macro$
 	}
@@ -920,10 +723,14 @@ IF
 
 .internal-alias :main_external, -1
 .internal :main_external
-PUSHINT -1 ; main_external trans id
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
 PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
 SETGLOB 9
-PUSH S1
+OVER
 CALLREF {
 	CALL $c4_to_c7_with_init_storage$
 }
@@ -932,49 +739,49 @@ SWAP
 PUSHCONT {
 	PUSHINT 512
 	LDSLICEX ; signatureSlice msgSlice
-	DUP      ; signatureSlice msgSlice msgSlice
-	HASHSU   ; signatureSlice msgSlice hashMsgSlice
-	SWAP  ; signatureSlice hashMsgSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	SWAP
 	LDU 1 ; signatureSlice hashMsgSlice havePubkey msgSlice
-	SWAP  ; signatureSlice hashMsgSlice msgSlice havePubkey
+	SWAP
 	PUSHCONT {
-		LDU 256       ; signatureSlice hashMsgSlice pubkey msgSlice
-		XCHG s3
+		LDU 256 ; signatureSlice hashMsgSlice pubkey msgSlice
+		XCHG S3
 		SWAP
 	}
 	PUSHCONT {
-		XCHG s2
+		XCHG S2
 		GETGLOB 2
 	}
 	IFELSE
 	DUP
 	SETGLOB 5
-	CHKSIGNU      ; msgSlice isSigned
+	CHKSIGNU ; msgSlice isSigned
 	THROWIFNOT 40 ; msgSlice
 }
 PUSHCONT {
-	LDU 1      ; havePubkey msgSlice
-	SWAP       ; msgSlice havePubkey
+	LDU 1 ; havePubkey msgSlice
+	SWAP
 	THROWIF 58 ; msgSlice
 }
 IFELSE
-LDU 64                         ; timestamp msgSlice
-SWAP                           ; msgSlice timestamp
-CALL $replay_protection_macro$ ; msgSlice
-LDU 32  ; expireAt msgSlice
-SWAP    ; msgSlice expireAt
-NOW     ; msgSlice expireAt now
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; expireAt msgSlice
+SWAP
+NOW ; msgSlice expireAt now
 GREATER ; msgSlice expireAt>now
 THROWIFNOT 57
-LDU  32 ; funcId body
-SWAP    ; body funcId
+LDU 32 ; funcId body
+SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
 GETGLOB 7
 ISNULL
 PUSHCONT {
-	DROP2 ; funcId and restSlice
+	DROP2
 	CALLREF {
 		CALL $fallback_macro$
 	}
@@ -987,25 +794,18 @@ ENDS
 CALLREF {
 	CALL $c4_to_c7$
 }
-;; emitting 1 value
-DUP
-EQINT -1
+GETGLOB 10
+OVER
 PUSHCONT {
-	GETGLOB 10
+	PUSHSLICE xc0000000000000000000000000df0bcfde
 	NEWC
-	PUSHSLICE xc0000000000000000000000002_
-	STSLICER
-	STSLICECONST 0
-	STSLICECONST 0
-	STSLICECONST xdf0bcfde
-	PUSH S1
-	STSLICER
+	STSLICE
+	STSLICE
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
 }
 IF
-DROP
 TRUE
 SETGLOB 7
 
@@ -1015,33 +815,26 @@ ENDS
 CALLREF {
 	CALL $c4_to_c7$
 }
-;; emitting 1 value
-DUP
-EQINT -1
+GETGLOB 11
+OVER
 PUSHCONT {
-	GETGLOB 11
+	PUSHSLICE xc0000000000000000000000000b08d66d1
 	NEWC
-	PUSHSLICE xc0000000000000000000000002_
-	STSLICER
-	STSLICECONST 0
-	STSLICECONST 0
-	STSLICECONST xb08d66d1
-	PUSH S1
-	STIR 1
+	STSLICE
+	STI 1
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
 }
 IF
-DROP
 TRUE
 SETGLOB 7
 
 .macro public_function_selector
 DUP
-PUSHINT 327451255
+PUSHINT 814573265
 LEQ
-PUSHCONT {
+IFJMPREF {
 	DUP
 	PUSHINT 110887440
 	EQUAL
@@ -1060,18 +853,17 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $__updateTunnel$
 	}
-}
-IFJMP
-DUP
-PUSHINT 1105452580
-LEQ
-PUSHCONT {
 	DUP
 	PUSHINT 814573265
 	EQUAL
 	IFJMPREF {
 		CALL $paused$
 	}
+}
+DUP
+PUSHINT 1729444094
+LEQ
+IFJMPREF {
 	DUP
 	PUSHINT 840284606
 	EQUAL
@@ -1084,12 +876,6 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $pause$
 	}
-}
-IFJMP
-DUP
-PUSHINT 1916555405
-LEQ
-PUSHCONT {
 	DUP
 	PUSHINT 1594609630
 	EQUAL
@@ -1102,17 +888,22 @@ PUSHCONT {
 	IFJMPREF {
 		CALL $renounceOwnership$
 	}
+}
+DUP
+PUSHINT 2114348389
+LEQ
+IFJMPREF {
 	DUP
 	PUSHINT 1916555405
 	EQUAL
 	IFJMPREF {
 		CALL $unpause$
 	}
+	DUP
+	PUSHINT 2114348389
+	EQUAL
+	IFJMPREF {
+		CALL $__removeTunnel$
+	}
 }
-IFJMP
-DUP
-PUSHINT 2114348389
-EQUAL
-IFJMPREF {
-	CALL $__removeTunnel$
-}
+

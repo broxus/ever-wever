@@ -1,16 +1,14 @@
+.version sol 0.49.0
+
 .macro constructor
 DROP
-GETGLOB 1
+GETGLOB 2
 ISNULL
 IFREF {
 	CALL $c4_to_c7_with_init_storage$
 }
-;; constructor protection
 GETGLOB 6
 THROWIF 51
-PUSHINT 1
-SETGLOB 6
-;; end constructor protection
 ENDS
 ACCEPT
 CALLREF {
@@ -20,20 +18,26 @@ TRUE
 SETGLOB 7
 
 .macro c7_to_c4
+GETGLOB 19
+GETGLOB 18
+GETGLOB 17
+GETGLOB 16
+GETGLOB 15
+GETGLOB 14
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
 GETGLOB 2
 NEWC
 STU 256
-GETGLOB 3
-STUR 64
-GETGLOB 6
-STUR 1
-GETGLOB 10
-GETGLOB 11
-GETGLOB 12
-GETGLOB 13
-GETGLOB 14
-GETGLOB 15
-REVERSE 7, 0
+STU 64
+STONE
+STU 16
+STU 16
+STU 16
+STU 16
 STU 16
 STU 16
 STU 16
@@ -41,83 +45,72 @@ STU 16
 STU 16
 STU 16
 ENDC
-POP C4
+POPROOT
 
 .macro c4_to_c7
 PUSHROOT
-CTOS        ; c4
-LDU 256      ; pubkey c4
-LDU 64      ; pubkey timestamp c4
-LDU 1       ; pubkey [timestamp] constructor_flag memory
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
 LDU 16
 LDU 16
 LDU 16
 LDU 16
 LDU 16
-PLDU 16
+LDU 16
+LDU 16
+LDU 16
+LDU 16
+LDU 16
+ENDS
+SETGLOB 19
+SETGLOB 18
+SETGLOB 17
+SETGLOB 16
 SETGLOB 15
 SETGLOB 14
 SETGLOB 13
 SETGLOB 12
 SETGLOB 11
 SETGLOB 10
-TRUE
-SETGLOB 1   ; pubkey [timestamp] constructor_flag
-SETGLOB 6   ; pubkey [timestamp]
-SETGLOB 3   ; D
+SETGLOB 3
 SETGLOB 2
 
 .macro c4_to_c7_with_init_storage
 PUSHROOT
-CTOS        ; c4
-DUP        ; c4 c4
-SBITS      ; c4 bits
-GTINT 1    ; c4 bits>1
-PUSHCONT {
-	LDU 256      ; pubkey c4
-	LDU 64      ; pubkey timestamp c4
-	LDU 1       ; pubkey [timestamp] constructor_flag memory
-	LDU 16
-	LDU 16
-	LDU 16
-	LDU 16
-	LDU 16
-	PLDU 16
-	SETGLOB 15
-	SETGLOB 14
-	SETGLOB 13
-	SETGLOB 12
-	SETGLOB 11
-	SETGLOB 10
-	TRUE
-	SETGLOB 1   ; pubkey [timestamp] constructor_flag
-	SETGLOB 6   ; pubkey [timestamp]
-	SETGLOB 3   ; D
-	SETGLOB 2
+CTOS
+SBITS
+GTINT 1
+PUSHREFCONT {
+	CALL $c4_to_c7$
 }
 PUSHCONT {
-	PLDDICT   ; D
-	; init msg_value_too_low
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
 	PUSHINT 0
 	SETGLOB 10
-	; init wrong_root
 	PUSHINT 0
 	SETGLOB 11
-	; init wrong_callback
 	PUSHINT 0
 	SETGLOB 12
-	; init wrong_msg_key
 	PUSHINT 0
 	SETGLOB 13
-	; init wrong_token_wallet
 	PUSHINT 0
 	SETGLOB 14
-	; init already_drained
 	PUSHINT 0
 	SETGLOB 15
-	; set contract pubkey
 	PUSHINT 0
-	SWAP
+	SETGLOB 16
+	PUSHINT 0
+	SETGLOB 17
+	PUSHINT 0
+	SETGLOB 18
+	PUSHINT 0
+	SETGLOB 19
 	PUSHINT 64
 	DICTUGET
 	THROWIFNOT 61
@@ -125,52 +118,55 @@ PUSHCONT {
 	SETGLOB 2
 	PUSHINT 0 ; timestamp
 	SETGLOB 3
-	PUSHINT 0 ; constructor_flag
-	SETGLOB 6
-	TRUE
-	SETGLOB 1
-	;; init state var: msg_value_too_low
 	PUSHINT 101
 	SETGLOB 10
-	;; init state var: wrong_root
 	PUSHINT 102
 	SETGLOB 11
-	;; init state var: wrong_callback
 	PUSHINT 103
 	SETGLOB 12
-	;; init state var: wrong_msg_key
 	PUSHINT 104
 	SETGLOB 13
-	;; init state var: wrong_token_wallet
 	PUSHINT 105
 	SETGLOB 14
-	;; init state var: already_drained
 	PUSHINT 106
 	SETGLOB 15
+	PUSHINT 1001
+	SETGLOB 16
+	PUSHINT 1002
+	SETGLOB 17
+	PUSHINT 1003
+	SETGLOB 18
+	PUSHINT 1004
+	SETGLOB 19
 }
 IFELSE
 
 .internal-alias :main_internal, 0
 .internal :main_internal
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Function: main_internal
-;; param: contract_balance
-;; param: msg_balance
-;; param: int_msg_info
-;; param: msg_body_slice
-PUSHINT 0  ; main_external trans id
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
 PUSH S2
 CTOS
 PLDU 4
 MODPOW2 1
 IFRET
-PUSH S1    ; body
-SEMPTY     ; isEmpty
-IFRET
-PUSH S1 ; body
-LDU 32  ; funcId body'
-PUSH S1 ; funcId body' funcId
-IFNOTRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60 ; funcId body'
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
 SWAP
 CALLREF {
 	CALL $public_function_selector$
@@ -181,8 +177,12 @@ THROWIF 60
 
 .internal-alias :main_external, -1
 .internal :main_external
-PUSHINT -1 ; main_external trans id
-PUSH S1
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+OVER
 CALLREF {
 	CALL $c4_to_c7_with_init_storage$
 }
@@ -191,19 +191,19 @@ SWAP
 PUSHCONT {
 	PUSHINT 512
 	LDSLICEX ; signatureSlice msgSlice
-	DUP      ; signatureSlice msgSlice msgSlice
-	HASHSU   ; signatureSlice msgSlice hashMsgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
 	ROT
 	GETGLOB 2
-	CHKSIGNU      ; msgSlice isSigned
+	CHKSIGNU ; msgSlice isSigned
 	THROWIFNOT 40 ; msgSlice
 }
 IF
-LDU 64                         ; timestamp msgSlice
-SWAP                           ; msgSlice timestamp
-CALL $replay_protection_macro$ ; msgSlice
-LDU  32 ; funcId body
-SWAP    ; body funcId
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; funcId body
+SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
@@ -218,3 +218,4 @@ EQUAL
 IFJMPREF {
 	CALL $constructor$
 }
+
