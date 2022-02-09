@@ -6,18 +6,15 @@ const {
 module.exports = async ({getNamedAccounts, deployments}) => {
     const { deployer } = await getNamedAccounts();
 
-    const dollar = await deployments.get('Dollar');
-
     const tx = await deployments.execute('Registry',
         {
             from: deployer,
             log: true,
         },
         'newVault',
-        dollar.address,
-        ethers.constants.AddressZero,
+        'Token',
+        'TKN',
         9,
-        0,
         0
     );
 
@@ -31,29 +28,29 @@ module.exports = async ({getNamedAccounts, deployments}) => {
         abi: vaultAbi
     } = await deployments.getExtendedArtifact('Vault');
 
-    await deployments.save('DollarVault', {
+    await deployments.save('TokenVault', {
         abi: vaultAbi,
         address: vaultAddress,
     });
 
-    const vaultWrapperAddress = await deployments.read(
-        'DollarVault',
+    const {
+        abi: tokenAbi
+    } = await deployments.getExtendedArtifact('Token');
+
+    const tokenAddress = await deployments.read(
+        'TokenVault',
         {
             gasLimit: 1000000
         },
-        'wrapper',
+        'token',
     );
 
-    const {
-        abi: vaultWrapperAbi
-    } = await deployments.getExtendedArtifact('VaultWrapper');
-
-    await deployments.save('DollarVaultWrapper', {
-        abi: vaultWrapperAbi,
-        address: vaultWrapperAddress
+    await deployments.save('Token', {
+        abi: tokenAbi,
+        address: tokenAddress
     });
 
-    await deployments.execute('DollarVault',
+    await deployments.execute('TokenVault',
         {
             from: deployer,
             log: true

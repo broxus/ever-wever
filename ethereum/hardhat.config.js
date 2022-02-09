@@ -12,9 +12,6 @@ require("@nomiclabs/hardhat-web3");
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  vyper: {
-    version: "0.2.12",
-  },
   solidity: {
     version: '0.8.2',
     settings: {
@@ -42,9 +39,6 @@ module.exports = {
     eve: {
       default: 5,
     },
-    mia: {
-      default: 6,
-    },
   },
   networks: {
     hardhat: {
@@ -53,7 +47,11 @@ module.exports = {
   },
   gasReporter: {
     currency: 'USD',
-    gasPrice: 21
+    gasPrice: 100,
+    enabled: true,
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+    outputFile: 'gas-report.txt',
+    noColors: true,
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_KEY
