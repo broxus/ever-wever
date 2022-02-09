@@ -76,6 +76,17 @@ contract Registry is Ownable, IRegistry, IEverscale {
         return IVault(vaultReleases[numVaultReleases - 1]).apiVersion();
     }
 
+    function latestVault(
+        address token
+    )
+        external
+        view
+    returns(
+        address
+    ) {
+        return vaults[token][numVaults[token] - 1];
+    }
+
     function newVaultRelease(
         address vault
     ) external onlyOwner {
@@ -84,9 +95,9 @@ contract Registry is Ownable, IRegistry, IEverscale {
         if (vault_release_id > 0) {
             require(
                 !compareStrings(
-                    IVault(vaultReleases[vault_release_id - 1]).apiVersion(),
-                    IVault(vault).apiVersion()
-                ),
+                IVault(vaultReleases[vault_release_id - 1]).apiVersion(),
+                IVault(vault).apiVersion()
+            ),
                 "Registry: new vault release should have different api version"
             );
         }
@@ -98,9 +109,7 @@ contract Registry is Ownable, IRegistry, IEverscale {
     }
 
     function _newProxyVault(
-        string memory name,
-        string memory symbol,
-        uint8 decimals,
+        address token,
         address governance,
         uint256 vault_release_target
     ) internal returns (address) {
@@ -119,9 +128,7 @@ contract Registry is Ownable, IRegistry, IEverscale {
         IVault(address(vault)).initialize(
             bridge,
             governance,
-            name,
-            symbol,
-            decimals,
+            token,
             rewards
         );
 
@@ -137,56 +144,57 @@ contract Registry is Ownable, IRegistry, IEverscale {
         if (vault_id > 0) {
             require(
                 !compareStrings(
-                    IVault(vaults[token][vault_id - 1]).apiVersion(),
-                    IVault(vault).apiVersion()
-                ),
+                IVault(vaults[token][vault_id - 1]).apiVersion(),
+                IVault(vault).apiVersion()
+            ),
                 "Registry: new vault should have different api version"
             );
+        }
+
+        vaults[token][vault_id] = vault;
+        numVaults[token] = vault_id + 1;
+
+        if (!isRegistered[token]) {
+            isRegistered[token] = true;
+            tokens[numTokens] = token;
+            numTokens += 1;
         }
 
         emit NewVault(token, vault_id, vault, IVault(vault).apiVersion());
     }
 
     function newVault(
-        string memory name,
-        string memory symbol,
-        uint8 decimals,
+        address token,
         uint256 vaultReleaseDelta
     ) external onlyOwner returns (address) {
         uint256 vault_release_target = numVaultReleases - 1 - vaultReleaseDelta;
 
         address vault = _newProxyVault(
-            name,
-            symbol,
-            decimals,
+            token,
             msg.sender,
             vault_release_target
         );
 
-        _registerVault(IVault(vault).token(), vault);
+        _registerVault(token, vault);
 
         return vault;
     }
 
     function newExperimentalVault(
-        string memory name,
-        string memory symbol,
-        uint8 decimals,
+        address token,
         address governance,
         uint256 vaultReleaseDelta
     ) external returns (address) {
         uint256 vault_release_target = numVaultReleases - 1 - vaultReleaseDelta;
 
         address vault = _newProxyVault(
-            name,
-            symbol,
-            decimals,
+            token,
             governance,
             vault_release_target
         );
 
         emit NewExperimentalVault(
-            IVault(vault).token(),
+            token,
             msg.sender,
             vault,
             IVault(vault).apiVersion()

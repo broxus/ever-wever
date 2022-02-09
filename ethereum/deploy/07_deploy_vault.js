@@ -6,15 +6,15 @@ const {
 module.exports = async ({getNamedAccounts, deployments}) => {
     const { deployer } = await getNamedAccounts();
 
+    const token = await deployments.get('Token');
+
     const tx = await deployments.execute('Registry',
         {
             from: deployer,
             log: true,
         },
         'newVault',
-        'Token',
-        'TKN',
-        9,
+        token.address,
         0
     );
 
@@ -31,23 +31,6 @@ module.exports = async ({getNamedAccounts, deployments}) => {
     await deployments.save('TokenVault', {
         abi: vaultAbi,
         address: vaultAddress,
-    });
-
-    const {
-        abi: tokenAbi
-    } = await deployments.getExtendedArtifact('Token');
-
-    const tokenAddress = await deployments.read(
-        'TokenVault',
-        {
-            gasLimit: 1000000
-        },
-        'token',
-    );
-
-    await deployments.save('Token', {
-        abi: tokenAbi,
-        address: tokenAddress
     });
 
     await deployments.execute('TokenVault',

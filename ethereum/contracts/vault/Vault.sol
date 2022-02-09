@@ -8,7 +8,6 @@ import "./../interfaces/IERC20Mintable.sol";
 import "./../interfaces/IBridge.sol";
 
 import "./VaultStorage.sol";
-import "./../Token.sol";
 
 import "hardhat/console.sol";
 
@@ -61,9 +60,7 @@ contract Vault is VaultStorage {
     function initialize(
         address _bridge,
         address _governance,
-        string memory _name,
-        string memory _symbol,
-        uint8 _decimals,
+        address _token,
         EverscaleAddress memory _rewards
     ) external override initializer {
         bridge = _bridge;
@@ -81,7 +78,7 @@ contract Vault is VaultStorage {
         depositFee = 0;
         emit UpdateDepositFee(0);
 
-        token = address(new Token(_name, _symbol, _decimals));
+        token = _token;
     }
 
     /**

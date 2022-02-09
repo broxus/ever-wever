@@ -33,9 +33,7 @@ interface IVault is IEverscale {
     function initialize(
         address _bridge,
         address _governance,
-        string memory _name,
-        string memory _symbol,
-        uint8 _decimals,
+        address _token,
         EverscaleAddress memory _rewards
     ) external;
 
