@@ -244,6 +244,55 @@ contract Vault is VaultStorage {
         if (fee > 0) _transferToEverscale(rewards_, fee);
     }
 
+    function depositToFactory(
+        uint128 amount,
+        int8 wid,
+        uint256 user,
+        uint256 creditor,
+        uint256 recipient,
+        uint128 tokenAmount,
+        uint128 tonAmount,
+        uint8 swapType,
+        uint128 slippageNumerator,
+        uint128 slippageDenominator,
+        bytes memory level3
+    )
+        external
+        override
+        onlyEmergencyDisabled
+    {
+        require(
+            tokenAmount <= amount &&
+            swapType < 2 &&
+            user != 0 &&
+            recipient != 0 &&
+            creditor != 0 &&
+            slippageNumerator < slippageDenominator,
+            "Wrapper: wrong args"
+        );
+
+        IERC20Mintable(token).burn(msg.sender, amount);
+
+        uint256 fee = _calculateMovementFee(amount, depositFee);
+
+        if (fee > 0) _transferToEverscale(rewards_, fee);
+
+        emit FactoryDeposit(
+            amount - uint128(fee),
+            wid,
+            user,
+            creditor,
+            recipient,
+            tokenAmount,
+            tonAmount,
+            swapType,
+            slippageNumerator,
+            slippageDenominator,
+            0x07,
+            level3
+        );
+    }
+
     /**
         @notice Save withdrawal receipt. If Vault has enough tokens and withdrawal passes the
             limits, then it's executed immediately. Otherwise it's saved as a pending withdrawal.

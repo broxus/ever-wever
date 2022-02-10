@@ -55,6 +55,20 @@ interface IVault is IEverscale {
         uint256 amount
     ) external;
 
+    function depositToFactory(
+        uint128 amount,
+        int8 wid,
+        uint256 user,
+        uint256 creditor,
+        uint256 recipient,
+        uint128 tokenAmount,
+        uint128 tonAmount,
+        uint8 swapType,
+        uint128 slippageNumerator,
+        uint128 slippageDenominator,
+        bytes memory level3
+    ) external;
+
     function saveWithdrawal(
         bytes memory payload,
         bytes[] memory signatures
@@ -93,4 +107,19 @@ interface IVault is IEverscale {
     event UpdateGuardian(address guardian);
 
     event EmergencyShutdown(bool active);
+
+    event FactoryDeposit(
+        uint128 amount,
+        int8 wid,
+        uint256 user,
+        uint256 creditor,
+        uint256 recipient,
+        uint128 tokenAmount,
+        uint128 tonAmount,
+        uint8 swapType,
+        uint128 slippageNumerator,
+        uint128 slippageDenominator,
+        bytes1 separator,
+        bytes level3
+    );
 }
