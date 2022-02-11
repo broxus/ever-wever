@@ -6,6 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2021-05-18
 ### Added
-- Vault `grant` method - grant TONs without receiving WTON tokens
-- Vault `withdraw` method - owner can withdraw TONs from the vault without providing tokens
+- Vault `grant` method - grant EVERs without receiving WEVER tokens
+- Vault `withdraw` method - owner can withdraw EVERs from the vault without providing tokens
 - Tests for `grant` and `withdraw` functionality

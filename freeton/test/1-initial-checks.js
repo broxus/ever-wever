@@ -1,7 +1,8 @@
 const {
   expect,
   afterRun,
-  setupWton,
+  setupWever,
+  ...utils
 } = require("./utils");
 const {convertCrystal} = require("locklift/locklift/utils");
 
@@ -21,34 +22,29 @@ describe('Setup contracts', async function() {
   let tonEventConfiguration;
 
   it('Setup contracts', async function() {
-    [vault, tunnel, user, root, userTokenWallet, vaultTokenWallet, proxyTokenTransfer, proxyTokenWallet] = await setupWton();
+    [vault, tunnel, user, root, userTokenWallet, vaultTokenWallet, proxyTokenTransfer, proxyTokenWallet] = await setupWever();
   });
 
-  describe('Wrapped TON token', async function() {
-    it('Check wTON root', async function() {
-
+  describe('Wrapped EVER token', async function() {
+    it('Check wEVER root', async function() {
       const name = await root.call({
         method: 'name',
         params: {}
       });
 
-      expect(name.toString()).to.be.equal("Wrapped TON", 'Wrong root name');
-      expect((await locklift.ton.getBalance(root.address)).toNumber())
-          .to.be.above(0, 'Root balance empty');
+      expect(name)
+          .to.be.equal("Wrapped EVER", 'Wrong root name');
+
+      expect(await locklift.ton.getBalance(root.address))
+          .to.be.bignumber.above(0, 'Root balance empty');
     });
 
     it('Check root owned by tunnel', async function() {
-      const {
-        root_public_key,
-        root_owner_address
-      } = await root.call({
-        method: 'getDetails',
+      const rootOwner = await root.call({
+        method: 'rootOwner',
       });
 
-      expect(root_public_key.toNumber())
-          .to.be.equal(0, 'Wrong root public key');
-
-      expect(root_owner_address)
+      expect(rootOwner)
           .to.be.equal(tunnel.address, 'Root owner should be tunnel');
     });
   });
@@ -102,27 +98,10 @@ describe('Setup contracts', async function() {
     it('Check vault token wallet', async function() {
       await afterRun();
 
-      const vaultTokenWalletAddressExpected = await root.call({
-        method: 'getWalletAddress',
-        params: {
-          wallet_public_key_: 0,
-          owner_address_: vault.address
-        },
-      });
+      const vaultTokenWalletAddressExpected = await utils.getTokenWalletAddress(root, vault.address);
 
       expect(vaultTokenWalletAddressExpected)
           .to.be.equal(vaultTokenWallet.address, 'Wrong vault token wallet');
-    });
-
-    it('Check vault token wallet receive callback', async function() {
-      const {
-        receive_callback
-      } = (await vaultTokenWallet.call({
-        method: 'getDetails',
-      }));
-
-      expect(receive_callback)
-          .to.be.equal(vault.address, 'Wrong vault token wallet receive callback');
     });
   });
 
@@ -140,25 +119,10 @@ describe('Setup contracts', async function() {
     });
 
     it('Check proxy token wallet owner', async () => {
-      const {
-        wallet_public_key,
-        owner_address,
-      } = await proxyTokenWallet.call({ method: 'getDetails' });
+      const owner = await proxyTokenWallet.call({ method: 'owner' });
 
-      expect(wallet_public_key)
-          .to.be.bignumber.equal(0, "Wrong owner public key");
-
-      expect(owner_address)
+      expect(owner)
           .to.be.equal(proxyTokenTransfer.address, "Wrong owner address");
-    });
-
-    it('Check proxy token wallet receive callback', async () => {
-      const {
-        receive_callback
-      } = await proxyTokenWallet.call({ method: 'getDetails' });
-
-      expect(receive_callback)
-          .to.be.equal(proxyTokenTransfer.address, "Wrong proxy token wallet receive callback");
     });
 
     it('Check proxy details', async () => {

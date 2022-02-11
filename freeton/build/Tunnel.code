@@ -1,4 +1,4 @@
-.version sol 0.49.0
+.version sol 0.57.1
 
 .macro constructor
 DROP
@@ -9,24 +9,36 @@ IFREF {
 }
 GETGLOB 6
 THROWIF 51
-LDU 32
-LDDICT
-ROTREV
-PAIR
-SWAP
-LDU 32
-LDDICT
-ROTREV
-PAIR
-SWAP
-LDMSGADDRQ
+OVER
 PUSHCONT {
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
 	LDREF
 	ENDS
 	CTOS
-	LDMSGADDR
 }
-IFNOT
+PUSHCONT {
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+}
+IFELSE
+LDMSGADDR
 ENDS
 .loc ../contracts/additional/Tunnel.sol, 35
 PUSHREF {
@@ -48,9 +60,9 @@ PUSHREF {
 	.blob x54756e6e656c3a20736f7572636520616e642064657374696e6174696f6e732073697a6520646966666572656e74
 }
 PUSH S3
-INDEX 0
+FIRST
 PUSH S3
-INDEX 0
+FIRST
 EQUAL
 THROWARGIFNOT 101
 .loc ../contracts/additional/Tunnel.sol, 37
@@ -63,24 +75,22 @@ CALLREF {
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S2
-	INDEX 0
+	FIRST
 	LESS
 }
 PUSHCONT {
 	.loc ../contracts/additional/Tunnel.sol, 42
-	GETGLOB 13
+	PUSH2 S0, S1
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
 	PUSH2 S1, S3
-	INDEX 1
+	SECOND
 	PUSHINT 32
 	DICTUGET
 	THROWIFNOT 50
-	SWAP
-	PUSH2 S2, S3
-	INDEX 1
-	PUSHINT 32
-	DICTUGET
-	THROWIFNOT 50
-	ROTREV
+	GETGLOB 13
 	PUSHINT 267
 	DICTSET
 	SETGLOB 13
@@ -94,8 +104,7 @@ BLKDROP 3
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .macro fallback_macro
 GETGLOB 6
@@ -105,11 +114,11 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
+.loc ../contracts/additional/Tunnel.sol, 26
 PUSHREF {
 	.blob x54756e6e656c3a204e6f7420736f75726365
 }
 GETGLOB 9
-.loc ../contracts/additional/Tunnel.sol, 26
 GETGLOB 13
 PUSHINT 267
 DICTGET
@@ -118,7 +127,7 @@ NIP
 THROWARGIFNOT 101
 .loc ../contracts/additional/Tunnel.sol, 47
 GETPARAM 7
-INDEX 0
+FIRST
 DEPTH
 ADDCONST -2
 PICK
@@ -126,13 +135,11 @@ SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/additional/Tunnel.sol, 49
-NEWC
 .loc ../contracts/additional/Tunnel.sol, 50
 DEPTH
 ADDCONST -4
 PICK
-SWAP
+NEWC
 STSLICE
 .loc ../contracts/additional/Tunnel.sol, 52
 GETGLOB 9
@@ -140,7 +147,9 @@ GETGLOB 13
 PUSHINT 267
 DICTGET
 PUSHCONT {
-	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
 }
 IFNOT
 NEWC
@@ -153,8 +162,9 @@ ENDC
 PUSHINT 128
 SENDRAWMSG
 .loc ../contracts/additional/Tunnel.sol, 0
+DUP
 IFREF {
-	CALL $c7_to_c4$
+	CALL $upd_only_time_in_c4$
 }
 
 .macro __getTunnels
@@ -206,10 +216,9 @@ PUSHCONT {
 }
 IFELSE
 IFREF {
-	CALL $c7_to_c4$
+	CALL $upd_only_time_in_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	__getTunnels_internal
 .type	__getTunnels_internal, @function
@@ -220,9 +229,7 @@ CALL $__getTunnels_internal_macro$
 PUSHINT 0
 NEWDICT
 PAIR
-PUSHINT 0
-NEWDICT
-PAIR
+DUP
 .loc ../contracts/additional/Tunnel.sol, 59
 GETGLOB 13
 DUP
@@ -234,8 +241,7 @@ PUSHCONT {
 }
 PUSHCONT {
 	NULL
-	NULL
-	NULL
+	BLKPUSH 2, 0
 }
 IFELSE
 PUSHCONT {
@@ -274,8 +280,7 @@ PUSHCONT {
 	}
 	PUSHCONT {
 		NULL
-		NULL
-		NULL
+		BLKPUSH 2, 0
 	}
 	IFELSE
 	BLKDROP2 3, 3
@@ -294,46 +299,40 @@ IFREF {
 	CALL $c4_to_c7$
 }
 .loc ../contracts/additional/Tunnel.sol, 65
-LDMSGADDRQ
+OVER
 PUSHCONT {
 	LDREF
 	ENDS
 	CTOS
-	LDMSGADDR
 }
-IFNOT
-LDMSGADDRQ
-PUSHCONT {
-	LDREF
-	ENDS
-	CTOS
-	LDMSGADDR
-}
-IFNOT
+IF
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
 ENDS
 .loc ../contracts/additional/Tunnel.sol, 0
 CALLREF {
 	CALL $__updateTunnel_internal_macro$
 }
+DROP
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	__updateTunnel_internal
 .type	__updateTunnel_internal, @function
 CALL $__updateTunnel_internal_macro$
 
 .macro __updateTunnel_internal_macro
-.loc ../contracts/additional/Tunnel.sol, 65
-GETGLOB 9
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/additional/Tunnel.sol, 69
@@ -354,38 +353,36 @@ IFREF {
 	CALL $c4_to_c7$
 }
 .loc ../contracts/additional/Tunnel.sol, 72
-LDMSGADDRQ
+OVER
 PUSHCONT {
 	LDREF
 	ENDS
 	CTOS
-	LDMSGADDR
 }
-IFNOT
+IF
+LDMSGADDR
 ENDS
 .loc ../contracts/additional/Tunnel.sol, 0
 CALLREF {
 	CALL $__removeTunnel_internal_macro$
 }
+DROP
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	__removeTunnel_internal
 .type	__removeTunnel_internal, @function
 CALL $__removeTunnel_internal_macro$
 
 .macro __removeTunnel_internal_macro
-.loc ../contracts/additional/Tunnel.sol, 72
-GETGLOB 9
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/additional/Tunnel.sol, 75
@@ -411,25 +408,23 @@ ENDS
 CALLREF {
 	CALL $pause_internal_macro$
 }
+DROP
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	pause_internal
 .type	pause_internal, @function
 CALL $pause_internal_macro$
 
 .macro pause_internal_macro
-.loc ../contracts/utils/Pausable.sol, 31
-GETGLOB 9
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Pausable.sol, 16
@@ -465,25 +460,23 @@ ENDS
 CALLREF {
 	CALL $unpause_internal_macro$
 }
+DROP
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	unpause_internal
 .type	unpause_internal, @function
 CALL $unpause_internal_macro$
 
 .macro unpause_internal_macro
-.loc ../contracts/utils/Pausable.sol, 39
-GETGLOB 9
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Pausable.sol, 24
@@ -522,23 +515,32 @@ IFREF {
 	CALL $c4_to_c7$
 }
 .loc ../contracts/utils/Ownable.sol, 16
-LDMSGADDRQ
+OVER
 PUSHCONT {
 	LDREF
 	ENDS
 	CTOS
-	LDMSGADDR
 }
-IFNOT
+IF
+LDMSGADDR
 ENDS
 .loc ../contracts/utils/Ownable.sol, 0
-GETGLOB 9
+CALLREF {
+	CALL $transferOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro transferOwnership_internal_macro
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Ownable.sol, 17
@@ -546,11 +548,6 @@ CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
 .loc ../contracts/utils/Ownable.sol, 0
-CALLREF {
-	CALL $c7_to_c4$
-}
-TRUE
-SETGLOB 7
 
 .macro renounceOwnership
 DROP
@@ -564,47 +561,32 @@ IFREF {
 .loc ../contracts/utils/Ownable.sol, 20
 ENDS
 .loc ../contracts/utils/Ownable.sol, 0
-GETGLOB 9
+CALLREF {
+	CALL $renounceOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro renounceOwnership_internal_macro
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Ownable.sol, 21
-PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
 .loc ../contracts/utils/Ownable.sol, 0
-CALLREF {
-	CALL $c7_to_c4$
-}
-TRUE
-SETGLOB 7
-
-.macro c7_to_c4
-GETGLOB 13
-GETGLOB 12
-GETGLOB 11
-GETGLOB 10
-GETGLOB 3
-GETGLOB 2
-NEWC
-STU 256
-STU 64
-STONE
-STSLICE
-STI 1
-ROTREV
-NEWC
-STU 256
-STDICT
-STBREFR
-ENDC
-POPROOT
 
 .macro c4_to_c7
 PUSHROOT
@@ -633,20 +615,17 @@ PUSHROOT
 CTOS
 SBITS
 GTINT 1
-PUSHREFCONT {
-	CALL $c4_to_c7$
-}
 PUSHCONT {
 	PUSHINT 0
 	PUSHROOT
 	CTOS
 	PLDDICT ; D
-	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
-	SETGLOB 10
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
 	PUSHINT 0
-	SETGLOB 11
 	PUSHINT 1
-	OVER
+	PUSH S3
 	PUSHINT 64
 	DICTUGET
 	PUSHCONT {
@@ -656,9 +635,11 @@ PUSHCONT {
 		PUSHINT 0
 	}
 	IFELSE
-	SETGLOB 12
 	NEWDICT
 	SETGLOB 13
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
 	PUSHINT 64
 	DICTUGET
 	THROWIFNOT 61
@@ -669,7 +650,45 @@ PUSHCONT {
 	FALSE
 	SETGLOB 11
 }
-IFELSE
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STSLICE
+STI 1
+ROTREV
+NEWC
+STU 256
+STDICT
+STBREFR
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
 
 .internal-alias :main_internal, 0
 .internal :main_internal
@@ -711,15 +730,10 @@ SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
-GETGLOB 7
-ISNULL
-PUSHCONT {
-	DROP2
-	CALLREF {
-		CALL $fallback_macro$
-	}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
 }
-IF
 
 .internal-alias :main_external, -1
 .internal :main_external
@@ -728,7 +742,9 @@ CTOS
 SBITS
 NEQINT 1
 SETGLOB 6
-PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
 SETGLOB 9
 OVER
 CALLREF {
@@ -757,12 +773,12 @@ PUSHCONT {
 	DUP
 	SETGLOB 5
 	CHKSIGNU ; msgSlice isSigned
-	THROWIFNOT 40 ; msgSlice
+	THROWIFNOT 40
 }
 PUSHCONT {
 	LDU 1 ; havePubkey msgSlice
 	SWAP
-	THROWIF 58 ; msgSlice
+	THROWIF 58
 }
 IFELSE
 LDU 64 ; timestamp msgSlice
@@ -778,15 +794,10 @@ SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
-GETGLOB 7
-ISNULL
-PUSHCONT {
-	DROP2
-	CALLREF {
-		CALL $fallback_macro$
-	}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
 }
-IF
 
 .macro owner
 DROP
@@ -806,8 +817,7 @@ PUSHCONT {
 	SENDRAWMSG
 }
 IF
-TRUE
-SETGLOB 7
+THROW 0
 
 .macro paused
 DROP
@@ -827,8 +837,7 @@ PUSHCONT {
 	SENDRAWMSG
 }
 IF
-TRUE
-SETGLOB 7
+THROW 0
 
 .macro public_function_selector
 DUP

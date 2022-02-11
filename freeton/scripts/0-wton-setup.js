@@ -24,7 +24,7 @@ const afterRun = async (tx) => {
 
 const {
   utils: {
-    convertCrystal
+    locklift.utils.convertCrystal
   }
 } = locklift;
 
@@ -71,7 +71,7 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair,
-  }, convertCrystal(1, 'nano'));
+  }, locklift.utils.convertCrystal(1, 'nano'));
   
   logger.success(`Cell encoder: ${cellEncoder.address}`);
   
@@ -93,7 +93,7 @@ async function main() {
   
   logger.success(`Owner: ${owner.address}`);
   
-  logger.log(`Deploying WTON`);
+  logger.log(`Deploying WEVER`);
   
   const RootToken = await locklift.factory.getContract(
     'RootTokenContract',
@@ -112,8 +112,8 @@ async function main() {
       root_owner_address_: locklift.ton.zero_address
     },
     initParams: {
-      name: stringToBytesArray('Wrapped TON'),
-      symbol: stringToBytesArray('WTON'),
+      name: stringToBytesArray('Wrapped EVER'),
+      symbol: stringToBytesArray('WEVER'),
       decimals: 9,
       wallet_code: TokenWallet.code,
       _randomNonce: getRandomNonce(),
@@ -123,7 +123,7 @@ async function main() {
   
   root.afterRun = afterRun;
   
-  logger.success(`WTON root: ${root.address}`);
+  logger.success(`WEVER root: ${root.address}`);
   
   logger.log(`Deploying tunnel`);
 
@@ -140,23 +140,23 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair,
-  }, convertCrystal(5, 'nano'));
+  }, locklift.utils.convertCrystal(5, 'nano'));
   
   logger.success(`Tunnel address: ${tunnel.address}`);
   
   logger.log(`Deploying vault`);
   
-  const WrappedTONVault = await locklift.factory.getContract('WrappedTONVault');
+  const Vault = await locklift.factory.getContract('Vault');
   
   const vault = await locklift.giver.deployContract({
-    contract: WrappedTONVault,
+    contract: Vault,
     constructorParams: {
       owner_: owner.address,
       root_tunnel: tunnel.address,
       root: root.address,
-      receive_safe_fee: convertCrystal(1, 'nano'),
-      settings_deploy_wallet_grams: convertCrystal(0.05, 'nano'),
-      initial_balance: convertCrystal(1, 'nano')
+      receive_safe_fee: locklift.utils.convertCrystal(1, 'nano'),
+      settings_deploy_wallet_grams: locklift.utils.convertCrystal(0.05, 'nano'),
+      initial_balance: locklift.utils.convertCrystal(1, 'nano')
     },
     initParams: {
       _randomNonce: getRandomNonce(),
@@ -218,7 +218,7 @@ async function main() {
       _randomNonce: getRandomNonce(),
     },
     keyPair
-  }, convertCrystal(5, 'nano'));
+  }, locklift.utils.convertCrystal(5, 'nano'));
   
   logger.success(`Token event proxy: ${tokenEventProxy.address}`);
   
@@ -256,7 +256,7 @@ async function main() {
         eventRequiredRejects: 2,
         eventCode: EthereumEvent.code,
         bridgeAddress: data.bridge,
-        eventInitialBalance: convertCrystal('10', 'nano'),
+        eventInitialBalance: locklift.utils.convertCrystal('10', 'nano'),
         meta: eventMeta
       },
       initData: {
@@ -265,7 +265,7 @@ async function main() {
       }
     },
     keyPair,
-  }, convertCrystal(20, 'nano'));
+  }, locklift.utils.convertCrystal(20, 'nano'));
   
   logger.success(`Ethereum event configuration: ${ethereumEventConfiguration.address}`);
   
@@ -295,7 +295,7 @@ async function main() {
         eventRequiredRejects: 2,
         eventCode: TonEvent.code,
         bridgeAddress: data.bridge,
-        eventInitialBalance: convertCrystal('10', 'nano'),
+        eventInitialBalance: locklift.utils.convertCrystal('10', 'nano'),
         meta: eventMeta
       },
       initData: {
@@ -304,7 +304,7 @@ async function main() {
       }
     },
     keyPair,
-  }, convertCrystal(20, 'nano'));
+  }, locklift.utils.convertCrystal(20, 'nano'));
   
   logger.success(`Ton event configuration: ${tonEventConfiguration.address}`);
   
@@ -321,8 +321,8 @@ async function main() {
         ethereum_event_configuration_address: ethereumEventConfiguration.address,
         token_root_address: root.address,
         root_tunnel: tunnel.address,
-        settings_burn_min_msg_value: convertCrystal(1, 'nano'),
-        settings_deploy_wallet_grams: convertCrystal(0.05, 'nano')
+        settings_burn_min_msg_value: locklift.utils.convertCrystal(1, 'nano'),
+        settings_deploy_wallet_grams: locklift.utils.convertCrystal(0.05, 'nano')
       }
     }
   });

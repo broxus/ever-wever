@@ -1,6 +1,6 @@
 {
 	"ABI version": 2,
-	"version": "2.1",
+	"version": "2.2",
 	"header": ["time"],
 	"functions": [
 		{
@@ -9,11 +9,19 @@
 				{"name":"answerId","type":"uint32"}
 			],
 			"outputs": [
-				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"tokenRoot","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"},
+				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"},
 				{"name":"_owner","type":"address"},
 				{"name":"_received_count","type":"uint128"},
 				{"name":"_transferred_count","type":"uint128"},
 				{"name":"_token_wallet","type":"address"}
+			]
+		},
+		{
+			"name": "apiVersion",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"API_VERSION","type":"string"}
 			]
 		},
 		{
@@ -83,7 +91,7 @@
 		{"name":"_constructorFlag","type":"bool"},
 		{"name":"_randomNonce","type":"uint256"},
 		{"name":"owner","type":"address"},
-		{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"tokenRoot","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"config","type":"tuple"},
+		{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"config","type":"tuple"},
 		{"name":"received_count","type":"uint128"},
 		{"name":"transferred_count","type":"uint128"},
 		{"name":"token_wallet","type":"address"}

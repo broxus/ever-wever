@@ -10,7 +10,7 @@ import "./../utils/Pausable.sol";
 import "./../utils/Ownable.sol";
 
 
-/*
+/**
     @title Tunnels contract which receives and pass messages.
     Stores the set of (source, destination)
     Proxies every message from source to destination

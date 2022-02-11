@@ -1,7 +1,7 @@
 pragma ton-solidity >= 0.39.0;
 
 
-import "./../../../node_modules/ethereum-freeton-bridge-contracts/free-ton/contracts/bridge/interfaces/event-contracts/IEthereumEvent.sol";
+import "./bridge/event-contracts/IEthereumEvent.sol";
 
 
 interface IProxy {
@@ -9,7 +9,7 @@ interface IProxy {
         address tonConfiguration;
         address[] ethereumConfigurations;
 
-        address tokenRoot;
+        address root;
 
         uint128 settingsDeployWalletGrams;
         uint128 settingsTransferGrams;
@@ -18,7 +18,7 @@ interface IProxy {
     function getConfiguration() external view responsible returns (Configuration);
     function setConfiguration(Configuration _config) external;
 
-    function broxusBridgeCallback(
+    function onEventConfirmed(
         IEthereumEvent.EthereumEventInitData eventData,
         address gasBackAddress
     ) external;

@@ -1,7 +1,7 @@
 {
   "name": "wton",
   "version": "1.0.0",
-  "description": "Wrapped TON Crystal token with a connector to the Broxus TON-Eth bridge.",
+  "description": "Wrapped EVER Crystal token with a connector to the Broxus TON-Eth bridge.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,15 +27,15 @@
   },
   "homepage": "https://github.com/broxus/ton-eth-wton#readme",
   "dependencies": {
+    "@broxus/contracts": "^1.0.4",
     "@nomiclabs/hardhat-vyper": "^2.0.1",
     "@openzeppelin/contracts-upgradeable": "^4.4.0",
     "bignumber.js": "^9.0.1",
-    "broxus-ton-tokens-contracts": "github:broxus/ton-eth-bridge-token-contracts#e2741a2e537fde3d01ef5bc0f7493d566fcd9151",
     "chai-as-promised": "^7.1.1",
-    "ethereum-freeton-bridge-contracts": "github:broxus/ton-eth-bridge-contracts#9bf859ad2fa258185b58e05dd6e6e7b92f77c935",
     "ethereum-waffle": "^3.4.0",
-    "locklift": "^1.1.0",
-    "mocha-logger": "^1.0.7"
+    "locklift": "^1.5.3",
+    "mocha-logger": "^1.0.7",
+    "ton-eth-bridge-token-contracts": "git://github.com/broxus/ton-eth-bridge-token-contracts#d3c1cd920c0320ffaab03b54c878dd0e06fed3c7"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11",

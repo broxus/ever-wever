@@ -28,26 +28,32 @@ contract ProxyTokenTransferMockupUpgrade is RandomNonce, InternalOwner {
         return{value: 0, bounce: false, flag: MsgFlag.REMAINING_GAS} (config, owner, received_count, transferred_count, token_wallet);
     }
 
-    function onCodeUpgrade(TvmSlice upgrade_data) private {
-//        tvm.resetStorage();
-//        tvm.rawReserve(_reserve(), 2);
+    function apiVersion() external pure returns(string API_VERSION) {
+        return "0.2.0";
+    }
 
-//        TvmSlice configSlice = upgrade_data.loadRefAsSlice();
-//        (config) = configSlice.decode(IProxy.Configuration);
-//
-//        TvmSlice counterSlice = upgrade_data.loadRefAsSlice();
-//        (
-//            received_count,
-//            transferred_count
-//        ) = counterSlice.decode(uint128, uint128);
-//
-//        address send_gas_to;
-//
-//        (
-//            _randomNonce,
-//            send_gas_to,
-//            token_wallet
-//        ) = upgrade_data.decode(uint, address, address);
+    function onCodeUpgrade(TvmSlice upgrade_data) private {
+        tvm.resetStorage();
+
+        TvmSlice configSlice = upgrade_data.loadRefAsSlice();
+        (config) = configSlice.decode(IProxy.Configuration);
+
+        TvmSlice counterSlice = upgrade_data.loadRefAsSlice();
+        (
+            received_count,
+            transferred_count
+        ) = counterSlice.decode(uint128, uint128);
+
+        TvmSlice ownerSlice = upgrade_data.loadRefAsSlice();
+        (owner) = ownerSlice.decode(address);
+
+        address send_gas_to;
+
+        (
+            _randomNonce,
+            send_gas_to,
+            token_wallet
+        ) = upgrade_data.decode(uint, address, address);
 
 //        send_gas_to.transfer({ value: 0, bounce: false, flag: MsgFlag.ALL_NOT_RESERVED });
     }

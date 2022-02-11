@@ -4,7 +4,7 @@ const {
 
 const {
     expect,
-    setupWton,
+    setupWever, stringToBytesArray,
 } = require("./utils");
 
 
@@ -22,18 +22,16 @@ describe('Bridge integration', async function() {
     let proxyTokenWallet;
 
     it('Setup contracts', async function() {
-        [vault, tunnel, user, root, userTokenWallet, vaultTokenWallet, proxyTokenTransfer, proxyTokenWallet] = await setupWton();
+        [vault, tunnel, user, root, userTokenWallet, vaultTokenWallet, proxyTokenTransfer, proxyTokenWallet] = await setupWever();
     });
 
-    it('Mint wTONs', async function() {
+    it('Mint wEVERs', async function() {
         await user.runTarget({
             contract: vault,
-            method: 'grant',
             method: 'wrap',
-            value: convertCrystal(10, 'nano'),
+            value: locklift.utils.convertCrystal(10, 'nano'),
             params: {
-                tokens: convertCrystal(4, 'nano'),
-                wallet_public_key: 0,
+                tokens: locklift.utils.convertCrystal(4, 'nano'),
                 owner_address: user.address,
                 gas_back_address: user.address,
             },
@@ -43,24 +41,22 @@ describe('Bridge integration', async function() {
             .to.be.bignumber.equal(convertCrystal(4, 'nano'), "Wrong user token wallet balance");
     });
 
-    describe('TON-EVM transfer', async () => {
+    describe('EVER-EVM transfer', async () => {
         const transferPayload = 'te6ccgEBAQEAGgAAMAAAAAAAAAAAAAAAAAAAAAAAAAB7AAABWQ=='; // (123,345)
 
         it('Transfer tokens to the event proxy', async () => {
             await user.runTarget({
                 contract: userTokenWallet,
-                method: 'transferToRecipient',
+                method: 'transfer',
                 params: {
-                    recipient_public_key: 0,
-                    recipient_address: proxyTokenTransfer.address,
-                    tokens: convertCrystal(2.5, 'nano'),
-                    deploy_grams: 0,
-                    transfer_grams: convertCrystal(0.1, 'nano'),
-                    send_gas_to: user.address,
-                    notify_receiver: true,
+                    amount: locklift.utils.convertCrystal(2.5, 'nano'),
+                    recipient: proxyTokenTransfer.address,
+                    deployWalletValue: 200000000,
+                    remainingGasTo: user.address,
+                    notify: true,
                     payload: transferPayload,
                 },
-                value: convertCrystal('4', 'nano'),
+                value: locklift.utils.convertCrystal('4', 'nano'),
             });
         });
 
@@ -85,12 +81,12 @@ describe('Bridge integration', async function() {
         });
     });
 
-    describe('EVM-TON transfer', async () => {
+    describe('EVM-EVER transfer', async () => {
         it('Send confirmation from the fake evm configuration', async () => {
             const payload = await proxyTokenTransfer.call({
                 method: 'encodeEthereumEventData',
                 params: {
-                    tokens: convertCrystal(1.5, 'nano'),
+                    tokens: locklift.utils.convertCrystal(1.5, 'nano'),
                     wid: 0,
                     owner_addr: '0x' + user.address.split(':')[1]
                 }
@@ -98,7 +94,7 @@ describe('Bridge integration', async function() {
 
             await user.runTarget({
                 contract: proxyTokenTransfer,
-                method: 'broxusBridgeCallback',
+                method: 'onEventConfirmed',
                 params: {
                     eventData: {
                         configuration: user.address,
@@ -114,7 +110,7 @@ describe('Bridge integration', async function() {
                     },
                     gasBackAddress: user.address
                 },
-                value: convertCrystal('5', 'nano'),
+                value: locklift.utils.convertCrystal('5', 'nano'),
             });
         });
 

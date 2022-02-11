@@ -1,6 +1,6 @@
 {
 	"ABI version": 2,
-	"version": "2.1",
+	"version": "2.2",
 	"header": ["pubkey", "time", "expire"],
 	"functions": [
 		{
@@ -12,6 +12,14 @@
 			]
 		},
 		{
+			"name": "apiVersion",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"API_VERSION","type":"string"}
+			]
+		},
+		{
 			"name": "receiveTokenWalletAddress",
 			"inputs": [
 				{"name":"wallet","type":"address"}
@@ -20,7 +28,7 @@
 			]
 		},
 		{
-			"name": "broxusBridgeCallback",
+			"name": "onEventConfirmed",
 			"inputs": [
 				{"components":[{"components":[{"name":"eventTransaction","type":"uint256"},{"name":"eventIndex","type":"uint32"},{"name":"eventData","type":"cell"},{"name":"eventBlockNumber","type":"uint32"},{"name":"eventBlock","type":"uint256"}],"name":"voteData","type":"tuple"},{"name":"configuration","type":"address"},{"name":"staking","type":"address"},{"name":"chainId","type":"uint32"}],"name":"eventData","type":"tuple"},
 				{"name":"gasBackAddress","type":"address"}
@@ -29,16 +37,13 @@
 			]
 		},
 		{
-			"name": "tokensReceivedCallback",
+			"name": "onAcceptTokensTransfer",
 			"inputs": [
-				{"name":"token_wallet_","type":"address"},
-				{"name":"token_root_","type":"address"},
-				{"name":"tokens_amount","type":"uint128"},
-				{"name":"value3","type":"uint256"},
-				{"name":"value4","type":"address"},
-				{"name":"value5","type":"address"},
-				{"name":"original_gas_to","type":"address"},
-				{"name":"value7","type":"uint128"},
+				{"name":"tokenRoot","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"sender","type":"address"},
+				{"name":"senderWallet","type":"address"},
+				{"name":"remainingGasTo","type":"address"},
 				{"name":"payload","type":"cell"}
 			],
 			"outputs": [
@@ -50,7 +55,7 @@
 				{"name":"answerId","type":"uint32"}
 			],
 			"outputs": [
-				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"tokenRoot","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"},
+				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"},
 				{"name":"_owner","type":"address"},
 				{"name":"_received_count","type":"uint128"},
 				{"name":"_transferred_count","type":"uint128"},
@@ -72,13 +77,13 @@
 				{"name":"answerId","type":"uint32"}
 			],
 			"outputs": [
-				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"tokenRoot","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"value0","type":"tuple"}
+				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"value0","type":"tuple"}
 			]
 		},
 		{
 			"name": "setConfiguration",
 			"inputs": [
-				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"tokenRoot","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"}
+				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"}
 			],
 			"outputs": [
 			]
@@ -130,7 +135,7 @@
 			]
 		},
 		{
-			"name": "encodeTonEventData",
+			"name": "encodeEverscaleEventData",
 			"inputs": [
 				{"name":"wid","type":"int8"},
 				{"name":"addr","type":"uint256"},
@@ -143,7 +148,7 @@
 			]
 		},
 		{
-			"name": "decodeTonEventData",
+			"name": "decodeEverscaleEventData",
 			"inputs": [
 				{"name":"data","type":"cell"}
 			],
@@ -212,7 +217,7 @@
 		{"name":"_constructorFlag","type":"bool"},
 		{"name":"_randomNonce","type":"uint256"},
 		{"name":"owner","type":"address"},
-		{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"tokenRoot","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"config","type":"tuple"},
+		{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"config","type":"tuple"},
 		{"name":"received_count","type":"uint128"},
 		{"name":"transferred_count","type":"uint128"},
 		{"name":"token_wallet","type":"address"}

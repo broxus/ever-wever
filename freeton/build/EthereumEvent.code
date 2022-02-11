@@ -521,7 +521,7 @@ GETGLOB 9
 PUSHINT 33
 SETGLOBVAR
 ; end colValue
-;; Remote call IProxy.broxusBridgeCallback
+;; Remote call IProxy.onEventConfirmed
 ;; get member proxyAddress
 ;; push identifier initData
 GETGLOB 29

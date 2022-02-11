@@ -1,4 +1,4 @@
-.version sol 0.49.0
+.version sol 0.57.1
 
 .macro constructor
 DROP
@@ -14,8 +14,7 @@ ACCEPT
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .macro pause
 DROP
@@ -32,25 +31,23 @@ ENDS
 CALLREF {
 	CALL $pause_internal_macro$
 }
+DROP
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	pause_internal
 .type	pause_internal, @function
 CALL $pause_internal_macro$
 
 .macro pause_internal_macro
-.loc ../contracts/utils/Pausable.sol, 31
-GETGLOB 9
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Pausable.sol, 16
@@ -86,25 +83,23 @@ ENDS
 CALLREF {
 	CALL $unpause_internal_macro$
 }
+DROP
 CALLREF {
 	CALL $c7_to_c4$
 }
-TRUE
-SETGLOB 7
+THROW 0
 
 .globl	unpause_internal
 .type	unpause_internal, @function
 CALL $unpause_internal_macro$
 
 .macro unpause_internal_macro
-.loc ../contracts/utils/Pausable.sol, 39
-GETGLOB 9
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Pausable.sol, 24
@@ -143,23 +138,32 @@ IFREF {
 	CALL $c4_to_c7$
 }
 .loc ../contracts/utils/Ownable.sol, 16
-LDMSGADDRQ
+OVER
 PUSHCONT {
 	LDREF
 	ENDS
 	CTOS
-	LDMSGADDR
 }
-IFNOT
+IF
+LDMSGADDR
 ENDS
 .loc ../contracts/utils/Ownable.sol, 0
-GETGLOB 9
+CALLREF {
+	CALL $transferOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro transferOwnership_internal_macro
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Ownable.sol, 17
@@ -167,11 +171,6 @@ CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
 .loc ../contracts/utils/Ownable.sol, 0
-CALLREF {
-	CALL $c7_to_c4$
-}
-TRUE
-SETGLOB 7
 
 .macro renounceOwnership
 DROP
@@ -185,40 +184,32 @@ IFREF {
 .loc ../contracts/utils/Ownable.sol, 20
 ENDS
 .loc ../contracts/utils/Ownable.sol, 0
-GETGLOB 9
+CALLREF {
+	CALL $renounceOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro renounceOwnership_internal_macro
 .loc ../contracts/utils/Ownable.sol, 8
 PUSHREF {
 	.blob x4f776e61626c653a206e6f74206f776e6572
 }
 GETGLOB 10
-ROT
+GETGLOB 9
 SDEQ
 THROWARGIFNOT 123
 .loc ../contracts/utils/Ownable.sol, 21
-PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
 CALLREF {
 	CALL $_transferOwnership_internal_macro$
 }
 .loc ../contracts/utils/Ownable.sol, 0
-CALLREF {
-	CALL $c7_to_c4$
-}
-TRUE
-SETGLOB 7
-
-.macro c7_to_c4
-GETGLOB 11
-GETGLOB 10
-GETGLOB 3
-GETGLOB 2
-NEWC
-STU 256
-STU 64
-STONE
-STSLICE
-STI 1
-ENDC
-POPROOT
 
 .macro c4_to_c7
 PUSHROOT
@@ -240,18 +231,17 @@ PUSHROOT
 CTOS
 SBITS
 GTINT 1
-PUSHREFCONT {
-	CALL $c4_to_c7$
-}
 PUSHCONT {
 	PUSHINT 0
 	PUSHROOT
 	CTOS
 	PLDDICT ; D
-	PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
-	SETGLOB 10
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
 	PUSHINT 0
 	SETGLOB 11
+	SETGLOB 10
 	PUSHINT 64
 	DICTUGET
 	THROWIFNOT 61
@@ -262,7 +252,38 @@ PUSHCONT {
 	FALSE
 	SETGLOB 11
 }
-IFELSE
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STSLICE
+STI 1
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
 
 .internal-alias :main_internal, 0
 .internal :main_internal
@@ -287,7 +308,7 @@ IFJMPREF {
 }
 OVER
 LDUQ 32  ; [funcId] body' ok
-THROWIFNOT 60 ; funcId body'
+THROWIFNOT 60
 OVER
 IFNOTJMPREF {
 	GETGLOB 6
@@ -297,9 +318,7 @@ SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
-GETGLOB 7
-ISNULL
-THROWIF 60
+THROW 60
 
 .internal-alias :main_external, -1
 .internal :main_external
@@ -308,7 +327,9 @@ CTOS
 SBITS
 NEQINT 1
 SETGLOB 6
-PUSHSLICE x8000000000000000000000000000000000000000000000000000000000000000001_
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
 SETGLOB 9
 OVER
 CALLREF {
@@ -324,7 +345,7 @@ PUSHCONT {
 	ROT
 	GETGLOB 2
 	CHKSIGNU ; msgSlice isSigned
-	THROWIFNOT 40 ; msgSlice
+	THROWIFNOT 40
 }
 IF
 LDU 64 ; timestamp msgSlice
@@ -335,9 +356,7 @@ SWAP
 CALLREF {
 	CALL $public_function_selector$
 }
-GETGLOB 7
-ISNULL
-THROWIF 60
+THROW 60
 
 .macro owner
 DROP
@@ -357,8 +376,7 @@ PUSHCONT {
 	SENDRAWMSG
 }
 IF
-TRUE
-SETGLOB 7
+THROW 0
 
 .macro paused
 DROP
@@ -378,8 +396,7 @@ PUSHCONT {
 	SENDRAWMSG
 }
 IF
-TRUE
-SETGLOB 7
+THROW 0
 
 .macro public_function_selector
 DUP

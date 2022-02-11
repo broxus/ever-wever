@@ -1,7 +1,7 @@
 pragma ton-solidity >= 0.39.0;
 
 
-interface IWrappedTONVault {
+interface IVault {
     struct Configuration {
         address root;
         address tokenWallet;

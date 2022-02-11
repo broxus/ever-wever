@@ -3,18 +3,15 @@ const { expect } = require('chai');
 
 
 const {
-  convertCrystal
-} = locklift.utils;
-
-
-const {
-  setupWton,
+  setupWever,
   getMetricsChange,
-  getWTONMetrics,
+  getVaultMetrics,
   logMetricsChange,
   logGiverBalance,
   afterRun,
-  stringToBytesArray
+  stringToBytesArray,
+  getTokenWalletAddress,
+  ...utils
 } = require('./utils');
 
 
@@ -40,18 +37,18 @@ describe('Test wTON wrap / unwrap', async function() {
     const finalGiverBalance = await logGiverBalance();
 
     logger.log(`Giver balance change: ${
-      convertCrystal(initialGiverBalance - finalGiverBalance, 'ton')
+      locklift.utils.convertCrystal(initialGiverBalance - finalGiverBalance, 'ton')
     }`);
   });
 
   it('Setup contracts', async function() {
-    [vault, tunnel, user, root, userTokenWallet, vaultTokenWallet] = await setupWton();
+    [vault, tunnel, user, root, userTokenWallet, vaultTokenWallet] = await setupWever();
   });
 
   
   describe('Test granting', async function() {
-    it('Grant TONs to the vault', async function() {
-      const initialMetrics = await getWTONMetrics(
+    it('Grant EVERs to the vault', async function() {
+      const initialMetrics = await getVaultMetrics(
         userTokenWallet,
         user,
         vaultTokenWallet,
@@ -63,12 +60,12 @@ describe('Test wTON wrap / unwrap', async function() {
         contract: vault,
         method: 'grant',
         params: {
-          amount: convertCrystal(4, 'nano'),
+          amount: locklift.utils.convertCrystal(4, 'nano'),
         },
-        value: convertCrystal(6, 'nano')
+        value: locklift.utils.convertCrystal(6, 'nano')
       });
       
-      const finalMetrics = await getWTONMetrics(
+      const finalMetrics = await getVaultMetrics(
         userTokenWallet,
         user,
         vaultTokenWallet,
@@ -80,20 +77,20 @@ describe('Test wTON wrap / unwrap', async function() {
       
       logMetricsChange(metricsChange);
       
-      expect(metricsChange.userWTONBalance)
-        .to.be.equal(0, 'Wrong user wTON balance change');
+      expect(metricsChange.userWEVERBalance)
+        .to.be.equal(0, 'Wrong user wEVER balance change');
 
-      expect(metricsChange.userTONBalance)
-        .to.be.below(-4, 'Too low user TON balance change')
-        .to.be.above(-4.5, 'Too high user TON balance change');
+      expect(metricsChange.userEVERBalance)
+        .to.be.below(-4, 'Too low user EVER balance change')
+        .to.be.above(-4.5, 'Too high user EVER balance change');
 
-      expect(metricsChange.vaultWTONBalance)
-        .to.be.equal(0, 'Wrong vault wTON balance change');
+      expect(metricsChange.vaultWEVERBalance)
+        .to.be.equal(0, 'Wrong vault wEVER balance change');
 
-      expect(metricsChange.vaultTONBalance)
+      expect(metricsChange.vaultEVERBalance)
         .to.be.equal(
         4,
-        'Vault TON balance change differs from granted'
+        'Vault EVER balance change differs from granted'
       );
 
       expect(metricsChange.vaultTotalWrapped)
@@ -102,7 +99,7 @@ describe('Test wTON wrap / unwrap', async function() {
         'Wrong vault total wrapped'
       );
 
-      expect(metricsChange.wTONTotalSupply)
+      expect(metricsChange.WEVERTotalSupply)
         .to.be.equal(
         0,
         'wTON total supply should not change'
@@ -111,9 +108,9 @@ describe('Test wTON wrap / unwrap', async function() {
   });
   
   describe('Test wrapping', async function() {
-    describe('Wrap TON to wTONs by sending TONs to vault', async function() {
-      it('Send TONs to vault', async function() {
-        const initialMetrics = await getWTONMetrics(
+    describe('Wrap TON to wEVERs by sending EVERs to vault', async function() {
+      it('Send EVERs to vault', async function() {
+        const initialMetrics = await getVaultMetrics(
           userTokenWallet,
           user,
           vaultTokenWallet,
@@ -123,10 +120,10 @@ describe('Test wTON wrap / unwrap', async function() {
 
         await user.runTarget({
           contract: vault,
-          value: convertCrystal(5, 'nano')
+          value: locklift.utils.convertCrystal(5, 'nano')
         });
 
-        const finalMetrics = await getWTONMetrics(
+        const finalMetrics = await getVaultMetrics(
           userTokenWallet,
           user,
           vaultTokenWallet,
@@ -138,40 +135,40 @@ describe('Test wTON wrap / unwrap', async function() {
 
         logMetricsChange(metricsChange);
 
-        expect(metricsChange.userWTONBalance)
-          .to.be.above(3.5, 'Too low user wTON balance change')
-          .and.to.be.below(4, 'Too high user wTON balance change');
+        expect(metricsChange.userWEVERBalance)
+          .to.be.above(3.5, 'Too low user wEVER balance change')
+          .and.to.be.below(4, 'Too high user wEVER balance change');
 
-        expect(metricsChange.userTONBalance)
-          .to.be.below(-4, 'Too low user TON balance change')
-          .to.be.above(-4.5, 'Too high user TON balance change');
+        expect(metricsChange.userEVERBalance)
+          .to.be.below(-4, 'Too low user EVER balance change')
+          .to.be.above(-4.5, 'Too high user EVER balance change');
 
-        expect(metricsChange.vaultWTONBalance)
-          .to.be.equal(0, 'Wrong vault wTON balance change');
+        expect(metricsChange.vaultWEVERBalance)
+          .to.be.equal(0, 'Wrong vault wEVER balance change');
 
-        expect(metricsChange.vaultTONBalance)
+        expect(metricsChange.vaultEVERBalance)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'Vault TON balance change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'Vault EVER balance change differs from user wEVER balance change'
           );
 
         expect(metricsChange.vaultTotalWrapped)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'Vault total wrapped change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'Vault total wrapped change differs from user wEVER balance change'
           );
 
-        expect(metricsChange.wTONTotalSupply)
+        expect(metricsChange.WEVERTotalSupply)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'wTON total supply change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'wTON total supply change differs from user wEVER balance change'
           );
       });
     });
 
-    describe('Wrap TON to wTONs by calling wrap', function () {
+    describe('Wrap TON to wEVERs by calling wrap', function () {
       it('Call wrap', async function() {
-        const initialMetrics = await getWTONMetrics(
+        const initialMetrics = await getVaultMetrics(
           userTokenWallet,
           user,
           vaultTokenWallet,
@@ -182,16 +179,15 @@ describe('Test wTON wrap / unwrap', async function() {
         await user.runTarget({
           contract: vault,
           method: 'wrap',
-          value: convertCrystal(2.5, 'nano'),
+          value: locklift.utils.convertCrystal(2.5, 'nano'),
           params: {
-            tokens: convertCrystal(1, 'nano'),
-            wallet_public_key: 0,
+            tokens: locklift.utils.convertCrystal(1, 'nano'),
             owner_address: user.address,
             gas_back_address: user.address,
           },
         });
 
-        const finalMetrics = await getWTONMetrics(
+        const finalMetrics = await getVaultMetrics(
           userTokenWallet,
           user,
           vaultTokenWallet,
@@ -203,39 +199,39 @@ describe('Test wTON wrap / unwrap', async function() {
 
         logMetricsChange(metricsChange);
 
-        expect(metricsChange.userWTONBalance)
-          .to.be.equal(1, 'Wrong user wTON balance change');
+        expect(metricsChange.userWEVERBalance)
+          .to.be.equal(1, 'Wrong user wEVER balance change');
 
-        expect(metricsChange.userTONBalance)
-          .to.be.below(-1, 'Too low user TON balance change')
-          .to.be.above(-1.5, 'Too high user TON balance change');
+        expect(metricsChange.userEVERBalance)
+          .to.be.below(-1, 'Too low user EVER balance change')
+          .to.be.above(-1.5, 'Too high user EVER balance change');
 
-        expect(metricsChange.vaultWTONBalance)
-          .to.be.equal(0, 'Wrong vault wTON balance change');
+        expect(metricsChange.vaultWEVERBalance)
+          .to.be.equal(0, 'Wrong vault wEVER balance change');
 
-        expect(metricsChange.vaultTONBalance)
+        expect(metricsChange.vaultEVERBalance)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'Vault TON balance change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'Vault EVER balance change differs from user wEVER balance change'
           );
 
         expect(metricsChange.vaultTotalWrapped)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'Vault total wrapped change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'Vault total wrapped change differs from user wEVER balance change'
           );
 
-        expect(metricsChange.wTONTotalSupply)
+        expect(metricsChange.WEVERTotalSupply)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'wTON total supply change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'wTON total supply change differs from user wEVER balance change'
           );
       });
     });
 
-    describe('Unwrap wTON to TON by sending wTONs to vault token wallet', async function() {
-      it('Send wTONs to vault token wallet', async function() {
-        const initialMetrics = await getWTONMetrics(
+    describe('Unwrap wTON to TON by sending wEVERs to vault token wallet', async function() {
+      it('Send wEVERs to vault token wallet', async function() {
+        const initialMetrics = await getVaultMetrics(
           userTokenWallet,
           user,
           vaultTokenWallet,
@@ -245,21 +241,19 @@ describe('Test wTON wrap / unwrap', async function() {
 
         await user.runTarget({
           contract: userTokenWallet,
-          method: 'transferToRecipient',
+          method: 'transfer',
           params: {
-            recipient_public_key: 0,
-            recipient_address: vault.address,
-            tokens: convertCrystal(2.5, 'nano'),
-            deploy_grams: 200000000,
-            transfer_grams: 200000000,
-            send_gas_to: user.address,
-            notify_receiver: true,
+            amount: locklift.utils.convertCrystal(2.5, 'nano'),
+            recipient: vault.address,
+            deployWalletValue: 200000000,
+            remainingGasTo: user.address,
+            notify: true,
             payload: stringToBytesArray(''),
           },
-          value: convertCrystal('4', 'nano'),
+          value: locklift.utils.convertCrystal('4', 'nano'),
         });
 
-        const finalMetrics = await getWTONMetrics(
+        const finalMetrics = await getVaultMetrics(
           userTokenWallet,
           user,
           vaultTokenWallet,
@@ -271,41 +265,41 @@ describe('Test wTON wrap / unwrap', async function() {
 
         logMetricsChange(metricsChange);
 
-        expect(metricsChange.userWTONBalance)
-          .to.be.equal(-2.5, 'Wrong user wTON balance change');
+        expect(metricsChange.userWEVERBalance)
+          .to.be.equal(-2.5, 'Wrong user wEVER balance change');
 
-        expect(metricsChange.userTONBalance)
-          .to.be.above(2, 'Too low user TON balance change')
-          .to.be.below(2.5, 'Too high user TON balance change');
+        expect(metricsChange.userEVERBalance)
+          .to.be.above(2, 'Too low user EVER balance change')
+          .to.be.below(2.5, 'Too high user EVER balance change');
 
-        expect(metricsChange.vaultWTONBalance)
-          .to.be.equal(0, 'Wrong vault wTON balance change');
+        expect(metricsChange.vaultWEVERBalance)
+          .to.be.equal(0, 'Wrong vault wEVER balance change');
 
-        expect(metricsChange.vaultTONBalance)
+        expect(metricsChange.vaultEVERBalance)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'Vault TON balance change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'Vault EVER balance change differs from user wEVER balance change'
           );
 
         expect(metricsChange.vaultTotalWrapped)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'Vault total wrapped change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'Vault total wrapped change differs from user wEVER balance change'
           );
 
-        expect(metricsChange.wTONTotalSupply)
+        expect(metricsChange.WEVERTotalSupply)
           .to.be.equal(
-            metricsChange.userWTONBalance,
-            'wTON total supply change differs from user wTON balance change'
+            metricsChange.userWEVERBalance,
+            'wTON total supply change differs from user wEVER balance change'
           );
       });
     });
   });
   
 
-  describe('Test TONs withdraw', async function() {
+  describe('Test EVERs withdraw', async function() {
     it('Withdraw with owner account', async function() {
-      const initialMetrics = await getWTONMetrics(
+      const initialMetrics = await getVaultMetrics(
         userTokenWallet,
         user,
         vaultTokenWallet,
@@ -317,11 +311,11 @@ describe('Test wTON wrap / unwrap', async function() {
         contract: vault,
         method: 'withdraw',
         params: {
-          amount: convertCrystal(3, 'nano'),
+          amount: locklift.utils.convertCrystal(3, 'nano'),
         }
       });
       
-      const finalMetrics = await getWTONMetrics(
+      const finalMetrics = await getVaultMetrics(
         userTokenWallet,
         user,
         vaultTokenWallet,
@@ -333,20 +327,20 @@ describe('Test wTON wrap / unwrap', async function() {
       
       logMetricsChange(metricsChange);
       
-      expect(metricsChange.userWTONBalance)
-        .to.be.equal(0, 'Wrong user wTON balance change');
+      expect(metricsChange.userWEVERBalance)
+        .to.be.equal(0, 'Wrong user wEVER balance change');
       
-      expect(metricsChange.userTONBalance)
-        .to.be.below(3.5, 'Too low user TON balance change')
-        .to.be.above(2.9, 'Too high user TON balance change');
+      expect(metricsChange.userEVERBalance)
+        .to.be.below(3.5, 'Too low user EVER balance change')
+        .to.be.above(2.9, 'Too high user EVER balance change');
       
-      expect(metricsChange.vaultWTONBalance)
-        .to.be.equal(0, 'Wrong vault wTON balance change');
+      expect(metricsChange.vaultWEVERBalance)
+        .to.be.equal(0, 'Wrong vault wEVER balance change');
       
-      expect(metricsChange.vaultTONBalance)
+      expect(metricsChange.vaultEVERBalance)
         .to.be.equal(
         -3,
-        'Vault TON balance change too high'
+        'Vault EVER balance change too high'
       );
       
       expect(metricsChange.vaultTotalWrapped)
@@ -355,7 +349,7 @@ describe('Test wTON wrap / unwrap', async function() {
         'Wrong vault total wrapped change'
       );
       
-      expect(metricsChange.wTONTotalSupply)
+      expect(metricsChange.WEVERTotalSupply)
         .to.be.equal(
         0,
         'wTON total supply should not change'
@@ -373,7 +367,7 @@ describe('Test wTON wrap / unwrap', async function() {
           _randomNonce: locklift.utils.getRandomNonce(),
         },
         keyPair,
-      }, convertCrystal(30, 'nano'));
+      }, locklift.utils.convertCrystal(30, 'nano'));
       
       wrongOwner.afterRun = afterRun;
       
@@ -381,44 +375,25 @@ describe('Test wTON wrap / unwrap', async function() {
       
       await wrongOwner.runTarget({
         contract: root,
-        method: 'deployEmptyWallet',
+        method: 'deployWallet',
         params: {
-          deploy_grams: convertCrystal(1, 'nano'),
-          wallet_public_key_: 0,
-          owner_address_: wrongOwner.address,
-          gas_back_address: wrongOwner.address,
+          walletOwner: wrongOwner.address,
+          deployWalletValue: locklift.utils.convertCrystal(1, 'nano'),
         },
-        value: convertCrystal(2, 'nano'),
+        value: locklift.utils.convertCrystal(2, 'nano'),
       });
       
-      const wrongOwnerTokenWalletAddress = await root.call({
-        method: 'getWalletAddress',
-        params: {
-          wallet_public_key_: 0,
-          owner_address_: wrongOwner.address
-        },
-      });
-      
-      // Wait until user token wallet is presented into the GraphQL
-      await locklift.ton.client.net.wait_for_collection({
-        collection: 'accounts',
-        filter: {
-          id: { eq: wrongOwnerTokenWalletAddress },
-          balance: { gt: `0x0` }
-        },
-        result: 'balance'
-      });
-      
-      logger.log(`Wrong owner token wallet: ${wrongOwnerTokenWalletAddress}`);
-      
-      const wrongOwnerTokenWallet = await locklift.factory.getContract(
-        'TONTokenWallet',
-        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
+      const wrongOwnerTokenWalletAddress = await getTokenWalletAddress(
+          root,
+          wrongOwner.address
       );
-      
+
+      logger.log(`Wrong owner token wallet: ${wrongOwnerTokenWalletAddress}`);
+
+      const wrongOwnerTokenWallet = await locklift.factory.getContract('TokenWallet', utils.TOKEN_PATH);
       wrongOwnerTokenWallet.setAddress(wrongOwnerTokenWalletAddress);
       
-      const initialMetrics = await getWTONMetrics(
+      const initialMetrics = await getVaultMetrics(
         wrongOwnerTokenWallet,
         wrongOwner,
         vaultTokenWallet,
@@ -430,11 +405,11 @@ describe('Test wTON wrap / unwrap', async function() {
         contract: vault,
         method: 'withdraw',
         params: {
-          amount: convertCrystal(3, 'nano'),
+          amount: locklift.utils.convertCrystal(3, 'nano'),
         }
       });
       
-      const finalMetrics = await getWTONMetrics(
+      const finalMetrics = await getVaultMetrics(
         wrongOwnerTokenWallet,
         wrongOwner,
         vaultTokenWallet,
@@ -447,22 +422,22 @@ describe('Test wTON wrap / unwrap', async function() {
       logMetricsChange(metricsChange);
       
       
-      expect(metricsChange.userWTONBalance)
-        .to.be.equal(0, 'Wrong user wTON balance change');
+      expect(metricsChange.userWEVERBalance)
+        .to.be.equal(0, 'Wrong user wEVER balance change');
       
-      expect(metricsChange.userTONBalance)
-        .to.be.below(0.01, 'Too low user TON balance change');
+      expect(metricsChange.userEVERBalance)
+        .to.be.below(0.01, 'Too low user EVER balance change');
       
-      expect(metricsChange.vaultWTONBalance)
-        .to.be.equal(0, 'Wrong vault wTON balance change');
+      expect(metricsChange.vaultWEVERBalance)
+        .to.be.equal(0, 'Wrong vault wEVER balance change');
       
-      expect(metricsChange.vaultTONBalance)
+      expect(metricsChange.vaultEVERBalance)
         .to.be.above(
         -0.0001,
-        'Vault TON balance change too low'
+        'Vault EVER balance change too low'
       ).to.be.below(
         0,
-        'Vault TON balance change too high'
+        'Vault EVER balance change too high'
       );
       
       expect(metricsChange.vaultTotalWrapped)
@@ -471,7 +446,7 @@ describe('Test wTON wrap / unwrap', async function() {
         'Vault total wrapped change should not change'
       );
       
-      expect(metricsChange.wTONTotalSupply)
+      expect(metricsChange.WEVERTotalSupply)
         .to.be.equal(
         0,
         'wTON total supply should not change'
@@ -494,7 +469,7 @@ describe('Test wTON wrap / unwrap', async function() {
   //           _randomNonce: getRandomNonce(),
   //         },
   //         keyPair,
-  //       }, convertCrystal(30, 'nano'));
+  //       }, locklift.utils.convertCrystal(30, 'nano'));
   //
   //       user.afterRun = afterRun;
   //       user.setKeyPair(keyPair);

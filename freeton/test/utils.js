@@ -1,14 +1,13 @@
 const logger = require("mocha-logger");
-const {
-    convertCrystal
-} = locklift.utils;
 
 const BigNumber = require('bignumber.js');
+
 const chai = require('chai');
-const {us} = require("truffle/build/83.bundled");
 chai.use(require('chai-bignumber')());
 
 const { expect } = chai;
+
+const TOKEN_PATH = '../node_modules/ton-eth-bridge-token-contracts/build';
 
 
 async function sleep(ms) {
@@ -28,40 +27,30 @@ const stringToBytesArray = (dataString) => {
 };
 
 
-const setupWton = async () => {
-    // Wrapped TON token
-    // - Deploy WTON root
-    const RootToken = await locklift.factory.getContract(
-        'RootTokenContract',
-        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
-    );
-
-    const TokenWallet = await locklift.factory.getContract(
-        'TONTokenWallet',
-        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
-    );
-
-    const [keyPair] = await locklift.keys.getKeyPairs();
-
-    const _randomNonce = locklift.utils.getRandomNonce();
-
-    const root = await locklift.giver.deployContract({
-        contract: RootToken,
-        constructorParams: {
-            root_public_key_: `0x${keyPair.public}`,
-            root_owner_address_: locklift.ton.zero_address
-        },
-        initParams: {
-            name: stringToBytesArray('Wrapped TON'),
-            symbol: stringToBytesArray('wTON'),
-            decimals: 9,
-            wallet_code: TokenWallet.code,
-            _randomNonce,
-        },
-        keyPair,
+const getTokenWalletAddress = async function(_root, user) {
+    return _root.call({
+        method: 'walletOf',
+        params: { walletOwner: user }
     });
+}
 
-    logger.log(`Root address: ${root.address}`);
+
+const waitForAddressToBeActive = async (contract) => {
+    return locklift.ton.client.net.wait_for_collection({
+        collection: 'accounts',
+        filter: {
+            id: { eq: contract },
+            balance: { gt: `0x0` }
+        },
+        result: 'balance'
+    });
+}
+
+
+
+const setupWever = async () => {
+    const [keyPair] = await locklift.keys.getKeyPairs();
+    const _randomNonce = locklift.utils.getRandomNonce();
 
     // User
     // - Deploy user account
@@ -74,52 +63,66 @@ const setupWton = async () => {
             _randomNonce,
         },
         keyPair,
-    }, convertCrystal(30, 'nano'));
+    }, locklift.utils.convertCrystal(30, 'nano'));
 
     user.afterRun = afterRun;
     user.setKeyPair(keyPair);
 
     logger.log(`User address: ${user.address}`);
 
+
+    // Wrapped EVER token
+    // - Deploy wEVER root
+    const RootToken = await locklift.factory.getContract('TokenRoot', TOKEN_PATH);
+    const TokenWallet = await locklift.factory.getContract('TokenWallet', TOKEN_PATH);
+
+    const root = await locklift.giver.deployContract({
+        contract: RootToken,
+        constructorParams: {
+            initialSupplyTo: user.address,
+            initialSupply: 0,
+            deployWalletValue: locklift.utils.convertCrystal('0.1', 'nano'),
+            mintDisabled: false,
+            burnByRootDisabled: true,
+            burnPaused: false,
+            remainingGasTo: locklift.utils.zeroAddress
+        },
+        initParams: {
+            deployer_: locklift.utils.zeroAddress,
+            randomNonce_: locklift.utils.getRandomNonce(),
+            rootOwner_: user.address,
+            name_: 'Wrapped EVER',
+            symbol_: 'WEVER',
+            decimals_: 9,
+            walletCode_: TokenWallet.code,
+        },
+        keyPair,
+    });
+
+    logger.log(`Root address: ${root.address}`);
+
     // - Deploy user token wallet
-    await user.runTarget({
+    const tx = await user.runTarget({
         contract: root,
-        method: 'deployEmptyWallet',
+        method: 'deployWallet',
         params: {
-            deploy_grams: convertCrystal(1, 'nano'),
-            wallet_public_key_: 0,
-            owner_address_: user.address,
-            gas_back_address: user.address,
+            walletOwner: user.address,
+            deployWalletValue: locklift.utils.convertCrystal(2, 'nano'),
         },
-        value: convertCrystal(2, 'nano'),
+        value: locklift.utils.convertCrystal(5, 'nano'),
     });
 
-    const userTokenWalletAddress = await root.call({
-        method: 'getWalletAddress',
-        params: {
-            wallet_public_key_: 0,
-            owner_address_: user.address
-        },
-    });
+    const userTokenWalletAddress = await getTokenWalletAddress(root, user.address);
 
-    // Wait until user token wallet is presented into the GraphQL
-    await locklift.ton.client.net.wait_for_collection({
-        collection: 'accounts',
-        filter: {
-            id: { eq: userTokenWalletAddress },
-            balance: { gt: `0x0` }
-        },
-        result: 'balance'
-    });
+    // // Wait until user token wallet is presented into the GraphQL
+    // await waitForAddressToBeActive(userTokenWalletAddress.address);
 
     logger.log(`User token wallet: ${userTokenWalletAddress}`);
 
-    const userTokenWallet = await locklift.factory.getContract(
-        'TONTokenWallet',
-        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
-    );
+    const userTokenWallet = await locklift.factory.getContract('TokenWallet', TOKEN_PATH);
 
     userTokenWallet.setAddress(userTokenWalletAddress);
+    userTokenWallet.name = 'User token wallet';
 
     // Tunnel
     // - Deploy tunnel
@@ -142,18 +145,17 @@ const setupWton = async () => {
 
     // Vault
     // - Deploy vault
-    const WrappedTONVault = await locklift.factory.getContract('WrappedTONVault');
-
+    const Vault = await locklift.factory.getContract('Vault');
 
     const vault = await locklift.giver.deployContract({
-        contract: WrappedTONVault,
+        contract: Vault,
         constructorParams: {
             owner_: user.address,
             root_tunnel: tunnel.address,
             root: root.address,
-            receive_safe_fee: convertCrystal(1, 'nano'),
-            settings_deploy_wallet_grams: convertCrystal(0.05, 'nano'),
-            initial_balance: convertCrystal(1, 'nano')
+            receive_safe_fee: locklift.utils.convertCrystal(1, 'nano'),
+            settings_deploy_wallet_grams: locklift.utils.convertCrystal(0.05, 'nano'),
+            initial_balance: locklift.utils.convertCrystal(1, 'nano')
         },
         initParams: {
             _randomNonce,
@@ -166,36 +168,20 @@ const setupWton = async () => {
     logger.log(`Vault address: ${vault.address}`);
 
     // Wait until user token wallet is presented into the GraphQL
-    await locklift.ton.client.net.wait_for_collection({
-        collection: 'accounts',
-        filter: {
-            id: { eq: vault.address },
-            balance: { gt: `0x0` }
-        },
-        result: 'balance'
-    });
+    await waitForAddressToBeActive(vault.address);
 
     // - Setup vault token wallet
     const vaultTokenWalletAddress = await vault.call({
         method: 'token_wallet',
     });
 
-    const vaultTokenWallet = await locklift.factory.getContract(
-        'TONTokenWallet',
-        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
-    );
+    const vaultTokenWallet = await locklift.factory.getContract('TokenWallet', TOKEN_PATH);
     vaultTokenWallet.setAddress(vaultTokenWalletAddress);
+    vaultTokenWallet.name = 'Vault token wallet';
 
     logger.log(`Vault token wallet address: ${vaultTokenWallet.address}`);
 
-    await locklift.ton.client.net.wait_for_collection({
-        collection: 'accounts',
-        filter: {
-            id: { eq: vaultTokenWallet.address },
-            balance: { gt: `0x0` }
-        },
-        result: 'balance'
-    });
+    await waitForAddressToBeActive(vaultTokenWallet.address);
 
     // Proxy token transfer
     // - Deploy proxy token transfer
@@ -211,14 +197,7 @@ const setupWton = async () => {
         keyPair,
     });
 
-    await locklift.ton.client.net.wait_for_collection({
-        collection: 'accounts',
-        filter: {
-            id: { eq: proxyTokenTransfer.address },
-            balance: { gt: `0x0` }
-        },
-        result: 'balance'
-    });
+    await waitForAddressToBeActive(proxyTokenTransfer.address);
 
     logger.log(`Proxy token transfer: ${proxyTokenTransfer.address}`);
 
@@ -232,9 +211,9 @@ const setupWton = async () => {
                 ethereumConfigurations: [
                     user.address
                 ],
-                tokenRoot: root.address,
-                settingsDeployWalletGrams: convertCrystal(0.5, 'nano'),
-                settingsTransferGrams: convertCrystal(0.5, 'nano')
+                root: root.address,
+                settingsDeployWalletGrams: locklift.utils.convertCrystal(0.5, 'nano'),
+                settingsTransferGrams: locklift.utils.convertCrystal(0.5, 'nano')
             }
         }
     });
@@ -244,32 +223,24 @@ const setupWton = async () => {
         method: 'token_wallet',
     });
 
-    const proxyTokenWallet = await locklift.factory.getContract(
-        'TONTokenWallet',
-        './../node_modules/broxus-ton-tokens-contracts/free-ton/build'
-    );
+    const proxyTokenWallet = await locklift.factory.getContract('TokenWallet', TOKEN_PATH);
     proxyTokenWallet.setAddress(proxyTokenWalletAddress);
+    proxyTokenWallet.name = 'Proxy token wallet';
 
     logger.log(`Proxy token wallet address: ${proxyTokenWallet.address}`);
 
-    await locklift.ton.client.net.wait_for_collection({
-        collection: 'accounts',
-        filter: {
-            id: { eq: proxyTokenWallet.address },
-            balance: { gt: `0x0` }
-        },
-        result: 'balance'
-    });
+    // await waitForAddressToBeActive(proxyTokenWallet.address);
 
     // Finish setup
     // - Transfer root ownership to tunnel
-    await root.run({
-        method: 'transferOwner',
+    await user.runTarget({
+        contract: root,
+        method: 'transferOwnership',
         params: {
-            root_public_key_: 0,
-            root_owner_address_: tunnel.address,
+            newOwner: tunnel.address,
+            remainingGasTo: user.address,
+            callbacks: {}
         },
-        keyPair,
     });
 
     // - Add vault to tunnel sources
@@ -298,7 +269,7 @@ const setupWton = async () => {
 };
 
 
-const getWTONMetrics = async function(
+const getVaultMetrics = async function(
     userTokenWallet,
     user,
     vaultTokenWallet,
@@ -306,12 +277,12 @@ const getWTONMetrics = async function(
     root,
 ) {
     return {
-        userWTONBalance: userTokenWallet ? (await userTokenWallet.call({ method: 'balance' })) : 0,
-        userTONBalance: user ? (await locklift.ton.getBalance(user.address)) : 0,
-        vaultWTONBalance: vaultTokenWallet ? (await vaultTokenWallet.call({ method: 'balance' })) : 0,
-        vaultTONBalance: vault ? (await locklift.ton.getBalance(vault.address)) : 0,
+        userWEVERBalance: userTokenWallet ? (await userTokenWallet.call({ method: 'balance' })) : 0,
+        userEVERBalance: user ? (await locklift.ton.getBalance(user.address)) : 0,
+        vaultWEVERBalance: vaultTokenWallet ? (await vaultTokenWallet.call({ method: 'balance' })) : 0,
+        vaultEVERBalance: vault ? (await locklift.ton.getBalance(vault.address)) : 0,
         vaultTotalWrapped: vault ? (await vault.call({ method: 'total_wrapped' })) : 0,
-        wTONTotalSupply: root ? (await root.call({ method: 'getTotalSupply' })) : 0,
+        WEVERTotalSupply: root ? (await root.call({ method: 'totalSupply' })) : 0,
     };
 };
 
@@ -319,30 +290,30 @@ const getWTONMetrics = async function(
 
 const getMetricsChange = function(initial, final) {
     return {
-        userWTONBalance: convertCrystal(final.userWTONBalance - initial.userWTONBalance, 'ton').toNumber(),
-        userTONBalance: convertCrystal(final.userTONBalance - initial.userTONBalance, 'ton').toNumber(),
-        vaultWTONBalance: convertCrystal(final.vaultWTONBalance - initial.vaultWTONBalance, 'ton').toNumber(),
-        vaultTONBalance: convertCrystal(final.vaultTONBalance - initial.vaultTONBalance, 'ton').toNumber(),
-        vaultTotalWrapped: convertCrystal(final.vaultTotalWrapped - initial.vaultTotalWrapped, 'ton').toNumber(),
-        wTONTotalSupply: convertCrystal(final.wTONTotalSupply - initial.wTONTotalSupply, 'ton').toNumber(),
+        userWEVERBalance: locklift.utils.convertCrystal(final.userWEVERBalance - initial.userWEVERBalance, 'ton').toNumber(),
+        userEVERBalance: locklift.utils.convertCrystal(final.userEVERBalance - initial.userEVERBalance, 'ton').toNumber(),
+        vaultWEVERBalance: locklift.utils.convertCrystal(final.vaultWEVERBalance - initial.vaultWEVERBalance, 'ton').toNumber(),
+        vaultEVERBalance: locklift.utils.convertCrystal(final.vaultEVERBalance - initial.vaultEVERBalance, 'ton').toNumber(),
+        vaultTotalWrapped: locklift.utils.convertCrystal(final.vaultTotalWrapped - initial.vaultTotalWrapped, 'ton').toNumber(),
+        WEVERTotalSupply: locklift.utils.convertCrystal(final.WEVERTotalSupply - initial.WEVERTotalSupply, 'ton').toNumber(),
     }
 };
 
 
 const logMetricsChange = function(change) {
-    logger.log(`User wTON balance change: ${change.userWTONBalance}`);
-    logger.log(`User TON balance change: ${change.userTONBalance}`);
-    logger.log(`Vault wTON balance change: ${change.vaultWTONBalance}`);
-    logger.log(`Vault TON balance change: ${change.vaultTONBalance}`);
+    logger.log(`User wEVER balance change: ${change.userWEVERBalance}`);
+    logger.log(`User EVER balance change: ${change.userEVERBalance}`);
+    logger.log(`Vault wEVER balance change: ${change.vaultWEVERBalance}`);
+    logger.log(`Vault EVER balance change: ${change.vaultEVERBalance}`);
     logger.log(`Vault total wrapped change: ${change.vaultTotalWrapped}`);
-    logger.log(`wTON total supply change: ${change.wTONTotalSupply}`);
+    logger.log(`wEVER total supply change: ${change.WEVERTotalSupply}`);
 };
 
 
 const logGiverBalance = async function() {
     const giverBalance = await locklift.ton.getBalance(locklift.networkConfig.giver.address);
 
-    logger.log(`Giver balance: ${convertCrystal(giverBalance, 'ton')}`);
+    logger.log(`Giver balance: ${locklift.utils.convertCrystal(giverBalance, 'ton')}`);
 
     return giverBalance;
 };
@@ -350,11 +321,13 @@ const logGiverBalance = async function() {
 
 module.exports = {
     expect,
-    setupWton,
-    getWTONMetrics,
+    setupWever,
+    getVaultMetrics,
     getMetricsChange,
     logMetricsChange,
     logGiverBalance,
     afterRun,
     stringToBytesArray,
+    getTokenWalletAddress,
+    TOKEN_PATH
 };

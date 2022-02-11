@@ -2,29 +2,26 @@ pragma ton-solidity >= 0.39.0;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
+import "ton-eth-bridge-token-contracts/contracts/interfaces/ITokenRoot.sol";
+import 'ton-eth-bridge-token-contracts/contracts/interfaces/IBurnableTokenWallet.sol';
+import 'ton-eth-bridge-token-contracts/contracts/interfaces/IAcceptTokensTransferCallback.sol';
 
-import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/ITokensReceivedCallback.sol';
-import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/IRootTokenContract.sol';
-import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/IExpectedWalletAddressCallback.sol';
-import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/ITONTokenWallet.sol';
-import '../../node_modules/broxus-ton-tokens-contracts/free-ton/contracts/interfaces/IBurnableByOwnerTokenWallet.sol';
-
-import '../../node_modules/@broxus/contracts/contracts/utils/RandomNonce.sol';
-import '../../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.sol';
-import '../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol';
+import '@broxus/contracts/contracts/utils/RandomNonce.sol';
+import '@broxus/contracts/contracts/utils/CheckPubKey.sol';
+import '@broxus/contracts/contracts/access/InternalOwner.sol';
 
 
 import './ErrorCodes.sol';
 
 
-/*
-    @title Wrapped TON vault.
-    @notice TONs storage. Exchange TONs for wTONs 1:1 and backwards.
-    @notice Receives TONs and mint wTONs
-    @notice Receives wTONs, burn it and releases TONs
+/**
+    @title For for Wrapped EVER.
+    Stores EVERS. Exchanges EVERs for WEVERs 1:1 and backwards.
+    Receives EVERS and mints wEVERs.
+    Receives wEVERs, burns it and releases EVERS
 */
-contract WrappedTONVault is
-    ITokensReceivedCallback,
+contract Vault is
+    IAcceptTokensTransferCallback,
     RandomNonce,
     CheckPubKey,
     InternalOwner
@@ -64,40 +61,47 @@ contract WrappedTONVault is
         setUpTokenWallet();
     }
 
-    /*
+    /**
         @notice Creates vault token wallet according to the configuration root token
     */
     function setUpTokenWallet() internal view {
         // Deploy vault's token wallet
-        IRootTokenContract(configuration.root).deployEmptyWallet{value: 1 ton}(
-            configuration.settings_deploy_wallet_grams,
-            0,
-            address(this),
-            address(this)
-        );
-
-        // Request for vault's token wallet address
-        IRootTokenContract(configuration.root).getWalletAddress{
+        ITokenRoot(configuration.root).deployWallet{
             value: 1 ton,
-            callback: WrappedTONVault.receiveTokenWalletAddress
+            callback: Vault.receiveTokenWalletAddress
         }(
-            0,
-            address(this)
+            address(this),
+            configuration.settings_deploy_wallet_grams
         );
     }
 
-    /*
-        @notice Drain odd TONs
-        @dev Can be called only by owner
-        @param receiver Address to send odd TONs to
+    /**
+        @notice Save Vault's token wallet address
+        @dev Only root can call with correct params
+        @param wallet Vault's token wallet
     */
-    function drain(address receiver) onlyOwner public view {
+    function receiveTokenWalletAddress(
+        address wallet
+    ) external {
+        require(msg.sender == configuration.root, ErrorCodes.WRONG_ROOT);
+
+        token_wallet = wallet;
+    }
+
+    /**
+        @notice Drain odd EVERs
+        @dev Can be called only by owner
+        @param receiver Address to send odd EVERs to
+    */
+    function drain(
+        address receiver
+    ) onlyOwner public {
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
         receiver.transfer({ value: 0, flag: 129 });
     }
 
-    /*
+    /**
         @notice Updates configuration
         @dev Can be called only by owner
         @param _configuration New configuration
@@ -114,11 +118,11 @@ contract WrappedTONVault is
         }
     }
 
-    /*
-        @notice Withdraw TONs from the vault
+    /**
+        @notice Withdraw EVERs from the vault
         @dev Can be called only by owner
-        @dev TONs are send to the owner wallet
-        @param value How much TONs to withdraw
+        @dev EVERs are send to the owner wallet
+        @param amount How much EVERs to withdraw
     */
     function withdraw(
         uint128 amount
@@ -130,11 +134,11 @@ contract WrappedTONVault is
         owner.transfer({ value: 0, flag: 128 });
     }
 
-    /*
-        @notice Send TONs to the vault without issuing TONs
+    /**
+        @notice Send EVERs to the vault without issuing EVERs
         @dev Increases initial balance value
-        so the granted TONs won't be withdrawn on the wrapping / unwrapping
-        @dev Be careful! Since you don't have WTON tokens, you can't redeem granted TONs
+        so the granted EVERs won't be withdrawn on the wrapping / unwrapping
+        @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
     */
     function grant(
         uint128 amount
@@ -148,28 +152,13 @@ contract WrappedTONVault is
         msg.sender.transfer({ value: 0, flag: 128 });
     }
 
-    /*
-        @notice Store vault's token wallet address
-        @dev Only root can call with correct params
-        @param wallet Vault's token wallet
-    */
-    function receiveTokenWalletAddress(
-        address wallet
-    ) external {
-        require(msg.sender == configuration.root, ErrorCodes.WRONG_ROOT);
 
-        token_wallet = wallet;
-
-        ITONTokenWallet(token_wallet)
-            .setReceiveCallback(address(this), false);
-    }
-
-    /*
-        @notice Receive TONs to wrap them into wTON.
-        Allows to simply mint wTONs by sending them directly to vault.
+    /**
+        @notice Receive EVERs to wrap them into wTON.
+        Allows to simply mint wEVERs by sending them directly to vault.
         @dev msg.value should be > receive_safe_fee
         @dev Amount of minted tokens = msg.value - receive_safe_fee
-        @dev Rest of the TONs will be sent back
+        @dev Rest of the EVERs will be sent back
     */
     receive() external {
         require(msg.value > configuration.receive_safe_fee, ErrorCodes.MSG_VALUE_TOO_LOW);
@@ -180,16 +169,19 @@ contract WrappedTONVault is
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
-        IRootTokenContract(configuration.root_tunnel).deployWallet{ value: 0, flag: 128 }(
+        TvmCell empty;
+
+        ITokenRoot(configuration.root_tunnel).mint{ value: 0, flag: 128 }(
             tokens,
-            configuration.settings_deploy_wallet_grams,
-            0,
             msg.sender,
-            msg.sender
+            configuration.settings_deploy_wallet_grams,
+            msg.sender,
+            true,
+            empty
         );
     }
 
-    /*
+    /**
         @notice Updates total wrapped amount
         @param change Change amount
     */
@@ -197,18 +189,16 @@ contract WrappedTONVault is
         total_wrapped += change;
     }
 
-    /*
-        @notice Internal function for minting wTONs
+    /**
+        @notice Internal function for minting wEVERs
         @dev Works since Vault is authorized for minting tokens
         @param tokens How much tokens to mint
-        @param wallet_public_key Token wallet owner public key
         @param owner_address Token wallet owner address
         @param gas_back_address Address to send change
     */
 
     function wrap(
         uint128 tokens,
-        uint wallet_public_key,
         address owner_address,
         address gas_back_address
     ) external {
@@ -221,46 +211,44 @@ contract WrappedTONVault is
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
-        IRootTokenContract(configuration.root_tunnel).deployWallet{ value: 0, flag: 128 }(
+        TvmCell empty;
+
+        ITokenRoot(configuration.root_tunnel).mint{ value: 0, flag: 128 }(
             tokens,
-            configuration.settings_deploy_wallet_grams,
-            wallet_public_key,
             owner_address,
-            gas_back_address
+            configuration.settings_deploy_wallet_grams,
+            gas_back_address,
+            true,
+            empty
         );
     }
 
-    /*
-        @notice Receive wTONs to burn them and release TONs
+    /**
+        @notice Receive wEVERs to burn them and release EVERs
         @dev Callback function from vault token wallet
-        @dev TONs will be sent to original_gas_to
+        @dev EVERs will be sent to original_gas_to
     */
-    function tokensReceivedCallback(
-        address token_wallet_,
-        address token_root_,
-        uint128 tokens_amount,
-        uint256 /*sender_public_key*/,
-        address /*sender_address*/,
-        address /*sender_wallet*/,
-        address original_gas_to,
-        uint128 /*updated_balance*/,
-        TvmCell /*payload*/
+    function onAcceptTokensTransfer(
+        address tokenRoot,
+        uint128 amount,
+        address sender,
+        address senderWallet,
+        address remainingGasTo,
+        TvmCell payload
     ) override external {
-        require(token_root_ == configuration.root, ErrorCodes.WRONG_ROOT);
-        require(token_wallet == token_wallet_, ErrorCodes.WRONG_TOKEN_WALLET);
+        require(tokenRoot == configuration.root, ErrorCodes.WRONG_ROOT);
         require(msg.sender == token_wallet, ErrorCodes.WRONG_TOKEN_WALLET);
 
-        updateTotalWrapped(-tokens_amount);
+        updateTotalWrapped(-amount);
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
         TvmCell empty;
 
-        // Burn wTONs
-        IBurnableByOwnerTokenWallet(token_wallet).burnByOwner{value: 0, flag: 128}(
-            tokens_amount,
-            0,
-            original_gas_to,
+        // Burn wEVERs
+        IBurnableTokenWallet(token_wallet).burn{value: 0, flag: 128}(
+            amount,
+            remainingGasTo,
             address.makeAddrStd(0,0),
             empty
         );
