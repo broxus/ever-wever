@@ -1,6 +1,6 @@
 const {
     defaultConfiguration
-} = require("ethereum-freeton-bridge-contracts/ethereum/test/utils");
+} = require("ton-eth-bridge-contracts/ethereum/test/utils");
 
 
 module.exports = async ({getNamedAccounts, deployments}) => {

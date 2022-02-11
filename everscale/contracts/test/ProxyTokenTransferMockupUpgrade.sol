@@ -5,9 +5,9 @@ import "./../interfaces/IProxy.sol";
 
 import "../bridge-integration/ProxyTokenTransfer.sol";
 
-import './../../../node_modules/@broxus/contracts/contracts/utils/RandomNonce.sol';
-import "./../../../node_modules/@broxus/contracts/contracts/libraries/MsgFlag.sol";
-import './../../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol';
+import '@broxus/contracts/contracts/utils/RandomNonce.sol';
+import "@broxus/contracts/contracts/libraries/MsgFlag.sol";
+import '@broxus/contracts/contracts/access/InternalOwner.sol';
 
 
 contract ProxyTokenTransferMockupUpgrade is RandomNonce, InternalOwner {

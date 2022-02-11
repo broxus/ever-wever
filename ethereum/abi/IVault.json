@@ -1,5 +1,296 @@
 [
   {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "int128",
+        "name": "wid",
+        "type": "int128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "addr",
+        "type": "uint256"
+      }
+    ],
+    "name": "Deposit",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "name": "EmergencyShutdown",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "amount",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "int8",
+        "name": "wid",
+        "type": "int8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "user",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "creditor",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "recipient",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "tokenAmount",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "tonAmount",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "swapType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "slippageNumerator",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "slippageDenominator",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes1",
+        "name": "separator",
+        "type": "bytes1"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "level3",
+        "type": "bytes"
+      }
+    ],
+    "name": "FactoryDeposit",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "payloadId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "InstantWithdrawal",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "governance",
+        "type": "address"
+      }
+    ],
+    "name": "NewPendingGovernance",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "bridge",
+        "type": "address"
+      }
+    ],
+    "name": "UpdateBridge",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "int128",
+        "name": "wid",
+        "type": "int128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "addr",
+        "type": "uint256"
+      }
+    ],
+    "name": "UpdateConfiguration",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      }
+    ],
+    "name": "UpdateDepositFee",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "governance",
+        "type": "address"
+      }
+    ],
+    "name": "UpdateGovernance",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "guardian",
+        "type": "address"
+      }
+    ],
+    "name": "UpdateGuardian",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "management",
+        "type": "address"
+      }
+    ],
+    "name": "UpdateManagement",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "int128",
+        "name": "wid",
+        "type": "int128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "addr",
+        "type": "uint256"
+      }
+    ],
+    "name": "UpdateRewards",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "targetDecimals",
+        "type": "uint256"
+      }
+    ],
+    "name": "UpdateTargetDecimals",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fee",
+        "type": "uint256"
+      }
+    ],
+    "name": "UpdateWithdrawFee",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "acceptGovernance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "apiVersion",
     "outputs": [
@@ -42,8 +333,8 @@
             "type": "uint256"
           }
         ],
-        "internalType": "struct IVault.TONAddress",
-        "name": "_configuration",
+        "internalType": "struct IEverscale.EverscaleAddress",
+        "name": "",
         "type": "tuple"
       }
     ],
@@ -53,10 +344,58 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "sender",
-        "type": "address"
-      },
+        "internalType": "bytes",
+        "name": "eventData",
+        "type": "bytes"
+      }
+    ],
+    "name": "decodeWithdrawalEventData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "int128",
+                "name": "wid",
+                "type": "int128"
+              },
+              {
+                "internalType": "uint256",
+                "name": "addr",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IEverscale.EverscaleAddress",
+            "name": "sender",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint32",
+            "name": "chainId",
+            "type": "uint32"
+          }
+        ],
+        "internalType": "struct IVault.WithdrawalParams",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
       {
         "components": [
           {
@@ -70,36 +409,14 @@
             "type": "uint256"
           }
         ],
-        "internalType": "struct IVault.TONAddress",
+        "internalType": "struct IEverscale.EverscaleAddress",
         "name": "recipient",
         "type": "tuple"
       },
       {
         "internalType": "uint256",
-        "name": "_amount",
+        "name": "amount",
         "type": "uint256"
-      },
-      {
-        "components": [
-          {
-            "internalType": "address",
-            "name": "recipient",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct IVault.PendingWithdrawalId",
-        "name": "pendingWithdrawalId",
-        "type": "tuple"
-      },
-      {
-        "internalType": "bool",
-        "name": "sendTransferToTon",
-        "type": "bool"
       }
     ],
     "name": "deposit",
@@ -108,21 +425,92 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "recipient",
-        "type": "address"
-      },
+    "inputs": [],
+    "name": "depositFee",
+    "outputs": [
       {
         "internalType": "uint256",
-        "name": "id",
+        "name": "",
         "type": "uint256"
       }
     ],
-    "name": "forceWithdraw",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint128",
+        "name": "amount",
+        "type": "uint128"
+      },
+      {
+        "internalType": "int8",
+        "name": "wid",
+        "type": "int8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "user",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "creditor",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "recipient",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint128",
+        "name": "tokenAmount",
+        "type": "uint128"
+      },
+      {
+        "internalType": "uint128",
+        "name": "tonAmount",
+        "type": "uint128"
+      },
+      {
+        "internalType": "uint8",
+        "name": "swapType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint128",
+        "name": "slippageNumerator",
+        "type": "uint128"
+      },
+      {
+        "internalType": "uint128",
+        "name": "slippageDenominator",
+        "type": "uint128"
+      },
+      {
+        "internalType": "bytes",
+        "name": "level3",
+        "type": "bytes"
+      }
+    ],
+    "name": "depositToFactory",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "emergencyShutdown",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -139,10 +527,23 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "guardian",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
-        "name": "_token",
+        "name": "_bridge",
         "type": "address"
       },
       {
@@ -152,28 +553,25 @@
       },
       {
         "internalType": "address",
-        "name": "_bridge",
+        "name": "_token",
         "type": "address"
       },
       {
-        "internalType": "address",
-        "name": "_wrapper",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "guardian",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "management",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_targetDecimals",
-        "type": "uint256"
+        "components": [
+          {
+            "internalType": "int128",
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "internalType": "uint256",
+            "name": "addr",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IEverscale.EverscaleAddress",
+        "name": "_rewards",
+        "type": "tuple"
       }
     ],
     "name": "initialize",
@@ -182,29 +580,198 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "payloadId",
-        "type": "bytes32"
-      },
+    "inputs": [],
+    "name": "management",
+    "outputs": [
       {
         "internalType": "address",
-        "name": "recipient",
+        "name": "",
         "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "rewards",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "int128",
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "internalType": "uint256",
+            "name": "addr",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IEverscale.EverscaleAddress",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "payload",
+        "type": "bytes"
       },
       {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
+        "internalType": "bytes[]",
+        "name": "signatures",
+        "type": "bytes[]"
+      }
+    ],
+    "name": "saveWithdrawal",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "int128",
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "internalType": "uint256",
+            "name": "addr",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IEverscale.EverscaleAddress",
+        "name": "_configuration",
+        "type": "tuple"
+      }
+    ],
+    "name": "setConfiguration",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
       {
         "internalType": "uint256",
-        "name": "bounty",
+        "name": "_depositFee",
         "type": "uint256"
       }
     ],
-    "name": "saveWithdraw",
+    "name": "setDepositFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "name": "setEmergencyShutdown",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_governance",
+        "type": "address"
+      }
+    ],
+    "name": "setGovernance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_guardian",
+        "type": "address"
+      }
+    ],
+    "name": "setGuardian",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_management",
+        "type": "address"
+      }
+    ],
+    "name": "setManagement",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "int128",
+            "name": "wid",
+            "type": "int128"
+          },
+          {
+            "internalType": "uint256",
+            "name": "addr",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IEverscale.EverscaleAddress",
+        "name": "_rewards",
+        "type": "tuple"
+      }
+    ],
+    "name": "setRewards",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_withdrawFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setWithdrawFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      }
+    ],
+    "name": "sweep",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -250,12 +817,31 @@
   },
   {
     "inputs": [],
-    "name": "wrapper",
+    "name": "withdrawFee",
     "outputs": [
       {
-        "internalType": "address",
+        "internalType": "uint256",
         "name": "",
-        "type": "address"
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "withdrawalIds",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
       }
     ],
     "stateMutability": "view",

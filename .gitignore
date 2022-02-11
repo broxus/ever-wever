@@ -4,8 +4,8 @@ node_modules/
 ethereum/cache
 ethereum/artifacts
 ethereum/.openzeppelin
-freeton/build/*.code
-freeton/build/*.base64
-freeton/build/*.tvc
+everscale/build/*.code
+everscale/build/*.base64
+everscale/build/*.tvc
 *.log
 .DS_Store
