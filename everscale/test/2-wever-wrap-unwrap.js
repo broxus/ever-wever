@@ -11,6 +11,7 @@ const {
   afterRun,
   stringToBytesArray,
   getTokenWalletAddress,
+  EMPTY_TVM_CELL,
   ...utils
 } = require('./utils');
 
@@ -184,6 +185,7 @@ describe('Test wTON wrap / unwrap', async function() {
             tokens: locklift.utils.convertCrystal(1, 'nano'),
             owner_address: user.address,
             gas_back_address: user.address,
+            payload: EMPTY_TVM_CELL
           },
         });
 

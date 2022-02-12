@@ -5,6 +5,7 @@ const {
 const {
     expect,
     setupWever, stringToBytesArray,
+    EMPTY_TVM_CELL
 } = require("./utils");
 
 
@@ -34,6 +35,7 @@ describe('Bridge integration', async function() {
                 tokens: locklift.utils.convertCrystal(4, 'nano'),
                 owner_address: user.address,
                 gas_back_address: user.address,
+                payload: EMPTY_TVM_CELL
             },
         });
 

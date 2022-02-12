@@ -200,7 +200,8 @@ contract Vault is
     function wrap(
         uint128 tokens,
         address owner_address,
-        address gas_back_address
+        address gas_back_address,
+        TvmCell payload
     ) external {
         require(
             msg.value >= tokens + configuration.receive_safe_fee,
@@ -211,22 +212,20 @@ contract Vault is
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
-        TvmCell empty;
-
         ITokenRoot(configuration.root_tunnel).mint{ value: 0, flag: 128 }(
             tokens,
             owner_address,
             configuration.settings_deploy_wallet_grams,
             gas_back_address,
             true,
-            empty
+            payload
         );
     }
 
     /**
         @notice Receive wEVERs to burn them and release EVERs
         @dev Callback function from vault token wallet
-        @dev EVERs will be sent to original_gas_to
+        @dev EVERs will be sent to tokens sender
     */
     function onAcceptTokensTransfer(
         address tokenRoot,
@@ -243,14 +242,12 @@ contract Vault is
 
         tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
 
-        TvmCell empty;
-
         // Burn wEVERs
         IBurnableTokenWallet(token_wallet).burn{value: 0, flag: 128}(
             amount,
             remainingGasTo,
-            address.makeAddrStd(0,0),
-            empty
+            sender,
+            payload
         );
     }
 }

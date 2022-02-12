@@ -61,7 +61,8 @@
 			"inputs": [
 				{"name":"tokens","type":"uint128"},
 				{"name":"owner_address","type":"address"},
-				{"name":"gas_back_address","type":"address"}
+				{"name":"gas_back_address","type":"address"},
+				{"name":"payload","type":"cell"}
 			],
 			"outputs": [
 			]

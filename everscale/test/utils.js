@@ -9,6 +9,7 @@ const { expect } = chai;
 
 const TOKEN_PATH = '../node_modules/ton-eth-bridge-token-contracts/build';
 
+const EMPTY_TVM_CELL = 'te6ccgEBAQEAAgAAAA==';
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -329,5 +330,6 @@ module.exports = {
     afterRun,
     stringToBytesArray,
     getTokenWalletAddress,
-    TOKEN_PATH
+    TOKEN_PATH,
+    EMPTY_TVM_CELL
 };

@@ -12,6 +12,7 @@ const {
     getMetricsChange,
     logMetricsChange,
     setupWever,
+    EMPTY_TVM_CELL,
     ...utils
 } = require("./utils");
 
@@ -244,6 +245,7 @@ describe('Test vault update to new token', async function() {
                     tokens: locklift.utils.convertCrystal(2, 'nano'),
                     owner_address: user.address,
                     gas_back_address: user.address,
+                    payload: EMPTY_TVM_CELL
                 },
             });
 
