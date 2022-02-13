@@ -320,6 +320,9 @@ const logGiverBalance = async function() {
 };
 
 
+const isValidTonAddress = (address) => /^(?:-1|0):[0-9a-fA-F]{64}$/.test(address);
+
+
 module.exports = {
     expect,
     setupWever,
@@ -331,5 +334,6 @@ module.exports = {
     stringToBytesArray,
     getTokenWalletAddress,
     TOKEN_PATH,
-    EMPTY_TVM_CELL
+    EMPTY_TVM_CELL,
+    isValidTonAddress
 };

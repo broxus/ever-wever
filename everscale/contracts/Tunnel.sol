@@ -4,10 +4,9 @@ pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
 
-import "./../interfaces/ITunnel.sol";
+import "./interfaces/ITunnel.sol";
 
-import "./../utils/Pausable.sol";
-import "./../utils/Ownable.sol";
+import "./utils/Pausable.sol";
 
 
 /**
@@ -17,7 +16,7 @@ import "./../utils/Ownable.sol";
 
     @dev Only sources are authorized to send messages to Tunnel
 */
-contract Tunnels is ITunnel, Ownable, Pausable {
+contract Tunnels is ITunnel, Pausable {
     uint256 static _randomNonce;
 
     mapping(address => address) tunnels;
@@ -36,7 +35,7 @@ contract Tunnels is ITunnel, Ownable, Pausable {
         require(sources.length == destinations.length, 101, "Tunnel: source and destinations size different");
         tvm.accept();
 
-        _transferOwnership(owner_);
+        setOwnership(owner_);
 
         for (uint i=0; i < sources.length; i++) {
             tunnels[sources[i]] = destinations[i];
@@ -65,13 +64,13 @@ contract Tunnels is ITunnel, Ownable, Pausable {
     function __updateTunnel(
         address source,
         address destination
-    ) onlyOwner(msg.sender) public override {
+    ) onlyOwner public override {
         tunnels[source] = destination;
     }
 
     function __removeTunnel(
         address source
-    ) onlyOwner(msg.sender) public override {
+    ) onlyOwner public override {
         delete tunnels[source];
     }
 }

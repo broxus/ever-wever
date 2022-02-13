@@ -40,7 +40,7 @@ PUSHCONT {
 IFELSE
 LDMSGADDR
 ENDS
-.loc ../contracts/additional/Tunnel.sol, 35
+.loc ../contracts/Tunnel.sol, 34
 PUSHREF {
 	.blob x54756e6e656c3a2057726f6e67206465706c6f79206b6579
 }
@@ -55,7 +55,7 @@ PUSHCONT {
 IF
 EQUAL
 THROWARGIFNOT 101
-.loc ../contracts/additional/Tunnel.sol, 36
+.loc ../contracts/Tunnel.sol, 35
 PUSHREF {
 	.blob x54756e6e656c3a20736f7572636520616e642064657374696e6174696f6e732073697a6520646966666572656e74
 }
@@ -65,13 +65,13 @@ PUSH S3
 FIRST
 EQUAL
 THROWARGIFNOT 101
-.loc ../contracts/additional/Tunnel.sol, 37
+.loc ../contracts/Tunnel.sol, 36
 ACCEPT
-.loc ../contracts/additional/Tunnel.sol, 39
+.loc ../contracts/Tunnel.sol, 38
 CALLREF {
-	CALL $_transferOwnership_internal_macro$
+	CALL $setOwnership_internal_macro$
 }
-.loc ../contracts/additional/Tunnel.sol, 41
+.loc ../contracts/Tunnel.sol, 40
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S2
@@ -79,7 +79,7 @@ PUSHCONT {
 	LESS
 }
 PUSHCONT {
-	.loc ../contracts/additional/Tunnel.sol, 42
+	.loc ../contracts/Tunnel.sol, 41
 	PUSH2 S0, S1
 	SECOND
 	PUSHINT 32
@@ -94,13 +94,13 @@ PUSHCONT {
 	PUSHINT 267
 	DICTSET
 	SETGLOB 13
-	.loc ../contracts/additional/Tunnel.sol, 41
+	.loc ../contracts/Tunnel.sol, 40
 	INC
-	.loc ../contracts/additional/Tunnel.sol, 0
+	.loc ../contracts/Tunnel.sol, 0
 }
 WHILE
 BLKDROP 3
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 CALLREF {
 	CALL $c7_to_c4$
 }
@@ -114,7 +114,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/additional/Tunnel.sol, 26
+.loc ../contracts/Tunnel.sol, 25
 PUSHREF {
 	.blob x54756e6e656c3a204e6f7420736f75726365
 }
@@ -125,7 +125,7 @@ DICTGET
 NULLSWAPIFNOT
 NIP
 THROWARGIFNOT 101
-.loc ../contracts/additional/Tunnel.sol, 47
+.loc ../contracts/Tunnel.sol, 46
 GETPARAM 7
 FIRST
 DEPTH
@@ -135,13 +135,13 @@ SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/additional/Tunnel.sol, 50
+.loc ../contracts/Tunnel.sol, 49
 DEPTH
 ADDCONST -4
 PICK
 NEWC
 STSLICE
-.loc ../contracts/additional/Tunnel.sol, 52
+.loc ../contracts/Tunnel.sol, 51
 GETGLOB 9
 GETGLOB 13
 PUSHINT 267
@@ -161,7 +161,7 @@ STBREF
 ENDC
 PUSHINT 128
 SENDRAWMSG
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 DUP
 IFREF {
 	CALL $upd_only_time_in_c4$
@@ -176,9 +176,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/additional/Tunnel.sol, 55
+.loc ../contracts/Tunnel.sol, 54
 ENDS
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 CALLREF {
 	CALL $__getTunnels_internal_macro$
 }
@@ -225,12 +225,12 @@ THROW 0
 CALL $__getTunnels_internal_macro$
 
 .macro __getTunnels_internal_macro
-.loc ../contracts/additional/Tunnel.sol, 55
+.loc ../contracts/Tunnel.sol, 54
 PUSHINT 0
 NEWDICT
 PAIR
 DUP
-.loc ../contracts/additional/Tunnel.sol, 59
+.loc ../contracts/Tunnel.sol, 58
 GETGLOB 13
 DUP
 PUSHINT 267
@@ -250,7 +250,7 @@ PUSHCONT {
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/additional/Tunnel.sol, 60
+	.loc ../contracts/Tunnel.sol, 59
 	PUSH2 S1, S5
 	UNPAIR
 	OVER
@@ -260,7 +260,7 @@ PUSHCONT {
 	DICTUSET
 	PAIR
 	POP S6
-	.loc ../contracts/additional/Tunnel.sol, 61
+	.loc ../contracts/Tunnel.sol, 60
 	PUSH2 S0, S4
 	UNPAIR
 	OVER
@@ -270,7 +270,7 @@ PUSHCONT {
 	DICTUSET
 	PAIR
 	POP S5
-	.loc ../contracts/additional/Tunnel.sol, 0
+	.loc ../contracts/Tunnel.sol, 0
 	PUSH2 S2, S3
 	PUSHINT 267
 	DICTGETNEXT
@@ -287,7 +287,7 @@ PUSHCONT {
 }
 WHILE
 BLKDROP 4
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 
 .macro __updateTunnel
 DROP
@@ -298,7 +298,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/additional/Tunnel.sol, 65
+.loc ../contracts/Tunnel.sol, 64
 OVER
 PUSHCONT {
 	LDREF
@@ -312,7 +312,7 @@ ENDS
 CTOS
 LDMSGADDR
 ENDS
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 CALLREF {
 	CALL $__updateTunnel_internal_macro$
 }
@@ -327,21 +327,18 @@ THROW 0
 CALL $__updateTunnel_internal_macro$
 
 .macro __updateTunnel_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
-.loc ../contracts/additional/Tunnel.sol, 69
+THROWIFNOT 1101
+.loc ../contracts/Tunnel.sol, 68
 SWAP
 GETGLOB 13
 PUSHINT 267
 DICTSET
 SETGLOB 13
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 
 .macro __removeTunnel
 DROP
@@ -352,7 +349,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/additional/Tunnel.sol, 72
+.loc ../contracts/Tunnel.sol, 71
 OVER
 PUSHCONT {
 	LDREF
@@ -362,7 +359,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 CALLREF {
 	CALL $__removeTunnel_internal_macro$
 }
@@ -377,21 +374,18 @@ THROW 0
 CALL $__removeTunnel_internal_macro$
 
 .macro __removeTunnel_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
-.loc ../contracts/additional/Tunnel.sol, 75
+THROWIFNOT 1101
+.loc ../contracts/Tunnel.sol, 74
 GETGLOB 13
 PUSHINT 267
 DICTDEL
 DROP
 SETGLOB 13
-.loc ../contracts/additional/Tunnel.sol, 0
+.loc ../contracts/Tunnel.sol, 0
 
 .macro pause
 DROP
@@ -419,14 +413,11 @@ THROW 0
 CALL $pause_internal_macro$
 
 .macro pause_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
+THROWIFNOT 1101
 .loc ../contracts/utils/Pausable.sol, 16
 PUSHREF {
 	.blob x5061757361626c653a206e6f7420756e706175736564
@@ -471,14 +462,11 @@ THROW 0
 CALL $unpause_internal_macro$
 
 .macro unpause_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
+THROWIFNOT 1101
 .loc ../contracts/utils/Pausable.sol, 24
 PUSHREF {
 	.blob x5061757361626c653a206e6f7420706175736564
@@ -496,14 +484,33 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/utils/Pausable.sol, 0
 
-.globl	_transferOwnership_internal
-.type	_transferOwnership_internal, @function
-CALL $_transferOwnership_internal_macro$
+.globl	setOwnership_internal
+.type	setOwnership_internal, @function
+CALL $setOwnership_internal_macro$
 
-.macro _transferOwnership_internal_macro
-.loc ../contracts/utils/Ownable.sol, 13
+.macro setOwnership_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 24
+GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 26
+OVER
 SETGLOB 10
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 28
+PUSHSLICE xc0000000000000000000000001
+NEWC
+STSLICE
+ROTREV
+NEWC
+STSLICECONST x6115f072
+STSLICE
+SWAP
+NEWC
+STSLICE
+STBREFR
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 
 .macro transferOwnership
 DROP
@@ -514,7 +521,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/utils/Ownable.sol, 16
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 34
 OVER
 PUSHCONT {
 	LDREF
@@ -524,7 +531,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 CALLREF {
 	CALL $transferOwnership_internal_macro$
 }
@@ -535,19 +542,23 @@ CALLREF {
 THROW 0
 
 .macro transferOwnership_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
-.loc ../contracts/utils/Ownable.sol, 17
-CALLREF {
-	CALL $_transferOwnership_internal_macro$
+THROWIFNOT 1101
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 37
+DUP
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../contracts/utils/Ownable.sol, 0
+SDEQ
+THROWIF 1102
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 39
+CALLREF {
+	CALL $setOwnership_internal_macro$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 
 .macro renounceOwnership
 DROP
@@ -558,9 +569,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/utils/Ownable.sol, 20
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 45
 ENDS
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 CALLREF {
 	CALL $renounceOwnership_internal_macro$
 }
@@ -571,22 +582,20 @@ CALLREF {
 THROW 0
 
 .macro renounceOwnership_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
-.loc ../contracts/utils/Ownable.sol, 21
+THROWIFNOT 1101
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 46
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 48
 CALLREF {
-	CALL $_transferOwnership_internal_macro$
+	CALL $setOwnership_internal_macro$
 }
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 
 .macro c4_to_c7
 PUSHROOT

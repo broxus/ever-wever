@@ -21,7 +21,7 @@
     "broxus-bridge"
   ],
   "author": "pavlovdog_ <pavlovdog.moscow@gmail.com>",
-  "license": "Apache-2.0",
+  "license": "GNU AGPLv3",
   "bugs": {
     "url": "https://github.com/broxus/ton-eth-wton/issues"
   },
@@ -36,8 +36,10 @@
     "ethereum-waffle": "^3.4.0",
     "locklift": "^1.5.3",
     "mocha-logger": "^1.0.7",
-    "ton-eth-bridge-token-contracts": "git://github.com/broxus/ton-eth-bridge-token-contracts#d3c1cd920c0320ffaab03b54c878dd0e06fed3c7",
-    "ton-eth-bridge-contracts": "git://github.com/broxus/ton-eth-bridge-contracts#9b0981532de504c9d7759c8755ef04cccd8b59cc"
+    "ora": "^3.4.0",
+    "prompts": "^2.4.2",
+    "ton-eth-bridge-contracts": "git://github.com/broxus/ton-eth-bridge-contracts#9b0981532de504c9d7759c8755ef04cccd8b59cc",
+    "ton-eth-bridge-token-contracts": "git://github.com/broxus/ton-eth-bridge-token-contracts#d3c1cd920c0320ffaab03b54c878dd0e06fed3c7"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11",

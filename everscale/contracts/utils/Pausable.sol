@@ -1,9 +1,9 @@
 pragma ton-solidity >= 0.39.0;
 
-import "./Ownable.sol";
+import '@broxus/contracts/contracts/access/InternalOwner.sol';
 
 
-contract Pausable is Ownable {
+contract Pausable is InternalOwner {
     event Pause();
     event Unpause();
 
@@ -28,7 +28,7 @@ contract Pausable is Ownable {
     /**
      * @dev called by the owner to pause, triggers stopped state
      */
-    function pause() onlyOwner(msg.sender) whenNotPaused public {
+    function pause() onlyOwner whenNotPaused public {
         paused = true;
         emit Pause();
     }
@@ -36,7 +36,7 @@ contract Pausable is Ownable {
     /**
      * @dev called by the owner to unpause, returns to normal state
      */
-    function unpause() onlyOwner(msg.sender) whenPaused public {
+    function unpause() onlyOwner whenPaused public {
         paused = false;
         emit Unpause();
     }

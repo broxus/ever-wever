@@ -20,7 +20,7 @@
 		{
 			"name": "transferOwnership",
 			"inputs": [
-				{"name":"owner_","type":"address"}
+				{"name":"newOwner","type":"address"}
 			],
 			"outputs": [
 			]
@@ -69,6 +69,15 @@
 		{
 			"name": "Unpause",
 			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
 			],
 			"outputs": [
 			]

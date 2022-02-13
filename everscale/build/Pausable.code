@@ -42,14 +42,11 @@ THROW 0
 CALL $pause_internal_macro$
 
 .macro pause_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
+THROWIFNOT 1101
 .loc ../contracts/utils/Pausable.sol, 16
 PUSHREF {
 	.blob x5061757361626c653a206e6f7420756e706175736564
@@ -94,14 +91,11 @@ THROW 0
 CALL $unpause_internal_macro$
 
 .macro unpause_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
+THROWIFNOT 1101
 .loc ../contracts/utils/Pausable.sol, 24
 PUSHREF {
 	.blob x5061757361626c653a206e6f7420706175736564
@@ -119,14 +113,33 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/utils/Pausable.sol, 0
 
-.globl	_transferOwnership_internal
-.type	_transferOwnership_internal, @function
-CALL $_transferOwnership_internal_macro$
+.globl	setOwnership_internal
+.type	setOwnership_internal, @function
+CALL $setOwnership_internal_macro$
 
-.macro _transferOwnership_internal_macro
-.loc ../contracts/utils/Ownable.sol, 13
+.macro setOwnership_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 24
+GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 26
+OVER
 SETGLOB 10
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 28
+PUSHSLICE xc0000000000000000000000001
+NEWC
+STSLICE
+ROTREV
+NEWC
+STSLICECONST x6115f072
+STSLICE
+SWAP
+NEWC
+STSLICE
+STBREFR
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 
 .macro transferOwnership
 DROP
@@ -137,7 +150,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/utils/Ownable.sol, 16
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 34
 OVER
 PUSHCONT {
 	LDREF
@@ -147,7 +160,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 CALLREF {
 	CALL $transferOwnership_internal_macro$
 }
@@ -158,19 +171,23 @@ CALLREF {
 THROW 0
 
 .macro transferOwnership_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
-.loc ../contracts/utils/Ownable.sol, 17
-CALLREF {
-	CALL $_transferOwnership_internal_macro$
+THROWIFNOT 1101
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 37
+DUP
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../contracts/utils/Ownable.sol, 0
+SDEQ
+THROWIF 1102
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 39
+CALLREF {
+	CALL $setOwnership_internal_macro$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 
 .macro renounceOwnership
 DROP
@@ -181,9 +198,9 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/utils/Ownable.sol, 20
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 45
 ENDS
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 CALLREF {
 	CALL $renounceOwnership_internal_macro$
 }
@@ -194,22 +211,20 @@ CALLREF {
 THROW 0
 
 .macro renounceOwnership_internal_macro
-.loc ../contracts/utils/Ownable.sol, 8
-PUSHREF {
-	.blob x4f776e61626c653a206e6f74206f776e6572
-}
-GETGLOB 10
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 15
 GETGLOB 9
+GETGLOB 10
 SDEQ
-THROWARGIFNOT 123
-.loc ../contracts/utils/Ownable.sol, 21
+THROWIFNOT 1101
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 46
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 48
 CALLREF {
-	CALL $_transferOwnership_internal_macro$
+	CALL $setOwnership_internal_macro$
 }
-.loc ../contracts/utils/Ownable.sol, 0
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.sol, 0
 
 .macro c4_to_c7
 PUSHROOT
