@@ -72,7 +72,7 @@ async function main() {
         constructorParams: {
             sources: [],
             destinations: [],
-            owner_: response.owner,
+            owner_: user.address,
         },
         initParams: {
             _randomNonce,
