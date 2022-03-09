@@ -242,6 +242,9 @@ contract Vault is VaultStorage {
         _transferToEverscale(recipient, amount - fee);
 
         if (fee > 0) _transferToEverscale(rewards_, fee);
+
+        emit UserDeposit(msg.sender, recipient.wid, recipient.addr, amount, address(0), 0, 0);
+
     }
 
     function depositToFactory(

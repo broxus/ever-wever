@@ -87,6 +87,16 @@ interface IVault is IEverscale {
         uint256 addr
     );
 
+    event UserDeposit(
+        address sender,
+        int128 recipientWid,
+        uint256 recipientAddr,
+        uint256 amount,
+        address withdrawalRecipient,
+        uint256 withdrawalId,
+        uint256 bounty
+    );
+
     event InstantWithdrawal(
         bytes32 payloadId,
         address recipient,
