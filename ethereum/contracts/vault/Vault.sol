@@ -302,7 +302,7 @@ contract Vault is VaultStorage {
         @param payload Withdrawal receipt. Bytes encoded `struct EverscaleEvent`.
         @param signatures List of relay's signatures. See not on `Bridge.verifySignedEverscaleEvent`.
     */
-    function saveWithdrawal(
+    function saveWithdraw(
         bytes memory payload,
         bytes[] memory signatures
     )

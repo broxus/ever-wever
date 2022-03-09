@@ -69,7 +69,7 @@ interface IVault is IEverscale {
         bytes memory level3
     ) external;
 
-    function saveWithdrawal(
+    function saveWithdraw(
         bytes memory payload,
         bytes[] memory signatures
     ) external;

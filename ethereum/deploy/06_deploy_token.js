@@ -5,8 +5,8 @@ module.exports = async ({getNamedAccounts, deployments}) => {
         from: deployer,
         log: true,
         args: [
-            'Token',
-            'TKN',
+            'Wrapped Ever',
+            'WEVER',
             9,
         ]
     });

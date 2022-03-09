@@ -1,4 +1,4 @@
-# **Wrapped EVER (formerly Wrapped EVER)**
+# **Wrapped EVER (formerly Wrapped TON)**
 
 The Wrapped EVER project allows you to use the [Everscale](https://everscale.network/) native EVER token in a form of [TIP3](https://github.com/everscale-org/docs/blob/main/src/Standard/TIP-3/1.md) compatible token.
 

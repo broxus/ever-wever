@@ -36,7 +36,7 @@ describe('Test save withdraw and deposit', async () => {
                 proxy: vault.address,
             });
 
-            await expect(() => vault.connect(alice).saveWithdrawal(payload, []))
+            await expect(() => vault.connect(alice).saveWithdraw(payload, []))
                 .to.changeTokenBalances(
                     token,
                     [vault, alice],
