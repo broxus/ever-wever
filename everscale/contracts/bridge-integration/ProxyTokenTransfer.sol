@@ -131,7 +131,7 @@ contract ProxyTokenTransfer is
         address senderWallet,
         address remainingGasTo,
         TvmCell payload
-    ) override external {
+    ) override external reserveBalance {
         require(tokenRoot == config.root, ErrorCodes.WRONG_TOKEN_ROOT);
         require(token_wallet == msg.sender, ErrorCodes.RECEIVED_WRONG_TOKEN);
 

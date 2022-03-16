@@ -62,6 +62,11 @@ describe('Bridge integration', async function() {
             });
         });
 
+        it('Check proxy EVER balance', async () => {
+            expect(await locklift.ton.getBalance(proxyTokenTransfer.address))
+                .to.be.bignumber.greaterThan(0, 'Proxy EVER balance is zero');
+        });
+
         it('Check user token balance', async () => {
             expect(await userTokenWallet.call({ method: 'balance' }))
                 .to.be.bignumber.equal(convertCrystal(1.5, 'nano'), "Wrong user token balance");
@@ -114,6 +119,11 @@ describe('Bridge integration', async function() {
                 },
                 value: locklift.utils.convertCrystal('5', 'nano'),
             });
+        });
+
+        it('Check proxy EVER balance', async () => {
+            expect(await locklift.ton.getBalance(proxyTokenTransfer.address))
+                .to.be.bignumber.greaterThan(0, 'Proxy EVER balance is zero');
         });
 
         it('Check user token balance', async () => {
