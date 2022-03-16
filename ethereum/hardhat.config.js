@@ -40,10 +40,10 @@ module.exports = {
     },
     bridge: {
       default: '0x0000000000000000000000000000000000000000', // BridgeMockup will be used for tests
-      main: '0x5889d26Ad270540E315B028Dd39Ae0ECB3De6179',
-      polygon: '0x9f6898d5D36e2a4b9A0c6e58A0e86525475f58d7',
-      bsc: '0xa3CbceE67325bCa03aCCcD06b9121955CCF224C3',
-      fantom: '0x6dF42fdE8BC7AF2596a450b9af306EA2060Ec8dc'
+      main: '0xF4404070f63a7E19Be0b1dd89A5fb88E12c0173A',
+      polygon: '0x62AE18A40Fa81697Fc7d0fe58402af5cAF795e68',
+      bsc: '0xc25CA21377C5bbC860F0bF48dF685D744A411489',
+      fantom: '0x9f6898d5D36e2a4b9A0c6e58A0e86525475f58d7'
     },
     alice: {
       default: 3,
