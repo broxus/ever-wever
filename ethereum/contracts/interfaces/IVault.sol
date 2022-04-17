@@ -27,6 +27,7 @@ interface IVault is IEverscale {
 
     function depositFee() external view returns (uint256);
     function withdrawFee() external view returns (uint256);
+    function fees() external view returns (uint256);
 
     function emergencyShutdown() external view returns (bool);
 
@@ -79,6 +80,10 @@ interface IVault is IEverscale {
     ) external view returns(WithdrawalParams memory);
 
     function sweep(address _token) external;
+
+    function skim(
+        bool skim_to_everscale
+    ) external;
 
     // Events
     event Deposit(

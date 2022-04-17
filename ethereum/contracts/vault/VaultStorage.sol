@@ -67,4 +67,7 @@ abstract contract VaultStorage is IVault, Initializable, ReentrancyGuard {
     // - Emergency shutdown, most of operations are unavailable in emergency mode
     bool public override emergencyShutdown;
 
+    // STORAGE UPDATE 1
+    // - Total fees
+    uint256 public override fees;
 }

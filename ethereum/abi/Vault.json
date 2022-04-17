@@ -564,6 +564,19 @@
   },
   {
     "inputs": [],
+    "name": "fees",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "governance",
     "outputs": [
       {
@@ -808,6 +821,19 @@
       }
     ],
     "name": "setWithdrawFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "skim_to_everscale",
+        "type": "bool"
+      }
+    ],
+    "name": "skim",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

@@ -241,7 +241,7 @@ contract Vault is VaultStorage {
 
         _transferToEverscale(recipient, amount - fee);
 
-        if (fee > 0) _transferToEverscale(rewards_, fee);
+        if (fee > 0) fees += fee;
 
         emit UserDeposit(msg.sender, recipient.wid, recipient.addr, amount, address(0), 0, 0);
 
@@ -278,7 +278,7 @@ contract Vault is VaultStorage {
 
         uint256 fee = _calculateMovementFee(amount, depositFee);
 
-        if (fee > 0) _transferToEverscale(rewards_, fee);
+        if (fee > 0) fees += fee;
 
         emit FactoryDeposit(
             amount - uint128(fee),
@@ -334,7 +334,7 @@ contract Vault is VaultStorage {
         // Ensure withdrawal fee
         uint256 fee = _calculateMovementFee(withdrawal.amount, withdrawFee);
 
-        if (fee > 0) _transferToEverscale(rewards_, fee);
+        if (fee > 0) fees += fee;
 
         IERC20Mintable(token).mint(withdrawal.recipient, withdrawal.amount - fee);
 
@@ -362,6 +362,23 @@ contract Vault is VaultStorage {
         uint256 amount = IERC20(_token).balanceOf(address(this));
 
         IERC20(_token).safeTransfer(governance, amount);
+    }
+
+    /// @notice Skim fees
+    /// Can be called only by governance or management
+    /// @param skim_to_everscale Skim fees to Everscale or not
+    function skim(
+        bool skim_to_everscale
+    ) external override nonReentrant onlyGovernanceOrManagement {
+        require(fees > 0);
+
+        if (skim_to_everscale) {
+            _transferToEverscale(rewards_, fees);
+        } else {
+            IERC20Mintable(token).mint(governance, fees);
+        }
+
+        fees = 0;
     }
 
     function decodeWithdrawalEventData(
