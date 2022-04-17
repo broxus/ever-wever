@@ -20,11 +20,17 @@ describe('Test save withdraw and deposit', async () => {
         token = await ethers.getContract('Token');
     });
 
-    it('Set deposit and withdraw fees', async () => {
-        const deployer = await ethers.getNamedSigner('deployer');
+    it('Accept ownership', async () => {
+        const owner = await ethers.getNamedSigner('owner');
 
-        await vault.connect(deployer).setDepositFee(100);
-        await vault.connect(deployer).setWithdrawFee(200);
+        await vault.connect(owner).acceptGovernance();
+    });
+
+    it('Set deposit and withdraw fees', async () => {
+        const owner = await ethers.getNamedSigner('owner');
+
+        await vault.connect(owner).setDepositFee(100);
+        await vault.connect(owner).setWithdrawFee(200);
     });
 
     describe('Save withdraw', async () => {
@@ -67,12 +73,12 @@ describe('Test save withdraw and deposit', async () => {
             expect(fees)
                 .to.be.gt(0, 'Zero fees after withdraw');
 
-            const deployer = await ethers.getNamedSigner('deployer');
+            const owner = await ethers.getNamedSigner('owner');
 
-            await expect(() => vault.connect(deployer).skim(false))
+            await expect(() => vault.connect(owner).skim(false))
                 .to.changeTokenBalances(
                     token,
-                    [vault, deployer],
+                    [vault, owner],
                     [ethers.BigNumber.from(0), fees]
                 );
 
@@ -115,10 +121,10 @@ describe('Test save withdraw and deposit', async () => {
             expect(fees)
                 .to.be.gt(0, 'Zero fees after withdraw');
 
-            const deployer = await ethers.getNamedSigner('deployer');
+            const owner = await ethers.getNamedSigner('owner');
             const rewards = await vault.rewards();
 
-            expect(vault.connect(deployer).skim(true))
+            expect(vault.connect(owner).skim(true))
                 .to.emit(vault, 'Deposit')
                 .withArgs(
                     fees,
