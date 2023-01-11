@@ -1,0 +1,1916 @@
+.version sol 0.62.0
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol, 9
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+GETGLOB 2
+EQUAL
+THROWIFNOT 1103
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 55
+ACCEPT
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 57
+CALLREF {
+	CALL $setOwnership_a7016023_internal_macro$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 58
+CALLREF {
+	CALL $setUpTokenWallet_aa46637f_internal_macro$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro apiVersion
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 61
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $apiVersion_25829410_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 4031729813
+	STUR 130
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.macro apiVersion_25829410_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 62
+PUSHREF {
+	.blob x302e312e30
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.globl	setUpTokenWallet_aa46637f_internal
+.type	setUpTokenWallet_aa46637f_internal, @function
+CALL $setUpTokenWallet_aa46637f_internal_macro$
+
+.macro setUpTokenWallet_aa46637f_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 69
+GETGLOB 12
+INDEX 3
+MYADDR
+GETGLOB 12
+THIRD
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 2949852426645541256083542794369173188247553
+STUR 143
+ROTREV
+PUSHSLICE x31edd4c750bfca9f
+NEWC
+STSLICE
+STSLICE
+STU 128
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro receiveTokenWalletAddress
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 83
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $receiveTokenWalletAddress_9b3a57ad_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro receiveTokenWalletAddress_9b3a57ad_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 86
+GETGLOB 9
+GETGLOB 12
+THIRD
+SDEQ
+THROWIFNOT 102
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 88
+SETGLOB 15
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro onEventConfirmed
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 91
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDU 256
+LDU 32
+LDREF
+LDU 32
+LDU 256
+ROLLREV 5
+TUPLE 5
+SWAP
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDU 32
+ROLLREV 4
+TUPLE 4
+SWAP
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $onEventConfirmed_01acf37b_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro onEventConfirmed_01acf37b_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 50
+PUSHINT 2701
+GETGLOB 12
+SECOND
+GETGLOB 9
+CALLREF {
+	CALL $isArrayContainsAddress_bdf336e9_internal_macro$
+}
+THROWANYIFNOT
+.loc ../contracts/utils/TransferUtils.tsol, 20
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 100
+GETGLOB 12
+THIRD
+PARSEMSGADDR
+INDEX 3
+PLDU 256
+THROWIFNOT 1001
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 102
+SWAP
+INDEX2 0, 2
+CALLREF {
+	CALL $decodeEthereumEventData_20a26e68_internal_macro$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 108
+SWAP
+NEWC
+STSLICECONST x9_
+STI 8
+STU 256
+ENDC
+CTOS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 110
+OVER
+GTINT 0
+THROWIFNOT 1002
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 111
+DUP
+PARSEMSGADDR
+INDEX 3
+PLDU 256
+THROWIFNOT 1003
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 113
+PUSHREF {
+}
+GETGLOB 14
+PUSH S3
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 115
+ADD
+UFITS 128
+SETGLOB 14
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 117
+TRUE
+ROLL 4
+GETGLOB 12
+INDEX 3
+BLKSWAP 2, 4
+SWAP
+GETGLOB 15
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 1
+STUR 111
+ROLLREV 6
+NEWC
+STSLICECONST x73e22143
+STU 128
+STSLICE
+STU 128
+ROLLREV 3
+NEWC
+STSLICE
+STI 1
+STREF
+STBREFR
+STBREFR
+ENDC
+PUSHPOW2 7
+SENDRAWMSG
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro onAcceptTokensTransfer
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 127
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+LDU 128
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDREF
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $onAcceptTokensTransfer_e63f2284_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro onAcceptTokensTransfer_e63f2284_internal_macro
+.loc ../contracts/utils/TransferUtils.tsol, 20
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 135
+ROLL 5
+GETGLOB 12
+THIRD
+SDEQ
+THROWIFNOT 1005
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 136
+GETGLOB 15
+GETGLOB 9
+SDEQ
+THROWIFNOT 1004
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 138
+GETGLOB 13
+PUSH S5
+ADD
+UFITS 128
+SETGLOB 13
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 140
+CTOS
+LDU 160
+PLDU 32
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 145
+PUSH S2
+PARSEMSGADDR
+THIRD
+ROLL 3
+PARSEMSGADDR
+INDEX 3
+PLDU 256
+ROLL 6
+BLKSWAP 2, 3
+CALLREF {
+	CALL $encodeEverscaleEventData_9b320f13_internal_macro$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 153
+LTIME
+NOW
+ROT
+TRIPLE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 159
+GETGLOB 12
+FIRST
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 547684567
+STUR 143
+SWAP
+UNTRIPLE
+REVERSE 4, 0
+STU 64
+STU 32
+STREF
+ENDC
+PUSHPOW2 7
+SENDRAWMSG
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+DROP2
+
+.macro getDetails
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 165
+LDU 32
+GETGLOB 4
+ROT
+SETINDEXQ 5
+SETGLOB 4
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $getDetails_fbbf93a0_internal_macro$
+}
+PUSH S5
+PUSHCONT {
+	PUSH S7
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 6, 0
+	NEWC
+	STSLICECONST xfc80c961
+	SWAP
+	UNTUPLE 5
+	REVERSE 6, 0
+	STSLICE
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ROLLREV 7
+	NEWC
+	STSLICE
+	STU 128
+	STU 128
+	ROLLREV 4
+	NEWC
+	STSLICE
+	STU 128
+	STU 128
+	SWAP
+	NEWC
+	STSLICE
+	STBREFR
+	STBREFR
+	STBREFR
+	STBREFR
+	ENDC
+	PUSHINT 0
+}
+PUSHCONT {
+	GETGLOB 4
+	DUP
+	INDEX 3
+	OVER
+	THIRD
+	GETGLOB 9
+	ROLL 3
+	SECOND
+	NEWC
+	STSLICECONST x2_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	SWAP
+	STGRAMS
+	STDICT
+	PUSHINT 1
+	STUR 106
+	REVERSE 6, 0
+	NEWC
+	GETGLOB 4
+	INDEX 5
+	STUR 32
+	SWAP
+	UNTUPLE 5
+	REVERSE 6, 0
+	STSLICE
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ROLLREV 7
+	NEWC
+	STSLICE
+	STU 128
+	STU 128
+	ROLLREV 4
+	NEWC
+	STSLICE
+	STU 128
+	STU 128
+	SWAP
+	NEWC
+	STSLICE
+	STBREFR
+	STBREFR
+	STBREFR
+	STBREFR
+	ENDC
+	GETGLOB 4
+	INDEX 4
+}
+IFELSE
+SENDRAWMSG
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getDetails_fbbf93a0_internal
+.type	getDetails_fbbf93a0_internal, @function
+CALL $getDetails_fbbf93a0_internal_macro$
+
+.macro getDetails_fbbf93a0_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 172
+GETGLOB 4
+PUSHINT 0
+SETINDEXQ 2
+FALSE
+SETINDEXQ 1
+PUSHINT 64
+SETINDEXQ 4
+SETGLOB 4
+GETGLOB 12
+GETGLOB 11
+GETGLOB 13
+GETGLOB 14
+GETGLOB 15
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro getTokenRoot
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 181
+LDU 32
+GETGLOB 4
+ROT
+SETINDEXQ 5
+SETGLOB 4
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $getTokenRoot_92427c27_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	SWAP
+	NEWC
+	STSLICECONST xa1457ccc
+	STSLICE
+	STBREFR
+	ENDC
+	PUSHINT 0
+}
+PUSHCONT {
+	GETGLOB 4
+	DUP
+	INDEX 3
+	OVER
+	THIRD
+	GETGLOB 9
+	ROLL 3
+	SECOND
+	NEWC
+	STSLICECONST x2_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	SWAP
+	STGRAMS
+	STDICT
+	PUSHINT 1
+	STUR 106
+	SWAP
+	NEWC
+	GETGLOB 4
+	INDEX 5
+	STUR 32
+	STSLICE
+	STBREFR
+	ENDC
+	GETGLOB 4
+	INDEX 4
+}
+IFELSE
+SENDRAWMSG
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getTokenRoot_92427c27_internal
+.type	getTokenRoot_92427c27_internal, @function
+CALL $getTokenRoot_92427c27_internal_macro$
+
+.macro getTokenRoot_92427c27_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 182
+GETGLOB 4
+PUSHINT 0
+SETINDEXQ 2
+FALSE
+SETINDEXQ 1
+PUSHINT 64
+SETINDEXQ 4
+SETGLOB 4
+GETGLOB 12
+THIRD
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro getConfiguration
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 185
+LDU 32
+GETGLOB 4
+ROT
+SETINDEXQ 5
+SETGLOB 4
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $getConfiguration_6bd50cef_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	SWAP
+	NEWC
+	STSLICECONST xa529dd27
+	SWAP
+	UNTUPLE 5
+	REVERSE 6, 0
+	STSLICE
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ROLLREV 3
+	NEWC
+	STSLICE
+	STU 128
+	STU 128
+	STBREFR
+	STBREFR
+	ENDC
+	PUSHINT 0
+}
+PUSHCONT {
+	GETGLOB 4
+	DUP
+	INDEX 3
+	OVER
+	THIRD
+	GETGLOB 9
+	ROLL 3
+	SECOND
+	NEWC
+	STSLICECONST x2_
+	STI 1
+	STSLICECONST x1_
+	STSLICE
+	SWAP
+	STGRAMS
+	STDICT
+	PUSHINT 1
+	STUR 106
+	SWAP
+	NEWC
+	GETGLOB 4
+	INDEX 5
+	STUR 32
+	SWAP
+	UNTUPLE 5
+	REVERSE 6, 0
+	STSLICE
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ROLLREV 3
+	NEWC
+	STSLICE
+	STU 128
+	STU 128
+	STBREFR
+	STBREFR
+	ENDC
+	GETGLOB 4
+	INDEX 4
+}
+IFELSE
+SENDRAWMSG
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	getConfiguration_6bd50cef_internal
+.type	getConfiguration_6bd50cef_internal, @function
+CALL $getConfiguration_6bd50cef_internal_macro$
+
+.macro getConfiguration_6bd50cef_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 186
+GETGLOB 4
+PUSHINT 0
+SETINDEXQ 2
+FALSE
+SETINDEXQ 1
+PUSHINT 64
+SETINDEXQ 4
+SETGLOB 4
+GETGLOB 12
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro setConfiguration
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 189
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+LDU 32
+LDDICT
+ROTREV
+PAIR
+SWAP
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDU 128
+LDU 128
+ROLLREV 5
+TUPLE 5
+SWAP
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $setConfiguration_555f3ee6_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	setConfiguration_555f3ee6_internal
+.type	setConfiguration_555f3ee6_internal, @function
+CALL $setConfiguration_555f3ee6_internal_macro$
+
+.macro setConfiguration_555f3ee6_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 11
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 192
+SETGLOB 12
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 194
+CALLREF {
+	CALL $setUpTokenWallet_aa46637f_internal_macro$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.macro upgrade
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 197
+OVER
+PUSHCONT {
+	LDREF
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDREF
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $upgrade_09b97e7c_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro upgrade_09b97e7c_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 11
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 198
+NEWC
+DUP
+GETGLOB 12
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 201
+UNTUPLE 5
+REVERSE 6, 0
+STSLICE
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+STSLICE
+STU 128
+STU 128
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 204
+GETGLOB 13
+NEWC
+STU 128
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 205
+GETGLOB 14
+STUR 128
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 208
+GETGLOB 11
+NEWC
+STSLICE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 210
+PUSH S3
+ROLL 3
+STBREFR
+POP S3
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 211
+PUSH S2
+ROT
+STBREFR
+POP S2
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 212
+STBREFR
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 214
+GETGLOB 10
+STUR 256
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 215
+STSLICE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 216
+GETGLOB 15
+STSLICER
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 218
+OVER
+SETCODE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 219
+SWAP
+CTOS
+DUP
+PUSHSLICE x8adb35
+SDEQ
+PUSHCONT {
+	PLDREFIDX 1
+	CTOS
+}
+IF
+PLDREF
+CTOS
+BLESS
+POP C3
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 220
+ENDC
+CTOS
+CALLREF {
+	CALL $:onCodeUpgrade$
+}
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.internal-alias :onCodeUpgrade, 2
+.internal :onCodeUpgrade
+DROP
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+COMMIT
+THROW 0
+
+.globl	isArrayContainsAddress_bdf336e9_internal
+.type	isArrayContainsAddress_bdf336e9_internal, @function
+CALL $isArrayContainsAddress_bdf336e9_internal_macro$
+
+.macro isArrayContainsAddress_bdf336e9_internal_macro
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 229
+SWAP
+SECOND
+PUSHINT 0
+NULL
+FALSE ; decl return flag
+PUSHCONT {
+	PUSH2 S2, S3
+	PUSHINT 32
+	DICTUGET
+	NULLSWAPIFNOT
+	DROP
+	DUP
+	POP S3
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 230
+	PUSH2 S4, S1
+	SDEQ
+	PUSHCONT {
+		.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 231
+		BLKDROP 5
+		TRUE
+		PUSHINT 4
+		RETALT
+		.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+	}
+	IFJMP
+	.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+	PUSH S2
+	INC
+	POP S3
+}
+WHILEBRK
+IFRET
+BLKDROP 4
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 235
+FALSE
+.loc ../contracts/bridge-integration/ProxyTokenTransfer.tsol, 0
+
+.globl	setOwnership_a7016023_internal
+.type	setOwnership_a7016023_internal, @function
+CALL $setOwnership_a7016023_internal_macro$
+
+.macro setOwnership_a7016023_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 24
+GETGLOB 11
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 26
+OVER
+SETGLOB 11
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 28
+PUSHSLICE xc0000000000000000000000001
+NEWC
+STSLICE
+ROTREV
+NEWC
+STSLICECONST x6115f072
+STSLICE
+SWAP
+NEWC
+STSLICE
+STBREFR
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+
+.macro transferOwnership
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 34
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+CALLREF {
+	CALL $transferOwnership_f2fde38b_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro transferOwnership_f2fde38b_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 11
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 37
+DUP
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 1102
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 39
+CALLREF {
+	CALL $setOwnership_a7016023_internal_macro$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+
+.macro renounceOwnership
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 45
+ENDS
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+CALLREF {
+	CALL $renounceOwnership_715018a6_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro renounceOwnership_715018a6_internal_macro
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 11
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 46
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 48
+CALLREF {
+	CALL $setOwnership_a7016023_internal_macro$
+}
+.loc ../../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+
+.macro encodeEthereumEventData
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/utils/CellEncoder.tsol, 5
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDU 256
+LDI 128
+LDU 256
+ENDS
+.loc ../contracts/utils/CellEncoder.tsol, 0
+CALLREF {
+	CALL $encodeEthereumEventData_4013e4b3_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 3479181147
+	STUR 130
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	encodeEthereumEventData_4013e4b3_internal
+.type	encodeEthereumEventData_4013e4b3_internal, @function
+CALL $encodeEthereumEventData_4013e4b3_internal_macro$
+
+.macro encodeEthereumEventData_4013e4b3_internal_macro
+.loc ../contracts/utils/CellEncoder.tsol, 14
+XCHG S2
+NEWC
+STU 256
+STI 128
+STU 256
+.loc ../contracts/utils/CellEncoder.tsol, 16
+ENDC
+.loc ../contracts/utils/CellEncoder.tsol, 0
+
+.macro decodeEthereumEventData
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/utils/CellEncoder.tsol, 19
+LDREF
+ENDS
+.loc ../contracts/utils/CellEncoder.tsol, 0
+CALLREF {
+	CALL $decodeEthereumEventData_20a26e68_internal_macro$
+}
+PUSH S3
+PUSHCONT {
+	PUSH S5
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 4, 0
+	NEWC
+	STSLICECONST xd2389a07
+	STU 128
+	STI 8
+	STU 256
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	BLKDROP 3
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	decodeEthereumEventData_20a26e68_internal
+.type	decodeEthereumEventData_20a26e68_internal, @function
+CALL $decodeEthereumEventData_20a26e68_internal_macro$
+
+.macro decodeEthereumEventData_20a26e68_internal_macro
+.loc ../contracts/utils/CellEncoder.tsol, 26
+CTOS
+LDU 256
+LDI 128
+PLDU 256
+.loc ../contracts/utils/CellEncoder.tsol, 31
+ROT
+UFITS 128
+ROT
+FITS 8
+ROT
+.loc ../contracts/utils/CellEncoder.tsol, 0
+
+.macro encodeEverscaleEventData
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/utils/CellEncoder.tsol, 34
+OVER
+PUSHCONT {
+	LDI 8
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDI 8
+}
+IFELSE
+LDU 256
+LDU 128
+LDU 160
+LDU 32
+ENDS
+.loc ../contracts/utils/CellEncoder.tsol, 0
+CALLREF {
+	CALL $encodeEverscaleEventData_9b320f13_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 3864644813
+	STUR 130
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	encodeEverscaleEventData_9b320f13_internal
+.type	encodeEverscaleEventData_9b320f13_internal, @function
+CALL $encodeEverscaleEventData_9b320f13_internal_macro$
+
+.macro encodeEverscaleEventData_9b320f13_internal_macro
+.loc ../contracts/utils/CellEncoder.tsol, 45
+REVERSE 5, 0
+NEWC
+STI 8
+STU 256
+STU 128
+STU 160
+STU 32
+.loc ../contracts/utils/CellEncoder.tsol, 47
+ENDC
+.loc ../contracts/utils/CellEncoder.tsol, 0
+
+.macro decodeEverscaleEventData
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc ../contracts/utils/CellEncoder.tsol, 50
+LDREF
+ENDS
+.loc ../contracts/utils/CellEncoder.tsol, 0
+CALLREF {
+	CALL $decodeEverscaleEventData_40f1f5a3_internal_macro$
+}
+PUSH S5
+PUSHCONT {
+	PUSH S7
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	REVERSE 6, 0
+	NEWC
+	STSLICECONST xaaa81f5c
+	STI 8
+	STU 256
+	STU 128
+	STU 160
+	STU 32
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	BLKDROP 5
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	decodeEverscaleEventData_40f1f5a3_internal
+.type	decodeEverscaleEventData_40f1f5a3_internal, @function
+CALL $decodeEverscaleEventData_40f1f5a3_internal_macro$
+
+.macro decodeEverscaleEventData_40f1f5a3_internal_macro
+.loc ../contracts/utils/CellEncoder.tsol, 50
+PUSHINT 0
+BLKPUSH 3, 0
+.loc ../contracts/utils/CellEncoder.tsol, 59
+ROLL 4
+CTOS
+LDI 8
+LDU 256
+LDU 128
+LDU 160
+PLDU 32
+REVERSE 5, 0
+POP S8
+POP S6
+POP S4
+POP S2
+.loc ../contracts/utils/CellEncoder.tsol, 0
+
+.globl	transferAll_a3a7e7f3_internal
+.type	transferAll_a3a7e7f3_internal, @function
+CALL $transferAll_a3a7e7f3_internal_macro$
+
+.macro transferAll_a3a7e7f3_internal_macro
+.loc ../contracts/utils/TransferUtils.tsol, 16
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 111
+STZEROES
+ENDC
+PUSHINT 129
+SENDRAWMSG
+.loc ../contracts/utils/TransferUtils.tsol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDU 256
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDU 32
+LDDICT
+ROTREV
+PAIR
+SWAP
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDU 128
+LDU 128
+ROLLREV 5
+TUPLE 5
+SWAP
+LDU 128
+LDREF
+ENDS
+CTOS
+LDU 128
+LDMSGADDR
+ENDS
+SETGLOB 15
+SETGLOB 14
+SETGLOB 13
+SETGLOB 12
+SETGLOB 11
+SETGLOB 10
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 1
+	OVER
+	PUSHINT 64
+	DICTUGET
+	ZEROSWAPIFNOT
+	PUSHCONT {
+		PLDU 256
+	}
+	IF
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	DUP
+	PUSHINT 0
+	NEWDICT
+	PAIR
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	PUSHINT 0
+	DUP
+	TUPLE 5
+	PUSHINT 0
+	DUP
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	SETGLOB 15
+	SETGLOB 14
+	SETGLOB 13
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 15
+GETGLOB 14
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STU 256
+ROLLREV 5
+NEWC
+STSLICE
+SWAP
+UNTUPLE 5
+REVERSE 6, 0
+ROLLREV 8
+NEWC
+STSLICE
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+ROLLREV 6
+NEWC
+STSLICE
+STU 128
+STU 128
+STU 128
+ROTREV
+NEWC
+STU 128
+STSLICE
+STBREFR
+STBREFR
+STBREFR
+STBREFR
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
+DROP
+SETGLOB 9
+MODPOW2 1
+GETGLOB 4
+TRUE
+SETINDEXQ 1
+PUSHINT 10000000
+SETINDEXQ 2
+NULL
+SETINDEXQ 3
+PUSHINT 0
+SETINDEXQ 4
+SETGLOB 4
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SETGLOB 9
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHPOW2 9
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	SWAP
+	LDU 1 ; signatureSlice hashMsgSlice hasPubkey msgSlice
+	SWAP
+	PUSHCONT {
+		LDU 256 ; signatureSlice hashMsgSlice pubkey msgSlice
+		XCHG S3
+		SWAP
+	}
+	PUSHCONT {
+		XCHG S2
+		GETGLOB 2
+	}
+	IFELSE
+	DUP
+	SETGLOB 5
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+PUSHCONT {
+	LDU 1 ; hasPubkey msgSlice
+	SWAP
+	THROWIF 58
+}
+IFELSE
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; expireAt msgSlice
+SWAP
+NOW ; msgSlice expireAt now
+GREATER ; msgSlice expireAt>now
+THROWIFNOT 57
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.macro _randomNonce
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 10
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000bb53331f
+	NEWC
+	STSLICE
+	STU 256
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro owner
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 11
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000df0bcfde
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro token_wallet
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 15
+OVER
+PUSHCONT {
+	PUSHSLICE xc00000000000000000000000009af72ec9
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro public_function_selector
+DUP
+PUSHINT 1729444094
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 452406985
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 8959777
+		EQUAL
+		IFJMPREF {
+			CALL $onEventConfirmed$
+		}
+		DUP
+		PUSHINT 235197086
+		EQUAL
+		IFJMPREF {
+			CALL $transferOwnership$
+		}
+		DUP
+		PUSHINT 273997743
+		EQUAL
+		IFJMPREF {
+			CALL $upgrade$
+		}
+		DUP
+		PUSHINT 452406985
+		EQUAL
+		IFJMPREF {
+			CALL $token_wallet$
+		}
+	}
+	DUP
+	PUSHINT 995308319
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 558202060
+		EQUAL
+		IFJMPREF {
+			CALL $getTokenRoot$
+		}
+		DUP
+		PUSHINT 623500583
+		EQUAL
+		IFJMPREF {
+			CALL $getConfiguration$
+		}
+		DUP
+		PUSHINT 715661148
+		EQUAL
+		IFJMPREF {
+			CALL $decodeEverscaleEventData$
+		}
+		DUP
+		PUSHINT 995308319
+		EQUAL
+		IFJMPREF {
+			CALL $_randomNonce$
+		}
+	}
+	DUP
+	PUSHINT 1354746527
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1047909881
+		EQUAL
+		IFJMPREF {
+			CALL $setConfiguration$
+		}
+		DUP
+		PUSHINT 1196840156
+		EQUAL
+		IFJMPREF {
+			CALL $constructor$
+		}
+		DUP
+		PUSHINT 1331697499
+		EQUAL
+		IFJMPREF {
+			CALL $encodeEthereumEventData$
+		}
+		DUP
+		PUSHINT 1354746527
+		EQUAL
+		IFJMPREF {
+			CALL $receiveTokenWalletAddress$
+		}
+	}
+	DUP
+	PUSHINT 1729444094
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1379441159
+		EQUAL
+		IFJMPREF {
+			CALL $decodeEthereumEventData$
+		}
+		DUP
+		PUSHINT 1594609630
+		EQUAL
+		IFJMPREF {
+			CALL $owner$
+		}
+		DUP
+		PUSHINT 1717161165
+		EQUAL
+		IFJMPREF {
+			CALL $encodeEverscaleEventData$
+		}
+		DUP
+		PUSHINT 1729444094
+		EQUAL
+		IFJMPREF {
+			CALL $renounceOwnership$
+		}
+	}
+}
+DUP
+PUSHINT 2088814945
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 1884246165
+	EQUAL
+	IFJMPREF {
+		CALL $apiVersion$
+	}
+	DUP
+	PUSHINT 1893244873
+	EQUAL
+	IFJMPREF {
+		CALL $onAcceptTokensTransfer$
+	}
+	DUP
+	PUSHINT 2088814945
+	EQUAL
+	IFJMPREF {
+		CALL $getDetails$
+	}
+}
+
