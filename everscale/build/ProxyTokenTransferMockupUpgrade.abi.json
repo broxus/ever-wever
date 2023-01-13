@@ -1,0 +1,99 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "getDetails",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"_config","type":"tuple"},
+				{"name":"_owner","type":"address"},
+				{"name":"_received_count","type":"uint128"},
+				{"name":"_transferred_count","type":"uint128"},
+				{"name":"_token_wallet","type":"address"}
+			]
+		},
+		{
+			"name": "apiVersion",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"API_VERSION","type":"string"}
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_randomNonce",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_randomNonce","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "token_wallet",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"token_wallet","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_randomNonce","type":"uint256"}
+	],
+	"events": [
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_randomNonce","type":"uint256"},
+		{"name":"owner","type":"address"},
+		{"components":[{"name":"tonConfiguration","type":"address"},{"name":"ethereumConfigurations","type":"address[]"},{"name":"root","type":"address"},{"name":"settingsDeployWalletGrams","type":"uint128"},{"name":"settingsTransferGrams","type":"uint128"}],"name":"config","type":"tuple"},
+		{"name":"received_count","type":"uint128"},
+		{"name":"transferred_count","type":"uint128"},
+		{"name":"token_wallet","type":"address"}
+	]
+}

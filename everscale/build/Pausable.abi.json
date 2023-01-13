@@ -1,0 +1,93 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "pause",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "unpause",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "paused",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"paused","type":"bool"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "Pause",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Unpause",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"owner","type":"address"},
+		{"name":"paused","type":"bool"}
+	]
+}
