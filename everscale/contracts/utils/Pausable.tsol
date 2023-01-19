@@ -1,6 +1,6 @@
 pragma ton-solidity >= 0.39.0;
 
-import '@broxus/contracts/contracts/access/InternalOwner.sol';
+import "@broxus/contracts/contracts/access/InternalOwner.tsol";
 
 
 contract Pausable is InternalOwner {

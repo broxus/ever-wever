@@ -1,7 +1,7 @@
-pragma ton-solidity >= 0.39.0;
+pragma ever-solidity >=0.62.0;
 
 
-import "./event-contracts/IEverscaleEvent.sol";
+import "./event-contracts/IEverscaleEvent.tsol";
 
 
 interface IEverscaleEventConfiguration {

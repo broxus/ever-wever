@@ -4,9 +4,9 @@ pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
 
-import "./interfaces/ITunnel.sol";
+import "./interfaces/ITunnel.tsol";
 
-import "./utils/Pausable.sol";
+import "./utils/Pausable.tsol";
 
 
 /**
