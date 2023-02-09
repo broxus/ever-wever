@@ -40,7 +40,7 @@
     "prettier": "^2.8.1",
     "prompts": "^2.4.2",
     "ton-eth-bridge-contracts": "git://github.com/broxus/ton-eth-bridge-contracts#9b0981532de504c9d7759c8755ef04cccd8b59cc",
-    "ton-eth-bridge-token-contracts": "git+ssh://git@gitlab.broxus.com/tokens/tip3#3997abf036025c8b771100b1d6c75d478c6a607a"
+    "ton-eth-bridge-token-contracts": "git://github.com/broxus/tip3#3997abf036025c8b771100b1d6c75d478c6a607a"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.11",
