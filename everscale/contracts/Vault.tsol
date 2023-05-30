@@ -2,90 +2,85 @@ pragma ton-solidity >= 0.39.0;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
+
+import "ton-eth-bridge-token-contracts/contracts/TokenRootUpgradeable.tsol";
 import "ton-eth-bridge-token-contracts/contracts/interfaces/ITokenRoot.tsol";
 import "ton-eth-bridge-token-contracts/contracts/interfaces/IBurnableTokenWallet.tsol";
 import "ton-eth-bridge-token-contracts/contracts/interfaces/IAcceptTokensTransferCallback.tsol";
+import "ton-eth-bridge-token-contracts/contracts/interfaces/ITokenWallet.tsol";
 
-import "@broxus/contracts/contracts/utils/RandomNonce.tsol";
 import "@broxus/contracts/contracts/utils/CheckPubKey.tsol";
-import "@broxus/contracts/contracts/access/InternalOwner.tsol";
-
 
 import "./ErrorCodes.tsol";
+import "./interfaces/IVault.tsol";
 
 
 /**
-    @title For for Wrapped EVER.
-    Stores EVERS. Exchanges EVERs for WEVERs 1:1 and backwards.
-    Receives EVERS and mints wEVERs.
-    Receives wEVERs, burns it and releases EVERS
+    @notice Wrapped EVER / VENOM vault
 */
 contract Vault is
     IAcceptTokensTransferCallback,
-    RandomNonce,
-    CheckPubKey,
-    InternalOwner
+    IVault,
+    TokenRootUpgradeable,
+    CheckPubKey
 {
-    struct Configuration {
-        address root_tunnel;
-        address root;
-        uint128 receive_safe_fee;
-        uint128 settings_deploy_wallet_grams;
-        uint128 initial_balance;
-    }
+    uint128 constant public RECEIVE_SAFE_FEE = 1 ever;
+    uint128 constant public DEPLOY_WALLET_VALUE = 0.05 ever;
+    uint128 constant public INITIAL_BALANCE = 1 ever;
 
-    Configuration public configuration;
-
-    // Fields bellow derives automatically
+    bool public emergency;
+    address public guardian;
     address public token_wallet;
     uint128 public total_wrapped;
 
-    constructor(
-        address owner_,
-        address root,
-        address root_tunnel,
-        uint128 receive_safe_fee,
-        uint128 settings_deploy_wallet_grams,
-        uint128 initial_balance
-    ) public checkPubKey {
-        tvm.accept();
+    modifier emergencyDisabled() {
+        require(!emergency, ErrorCodes.EMERGENCY_ENABLED);
 
-        setOwnership(owner_);
-
-        configuration.root = root;
-        configuration.root_tunnel = root_tunnel;
-        configuration.receive_safe_fee = receive_safe_fee;
-        configuration.settings_deploy_wallet_grams = settings_deploy_wallet_grams;
-        configuration.initial_balance = initial_balance;
-
-        setUpTokenWallet();
+        _;
     }
 
-    /**
-        @notice Creates vault token wallet according to the configuration root token
-    */
-    function setUpTokenWallet() internal view {
-        // Deploy vault's token wallet
-        ITokenRoot(configuration.root).deployWallet{
-            value: 1 ton,
-            callback: Vault.receiveTokenWalletAddress
-        }(
-            address(this),
-            configuration.settings_deploy_wallet_grams
+    modifier cashBack() {
+        tvm.rawReserve(address(this).balance - msg.value, 2);
+        _;
+        msg.sender.transfer({ value: 0, flag: 129 });
+    }
+
+    constructor(
+        address owner_
+    ) public TokenRootUpgradeable(
+        address(this), // Initial supply recipient
+        0, // Initial supply amount
+        0, // Deploy wallet value (0 since no initial supply is minted)
+        false, // Mint disabled
+        false, // Burn by root disabled
+        false, // Burn paused
+        owner_ // Remaining gas to
+    ) {
+        token_wallet = _deployWallet(
+            _buildWalletInitData(address(this)),
+            DEPLOY_WALLET_VALUE,
+            owner_
         );
     }
 
-    /**
-        @notice Save Vault's token wallet address
-        @dev Only root can call with correct params
-        @param wallet Vault's token wallet
-    */
-    function receiveTokenWalletAddress(
-        address wallet
-    ) external {
-        require(msg.sender == configuration.root, ErrorCodes.WRONG_ROOT);
+    function setGuardian(
+        address _guardian
+    ) external override onlyRootOwner cashBack {
+        guardian = _guardian;
+    }
 
-        token_wallet = wallet;
+    function setEmergency(
+        bool _emergency
+    ) external override cashBack {
+        if (emergency == false) {
+            require(msg.sender == rootOwner_, TokenErrors.NOT_OWNER);
+        } else {
+            require(msg.sender == guardian || msg.sender == rootOwner_, TokenErrors.NOT_OWNER);
+        }
+
+        emergency = _emergency;
+
+        emit EmergencySet(_emergency);
     }
 
     /**
@@ -95,27 +90,10 @@ contract Vault is
     */
     function drain(
         address receiver
-    ) onlyOwner public {
-        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+    ) external view onlyRootOwner {
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
         receiver.transfer({ value: 0, flag: 129 });
-    }
-
-    /**
-        @notice Updates configuration
-        @dev Can be called only by owner
-        @param _configuration New configuration
-    */
-    function setConfiguration(
-        Configuration _configuration
-    ) external onlyOwner {
-        address previous_root = configuration.root;
-
-        configuration = _configuration;
-
-        if (configuration.root != previous_root) {
-            setUpTokenWallet();
-        }
     }
 
     /**
@@ -126,55 +104,54 @@ contract Vault is
     */
     function withdraw(
         uint128 amount
-    ) external onlyOwner {
+    ) external onlyRootOwner {
         updateTotalWrapped(-amount);
 
-        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        owner.transfer({ value: 0, flag: 128 });
+        rootOwner_.transfer({ value: 0, flag: 128 });
     }
 
     /**
-        @notice Send EVERs to the vault without issuing EVERs
+        @notice Send EVERs to the vault without issuing wEVERs
         @dev Increases initial balance value
         so the granted EVERs won't be withdrawn on the wrapping / unwrapping
         @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
     */
     function grant(
         uint128 amount
-    ) external {
-        require(amount <= msg.value + 1 ton, ErrorCodes.MSG_VALUE_TOO_LOW);
+    ) external override emergencyDisabled {
+        require(amount <= msg.value + RECEIVE_SAFE_FEE, ErrorCodes.MSG_VALUE_TOO_LOW);
 
         updateTotalWrapped(amount);
 
-        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
         msg.sender.transfer({ value: 0, flag: 128 });
     }
 
-
     /**
         @notice Receive EVERs to wrap them into wTON.
         Allows to simply mint wEVERs by sending them directly to vault.
-        @dev msg.value should be > receive_safe_fee
-        @dev Amount of minted tokens = msg.value - receive_safe_fee
+        @dev msg.value should be > RECEIVE_SAFE_FEE
+        @dev Amount of minted tokens = msg.value - RECEIVE_SAFE_FEE
         @dev Rest of the EVERs will be sent back
     */
-    receive() external {
-        require(msg.value > configuration.receive_safe_fee, ErrorCodes.MSG_VALUE_TOO_LOW);
+    receive() external emergencyDisabled {
+        require(msg.value > RECEIVE_SAFE_FEE, ErrorCodes.MSG_VALUE_TOO_LOW);
 
-        uint128 tokens = msg.value - configuration.receive_safe_fee;
+        uint128 tokens = msg.value - RECEIVE_SAFE_FEE;
 
         updateTotalWrapped(tokens);
 
-        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
         TvmCell empty;
 
-        ITokenRoot(configuration.root_tunnel).mint{ value: 0, flag: 128 }(
+        _mint(
             tokens,
             msg.sender,
-            configuration.settings_deploy_wallet_grams,
+            DEPLOY_WALLET_VALUE,
             msg.sender,
             true,
             empty
@@ -202,20 +179,20 @@ contract Vault is
         address owner_address,
         address gas_back_address,
         TvmCell payload
-    ) external {
+    ) external override emergencyDisabled {
         require(
-            msg.value >= tokens + configuration.receive_safe_fee,
+            msg.value >= tokens + RECEIVE_SAFE_FEE,
             ErrorCodes.MSG_VALUE_TOO_LOW
         );
 
         updateTotalWrapped(tokens);
 
-        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        ITokenRoot(configuration.root_tunnel).mint{ value: 0, flag: 128 }(
+        _mint(
             tokens,
             owner_address,
-            configuration.settings_deploy_wallet_grams,
+            DEPLOY_WALLET_VALUE,
             gas_back_address,
             true,
             payload
@@ -231,23 +208,39 @@ contract Vault is
         address tokenRoot,
         uint128 amount,
         address sender,
-        address senderWallet,
+        address,
         address remainingGasTo,
         TvmCell payload
     ) override external {
-        require(tokenRoot == configuration.root, ErrorCodes.WRONG_ROOT);
+        require(tokenRoot == address(this), ErrorCodes.WRONG_ROOT);
         require(msg.sender == token_wallet, ErrorCodes.WRONG_TOKEN_WALLET);
 
-        updateTotalWrapped(-amount);
+        // Return tokens in case of enabled emergency mode
+        if (emergency) {
+            ITokenWallet(token_wallet).transfer{
+                value: 0,
+                flag: TokenMsgFlag.REMAINING_GAS,
+                bounce: false
+            }(
+                amount,
+                sender,
+                DEPLOY_WALLET_VALUE,
+                remainingGasTo,
+                true,
+                payload
+            );
+        } else {
+            updateTotalWrapped(-amount);
 
-        tvm.rawReserve(total_wrapped + configuration.initial_balance, 2);
+            tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        // Burn wEVERs
-        IBurnableTokenWallet(token_wallet).burn{value: 0, flag: 128}(
-            amount,
-            remainingGasTo,
-            sender,
-            payload
-        );
+            // Burn wEVERs
+            IBurnableTokenWallet(token_wallet).burn{value: 0, flag: 128}(
+                amount,
+                remainingGasTo,
+                sender,
+                payload
+            );
+        }
     }
 }

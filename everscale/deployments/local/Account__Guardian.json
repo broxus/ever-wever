@@ -1,0 +1,12 @@
+{
+    "type": "Account",
+    "address": "0:a56dc6bae7a33d4af2069485d0fb43db783928c9ba344f0b244d612561ae1cc1",
+    "deploymentName": "Guardian",
+    "createAccountParams": {
+        "type": 3,
+        "value": "30000000000",
+        "publicKey": "3b19448132686e40b343e7bc03768e369e6838049c3e258f28ce53c4c9ecd9fb"
+    },
+    "publicKey": "3b19448132686e40b343e7bc03768e369e6838049c3e258f28ce53c4c9ecd9fb",
+    "signerId": "0"
+}

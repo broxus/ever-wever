@@ -1,11 +1,14 @@
-import { Address, Contract, fromNano, getRandomNonce, toNano, WalletTypes, zeroAddress } from "locklift";
 import {
-  TokenRootAbi,
-  TokenRootUpgradeableAbi,
-  TokenWalletAbi,
+    Address,
+    Contract,
+    fromNano,
+} from "locklift";
+
+import {
   TokenWalletUpgradeableAbi,
   VaultAbi,
 } from "../build/factorySource";
+
 import { Account } from "everscale-standalone-client";
 
 const logger = require("mocha-logger");
@@ -13,12 +16,14 @@ const logger = require("mocha-logger");
 const chai = require("chai");
 chai.use(require("chai-bignumber")());
 
+export const {expect} = chai;
+
 export const stringToBytesArray = (dataString: string) => {
   return Buffer.from(dataString).toString("hex");
 };
 
 export const getTokenWalletAddress = async function (
-  root: Contract<TokenRootAbi> | Contract<TokenRootUpgradeableAbi>,
+  root: Contract<VaultAbi>,
   user: Address,
 ): Promise<Address> {
   return root.methods
@@ -31,209 +36,22 @@ export const getTokenWalletAddress = async function (
 };
 
 export const setupWever = async () => {
-  const keyPair = (await locklift.keystore.getSigner("0"))!;
+    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+    const {
+        account: user
+    } = await locklift.deployments.getAccount('VaultOwner');
 
-  // User
-  // - Deploy user account
-  const { account: user } = await locklift.factory.accounts.addNewAccount({
-    type: WalletTypes.EverWallet,
-    value: toNano(30),
-    publicKey: keyPair.publicKey,
-  });
+    const userTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>('OwnerTokenWallet');
+    const vaultTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>('VaultTokenWallet');
 
-  logger.log(`User address: ${user.address.toString()}`);
-
-  // Wrapped EVER token
-  // - Deploy wEVER root
-
-  const { code: tokenWalletCode } = locklift.factory.getContractArtifacts("TokenWallet");
-  const { contract: root } = await locklift.factory.deployContract({
-    contract: "TokenRoot",
-    constructorParams: {
-      initialSupplyTo: user.address,
-      initialSupply: 0,
-      deployWalletValue: toNano(0.1),
-      mintDisabled: false,
-      burnByRootDisabled: true,
-      burnPaused: false,
-      remainingGasTo: zeroAddress,
-    },
-    initParams: {
-      deployer_: zeroAddress,
-      randomNonce_: getRandomNonce(),
-      rootOwner_: user.address,
-      name_: "Wrapped EVER",
-      symbol_: "WEVER",
-      decimals_: 9,
-      walletCode_: tokenWalletCode,
-    },
-    value: toNano(10),
-    publicKey: keyPair.publicKey,
-  });
-
-  logger.log(`Root address: ${root.address}`);
-
-  // - Deploy user token wallet
-
-  await root.methods
-    .deployWallet({
-      walletOwner: user.address,
-      deployWalletValue: toNano(2),
-      answerId: 0,
-    })
-    .send({
-      from: user.address,
-      amount: toNano(5),
-    });
-
-  const userTokenWalletAddress = await getTokenWalletAddress(root, user.address);
-
-  logger.log(`User token wallet: ${userTokenWalletAddress.toString()}`);
-
-  const userTokenWallet = await locklift.factory.getDeployedContract("TokenWallet", userTokenWalletAddress);
-
-  // Tunnel
-  // - Deploy tunnel
-
-  const { contract: tunnel } = await locklift.factory.deployContract({
-    contract: "Tunnel",
-    publicKey: keyPair.publicKey,
-    value: toNano(2),
-    initParams: {
-      _randomNonce: getRandomNonce(),
-    },
-    constructorParams: {
-      sources: [],
-      destinations: [],
-      owner_: user.address,
-    },
-  });
-
-  logger.log(`Tunnel address: ${tunnel.address}`);
-
-  // Vault
-  // - Deploy vault
-
-  const { contract: vault } = await locklift.transactions.waitFinalized(
-    locklift.factory.deployContract({
-      contract: "Vault",
-      constructorParams: {
-        owner_: user.address,
-        root_tunnel: tunnel.address,
-        root: root.address,
-        receive_safe_fee: toNano(1),
-        settings_deploy_wallet_grams: toNano(0.05),
-        initial_balance: toNano(1),
-      },
-      value: toNano(2),
-      initParams: {
-        _randomNonce: getRandomNonce(),
-      },
-      publicKey: keyPair.publicKey,
-    }),
-  );
-
-  logger.log(`Vault address: ${vault.address}`);
-
-  // Wait until user token wallet is presented into the GraphQL
-
-  // - Setup vault token wallet
-  const vaultTokenWalletAddress = await vault.methods
-    .token_wallet()
-    .call()
-    .then(res => res.token_wallet);
-
-  const vaultTokenWallet = await locklift.factory.getDeployedContract("TokenWallet", vaultTokenWalletAddress);
-  logger.log(`Vault token wallet address: ${vaultTokenWallet.address}`);
-
-  // Proxy token transfer
-  // - Deploy proxy token transfer
-
-  const { contract: proxyTokenTransfer } = await locklift.transactions.waitFinalized(
-    locklift.factory.deployContract({
-      contract: "ProxyTokenTransfer",
-      constructorParams: {
-        owner_: user.address,
-      },
-      initParams: {
-        _randomNonce: getRandomNonce(),
-      },
-      publicKey: keyPair.publicKey,
-      value: toNano(2),
-    }),
-  );
-
-  logger.log(`Proxy token transfer: ${proxyTokenTransfer.address}`);
-
-  // - Set configuration (use user as ethereum configuration to emulate callbacks)
-
-  await locklift.transactions.waitFinalized(
-    proxyTokenTransfer.methods
-      .setConfiguration({
-        _config: {
-          tonConfiguration: user.address,
-          ethereumConfigurations: [user.address],
-          root: root.address,
-          settingsDeployWalletGrams: toNano(0.5),
-          settingsTransferGrams: toNano(0.5),
-        },
-      })
-      .send({
-        from: user.address,
-        amount: toNano(3),
-      }),
-  );
-  // - Setup proxy token transfer token wallet
-  const proxyTokenWalletAddress = await proxyTokenTransfer.methods
-    .token_wallet()
-    .call()
-    .then(res => res.token_wallet);
-
-  const proxyTokenWallet = await locklift.factory.getDeployedContract("TokenWallet", proxyTokenWalletAddress);
-
-  logger.log(`Proxy token wallet address: ${proxyTokenWallet.address}`);
-
-  await root.methods
-    .transferOwnership({
-      newOwner: tunnel.address,
-      remainingGasTo: user.address,
-      callbacks: [],
-    })
-    .send({
-      from: user.address,
-      amount: toNano(2),
-    });
-  // - Add vault to tunnel sources
-
-  await tunnel.methods
-    .__updateTunnel({
-      source: vault.address,
-      destination: root.address,
-    })
-    .send({
-      from: user.address,
-      amount: toNano(2),
-    });
-
-  // - Drain vault
-
-  await vault.methods
-    .drain({
-      receiver: user.address,
-    })
-    .send({
-      from: user.address,
-      amount: toNano(2),
-    });
-  return { vault, tunnel, user, root, userTokenWallet, vaultTokenWallet, proxyTokenTransfer, proxyTokenWallet };
+    return { vault, user, userTokenWallet, vaultTokenWallet };
 };
 
 export const getVaultMetrics = async function (
-  userTokenWallet: Contract<TokenWalletAbi> | Contract<TokenWalletUpgradeableAbi>,
+  userTokenWallet: Contract<TokenWalletUpgradeableAbi>,
   user: Account,
-  vaultTokenWallet: Contract<TokenWalletAbi>,
+  vaultTokenWallet: Contract<TokenWalletUpgradeableAbi>,
   vault: Contract<VaultAbi>,
-  root: Contract<TokenRootAbi> | Contract<TokenRootUpgradeableAbi>,
 ) {
   return {
     userWEVERBalance: userTokenWallet
@@ -256,8 +74,8 @@ export const getVaultMetrics = async function (
           .call()
           .then(res => res.total_wrapped)
       : 0,
-    WEVERTotalSupply: root
-      ? await root.methods
+    WEVERTotalSupply: vault
+      ? await vault.methods
           .totalSupply({ answerId: 0 })
           .call()
           .then(res => res.value0)

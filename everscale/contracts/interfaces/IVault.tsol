@@ -2,13 +2,21 @@ pragma ever-solidity >=0.62.0;
 
 
 interface IVault {
-    struct Configuration {
-        address root;
-        address tokenWallet;
-        uint128 receiveSafeFeeGrams;
-        uint128 deployWalletGrams;
-        uint128 initialBalanceGrams;
-    }
+    function grant(
+        uint128 amount
+    ) external;
 
-    function getDetails() external view responsible returns(Configuration _configuration, uint128 _totalWrapped);
+    function wrap(
+        uint128 tokens,
+        address owner_address,
+        address gas_back_address,
+        TvmCell payload
+    ) external;
+
+    function setGuardian(
+        address _guardian
+    ) external;
+    function setEmergency(bool _emergency) external;
+
+    event EmergencySet(bool emergency);
 }
