@@ -4,7 +4,7 @@ import {VaultAbi} from "../build/factorySource";
 export default async () => {
     const keyPair = (await locklift.keystore.getSigner("0"))!;
 
-    const { code: tokenWalletCode } = locklift.factory.getContractArtifacts("TokenWalletUpgradeable");
+    const { code: tokenWalletCode } = locklift.factory.getContractArtifacts("VaultTokenWallet_V1");
     const { code: tokenWalletPlatformCode } = locklift.factory.getContractArtifacts("TokenWalletPlatform");
 
     const owner = await locklift.deployments.getAccount('VaultOwner');

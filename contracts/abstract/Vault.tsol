@@ -11,8 +11,8 @@ import "tip3/contracts/libraries/TokenErrors.tsol";
 import "@broxus/contracts/contracts/utils/CheckPubKey.tsol";
 import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
 
-import "./ErrorCodes.tsol";
-import "./interfaces/IVault.tsol";
+import "./../libraries/ErrorCodes.tsol";
+import "./../interfaces/IVault.tsol";
 
 
 /**
@@ -51,7 +51,6 @@ abstract contract Vault is
     }
 
     function __mint(uint128, address, uint128, address, bool, TvmCell) internal virtual {}
-
     function owner() internal virtual returns (address);
 
     function setGuardian(

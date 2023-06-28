@@ -1,6 +1,6 @@
 pragma ton-solidity >= 0.57.1;
 
-import "./Vault.tsol";
+import "./abstract/Vault.tsol";
 
 import "tip3/contracts/abstract/TokenRootTransferableOwnershipBase.tsol";
 import "tip3/contracts/abstract/TokenRootBurnPausableBase.tsol";

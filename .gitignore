@@ -9,3 +9,4 @@ everscale/build/*.base64
 everscale/build/*.tvc
 *.log
 .DS_Store
+deployments/local/*
