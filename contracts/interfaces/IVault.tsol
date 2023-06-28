@@ -1,0 +1,22 @@
+pragma ton-solidity >=0.57.1;
+
+
+interface IVault {
+    function grant(
+        uint128 amount
+    ) external;
+
+    function wrap(
+        uint128 tokens,
+        address owner_address,
+        address gas_back_address,
+        TvmCell payload
+    ) external;
+
+    function setGuardian(
+        address _guardian
+    ) external;
+    function setEmergency(bool _emergency) external;
+
+    event EmergencySet(bool emergency);
+}

@@ -36,7 +36,7 @@
     "ora": "^3.4.0",
     "prettier": "^2.8.1",
     "prompts": "^2.4.2",
-    "ton-eth-bridge-token-contracts": "git://github.com/broxus/tip3#3997abf036025c8b771100b1d6c75d478c6a607a"
+    "tip3": "git://github.com/broxus/tip3#de1b8fb9931a10cd1d9295b0a7c7905df3cf44a2"
   },
   "devDependencies": {
     "chai": "^4.3.4",

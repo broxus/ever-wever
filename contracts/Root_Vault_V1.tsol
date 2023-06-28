@@ -1,0 +1,218 @@
+pragma ton-solidity >= 0.57.1;
+
+import "./Vault.tsol";
+
+import "tip3/contracts/abstract/TokenRootTransferableOwnershipBase.tsol";
+import "tip3/contracts/abstract/TokenRootBurnPausableBase.tsol";
+import "tip3/contracts/abstract/TokenRootBurnableByRootBase.tsol";
+import "tip3/contracts/abstract/TokenRootDisableableMintBase.tsol";
+
+import "tip3/contracts/interfaces/ITokenRootUpgradeable.tsol";
+import "tip3/contracts/interfaces/ITokenWalletUpgradeable.tsol";
+import "tip3/contracts/interfaces/IVersioned.tsol";
+import "tip3/contracts/libraries/TokenErrors.tsol";
+import "tip3/contracts/libraries/TokenMsgFlag.tsol";
+import "tip3/contracts/libraries/TokenGas.tsol";
+import "tip3/contracts/TokenWalletPlatform.tsol";
+
+
+contract Root_Vault_V1 is
+    Vault,
+    TokenRootTransferableOwnershipBase,
+    TokenRootBurnPausableBase,
+    TokenRootBurnableByRootBase,
+    TokenRootDisableableMintBase,
+    ITokenRootUpgradeable
+{
+    uint256 static randomNonce_;
+    address static deployer_;
+
+    TvmCell static platformCode_;
+    uint32 walletVersion_;
+
+    function owner() internal override returns (address) {
+        return rootOwner_;
+    }
+
+    function __mint(
+        uint128 amount,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) internal override {
+        _mint(amount, recipient, deployWalletValue, remainingGasTo, notify, payload);
+    }
+
+    constructor() public {
+        if (msg.pubkey() != 0) {
+            require(msg.pubkey() == tvm.pubkey() && deployer_.value == 0, TokenErrors.WRONG_ROOT_OWNER);
+            tvm.accept();
+        } else {
+            require(deployer_.value != 0 && msg.sender == deployer_ ||
+                deployer_.value == 0 && msg.sender == rootOwner_, TokenErrors.WRONG_ROOT_OWNER);
+        }
+
+        totalSupply_ = 0;
+        mintDisabled_ = false;
+        burnByRootDisabled_ = false;
+        burnPaused_ = false;
+        walletVersion_ = 1;
+
+        tvm.rawReserve(_targetBalance(), 0);
+
+        token_wallet = _deployWallet(
+            _buildWalletInitData(address(this)),
+            DEPLOY_WALLET_VALUE,
+            rootOwner_
+        );
+    }
+
+    /**
+     * @dev Implementation of the {SID} interface.
+     */
+    function supportsInterface(bytes4 interfaceID) override external view responsible returns (bool) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } (
+            interfaceID == bytes4(0x3204ec29) ||    // SID
+            interfaceID == bytes4(0x4371d8ed) ||    // TIP3TokenRoot
+            interfaceID == bytes4(0x0b1fd263) ||    // ITokenRoot
+            interfaceID == bytes4(0x18f7cce4) ||    // IBurnableByRootTokenRoot
+            interfaceID == bytes4(0x0095b2fa) ||    // IDisableableMintTokenRoot
+            interfaceID == bytes4(0x45c92654) ||    // IBurnPausableTokenRoot
+            interfaceID == bytes4(0x376ddffc) ||    // IBurnPausableTokenRoot
+            interfaceID == bytes4(0x1df385c6)       // ITransferableOwnership
+        );
+    }
+
+    /**
+     * @dev See {ITokenRootUpgradeable-requestUpgradeWallet}.
+     *
+     * Preconditions:
+     *  - Sender is a valid wallet.
+     *  - `currentVersion` must be not equal to `walletVersion_`.
+     *
+     * Postcondition:
+     *   - If `currentVersion` is not equal to `walletVersion_`, then
+     *    the wallet will be upgraded to the new version. Otherwise,
+     *    the remaining gas will be transferred to `remainingGasTo`.
+     */
+    function requestUpgradeWallet(
+        uint32 currentVersion,
+        address walletOwner,
+        address remainingGasTo
+    ) override external {
+        require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
+
+        tvm.rawReserve(_reserve(), 0);
+
+        if (currentVersion == walletVersion_) {
+            remainingGasTo.transfer({ value: 0, flag: TokenMsgFlag.ALL_NOT_RESERVED });
+        } else {
+            ITokenWalletUpgradeable(msg.sender).acceptUpgrade{
+                    value: 0,
+                    flag: TokenMsgFlag.ALL_NOT_RESERVED,
+                    bounce: false
+            }(
+                walletCode_,
+                walletVersion_,
+                remainingGasTo
+            );
+        }
+    }
+
+    /**
+     * @dev See {ITokenRootUpgradeable-setWalletCode}.
+     *
+     * Preconditions:
+     *  - Sender must be the owner of the TokenRoot.
+     *
+     * Postcondition:
+     *  - `walletCode_` is set to `code`.
+     *  - `walletVersion_` is incremented.
+     */
+    function setWalletCode(TvmCell code) override external onlyRootOwner {
+        tvm.rawReserve(_targetBalance(), 0);
+        walletCode_ = code;
+        walletVersion_++;
+    }
+
+    /**
+     * @dev See {ITokenRootUpgradeable-walletVersion}.
+     */
+    function walletVersion() override external view responsible returns (uint32) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } walletVersion_;
+    }
+
+    /**
+     * @dev See {ITokenRootUpgradeable-platformCode}.
+     */
+    function platformCode() override external view responsible returns (TvmCell) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } platformCode_;
+    }
+
+    /**
+     * @dev Returns the target balance.
+     */
+    function _targetBalance() override internal pure returns (uint128) {
+        return TokenGas.TARGET_ROOT_BALANCE;
+    }
+
+    /**
+     * @dev Returns the wallet init data for deploy new wallet.
+     * @param walletOwner - wallet owner.
+     * @return wallet init data cell.
+     */
+    function _buildWalletInitData(address walletOwner) override internal view returns (TvmCell) {
+        return tvm.buildStateInit({
+            contr: TokenWalletPlatform,
+            varInit: {
+                root: address(this),
+                owner: walletOwner
+            },
+            pubkey: 0,
+            code: platformCode_
+        });
+    }
+
+    /**
+     * @dev implemetation logic `deployWallet` function.
+     * @param initData - wallet init data.
+     * @param deployWalletValue - value for deploy wallet.
+     * @param remainingGasTo - recipient of remaining gas.
+     * @return deployed wallet address.
+     *
+     * Postcondition:
+     *  - Deploy new token wallet.
+     */
+    function _deployWallet(
+        TvmCell initData,
+        uint128 deployWalletValue,
+        address remainingGasTo
+    ) override internal view returns (address) {
+        address tokenWallet = new TokenWalletPlatform {
+            stateInit: initData,
+            value: deployWalletValue,
+            wid: address(this).wid,
+            flag: TokenMsgFlag.SENDER_PAYS_FEES
+        }(walletCode_, walletVersion_, address(0), remainingGasTo);
+
+        return tokenWallet;
+    }
+
+    function upgrade(TvmCell code) external override onlyOwner {
+        TvmCell data = abi.encode(
+            rootOwner_, totalSupply_,
+            decimals_, name_, symbol_,
+            walletVersion_, platformCode_, walletCode_,
+            mintDisabled_, burnByRootDisabled_, burnPaused_
+        );
+
+        tvm.setcode(code);
+        tvm.setCurrentCode(code);
+
+        onCodeUpgrade(data);
+    }
+
+    function onCodeUpgrade(TvmCell) private {}
+}
