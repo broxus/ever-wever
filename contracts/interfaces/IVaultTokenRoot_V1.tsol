@@ -12,12 +12,4 @@ interface IVaultTokenRoot_V1 {
         bool notify,
         TvmCell payload
     ) external;
-
-    function acceptUnwrapAndTransfer(
-        address owner,
-        uint128 amount_to_unwrap,
-        address recipient,
-        address remaining_gas_to,
-        TvmCell payload
-    ) external;
 }

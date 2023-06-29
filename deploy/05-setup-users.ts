@@ -38,7 +38,7 @@ const setupUser = async (name: string, signerId: string) => {
 
     await locklift.deployments.saveContract({
         deploymentName: `${name}TokenWallet`,
-        contractName: 'TokenWalletUpgradeable',
+        contractName: 'VaultTokenWallet_V1',
         address: userTokenWalletAddress
     }, true);
 }

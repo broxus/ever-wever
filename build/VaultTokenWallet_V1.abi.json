@@ -94,7 +94,7 @@
 			]
 		},
 		{
-			"name": "transfer",
+			"name": "wrapAndTransfer",
 			"inputs": [
 				{"name":"amount","type":"uint128"},
 				{"name":"recipient","type":"address"},
@@ -170,6 +170,19 @@
 			],
 			"outputs": [
 				{"name":"value0","type":"cell"}
+			]
+		},
+		{
+			"name": "transfer",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"recipient","type":"address"},
+				{"name":"deployWalletValue","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"notify","type":"bool"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
 			]
 		},
 		{

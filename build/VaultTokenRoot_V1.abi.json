@@ -57,12 +57,13 @@
 			]
 		},
 		{
-			"name": "acceptUnwrapAndTransfer",
+			"name": "acceptBurn",
+			"id": "0x192B51B1",
 			"inputs": [
+				{"name":"amount","type":"uint128"},
 				{"name":"walletOwner","type":"address"},
-				{"name":"amount_to_unwrap","type":"uint128"},
-				{"name":"recipient","type":"address"},
 				{"name":"remainingGasTo","type":"address"},
+				{"name":"callbackTo","type":"address"},
 				{"name":"payload","type":"cell"}
 			],
 			"outputs": [
@@ -251,19 +252,6 @@
 				{"name":"deployWalletValue","type":"uint128"},
 				{"name":"remainingGasTo","type":"address"},
 				{"name":"notify","type":"bool"},
-				{"name":"payload","type":"cell"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "acceptBurn",
-			"id": "0x192B51B1",
-			"inputs": [
-				{"name":"amount","type":"uint128"},
-				{"name":"walletOwner","type":"address"},
-				{"name":"remainingGasTo","type":"address"},
-				{"name":"callbackTo","type":"address"},
 				{"name":"payload","type":"cell"}
 			],
 			"outputs": [

@@ -5,8 +5,8 @@ import {
 } from "locklift";
 
 import {
-  TokenWalletUpgradeableAbi,
-  VaultAbi,
+    TokenWalletUpgradeableAbi,
+    VaultAbi, VaultTokenWallet_V1Abi,
 } from "../build/factorySource";
 
 import { Account } from "everscale-standalone-client";
@@ -40,7 +40,7 @@ export const getUser = async (name: string) => {
         account: user
     } = await locklift.deployments.getAccount(name);
 
-    const userTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>(`${name}TokenWallet`);
+    const userTokenWallet = await locklift.deployments.getContract<VaultTokenWallet_V1Abi>(`${name}TokenWallet`);
 
     return {
         user, userTokenWallet
@@ -50,7 +50,7 @@ export const getUser = async (name: string) => {
 export const setupWever = async () => {
     const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
 
-    const vaultTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>('VaultTokenWallet');
+    const vaultTokenWallet = await locklift.deployments.getContract<VaultTokenWallet_V1Abi>('VaultTokenWallet');
 
     const { user: alice, userTokenWallet: aliceTokenWallet } = await getUser('Alice');
     const { user: bob, userTokenWallet: bobTokenWallet } = await getUser('Bob');
@@ -65,9 +65,9 @@ export const setupWever = async () => {
 };
 
 export const getVaultMetrics = async function (
-  userTokenWallet: Contract<TokenWalletUpgradeableAbi>,
+  userTokenWallet: Contract<VaultTokenWallet_V1Abi>,
   user: Account,
-  vaultTokenWallet: Contract<TokenWalletUpgradeableAbi>,
+  vaultTokenWallet: Contract<VaultTokenWallet_V1Abi>,
   vault: Contract<VaultAbi>,
 ) {
   return {

@@ -68,37 +68,24 @@ describe('Transfer tokens with additional wrap', async function() {
             vaultTokenWallet, vault
         } = context;
 
-        const payload = await locklift.provider.packIntoCell({
-            data: {
-                operation: 0,
-                recipient: bob.address,
-                payload: EMPTY_TVM_CELL
-            },
-            structure: [
-                { name: 'operation', type: 'uint8' },
-                { name: 'recipient', type: 'address' },
-                { name: 'payload', type: 'cell' },
-            ] as const
-        });
-
         const aliceInitialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
         const bobInitialMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
 
         const trace = await locklift.tracing.trace(
-            aliceTokenWallet.methods.transfer({
-                recipient: new Address(ZERO_ADDRESS),
+            aliceTokenWallet.methods.wrapAndTransfer({
+                recipient: bob.address,
                 amount: locklift.utils.toNano('1'),
-                deployWalletValue: locklift.utils.toNano('0'),
+                deployWalletValue: locklift.utils.toNano('0.5'),
                 remainingGasTo: alice.address,
                 notify: false,
-                payload: payload.boc
+                payload: EMPTY_TVM_CELL
             }).send({
                 from: alice.address,
                 amount: toNano('2')
             })
         );
 
-        await trace.traceTree?.beautyPrint();
+        // await trace.traceTree?.beautyPrint();
 
         const aliceFinalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
         const bobFinalMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
@@ -113,44 +100,29 @@ describe('Transfer tokens with additional wrap', async function() {
         logMetricsChange(bobMetricsChange);
     });
 
-    it('Transfer tokens with additional unwrap', async () => {
+    it('Burn tokens', async () => {
         const {
             aliceTokenWallet, alice,
             bobTokenWallet, bob,
             vaultTokenWallet, vault
         } = context;
 
-        const payload = await locklift.provider.packIntoCell({
-            data: {
-                operation: 1,
-                recipient: alice.address,
-                payload: EMPTY_TVM_CELL
-            },
-            structure: [
-                { name: 'operation', type: 'uint8' },
-                { name: 'recipient', type: 'address' },
-                { name: 'payload', type: 'cell' },
-            ] as const
-        });
-
         const aliceInitialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
         const bobInitialMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
 
         const trace = await locklift.tracing.trace(
-            bobTokenWallet.methods.transfer({
-                recipient: new Address(ZERO_ADDRESS),
+            bobTokenWallet.methods.burn({
+                callbackTo: alice.address,
                 amount: locklift.utils.toNano('1'),
-                deployWalletValue: locklift.utils.toNano('0'),
                 remainingGasTo: bob.address,
-                notify: false,
-                payload: payload.boc
+                payload: EMPTY_TVM_CELL
             }).send({
                 from: bob.address,
                 amount: toNano('2')
             })
         );
 
-        await trace.traceTree?.beautyPrint();
+        // await trace.traceTree?.beautyPrint();
 
         const aliceFinalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
         const bobFinalMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);

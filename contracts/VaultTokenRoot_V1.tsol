@@ -16,7 +16,6 @@ import "tip3/contracts/libraries/TokenGas.tsol";
 import "tip3/contracts/TokenWalletPlatform.tsol";
 
 import "./interfaces/IVaultTokenRoot_V1.tsol";
-import "./interfaces/IAcceptTokensUnwrapCallback.tsol";
 
 
 contract VaultTokenRoot_V1 is
@@ -204,26 +203,44 @@ contract VaultTokenRoot_V1 is
         return tokenWallet;
     }
 
-    function acceptUnwrapAndTransfer(
+    function acceptBurn(
+        uint128 amount,
         address walletOwner,
-        uint128 amount_to_unwrap,
-        address recipient,
         address remainingGasTo,
+        address callbackTo,
         TvmCell payload
-    ) external override {
+    )
+        override(ITokenRoot, TokenRootBase)
+        external
+        functionID(0x192B51B1)
+    {
+        require(_burnEnabled(), TokenErrors.BURN_DISABLED);
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
-        updateTotalWrapped(-amount_to_unwrap);
-        totalSupply_ -= amount_to_unwrap;
+        totalSupply_ -= amount;
+        updateTotalWrapped(-amount);
 
         tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        // Transfer unwrapped EVERs + attached value to recipient
-        IAcceptTokensUnwrapCallback(recipient).onAcceptTokensUnwrap{
-            value: 0,
-            flag: TokenMsgFlag.ALL_NOT_RESERVED,
-            bounce: false
-        }(remainingGasTo, amount_to_unwrap, payload);
+        if (callbackTo.value == 0) {
+            remainingGasTo.transfer({
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
+            });
+        } else {
+            IAcceptTokensBurnCallback(callbackTo).onAcceptTokensBurn{
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
+            }(
+                amount,
+                walletOwner,
+                msg.sender,
+                remainingGasTo,
+                payload
+            );
+        }
     }
 
     function acceptWrapAndTransfer(
