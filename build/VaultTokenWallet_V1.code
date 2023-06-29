@@ -991,6 +991,20 @@ SETGLOB 12
 SWAP
 PUSHCONT {
 	.loc ../contracts/VaultTokenWallet_V1.tsol, 277
+	GETGLOB 11
+	GETGLOB 10
+	SDEQ
+	PUSHCONT {
+		.loc ../contracts/VaultTokenWallet_V1.tsol, 278
+		GETGLOB 12
+		PUSH S4
+		SUB
+		UFITS 128
+		SETGLOB 12
+		.loc ../contracts/VaultTokenWallet_V1.tsol, 0
+	}
+	IF
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 281
 	PUSH2 S0, S1
 	GETGLOB 9
 	PUSH2 S5, S6
@@ -1026,7 +1040,7 @@ PUSHCONT {
 	STBREFR
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 290
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 294
 	OVER
 	NEWC
 	STSLICECONST x42_
@@ -1052,7 +1066,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenWallet_V1.tsol, 298
+.loc ../contracts/VaultTokenWallet_V1.tsol, 302
 OVER
 PUSHCONT {
 	LDREF
@@ -1086,7 +1100,7 @@ GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../contracts/VaultTokenWallet_V1.tsol, 310
+.loc ../contracts/VaultTokenWallet_V1.tsol, 314
 REVERSE 5, 0
 GETGLOB 12
 ROLL 6
@@ -1122,7 +1136,7 @@ STBREFR
 ENDC
 PUSHINT 128
 SENDRAWMSG
-.loc ../contracts/VaultTokenWallet_V1.tsol, 325
+.loc ../contracts/VaultTokenWallet_V1.tsol, 329
 PUSHINT 0
 SETGLOB 12
 .loc ../contracts/VaultTokenWallet_V1.tsol, 0

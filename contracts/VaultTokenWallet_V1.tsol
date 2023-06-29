@@ -274,6 +274,10 @@ contract VaultTokenWallet_V1 is
         balance_ += amount;
 
         if (notify) {
+            if (owner_ == root_) {
+                balance_ -= amount;
+            }
+
             IAcceptTokensTransferCallback(owner_).onAcceptTokensTransfer{
                 value: 0,
                 flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,

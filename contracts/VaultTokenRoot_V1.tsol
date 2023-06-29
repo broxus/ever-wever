@@ -203,6 +203,35 @@ contract VaultTokenRoot_V1 is
         return tokenWallet;
     }
 
+    function _burnCallback(
+        uint128 amount,
+        address callbackTo,
+        address walletOwner,
+        address wallet,
+        address remainingGasTo,
+        TvmCell payload
+    ) internal override {
+        if (callbackTo.value == 0) {
+            remainingGasTo.transfer({
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
+            });
+        } else {
+            IAcceptTokensBurnCallback(callbackTo).onAcceptTokensBurn{
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
+            }(
+                amount,
+                walletOwner,
+                wallet,
+                remainingGasTo,
+                payload
+            );
+        }
+    }
+
     function acceptBurn(
         uint128 amount,
         address walletOwner,
@@ -222,25 +251,18 @@ contract VaultTokenRoot_V1 is
 
         tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        if (callbackTo.value == 0) {
-            remainingGasTo.transfer({
-                value: 0,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
-                bounce: false
-            });
-        } else {
-            IAcceptTokensBurnCallback(callbackTo).onAcceptTokensBurn{
-                value: 0,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
-                bounce: false
-            }(
-                amount,
-                walletOwner,
-                msg.sender,
-                remainingGasTo,
-                payload
-            );
-        }
+        _burnCallback(
+            amount,
+            callbackTo,
+            walletOwner,
+            msg.sender,
+            remainingGasTo,
+            payload
+        );
+    }
+
+    function updateTotalSupply(uint128 amount) internal override {
+        totalSupply_ += amount;
     }
 
     function acceptWrapAndTransfer(

@@ -202,7 +202,7 @@ abstract contract Vault is
         address tokenRoot,
         uint128 amount,
         address sender,
-        address,
+        address senderWallet,
         address remainingGasTo,
         TvmCell payload
     ) override external {
@@ -224,17 +224,31 @@ abstract contract Vault is
                 payload
             );
         } else {
+            updateTotalSupply(-amount);
             updateTotalWrapped(-amount);
 
             tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-            // Burn wEVERs
-            IBurnableTokenWallet(token_wallet).burn{value: 0, flag: 128}(
+            // Send burn callback
+            _burnCallback(
                 amount,
-                remainingGasTo,
                 sender,
+                sender,
+                senderWallet,
+                remainingGasTo,
                 payload
             );
         }
     }
+
+    function updateTotalSupply(uint128) internal virtual {}
+
+    function _burnCallback(
+        uint128 amount,
+        address callbackTo,
+        address walletOwner,
+        address wallet,
+        address remainingGasTo,
+        TvmCell payload
+    ) internal virtual {}
 }

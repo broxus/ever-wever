@@ -174,7 +174,7 @@ describe("Test wEVER wrap / unwrap", async function () {
                 .transfer({
                   amount: toNano(2.5),
                   recipient: vault.address,
-                  deployWalletValue: 200000000,
+                  deployWalletValue: toNano('0.2'),
                   remainingGasTo: alice.address,
                   notify: true,
                   payload: stringToBytesArray(""),
