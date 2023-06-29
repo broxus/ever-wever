@@ -15,6 +15,9 @@ import "tip3/contracts/libraries/TokenGas.tsol";
 import "tip3/contracts/libraries/TokenMsgFlag.tsol";
 import "tip3/contracts/TokenWalletPlatform.tsol";
 
+import "./interfaces/IVaultTokenRoot_V1.tsol";
+import "./interfaces/IVaultTokenWallet_V1.tsol";
+
 /**
  * @title Fungible token wallet upgradeable contract.
  *
@@ -32,7 +35,8 @@ contract VaultTokenWallet_V1 is
     TokenWalletBurnableBase,
     TokenWalletDestroyableBase,
     TokenWalletBurnableByRootBase,
-    ITokenWalletUpgradeable
+    ITokenWalletUpgradeable,
+    IVaultTokenWallet_V1
 {
     uint32 version_;
     TvmCell platformCode_;
@@ -244,6 +248,136 @@ contract VaultTokenWallet_V1 is
                 flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
                 bounce: false
             });
+        }
+    }
+
+    function acceptTransfer(
+        uint128 amount,
+        address sender,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    )
+        override(ITokenWallet, TokenWalletBase)
+        external
+        functionID(0x67A0B95F)
+    {
+        require(
+            msg.sender == address(tvm.hash(_buildWalletInitData(sender))) || msg.sender == root_,
+            TokenErrors.SENDER_IS_NOT_VALID_WALLET
+        );
+
+        tvm.rawReserve(_reserve(), 2);
+
+        balance_ += amount;
+
+        if (notify) {
+            IAcceptTokensTransferCallback(owner_).onAcceptTokensTransfer{
+                    value: 0,
+                    flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                    bounce: false
+            }(
+                root_,
+                amount,
+                sender,
+                msg.sender,
+                remainingGasTo,
+                payload
+            );
+        } else {
+            remainingGasTo.transfer({
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
+            });
+        }
+    }
+
+    function transfer(
+        uint128 amount,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    )
+        override(ITokenWallet, TokenWalletBase)
+        external
+        onlyOwner
+    {
+        require(amount > 0, TokenErrors.WRONG_AMOUNT);
+        require(amount <= balance_, TokenErrors.NOT_ENOUGH_BALANCE);
+        require(recipient != owner_, TokenErrors.WRONG_RECIPIENT);
+
+        tvm.rawReserve(_reserve(), 0);
+
+        // Perform transfer with additional wrap / unwrap
+        // Takes less messages then manual wrap / unwrap + transfer
+        if (recipient == address.makeAddrStd(0,0)) {
+            (
+                Operation operation,
+                address _recipient,
+                TvmCell _payload
+            ) = abi.decode(payload, (Operation, address, TvmCell));
+
+            if (operation == Operation.Unwrap) {
+                // Unwrap part of the balance
+                balance_ -= amount;
+
+                IVaultTokenRoot_V1(root_).acceptUnwrapAndTransfer{
+                    value: 0,
+                    flag: TokenMsgFlag.ALL_NOT_RESERVED,
+                    bounce: true
+                }(
+                    owner_,
+                    amount, // WEVERs to unwrap
+                    _recipient,
+                    remainingGasTo,
+                    _payload
+                );
+            } else if (operation == Operation.Wrap) {
+                // Transfer (all balance + additionally wrapped _amount)
+                require(msg.value >= amount);
+
+                IVaultTokenRoot_V1(root_).acceptWrapAndTransfer{
+                    value: 0,
+                    flag: TokenMsgFlag.ALL_NOT_RESERVED,
+                    bounce: true
+                }(
+                    owner_,
+                    amount, // WEVERs to wrap
+                    balance_, // WEVERs to transfer
+                    _recipient,
+                    deployWalletValue,
+                    remainingGasTo,
+                    notify,
+                    _payload
+                );
+
+                balance_ = 0;
+            } else {
+                revert();
+            }
+        } else {
+            TvmCell stateInit = _buildWalletInitData(recipient);
+
+            address recipientWallet;
+
+            if (deployWalletValue > 0) {
+                recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
+            } else {
+                recipientWallet = address(tvm.hash(stateInit));
+            }
+
+            balance_ -= amount;
+
+            ITokenWallet(recipientWallet).acceptTransfer{ value: 0, flag: TokenMsgFlag.ALL_NOT_RESERVED, bounce: true }(
+                amount,
+                owner_,
+                remainingGasTo,
+                notify,
+                payload
+            );
         }
     }
 }

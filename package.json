@@ -32,11 +32,11 @@
     "everscale-standalone-client": "^2.1.8",
     "locklift": "^2.4.6",
     "locklift-deploy": "^1.0.3",
-    "mocha-logger": "^1.0.7",
+    "mocha-logger": "^1.0.8",
     "ora": "^3.4.0",
     "prettier": "^2.8.1",
     "prompts": "^2.4.2",
-    "tip3": "git+https://pavlovdog:-ANs38pRRXxysGcjSdG5@gitlab.broxus.com/tokens/tip3#ebd1c0e066adfeceea87407da012e17fd8d7b3c4"
+    "tip3": "git+https://pavlovdog:-ANs38pRRXxysGcjSdG5@gitlab.broxus.com/tokens/tip3#cd0ea6455675f5df5a206f95067b9cbffc37e4d7"
   },
   "devDependencies": {
     "chai": "^4.3.4",

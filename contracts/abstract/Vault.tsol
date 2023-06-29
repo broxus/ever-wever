@@ -99,7 +99,11 @@ abstract contract Vault is
 
         tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        owner().transfer({ value: 0, flag: 128 });
+        owner().transfer({
+            value: 0,
+            bounce: false,
+            flag: 128
+        });
     }
 
     /**

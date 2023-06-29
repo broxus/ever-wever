@@ -15,14 +15,18 @@ import "tip3/contracts/libraries/TokenMsgFlag.tsol";
 import "tip3/contracts/libraries/TokenGas.tsol";
 import "tip3/contracts/TokenWalletPlatform.tsol";
 
+import "./interfaces/IVaultTokenRoot_V1.tsol";
+import "./interfaces/IAcceptTokensUnwrapCallback.tsol";
 
-contract Root_Vault_V1 is
+
+contract VaultTokenRoot_V1 is
     Vault,
     TokenRootTransferableOwnershipBase,
     TokenRootBurnPausableBase,
     TokenRootBurnableByRootBase,
     TokenRootDisableableMintBase,
-    ITokenRootUpgradeable
+    ITokenRootUpgradeable,
+    IVaultTokenRoot_V1
 {
     uint256 static randomNonce_;
     address static deployer_;
@@ -198,6 +202,71 @@ contract Root_Vault_V1 is
         }(walletCode_, walletVersion_, address(0), remainingGasTo);
 
         return tokenWallet;
+    }
+
+    function acceptUnwrapAndTransfer(
+        address walletOwner,
+        uint128 amount_to_unwrap,
+        address recipient,
+        address remainingGasTo,
+        TvmCell payload
+    ) external override {
+        require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
+
+        updateTotalWrapped(-amount_to_unwrap);
+        totalSupply_ -= amount_to_unwrap;
+
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
+
+        // Transfer unwrapped EVERs + attached value to recipient
+        IAcceptTokensUnwrapCallback(recipient).onAcceptTokensUnwrap{
+            value: 0,
+            flag: TokenMsgFlag.ALL_NOT_RESERVED,
+            bounce: false
+        }(remainingGasTo, amount_to_unwrap, payload);
+    }
+
+    function acceptWrapAndTransfer(
+        address walletOwner,
+        uint128 amount_to_wrap,
+        uint128 amount_wrapped,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) external override {
+        require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
+
+        // Increase wrapped amount
+        updateTotalWrapped(amount_to_wrap);
+
+        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
+
+        // Transfer
+        TvmCell stateInit = _buildWalletInitData(recipient);
+
+        address recipientWallet;
+
+        if(deployWalletValue > 0) {
+            recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
+        } else {
+            recipientWallet = address(tvm.hash(stateInit));
+        }
+
+        totalSupply_ += amount_to_wrap;
+
+        ITokenWallet(recipientWallet).acceptTransfer{
+            value: 0,
+            flag: TokenMsgFlag.ALL_NOT_RESERVED,
+            bounce: false
+        }(
+            amount_to_wrap + amount_wrapped,
+            walletOwner,
+            remainingGasTo,
+            notify,
+            payload
+        );
     }
 
     function upgrade(TvmCell code) external override onlyOwner {

@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+interface IAcceptTokensUnwrapCallback {
+    function onAcceptTokensUnwrap(
+        address remainingGasTo,
+        uint128 amount,
+        TvmCell payload
+    ) external;
+}

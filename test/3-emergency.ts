@@ -1,8 +1,5 @@
-import {setupWever, expect} from "./utils";
+import {setupWever, expect, EMPTY_TVM_CELL} from "./utils";
 import {toNano} from "locklift";
-
-
-const EMPTY_TVM_CELL = "te6ccgEBAQEAAgAAAA==";
 
 
 describe('Test Vault emergency mode', async function() {
@@ -43,11 +40,11 @@ describe('Test Vault emergency mode', async function() {
         const trace = await locklift.tracing.trace(
             context.vault.methods.wrap({
                 tokens: toNano(1),
-                owner_address: context.user.address,
-                gas_back_address: context.user.address,
+                owner_address: context.alice.address,
+                gas_back_address: context.alice.address,
                 payload: EMPTY_TVM_CELL
             }).send({
-                from: context.user.address,
+                from: context.alice.address,
                 amount: toNano(3)
             }),
             {
@@ -68,7 +65,7 @@ describe('Test Vault emergency mode', async function() {
         //     context.vault.methods.grant({
         //         amount: toNano(1)
         //     }).send({
-        //         from: context.user.address,
+        //         from: context.alice.address,
         //         amount: toNano(3)
         //     }),
         //     {

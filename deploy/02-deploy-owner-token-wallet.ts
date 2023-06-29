@@ -23,7 +23,7 @@ export default async () => {
     const ownerTokenWalletAddress = await getTokenWalletAddress(vault, owner.address);
 
     await locklift.deployments.saveContract({
-        deploymentName: 'OwnerTokenWallet',
+        deploymentName: 'VaultOwnerTokenWallet',
         contractName: 'TokenWalletUpgradeable',
         address: ownerTokenWalletAddress
     }, true);

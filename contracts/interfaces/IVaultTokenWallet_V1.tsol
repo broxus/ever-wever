@@ -1,0 +1,6 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+interface IVaultTokenWallet_V1 {
+    enum Operation { Wrap, Unwrap }
+}

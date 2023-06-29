@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+interface IVaultTokenRoot_V1 {
+    function acceptWrapAndTransfer(
+        address owner,
+        uint128 amount_to_wrap,
+        uint128 amount_wrapped,
+        address recipient,
+        uint128 deploy_wallet_value,
+        address remaining_gas_to,
+        bool notify,
+        TvmCell payload
+    ) external;
+
+    function acceptUnwrapAndTransfer(
+        address owner,
+        uint128 amount_to_unwrap,
+        address recipient,
+        address remaining_gas_to,
+        TvmCell payload
+    ) external;
+}

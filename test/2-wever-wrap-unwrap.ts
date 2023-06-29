@@ -1,4 +1,5 @@
 import {
+  EMPTY_TVM_CELL,
   getMetricsChange,
   getTokenWalletAddress,
   getVaultMetrics,
@@ -10,7 +11,6 @@ import { toNano, WalletTypes } from "locklift";
 
 const logger = require("mocha-logger");
 const { expect } = require("chai");
-const EMPTY_TVM_CELL = "te6ccgEBAQEAAgAAAA==";
 
 
 describe("Test wEVER wrap / unwrap", async function () {
@@ -26,8 +26,8 @@ describe("Test wEVER wrap / unwrap", async function () {
 
   describe("Test granting", async function () {
     it("Grant EVERs to the vault", async function () {
-      const { userTokenWallet, user, vaultTokenWallet, vault } = context;
-      const initialMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+      const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
+      const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
       const trace = await locklift.tracing.trace(
           vault.methods
@@ -35,14 +35,14 @@ describe("Test wEVER wrap / unwrap", async function () {
                 amount: toNano(4),
               })
               .send({
-                from: user.address,
+                from: alice.address,
                 amount: toNano(6),
               })
       );
 
-      await trace.traceTree?.beautyPrint();
+      // await trace.traceTree?.beautyPrint();
 
-      const finalMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+      const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
       const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 
@@ -67,18 +67,18 @@ describe("Test wEVER wrap / unwrap", async function () {
   describe("Test wrapping", async function () {
     describe("Wrap TON to wEVERs by sending EVERs to vault", async function () {
       it("Send EVERs to vault", async function () {
-        const { userTokenWallet, user, vaultTokenWallet, vault } = context;
+        const { alice, aliceTokenWallet, vaultTokenWallet, vault } = context;
 
-        const initialMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
         await locklift.provider.sendMessage({
           amount: toNano(5),
           recipient: vault.address,
           bounce: true,
-          sender: user.address,
+          sender: alice.address,
         });
 
-        const finalMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
         const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 
@@ -112,25 +112,27 @@ describe("Test wEVER wrap / unwrap", async function () {
 
     describe("Wrap TON to wEVERs by calling wrap", function () {
       it("Call wrap", async function () {
-        const { userTokenWallet, user, vaultTokenWallet, vault } = context;
+        const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
 
-        const initialMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
-        await locklift.transactions.waitFinalized(
-          vault.methods
-            .wrap({
-              tokens: toNano(1),
-              owner_address: user.address,
-              gas_back_address: user.address,
-              payload: EMPTY_TVM_CELL,
-            })
-            .send({
-              from: user.address,
-              amount: toNano(2.5),
-            }),
+        const trace = await locklift.tracing.trace(
+            vault.methods
+                .wrap({
+                  tokens: toNano(1),
+                  owner_address: alice.address,
+                  gas_back_address: alice.address,
+                  payload: EMPTY_TVM_CELL,
+                })
+                .send({
+                  from: alice.address,
+                  amount: toNano(2.5),
+                }),
         );
 
-        const finalMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        // await trace.traceTree?.beautyPrint();
+
+        const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
         const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 
@@ -163,25 +165,29 @@ describe("Test wEVER wrap / unwrap", async function () {
 
     describe("Unwrap wEVER to TON by sending wEVERs to vault token wallet", async function () {
       it("Send wEVERs to vault token wallet", async function () {
-        const { userTokenWallet, user, vaultTokenWallet, vault } = context;
+        const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
 
-        const initialMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
-        await userTokenWallet.methods
-          .transfer({
-            amount: toNano(2.5),
-            recipient: vault.address,
-            deployWalletValue: 200000000,
-            remainingGasTo: user.address,
-            notify: true,
-            payload: stringToBytesArray(""),
-          })
-          .send({
-            from: user.address,
-            amount: toNano(4),
-          });
+        const trace = await locklift.tracing.trace(
+            aliceTokenWallet.methods
+                .transfer({
+                  amount: toNano(2.5),
+                  recipient: vault.address,
+                  deployWalletValue: 200000000,
+                  remainingGasTo: alice.address,
+                  notify: true,
+                  payload: stringToBytesArray(""),
+                })
+                .send({
+                  from: alice.address,
+                  amount: toNano(4),
+                })
+        );
 
-        const finalMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        // await trace.traceTree?.beautyPrint();
+
+        const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
         const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 
@@ -215,19 +221,24 @@ describe("Test wEVER wrap / unwrap", async function () {
 
   describe("Test EVERs withdraw", async function () {
     it("Withdraw with owner account", async function () {
-      const { userTokenWallet, user, vaultTokenWallet, vault } = context;
+      const { ownerTokenWallet, owner, vaultTokenWallet, vault } = context;
 
-      const initialMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+      const initialMetrics = await getVaultMetrics(ownerTokenWallet, owner, vaultTokenWallet, vault);
 
-      await vault.methods
-        .withdraw({
-          amount: toNano(3),
-        })
-        .send({
-          from: user.address,
-          amount: toNano(2),
-        });
-      const finalMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+      const trace = await locklift.tracing.trace(
+          vault.methods
+              .withdraw({
+                amount: toNano(3),
+              })
+              .send({
+                from: owner.address,
+                amount: toNano(2),
+              })
+      );
+
+      // await trace.traceTree?.beautyPrint();
+
+      const finalMetrics = await getVaultMetrics(ownerTokenWallet, owner, vaultTokenWallet, vault);
 
       const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 
@@ -249,43 +260,22 @@ describe("Test wEVER wrap / unwrap", async function () {
     });
 
     it("Try to withdraw with non owner", async function () {
-      const { userTokenWallet, user, vaultTokenWallet, vault } = context;
+      const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
 
-      const keyPair = (await locklift.keystore.getSigner("1"))!;
-      const { account: wrongOwner } = await locklift.factory.accounts.addNewAccount({
-        type: WalletTypes.EverWallet,
-        value: toNano(30),
-        publicKey: keyPair.publicKey,
-      });
+      logger.log(`Not-owner token wallet: ${aliceTokenWallet.address.toString()}`);
 
-      await vault.methods
-        .deployWallet({
-          walletOwner: wrongOwner.address,
-          deployWalletValue: toNano(1),
-          answerId: 0,
-        })
-        .send({
-          from: wrongOwner.address,
-          amount: toNano(2),
-        });
-
-      const wrongOwnerTokenWalletAddress = await getTokenWalletAddress(vault, wrongOwner.address);
-
-      logger.log(`Wrong owner token wallet: ${wrongOwnerTokenWalletAddress}`);
-      const wrongOwnerTokenWallet = locklift.factory.getDeployedContract("TokenWalletUpgradeable", wrongOwnerTokenWalletAddress);
-
-      const initialMetrics = await getVaultMetrics(wrongOwnerTokenWallet, wrongOwner, vaultTokenWallet, vault);
+      const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
       await vault.methods
         .withdraw({
           amount: toNano(3),
         })
         .send({
-          from: wrongOwner.address,
+          from: alice.address,
           amount: toNano(2),
         });
 
-      const finalMetrics = await getVaultMetrics(wrongOwnerTokenWallet, wrongOwner, vaultTokenWallet, vault);
+      const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
       const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 

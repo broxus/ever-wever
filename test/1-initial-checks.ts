@@ -28,13 +28,13 @@ describe("Setup contracts", async function () {
 
   describe("User", async function () {
     it("Check user account", async function () {
-      const userBalance = await locklift.provider.getBalance(context.user.address);
+      const userBalance = await locklift.provider.getBalance(context.alice.address);
 
       expect(Number(userBalance)).to.be.above(0, "Bad user balance");
     });
 
     it("Check user token wallet balance", async function () {
-      const userTokenBalance = await context.userTokenWallet.methods
+      const userTokenBalance = await context.aliceTokenWallet.methods
         .balance({ answerId: 0 })
         .call()
         .then(res => res.value0);

@@ -35,16 +35,33 @@ export const getTokenWalletAddress = async function (
     .then(res => res.value0);
 };
 
-export const setupWever = async () => {
-    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+export const getUser = async (name: string) => {
     const {
         account: user
-    } = await locklift.deployments.getAccount('User');
+    } = await locklift.deployments.getAccount(name);
 
-    const userTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>('UserTokenWallet');
+    const userTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>(`${name}TokenWallet`);
+
+    return {
+        user, userTokenWallet
+    }
+}
+
+export const setupWever = async () => {
+    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+
     const vaultTokenWallet = await locklift.deployments.getContract<TokenWalletUpgradeableAbi>('VaultTokenWallet');
 
-    return { vault, user, userTokenWallet, vaultTokenWallet };
+    const { user: alice, userTokenWallet: aliceTokenWallet } = await getUser('Alice');
+    const { user: bob, userTokenWallet: bobTokenWallet } = await getUser('Bob');
+    const { user: owner, userTokenWallet: ownerTokenWallet } = await getUser('VaultOwner');
+
+    return {
+        vault, vaultTokenWallet,
+        alice, aliceTokenWallet,
+        bob, bobTokenWallet,
+        owner, ownerTokenWallet,
+    };
 };
 
 export const getVaultMetrics = async function (
@@ -101,3 +118,6 @@ export const logMetricsChange = function (change: VaultMetrics) {
 };
 
 export const isValidTonAddress = (address: string) => /^(?:-1|0):[0-9a-fA-F]{64}$/.test(address);
+
+export const ZERO_ADDRESS = '0:0000000000000000000000000000000000000000000000000000000000000000';
+export const EMPTY_TVM_CELL = "te6ccgEBAQEAAgAAAA==";

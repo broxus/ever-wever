@@ -3,11 +3,11 @@ import {VaultAbi} from "../build/factorySource";
 import {getTokenWalletAddress} from "../test/utils";
 
 
-export default async () => {
+const setupUser = async (name: string, signerId: string) => {
     await locklift.deployments.deployAccounts([
             {
-                deploymentName: "User",
-                signerId: "0",
+                deploymentName: name,
+                signerId,
                 accountSettings: {
                     type: WalletTypes.EverWallet,
                     value: locklift.utils.toNano(100),
@@ -19,7 +19,7 @@ export default async () => {
 
     const {
         account: user
-    } = await locklift.deployments.getAccount('User');
+    } = await locklift.deployments.getAccount(name);
 
     const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
 
@@ -37,12 +37,17 @@ export default async () => {
     const userTokenWalletAddress = await getTokenWalletAddress(vault, user.address);
 
     await locklift.deployments.saveContract({
-        deploymentName: 'UserTokenWallet',
+        deploymentName: `${name}TokenWallet`,
         contractName: 'TokenWalletUpgradeable',
         address: userTokenWalletAddress
     }, true);
-
 }
 
 
-export const tag = 'Setup_User';
+export default async () => {
+    await setupUser('Alice', "10");
+    await setupUser('Bob', "11");
+}
+
+
+export const tag = 'Setup_Users';

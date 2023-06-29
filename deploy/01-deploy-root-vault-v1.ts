@@ -11,7 +11,7 @@ export default async () => {
 
     await locklift.deployments.deploy({
         deployConfig: {
-            contract: "Root_Vault_V1",
+            contract: "VaultTokenRoot_V1",
             constructorParams: {},
             value: toNano(15),
             initParams: {
