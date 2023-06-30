@@ -85,7 +85,7 @@ describe('Transfer tokens with additional wrap', async function() {
             })
         );
 
-        // await trace.traceTree?.beautyPrint();
+        await trace.traceTree?.beautyPrint();
 
         const aliceFinalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
         const bobFinalMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
@@ -130,10 +130,10 @@ describe('Transfer tokens with additional wrap', async function() {
         const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);
         const bobMetricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
 
-        logger.success('Alice metrics change');
-        logMetricsChange(aliceMetricsChange);
-
         logger.success('Bob metrics change')
         logMetricsChange(bobMetricsChange);
+
+        logger.success('Alice metrics change');
+        logMetricsChange(aliceMetricsChange);
     });
 })

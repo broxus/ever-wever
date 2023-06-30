@@ -836,7 +836,7 @@ UFITS 128
 SETGLOB 19
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
-.macro acceptWrapAndTransfer
+.macro acceptWrap
 DROP
 GETGLOB 6
 THROWIFNOT 76
@@ -855,22 +855,14 @@ PUSHCONT {
 IF
 LDMSGADDR
 LDU 128
-LDU 128
 LDREF
 ENDS
 CTOS
 LDMSGADDR
-LDU 128
-LDREF
-ENDS
-CTOS
-LDMSGADDR
-LDI 1
-LDREF
 ENDS
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 CALLREF {
-	CALL $acceptWrapAndTransfer_internal_macro$
+	CALL $acceptWrap_internal_macro$
 }
 DROP
 CALLREF {
@@ -878,97 +870,42 @@ CALLREF {
 }
 THROW 0
 
-.macro acceptWrapAndTransfer_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 278
+.macro acceptWrap_internal_macro
+.loc ../contracts/VaultTokenRoot_V1.tsol, 273
 GETGLOB 9
-PUSH S8
+ROLL 3
 CALLREF {
 	CALL $_getExpectedWalletAddress_internal_macro$
 }
 SDEQ
 THROWIFNOT 1100
-.loc ../contracts/VaultTokenRoot_V1.tsol, 281
-PUSH S6
+.loc ../contracts/VaultTokenRoot_V1.tsol, 275
+OVER
+CALLREF {
+	CALL $updateTotalSupply_internal_macro$
+}
+.loc ../contracts/VaultTokenRoot_V1.tsol, 276
+SWAP
 CALLREF {
 	CALL $updateTotalWrapped_internal_macro$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 283
+.loc ../contracts/VaultTokenRoot_V1.tsol, 278
 GETGLOB 13
 PUSHINT 1000000000
 ADD
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 286
-ROLL 4
-CALLREF {
-	CALL $_buildWalletInitData_internal_macro$
-}
-.loc ../contracts/VaultTokenRoot_V1.tsol, 288
-PUSHREFSLICE {
-	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
-}
-.loc ../contracts/VaultTokenRoot_V1.tsol, 290
-PUSH S5
-GTINT 0
-PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 291
-	PUSH3 S1, S5, S4
-	CALLREF {
-		CALL $_deployWallet_internal_macro$
-	}
-}
-PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 293
-	OVER
-	HASHCU
-	NEWC
-	STSLICECONST x801_
-	STU 256
-	ENDC
-	CTOS
-}
-IFELSE
-NIP
-.loc ../contracts/VaultTokenRoot_V1.tsol, 296
-GETGLOB 19
-PUSH S8
-ADD
-UFITS 128
-SETGLOB 19
-.loc ../contracts/VaultTokenRoot_V1.tsol, 298
-SWAP
-REVERSE 4, 5
-REVERSE 8, 0
-ADD
-UFITS 128
-ROLL 5
-FALSE
+.loc ../contracts/VaultTokenRoot_V1.tsol, 280
 NEWC
-STSLICECONST x6_
-STI 1
-PUSHINT 3
+STSLICECONST x42_
+STSLICE
+PUSHINT 111
 STZEROES
-STSLICE
-PUSHINT 1
-STUR 111
-ROLLREV 5
-NEWC
-STSLICECONST x67a0b95f
-STU 128
-STSLICE
-ROLLREV 3
-NEWC
-STSLICE
-STI 1
-STREF
-STBREFR
-STBREFR
 ENDC
 PUSHINT 128
 SENDRAWMSG
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
-DROP2
 
 .macro upgrade
 DROP
@@ -979,7 +916,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 311
+.loc ../contracts/VaultTokenRoot_V1.tsol, 287
 LDREF
 ENDS
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
@@ -1000,7 +937,7 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 100
-.loc ../contracts/VaultTokenRoot_V1.tsol, 312
+.loc ../contracts/VaultTokenRoot_V1.tsol, 288
 GETGLOB 20
 GETGLOB 21
 GETGLOB 22
@@ -1025,10 +962,10 @@ STI 1
 STI 1
 STI 1
 ENDC
-.loc ../contracts/VaultTokenRoot_V1.tsol, 319
+.loc ../contracts/VaultTokenRoot_V1.tsol, 295
 OVER
 SETCODE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 320
+.loc ../contracts/VaultTokenRoot_V1.tsol, 296
 SWAP
 CTOS
 DUP
@@ -1043,7 +980,7 @@ PLDREF
 CTOS
 BLESS
 POP C3
-.loc ../contracts/VaultTokenRoot_V1.tsol, 322
+.loc ../contracts/VaultTokenRoot_V1.tsol, 298
 CALLREF {
 	CALL $:onCodeUpgrade$
 }
@@ -4132,7 +4069,7 @@ THROW 0
 
 .macro public_function_selector
 DUP
-PUSHINT 739640645
+PUSHINT 837670087
 LEQ
 IFJMPREF {
 	DUP
@@ -4165,15 +4102,9 @@ IFJMPREF {
 		}
 	}
 	DUP
-	PUSHINT 422269361
+	PUSHINT 428082246
 	LEQ
 	IFJMPREF {
-		DUP
-		PUSHINT 376667771
-		EQUAL
-		IFJMPREF {
-			CALL $acceptWrapAndTransfer$
-		}
 		DUP
 		PUSHINT 388172858
 		EQUAL
@@ -4192,17 +4123,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $acceptBurn$
 		}
-	}
-	DUP
-	PUSHINT 502498758
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 428082246
 		EQUAL
 		IFJMPREF {
 			CALL $name$
 		}
+	}
+	DUP
+	PUSHINT 549434296
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 447738777
 		EQUAL
@@ -4221,17 +4152,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $transferOwnership$
 		}
-	}
-	DUP
-	PUSHINT 739640645
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 549434296
 		EQUAL
 		IFJMPREF {
 			CALL $mint$
 		}
+	}
+	DUP
+	PUSHINT 837670087
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 552322925
 		EQUAL
@@ -4250,6 +4181,12 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $walletOf$
 		}
+		DUP
+		PUSHINT 837670087
+		EQUAL
+		IFJMPREF {
+			CALL $deployWallet$
+		}
 	}
 }
 DUP
@@ -4257,15 +4194,9 @@ PUSHINT 1756716863
 LEQ
 IFJMPREF {
 	DUP
-	PUSHINT 973828957
+	PUSHINT 975694363
 	LEQ
 	IFJMPREF {
-		DUP
-		PUSHINT 837670087
-		EQUAL
-		IFJMPREF {
-			CALL $deployWallet$
-		}
 		DUP
 		PUSHINT 839183401
 		EQUAL
@@ -4284,16 +4215,22 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $grant$
 		}
+		DUP
+		PUSHINT 975694363
+		EQUAL
+		IFJMPREF {
+			CALL $burnPaused$
+		}
 	}
 	DUP
 	PUSHINT 1394526076
 	LEQ
 	IFJMPREF {
 		DUP
-		PUSHINT 975694363
+		PUSHINT 1061952210
 		EQUAL
 		IFJMPREF {
-			CALL $burnPaused$
+			CALL $acceptWrap$
 		}
 		DUP
 		PUSHINT 1172038416

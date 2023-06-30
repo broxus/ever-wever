@@ -2,14 +2,19 @@
 pragma ton-solidity >= 0.57.1;
 
 interface IVaultTokenRoot_V1 {
-    function acceptWrapAndTransfer(
-        address owner,
-        uint128 amount_to_wrap,
-        uint128 amount_wrapped,
-        address recipient,
-        uint128 deploy_wallet_value,
-        address remaining_gas_to,
-        bool notify,
-        TvmCell payload
+    function acceptWrap(
+        address walletOwner,
+        uint128 amount,
+        address remainingGasTo
     ) external;
+//    function acceptWrapAndTransfer(
+//        address owner,
+//        uint128 amount_to_wrap,
+//        uint128 amount_wrapped,
+//        address recipient,
+//        uint128 deploy_wallet_value,
+//        address remaining_gas_to,
+//        bool notify,
+//        TvmCell payload
+//    ) external;
 }

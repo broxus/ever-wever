@@ -70,16 +70,11 @@
 			]
 		},
 		{
-			"name": "acceptWrapAndTransfer",
+			"name": "acceptWrap",
 			"inputs": [
 				{"name":"walletOwner","type":"address"},
-				{"name":"amount_to_wrap","type":"uint128"},
-				{"name":"amount_wrapped","type":"uint128"},
-				{"name":"recipient","type":"address"},
-				{"name":"deployWalletValue","type":"uint128"},
-				{"name":"remainingGasTo","type":"address"},
-				{"name":"notify","type":"bool"},
-				{"name":"payload","type":"cell"}
+				{"name":"amount","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"}
 			],
 			"outputs": [
 			]

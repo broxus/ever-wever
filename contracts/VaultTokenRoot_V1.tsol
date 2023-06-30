@@ -265,47 +265,23 @@ contract VaultTokenRoot_V1 is
         totalSupply_ += amount;
     }
 
-    function acceptWrapAndTransfer(
+    function acceptWrap(
         address walletOwner,
-        uint128 amount_to_wrap,
-        uint128 amount_wrapped,
-        address recipient,
-        uint128 deployWalletValue,
-        address remainingGasTo,
-        bool notify,
-        TvmCell payload
+        uint128 amount,
+        address remainingGasTo
     ) external override {
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
-        // Increase wrapped amount
-        updateTotalWrapped(amount_to_wrap);
+        updateTotalSupply(amount);
+        updateTotalWrapped(amount);
 
         tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
 
-        // Transfer
-        TvmCell stateInit = _buildWalletInitData(recipient);
-
-        address recipientWallet;
-
-        if(deployWalletValue > 0) {
-            recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
-        } else {
-            recipientWallet = address(tvm.hash(stateInit));
-        }
-
-        totalSupply_ += amount_to_wrap;
-
-        ITokenWallet(recipientWallet).acceptTransfer{
+        remainingGasTo.transfer({
             value: 0,
             flag: TokenMsgFlag.ALL_NOT_RESERVED,
             bounce: false
-        }(
-            amount_to_wrap + amount_wrapped,
-            walletOwner,
-            remainingGasTo,
-            notify,
-            payload
-        );
+        });
     }
 
     function upgrade(TvmCell code) external override onlyOwner {
