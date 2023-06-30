@@ -177,7 +177,7 @@ describe("Test wEVER wrap / unwrap", async function () {
                   deployWalletValue: toNano('0.2'),
                   remainingGasTo: alice.address,
                   notify: true,
-                  payload: stringToBytesArray(""),
+                  payload: EMPTY_TVM_CELL,
                 })
                 .send({
                   from: alice.address,
@@ -185,7 +185,7 @@ describe("Test wEVER wrap / unwrap", async function () {
                 })
         );
 
-        // await trace.traceTree?.beautyPrint();
+        await trace.traceTree?.beautyPrint();
 
         const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 

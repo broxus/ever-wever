@@ -314,6 +314,52 @@ contract VaultTokenWallet_V1 is
         );
     }
 
+    function acceptTransfer(
+        uint128 amount,
+        address sender,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    )
+        override(ITokenWallet, TokenWalletBase)
+        external
+        functionID(0x67A0B95F)
+    {
+        // The only difference is msg.sender examination
+        // In `wrapAndTransfer` scenario root sends `acceptTransfer` directly
+        require(
+            msg.sender == address(tvm.hash(_buildWalletInitData(sender))) || msg.sender == root_,
+            TokenErrors.SENDER_IS_NOT_VALID_WALLET
+        );
+
+        tvm.rawReserve(_reserve(), 2);
+
+        if (owner_ != root_) {
+            balance_ += amount;
+        }
+
+        if (notify) {
+            IAcceptTokensTransferCallback(owner_).onAcceptTokensTransfer{
+                    value: 0,
+                    flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                    bounce: false
+            }(
+                root_,
+                amount,
+                sender,
+                msg.sender,
+                remainingGasTo,
+                payload
+            );
+        } else {
+            remainingGasTo.transfer({
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
+            });
+        }
+    }
+
     function wrapAndTransfer(
         uint128 amount,
         address recipient,

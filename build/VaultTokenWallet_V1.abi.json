@@ -94,6 +94,19 @@
 			]
 		},
 		{
+			"name": "acceptTransfer",
+			"id": "0x67A0B95F",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"sender","type":"address"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"notify","type":"bool"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "wrapAndTransfer",
 			"inputs": [
 				{"name":"amount","type":"uint128"},
@@ -177,19 +190,6 @@
 			"inputs": [
 				{"name":"amount","type":"uint128"},
 				{"name":"recipientTokenWallet","type":"address"},
-				{"name":"remainingGasTo","type":"address"},
-				{"name":"notify","type":"bool"},
-				{"name":"payload","type":"cell"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "acceptTransfer",
-			"id": "0x67A0B95F",
-			"inputs": [
-				{"name":"amount","type":"uint128"},
-				{"name":"sender","type":"address"},
 				{"name":"remainingGasTo","type":"address"},
 				{"name":"notify","type":"bool"},
 				{"name":"payload","type":"cell"}

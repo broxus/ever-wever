@@ -1071,7 +1071,7 @@ SENDRAWMSG
 .loc ../contracts/VaultTokenWallet_V1.tsol, 0
 DROP2
 
-.macro wrapAndTransfer
+.macro acceptTransfer
 DROP
 GETGLOB 6
 THROWIFNOT 76
@@ -1081,6 +1081,137 @@ IFREF {
 	CALL $c4_to_c7$
 }
 .loc ../contracts/VaultTokenWallet_V1.tsol, 317
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDU 128
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDI 1
+LDREF
+ENDS
+.loc ../contracts/VaultTokenWallet_V1.tsol, 0
+CALLREF {
+	CALL $acceptTransfer_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro acceptTransfer_internal_macro
+.loc ../contracts/VaultTokenWallet_V1.tsol, 330
+GETGLOB 9
+PUSH S4
+CALLREF {
+	CALL $_buildWalletInitData_internal_macro$
+}
+HASHCU
+NEWC
+STSLICECONST x801_
+STU 256
+ENDC
+CTOS
+SDEQ
+GETGLOB 9
+GETGLOB 10
+SDEQ
+OR
+THROWIFNOT 1100
+.loc ../contracts/VaultTokenWallet_V1.tsol, 335
+CALLREF {
+	CALL $_reserve_internal_macro$
+}
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/VaultTokenWallet_V1.tsol, 337
+GETGLOB 11
+GETGLOB 10
+SDEQ
+PUSHCONT {
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 338
+	GETGLOB 12
+	PUSH S5
+	ADD
+	UFITS 128
+	SETGLOB 12
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 0
+}
+IFNOT
+.loc ../contracts/VaultTokenWallet_V1.tsol, 341
+SWAP
+PUSHCONT {
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 342
+	PUSH2 S0, S1
+	GETGLOB 9
+	PUSH2 S5, S6
+	GETGLOB 10
+	GETGLOB 11
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	PUSHINT 3
+	STZEROES
+	STSLICE
+	PUSHINT 1
+	STUR 111
+	ROLLREV 6
+	NEWC
+	STSLICECONST x70d89fc9
+	STSLICE
+	STU 128
+	ROLLREV 4
+	NEWC
+	STSLICE
+	ROLLREV 3
+	NEWC
+	STSLICE
+	ROTREV
+	NEWC
+	STSLICE
+	STREF
+	STBREFR
+	STBREFR
+	STBREFR
+	STBREFR
+}
+PUSHCONT {
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 355
+	OVER
+	NEWC
+	STSLICECONST x42_
+	STSLICE
+	PUSHINT 111
+	STZEROES
+}
+IFELSE
+ENDC
+PUSHINT 128
+ADDCONST 2
+UFITS 8
+SENDRAWMSG
+.loc ../contracts/VaultTokenWallet_V1.tsol, 0
+BLKDROP 4
+
+.macro wrapAndTransfer
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/VaultTokenWallet_V1.tsol, 363
 OVER
 PUSHCONT {
 	LDREF
@@ -1114,7 +1245,7 @@ GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../contracts/VaultTokenWallet_V1.tsol, 328
+.loc ../contracts/VaultTokenWallet_V1.tsol, 374
 PUSH2 S2, S5
 GETGLOB 11
 PUSH S8
@@ -1146,19 +1277,19 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/VaultTokenWallet_V1.tsol, 334
+.loc ../contracts/VaultTokenWallet_V1.tsol, 380
 GETGLOB 12
 ROLL 6
 ADD
 UFITS 128
 SETGLOB 12
-.loc ../contracts/VaultTokenWallet_V1.tsol, 336
+.loc ../contracts/VaultTokenWallet_V1.tsol, 382
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../contracts/VaultTokenWallet_V1.tsol, 338
+.loc ../contracts/VaultTokenWallet_V1.tsol, 384
 GETGLOB 12
 ROLLREV 5
 CALLREF {
@@ -1888,43 +2019,7 @@ PUSHINT 128
 SENDRAWMSG
 .loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
 
-.macro acceptTransfer
-DROP
-GETGLOB 6
-THROWIFNOT 76
-GETGLOB 2
-ISNULL
-IFREF {
-	CALL $c4_to_c7$
-}
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 215
-OVER
-PUSHCONT {
-	LDREF
-	ENDS
-	CTOS
-}
-IF
-LDU 128
-LDMSGADDR
-LDREF
-ENDS
-CTOS
-LDMSGADDR
-LDI 1
-LDREF
-ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
-CALLREF {
-	CALL $acceptTransfer_internal_macro$
-}
-DROP
-CALLREF {
-	CALL $c7_to_c4$
-}
-THROW 0
-
-.macro acceptTransfer_internal_macro
+.macro TokenWalletBase_acceptTransfer_macro
 .loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 227
 GETGLOB 9
 PUSH S4
