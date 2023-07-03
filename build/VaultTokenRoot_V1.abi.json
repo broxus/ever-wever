@@ -80,6 +80,46 @@
 			]
 		},
 		{
+			"name": "drain",
+			"inputs": [
+				{"name":"receiver","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "grant",
+			"inputs": [
+				{"name":"amount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "wrap",
+			"inputs": [
+				{"name":"tokens","type":"uint128"},
+				{"name":"owner_address","type":"address"},
+				{"name":"gas_back_address","type":"address"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onAcceptTokensTransfer",
+			"inputs": [
+				{"name":"tokenRoot","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"sender","type":"address"},
+				{"name":"senderWallet","type":"address"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "upgrade",
 			"inputs": [
 				{"name":"code","type":"cell"}
@@ -261,99 +301,11 @@
 			]
 		},
 		{
-			"name": "setGuardian",
-			"inputs": [
-				{"name":"_guardian","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "setEmergency",
-			"inputs": [
-				{"name":"_emergency","type":"bool"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "drain",
-			"inputs": [
-				{"name":"receiver","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "withdraw",
-			"inputs": [
-				{"name":"amount","type":"uint128"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "grant",
-			"inputs": [
-				{"name":"amount","type":"uint128"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "wrap",
-			"inputs": [
-				{"name":"tokens","type":"uint128"},
-				{"name":"owner_address","type":"address"},
-				{"name":"gas_back_address","type":"address"},
-				{"name":"payload","type":"cell"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "onAcceptTokensTransfer",
-			"inputs": [
-				{"name":"tokenRoot","type":"address"},
-				{"name":"amount","type":"uint128"},
-				{"name":"sender","type":"address"},
-				{"name":"senderWallet","type":"address"},
-				{"name":"remainingGasTo","type":"address"},
-				{"name":"payload","type":"cell"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "emergency",
+			"name": "granted",
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"emergency","type":"bool"}
-			]
-		},
-		{
-			"name": "guardian",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"guardian","type":"address"}
-			]
-		},
-		{
-			"name": "token_wallet",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"token_wallet","type":"address"}
-			]
-		},
-		{
-			"name": "total_wrapped",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"total_wrapped","type":"uint128"}
+				{"name":"granted","type":"uint128"}
 			]
 		}
 	],
@@ -368,23 +320,11 @@
 		{"key":8,"name":"platformCode_","type":"cell"}
 	],
 	"events": [
-		{
-			"name": "EmergencySet",
-			"inputs": [
-				{"name":"emergency","type":"bool"}
-			],
-			"outputs": [
-			]
-		}
 	],
 	"fields": [
 		{"name":"_pubkey","type":"uint256"},
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
-		{"name":"emergency","type":"bool"},
-		{"name":"guardian","type":"address"},
-		{"name":"token_wallet","type":"address"},
-		{"name":"total_wrapped","type":"uint128"},
 		{"name":"name_","type":"string"},
 		{"name":"symbol_","type":"string"},
 		{"name":"decimals_","type":"uint8"},
@@ -397,6 +337,7 @@
 		{"name":"randomNonce_","type":"uint256"},
 		{"name":"deployer_","type":"address"},
 		{"name":"platformCode_","type":"cell"},
-		{"name":"walletVersion_","type":"uint32"}
+		{"name":"walletVersion_","type":"uint32"},
+		{"name":"granted","type":"uint128"}
 	]
 }

@@ -50,11 +50,6 @@ describe('Transfer tokens with additional wrap', async function() {
             "Vault EVER balance change differs from user wEVER balance change",
         );
 
-        expect(metricsChange.vaultTotalWrapped).to.be.equal(
-            metricsChange.userWEVERBalance,
-            "Vault total wrapped change differs from user wEVER balance change",
-        );
-
         expect(metricsChange.WEVERTotalSupply).to.be.equal(
             metricsChange.userWEVERBalance,
             "wEVER total supply change differs from user wEVER balance change",
@@ -93,11 +88,27 @@ describe('Transfer tokens with additional wrap', async function() {
         const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);
         const bobMetricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
 
-        logger.success('Alice metrics change');
+        logger.pending('Alice metrics change');
         logMetricsChange(aliceMetricsChange);
 
-        logger.success('Bob metrics change')
+        logger.pending('Bob metrics change')
         logMetricsChange(bobMetricsChange);
+
+        expect(aliceMetricsChange.userWEVERBalance)
+            .to.be.equal(-4, 'Wrong Alice WEVER balance change');
+        expect(aliceMetricsChange.userEVERBalance)
+            .to.be.lessThan(-1, 'Alice EVER balance change too big')
+            .to.be.greaterThan(-1.2, 'Alice EVER balance change too small');
+
+        expect(bobMetricsChange.userWEVERBalance)
+            .to.be.equal(5, 'Wrong Bob WEVER balance change');
+        expect(bobMetricsChange.userEVERBalance)
+            .to.be.equal(0, 'Wrong Bob EVER balance change');
+
+        expect(bobMetricsChange.vaultEVERBalance)
+            .to.be.equal(1, 'Wrong Vault balance change');
+        expect(bobMetricsChange.WEVERTotalSupply)
+            .to.be.equal(1, 'Wrong total supply change');
     });
 
     it('Burn tokens', async () => {
@@ -135,5 +146,22 @@ describe('Transfer tokens with additional wrap', async function() {
 
         logger.success('Alice metrics change');
         logMetricsChange(aliceMetricsChange);
+
+        expect(bobMetricsChange.userWEVERBalance)
+            .to.be.equal(-1, 'Wrong Bob WEVER balance change');
+        expect(bobMetricsChange.userEVERBalance)
+            .to.be.lessThan(-2, 'Bob EVER balance change too small')
+            .to.be.greaterThan(-2.1, 'Bob EVER balance change too big');
+
+        expect(aliceMetricsChange.userWEVERBalance)
+            .to.be.equal(0, 'Wrong Alice WEVER balance change');
+        expect(aliceMetricsChange.userEVERBalance)
+            .to.be.greaterThan(2.9, 'Alice EVER balance change too small')
+            .to.be.lessThan(3, 'Alice EVER balance change too big');
+
+        expect(bobMetricsChange.vaultEVERBalance)
+            .to.be.equal(-1, 'Wrong Vault balance change');
+        expect(bobMetricsChange.WEVERTotalSupply)
+            .to.be.equal(-1, 'Wrong total supply change');
     });
 })

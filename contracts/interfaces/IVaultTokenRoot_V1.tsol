@@ -7,14 +7,15 @@ interface IVaultTokenRoot_V1 {
         uint128 amount,
         address remainingGasTo
     ) external;
-//    function acceptWrapAndTransfer(
-//        address owner,
-//        uint128 amount_to_wrap,
-//        uint128 amount_wrapped,
-//        address recipient,
-//        uint128 deploy_wallet_value,
-//        address remaining_gas_to,
-//        bool notify,
-//        TvmCell payload
-//    ) external;
+
+    function grant(
+        uint128 amount
+    ) external;
+
+    function wrap(
+        uint128 tokens,
+        address owner_address,
+        address gas_back_address,
+        TvmCell payload
+    ) external;
 }

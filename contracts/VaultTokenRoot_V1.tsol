@@ -1,11 +1,10 @@
 pragma ton-solidity >= 0.57.1;
 
-import "./abstract/Vault.tsol";
-
 import "tip3/contracts/abstract/TokenRootTransferableOwnershipBase.tsol";
 import "tip3/contracts/abstract/TokenRootBurnPausableBase.tsol";
 import "tip3/contracts/abstract/TokenRootBurnableByRootBase.tsol";
 import "tip3/contracts/abstract/TokenRootDisableableMintBase.tsol";
+import "tip3/contracts/interfaces/IAcceptTokensTransferCallback.tsol";
 
 import "tip3/contracts/interfaces/ITokenRootUpgradeable.tsol";
 import "tip3/contracts/interfaces/ITokenWalletUpgradeable.tsol";
@@ -17,15 +16,18 @@ import "tip3/contracts/TokenWalletPlatform.tsol";
 
 import "./interfaces/IVaultTokenRoot_V1.tsol";
 
+import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
+
+import "./libraries/ErrorCodes.tsol";
 
 contract VaultTokenRoot_V1 is
-    Vault,
     TokenRootTransferableOwnershipBase,
     TokenRootBurnPausableBase,
     TokenRootBurnableByRootBase,
     TokenRootDisableableMintBase,
     ITokenRootUpgradeable,
-    IVaultTokenRoot_V1
+    IVaultTokenRoot_V1,
+    IAcceptTokensTransferCallback
 {
     uint256 static randomNonce_;
     address static deployer_;
@@ -33,19 +35,12 @@ contract VaultTokenRoot_V1 is
     TvmCell static platformCode_;
     uint32 walletVersion_;
 
-    function owner() internal override returns (address) {
-        return rootOwner_;
-    }
+    uint128 public granted;
 
-    function __mint(
-        uint128 amount,
-        address recipient,
-        uint128 deployWalletValue,
-        address remainingGasTo,
-        bool notify,
-        TvmCell payload
-    ) internal override {
-        _mint(amount, recipient, deployWalletValue, remainingGasTo, notify, payload);
+    modifier cashBack() {
+        tvm.rawReserve(address(this).balance - msg.value, 2);
+        _;
+        msg.sender.transfer({ value: 0, flag: 129 });
     }
 
     constructor() public {
@@ -65,9 +60,9 @@ contract VaultTokenRoot_V1 is
 
         tvm.rawReserve(_targetBalance(), 0);
 
-        token_wallet = _deployWallet(
+        _deployWallet(
             _buildWalletInitData(address(this)),
-            DEPLOY_WALLET_VALUE,
+            WRAP_DEPLOY_WALLET_VALUE,
             rootOwner_
         );
     }
@@ -107,15 +102,19 @@ contract VaultTokenRoot_V1 is
     ) override external {
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
-        tvm.rawReserve(_reserve(), 0);
+        _reserveVaultTreasuries();
 
         if (currentVersion == walletVersion_) {
-            remainingGasTo.transfer({ value: 0, flag: TokenMsgFlag.ALL_NOT_RESERVED });
+            remainingGasTo.transfer({
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED,
+                bounce: false
+            });
         } else {
             ITokenWalletUpgradeable(msg.sender).acceptUpgrade{
-                    value: 0,
-                    flag: TokenMsgFlag.ALL_NOT_RESERVED,
-                    bounce: false
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED,
+                bounce: false
             }(
                 walletCode_,
                 walletVersion_,
@@ -134,8 +133,9 @@ contract VaultTokenRoot_V1 is
      *  - `walletCode_` is set to `code`.
      *  - `walletVersion_` is incremented.
      */
-    function setWalletCode(TvmCell code) override external onlyRootOwner {
-        tvm.rawReserve(_targetBalance(), 0);
+    function setWalletCode(
+        TvmCell code
+    ) override external onlyRootOwner cashBack {
         walletCode_ = code;
         walletVersion_++;
     }
@@ -210,7 +210,7 @@ contract VaultTokenRoot_V1 is
         address wallet,
         address remainingGasTo,
         TvmCell payload
-    ) internal override {
+    ) internal pure {
         if (callbackTo.value == 0) {
             remainingGasTo.transfer({
                 value: 0,
@@ -246,10 +246,8 @@ contract VaultTokenRoot_V1 is
         require(_burnEnabled(), TokenErrors.BURN_DISABLED);
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
-        totalSupply_ -= amount;
-        updateTotalWrapped(-amount);
-
-        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
+        _updateTotalSupply(-amount);
+        _reserveVaultTreasuries();
 
         _burnCallback(
             amount,
@@ -261,8 +259,24 @@ contract VaultTokenRoot_V1 is
         );
     }
 
-    function updateTotalSupply(uint128 amount) internal override {
+    function owner() internal view returns (address) {
+        return rootOwner_;
+    }
+
+    function _updateTotalSupply(uint128 amount) internal {
         totalSupply_ += amount;
+    }
+
+    function _treasuries() internal view returns(uint128) {
+        return totalSupply_ + granted + INITIAL_BALANCE;
+    }
+
+    function __reserve(uint128 amount) internal view {
+        tvm.rawReserve(amount, 2);
+    }
+
+    function _reserveVaultTreasuries() internal view {
+        __reserve(_treasuries());
     }
 
     function acceptWrap(
@@ -272,10 +286,8 @@ contract VaultTokenRoot_V1 is
     ) external override {
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
-        updateTotalSupply(amount);
-        updateTotalWrapped(amount);
-
-        tvm.rawReserve(total_wrapped + INITIAL_BALANCE, 2);
+        _updateTotalSupply(amount);
+        _reserveVaultTreasuries();
 
         remainingGasTo.transfer({
             value: 0,
@@ -284,7 +296,141 @@ contract VaultTokenRoot_V1 is
         });
     }
 
-    function upgrade(TvmCell code) external override onlyOwner {
+    // VAULT
+    uint128 constant public RECEIVE_SAFE_FEE = 1 ever;
+    uint128 constant public WRAP_DEPLOY_WALLET_VALUE = 0.05 ever;
+    uint128 constant public INITIAL_BALANCE = 1 ever;
+
+    /**
+        @notice Drain odd EVERs
+        @dev Can be called only by owner
+        @param receiver Address to send odd EVERs to
+    */
+    function drain(
+        address receiver
+    ) external view onlyRootOwner {
+        _reserveVaultTreasuries();
+
+        receiver.transfer({
+            value: 0,
+            flag: 129,
+            bounce: false
+        });
+    }
+
+    /**
+        @notice Send EVERs to the vault without issuing wEVERs
+        @dev Increases initial balance value
+        so the granted EVERs won't be withdrawn on the wrapping / unwrapping
+        @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
+    */
+    function grant(
+        uint128 amount
+    ) external override {
+        require(amount <= msg.value + RECEIVE_SAFE_FEE, ErrorCodes.MSG_VALUE_TOO_LOW);
+
+        granted += amount;
+        _reserveVaultTreasuries();
+
+        msg.sender.transfer({
+            value: 0,
+            flag: 128,
+            bounce: false
+        });
+    }
+
+    /**
+        @notice Receive EVERs to wrap them into wTON.
+        Allows to simply mint wEVERs by sending them directly to vault.
+        @dev msg.value should be > RECEIVE_SAFE_FEE
+        @dev Amount of minted tokens = msg.value - RECEIVE_SAFE_FEE
+        @dev Rest of the EVERs will be sent back
+    */
+    receive() external {
+        require(msg.value > RECEIVE_SAFE_FEE, ErrorCodes.MSG_VALUE_TOO_LOW);
+
+        uint128 tokens = msg.value - RECEIVE_SAFE_FEE;
+
+        __reserve(tokens + _treasuries());
+
+        TvmCell empty;
+
+        _mint(
+            tokens,
+            msg.sender,
+            WRAP_DEPLOY_WALLET_VALUE,
+            msg.sender,
+            true,
+            empty
+        );
+    }
+
+    /**
+        @notice Internal function for minting wEVERs
+        @dev Works since Vault is authorized for minting tokens
+        @param tokens How much tokens to mint
+        @param owner_address Token wallet owner address
+        @param gas_back_address Address to send change
+    */
+
+    function wrap(
+        uint128 tokens,
+        address owner_address,
+        address gas_back_address,
+        TvmCell payload
+    ) external override {
+        require(
+            msg.value >= tokens + RECEIVE_SAFE_FEE,
+            ErrorCodes.MSG_VALUE_TOO_LOW
+        );
+
+//        _updateTotalSupply(tokens);
+//        _reserveVaultTreasuries();
+        __reserve(_treasuries() + tokens);
+
+        _mint(
+            tokens,
+            owner_address,
+            WRAP_DEPLOY_WALLET_VALUE,
+            gas_back_address,
+            true,
+            payload
+        );
+    }
+
+    /**
+        @notice Receive wEVERs to burn them and release EVERs
+        @dev Callback function from vault token wallet
+        @dev EVERs will be sent to tokens sender
+    */
+    function onAcceptTokensTransfer(
+        address tokenRoot,
+        uint128 amount,
+        address sender,
+        address senderWallet,
+        address remainingGasTo,
+        TvmCell payload
+    ) override external {
+        require(tokenRoot == address(this), ErrorCodes.WRONG_ROOT);
+        require(msg.sender == _getExpectedWalletAddress(address(this)), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
+
+        // Return tokens in case of enabled emergency mode
+        _updateTotalSupply(-amount);
+        _reserveVaultTreasuries();
+
+        // Send burn callback
+        _burnCallback(
+            amount,
+            sender,
+            sender,
+            senderWallet,
+            remainingGasTo,
+            payload
+        );
+    }
+
+    // UPGRADE
+    function upgrade(TvmCell code) external override onlyRootOwner {
         TvmCell data = abi.encode(
             rootOwner_, totalSupply_,
             decimals_, name_, symbol_,

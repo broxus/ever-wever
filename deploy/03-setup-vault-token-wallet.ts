@@ -1,14 +1,11 @@
 import {toNano} from "locklift";
 import {getTokenWalletAddress} from "../test/utils";
-import {VaultAbi} from "../build/factorySource";
+import {VaultTokenRoot_V1Abi} from "../build/factorySource";
 
 export default async () => {
-    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+    const vault = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('Vault');
 
-    const vaultTokenWalletAddress = await vault.methods
-        .token_wallet()
-        .call()
-        .then(res => res.token_wallet);
+    const vaultTokenWalletAddress = await getTokenWalletAddress(vault, vault.address);
 
     await locklift.deployments.saveContract({
         deploymentName: 'VaultTokenWallet',

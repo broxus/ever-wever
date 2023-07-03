@@ -340,9 +340,9 @@ contract VaultTokenWallet_V1 is
 
         if (notify) {
             IAcceptTokensTransferCallback(owner_).onAcceptTokensTransfer{
-                    value: 0,
-                    flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
-                    bounce: false
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
             }(
                 root_,
                 amount,

@@ -6,7 +6,7 @@ import {
 
 import {
     TokenWalletUpgradeableAbi,
-    VaultAbi, VaultTokenWallet_V1Abi,
+    VaultAbi, VaultTokenRoot_V1Abi, VaultTokenWallet_V1Abi,
 } from "../build/factorySource";
 
 import { Account } from "everscale-standalone-client";
@@ -23,7 +23,7 @@ export const stringToBytesArray = (dataString: string) => {
 };
 
 export const getTokenWalletAddress = async function (
-  root: Contract<VaultAbi>,
+  root: Contract<VaultTokenRoot_V1Abi>,
   user: Address,
 ): Promise<Address> {
   return root.methods
@@ -85,12 +85,6 @@ export const getVaultMetrics = async function (
           .then(res => res.value0)
       : 0,
     vaultEVERBalance: vault ? await locklift.provider.getBalance(vault.address) : 0,
-    vaultTotalWrapped: vault
-      ? await vault.methods
-          .total_wrapped()
-          .call()
-          .then(res => res.total_wrapped)
-      : 0,
     WEVERTotalSupply: vault
       ? await vault.methods
           .totalSupply({ answerId: 0 })
@@ -113,7 +107,6 @@ export const logMetricsChange = function (change: VaultMetrics) {
   logger.log(`User EVER balance change: ${change.userEVERBalance}`);
   logger.log(`Vault wEVER balance change: ${change.vaultWEVERBalance}`);
   logger.log(`Vault EVER balance change: ${change.vaultEVERBalance}`);
-  logger.log(`Vault total wrapped change: ${change.vaultTotalWrapped}`);
   logger.log(`wEVER total supply change: ${change.WEVERTotalSupply}`);
 };
 
