@@ -78,7 +78,7 @@ describe("Test wEVER wrap / unwrap", async function () {
             })
         );
 
-        // await trace.traceTree?.beautyPrint();
+        await trace.traceTree?.beautyPrint();
 
         const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 
