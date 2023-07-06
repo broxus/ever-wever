@@ -45,8 +45,8 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    Sender ->> Sender Token Wallet: wrapAndTransfer(N EVER)
-    Note right of Sender: Transfers all Sender's WEVER balance <br> plus N EVER. Sender must attach more<br>than N EVER to the message.
+    Sender ->> Sender Token Wallet: transfer(N EVER)
+    Note right of Sender: Transfers N WEVERs. If wallet's balance is less <br> than wrap missing using msg.value.
     par
         Sender Token Wallet ->> Root: acceptWrap(N EVER)
         Note right of Root: Root increases total supply <br> in asyncronous favour
