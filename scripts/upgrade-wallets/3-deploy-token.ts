@@ -7,7 +7,7 @@ const main = async () => {
     const tokenWallet = await locklift.factory.getContractArtifacts('TokenWalletUpgradeable');
     const tokenWalletPlatform = await locklift.factory.getContractArtifacts('TokenWalletPlatform');
 
-    const OWNER = '0:726f7f17c000a0c549ac60c0d16858638cc4e77705cd3c46c689e0ba1699e9cd';
+    const OWNER = '0:cfcf66505259c0221924bb3ab3759e9e5d9d532f66eb851efd4d0f135237a020';
 
     const {
         contract: root

@@ -3,7 +3,7 @@ const logger = require("mocha-logger");
 
 
 const main = async () => {
-    const OWNER = '0:726f7f17c000a0c549ac60c0d16858638cc4e77705cd3c46c689e0ba1699e9cd';
+    const OWNER = '0:cfcf66505259c0221924bb3ab3759e9e5d9d532f66eb851efd4d0f135237a020';
     const signer = await locklift.keystore.getSigner("0");
 
     const {
@@ -12,7 +12,7 @@ const main = async () => {
             contract: 'Airdrop',
             constructorParams: {
                 owner_: new Address(OWNER),
-                root_: new Address('0:ad395ed2838ccba439a078f0c05a7327fb558daf9cc045688fd206f3da422bb1'),
+                root_: new Address('0:0e789072e63c46cec521f9853a4f7bbb1ee9197005c8fa6d1e04a0b3ab7c2de4'),
                 wallets_: 1000,
                 airdrop_amount_: toNano('1')
             },

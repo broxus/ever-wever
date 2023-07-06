@@ -22,6 +22,13 @@ export const stringToBytesArray = (dataString: string) => {
   return Buffer.from(dataString).toString("hex");
 };
 
+export const getAddress = (id) => {
+    const body = (id).toString(16).padStart(64, '0');
+
+    return new Address(`0:${body}`);
+}
+
+
 export const getTokenWalletAddress = async function (
   root: Contract<VaultTokenRoot_V1Abi>,
   user: Address,

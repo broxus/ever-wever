@@ -1,4 +1,4 @@
-import {EMPTY_TVM_CELL, expect, setupWever} from "./utils";
+import {EMPTY_TVM_CELL, expect, getAddress, setupWever} from "./utils";
 import {Address, Contract, fromNano, getRandomNonce, toNano, zeroAddress} from "locklift";
 import {
     TokenRootUpgradeableAbi,
@@ -10,13 +10,6 @@ const logger = require("mocha-logger");
 import _ from 'underscore';
 import {use} from "chai";
 import {UpgradeAssistant} from "./upgrade-assistant";
-
-
-const getAddress = (id) => {
-    const body = (id).toString(16).padStart(64, '0');
-
-    return new Address(`0:${body}`);
-}
 
 
 const USERS_AMOUNT = 100;
