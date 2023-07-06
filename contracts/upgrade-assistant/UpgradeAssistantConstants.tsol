@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+library UpgradeAssistantConstants {
+    uint128 constant FABRIC_INITIAL_BALANCE = 1 ever;
+    uint128 constant BATCH_INITIAL_BALANCE = 1 ever;
+    uint128 constant ACCEPT_UPGRADE_VALUE = 0.1 ever;
+
+    uint32 constant ACCEPT_UPGRADE_PER_TX = 10;
+    uint32 constant WALLETS_PER_PACK = 50;
+}

@@ -95,6 +95,7 @@ contract VaultTokenRoot_V1 is
      *    the wallet will be upgraded to the new version. Otherwise,
      *    the remaining gas will be transferred to `remainingGasTo`.
      */
+    // TODO: remove request upgrade functions
     function requestUpgradeWallet(
         uint32 currentVersion,
         address walletOwner,
@@ -271,6 +272,10 @@ contract VaultTokenRoot_V1 is
         return totalSupply_ + granted + INITIAL_BALANCE;
     }
 
+    function treasuries() external view returns (uint128) {
+        return _treasuries();
+    }
+
     function __reserve(uint128 amount) internal view {
         tvm.rawReserve(amount, 2);
     }
@@ -329,7 +334,7 @@ contract VaultTokenRoot_V1 is
     ) external override {
         require(amount <= msg.value + RECEIVE_SAFE_FEE, ErrorCodes.MSG_VALUE_TOO_LOW);
 
-        granted += amount;
+//        granted += amount;
         _reserveVaultTreasuries();
 
         msg.sender.transfer({
@@ -429,6 +434,25 @@ contract VaultTokenRoot_V1 is
         );
     }
 
+    function upgradeWallets(
+        address[] wallets,
+        uint128 accept_upgrade_value
+    ) external override onlyRootOwner {
+        _reserveVaultTreasuries();
+
+        for (address wallet: wallets) {
+            ITokenWalletUpgradeable(wallet).acceptUpgrade{
+                value: accept_upgrade_value,
+                bounce: true,
+                flag: 0
+            }(
+                walletCode_,
+                walletVersion_,
+                msg.sender
+            );
+        }
+    }
+
     // UPGRADE
     function upgrade(TvmCell code) external override onlyRootOwner {
         TvmCell data = abi.encode(
@@ -444,5 +468,32 @@ contract VaultTokenRoot_V1 is
         onCodeUpgrade(data);
     }
 
-    function onCodeUpgrade(TvmCell) private {}
+    function onCodeUpgrade(TvmCell data) private {
+        tvm.resetStorage();
+        TvmSlice slice = data.toSlice();
+
+        (
+            rootOwner_,
+            totalSupply_,
+            decimals_
+        ) = slice.decode(address, uint128, uint8);
+
+        slice.loadRefAsSlice();
+        TvmSlice codes = slice.loadRefAsSlice();
+        TvmSlice params = slice.loadRefAsSlice();
+
+        (
+            walletVersion_,
+            platformCode_,
+            walletCode_,
+            name_,
+            symbol_
+        ) = codes.decode(uint32, TvmCell, TvmCell, string, string);
+
+        (
+            mintDisabled_,
+            burnByRootDisabled_,
+            burnPaused_
+        ) = params.decode(bool, bool, bool);
+    }
 }

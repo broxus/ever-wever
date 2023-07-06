@@ -18,4 +18,9 @@ interface IVaultTokenRoot_V1 {
         address gas_back_address,
         TvmCell payload
     ) external;
+
+    function upgradeWallets(
+        address[] wallets,
+        uint128 accept_upgrade_value
+    ) external;
 }

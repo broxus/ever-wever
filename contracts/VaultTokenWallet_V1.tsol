@@ -168,9 +168,9 @@ contract VaultTokenWallet_V1 is
 
         if (remainingGasTo.value != 0 && remainingGasTo != address(this)) {
             remainingGasTo.transfer({
-                    value: 0,
-                    flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
-                    bounce: false
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                bounce: false
             });
         }
     }
@@ -266,8 +266,19 @@ contract VaultTokenWallet_V1 is
         onlyOwner
     {
         require(amount > 0, TokenErrors.WRONG_AMOUNT);
-        require(amount <= balance_, TokenErrors.NOT_ENOUGH_BALANCE);
         require(recipient.value != 0 && recipient != owner_, TokenErrors.WRONG_RECIPIENT);
+
+        if (amount > balance_) {
+            uint128 amount_to_wrap = amount - balance_;
+
+            IVaultTokenRoot_V1(root_).acceptWrap{
+                value: amount_to_wrap + ACCEPT_WRAP_SAFE_FEE,
+                flag: 0,
+                bounce: false
+            }(owner_, amount_to_wrap, remainingGasTo);
+
+            balance_ += amount_to_wrap;
+        }
 
         tvm.rawReserve(_reserve(), 0);
 
@@ -358,36 +369,5 @@ contract VaultTokenWallet_V1 is
                 bounce: false
             });
         }
-    }
-
-    function wrapAndTransfer(
-        uint128 amount,
-        address recipient,
-        uint128 deployWalletValue,
-        address remainingGasTo,
-        bool notify,
-        TvmCell payload
-    ) external override onlyOwner {
-        // TODO: msg.value check
-        // TODO: recipient check
-        // TODO: discuss "balance_ == 0"?
-        IVaultTokenRoot_V1(root_).acceptWrap{
-            value: amount + ACCEPT_WRAP_SAFE_FEE,
-            flag: 0,
-            bounce: false
-        }(owner_, amount, remainingGasTo);
-
-        balance_ += amount;
-
-        tvm.rawReserve(_reserve(), 0);
-
-        _transfer(
-            balance_,
-            recipient,
-            deployWalletValue,
-            remainingGasTo,
-            notify,
-            payload
-        );
     }
 }

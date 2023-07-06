@@ -1,0 +1,93 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+
+import "tip3/contracts/interfaces/ITokenRoot.tsol";
+import "tip3/contracts/interfaces/ITransferableOwnership.tsol";
+import "tip3/contracts/libraries/TokenGas.tsol";
+import "@broxus/contracts/contracts/utils/RandomNonce.tsol";
+import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
+
+
+contract Airdrop is RandomNonce {
+    uint32 constant DEPLOY_WALLET_PER_TX = 50;
+
+    uint32 public wallets;
+    address public root;
+    address public owner;
+    uint128 public airdrop_amount;
+
+    uint32 public wallet_pointer;
+
+    TvmCell empty;
+
+    constructor(
+        uint32 wallets_,
+        address root_,
+        address owner_,
+        uint128 airdrop_amount_
+    ) public {
+        tvm.accept();
+
+        wallets = wallets_ + 1;
+        root = root_;
+        owner = owner_;
+        airdrop_amount = airdrop_amount_;
+
+        wallet_pointer = 1;
+    }
+
+    function _getUsers() internal returns (address[] users) {
+        while (wallet_pointer < wallets && users.length < DEPLOY_WALLET_PER_TX) {
+            users.push(address.makeAddrStd(0, wallet_pointer));
+            wallet_pointer++;
+        }
+
+        return users;
+    }
+
+    function trigger() external {
+        address[] users = _getUsers();
+
+        if (users.length != 0) {
+            for (address user: users) {
+                _mint(user);
+            }
+        }
+
+        if (wallet_pointer < wallets) {
+            Airdrop(address(this)).trigger{
+                value: 0,
+                flag: MsgFlag.ALL_NOT_RESERVED,
+                bounce: false
+            }();
+        } else {
+            ITransferableOwnership(root).transferOwnership{
+                value: 0,
+                flag: MsgFlag.ALL_NOT_RESERVED,
+                bounce: false
+            }(owner, owner, emptyMap);
+        }
+    }
+
+    function destroy() external {
+        selfdestruct(owner);
+    }
+
+    function _mint(address recipient) internal view {
+        ITokenRoot(root).mint{
+            value: TokenGas.TARGET_WALLET_BALANCE + 0.1 ever,
+            bounce: true,
+            flag: 0
+        }(
+            airdrop_amount,
+            recipient,
+            TokenGas.TARGET_WALLET_BALANCE,
+            owner,
+            false,
+            empty
+        );
+    }
+
+    function deployWalletCallback(address) public {}
+}

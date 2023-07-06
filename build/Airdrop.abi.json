@@ -1,0 +1,105 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"wallets_","type":"uint32"},
+				{"name":"root_","type":"address"},
+				{"name":"owner_","type":"address"},
+				{"name":"airdrop_amount_","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "trigger",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destroy",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployWalletCallback",
+			"inputs": [
+				{"name":"value0","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_randomNonce",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_randomNonce","type":"uint256"}
+			]
+		},
+		{
+			"name": "wallets",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"wallets","type":"uint32"}
+			]
+		},
+		{
+			"name": "root",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"root","type":"address"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "airdrop_amount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"airdrop_amount","type":"uint128"}
+			]
+		},
+		{
+			"name": "wallet_pointer",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"wallet_pointer","type":"uint32"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_randomNonce","type":"uint256"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_randomNonce","type":"uint256"},
+		{"name":"wallets","type":"uint32"},
+		{"name":"root","type":"address"},
+		{"name":"owner","type":"address"},
+		{"name":"airdrop_amount","type":"uint128"},
+		{"name":"wallet_pointer","type":"uint32"},
+		{"name":"empty","type":"cell"}
+	]
+}

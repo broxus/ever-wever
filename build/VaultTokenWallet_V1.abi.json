@@ -107,19 +107,6 @@
 			]
 		},
 		{
-			"name": "wrapAndTransfer",
-			"inputs": [
-				{"name":"amount","type":"uint128"},
-				{"name":"recipient","type":"address"},
-				{"name":"deployWalletValue","type":"uint128"},
-				{"name":"remainingGasTo","type":"address"},
-				{"name":"notify","type":"bool"},
-				{"name":"payload","type":"cell"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "burnByRoot",
 			"inputs": [
 				{"name":"amount","type":"uint128"},

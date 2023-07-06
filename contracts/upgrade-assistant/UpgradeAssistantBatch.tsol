@@ -1,0 +1,108 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+pragma AbiHeader pubkey;
+
+import "../interfaces/upgrade-assistant/IUpgradeAssistantBatch.tsol";
+import "../interfaces/upgrade-assistant/IUpgradeAssistantFabric.tsol";
+import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
+import {
+    UpgradeAssistantConstants as constants
+} from "./UpgradeAssistantConstants.tsol";
+
+
+contract UpgradeAssistantBatch is IUpgradeAssistantBatch {
+    address static fabric;
+    uint32 static nonce;
+
+    address[] public wallets;
+    uint public wallets_pointer;
+    uint public worker;
+    address public owner;
+
+    modifier onlyFabric() {
+        require(msg.sender == fabric);
+
+        _;
+    }
+
+    modifier reserveMinBalance() {
+        tvm.rawReserve(constants.BATCH_INITIAL_BALANCE, 2);
+
+        _;
+    }
+
+    modifier onlyWorker() {
+        require(msg.pubkey() == worker);
+
+        _;
+    }
+
+    modifier onlySelfCall() {
+        require(msg.sender == address(this));
+
+        _;
+    }
+
+    constructor(
+        uint worker_,
+        address owner_
+    ) public {
+        require(msg.sender == fabric);
+
+        worker = worker_;
+        owner = owner_;
+    }
+
+    function addWallets(address[] wallets_) external override onlyWorker {
+        tvm.accept();
+
+        for (address wallet: wallets_) {
+            wallets.push(wallet);
+        }
+    }
+
+    function _getWalletsPack() internal returns(address[] pack) {
+        while (wallets_pointer < wallets.length && pack.length < constants.WALLETS_PER_PACK) {
+            pack.push(wallets[wallets_pointer]);
+            wallets_pointer++;
+        }
+
+        return pack;
+    }
+
+    function upgrade() external override onlyFabric {
+        _upgrade();
+    }
+
+    function continueUpgrade() external override onlySelfCall {
+        tvm.accept();
+
+        _upgrade();
+    }
+
+    function _upgrade() internal reserveMinBalance {
+        for (uint8 i = 0; i < constants.ACCEPT_UPGRADE_PER_TX; i++) {
+            address[] wallets_pack = _getWalletsPack();
+
+            if (wallets_pack.length > 0) {
+                IUpgradeAssistantFabric(fabric).acceptUpgrade{
+                    value: uint128(wallets_pack.length) * constants.ACCEPT_UPGRADE_VALUE + 1 ever,
+                    bounce: true,
+                    flag: 0
+                }(nonce, wallets_pack);
+            } else {
+                break;
+            }
+        }
+
+        if (wallets_pointer < wallets.length) {
+            IUpgradeAssistantBatch(address(this)).continueUpgrade{
+                value: 0,
+                flag: MsgFlag.ALL_NOT_RESERVED,
+                bounce: false
+            }();
+        } else {
+            selfdestruct(fabric);
+        }
+    }
+}

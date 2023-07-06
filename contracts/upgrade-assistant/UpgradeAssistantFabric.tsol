@@ -1,0 +1,123 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+import "../interfaces/upgrade-assistant/IUpgradeAssistantFabric.tsol";
+import "../interfaces/upgrade-assistant/IUpgradeAssistantBatch.tsol";
+import "../interfaces/IVaultTokenRoot_V1.tsol";
+import "./UpgradeAssistantBatch.tsol";
+import {
+    UpgradeAssistantConstants as constants
+} from "./UpgradeAssistantConstants.tsol";
+
+import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
+import "@broxus/contracts/contracts/access/InternalOwner.tsol";
+import "@broxus/contracts/contracts/utils/RandomNonce.tsol";
+
+import "tip3/contracts/interfaces/ITransferableOwnership.tsol";
+
+
+contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, RandomNonce {
+    address public root;
+    uint public worker;
+    uint32 public batches;
+    TvmCell public upgrade_assistant_batch_code;
+
+    modifier onlyBatch(uint32 nonce) {
+        require(msg.sender == _deriveBatch(nonce));
+
+        _;
+    }
+
+    modifier reserve() {
+        tvm.rawReserve(address(this).balance - msg.value, 2);
+
+        _;
+    }
+
+    constructor(
+        address owner_,
+        uint worker_,
+        address root_,
+        TvmCell upgrade_assistant_batch_code_,
+        uint32 batches_
+    ) public {
+        tvm.accept();
+
+        setOwnership(owner_);
+
+        worker = worker_;
+        root = root_;
+        upgrade_assistant_batch_code = upgrade_assistant_batch_code_;
+        batches = batches_;
+
+        for (uint32 batch_id = 0; batch_id < batches; batch_id++) {
+            address batch = _deployBatch(batch_id);
+
+            emit NewBatch(batch_id, batch);
+        }
+    }
+
+    function _deployBatch(uint32 nonce) internal view returns(address) {
+        return new UpgradeAssistantBatch{
+            value: constants.BATCH_INITIAL_BALANCE,
+            flag: 0,
+            code: upgrade_assistant_batch_code,
+            pubkey: 0,
+            varInit: {
+                fabric: address(this),
+                nonce: nonce
+            }
+        }(worker, owner);
+    }
+
+    function deriveBatch(uint32 batch_id) external view returns (address) {
+        return _deriveBatch(batch_id);
+    }
+
+    function _deriveBatch(uint32 batch_id) internal view returns (address) {
+        TvmCell stateInit = tvm.buildStateInit({
+            contr: UpgradeAssistantBatch,
+            varInit: {
+                fabric: address(this),
+                nonce: batch_id
+            },
+            pubkey: 0,
+            code: upgrade_assistant_batch_code
+        });
+
+        return address(tvm.hash(stateInit));
+    }
+
+    function upgrade() external override onlyOwner reserve {
+        uint128 value_per_batch = msg.value / batches - 0.1 ever;
+
+        for (uint32 batch_id = 0; batch_id < batches; batch_id++) {
+            address batch = _deriveBatch(batch_id);
+
+            IUpgradeAssistantBatch(batch).upgrade{
+                value: value_per_batch,
+                bounce: true,
+                flag: 0
+            }();
+        }
+    }
+
+    function acceptUpgrade(
+        uint32 nonce,
+        address[] wallets
+    ) external override onlyBatch(nonce) reserve {
+        IVaultTokenRoot_V1(root).upgradeWallets{
+            value: 0,
+            bounce: true,
+            flag: MsgFlag.REMAINING_GAS
+        }(wallets, constants.ACCEPT_UPGRADE_VALUE);
+    }
+
+    function revokeOwnership() external reserve override {
+        ITransferableOwnership(root).transferOwnership{
+            bounce: true,
+            flag: MsgFlag.ALL_NOT_RESERVED,
+            value: 0
+        }(owner, msg.sender, emptyMap);
+    }
+}

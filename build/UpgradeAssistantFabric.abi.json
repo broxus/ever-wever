@@ -1,0 +1,148 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"owner_","type":"address"},
+				{"name":"worker_","type":"uint256"},
+				{"name":"root_","type":"address"},
+				{"name":"upgrade_assistant_batch_code_","type":"cell"},
+				{"name":"batches_","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deriveBatch",
+			"inputs": [
+				{"name":"batch_id","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "acceptUpgrade",
+			"inputs": [
+				{"name":"nonce","type":"uint32"},
+				{"name":"wallets","type":"address[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "revokeOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "_randomNonce",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_randomNonce","type":"uint256"}
+			]
+		},
+		{
+			"name": "root",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"root","type":"address"}
+			]
+		},
+		{
+			"name": "worker",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"worker","type":"uint256"}
+			]
+		},
+		{
+			"name": "batches",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"batches","type":"uint32"}
+			]
+		},
+		{
+			"name": "upgrade_assistant_batch_code",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"upgrade_assistant_batch_code","type":"cell"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_randomNonce","type":"uint256"}
+	],
+	"events": [
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "NewBatch",
+			"inputs": [
+				{"name":"batch_id","type":"uint32"},
+				{"name":"batch","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"owner","type":"address"},
+		{"name":"_randomNonce","type":"uint256"},
+		{"name":"root","type":"address"},
+		{"name":"worker","type":"uint256"},
+		{"name":"batches","type":"uint32"},
+		{"name":"upgrade_assistant_batch_code","type":"cell"}
+	]
+}

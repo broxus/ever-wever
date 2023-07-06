@@ -56,7 +56,7 @@ describe('Transfer tokens with additional wrap', async function() {
         );
     });
 
-    it('Transfer tokens with additional wrap', async () => {
+    it('Transfer more WEVERs than available (with additional wrap)', async () => {
         const {
             aliceTokenWallet, alice,
             bobTokenWallet, bob,
@@ -67,16 +67,16 @@ describe('Transfer tokens with additional wrap', async function() {
         const bobInitialMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
 
         const trace = await locklift.tracing.trace(
-            aliceTokenWallet.methods.wrapAndTransfer({
+            aliceTokenWallet.methods.transfer({
                 recipient: bob.address,
-                amount: locklift.utils.toNano('1'),
+                amount: locklift.utils.toNano('6'),
                 deployWalletValue: locklift.utils.toNano('0.5'),
                 remainingGasTo: alice.address,
                 notify: false,
                 payload: EMPTY_TVM_CELL
             }).send({
                 from: alice.address,
-                amount: toNano('2')
+                amount: toNano('3')
             })
         );
 
@@ -97,18 +97,74 @@ describe('Transfer tokens with additional wrap', async function() {
         expect(aliceMetricsChange.userWEVERBalance)
             .to.be.equal(-4, 'Wrong Alice WEVER balance change');
         expect(aliceMetricsChange.userEVERBalance)
-            .to.be.lessThan(-1, 'Alice EVER balance change too big')
-            .to.be.greaterThan(-1.2, 'Alice EVER balance change too small');
+            .to.be.lessThan(-2, 'Alice EVER balance change too big')
+            .to.be.greaterThan(-2.2, 'Alice EVER balance change too small');
 
         expect(bobMetricsChange.userWEVERBalance)
-            .to.be.equal(5, 'Wrong Bob WEVER balance change');
+            .to.be.equal(6, 'Wrong Bob WEVER balance change');
         expect(bobMetricsChange.userEVERBalance)
             .to.be.equal(0, 'Wrong Bob EVER balance change');
 
         expect(bobMetricsChange.vaultEVERBalance)
-            .to.be.equal(1, 'Wrong Vault balance change');
+            .to.be.equal(2, 'Wrong Vault balance change');
         expect(bobMetricsChange.WEVERTotalSupply)
-            .to.be.equal(1, 'Wrong total supply change');
+            .to.be.equal(2, 'Wrong total supply change');
+    });
+
+    it('Transfer WEVERs with 0 balance (with additional wrap)', async () => {
+        const {
+            aliceTokenWallet, alice,
+            bobTokenWallet, bob,
+            vaultTokenWallet, vault
+        } = context;
+
+        const aliceInitialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
+        const bobInitialMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
+
+        const trace = await locklift.tracing.trace(
+            aliceTokenWallet.methods.transfer({
+                recipient: bob.address,
+                amount: locklift.utils.toNano('2'),
+                deployWalletValue: locklift.utils.toNano('0'),
+                remainingGasTo: alice.address,
+                notify: false,
+                payload: EMPTY_TVM_CELL
+            }).send({
+                from: alice.address,
+                amount: toNano('3')
+            })
+        );
+
+        // await trace.traceTree?.beautyPrint();
+
+        const aliceFinalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
+        const bobFinalMetrics = await getVaultMetrics(bobTokenWallet, bob, vaultTokenWallet, vault);
+
+        const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);
+        const bobMetricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
+
+        logger.pending('Alice metrics change');
+        logMetricsChange(aliceMetricsChange);
+
+        logger.pending('Bob metrics change')
+        logMetricsChange(bobMetricsChange);
+
+        expect(aliceMetricsChange.userWEVERBalance)
+            .to.be.equal(0, 'Wrong Alice WEVER balance change');
+        expect(aliceMetricsChange.userEVERBalance)
+            .to.be.lessThan(-2, 'Alice EVER balance change too big')
+            .to.be.greaterThan(-2.2, 'Alice EVER balance change too small');
+
+        expect(bobMetricsChange.userWEVERBalance)
+            .to.be.equal(2, 'Wrong Bob WEVER balance change');
+        expect(bobMetricsChange.userEVERBalance)
+            .to.be.equal(0, 'Wrong Bob EVER balance change');
+
+        expect(bobMetricsChange.vaultEVERBalance)
+            .to.be.equal(2, 'Wrong Vault balance change');
+        expect(bobMetricsChange.WEVERTotalSupply)
+            .to.be.equal(2, 'Wrong total supply change');
+
     });
 
     it('Burn tokens', async () => {

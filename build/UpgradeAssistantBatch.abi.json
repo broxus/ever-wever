@@ -1,0 +1,87 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"worker_","type":"uint256"},
+				{"name":"owner_","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addWallets",
+			"inputs": [
+				{"name":"wallets_","type":"address[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "continueUpgrade",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "wallets",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"wallets","type":"address[]"}
+			]
+		},
+		{
+			"name": "wallets_pointer",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"wallets_pointer","type":"uint256"}
+			]
+		},
+		{
+			"name": "worker",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"worker","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"fabric","type":"address"},
+		{"key":2,"name":"nonce","type":"uint32"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"fabric","type":"address"},
+		{"name":"nonce","type":"uint32"},
+		{"name":"wallets","type":"address[]"},
+		{"name":"wallets_pointer","type":"uint256"},
+		{"name":"worker","type":"uint256"},
+		{"name":"owner","type":"address"}
+	]
+}

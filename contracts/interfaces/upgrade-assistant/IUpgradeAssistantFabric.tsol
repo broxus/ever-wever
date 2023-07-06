@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+interface IUpgradeAssistantFabric {
+    event NewBatch(uint32 batch_id, address batch);
+
+    function upgrade() external;
+
+    function acceptUpgrade(
+        uint32 nonce,
+        address[] wallets
+    ) external;
+
+    function revokeOwnership() external;
+}

@@ -15,6 +15,8 @@ declare global {
   const locklift: import("locklift").Locklift<FactorySource>;
 }
 
+import "locklift-verifier";
+
 declare module "locklift" {
   //@ts-ignore
   export interface Locklift {
@@ -28,7 +30,17 @@ const DEV_NET_NETWORK_ENDPOINT = process.env.DEV_NET_NETWORK_ENDPOINT || "https:
 // Create your own link on https://dashboard.evercloud.dev/
 const MAIN_NET_NETWORK_ENDPOINT = process.env.MAIN_NET_NETWORK_ENDPOINT || "https://mainnet.evercloud.dev/XXX/graphql";
 
+const VENOM_DEVNET_ENDPOINT = process.env.VENOM_DEVNET_ENDPOINT || "https://jrpc-devnet.venom.foundation/";
+const VENOM_DEVNET_TRACE_ENDPOINT =
+    process.env.VENOM_DEVNET_TRACE_ENDPOINT || "https://gql-devnet.venom.network/graphql";
+
 const config: LockliftConfig = {
+  verifier: {
+    verifierVersion: "latest", // contract verifier binary, see https://github.com/broxus/everscan-verify/releases
+    apiKey: "uwJlTyvauW",
+    secretKey: "IEx2jg4hqE3V1YUqcVOY",
+    // license: "AGPL-3.0-or-later", <- this is default value and can be overrided
+  },
   compiler: {
     // Specify path to your TON-Solidity-Compiler
     // path: "/mnt/o/projects/broxus/TON-Solidity-Compiler/build/solc/solc",
@@ -91,6 +103,30 @@ const config: LockliftConfig = {
       },
       keys: {
         amount: 500,
+      },
+    },
+    venom_devnet: {
+      connection: {
+        id: 1000,
+        type: "jrpc",
+        group: "dev",
+        data: {
+          endpoint: VENOM_DEVNET_ENDPOINT,
+        },
+      },
+      giver: {
+        address: "0:7314b0ab6eee6ce296f480504cf04797d03839778281c71cb9d60c987c783456",
+        phrase: process.env.VENOM_DEV_SEED_PHRASE,
+        accountId: 0
+      },
+      tracing: {
+        endpoint: VENOM_DEVNET_TRACE_ENDPOINT,
+      },
+      keys: {
+        // Use everdev to generate your phrase
+        // !!! Never commit it in your repos !!!
+        phrase: process.env.VENOM_DEV_SEED_PHRASE,
+        amount: 20,
       },
     },
   },

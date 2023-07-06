@@ -1,0 +1,1034 @@
+.version sol 0.57.1
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+LDU 256
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDREF
+LDU 32
+ENDS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 44
+ACCEPT
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 46
+ROLL 4
+CALLREF {
+	CALL $setOwnership_internal_macro$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 48
+ROLL 3
+SETGLOB 13
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 49
+ROT
+SETGLOB 12
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 50
+SWAP
+SETGLOB 15
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 51
+SETGLOB 14
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 53
+PUSHINT 0
+PUSHCONT {
+	DUP
+	GETGLOB 14
+	LESS
+}
+PUSHCONT {
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 54
+	DUP
+	CALLREF {
+		CALL $_deployBatch_internal_macro$
+	}
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 56
+	OVER
+	PUSHSLICE xc0000000000000000000000000322da0ca
+	NEWC
+	STSLICE
+	STU 32
+	STSLICE
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 53
+	INC
+	UFITS 32
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+}
+WHILE
+DROP
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	_deployBatch_internal
+.type	_deployBatch_internal, @function
+CALL $_deployBatch_internal_macro$
+
+.macro _deployBatch_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 61
+GETGLOB 10
+GETGLOB 13
+PUSHINT 0
+NEWC
+STU 256
+PUSHINT 0
+NEWDICT
+PUSHINT 64
+DICTUSETB
+MYADDR
+PUSHINT 1
+ROT
+PUSHINT 64
+DICTUSET
+ROLL 3
+NEWC
+STU 32
+PUSHINT 2
+ROT
+PUSHINT 64
+DICTUSETB
+NEWC
+STDICT
+ENDC
+GETGLOB 15
+NEWC
+STSLICECONST x2_
+STOPTREF
+STOPTREF
+STZERO
+ENDC
+DUP
+HASHCU
+NEWC
+STSLICECONST x801_
+STU 256
+ENDC
+CTOS
+ROLLREV 3
+PUSH S3
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHSLICE x43b9aca00000000000000000000000000007_
+STSLICER
+OVER
+CALLREF {
+	CTOS
+	LDI 1
+	SWAP
+	PUSHCONT {
+		LDI 5
+		NIP
+	}
+	IF
+	LDI 1
+	SWAP
+	PUSHCONT {
+		LDI 2
+		NIP
+	}
+	IF
+	LDOPTREF
+	LDOPTREF
+	LDDICT
+	ENDS
+	BLKDROP 3
+}
+STREF
+STSLICECONST 1
+ROTREV
+NEWC
+STSLICECONST x01d53d1d
+STU 256
+STSLICE
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.macro deriveBatch
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 73
+LDU 32
+ENDS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $deriveBatch_internal_macro$
+}
+OVER
+PUSHCONT {
+	PUSH S3
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 1
+	STUR 98
+	SWAP
+	NEWC
+	STSLICECONST xb0da4322
+	STSLICE
+	STBREFR
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.macro deriveBatch_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 74
+CALLREF {
+	CALL $_deriveBatch_internal_macro$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.globl	_deriveBatch_internal
+.type	_deriveBatch_internal, @function
+CALL $_deriveBatch_internal_macro$
+
+.macro _deriveBatch_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 78
+PUSHINT 0
+NEWC
+STU 256
+PUSHINT 0
+NEWDICT
+PUSHINT 64
+DICTUSETB
+MYADDR
+PUSHINT 1
+ROT
+PUSHINT 64
+DICTUSET
+SWAP
+NEWC
+STU 32
+PUSHINT 2
+ROT
+PUSHINT 64
+DICTUSETB
+NEWC
+STDICT
+ENDC
+GETGLOB 15
+NEWC
+STSLICECONST x2_
+STOPTREF
+STOPTREF
+STZERO
+ENDC
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 88
+HASHCU
+NEWC
+STSLICECONST x801_
+STU 256
+ENDC
+CTOS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.macro upgrade
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 91
+ENDS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $upgrade_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro upgrade_internal_macro
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 10
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 32
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 92
+DEPTH
+ADDCONST -2
+PICK
+GETGLOB 14
+DIV
+PUSHINT 100000000
+SUB
+UFITS 128
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 94
+PUSHINT 0
+PUSHCONT {
+	DUP
+	GETGLOB 14
+	LESS
+}
+PUSHCONT {
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 95
+	DUP
+	CALLREF {
+		CALL $_deriveBatch_internal_macro$
+	}
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 97
+	PUXC S2, S-1
+	TRUE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	PUSHINT 3
+	STZEROES
+	STSLICE
+	SWAP
+	STGRAMS
+	PUSHSLICE x00000000000000000000000000011e6c3e9_
+	STSLICER
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 94
+	INC
+	UFITS 32
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+}
+WHILE
+DROP2
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.macro acceptUpgrade
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 105
+LDU 32
+LDU 32
+LDDICT
+ROTREV
+PAIR
+SWAP
+ENDS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $acceptUpgrade_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro acceptUpgrade_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 105
+GETGLOB 9
+ROT
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 26
+CALLREF {
+	CALL $_deriveBatch_internal_macro$
+}
+SDEQ
+THROWIFNOT 100
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 32
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 109
+PUSHINT 100000000
+SWAP
+GETGLOB 12
+TRUE
+NEWC
+STSLICECONST x6_
+STI 1
+PUSHINT 3
+STZEROES
+STSLICE
+PUSHSLICE x000000000000000000000000000073c5836d_
+STSLICER
+SWAP
+UNPAIR
+XCHG S2
+STU 32
+STDICT
+STU 128
+ENDC
+PUSHINT 64
+SENDRAWMSG
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.macro revokeOwnership
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 116
+ENDS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $revokeOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro revokeOwnership_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 32
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 117
+NEWDICT
+GETGLOB 9
+GETGLOB 10
+GETGLOB 12
+TRUE
+NEWC
+STSLICECONST x6_
+STI 1
+PUSHINT 3
+STZEROES
+STSLICE
+PUSHINT 1
+STUR 111
+ROLLREV 3
+NEWC
+STSLICECONST x1df385c6
+STSLICE
+ROTREV
+NEWC
+STSLICE
+STDICT
+STBREFR
+STBREFR
+ENDC
+PUSHINT 128
+SENDRAWMSG
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.globl	setOwnership_internal
+.type	setOwnership_internal, @function
+CALL $setOwnership_internal_macro$
+
+.macro setOwnership_internal_macro
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 24
+GETGLOB 10
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 26
+OVER
+SETGLOB 10
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 28
+PUSHSLICE xc0000000000000000000000001
+NEWC
+STSLICE
+ROTREV
+NEWC
+STSLICECONST x6115f072
+STSLICE
+SWAP
+NEWC
+STSLICE
+STBREFR
+STBREFR
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+
+.macro transferOwnership
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 34
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+CALLREF {
+	CALL $transferOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro transferOwnership_internal_macro
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 10
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 37
+DUP
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SDEQ
+THROWIF 1102
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 39
+CALLREF {
+	CALL $setOwnership_internal_macro$
+}
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+
+.macro renounceOwnership
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 45
+ENDS
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+CALLREF {
+	CALL $renounceOwnership_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro renounceOwnership_internal_macro
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 10
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 46
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 48
+CALLREF {
+	CALL $setOwnership_internal_macro$
+}
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDU 256
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDU 256
+LDU 32
+LDREF
+ENDS
+SETGLOB 15
+SETGLOB 14
+SETGLOB 13
+SETGLOB 12
+SETGLOB 11
+SETGLOB 10
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	PUSHINT 1
+	PUSH S2
+	PUSHINT 64
+	DICTUGET
+	PUSHCONT {
+		PLDU 256
+	}
+	PUSHCONT {
+		PUSHINT 0
+	}
+	IFELSE
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	PUSHINT 0
+	DUP
+	PUSHREF {
+	}
+	SETGLOB 15
+	SETGLOB 14
+	SETGLOB 13
+	SETGLOB 12
+	SETGLOB 11
+	SETGLOB 10
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 15
+GETGLOB 14
+GETGLOB 13
+GETGLOB 12
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STSLICE
+ROLLREV 5
+NEWC
+STU 256
+STSLICE
+ROLLREV 3
+NEWC
+STU 256
+STU 32
+STREF
+STBREFR
+STBREFR
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
+DROP
+SETGLOB 9
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SETGLOB 9
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHINT 512
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	ROT
+	GETGLOB 2
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+IF
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.macro owner
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 10
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000df0bcfde
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro _randomNonce
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 11
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000bb53331f
+	NEWC
+	STSLICE
+	STU 256
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro root
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 12
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000b7295e20
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro worker
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 13
+OVER
+PUSHCONT {
+	PUSHSLICE xc000000000000000000000000093947857
+	NEWC
+	STSLICE
+	STU 256
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro batches
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 14
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000e2e3c686
+	NEWC
+	STSLICE
+	STU 32
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro upgrade_assistant_batch_code
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 15
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000c34cea98
+	NEWC
+	STSLICE
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro public_function_selector
+DUP
+PUSHINT 521396392
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 150168052
+	EQUAL
+	IFJMPREF {
+		CALL $upgrade$
+	}
+	DUP
+	PUSHINT 235197086
+	EQUAL
+	IFJMPREF {
+		CALL $transferOwnership$
+	}
+	DUP
+	PUSHINT 328497239
+	EQUAL
+	IFJMPREF {
+		CALL $worker$
+	}
+	DUP
+	PUSHINT 521396392
+	EQUAL
+	IFJMPREF {
+		CALL $revokeOwnership$
+	}
+}
+DUP
+PUSHINT 925457952
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 657812748
+	EQUAL
+	IFJMPREF {
+		CALL $constructor$
+	}
+	DUP
+	PUSHINT 662970463
+	EQUAL
+	IFJMPREF {
+		CALL $acceptUpgrade$
+	}
+	DUP
+	PUSHINT 819610402
+	EQUAL
+	IFJMPREF {
+		CALL $deriveBatch$
+	}
+	DUP
+	PUSHINT 925457952
+	EQUAL
+	IFJMPREF {
+		CALL $root$
+	}
+}
+DUP
+PUSHINT 1659094662
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 995308319
+	EQUAL
+	IFJMPREF {
+		CALL $_randomNonce$
+	}
+	DUP
+	PUSHINT 1129114264
+	EQUAL
+	IFJMPREF {
+		CALL $upgrade_assistant_batch_code$
+	}
+	DUP
+	PUSHINT 1594609630
+	EQUAL
+	IFJMPREF {
+		CALL $owner$
+	}
+	DUP
+	PUSHINT 1659094662
+	EQUAL
+	IFJMPREF {
+		CALL $batches$
+	}
+}
+DUP
+PUSHINT 1729444094
+EQUAL
+IFJMPREF {
+	CALL $renounceOwnership$
+}
+

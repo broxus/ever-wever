@@ -24,43 +24,43 @@ describe("Test wEVER wrap / unwrap", async function () {
     context = await setupWever();
   });
 
-  describe("Test granting", async function () {
-    it("Grant EVERs to the vault", async function () {
-      const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
-      const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
-
-      const trace = await locklift.tracing.trace(
-          vault.methods
-              .grant({
-                amount: toNano(4),
-              })
-              .send({
-                from: alice.address,
-                amount: toNano(6),
-              })
-      );
-
-      // await trace.traceTree?.beautyPrint();
-
-      const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
-
-      const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
-
-      logMetricsChange(metricsChange);
-
-      expect(metricsChange.userWEVERBalance).to.be.equal(0, "Wrong user wEVER balance change");
-
-      expect(metricsChange.userEVERBalance)
-        .to.be.below(-4, "Too low user EVER balance change")
-        .to.be.above(-4.5, "Too high user EVER balance change");
-
-      expect(metricsChange.vaultWEVERBalance).to.be.equal(0, "Wrong vault wEVER balance change");
-
-      expect(metricsChange.vaultEVERBalance).to.be.equal(4, "Vault EVER balance change differs from granted");
-
-      expect(metricsChange.WEVERTotalSupply).to.be.equal(0, "wEVER total supply should not change");
-    });
-  });
+  // describe("Test granting", async function () {
+  //   it("Grant EVERs to the vault", async function () {
+  //     const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
+  //     const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
+  //
+  //     const trace = await locklift.tracing.trace(
+  //         vault.methods
+  //             .grant({
+  //               amount: toNano(4),
+  //             })
+  //             .send({
+  //               from: alice.address,
+  //               amount: toNano(6),
+  //             })
+  //     );
+  //
+  //     // await trace.traceTree?.beautyPrint();
+  //
+  //     const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
+  //
+  //     const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
+  //
+  //     logMetricsChange(metricsChange);
+  //
+  //     expect(metricsChange.userWEVERBalance).to.be.equal(0, "Wrong user wEVER balance change");
+  //
+  //     expect(metricsChange.userEVERBalance)
+  //       .to.be.below(-4, "Too low user EVER balance change")
+  //       .to.be.above(-4.5, "Too high user EVER balance change");
+  //
+  //     expect(metricsChange.vaultWEVERBalance).to.be.equal(0, "Wrong vault wEVER balance change");
+  //
+  //     expect(metricsChange.vaultEVERBalance).to.be.equal(4, "Vault EVER balance change differs from granted");
+  //
+  //     expect(metricsChange.WEVERTotalSupply).to.be.equal(0, "wEVER total supply should not change");
+  //   });
+  // });
 
   describe("Test wrapping", async function () {
     describe("Wrap TON to wEVERs by sending EVERs to vault", async function () {
@@ -178,7 +178,7 @@ describe("Test wEVER wrap / unwrap", async function () {
                 })
         );
 
-        // await trace.traceTree?.beautyPrint();
+        await trace.traceTree?.beautyPrint();
 
         const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
 

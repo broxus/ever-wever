@@ -70,6 +70,14 @@
 			]
 		},
 		{
+			"name": "treasuries",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
 			"name": "acceptWrap",
 			"inputs": [
 				{"name":"walletOwner","type":"address"},
@@ -115,6 +123,15 @@
 				{"name":"senderWallet","type":"address"},
 				{"name":"remainingGasTo","type":"address"},
 				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgradeWallets",
+			"inputs": [
+				{"name":"wallets","type":"address[]"},
+				{"name":"accept_upgrade_value","type":"uint128"}
 			],
 			"outputs": [
 			]
