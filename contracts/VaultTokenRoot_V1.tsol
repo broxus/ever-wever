@@ -1,24 +1,24 @@
 pragma ton-solidity >= 0.57.1;
 
-import "tip3/contracts/abstract/TokenRootTransferableOwnershipBase.tsol";
-import "tip3/contracts/abstract/TokenRootBurnPausableBase.tsol";
-import "tip3/contracts/abstract/TokenRootBurnableByRootBase.tsol";
-import "tip3/contracts/abstract/TokenRootDisableableMintBase.tsol";
-import "tip3/contracts/interfaces/IAcceptTokensTransferCallback.tsol";
+import "tip3/abstract/TokenRootTransferableOwnershipBase.tsol";
+import "tip3/abstract/TokenRootBurnPausableBase.tsol";
+import "tip3/abstract/TokenRootBurnableByRootBase.tsol";
+import "tip3/abstract/TokenRootDisableableMintBase.tsol";
+import "tip3/interfaces/IAcceptTokensTransferCallback.tsol";
 
-import "tip3/contracts/interfaces/ITokenRootUpgradeable.tsol";
-import "tip3/contracts/interfaces/ITokenWalletUpgradeable.tsol";
-import "tip3/contracts/interfaces/IVersioned.tsol";
-import "tip3/contracts/libraries/TokenErrors.tsol";
-import "tip3/contracts/libraries/TokenMsgFlag.tsol";
-import "tip3/contracts/libraries/TokenGas.tsol";
-import "tip3/contracts/TokenWalletPlatform.tsol";
+import "tip3/interfaces/ITokenRootUpgradeable.tsol";
+import "tip3/interfaces/ITokenWalletUpgradeable.tsol";
+import "tip3/interfaces/IVersioned.tsol";
+import "tip3/libraries/TokenErrors.tsol";
+import "tip3/libraries/TokenMsgFlag.tsol";
+import "tip3/libraries/TokenGas.tsol";
+import "tip3/TokenWalletPlatform.tsol";
 
 import "./interfaces/IVaultTokenRoot_V1.tsol";
+import "./libraries/ErrorCodes.tsol";
 
 import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
 
-import "./libraries/ErrorCodes.tsol";
 
 contract VaultTokenRoot_V1 is
     TokenRootTransferableOwnershipBase,

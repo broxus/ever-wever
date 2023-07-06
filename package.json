@@ -36,8 +36,7 @@
     "mocha-logger": "^1.0.8",
     "ora": "^3.4.0",
     "prettier": "^2.8.1",
-    "prompts": "^2.4.2",
-    "tip3": "git+https://pavlovdog:-ANs38pRRXxysGcjSdG5@gitlab.broxus.com/tokens/tip3#74a770e10f0749ebfb4dfcc277e13a3c27469aa2"
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
     "chai": "^4.3.4",

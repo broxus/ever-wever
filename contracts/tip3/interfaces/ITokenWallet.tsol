@@ -1,0 +1,88 @@
+pragma ton-solidity >= 0.57.0;
+
+import "./TIP3TokenWallet.tsol";
+import "./../additional/SID.tsol";
+
+/**
+ * @title TokenWallet interface.
+ * @dev The ITokenWallet interface defines the minimal required functionality
+ * for a TIP-3 compliant token wallet contract. It inherits the {TIP3TokenWallet}
+ * interface, which provides basic information about the token wallet such as its
+ * root contract and current balance. Additionally, the ITokenWallet interface also
+ * includes the {SID} interface, which allows other contracts to query if a contract
+ * implements a specific interface.
+ */
+interface ITokenWallet is TIP3TokenWallet, SID {
+
+    /**
+     * @dev Returns the current owner of the wallet.
+     * @return The current owner of the wallet.
+     */
+    function owner() external view responsible returns (address);
+
+    /**
+     * @dev Transfer tokens and optionally deploy {TokenWallet} for `recipient`.
+     *
+     * If deployWalletValue !=0 deploy token wallet for recipient using that gas value
+     * @param amount How much tokens to transfer
+     * @param recipient Tokens recipient address
+     * @param deployWalletValue How much EVERs to attach to token wallet deploy
+     * @param remainingGasTo Remaining gas receiver
+     * @param notify Notify receiver on incoming transfer
+     * @param payload Notification payload
+    */
+    function transfer(
+        uint128 amount,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) external;
+
+    /**
+     * @dev Transfer tokens using another {TokenWallet} address, that wallet must be deployed previously
+     * @param amount How much tokens to transfer
+     * @param recipientTokenWallet Recipient TokenWallet address
+     * @param remainingGasTo Remaining gas receiver
+     * @param notify Notify receiver on incoming transfer
+     * @param payload Notification payload
+    */
+    function transferToWallet(
+        uint128 amount,
+        address recipientTokenWallet,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) external;
+
+    /**
+     * @dev Callback for transfer operation
+     * @param amount How much tokens to receive
+     * @param sender Sender TokenWallet owner address
+     * @param remainingGasTo Remaining gas receiver
+     * @param notify Notify receiver on incoming transfer
+     * @param payload Notification payload
+    */
+    function acceptTransfer(
+        uint128 amount,
+        address sender,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) external functionID(0x67A0B95F);
+
+    /**
+     * @dev Accept minted tokens from root
+     * @param amount How much tokens to accept
+     * @param remainingGasTo Remaining gas receiver
+     * @param notify Notify receiver on incoming mint
+     * @param payload Notification payload
+    */
+    function acceptMint(
+        uint128 amount,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) external functionID(0x4384F298);
+}

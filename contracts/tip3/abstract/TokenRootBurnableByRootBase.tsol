@@ -1,0 +1,81 @@
+pragma ton-solidity >= 0.57.0;
+
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
+
+import "./TokenRootBase.tsol";
+import "../interfaces/IBurnableByRootTokenRoot.tsol";
+import "../interfaces/IBurnableByRootTokenWallet.tsol";
+import "../libraries/TokenErrors.tsol";
+import "../libraries/TokenMsgFlag.tsol";
+
+/**
+ * @dev Implementation of the {IBurnableByRootTokenRoot} interface.
+ *
+ * This abstraction extends the functionality of {TokenRootBase} and increases
+ * the capabilities of TokenRoot, namely burning tokens of any wallet, disabling
+ * the ability to burn tokens through the TokenRoot.
+ * And a view method that returns the state of 'burnByRootDisabled_'.
+ */
+abstract contract TokenRootBurnableByRootBase is TokenRootBase, IBurnableByRootTokenRoot {
+
+    bool burnByRootDisabled_;
+
+    /**
+     * @dev See {IBurnableByRootTokenRoot-burnTokens}.
+     *
+     * Preconditions:
+     *
+     * - `burnByRootDisabled_` must be `false`.
+     * - `amount` must be greater than zero.
+     * - `walletOwner` must be a non-zero address.
+     *
+     * For burning calls the {IBurnableByRootTokenWallet-burnByRoot} method of the wallet,
+     * so the TokenWallet must implement this method.
+     *
+     * NOTE: We pass the bounce `true` flag to the wallet, but this Bounce
+     * is not covered by the TokenRoot.
+     */
+    function burnTokens(
+        uint128 amount,
+        address walletOwner,
+        address remainingGasTo,
+        address callbackTo,
+        TvmCell payload
+    )
+        override
+        external
+        onlyRootOwner
+    {
+        require(!burnByRootDisabled_, TokenErrors.BURN_BY_ROOT_DISABLED);
+        require(amount > 0, TokenErrors.WRONG_AMOUNT);
+        require(walletOwner.value != 0, TokenErrors.WRONG_WALLET_OWNER);
+
+        IBurnableByRootTokenWallet(_getExpectedWalletAddress(walletOwner)).burnByRoot{
+            value: 0,
+            bounce: true,
+            flag: TokenMsgFlag.REMAINING_GAS
+        }(
+            amount,
+            remainingGasTo,
+            callbackTo,
+            payload
+        );
+    }
+
+    /**
+     * @dev See {IBurnableByRootTokenRoot-disableBurnByRoot}.
+     */
+    function disableBurnByRoot() override external responsible onlyRootOwner returns (bool) {
+        burnByRootDisabled_ = true;
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } burnByRootDisabled_;
+    }
+
+    /**
+     * @dev See {IBurnableByRootTokenRoot-disableBurnByRoot}.
+     */
+    function burnByRootDisabled() override external view responsible returns (bool) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } burnByRootDisabled_;
+    }
+
+}

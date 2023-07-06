@@ -428,7 +428,7 @@ CALLREF {
 THROW 0
 
 .macro upgrade_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
@@ -497,7 +497,7 @@ CALLREF {
 THROW 0
 
 .macro acceptUpgrade_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 38
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 38
 GETGLOB 10
 GETGLOB 9
 SDEQ
@@ -826,7 +826,7 @@ CALLREF {
 THROW 0
 
 .macro acceptMint_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 38
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 38
 GETGLOB 10
 GETGLOB 9
 SDEQ
@@ -958,7 +958,7 @@ CALLREF {
 THROW 0
 
 .macro transfer_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
@@ -1256,7 +1256,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableByRootBase.tsol, 30
+.loc ../contracts/tip3/abstract/TokenWalletBurnableByRootBase.tsol, 30
 OVER
 PUSHCONT {
 	LDREF
@@ -1272,7 +1272,7 @@ CTOS
 LDMSGADDR
 LDREF
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableByRootBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBurnableByRootBase.tsol, 0
 CALLREF {
 	CALL $burnByRoot_internal_macro$
 }
@@ -1283,16 +1283,16 @@ CALLREF {
 THROW 0
 
 .macro burnByRoot_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 38
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 38
 GETGLOB 10
 GETGLOB 9
 SDEQ
 THROWIFNOT 1010
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableByRootBase.tsol, 36
+.loc ../contracts/tip3/abstract/TokenWalletBurnableByRootBase.tsol, 36
 CALLREF {
 	CALL $_burn_internal_macro$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableByRootBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBurnableByRootBase.tsol, 0
 
 .macro destroy
 DROP
@@ -1303,7 +1303,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletDestroyableBase.tsol, 27
+.loc ../contracts/tip3/abstract/TokenWalletDestroyableBase.tsol, 27
 OVER
 PUSHCONT {
 	LDREF
@@ -1313,7 +1313,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletDestroyableBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletDestroyableBase.tsol, 0
 CALLREF {
 	CALL $destroy_internal_macro$
 }
@@ -1324,15 +1324,15 @@ CALLREF {
 THROW 0
 
 .macro destroy_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletDestroyableBase.tsol, 28
+.loc ../contracts/tip3/abstract/TokenWalletDestroyableBase.tsol, 28
 GETGLOB 12
 THROWIF 1070
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletDestroyableBase.tsol, 29
+.loc ../contracts/tip3/abstract/TokenWalletDestroyableBase.tsol, 29
 NEWC
 STSLICECONST x42_
 STSLICE
@@ -1343,7 +1343,7 @@ PUSHINT 128
 ADDCONST 32
 UFITS 8
 SENDRAWMSG
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletDestroyableBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletDestroyableBase.tsol, 0
 
 .macro burn
 DROP
@@ -1354,7 +1354,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableBase.tsol, 31
+.loc ../contracts/tip3/abstract/TokenWalletBurnableBase.tsol, 31
 OVER
 PUSHCONT {
 	LDREF
@@ -1370,7 +1370,7 @@ CTOS
 LDMSGADDR
 LDREF
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBurnableBase.tsol, 0
 CALLREF {
 	CALL $burn_internal_macro$
 }
@@ -1381,16 +1381,16 @@ CALLREF {
 THROW 0
 
 .macro burn_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableBase.tsol, 37
+.loc ../contracts/tip3/abstract/TokenWalletBurnableBase.tsol, 37
 CALLREF {
 	CALL $_burn_internal_macro$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBurnableBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBurnableBase.tsol, 0
 
 .macro balance
 DROP
@@ -1401,14 +1401,14 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 53
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 53
 LDU 32
 GETGLOB 4
 ROT
 SETINDEXQ 5
 SETGLOB 4
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 CALLREF {
 	CALL $balance_internal_macro$
 }
@@ -1466,7 +1466,7 @@ IFREF {
 THROW 0
 
 .macro balance_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 54
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 54
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1476,7 +1476,7 @@ FALSE
 SETINDEXQ 1
 SETGLOB 4
 GETGLOB 12
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro owner
 DROP
@@ -1487,14 +1487,14 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 60
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 60
 LDU 32
 GETGLOB 4
 ROT
 SETINDEXQ 5
 SETGLOB 4
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 CALLREF {
 	CALL $owner_internal_macro$
 }
@@ -1559,7 +1559,7 @@ IFREF {
 THROW 0
 
 .macro owner_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 61
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 61
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1569,7 +1569,7 @@ FALSE
 SETINDEXQ 1
 SETGLOB 4
 GETGLOB 11
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro root
 DROP
@@ -1580,14 +1580,14 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 67
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 67
 LDU 32
 GETGLOB 4
 ROT
 SETINDEXQ 5
 SETGLOB 4
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 CALLREF {
 	CALL $root_internal_macro$
 }
@@ -1652,7 +1652,7 @@ IFREF {
 THROW 0
 
 .macro root_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 68
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 68
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1662,7 +1662,7 @@ FALSE
 SETINDEXQ 1
 SETGLOB 4
 GETGLOB 10
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro walletCode
 DROP
@@ -1673,14 +1673,14 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 74
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 74
 LDU 32
 GETGLOB 4
 ROT
 SETINDEXQ 5
 SETGLOB 4
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 CALLREF {
 	CALL $walletCode_internal_macro$
 }
@@ -1738,7 +1738,7 @@ IFREF {
 THROW 0
 
 .macro walletCode_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 75
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 75
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1759,24 +1759,24 @@ STSLICECONST x8adb35
 STREF
 STSLICE
 ENDC
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro TokenWalletBase_transfer_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 122
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 122
 PUSH S5
 GTINT 0
 THROWIFNOT 1050
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 123
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 123
 PUSH S5
 GETGLOB 12
 LEQ
 THROWIFNOT 1060
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 124
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 124
 PUSH S4
 PARSEMSGADDR
 INDEX 3
@@ -1788,33 +1788,33 @@ SDEQ
 NOT
 AND
 THROWIFNOT 1030
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 126
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 126
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 128
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 128
 ROLL 4
 CALLREF {
 	CALL $_buildWalletInitData_internal_macro$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 130
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 130
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 132
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 132
 PUSH S5
 GTINT 0
 PUSHCONT {
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 133
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 133
 	PUSH3 S1, S5, S4
 	CALLREF {
 		CALL $_deployWallet_internal_macro$
 	}
 }
 PUSHCONT {
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 135
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 135
 	OVER
 	HASHCU
 	NEWC
@@ -1825,13 +1825,13 @@ PUSHCONT {
 }
 IFELSE
 NIP
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 138
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 138
 GETGLOB 12
 PUSH S7
 SUB
 UFITS 128
 SETGLOB 12
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 140
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 140
 BLKSWAP 3, 2
 XCHG S2
 GETGLOB 11
@@ -1861,7 +1861,7 @@ STBREFR
 ENDC
 PUSHINT 128
 SENDRAWMSG
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 DROP2
 
 .macro transferToWallet
@@ -1873,7 +1873,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 167
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 167
 OVER
 PUSHCONT {
 	LDREF
@@ -1890,7 +1890,7 @@ LDMSGADDR
 LDI 1
 LDREF
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 CALLREF {
 	CALL $transferToWallet_internal_macro$
 }
@@ -1901,21 +1901,21 @@ CALLREF {
 THROW 0
 
 .macro transferToWallet_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 179
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 179
 PUSH S4
 GTINT 0
 THROWIFNOT 1050
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 180
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 180
 PUSH S4
 GETGLOB 12
 LEQ
 THROWIFNOT 1060
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 181
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 181
 PUSH S3
 PARSEMSGADDR
 INDEX 3
@@ -1927,19 +1927,19 @@ SDEQ
 NOT
 AND
 THROWIFNOT 1030
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 183
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 183
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 185
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 185
 GETGLOB 12
 PUSH S5
 SUB
 UFITS 128
 SETGLOB 12
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 187
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 187
 XCHG S2
 GETGLOB 11
 BLKSWAP 2, 4
@@ -1967,10 +1967,10 @@ STBREFR
 ENDC
 PUSHINT 128
 SENDRAWMSG
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro TokenWalletBase_acceptTransfer_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 227
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 227
 GETGLOB 9
 PUSH S4
 CALLREF {
@@ -1984,22 +1984,22 @@ ENDC
 CTOS
 SDEQ
 THROWIFNOT 1100
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 229
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 229
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 231
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 231
 GETGLOB 12
 PUSH S5
 ADD
 UFITS 128
 SETGLOB 12
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 233
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 233
 SWAP
 PUSHCONT {
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 234
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 234
 	PUSH2 S0, S1
 	GETGLOB 9
 	PUSH2 S5, S6
@@ -2035,7 +2035,7 @@ PUSHCONT {
 	STBREFR
 }
 PUSHCONT {
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 247
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 247
 	OVER
 	NEWC
 	STSLICECONST x42_
@@ -2049,31 +2049,31 @@ PUSHINT 128
 ADDCONST 2
 UFITS 8
 SENDRAWMSG
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 BLKDROP 4
 
 .macro TokenWalletBase_acceptMint_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 38
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 38
 GETGLOB 10
 GETGLOB 9
 SDEQ
 THROWIFNOT 1010
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 275
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 275
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 277
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 277
 GETGLOB 12
 PUSH S4
 ADD
 UFITS 128
 SETGLOB 12
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 279
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 279
 SWAP
 PUSHCONT {
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 280
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 280
 	PUSH3 S0, S1, S2
 	GETGLOB 10
 	GETGLOB 11
@@ -2115,7 +2115,7 @@ PUSHCONT {
 	NOT
 	AND
 	PUSHCONT {
-		.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 291
+		.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 291
 		OVER
 		NEWC
 		STSLICECONST x42_
@@ -2127,12 +2127,12 @@ PUSHCONT {
 		ADDCONST 2
 		UFITS 8
 		SENDRAWMSG
-		.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+		.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 	}
 	IF
 }
 IFELSE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 BLKDROP 3
 
 .macro on_bounce_macro
@@ -2143,32 +2143,32 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 306
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 306
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 308
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 308
 DUP
 LDU 32
 POP S2
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 310
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 310
 DUP
 PUSHINT 1738586463
 EQUAL
 PUSHCONT {
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 311
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 311
 	OVER
 	LDU 128
 	POP S3
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 312
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 312
 	GETGLOB 12
 	OVER
 	ADD
 	UFITS 128
 	SETGLOB 12
-	.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 313
+	.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 313
 	GETGLOB 9
 	SWAP
 	GETGLOB 10
@@ -2203,17 +2203,17 @@ PUSHCONT {
 	PUSHINT 422269361
 	EQUAL
 	PUSHCONT {
-		.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 323
+		.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 323
 		OVER
 		LDU 128
 		POP S3
-		.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 324
+		.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 324
 		GETGLOB 12
 		OVER
 		ADD
 		UFITS 128
 		SETGLOB 12
-		.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 325
+		.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 325
 		GETGLOB 10
 		GETGLOB 11
 		FALSE
@@ -2236,12 +2236,12 @@ PUSHCONT {
 		ADDCONST 2
 		UFITS 8
 		SENDRAWMSG
-		.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+		.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 	}
 	IF
 }
 IFELSE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 DROP2
 CALLREF {
 	CALL $c7_to_c4$
@@ -2252,28 +2252,28 @@ CALLREF {
 CALL $_burn_internal_macro$
 
 .macro _burn_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 357
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 357
 PUSH S3
 GTINT 0
 THROWIFNOT 1050
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 358
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 358
 PUSH S3
 GETGLOB 12
 LEQ
 THROWIFNOT 1060
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 360
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 360
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 362
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 362
 GETGLOB 12
 PUSH S4
 SUB
 UFITS 128
 SETGLOB 12
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 364
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 364
 XCHG S2
 GETGLOB 11
 ROLL 4
@@ -2305,7 +2305,7 @@ STBREFR
 ENDC
 PUSHINT 128
 SENDRAWMSG
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro sendSurplusGas
 DROP
@@ -2316,7 +2316,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 385
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 385
 OVER
 PUSHCONT {
 	LDREF
@@ -2326,7 +2326,7 @@ PUSHCONT {
 IF
 LDMSGADDR
 ENDS
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 CALLREF {
 	CALL $sendSurplusGas_internal_macro$
 }
@@ -2336,18 +2336,18 @@ IFREF {
 THROW 0
 
 .macro sendSurplusGas_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 46
 GETGLOB 11
 GETGLOB 9
 SDEQ
 THROWIFNOT 1000
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 386
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 386
 CALLREF {
 	CALL $_targetBalance_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 387
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 387
 NEWC
 STSLICECONST x42_
 STSLICE
@@ -2358,14 +2358,14 @@ PUSHINT 128
 ADDCONST 2
 UFITS 8
 SENDRAWMSG
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .globl	_reserve_internal
 .type	_reserve_internal, @function
 CALL $_reserve_internal_macro$
 
 .macro _reserve_internal_macro
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 404
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 404
 GETPARAM 7
 FIRST
 DEPTH
@@ -2377,7 +2377,7 @@ CALLREF {
 	CALL $_targetBalance_internal_macro$
 }
 MAX
-.loc ../node_modules/tip3/contracts/abstract/TokenWalletBase.tsol, 0
+.loc ../contracts/tip3/abstract/TokenWalletBase.tsol, 0
 
 .macro c4_to_c7
 PUSHROOT
