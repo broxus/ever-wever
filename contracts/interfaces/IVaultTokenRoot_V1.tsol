@@ -8,14 +8,14 @@ interface IVaultTokenRoot_V1 {
         address remainingGasTo
     ) external;
 
-    function grant(
-        uint128 amount
-    ) external;
+    function grant() external;
 
     function wrap(
         uint128 tokens,
-        address owner_address,
-        address gas_back_address,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
         TvmCell payload
     ) external;
 

@@ -206,9 +206,7 @@ describe('Test upgrading root and wallets', async function() {
 
             logger.log(`Granting ${fromNano(to_grant)} EVERs`);
 
-            await locklift.tracing.trace(vault_v1.methods.grant({
-                amount: to_grant
-            }).send({
+            await locklift.tracing.trace(vault_v1.methods.grant().send({
                 from: context.owner.address,
                 amount: (Number(to_grant) + Number(toNano('1'))).toString()
             }));

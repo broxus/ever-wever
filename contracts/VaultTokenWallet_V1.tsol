@@ -41,7 +41,7 @@ contract VaultTokenWallet_V1 is
     uint32 version_;
     TvmCell platformCode_;
 
-    uint128 constant ACCEPT_WRAP_SAFE_FEE = 0.1 ever;
+    uint128 constant ACCEPT_WRAP_SAFE_FEE = 0.05 ever;
 
     /**
      * @dev The constructor has been reverted because it was called in

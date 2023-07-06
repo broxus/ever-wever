@@ -88,17 +88,8 @@
 			]
 		},
 		{
-			"name": "drain",
-			"inputs": [
-				{"name":"receiver","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "grant",
 			"inputs": [
-				{"name":"amount","type":"uint128"}
 			],
 			"outputs": [
 			]
@@ -107,8 +98,10 @@
 			"name": "wrap",
 			"inputs": [
 				{"name":"tokens","type":"uint128"},
-				{"name":"owner_address","type":"address"},
-				{"name":"gas_back_address","type":"address"},
+				{"name":"recipient","type":"address"},
+				{"name":"deployWalletValue","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"notify","type":"bool"},
 				{"name":"payload","type":"cell"}
 			],
 			"outputs": [
@@ -316,14 +309,6 @@
 			],
 			"outputs": [
 			]
-		},
-		{
-			"name": "granted",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"granted","type":"uint128"}
-			]
 		}
 	],
 	"data": [
@@ -354,7 +339,6 @@
 		{"name":"randomNonce_","type":"uint256"},
 		{"name":"deployer_","type":"address"},
 		{"name":"platformCode_","type":"cell"},
-		{"name":"walletVersion_","type":"uint32"},
-		{"name":"granted","type":"uint128"}
+		{"name":"walletVersion_","type":"uint32"}
 	]
 }

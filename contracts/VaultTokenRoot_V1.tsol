@@ -35,8 +35,6 @@ contract VaultTokenRoot_V1 is
     TvmCell static platformCode_;
     uint32 walletVersion_;
 
-    uint128 public granted;
-
     modifier cashBack() {
         tvm.rawReserve(address(this).balance - msg.value, 2);
         _;
@@ -269,7 +267,7 @@ contract VaultTokenRoot_V1 is
     }
 
     function _treasuries() internal view returns(uint128) {
-        return totalSupply_ + granted + INITIAL_BALANCE;
+        return totalSupply_ + INITIAL_BALANCE;
     }
 
     function treasuries() external view returns (uint128) {
@@ -307,34 +305,12 @@ contract VaultTokenRoot_V1 is
     uint128 constant public INITIAL_BALANCE = 1 ever;
 
     /**
-        @notice Drain odd EVERs
-        @dev Can be called only by owner
-        @param receiver Address to send odd EVERs to
-    */
-    function drain(
-        address receiver
-    ) external view onlyRootOwner {
-        _reserveVaultTreasuries();
-
-        receiver.transfer({
-            value: 0,
-            flag: 129,
-            bounce: false
-        });
-    }
-
-    /**
         @notice Send EVERs to the vault without issuing wEVERs
         @dev Increases initial balance value
         so the granted EVERs won't be withdrawn on the wrapping / unwrapping
         @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
     */
-    function grant(
-        uint128 amount
-    ) external override {
-        require(amount <= msg.value + RECEIVE_SAFE_FEE, ErrorCodes.MSG_VALUE_TOO_LOW);
-
-//        granted += amount;
+    function grant() external override {
         _reserveVaultTreasuries();
 
         msg.sender.transfer({
@@ -370,18 +346,12 @@ contract VaultTokenRoot_V1 is
         );
     }
 
-    /**
-        @notice Internal function for minting wEVERs
-        @dev Works since Vault is authorized for minting tokens
-        @param tokens How much tokens to mint
-        @param owner_address Token wallet owner address
-        @param gas_back_address Address to send change
-    */
-
     function wrap(
         uint128 tokens,
-        address owner_address,
-        address gas_back_address,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
         TvmCell payload
     ) external override {
         require(
@@ -389,16 +359,14 @@ contract VaultTokenRoot_V1 is
             ErrorCodes.MSG_VALUE_TOO_LOW
         );
 
-//        _updateTotalSupply(tokens);
-//        _reserveVaultTreasuries();
         __reserve(_treasuries() + tokens);
 
         _mint(
             tokens,
-            owner_address,
-            WRAP_DEPLOY_WALLET_VALUE,
-            gas_back_address,
-            true,
+            recipient,
+            deployWalletValue,
+            remainingGasTo,
+            notify,
             payload
         );
     }

@@ -33,9 +33,7 @@ export default async () => {
     const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
 
     await vault.methods
-        .drain({
-            receiver: owner.account.address
-        })
+        .grant()
         .send({
             from: owner.account.address,
             amount: toNano(1),
