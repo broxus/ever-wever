@@ -50,6 +50,12 @@ abstract contract TokenRootBase is ITokenRoot, ICallbackParamsStructure {
         _;
     }
 
+    modifier reserve() {
+        tvm.rawReserve(_reserve(), 2);
+
+        _;
+    }
+
     /**
      * @dev See {TIP3TokenRoot-name}.
      */
@@ -346,9 +352,7 @@ abstract contract TokenRootBase is ITokenRoot, ICallbackParamsStructure {
      *
      * @return Reserve EVERs
      */
-    function _reserve() internal pure returns (uint128) {
-        return math.max(address(this).balance - msg.value, _targetBalance());
-    }
+    function _reserve() virtual internal view returns (uint128);
 
     /**
      * @dev Returns the target balance of the contract.

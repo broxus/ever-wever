@@ -11,5 +11,7 @@ interface IUpgradeAssistantFabric {
         address[] wallets
     ) external;
 
+    function deployBatches() external;
+
     function revokeOwnership() external;
 }

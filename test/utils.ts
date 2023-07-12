@@ -28,6 +28,18 @@ export const getAddress = (id) => {
     return new Address(`0:${body}`);
 }
 
+export function splitToNChunks(array: any[], n: number) {
+    let result = [];
+    for (let i = n; i > 0; i--) {
+        result.push(array.splice(0, Math.ceil(array.length / i)));
+    }
+    return result;
+}
+
+export function randomChoice(arr: any[]) {
+    return arr[Math.floor(arr.length * Math.random())];
+}
+
 
 export const getTokenWalletAddress = async function (
   root: Contract<VaultTokenRoot_V1Abi>,

@@ -23,7 +23,7 @@ import "./TokenWalletPlatform.tsol";
  * @dev This is an implementation of upgradable token root that implements
  * all the required methods of the TIP-3 standard.
  */
-contract TokenRootUpgradeable is
+abstract contract TokenRootUpgradeable is
     TokenRootTransferableOwnershipBase,
     TokenRootBurnPausableBase,
     TokenRootBurnableByRootBase,
@@ -108,6 +108,10 @@ contract TokenRootUpgradeable is
                 bounce: false
             });
         }
+    }
+
+    function _reserve() internal override view returns (uint128) {
+        return math.max(address(this).balance - msg.value, _targetBalance());
     }
 
     /**

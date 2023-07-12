@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+contract UpgradeDrain {
+    constructor() public {
+        revert();
+    }
+
+    function onCodeUpgrade(TvmCell) private pure {
+        msg.sender.transfer({
+            flag: 128,
+            bounce: true,
+            value: 0
+        });
+    }
+}

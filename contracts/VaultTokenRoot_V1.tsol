@@ -1,4 +1,6 @@
 pragma ton-solidity >= 0.57.1;
+pragma AbiHeader expire;
+pragma AbiHeader pubkey;
 
 import "tip3/abstract/TokenRootTransferableOwnershipBase.tsol";
 import "tip3/abstract/TokenRootBurnPausableBase.tsol";
@@ -101,7 +103,7 @@ contract VaultTokenRoot_V1 is
     ) override external {
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
-        _reserveVaultTreasuries();
+        tvm.rawReserve(_reserve(), 2);
 
         if (currentVersion == walletVersion_) {
             remainingGasTo.transfer({
@@ -135,6 +137,7 @@ contract VaultTokenRoot_V1 is
     function setWalletCode(
         TvmCell code
     ) override external onlyRootOwner cashBack {
+        // TODO: reserve
         walletCode_ = code;
         walletVersion_++;
     }
@@ -246,7 +249,7 @@ contract VaultTokenRoot_V1 is
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
         _updateTotalSupply(-amount);
-        _reserveVaultTreasuries();
+        tvm.rawReserve(_reserve(), 2);
 
         _burnCallback(
             amount,
@@ -266,20 +269,12 @@ contract VaultTokenRoot_V1 is
         totalSupply_ += amount;
     }
 
-    function _treasuries() internal view returns(uint128) {
+    function _reserve() internal view override returns(uint128) {
         return totalSupply_ + INITIAL_BALANCE;
     }
 
-    function treasuries() external view returns (uint128) {
-        return _treasuries();
-    }
-
-    function __reserve(uint128 amount) internal view {
-        tvm.rawReserve(amount, 2);
-    }
-
-    function _reserveVaultTreasuries() internal view {
-        __reserve(_treasuries());
+    function getReserves() external view returns (uint128) {
+        return _reserve();
     }
 
     function acceptWrap(
@@ -290,7 +285,8 @@ contract VaultTokenRoot_V1 is
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
         _updateTotalSupply(amount);
-        _reserveVaultTreasuries();
+
+        tvm.rawReserve(_reserve(), 2);
 
         remainingGasTo.transfer({
             value: 0,
@@ -311,7 +307,7 @@ contract VaultTokenRoot_V1 is
         @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
     */
     function grant() external override {
-        _reserveVaultTreasuries();
+        tvm.rawReserve(_reserve(), 2);
 
         msg.sender.transfer({
             value: 0,
@@ -332,7 +328,7 @@ contract VaultTokenRoot_V1 is
 
         uint128 tokens = msg.value - RECEIVE_SAFE_FEE;
 
-        __reserve(tokens + _treasuries());
+        tvm.rawReserve(tokens + _reserve(), 2);
 
         TvmCell empty;
 
@@ -359,7 +355,7 @@ contract VaultTokenRoot_V1 is
             ErrorCodes.MSG_VALUE_TOO_LOW
         );
 
-        __reserve(_treasuries() + tokens);
+        tvm.rawReserve(_reserve() + tokens, 2);
 
         _mint(
             tokens,
@@ -389,7 +385,8 @@ contract VaultTokenRoot_V1 is
 
         // Return tokens in case of enabled emergency mode
         _updateTotalSupply(-amount);
-        _reserveVaultTreasuries();
+
+        tvm.rawReserve(_reserve(), 2);
 
         // Send burn callback
         _burnCallback(
@@ -406,7 +403,7 @@ contract VaultTokenRoot_V1 is
         address[] wallets,
         uint128 accept_upgrade_value
     ) external override onlyRootOwner {
-        _reserveVaultTreasuries();
+        _reserve();
 
         for (address wallet: wallets) {
             ITokenWalletUpgradeable(wallet).acceptUpgrade{

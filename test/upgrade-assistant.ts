@@ -2,19 +2,9 @@ import {Address, Contract, getRandomNonce, toNano} from "locklift";
 import _ from 'underscore';
 import {ed25519_generateKeyPair, Ed25519KeyPair} from "nekoton-wasm";
 import {UpgradeAssistantBatchAbi, UpgradeAssistantFabricAbi} from "../build/factorySource";
+import {splitToNChunks} from "./utils";
 const logger = require("mocha-logger");
-
-function splitToNChunks(array, n) {
-    let result = [];
-    for (let i = n; i > 0; i--) {
-        result.push(array.splice(0, Math.ceil(array.length / i)));
-    }
-    return result;
-}
-
-function randomChoice(arr) {
-    return arr[Math.floor(arr.length * Math.random())];
-}
+const cliProgress = require('cli-progress');
 
 
 export class UpgradeAssistant {
@@ -31,8 +21,8 @@ export class UpgradeAssistant {
     // @ts-ignore
     batches: Contract<UpgradeAssistantBatchAbi>[];
 
-    wallets_uploaded: number;
-    progress_timer: any;
+    bar: any;
+
 
     constructor(
         owner: Address,
@@ -45,7 +35,10 @@ export class UpgradeAssistant {
         this.wallets = [...wallets];
         this.batches_amount = batches_amount;
 
-        this.chunk_size = 10;
+        this.chunk_size = 100;
+        this.bar = new cliProgress.SingleBar({
+            format: '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} ({duration} sec)'
+        }, cliProgress.Presets.shades_classic);
     }
 
     async _setupWorkerKeys() {
@@ -74,7 +67,7 @@ export class UpgradeAssistant {
                     batches_: this.batches_amount
                 },
                 publicKey: signer?.publicKey,
-                value: toNano('10') // TODO: depends on batches amount
+                value: toNano(this.batches_amount + 5) // TODO: depends on batches amount
             })
         );
 
@@ -94,21 +87,13 @@ export class UpgradeAssistant {
     async uploadWallets() {
         logger.log(`Uploading ${this.wallets.length} wallets to ${this.batches_amount} batches`);
 
-        const chunks = splitToNChunks(this.wallets, this.batches_amount);
+        const chunks = splitToNChunks([...this.wallets], this.batches_amount);
 
-        this._startProgressTracker();
+        this.bar.start(this.wallets.length, 0);
 
         await Promise.all(chunks.map(async (chunk, i) => this._uploadWalletsChunk(chunk, this.batches[i])));
 
-        this._stopProgressTracker();
-    }
-
-    _startProgressTracker() {
-
-    }
-
-    _stopProgressTracker() {
-
+        this.bar.stop();
     }
 
     async _uploadWalletsChunk(
@@ -116,7 +101,6 @@ export class UpgradeAssistant {
         batch: Contract<UpgradeAssistantBatchAbi>
     ) {
         const chunks = _.chunk(wallets, this.chunk_size);
-        const process_id = this.batches.indexOf(batch);
 
         for (const chunk of chunks) {
             const tx = await locklift.tracing.trace(
@@ -125,9 +109,14 @@ export class UpgradeAssistant {
                 }).sendExternal({
                     publicKey: this.worker_key.publicKey
                 })
-            );
+            ).catch(e => {
+                console.log(e);
+                console.log(chunk);
 
-            logger.log(`Process #${process_id} uploaded chunk: ${tx.transaction.id.hash}`);
+                process.exit(1);
+            });
+
+            this.bar.increment(chunk.length);
         }
     }
 
@@ -135,5 +124,9 @@ export class UpgradeAssistant {
         await this._setupWorkerKeys();
         await this._deployFabric();
         await this._setupBatches();
+    }
+
+    async checkWallets() {
+
     }
 }

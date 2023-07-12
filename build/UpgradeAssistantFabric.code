@@ -25,38 +25,105 @@ LDMSGADDR
 LDREF
 LDU 32
 ENDS
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 44
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 84
 ACCEPT
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 46
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 86
 ROLL 4
 CALLREF {
 	CALL $setOwnership_internal_macro$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 48
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 88
 ROLL 3
 SETGLOB 13
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 49
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 89
 ROT
 SETGLOB 12
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 50
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 90
 SWAP
-SETGLOB 15
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 51
+SETGLOB 16
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 91
 SETGLOB 14
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 92
+PUSHINT 0
+SETGLOB 15
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 94
+CALLREF {
+	CALL $_deployBatches_internal_macro$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro deployBatches
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 50
+ENDS
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+CALLREF {
+	CALL $deployBatches_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro deployBatches_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 39
+GETGLOB 9
+MYADDR
+SDEQ
+THROWIFNOT 100
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 45
+PUSHINT 1000000000
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 51
+ACCEPT
 .loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 53
+CALLREF {
+	CALL $_deployBatches_internal_macro$
+}
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
+
+.globl	_deployBatches_internal
+.type	_deployBatches_internal, @function
+CALL $_deployBatches_internal_macro$
+
+.macro _deployBatches_internal_macro
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 57
+GETGLOB 14
+GETGLOB 15
+SUB
+UFITS 32
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 58
+PUSHINT 20
+MIN
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 60
 PUSHINT 0
 PUSHCONT {
-	DUP
-	GETGLOB 14
+	PUSH2 S0, S1
 	LESS
 }
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 54
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 61
 	DUP
+	GETGLOB 15
+	ADD
+	UFITS 32
 	CALLREF {
 		CALL $_deployBatch_internal_macro$
 	}
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 56
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 63
 	OVER
 	PUSHSLICE xc0000000000000000000000000322da0ca
 	NEWC
@@ -66,25 +133,48 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 53
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 60
 	INC
 	UFITS 32
 	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
 }
 WHILE
 DROP
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
-CALLREF {
-	CALL $c7_to_c4$
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 66
+GETGLOB 15
+ADD
+UFITS 32
+DUP
+SETGLOB 15
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 68
+GETGLOB 14
+LESS
+PUSHCONT {
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 69
+	MYADDR
+	FALSE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	PUSHINT 3
+	STZEROES
+	STSLICE
+	PUSHSLICE x0000000000000000000000000000576b7939_
+	STSLICER
+	ENDC
+	PUSHINT 128
+	SENDRAWMSG
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
 }
-THROW 0
+IF
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
 
 .globl	_deployBatch_internal
 .type	_deployBatch_internal, @function
 CALL $_deployBatch_internal_macro$
 
 .macro _deployBatch_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 61
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 98
 GETGLOB 10
 GETGLOB 13
 PUSHINT 0
@@ -109,7 +199,7 @@ DICTUSETB
 NEWC
 STDICT
 ENDC
-GETGLOB 15
+GETGLOB 16
 NEWC
 STSLICECONST x2_
 STOPTREF
@@ -175,7 +265,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 73
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 110
 LDU 32
 ENDS
 .loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
@@ -214,7 +304,7 @@ IFREF {
 THROW 0
 
 .macro deriveBatch_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 74
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 111
 CALLREF {
 	CALL $_deriveBatch_internal_macro$
 }
@@ -225,7 +315,7 @@ CALLREF {
 CALL $_deriveBatch_internal_macro$
 
 .macro _deriveBatch_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 78
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 115
 PUSHINT 0
 NEWC
 STU 256
@@ -248,14 +338,14 @@ DICTUSETB
 NEWC
 STDICT
 ENDC
-GETGLOB 15
+GETGLOB 16
 NEWC
 STSLICECONST x2_
 STOPTREF
 STOPTREF
 STZERO
 ENDC
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 88
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 125
 HASHCU
 NEWC
 STSLICECONST x801_
@@ -273,7 +363,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 91
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 128
 ENDS
 .loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
 CALLREF {
@@ -301,7 +391,7 @@ PUSHCONT {
 }
 IF
 THROWIFNOT 1101
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 32
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 33
 GETPARAM 7
 FIRST
 DEPTH
@@ -311,7 +401,7 @@ SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 92
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 129
 DEPTH
 ADDCONST -2
 PICK
@@ -320,7 +410,7 @@ DIV
 PUSHINT 100000000
 SUB
 UFITS 128
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 94
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 131
 PUSHINT 0
 PUSHCONT {
 	DUP
@@ -328,12 +418,12 @@ PUSHCONT {
 	LESS
 }
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 95
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 132
 	DUP
 	CALLREF {
 		CALL $_deriveBatch_internal_macro$
 	}
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 97
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 134
 	PUXC S2, S-1
 	TRUE
 	NEWC
@@ -349,7 +439,7 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 94
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 131
 	INC
 	UFITS 32
 	.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
@@ -367,7 +457,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 105
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 142
 LDU 32
 LDU 32
 LDDICT
@@ -386,16 +476,16 @@ CALLREF {
 THROW 0
 
 .macro acceptUpgrade_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 105
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 142
 GETGLOB 9
 ROT
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 26
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 27
 CALLREF {
 	CALL $_deriveBatch_internal_macro$
 }
 SDEQ
 THROWIFNOT 100
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 32
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 33
 GETPARAM 7
 FIRST
 DEPTH
@@ -405,7 +495,7 @@ SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 109
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 146
 PUSHINT 100000000
 SWAP
 GETGLOB 12
@@ -438,7 +528,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 116
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 153
 ENDS
 .loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 0
 CALLREF {
@@ -451,17 +541,7 @@ CALLREF {
 THROW 0
 
 .macro revokeOwnership_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 32
-GETPARAM 7
-FIRST
-DEPTH
-ADDCONST -2
-PICK
-SUB
-UFITS 128
-PUSHINT 2
-RAWRESERVE
-.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 117
+.loc ../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol, 154
 NEWDICT
 GETGLOB 9
 GETGLOB 10
@@ -641,8 +721,10 @@ ENDS
 CTOS
 LDU 256
 LDU 32
+LDU 32
 LDREF
 ENDS
+SETGLOB 16
 SETGLOB 15
 SETGLOB 14
 SETGLOB 13
@@ -680,9 +762,10 @@ PUSHCONT {
 		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 	}
 	PUSHINT 0
-	DUP
+	BLKPUSH 2, 0
 	PUSHREF {
 	}
+	SETGLOB 16
 	SETGLOB 15
 	SETGLOB 14
 	SETGLOB 13
@@ -702,6 +785,7 @@ IFREFELSE {
 }
 
 .macro c7_to_c4
+GETGLOB 16
 GETGLOB 15
 GETGLOB 14
 GETGLOB 13
@@ -715,13 +799,14 @@ STU 256
 STU 64
 STONE
 STSLICE
-ROLLREV 5
+ROLLREV 6
 NEWC
 STU 256
 STSLICE
-ROLLREV 3
+ROLLREV 4
 NEWC
 STU 256
+STU 32
 STU 32
 STREF
 STBREFR
@@ -917,13 +1002,33 @@ PUSHCONT {
 IF
 THROW 0
 
-.macro upgrade_assistant_batch_code
+.macro batches_deployed
 DROP
 ENDS
 CALLREF {
 	CALL $c4_to_c7$
 }
 GETGLOB 15
+OVER
+PUSHCONT {
+	PUSHSLICE xc0000000000000000000000000902b8c9c
+	NEWC
+	STSLICE
+	STU 32
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
+.macro upgrade_assistant_batch_code
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 16
 OVER
 PUSHCONT {
 	PUSHSLICE xc0000000000000000000000000c34cea98
@@ -939,7 +1044,7 @@ THROW 0
 
 .macro public_function_selector
 DUP
-PUSHINT 521396392
+PUSHINT 328497239
 LEQ
 IFJMPREF {
 	DUP
@@ -955,22 +1060,28 @@ IFJMPREF {
 		CALL $transferOwnership$
 	}
 	DUP
+	PUSHINT 271289500
+	EQUAL
+	IFJMPREF {
+		CALL $batches_deployed$
+	}
+	DUP
 	PUSHINT 328497239
 	EQUAL
 	IFJMPREF {
 		CALL $worker$
 	}
+}
+DUP
+PUSHINT 733330588
+LEQ
+IFJMPREF {
 	DUP
 	PUSHINT 521396392
 	EQUAL
 	IFJMPREF {
 		CALL $revokeOwnership$
 	}
-}
-DUP
-PUSHINT 925457952
-LEQ
-IFJMPREF {
 	DUP
 	PUSHINT 657812748
 	EQUAL
@@ -984,6 +1095,17 @@ IFJMPREF {
 		CALL $acceptUpgrade$
 	}
 	DUP
+	PUSHINT 733330588
+	EQUAL
+	IFJMPREF {
+		CALL $deployBatches$
+	}
+}
+DUP
+PUSHINT 1129114264
+LEQ
+IFJMPREF {
+	DUP
 	PUSHINT 819610402
 	EQUAL
 	IFJMPREF {
@@ -995,11 +1117,6 @@ IFJMPREF {
 	IFJMPREF {
 		CALL $root$
 	}
-}
-DUP
-PUSHINT 1659094662
-LEQ
-IFJMPREF {
 	DUP
 	PUSHINT 995308319
 	EQUAL
@@ -1012,6 +1129,11 @@ IFJMPREF {
 	IFJMPREF {
 		CALL $upgrade_assistant_batch_code$
 	}
+}
+DUP
+PUSHINT 1729444094
+LEQ
+IFJMPREF {
 	DUP
 	PUSHINT 1594609630
 	EQUAL
@@ -1024,11 +1146,11 @@ IFJMPREF {
 	IFJMPREF {
 		CALL $batches$
 	}
-}
-DUP
-PUSHINT 1729444094
-EQUAL
-IFJMPREF {
-	CALL $renounceOwnership$
+	DUP
+	PUSHINT 1729444094
+	EQUAL
+	IFJMPREF {
+		CALL $renounceOwnership$
+	}
 }
 

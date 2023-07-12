@@ -2896,17 +2896,7 @@ CALL $_reserve_internal_macro$
 
 .macro _reserve_internal_macro
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 350
-GETPARAM 7
-FIRST
-DEPTH
-ADDCONST -2
-PICK
-SUB
-UFITS 128
-CALLREF {
-	CALL $_targetBalance_internal_macro$
-}
-MAX
+PUSHINT 0
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 0
 
 .macro c4_to_c7

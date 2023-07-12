@@ -390,19 +390,20 @@ abstract contract TokenWalletBase is ITokenWallet {
             bounce: false
         });
     }
-
-    /**
-     * @dev Calculates the reserve by taking the maximum of the contract's
-     * current balance minus the value of the message
-     * (i.e. the amount of EVERs spent on the current transaction) and the
-     * target balance of the contract (as determined by the _targetBalance function).
-     * This ensures that the reserve is set to the lower of the contract's
-     * current balance or its target balance, ensuring that the contract
-     * does not spend more EVERs than it has available.
-     */
+//
+//    /**
+//     * @dev Calculates the reserve by taking the maximum of the contract's
+//     * current balance minus the value of the message
+//     * (i.e. the amount of EVERs spent on the current transaction) and the
+//     * target balance of the contract (as determined by the _targetBalance function).
+//     * This ensures that the reserve is set to the lower of the contract's
+//     * current balance or its target balance, ensuring that the contract
+//     * does not spend more EVERs than it has available.
+//     */
     function _reserve() internal pure returns (uint128) {
         return math.max(address(this).balance - msg.value, _targetBalance());
     }
+//    function _reserve() internal view virtual returns (uint128);
 
     /**
      * @dev Returns the target balance of the contract.

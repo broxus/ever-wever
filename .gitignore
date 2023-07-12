@@ -1,3 +1,6 @@
+1000.txt
+10_000.txt
+logs/
 node_modules/
 *.env
 .idea/

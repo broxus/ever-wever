@@ -8,7 +8,6 @@ import {
 } from "../build/factorySource";
 const logger = require("mocha-logger");
 import _ from 'underscore';
-import {use} from "chai";
 import {UpgradeAssistant} from "./upgrade-assistant";
 
 
@@ -205,7 +204,7 @@ describe('Test upgrading root and wallets', async function() {
             }));
 
             expect(await locklift.provider.getBalance(vault_v1.address))
-                .to.be.equal(await vault_v1.methods.treasuries().call().then(t => t.value0), 'Balance and treasuries should be equal');
+                .to.be.equal(await vault_v1.methods.getReserves().call().then(t => t.value0), 'Balance and treasuries should be equal');
         });
     });
 
@@ -219,7 +218,7 @@ describe('Test upgrading root and wallets', async function() {
                 context.owner.address,
                 root.address,
                 wallets,
-                2
+                25
             );
 
             await upgrade_assistant.setup();
@@ -284,6 +283,9 @@ describe('Test upgrading root and wallets', async function() {
 
             expect(await vault_v1.methods.rootOwner({ answerId: 0 }).call().then(t => t.value0.toString()))
                 .to.be.equal(context.owner.address.toString(), 'Ownership revoke failed');
+
+            expect(await locklift.provider.getBalance(upgrade_assistant.fabric.address))
+                .to.be.equal('0', 'Factory should lose all its balance');
         });
 
         it('Check wallets upgraded', async () => {

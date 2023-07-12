@@ -1,7 +1,7 @@
 {
 	"ABI version": 2,
 	"version": "2.2",
-	"header": ["time"],
+	"header": ["pubkey", "time", "expire"],
 	"functions": [
 		{
 			"name": "constructor",
@@ -70,7 +70,7 @@
 			]
 		},
 		{
-			"name": "treasuries",
+			"name": "getReserves",
 			"inputs": [
 			],
 			"outputs": [

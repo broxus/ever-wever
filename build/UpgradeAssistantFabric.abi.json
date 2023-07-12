@@ -16,6 +16,13 @@
 			]
 		},
 		{
+			"name": "deployBatches",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "deriveBatch",
 			"inputs": [
 				{"name":"batch_id","type":"uint32"}
@@ -103,6 +110,14 @@
 			]
 		},
 		{
+			"name": "batches_deployed",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"batches_deployed","type":"uint32"}
+			]
+		},
+		{
 			"name": "upgrade_assistant_batch_code",
 			"inputs": [
 			],
@@ -143,6 +158,7 @@
 		{"name":"root","type":"address"},
 		{"name":"worker","type":"uint256"},
 		{"name":"batches","type":"uint32"},
+		{"name":"batches_deployed","type":"uint32"},
 		{"name":"upgrade_assistant_batch_code","type":"cell"}
 	]
 }

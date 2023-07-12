@@ -20,6 +20,7 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
     address public root;
     uint public worker;
     uint32 public batches;
+    uint32 public batches_deployed;
     TvmCell public upgrade_assistant_batch_code;
 
     modifier onlyBatch(uint32 nonce) {
@@ -32,6 +33,45 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
         tvm.rawReserve(address(this).balance - msg.value, 2);
 
         _;
+    }
+
+    modifier onlySelfCall() {
+        require(msg.sender == address(this));
+
+        _;
+    }
+
+    modifier reserveMinBalance() {
+        tvm.rawReserve(constants.BATCH_INITIAL_BALANCE, 2);
+
+        _;
+    }
+
+    function deployBatches() external override onlySelfCall reserveMinBalance {
+        tvm.accept();
+
+        _deployBatches();
+    }
+
+    function _deployBatches() internal {
+        uint32 batches_left = batches - batches_deployed;
+        uint32 batches_to_deploy = math.min(batches_left, constants.DEPLOY_BATCHES_PER_TX);
+
+        for (uint32 batch_id = 0; batch_id < batches_to_deploy; batch_id++) {
+            address batch = _deployBatch(batch_id + batches_deployed);
+
+            emit NewBatch(batch_id, batch);
+        }
+
+        batches_deployed += batches_to_deploy;
+
+        if (batches_deployed < batches) {
+            IUpgradeAssistantFabric(address(this)).deployBatches{
+                flag: MsgFlag.ALL_NOT_RESERVED,
+                value: 0,
+                bounce: false
+            }();
+        }
     }
 
     constructor(
@@ -49,12 +89,9 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
         root = root_;
         upgrade_assistant_batch_code = upgrade_assistant_batch_code_;
         batches = batches_;
+        batches_deployed = 0;
 
-        for (uint32 batch_id = 0; batch_id < batches; batch_id++) {
-            address batch = _deployBatch(batch_id);
-
-            emit NewBatch(batch_id, batch);
-        }
+        _deployBatches();
     }
 
     function _deployBatch(uint32 nonce) internal view returns(address) {
@@ -113,7 +150,7 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
         }(wallets, constants.ACCEPT_UPGRADE_VALUE);
     }
 
-    function revokeOwnership() external reserve override {
+    function revokeOwnership() external override {
         ITransferableOwnership(root).transferOwnership{
             bounce: true,
             flag: MsgFlag.ALL_NOT_RESERVED,
