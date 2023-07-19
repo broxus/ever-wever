@@ -28,6 +28,7 @@ abstract contract TokenRootDisableableMintBase is TokenRootBase, IDisableableMin
      *  - `mintDisabled_` is set to `true`.
      */
     function disableMint() override external responsible onlyRootOwner returns (bool) {
+        // TODO: reserve?
         mintDisabled_ = true;
         return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } mintDisabled_;
     }

@@ -34,8 +34,6 @@ abstract contract TokenRootTransferableOwnershipBase is TokenRootBase, ITransfer
         onlyRootOwner
         reserve
     {
-//        tvm.rawReserve(_reserve(), 0);
-
         address oldOwner = rootOwner_;
         rootOwner_ = newOwner;
 

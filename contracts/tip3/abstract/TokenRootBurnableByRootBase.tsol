@@ -51,6 +51,8 @@ abstract contract TokenRootBurnableByRootBase is TokenRootBase, IBurnableByRootT
         require(amount > 0, TokenErrors.WRONG_AMOUNT);
         require(walletOwner.value != 0, TokenErrors.WRONG_WALLET_OWNER);
 
+        // TODO: reserve?
+
         IBurnableByRootTokenWallet(_getExpectedWalletAddress(walletOwner)).burnByRoot{
             value: 0,
             bounce: true,
@@ -67,6 +69,7 @@ abstract contract TokenRootBurnableByRootBase is TokenRootBase, IBurnableByRootT
      * @dev See {IBurnableByRootTokenRoot-disableBurnByRoot}.
      */
     function disableBurnByRoot() override external responsible onlyRootOwner returns (bool) {
+        // TODO: reserve?
         burnByRootDisabled_ = true;
         return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } burnByRootDisabled_;
     }
