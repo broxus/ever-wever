@@ -1,0 +1,532 @@
+{
+  "map": {
+    "14cfe5caa0fe7e88a16bc87ff9f898109338db1c654f5df45a76e8329e1dacd9": {
+      "0": {
+        "filename": "<internal-selector>",
+        "line": 1
+      },
+      "24": {
+        "filename": "<internal-selector>",
+        "line": 2
+      }
+    },
+    "1ec6ff6a727700b6fac090bff5ed23618208805bc9bbc351eff1eaf3cdb551d6": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 165
+      },
+      "8": {
+        "filename": "TransferUtils.code",
+        "line": 166
+      },
+      "56": {
+        "filename": "TransferUtils.code",
+        "line": 167
+      },
+      "64": {
+        "filename": "TransferUtils.code",
+        "line": 168
+      }
+    },
+    "42aa676d16d19f95a85a3a8f6b8578c96167a12005f5a454dcdc62d5181d3cf4": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 4
+      },
+      "8": {
+        "filename": "TransferUtils.code",
+        "line": 5
+      },
+      "24": {
+        "filename": "TransferUtils.code",
+        "line": 6
+      },
+      "32": {
+        "filename": "TransferUtils.code",
+        "line": 7
+      },
+      "48": {
+        "filename": "TransferUtils.code",
+        "line": 10
+      },
+      "64": {
+        "filename": "TransferUtils.code",
+        "line": 11
+      },
+      "80": {
+        "filename": "TransferUtils.code",
+        "line": 12
+      },
+      "88": {
+        "filename": "TransferUtils.code",
+        "line": 13
+      },
+      "104": {
+        "filename": "TransferUtils.code",
+        "line": 14
+      },
+      "120": {
+        "filename": "TransferUtils.code",
+        "line": 17
+      }
+    },
+    "60488e96384d55db5809d3be340ce676908c99e02e0f6a89a307f1376c1ceb17": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 69
+      },
+      "16": {
+        "filename": "TransferUtils.code",
+        "line": 70
+      },
+      "32": {
+        "filename": "TransferUtils.code",
+        "line": 71
+      },
+      "40": {
+        "filename": "TransferUtils.code",
+        "line": 72
+      },
+      "56": {
+        "filename": "TransferUtils.code",
+        "line": 73
+      },
+      "72": {
+        "filename": "TransferUtils.code",
+        "line": 74
+      },
+      "88": {
+        "filename": "TransferUtils.code",
+        "line": 75
+      },
+      "96": {
+        "filename": "TransferUtils.code",
+        "line": 76
+      }
+    },
+    "b6f27d187f26bd046272f9f471e9ae01f051b960e654874ac3fb0749c691c4c6": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 47
+      },
+      "16": {
+        "filename": "TransferUtils.code",
+        "line": 48
+      },
+      "24": {
+        "filename": "TransferUtils.code",
+        "line": 49
+      },
+      "40": {
+        "filename": "TransferUtils.code",
+        "line": 50
+      },
+      "56": {
+        "filename": "TransferUtils.code",
+        "line": 51
+      },
+      "72": {
+        "filename": "TransferUtils.code",
+        "line": 52
+      },
+      "80": {
+        "filename": "TransferUtils.code",
+        "line": 53
+      },
+      "96": {
+        "filename": "TransferUtils.code",
+        "line": 54
+      },
+      "104": {
+        "filename": "TransferUtils.code",
+        "line": 55
+      },
+      "120": {
+        "filename": "TransferUtils.code",
+        "line": 56
+      },
+      "136": {
+        "filename": "TransferUtils.code",
+        "line": 57
+      },
+      "152": {
+        "filename": "TransferUtils.code",
+        "line": 58
+      },
+      "168": {
+        "filename": "TransferUtils.code",
+        "line": 59
+      },
+      "192": {
+        "filename": "TransferUtils.code",
+        "line": 60
+      },
+      "208": {
+        "filename": "TransferUtils.code",
+        "line": 61
+      },
+      "216": {
+        "filename": "TransferUtils.code",
+        "line": 62
+      },
+      "232": {
+        "filename": "TransferUtils.code",
+        "line": 64
+      }
+    },
+    "d0c86a7c852471239cf037f18e734b2b200285e012da0d3bab8dc44bfcafbe48": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
+      }
+    },
+    "d31a03acc1e76bb3fd683c0c752db45f764b49a4b199be94558d360a59450ce2": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 130
+      },
+      "16": {
+        "filename": "TransferUtils.code",
+        "line": 131
+      },
+      "24": {
+        "filename": "TransferUtils.code",
+        "line": 132
+      },
+      "40": {
+        "filename": "TransferUtils.code",
+        "line": 133
+      },
+      "56": {
+        "filename": "TransferUtils.code",
+        "line": 134
+      },
+      "72": {
+        "filename": "TransferUtils.code",
+        "line": 135
+      },
+      "360": {
+        "filename": "TransferUtils.code",
+        "line": 136
+      },
+      "376": {
+        "filename": "TransferUtils.code",
+        "line": 137
+      },
+      "384": {
+        "filename": "TransferUtils.code",
+        "line": 138
+      },
+      "400": {
+        "filename": "TransferUtils.code",
+        "line": 141
+      },
+      "416": {
+        "filename": "TransferUtils.code",
+        "line": 142
+      },
+      "424": {
+        "filename": "TransferUtils.code",
+        "line": 143
+      },
+      "432": {
+        "filename": "TransferUtils.code",
+        "line": 144
+      },
+      "456": {
+        "filename": "TransferUtils.code",
+        "line": 145
+      },
+      "472": {
+        "filename": "TransferUtils.code",
+        "line": 146
+      },
+      "480": {
+        "filename": "TransferUtils.code",
+        "line": 147
+      },
+      "496": {
+        "filename": "TransferUtils.code",
+        "line": 148
+      },
+      "504": {
+        "filename": "TransferUtils.code",
+        "line": 149
+      },
+      "520": {
+        "filename": "TransferUtils.code",
+        "line": 150
+      },
+      "536": {
+        "filename": "TransferUtils.code",
+        "line": 151
+      },
+      "552": {
+        "filename": "TransferUtils.code",
+        "line": 153
+      },
+      "560": {
+        "filename": "TransferUtils.code",
+        "line": 154
+      },
+      "576": {
+        "filename": "TransferUtils.code",
+        "line": 155
+      },
+      "584": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "600": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "608": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "616": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "632": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "640": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "656": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "680": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "688": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "728": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "736": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "744": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "760": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "776": {
+        "filename": "TransferUtils.code",
+        "line": 157
+      },
+      "792": {
+        "filename": "TransferUtils.code",
+        "line": 158
+      },
+      "800": {
+        "filename": "TransferUtils.code",
+        "line": 159
+      },
+      "816": {
+        "filename": "TransferUtils.code",
+        "line": 162
+      }
+    },
+    "ebca371d5ae7bc318b321637ce9afded26e55c06fb72305dee9b8835cf73b8d4": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 95
+      },
+      "16": {
+        "filename": "TransferUtils.code",
+        "line": 96
+      },
+      "24": {
+        "filename": "TransferUtils.code",
+        "line": 97
+      },
+      "40": {
+        "filename": "TransferUtils.code",
+        "line": 98
+      },
+      "56": {
+        "filename": "TransferUtils.code",
+        "line": 99
+      },
+      "72": {
+        "filename": "TransferUtils.code",
+        "line": 100
+      },
+      "80": {
+        "filename": "TransferUtils.code",
+        "line": 101
+      },
+      "88": {
+        "filename": "TransferUtils.code",
+        "line": 102
+      },
+      "104": {
+        "filename": "TransferUtils.code",
+        "line": 103
+      },
+      "120": {
+        "filename": "TransferUtils.code",
+        "line": 104
+      },
+      "128": {
+        "filename": "TransferUtils.code",
+        "line": 105
+      },
+      "144": {
+        "filename": "TransferUtils.code",
+        "line": 106
+      },
+      "168": {
+        "filename": "TransferUtils.code",
+        "line": 107
+      },
+      "176": {
+        "filename": "TransferUtils.code",
+        "line": 108
+      },
+      "184": {
+        "filename": "TransferUtils.code",
+        "line": 109
+      },
+      "200": {
+        "filename": "TransferUtils.code",
+        "line": 110
+      },
+      "216": {
+        "filename": "TransferUtils.code",
+        "line": 114
+      },
+      "224": {
+        "filename": "TransferUtils.code",
+        "line": 115
+      },
+      "248": {
+        "filename": "TransferUtils.code",
+        "line": 116
+      },
+      "264": {
+        "filename": "TransferUtils.code",
+        "line": 117
+      },
+      "272": {
+        "filename": "TransferUtils.code",
+        "line": 118
+      },
+      "288": {
+        "filename": "TransferUtils.code",
+        "line": 122
+      },
+      "296": {
+        "filename": "TransferUtils.code",
+        "line": 123
+      },
+      "312": {
+        "filename": "TransferUtils.code",
+        "line": 126
+      }
+    },
+    "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 111
+      },
+      "16": {
+        "filename": "TransferUtils.code",
+        "line": 112
+      }
+    },
+    "f2b6fee906959c240bebf2ae6014f1d4be66e2dc6e03df25aa5ea29205d3e249": {
+      "0": {
+        "filename": "TransferUtils.code",
+        "line": 36
+      },
+      "16": {
+        "filename": "TransferUtils.code",
+        "line": 37
+      },
+      "24": {
+        "filename": "TransferUtils.code",
+        "line": 38
+      },
+      "40": {
+        "filename": "TransferUtils.code",
+        "line": 39
+      },
+      "56": {
+        "filename": "TransferUtils.code",
+        "line": 40
+      },
+      "72": {
+        "filename": "TransferUtils.code",
+        "line": 41
+      },
+      "80": {
+        "filename": "TransferUtils.code",
+        "line": 42
+      },
+      "88": {
+        "filename": "TransferUtils.code",
+        "line": 43
+      },
+      "104": {
+        "filename": "TransferUtils.code",
+        "line": 44
+      }
+    }
+  }
+}

@@ -7,6 +7,68 @@ const logger = require("mocha-logger");
 const cliProgress = require('cli-progress');
 
 
+class Executor {
+    private isCancelled: boolean = false;
+    private method: () => Promise<void>;
+    private timeout: number;
+
+    constructor(
+        method: () => Promise<void>,
+        timeout: number
+    ) {
+        this.method = method;
+        this.timeout = timeout;
+    }
+
+    async run(): Promise<void> {
+        try {
+            await this.runWithTimeout();
+        } catch (error) {
+            if (error === 'Timeout') {
+                console.log('Method timed out. Retrying...');
+                await this.run();
+            } else {
+                console.error('An error occurred:', error);
+            }
+        }
+    }
+
+    private runWithTimeout(): Promise<void> {
+        this.isCancelled = false;
+
+        return new Promise(async (resolve, reject) => {
+            const timer = setTimeout(() => {
+                this.isCancelled = true;
+                reject('Timeout');
+            }, this.timeout);
+
+            try {
+                await this.executeMethod();
+
+                if (!this.isCancelled) {
+                    clearTimeout(timer);
+                    resolve();
+                }
+            } catch (error) {
+                if (!this.isCancelled) {
+                    clearTimeout(timer);
+                    reject(error);
+                }
+            }
+        });
+    }
+
+    private async executeMethod(): Promise<void> {
+        if (this.isCancelled) return;
+        
+        // Your actual method content goes here. For example:
+        // await someLongRunningTask();
+        await this.method();
+    }
+}
+  
+  
+
 export class UpgradeAssistant {
     // @ts-ignore
     worker_key: Ed25519KeyPair;
@@ -15,6 +77,7 @@ export class UpgradeAssistant {
     root: Address;
     batches_amount: number;
     chunk_size: number;
+    external_timeout: number;
 
     // @ts-ignore
     fabric: Contract<UpgradeAssistantFabricAbi>;
@@ -35,7 +98,8 @@ export class UpgradeAssistant {
         this.wallets = [...wallets];
         this.batches_amount = batches_amount;
 
-        this.chunk_size = 100;
+        this.chunk_size = 50;
+        this.external_timeout = 60000; // 60 seconds
         this.bar = new cliProgress.SingleBar({
             format: '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} ({duration} sec)'
         }, cliProgress.Presets.shades_classic);
@@ -46,7 +110,7 @@ export class UpgradeAssistant {
         await locklift.keystore.addKeyPair(this.worker_key);
     }
 
-    async _deployFabric() {
+    private async _deployFabric(deployFabricValue: string, deployBatchValue: string) {
         const signer = await locklift.keystore.getSigner("0");
 
         const UpgradeAssistantBatch = await locklift.factory.getContractArtifacts('UpgradeAssistantBatch');
@@ -64,10 +128,11 @@ export class UpgradeAssistant {
                     worker_: `0x${this.worker_key.publicKey}`,
                     root_: this.root,
                     upgrade_assistant_batch_code_: UpgradeAssistantBatch.code,
-                    batches_: this.batches_amount
+                    batches_: this.batches_amount,
+                    deploy_batch_value_: deployBatchValue
                 },
                 publicKey: signer?.publicKey,
-                value: toNano(this.batches_amount + 5) // TODO: depends on batches amount
+                value: deployFabricValue // TODO: depends on batches amount
             })
         );
 
@@ -103,30 +168,34 @@ export class UpgradeAssistant {
         const chunks = _.chunk(wallets, this.chunk_size);
 
         for (const chunk of chunks) {
-            const tx = await locklift.tracing.trace(
-                batch.methods.addWallets({
+            const addWallets = async () => {
+                await batch.methods.addWallets({
                     wallets_: chunk
                 }).sendExternal({
                     publicKey: this.worker_key.publicKey
-                })
-            ).catch(e => {
-                console.log(e);
-                console.log(chunk);
+                });
+            }
 
-                process.exit(1);
-            });
+            const executor = new Executor(addWallets, this.external_timeout);
+            await executor.run();
 
             this.bar.increment(chunk.length);
         }
     }
 
-    async setup() {
+    async setup({
+        deployFabricValue,
+        deployBatchValue
+    } : {
+        deployFabricValue: string,
+        deployBatchValue: string
+    }) {
         await this._setupWorkerKeys();
-        await this._deployFabric();
+        await this._deployFabric(deployFabricValue, deployBatchValue);
         await this._setupBatches();
     }
 
     async checkWallets() {
-
+        
     }
 }

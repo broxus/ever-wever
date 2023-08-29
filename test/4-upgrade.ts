@@ -221,7 +221,10 @@ describe('Test upgrading root and wallets', async function() {
                 25
             );
 
-            await upgrade_assistant.setup();
+            await upgrade_assistant.setup({
+                deployBatchValue: toNano('1'),
+                deployFabricValue: toNano('50')
+            });
         });
 
         it('Upload wallets to batches', async () => {

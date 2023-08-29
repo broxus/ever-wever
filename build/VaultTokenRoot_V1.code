@@ -10,7 +10,7 @@ IFREF {
 GETGLOB 6
 THROWIF 51
 ENDS
-.loc ../contracts/VaultTokenRoot_V1.tsol, 47
+.loc ../contracts/VaultTokenRoot_V1.tsol, 43
 GETGLOB 5
 DUP
 ISNULL
@@ -20,7 +20,7 @@ PUSHCONT {
 }
 IF
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 48
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 44
 	GETGLOB 5
 	DUP
 	ISNULL
@@ -42,11 +42,11 @@ PUSHCONT {
 	}
 	IF
 	THROWIFNOT 1020
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 49
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 45
 	ACCEPT
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 51
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 47
 	GETGLOB 20
 	PARSEMSGADDR
 	INDEX 3
@@ -73,28 +73,28 @@ PUSHCONT {
 	THROWIFNOT 1020
 }
 IFELSE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 55
+.loc ../contracts/VaultTokenRoot_V1.tsol, 51
 PUSHINT 0
 SETGLOB 15
-.loc ../contracts/VaultTokenRoot_V1.tsol, 56
+.loc ../contracts/VaultTokenRoot_V1.tsol, 52
 FALSE
 SETGLOB 18
-.loc ../contracts/VaultTokenRoot_V1.tsol, 57
+.loc ../contracts/VaultTokenRoot_V1.tsol, 53
 FALSE
 SETGLOB 17
-.loc ../contracts/VaultTokenRoot_V1.tsol, 58
+.loc ../contracts/VaultTokenRoot_V1.tsol, 54
 FALSE
 SETGLOB 16
-.loc ../contracts/VaultTokenRoot_V1.tsol, 59
+.loc ../contracts/VaultTokenRoot_V1.tsol, 55
 PUSHINT 1
 SETGLOB 22
-.loc ../contracts/VaultTokenRoot_V1.tsol, 61
+.loc ../contracts/VaultTokenRoot_V1.tsol, 57
 CALLREF {
 	CALL $_targetBalance_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 63
+.loc ../contracts/VaultTokenRoot_V1.tsol, 59
 MYADDR
 CALLREF {
 	CALL $_buildWalletInitData_internal_macro$
@@ -111,6 +111,158 @@ CALLREF {
 }
 THROW 0
 
+.macro mint
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/VaultTokenRoot_V1.tsol, 66
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDU 128
+LDMSGADDR
+LDU 128
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+LDI 1
+LDREF
+ENDS
+.loc ../contracts/VaultTokenRoot_V1.tsol, 0
+CALLREF {
+	CALL $mint_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro mint_internal_macro
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 49
+GETGLOB 13
+PARSEMSGADDR
+INDEX 3
+PLDU 256
+NEQINT 0
+GETGLOB 13
+GETGLOB 9
+SDEQ
+AND
+THROWIFNOT 1000
+.loc ../contracts/VaultTokenRoot_V1.tsol, 79
+PUSHINT 2100
+CALLREF {
+	CALL $_mintEnabled_internal_macro$
+}
+THROWANYIFNOT
+.loc ../contracts/VaultTokenRoot_V1.tsol, 80
+PUSH S5
+GTINT 0
+THROWIFNOT 1050
+.loc ../contracts/VaultTokenRoot_V1.tsol, 81
+PUSH S4
+PARSEMSGADDR
+INDEX 3
+PLDU 256
+THROWIFNOT 1030
+.loc ../contracts/VaultTokenRoot_V1.tsol, 83
+CALLREF {
+	CALL $_reserve_internal_macro$
+}
+PUSHINT 0
+RAWRESERVE
+.loc ../contracts/VaultTokenRoot_V1.tsol, 85
+GETGLOB 9
+GETGLOB 23
+SDEQ
+PUSHCONT {
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 95
+	PUSH S4
+	CALLREF {
+		CALL $_buildWalletInitData_internal_macro$
+	}
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 97
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 99
+	PUSH S5
+	GTINT 0
+	PUSHCONT {
+		.loc ../contracts/VaultTokenRoot_V1.tsol, 100
+		PUSH3 S1, S5, S4
+		CALLREF {
+			CALL $_deployWallet_internal_macro$
+		}
+	}
+	PUSHCONT {
+		.loc ../contracts/VaultTokenRoot_V1.tsol, 102
+		OVER
+		HASHCU
+		NEWC
+		STSLICECONST x801_
+		STU 256
+		ENDC
+		CTOS
+	}
+	IFELSE
+	NIP
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 105
+	GETGLOB 15
+	PUSH S8
+	ADD
+	UFITS 128
+	SETGLOB 15
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 107
+	PUSH3 S2, S3, S4
+	PUSH S10
+	ROLL 4
+	TRUE
+	NEWC
+	STSLICECONST x6_
+	STI 1
+	PUSHINT 3
+	STZEROES
+	STSLICE
+	PUSHINT 1
+	STUR 111
+	ROLLREV 4
+	NEWC
+	STSLICECONST x4c808491
+	STU 128
+	STSLICE
+	STI 1
+	STREF
+	STBREFR
+	ENDC
+	PUSHINT 128
+	SENDRAWMSG
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 0
+	DROP
+}
+PUSHCONT {
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 86
+	BLKPUSH 6, 5
+	CALLREF {
+		CALL $_mint_internal_macro$
+	}
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 0
+}
+IFELSE
+BLKDROP 6
+.loc ../contracts/VaultTokenRoot_V1.tsol, 0
+
 .macro supportsInterface
 DROP
 GETGLOB 6
@@ -120,7 +272,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 73
+.loc ../contracts/VaultTokenRoot_V1.tsol, 123
 LDU 32
 GETGLOB 4
 ROT
@@ -186,7 +338,7 @@ IFREF {
 THROW 0
 
 .macro supportsInterface_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 74
+.loc ../contracts/VaultTokenRoot_V1.tsol, 124
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -237,7 +389,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 99
+.loc ../contracts/VaultTokenRoot_V1.tsol, 149
 OVER
 PUSHCONT {
 	LDU 32
@@ -266,7 +418,7 @@ CALLREF {
 THROW 0
 
 .macro requestUpgradeWallet_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 104
+.loc ../contracts/VaultTokenRoot_V1.tsol, 154
 GETGLOB 9
 ROT
 CALLREF {
@@ -274,18 +426,18 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 1100
-.loc ../contracts/VaultTokenRoot_V1.tsol, 106
+.loc ../contracts/VaultTokenRoot_V1.tsol, 156
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 108
+.loc ../contracts/VaultTokenRoot_V1.tsol, 158
 SWAP
 GETGLOB 22
 EQUAL
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 109
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 159
 	DUP
 	NEWC
 	STSLICECONST x42_
@@ -294,7 +446,7 @@ PUSHCONT {
 	STZEROES
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 115
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 165
 	DUP
 	GETGLOB 22
 	GETGLOB 14
@@ -332,7 +484,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 137
+.loc ../contracts/VaultTokenRoot_V1.tsol, 187
 LDREF
 ENDS
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
@@ -357,32 +509,41 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/VaultTokenRoot_V1.tsol, 41
-GETPARAM 7
-FIRST
-DEPTH
-ADDCONST -2
-PICK
-SUB
-UFITS 128
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 54
+CALLREF {
+	CALL $_reserve_internal_macro$
+}
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 141
+.loc ../contracts/VaultTokenRoot_V1.tsol, 190
 SETGLOB 14
-.loc ../contracts/VaultTokenRoot_V1.tsol, 142
+.loc ../contracts/VaultTokenRoot_V1.tsol, 191
 GETGLOB 22
 INC
 UFITS 32
 SETGLOB 22
-.loc ../contracts/VaultTokenRoot_V1.tsol, 43
+.loc ../contracts/VaultTokenRoot_V1.tsol, 193
 GETGLOB 9
+PUSHINT 128
+CALLREF {
+	CALL $_transfer_internal_macro$
+}
+.loc ../contracts/VaultTokenRoot_V1.tsol, 0
+
+.globl	_transfer_internal
+.type	_transfer_internal, @function
+CALL $_transfer_internal_macro$
+
+.macro _transfer_internal_macro
+.loc ../contracts/VaultTokenRoot_V1.tsol, 197
+SWAP
 NEWC
-STSLICECONST x62_
+STSLICECONST x42_
 STSLICE
 PUSHINT 111
 STZEROES
 ENDC
-PUSHINT 129
+SWAP
 SENDRAWMSG
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
@@ -395,7 +556,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 148
+.loc ../contracts/VaultTokenRoot_V1.tsol, 207
 LDU 32
 GETGLOB 4
 ROT
@@ -460,7 +621,7 @@ IFREF {
 THROW 0
 
 .macro walletVersion_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 149
+.loc ../contracts/VaultTokenRoot_V1.tsol, 208
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -481,7 +642,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 155
+.loc ../contracts/VaultTokenRoot_V1.tsol, 214
 LDU 32
 GETGLOB 4
 ROT
@@ -546,7 +707,7 @@ IFREF {
 THROW 0
 
 .macro platformCode_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 156
+.loc ../contracts/VaultTokenRoot_V1.tsol, 215
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -563,7 +724,7 @@ GETGLOB 21
 CALL $_targetBalance_internal_macro$
 
 .macro _targetBalance_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 163
+.loc ../contracts/VaultTokenRoot_V1.tsol, 222
 PUSHINT 1000000000
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
@@ -572,7 +733,7 @@ PUSHINT 1000000000
 CALL $_buildWalletInitData_internal_macro$
 
 .macro _buildWalletInitData_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 172
+.loc ../contracts/VaultTokenRoot_V1.tsol, 231
 PUSHINT 0
 NEWC
 STU 256
@@ -607,7 +768,7 @@ ENDC
 CALL $_deployWallet_internal_macro$
 
 .macro _deployWallet_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 198
+.loc ../contracts/VaultTokenRoot_V1.tsol, 257
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
@@ -680,13 +841,13 @@ SENDRAWMSG
 CALL $_burnCallback_internal_macro$
 
 .macro _burnCallback_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 216
+.loc ../contracts/VaultTokenRoot_V1.tsol, 275
 PUSH S4
 PARSEMSGADDR
 INDEX 3
 PLDU 256
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 223
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 282
 	PUSH3 S0, S1, S2
 	PUSH3 S6, S8, S7
 	FALSE
@@ -715,7 +876,7 @@ PUSHCONT {
 	STBREFR
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 217
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 276
 	OVER
 	NEWC
 	STSLICECONST x42_
@@ -741,7 +902,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 237
+.loc ../contracts/VaultTokenRoot_V1.tsol, 296
 OVER
 PUSHCONT {
 	LDREF
@@ -772,13 +933,13 @@ CALLREF {
 THROW 0
 
 .macro acceptBurn_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 248
+.loc ../contracts/VaultTokenRoot_V1.tsol, 307
 PUSHINT 2200
 CALLREF {
 	CALL $_burnEnabled_internal_macro$
 }
 THROWANYIFNOT
-.loc ../contracts/VaultTokenRoot_V1.tsol, 249
+.loc ../contracts/VaultTokenRoot_V1.tsol, 308
 GETGLOB 9
 PUSH S4
 CALLREF {
@@ -786,19 +947,19 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 1100
-.loc ../contracts/VaultTokenRoot_V1.tsol, 251
+.loc ../contracts/VaultTokenRoot_V1.tsol, 310
 PUSH S4
 NEGATE
 CALLREF {
 	CALL $_updateTotalSupply_internal_macro$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 252
+.loc ../contracts/VaultTokenRoot_V1.tsol, 311
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 254
+.loc ../contracts/VaultTokenRoot_V1.tsol, 313
 XCHG S3
 XCHG S2, S4
 GETGLOB 9
@@ -813,7 +974,7 @@ CALLREF {
 CALL $owner_internal_macro$
 
 .macro owner_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 265
+.loc ../contracts/VaultTokenRoot_V1.tsol, 324
 GETGLOB 13
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
@@ -822,7 +983,7 @@ GETGLOB 13
 CALL $_updateTotalSupply_internal_macro$
 
 .macro _updateTotalSupply_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 269
+.loc ../contracts/VaultTokenRoot_V1.tsol, 328
 GETGLOB 15
 ADD
 UFITS 128
@@ -834,7 +995,7 @@ SETGLOB 15
 CALL $_reserve_internal_macro$
 
 .macro _reserve_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 273
+.loc ../contracts/VaultTokenRoot_V1.tsol, 332
 GETGLOB 15
 PUSHINT 1000000000
 ADD
@@ -850,7 +1011,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 276
+.loc ../contracts/VaultTokenRoot_V1.tsol, 335
 ENDS
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 CALLREF {
@@ -884,7 +1045,7 @@ IFREF {
 THROW 0
 
 .macro getReserves_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 277
+.loc ../contracts/VaultTokenRoot_V1.tsol, 336
 CALL $_reserve_internal_macro$
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
@@ -897,7 +1058,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 280
+.loc ../contracts/VaultTokenRoot_V1.tsol, 339
 OVER
 PUSHCONT {
 	LDREF
@@ -923,7 +1084,7 @@ CALLREF {
 THROW 0
 
 .macro acceptWrap_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 285
+.loc ../contracts/VaultTokenRoot_V1.tsol, 344
 GETGLOB 9
 ROLL 3
 CALLREF {
@@ -931,26 +1092,22 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 1100
-.loc ../contracts/VaultTokenRoot_V1.tsol, 287
+.loc ../contracts/VaultTokenRoot_V1.tsol, 346
 SWAP
 CALLREF {
 	CALL $_updateTotalSupply_internal_macro$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 289
+.loc ../contracts/VaultTokenRoot_V1.tsol, 348
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 291
-NEWC
-STSLICECONST x42_
-STSLICE
-PUSHINT 111
-STZEROES
-ENDC
+.loc ../contracts/VaultTokenRoot_V1.tsol, 350
 PUSHINT 128
-SENDRAWMSG
+CALLREF {
+	CALL $_transfer_internal_macro$
+}
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
 .macro grant
@@ -962,7 +1119,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 309
+.loc ../contracts/VaultTokenRoot_V1.tsol, 364
 ENDS
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 CALLREF {
@@ -975,22 +1132,18 @@ CALLREF {
 THROW 0
 
 .macro grant_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 310
+.loc ../contracts/VaultTokenRoot_V1.tsol, 365
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 312
+.loc ../contracts/VaultTokenRoot_V1.tsol, 367
 GETGLOB 9
-NEWC
-STSLICECONST x42_
-STSLICE
-PUSHINT 111
-STZEROES
-ENDC
 PUSHINT 128
-SENDRAWMSG
+CALLREF {
+	CALL $_transfer_internal_macro$
+}
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
 
 .macro receive_macro
@@ -1001,21 +1154,21 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 327
+.loc ../contracts/VaultTokenRoot_V1.tsol, 378
 DEPTH
 ADDCONST -2
 PICK
 PUSHINT 1000000000
 GREATER
 THROWIFNOT 101
-.loc ../contracts/VaultTokenRoot_V1.tsol, 329
+.loc ../contracts/VaultTokenRoot_V1.tsol, 380
 DEPTH
 ADDCONST -2
 PICK
 PUSHINT 1000000000
 SUB
 UFITS 128
-.loc ../contracts/VaultTokenRoot_V1.tsol, 331
+.loc ../contracts/VaultTokenRoot_V1.tsol, 382
 DUP
 CALLREF {
 	CALL $_reserve_internal_macro$
@@ -1024,7 +1177,7 @@ ADD
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 335
+.loc ../contracts/VaultTokenRoot_V1.tsol, 386
 GETGLOB 9
 PUSHINT 50000000
 GETGLOB 9
@@ -1048,7 +1201,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 345
+.loc ../contracts/VaultTokenRoot_V1.tsol, 396
 OVER
 PUSHCONT {
 	LDREF
@@ -1077,7 +1230,7 @@ CALLREF {
 THROW 0
 
 .macro wrap_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 353
+.loc ../contracts/VaultTokenRoot_V1.tsol, 404
 DEPTH
 ADDCONST -2
 PICK
@@ -1087,7 +1240,7 @@ ADD
 UFITS 128
 GEQ
 THROWIFNOT 101
-.loc ../contracts/VaultTokenRoot_V1.tsol, 358
+.loc ../contracts/VaultTokenRoot_V1.tsol, 409
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
@@ -1096,7 +1249,7 @@ ADD
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 360
+.loc ../contracts/VaultTokenRoot_V1.tsol, 411
 CALLREF {
 	CALL $_mint_internal_macro$
 }
@@ -1111,7 +1264,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 375
+.loc ../contracts/VaultTokenRoot_V1.tsol, 426
 OVER
 PUSHCONT {
 	LDREF
@@ -1146,12 +1299,12 @@ CALLREF {
 THROW 0
 
 .macro onAcceptTokensTransfer_internal_macro
-.loc ../contracts/VaultTokenRoot_V1.tsol, 383
+.loc ../contracts/VaultTokenRoot_V1.tsol, 434
 ROLL 5
 MYADDR
 SDEQ
 THROWIFNOT 102
-.loc ../contracts/VaultTokenRoot_V1.tsol, 384
+.loc ../contracts/VaultTokenRoot_V1.tsol, 435
 GETGLOB 9
 MYADDR
 CALLREF {
@@ -1159,19 +1312,19 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 1100
-.loc ../contracts/VaultTokenRoot_V1.tsol, 387
+.loc ../contracts/VaultTokenRoot_V1.tsol, 438
 PUSH S4
 NEGATE
 CALLREF {
 	CALL $_updateTotalSupply_internal_macro$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 389
+.loc ../contracts/VaultTokenRoot_V1.tsol, 440
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 392
+.loc ../contracts/VaultTokenRoot_V1.tsol, 443
 ROLL 4
 PUSH S4
 BLKSWAP 4, 2
@@ -1189,7 +1342,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 402
+.loc ../contracts/VaultTokenRoot_V1.tsol, 453
 OVER
 PUSHCONT {
 	LDU 32
@@ -1233,12 +1386,12 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/VaultTokenRoot_V1.tsol, 406
+.loc ../contracts/VaultTokenRoot_V1.tsol, 457
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 DROP
-.loc ../contracts/VaultTokenRoot_V1.tsol, 408
+.loc ../contracts/VaultTokenRoot_V1.tsol, 459
 SWAP
 SECOND
 PUSHINT 0
@@ -1255,7 +1408,7 @@ PUSHCONT {
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenRoot_V1.tsol, 409
+	.loc ../contracts/VaultTokenRoot_V1.tsol, 460
 	GETGLOB 9
 	GETGLOB 22
 	GETGLOB 14
@@ -1299,7 +1452,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenRoot_V1.tsol, 422
+.loc ../contracts/VaultTokenRoot_V1.tsol, 473
 LDREF
 ENDS
 .loc ../contracts/VaultTokenRoot_V1.tsol, 0
@@ -1324,35 +1477,42 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/VaultTokenRoot_V1.tsol, 423
+.loc ../contracts/VaultTokenRoot_V1.tsol, 474
+GETGLOB 19
+GETGLOB 20
 GETGLOB 16
 GETGLOB 17
 GETGLOB 18
 GETGLOB 14
 GETGLOB 21
 GETGLOB 22
+GETGLOB 15
+GETGLOB 13
 GETGLOB 11
 GETGLOB 10
 GETGLOB 12
-GETGLOB 15
-GETGLOB 13
 NEWC
-STSLICE
-STU 128
 STU 8
 STREF
 STREF
+STSLICE
+STU 128
 STU 32
 STREF
+ROLLREV 6
+NEWC
 STREF
 STI 1
 STI 1
 STI 1
+STSLICE
+STU 256
+STBREFR
 ENDC
-.loc ../contracts/VaultTokenRoot_V1.tsol, 430
+.loc ../contracts/VaultTokenRoot_V1.tsol, 482
 OVER
 SETCODE
-.loc ../contracts/VaultTokenRoot_V1.tsol, 431
+.loc ../contracts/VaultTokenRoot_V1.tsol, 483
 SWAP
 CTOS
 DUP
@@ -1367,7 +1527,7 @@ PLDREF
 CTOS
 BLESS
 POP C3
-.loc ../contracts/VaultTokenRoot_V1.tsol, 433
+.loc ../contracts/VaultTokenRoot_V1.tsol, 485
 CALLREF {
 	CALL $:onCodeUpgrade$
 }
@@ -1375,7 +1535,7 @@ CALLREF {
 
 .internal-alias :onCodeUpgrade, 2
 .internal :onCodeUpgrade
-.loc ../contracts/VaultTokenRoot_V1.tsol, 437
+.loc ../contracts/VaultTokenRoot_V1.tsol, 489
 PUSHREF {
 }
 SETGLOB 10
@@ -1410,9 +1570,13 @@ PUSHREF {
 SETGLOB 21
 PUSHINT 0
 SETGLOB 22
-.loc ../contracts/VaultTokenRoot_V1.tsol, 438
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SETGLOB 23
+.loc ../contracts/VaultTokenRoot_V1.tsol, 490
 CTOS
-.loc ../contracts/VaultTokenRoot_V1.tsol, 440
+.loc ../contracts/VaultTokenRoot_V1.tsol, 492
 DUP
 LDMSGADDR
 LDU 128
@@ -1422,16 +1586,16 @@ XCHG S2
 SETGLOB 13
 SETGLOB 15
 SETGLOB 12
-.loc ../contracts/VaultTokenRoot_V1.tsol, 446
+.loc ../contracts/VaultTokenRoot_V1.tsol, 498
 LDREFRTOS
 DROP
-.loc ../contracts/VaultTokenRoot_V1.tsol, 447
+.loc ../contracts/VaultTokenRoot_V1.tsol, 499
 LDREFRTOS
-.loc ../contracts/VaultTokenRoot_V1.tsol, 448
+.loc ../contracts/VaultTokenRoot_V1.tsol, 500
 SWAP
 LDREFRTOS
 NIP
-.loc ../contracts/VaultTokenRoot_V1.tsol, 450
+.loc ../contracts/VaultTokenRoot_V1.tsol, 502
 SWAP
 LDU 32
 LDREF
@@ -1445,7 +1609,7 @@ SETGLOB 21
 SETGLOB 14
 SETGLOB 10
 SETGLOB 11
-.loc ../contracts/VaultTokenRoot_V1.tsol, 458
+.loc ../contracts/VaultTokenRoot_V1.tsol, 510
 LDI 1
 LDI 1
 LDI 1
@@ -1547,10 +1711,10 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 31
+.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 32
 TRUE
 SETGLOB 18
-.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 32
+.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 33
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1571,7 +1735,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 38
+.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 39
 LDU 32
 GETGLOB 4
 ROT
@@ -1636,7 +1800,7 @@ IFREF {
 THROW 0
 
 .macro mintDisabled_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 39
+.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 40
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1653,7 +1817,7 @@ GETGLOB 18
 CALL $_mintEnabled_internal_macro$
 
 .macro _mintEnabled_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 47
 GETGLOB 18
 NOT
 .loc ../contracts/tip3/abstract/TokenRootDisableableMintBase.tsol, 0
@@ -1724,7 +1888,7 @@ PARSEMSGADDR
 INDEX 3
 PLDU 256
 THROWIFNOT 1021
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 54
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 56
 ROLL 3
 REVERSE 4, 1
 CALLREF {
@@ -1764,7 +1928,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 69
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 71
 LDU 32
 GETGLOB 4
 ROT
@@ -1841,10 +2005,10 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 70
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 73
 TRUE
 SETGLOB 17
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 71
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 74
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1865,7 +2029,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 77
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 80
 LDU 32
 GETGLOB 4
 ROT
@@ -1930,7 +2094,7 @@ IFREF {
 THROW 0
 
 .macro burnByRootDisabled_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 78
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 81
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -2115,9 +2279,9 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 37
-SETGLOB 16
 .loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 38
+SETGLOB 16
+.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 39
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -2134,7 +2298,7 @@ GETGLOB 16
 CALL $_burnEnabled_internal_macro$
 
 .macro _burnEnabled_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 45
+.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 46
 GETGLOB 16
 NOT
 .loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 0
@@ -2191,14 +2355,14 @@ CALLREF {
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 39
+.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 37
 GETGLOB 13
-.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 40
+.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 38
 ROLL 3
 SETGLOB 13
-.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 42
+.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 40
 NULL
-.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 43
+.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 41
 ROT
 DUP
 PUSHINT 267
@@ -2221,23 +2385,23 @@ PUSHCONT {
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 44
+	.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 42
 	OVER
 	PARSEMSGADDR
 	INDEX 3
 	PLDU 256
 	PUSHCONT {
-		.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 45
+		.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 43
 		PUSH2 S6, S1
 		SDEQ
 		PUSHCONT {
-			.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 52
+			.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 50
 			DUP
 			SECOND
 			POP S5
 		}
 		PUSHCONT {
-			.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 46
+			.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 44
 			DUP
 			SECOND
 			PUSH S7
@@ -2298,17 +2462,17 @@ IFREFELSE {
 }
 WHILE
 BLKDROP 4
-.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 57
+.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 55
 PUSH S2
 PARSEMSGADDR
 INDEX 3
 PLDU 256
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 58
+	.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 56
 	DUP
 	ISNULL
 	PUSHCONT {
-		.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 65
+		.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 63
 		PUSH S2
 		NEWC
 		STSLICECONST x42_
@@ -2321,7 +2485,7 @@ PUSHCONT {
 		UFITS 8
 	}
 	PUSHCONT {
-		.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 59
+		.loc ../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol, 57
 		BLKPUSH 2, 0
 		ISNULL
 		THROWIF 63
@@ -3139,44 +3303,7 @@ SETINDEXQ 1
 SETGLOB 4
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 0
 
-.macro mint
-DROP
-GETGLOB 6
-THROWIFNOT 76
-GETGLOB 2
-ISNULL
-IFREF {
-	CALL $c4_to_c7$
-}
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 165
-OVER
-PUSHCONT {
-	LDREF
-	ENDS
-	CTOS
-}
-IF
-LDU 128
-LDMSGADDR
-LDU 128
-LDREF
-ENDS
-CTOS
-LDMSGADDR
-LDI 1
-LDREF
-ENDS
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 0
-CALLREF {
-	CALL $mint_internal_macro$
-}
-DROP
-CALLREF {
-	CALL $c7_to_c4$
-}
-THROW 0
-
-.macro mint_internal_macro
+.macro TokenRootBase_mint_macro
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 49
 GETGLOB 13
 PARSEMSGADDR
@@ -3188,42 +3315,42 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 177
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 178
 PUSHINT 2100
 CALLREF {
 	CALL $_mintEnabled_internal_macro$
 }
 THROWANYIFNOT
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 178
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 179
 PUSH S5
 GTINT 0
 THROWIFNOT 1050
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 179
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 180
 PUSH S4
 PARSEMSGADDR
 INDEX 3
 PLDU 256
 THROWIFNOT 1030
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 181
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 182
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 182
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 183
 CALLREF {
 	CALL $_mint_internal_macro$
 }
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 0
 
 .macro TokenRootBase_acceptBurn_macro
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 212
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 213
 PUSHINT 2200
 CALLREF {
 	CALL $_burnEnabled_internal_macro$
 }
 THROWANYIFNOT
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 213
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 214
 GETGLOB 9
 PUSH S4
 CALLREF {
@@ -3231,7 +3358,7 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 1100
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 215
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 216
 GETPARAM 7
 FIRST
 DEPTH
@@ -3241,19 +3368,19 @@ SUB
 UFITS 128
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 217
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 218
 GETGLOB 15
 PUSH S5
 SUB
 UFITS 128
 SETGLOB 15
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 219
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 220
 OVER
 PARSEMSGADDR
 INDEX 3
 PLDU 256
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 226
+	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 227
 	PUSH2 S0, S2
 	GETGLOB 9
 	PUSH3 S6, S7, S4
@@ -3283,7 +3410,7 @@ PUSHCONT {
 	STBREFR
 }
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 220
+	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 221
 	PUSH S2
 	NEWC
 	STSLICECONST x42_
@@ -3305,27 +3432,27 @@ BLKDROP 5
 CALL $_mint_internal_macro$
 
 .macro _mint_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 268
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 269
 ROLL 4
 CALLREF {
 	CALL $_buildWalletInitData_internal_macro$
 }
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 270
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 271
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 272
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 273
 PUSH S5
 GTINT 0
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 273
+	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 274
 	PUSH3 S1, S5, S4
 	CALLREF {
 		CALL $_deployWallet_internal_macro$
 	}
 }
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 275
+	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 276
 	OVER
 	HASHCU
 	NEWC
@@ -3336,13 +3463,13 @@ PUSHCONT {
 }
 IFELSE
 NIP
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 278
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 279
 GETGLOB 15
 PUSH S7
 ADD
 UFITS 128
 SETGLOB 15
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 280
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 281
 XCHG S5, S6
 REVERSE 5, 1
 TRUE
@@ -3373,7 +3500,7 @@ DROP2
 CALL $_getExpectedWalletAddress_internal_macro$
 
 .macro _getExpectedWalletAddress_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 305
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 306
 CALLREF {
 	CALL $_buildWalletInitData_internal_macro$
 }
@@ -3393,14 +3520,14 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 322
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 323
 DUP
 LDU 32
 POP S2
 PUSHINT 1132786328
 EQUAL
 PUSHCONT {
-	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 323
+	.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 324
 	DUP
 	LDU 128
 	POP S2
@@ -3426,7 +3553,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 340
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 341
 OVER
 PUSHCONT {
 	LDREF
@@ -3457,13 +3584,13 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 341
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 342
 CALLREF {
 	CALL $_targetBalance_internal_macro$
 }
 PUSHINT 0
 RAWRESERVE
-.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 342
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 343
 NEWC
 STSLICECONST x42_
 STSLICE
@@ -3499,7 +3626,12 @@ LDU 256
 LDMSGADDR
 LDREF
 LDU 32
+LDREF
 ENDS
+CTOS
+LDMSGADDR
+ENDS
+SETGLOB 23
 SETGLOB 22
 SETGLOB 21
 SETGLOB 20
@@ -3607,6 +3739,10 @@ PUSHCONT {
 	}
 	IFNOT
 	PUSHINT 0
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+	SETGLOB 23
 	SETGLOB 22
 	SETGLOB 21
 	SETGLOB 20
@@ -3633,6 +3769,7 @@ IFREFELSE {
 }
 
 .macro c7_to_c4
+GETGLOB 23
 GETGLOB 22
 GETGLOB 21
 GETGLOB 20
@@ -3657,7 +3794,7 @@ STREF
 STU 8
 STSLICE
 STREF
-ROLLREV 8
+ROLLREV 9
 NEWC
 STU 128
 STI 1
@@ -3667,6 +3804,10 @@ STU 256
 STSLICE
 STREF
 STU 32
+SWAP
+NEWC
+STSLICE
+STBREFR
 STBREFR
 ENDC
 POPROOT
@@ -3816,9 +3957,29 @@ CALLREF {
 	CALL $fallback_macro$
 }
 
+.macro legacy_vault_
+DROP
+ENDS
+CALLREF {
+	CALL $c4_to_c7$
+}
+GETGLOB 23
+OVER
+PUSHCONT {
+	PUSHSLICE xc000000000000000000000000098b65936
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+IF
+THROW 0
+
 .macro public_function_selector
 DUP
-PUSHINT 839183401
+PUSHINT 837670087
 LEQ
 IFJMPREF {
 	DUP
@@ -3851,7 +4012,7 @@ IFJMPREF {
 		}
 	}
 	DUP
-	PUSHINT 428082246
+	PUSHINT 422269361
 	LEQ
 	IFJMPREF {
 		DUP
@@ -3867,22 +4028,28 @@ IFJMPREF {
 			CALL $symbol$
 		}
 		DUP
+		PUSHINT 414603574
+		EQUAL
+		IFJMPREF {
+			CALL $legacy_vault_$
+		}
+		DUP
 		PUSHINT 422269361
 		EQUAL
 		IFJMPREF {
 			CALL $acceptBurn$
 		}
+	}
+	DUP
+	PUSHINT 552322925
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 428082246
 		EQUAL
 		IFJMPREF {
 			CALL $name$
 		}
-	}
-	DUP
-	PUSHINT 558884267
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 502498758
 		EQUAL
@@ -3901,17 +4068,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $sendSurplusGas$
 		}
+	}
+	DUP
+	PUSHINT 837670087
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 558884267
 		EQUAL
 		IFJMPREF {
 			CALL $wrap$
 		}
-	}
-	DUP
-	PUSHINT 839183401
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 569177215
 		EQUAL
@@ -3930,22 +4097,22 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $deployWallet$
 		}
+	}
+}
+DUP
+PUSHINT 2094753589
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 975694363
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 839183401
 		EQUAL
 		IFJMPREF {
 			CALL $supportsInterface$
 		}
-	}
-}
-DUP
-PUSHINT 2146356303
-LEQ
-IFJMPREF {
-	DUP
-	PUSHINT 1061952210
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 911978585
 		EQUAL
@@ -3964,17 +4131,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $burnPaused$
 		}
+	}
+	DUP
+	PUSHINT 1394526076
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1061952210
 		EQUAL
 		IFJMPREF {
 			CALL $acceptWrap$
 		}
-	}
-	DUP
-	PUSHINT 1519307959
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1172038416
 		EQUAL
@@ -3993,17 +4160,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $decimals$
 		}
+	}
+	DUP
+	PUSHINT 1756716863
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1519307959
 		EQUAL
 		IFJMPREF {
 			CALL $disableBurnByRoot$
 		}
-	}
-	DUP
-	PUSHINT 1893244873
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1629421668
 		EQUAL
@@ -4022,17 +4189,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $constructor$
 		}
+	}
+	DUP
+	PUSHINT 2094753589
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1893244873
 		EQUAL
 		IFJMPREF {
 			CALL $onAcceptTokensTransfer$
 		}
-	}
-	DUP
-	PUSHINT 2146356303
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1911415692
 		EQUAL
@@ -4051,12 +4218,12 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $disableMint$
 		}
-		DUP
-		PUSHINT 2146356303
-		EQUAL
-		IFJMPREF {
-			CALL $setBurnPaused$
-		}
 	}
+}
+DUP
+PUSHINT 2146356303
+EQUAL
+IFJMPREF {
+	CALL $setBurnPaused$
 }
 

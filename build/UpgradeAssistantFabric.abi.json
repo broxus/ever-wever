@@ -10,7 +10,8 @@
 				{"name":"worker_","type":"uint256"},
 				{"name":"root_","type":"address"},
 				{"name":"upgrade_assistant_batch_code_","type":"cell"},
-				{"name":"batches_","type":"uint32"}
+				{"name":"batches_","type":"uint32"},
+				{"name":"deploy_batch_value_","type":"uint128"}
 			],
 			"outputs": [
 			]
@@ -49,6 +50,13 @@
 		},
 		{
 			"name": "revokeOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destroy",
 			"inputs": [
 			],
 			"outputs": [
@@ -118,6 +126,14 @@
 			]
 		},
 		{
+			"name": "deploy_batch_value",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"deploy_batch_value","type":"uint128"}
+			]
+		},
+		{
 			"name": "upgrade_assistant_batch_code",
 			"inputs": [
 			],
@@ -159,6 +175,7 @@
 		{"name":"worker","type":"uint256"},
 		{"name":"batches","type":"uint32"},
 		{"name":"batches_deployed","type":"uint32"},
+		{"name":"deploy_batch_value","type":"uint128"},
 		{"name":"upgrade_assistant_batch_code","type":"cell"}
 	]
 }
