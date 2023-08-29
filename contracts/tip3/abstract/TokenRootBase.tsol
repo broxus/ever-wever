@@ -172,6 +172,7 @@ abstract contract TokenRootBase is ITokenRoot, ICallbackParamsStructure {
     )
         override
         external
+        virtual
         onlyRootOwner
     {
         require(_mintEnabled(), TokenErrors.MINT_DISABLED);

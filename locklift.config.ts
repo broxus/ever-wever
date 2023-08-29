@@ -8,14 +8,14 @@ import * as fs from "fs";
 import path from "path";
 import { FactorySource } from "./build/factorySource";
 
-import "locklift-deploy";
-import { Deployments } from "locklift-deploy";
+import "@broxus/locklift-deploy";
+import { Deployments } from "@broxus/locklift-deploy";
 
 declare global {
   const locklift: import("locklift").Locklift<FactorySource>;
 }
 
-import "locklift-verifier";
+import "@broxus/locklift-verifier";
 
 declare module "locklift" {
   //@ts-ignore
@@ -94,30 +94,24 @@ const config: LockliftConfig = {
         amount: 500,
       },
     },
-    venom_devnet: {
+    venom_testnet: {
       connection: {
         id: 1000,
+        group: "group",
         type: "jrpc",
-        group: "dev",
         data: {
-          endpoint: VENOM_DEVNET_ENDPOINT,
+          endpoint: "https://jrpc-testnet.venom.foundation"
         },
       },
       giver: {
-        address: "0:7314b0ab6eee6ce296f480504cf04797d03839778281c71cb9d60c987c783456",
-        phrase: process.env.VENOM_DEV_SEED_PHRASE,
-        accountId: 0
-      },
-      tracing: {
-        endpoint: VENOM_DEVNET_TRACE_ENDPOINT,
+        address: process.env.VENOM_GIVER_ADDRESS ?? "",
+        phrase: process.env.VENOM_GIVER_PHRASE ?? "",
+        accountId: 0,
       },
       keys: {
-        // Use everdev to generate your phrase
-        // !!! Never commit it in your repos !!!
-        phrase: process.env.VENOM_DEV_SEED_PHRASE,
-        amount: 20,
-      },
-    },
+        amount: 20
+      }
+    }
   },
   mocha: {
     timeout: 2000000,

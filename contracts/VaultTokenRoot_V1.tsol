@@ -17,6 +17,7 @@ import "tip3/libraries/TokenGas.tsol";
 import "tip3/TokenWalletPlatform.tsol";
 
 import "./interfaces/IVaultTokenRoot_V1.tsol";
+import "./interfaces/IVaultTokenWallet_V1.tsol";
 import "./libraries/ErrorCodes.tsol";
 
 import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
@@ -36,6 +37,7 @@ contract VaultTokenRoot_V1 is
 
     TvmCell static platformCode_;
     uint32 walletVersion_;
+    address public legacy_vault_;
 
     constructor() public {
         if (msg.pubkey() != 0) {
@@ -59,6 +61,60 @@ contract VaultTokenRoot_V1 is
             WRAP_DEPLOY_WALLET_VALUE,
             rootOwner_
         );
+    }
+
+    function mint(
+        uint128 amount,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    )
+        override(TokenRootBase,ITokenRoot)
+        external
+        virtual
+        onlyRootOwner
+    {
+        require(_mintEnabled(), TokenErrors.MINT_DISABLED);
+        require(amount > 0, TokenErrors.WRONG_AMOUNT);
+        require(recipient.value != 0, TokenErrors.WRONG_RECIPIENT);
+
+        tvm.rawReserve(_reserve(), 0);
+
+        if (msg.sender != legacy_vault_) {
+            _mint(
+                amount,
+                recipient,
+                deployWalletValue,
+                remainingGasTo,
+                notify,
+                payload
+            );
+        } else {
+            TvmCell stateInit = _buildWalletInitData(recipient);
+
+            address recipientWallet;
+
+            if(deployWalletValue > 0) {
+                recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
+            } else {
+                recipientWallet = address(tvm.hash(stateInit));
+            }
+
+            totalSupply_ += amount;
+
+            IVaultTokenWallet_V1(recipientWallet).acceptMintLegacyCallback{
+                value: 0,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED,
+                bounce: true
+            }(
+                amount,
+                remainingGasTo,
+                notify,
+                payload
+            );
+        }
     }
 
     /**
@@ -135,6 +191,14 @@ contract VaultTokenRoot_V1 is
         walletVersion_++;
 
         _transfer(msg.sender, MsgFlag.ALL_NOT_RESERVED);
+    }
+
+    function _transfer(address recipient, uint8 flags) internal pure {
+        recipient.transfer({
+            bounce: false,
+            flag: flags,
+            value: 0
+        });
     }
 
     /**
