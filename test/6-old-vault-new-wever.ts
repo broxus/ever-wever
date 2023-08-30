@@ -37,7 +37,6 @@ describe('Transfer tokens with additional wrap', async function() {
         }).send({from: alice.address, amount: toNano(20)}));
 
        traceTree?.beautyPrint();
-    //    expect(traceTree).to.emit('MintCallback').withNamedArgs({payload: payload});
     });
 
     it("Call vault directly", async function () {
@@ -53,6 +52,14 @@ describe('Transfer tokens with additional wrap', async function() {
             gas_back_address: alice.address, 
             payload: payload
         }).send({from: alice.address, amount: toNano(40)}));
+
+        expect(traceTree).to.call('acceptMint').withNamedArgs({
+            amount: toNano(10), 
+            remainingGasTo: alice.address,
+            notify: true, 
+            payload: payload 
+        });
+        expect
 
        traceTree?.beautyPrint();
     });
@@ -80,7 +87,6 @@ describe('Transfer tokens with additional wrap', async function() {
         expect(traceTree).to.call("acceptBurn").withNamedArgs({
             amount: toNano(5), 
             walletOwner: vault.address, 
-            callbackto: minterBurner.address, 
             remainingGasTo: minterBurnerTW.address, 
             payload: payload
         });
