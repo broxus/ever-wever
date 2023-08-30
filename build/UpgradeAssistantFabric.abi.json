@@ -56,6 +56,22 @@
 			]
 		},
 		{
+			"name": "finishUpgrade",
+			"inputs": [
+				{"name":"nonce","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "isDone",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"done","type":"bool"}
+			]
+		},
+		{
 			"name": "destroy",
 			"inputs": [
 			],
@@ -118,6 +134,14 @@
 			]
 		},
 		{
+			"name": "batches_done",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"batches_done","type":"uint32"}
+			]
+		},
+		{
 			"name": "batches_deployed",
 			"inputs": [
 			],
@@ -174,6 +198,7 @@
 		{"name":"root","type":"address"},
 		{"name":"worker","type":"uint256"},
 		{"name":"batches","type":"uint32"},
+		{"name":"batches_done","type":"uint32"},
 		{"name":"batches_deployed","type":"uint32"},
 		{"name":"deploy_batch_value","type":"uint128"},
 		{"name":"upgrade_assistant_batch_code","type":"cell"}

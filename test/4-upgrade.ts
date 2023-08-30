@@ -203,8 +203,15 @@ describe('Test upgrading root and wallets', async function() {
                 amount: (Number(to_grant) + Number(toNano('1'))).toString()
             }));
 
-            expect(await locklift.provider.getBalance(vault_v1.address))
-                .to.be.equal(await vault_v1.methods.getReserves().call().then(t => t.value0), 'Balance and treasuries should be equal');
+            const total_supply = await vault_v1.methods.totalSupply({ answerId: 0 }).call().then(t => t.value0);
+            const balance = await locklift.provider.getBalance(vault_v1.address);
+            const reserves = await vault_v1.methods.getReserves({ answerId: 0 }).call().then(t => t.value0);
+            const initial_balance = await vault_v1.methods.getInitialBalance({ answerId: 0 }).call().then(t => t.value0);
+
+            expect(Number(balance))
+                .to.be.equal(Number(reserves), 'Balance and reserve should be equal');
+            expect(Number(total_supply) + Number(initial_balance))
+                .to.be.equal(Number(reserves), 'Total supply and reserve should be equal');;
         });
     });
 
@@ -274,6 +281,13 @@ describe('Test upgrading root and wallets', async function() {
             const diff = Number(oldBalance) - Number(balance) + Number(UPGRADE_VALUE);
 
             logger.log(`Upgrading ${users.length} wallets took ${fromNano(diff)}`);
+        });
+
+        it('Check fabric is done', async () => {
+            const done = await upgrade_assistant.isDone();
+
+            expect(done)
+                .to.be.equal(true, 'Fabric should be done after upgrade');
         });
 
         it('Revoke ownership', async () => {

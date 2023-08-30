@@ -23,4 +23,9 @@ interface IVaultTokenRoot_V1 {
         address[] wallets,
         uint128 accept_upgrade_value
     ) external;
+
+    function getReceiveSafeFee() external pure responsible returns(uint128);
+    function getWrapDeployWalletValue() external pure responsible returns(uint128);
+    function getInitialBalance() external pure responsible returns(uint128);
+    function getReserves() external responsible view returns (uint128);
 }

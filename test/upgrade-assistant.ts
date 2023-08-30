@@ -105,6 +105,14 @@ export class UpgradeAssistant {
         }, cliProgress.Presets.shades_classic);
     }
 
+    async isDone() {
+        const {
+            done
+        } = await this.fabric.methods.isDone({}).call();
+
+        return done;
+    }
+
     async _setupWorkerKeys() {
         this.worker_key = ed25519_generateKeyPair();
         await locklift.keystore.addKeyPair(this.worker_key);

@@ -48,12 +48,12 @@ const main = async () => {
             message: 'How many wallets are upgraded per one upgrade',
             initial: '1000'             
         },
-        // {
-        //     type: 'number',
-        //     name: 'sleep_between_upgrades_seconds',
-        //     message: 'How many seconds to sleep between upgrades',
-        //     initial: '60'
-        // },
+        {
+            type: 'number',
+            name: 'sleep_between_upgrades_seconds',
+            message: 'How many seconds to sleep between upgrades',
+            initial: '60'
+        },
         {
             type: 'number',
             name: 'depoy_fabric_value',
@@ -154,15 +154,28 @@ const main = async () => {
 
         // Trigger upgrade
         logger.log(`Triggering upgrade...`);
-        const trace = await locklift.tracing.trace(
-            upgrade_assistant.fabric.methods.upgrade({}).send({
-                from: owner.address,
-                amount: toNano(wallets.length * 0.5),
-            })
-        );
+        const tx = await upgrade_assistant.fabric.methods.upgrade({}).send({
+            from: owner.address,
+            amount: toNano(wallets.length * 0.5),
+        });
 
-        logger.log(`Revoke ownership...`);
+        // Wait until fabric is done
+        // TODO: or tracing?
+        logger.log(`Waiting for all batches to finish...`);
+        while (true) {
+            const done = await upgrade_assistant.isDone();
+
+            if (done) {
+                logger.log(`All batches are done`);
+                break;
+            } else {
+                logger.log(`Not all batches are done, sleeping for 10 seconds...`);
+                await delay(10_000);
+            }
+        }
+
         // Revoke ownership
+        logger.log(`Revoke ownership...`);
         await locklift.tracing.trace(
             upgrade_assistant.fabric.methods.revokeOwnership({}).send({
                 from: owner.address,
@@ -170,9 +183,9 @@ const main = async () => {
             })
         );
 
-        // // Sleep
-        // logger.log(`Sleeping for ${response.sleep_between_upgrades_seconds} seconds...`);
-        // await delay(response.sleep_between_upgrades_seconds * 1000);
+        // Sleep
+        logger.log(`Sleeping for ${response.sleep_between_upgrades_seconds} seconds...`);
+        await delay(response.sleep_between_upgrades_seconds * 1000);
     }
 }
 
