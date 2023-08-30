@@ -1,0 +1,578 @@
+{
+  "map": {
+    "1664d370ad9e7eb8c458f2fec71f887f548c1ca3e58db14ee48193ce9037a423": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 4
+      },
+      "8": {
+        "filename": "UpgradeDrain.code",
+        "line": 5
+      },
+      "24": {
+        "filename": "UpgradeDrain.code",
+        "line": 6
+      },
+      "32": {
+        "filename": "UpgradeDrain.code",
+        "line": 7
+      },
+      "48": {
+        "filename": "UpgradeDrain.code",
+        "line": 10
+      },
+      "64": {
+        "filename": "UpgradeDrain.code",
+        "line": 11
+      },
+      "80": {
+        "filename": "UpgradeDrain.code",
+        "line": 12
+      },
+      "88": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 6
+      }
+    },
+    "4747a5af7a755986882ca586ab9f2aa1e21f91d248dc98635e13e305d4cf1ce6": {
+      "4": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "12": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "28": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "36": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "60": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "68": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "84": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "100": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "108": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "132": {
+        "filename": "../contracts/test/UpgradeDrain.tsol",
+        "line": 10
+      },
+      "148": {
+        "filename": "UpgradeDrain.code",
+        "line": 31
+      },
+      "164": {
+        "filename": "UpgradeDrain.code",
+        "line": 34
+      },
+      "180": {
+        "filename": "UpgradeDrain.code",
+        "line": 35
+      }
+    },
+    "5e4ef997973dc326fd1ccf8eaeb4903ef1d79a36db5d49841a059dfa54ccd0a3": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 132
+      },
+      "16": {
+        "filename": "UpgradeDrain.code",
+        "line": 133
+      },
+      "24": {
+        "filename": "UpgradeDrain.code",
+        "line": 134
+      },
+      "40": {
+        "filename": "UpgradeDrain.code",
+        "line": 135
+      },
+      "56": {
+        "filename": "UpgradeDrain.code",
+        "line": 136
+      },
+      "72": {
+        "filename": "UpgradeDrain.code",
+        "line": 137
+      },
+      "360": {
+        "filename": "UpgradeDrain.code",
+        "line": 138
+      },
+      "376": {
+        "filename": "UpgradeDrain.code",
+        "line": 139
+      },
+      "384": {
+        "filename": "UpgradeDrain.code",
+        "line": 140
+      },
+      "400": {
+        "filename": "UpgradeDrain.code",
+        "line": 143
+      },
+      "416": {
+        "filename": "UpgradeDrain.code",
+        "line": 144
+      },
+      "424": {
+        "filename": "UpgradeDrain.code",
+        "line": 145
+      },
+      "432": {
+        "filename": "UpgradeDrain.code",
+        "line": 146
+      },
+      "456": {
+        "filename": "UpgradeDrain.code",
+        "line": 147
+      },
+      "472": {
+        "filename": "UpgradeDrain.code",
+        "line": 148
+      },
+      "480": {
+        "filename": "UpgradeDrain.code",
+        "line": 149
+      },
+      "496": {
+        "filename": "UpgradeDrain.code",
+        "line": 150
+      },
+      "504": {
+        "filename": "UpgradeDrain.code",
+        "line": 151
+      },
+      "520": {
+        "filename": "UpgradeDrain.code",
+        "line": 152
+      },
+      "536": {
+        "filename": "UpgradeDrain.code",
+        "line": 153
+      },
+      "552": {
+        "filename": "UpgradeDrain.code",
+        "line": 155
+      },
+      "560": {
+        "filename": "UpgradeDrain.code",
+        "line": 156
+      },
+      "576": {
+        "filename": "UpgradeDrain.code",
+        "line": 157
+      },
+      "584": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "600": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "608": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "616": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "632": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "640": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "656": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "680": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "688": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "728": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "736": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "744": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "760": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "776": {
+        "filename": "UpgradeDrain.code",
+        "line": 159
+      },
+      "792": {
+        "filename": "UpgradeDrain.code",
+        "line": 160
+      },
+      "800": {
+        "filename": "UpgradeDrain.code",
+        "line": 161
+      },
+      "816": {
+        "filename": "UpgradeDrain.code",
+        "line": 164
+      }
+    },
+    "60488e96384d55db5809d3be340ce676908c99e02e0f6a89a307f1376c1ceb17": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 71
+      },
+      "16": {
+        "filename": "UpgradeDrain.code",
+        "line": 72
+      },
+      "32": {
+        "filename": "UpgradeDrain.code",
+        "line": 73
+      },
+      "40": {
+        "filename": "UpgradeDrain.code",
+        "line": 74
+      },
+      "56": {
+        "filename": "UpgradeDrain.code",
+        "line": 75
+      },
+      "72": {
+        "filename": "UpgradeDrain.code",
+        "line": 76
+      },
+      "88": {
+        "filename": "UpgradeDrain.code",
+        "line": 77
+      },
+      "96": {
+        "filename": "UpgradeDrain.code",
+        "line": 78
+      }
+    },
+    "62fee62b3c4b6ab4bf73e325ed28c43a8ef1cd80b8c3ea1b066a3196cf09c902": {
+      "0": {
+        "filename": "<internal-selector>",
+        "line": 1
+      },
+      "24": {
+        "filename": "<internal-selector>",
+        "line": 2
+      }
+    },
+    "799f19650fdac7c452e02bae9c972d101b5a8f3e29a5d81188cbb3b2ea97d82f": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
+      }
+    },
+    "a7196880089b936a24ce2ef7f9afb07afec95eafa248f5a1ea73bb0c14bfab84": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 97
+      },
+      "16": {
+        "filename": "UpgradeDrain.code",
+        "line": 98
+      },
+      "24": {
+        "filename": "UpgradeDrain.code",
+        "line": 99
+      },
+      "40": {
+        "filename": "UpgradeDrain.code",
+        "line": 100
+      },
+      "56": {
+        "filename": "UpgradeDrain.code",
+        "line": 101
+      },
+      "72": {
+        "filename": "UpgradeDrain.code",
+        "line": 102
+      },
+      "80": {
+        "filename": "UpgradeDrain.code",
+        "line": 103
+      },
+      "88": {
+        "filename": "UpgradeDrain.code",
+        "line": 104
+      },
+      "104": {
+        "filename": "UpgradeDrain.code",
+        "line": 105
+      },
+      "120": {
+        "filename": "UpgradeDrain.code",
+        "line": 106
+      },
+      "128": {
+        "filename": "UpgradeDrain.code",
+        "line": 107
+      },
+      "144": {
+        "filename": "UpgradeDrain.code",
+        "line": 108
+      },
+      "168": {
+        "filename": "UpgradeDrain.code",
+        "line": 109
+      },
+      "176": {
+        "filename": "UpgradeDrain.code",
+        "line": 110
+      },
+      "184": {
+        "filename": "UpgradeDrain.code",
+        "line": 111
+      },
+      "200": {
+        "filename": "UpgradeDrain.code",
+        "line": 112
+      },
+      "216": {
+        "filename": "UpgradeDrain.code",
+        "line": 116
+      },
+      "224": {
+        "filename": "UpgradeDrain.code",
+        "line": 117
+      },
+      "248": {
+        "filename": "UpgradeDrain.code",
+        "line": 118
+      },
+      "264": {
+        "filename": "UpgradeDrain.code",
+        "line": 119
+      },
+      "272": {
+        "filename": "UpgradeDrain.code",
+        "line": 120
+      },
+      "288": {
+        "filename": "UpgradeDrain.code",
+        "line": 124
+      },
+      "296": {
+        "filename": "UpgradeDrain.code",
+        "line": 125
+      },
+      "312": {
+        "filename": "UpgradeDrain.code",
+        "line": 128
+      }
+    },
+    "b6f27d187f26bd046272f9f471e9ae01f051b960e654874ac3fb0749c691c4c6": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 49
+      },
+      "16": {
+        "filename": "UpgradeDrain.code",
+        "line": 50
+      },
+      "24": {
+        "filename": "UpgradeDrain.code",
+        "line": 51
+      },
+      "40": {
+        "filename": "UpgradeDrain.code",
+        "line": 52
+      },
+      "56": {
+        "filename": "UpgradeDrain.code",
+        "line": 53
+      },
+      "72": {
+        "filename": "UpgradeDrain.code",
+        "line": 54
+      },
+      "80": {
+        "filename": "UpgradeDrain.code",
+        "line": 55
+      },
+      "96": {
+        "filename": "UpgradeDrain.code",
+        "line": 56
+      },
+      "104": {
+        "filename": "UpgradeDrain.code",
+        "line": 57
+      },
+      "120": {
+        "filename": "UpgradeDrain.code",
+        "line": 58
+      },
+      "136": {
+        "filename": "UpgradeDrain.code",
+        "line": 59
+      },
+      "152": {
+        "filename": "UpgradeDrain.code",
+        "line": 60
+      },
+      "168": {
+        "filename": "UpgradeDrain.code",
+        "line": 61
+      },
+      "192": {
+        "filename": "UpgradeDrain.code",
+        "line": 62
+      },
+      "208": {
+        "filename": "UpgradeDrain.code",
+        "line": 63
+      },
+      "216": {
+        "filename": "UpgradeDrain.code",
+        "line": 64
+      },
+      "232": {
+        "filename": "UpgradeDrain.code",
+        "line": 66
+      }
+    },
+    "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 113
+      },
+      "16": {
+        "filename": "UpgradeDrain.code",
+        "line": 114
+      }
+    },
+    "f2b6fee906959c240bebf2ae6014f1d4be66e2dc6e03df25aa5ea29205d3e249": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 38
+      },
+      "16": {
+        "filename": "UpgradeDrain.code",
+        "line": 39
+      },
+      "24": {
+        "filename": "UpgradeDrain.code",
+        "line": 40
+      },
+      "40": {
+        "filename": "UpgradeDrain.code",
+        "line": 41
+      },
+      "56": {
+        "filename": "UpgradeDrain.code",
+        "line": 42
+      },
+      "72": {
+        "filename": "UpgradeDrain.code",
+        "line": 43
+      },
+      "80": {
+        "filename": "UpgradeDrain.code",
+        "line": 44
+      },
+      "88": {
+        "filename": "UpgradeDrain.code",
+        "line": 45
+      },
+      "104": {
+        "filename": "UpgradeDrain.code",
+        "line": 46
+      }
+    },
+    "f2d2c1e23f157db7c3ea6a725468128cfde3d11b32ab4b418971e2b175368374": {
+      "0": {
+        "filename": "UpgradeDrain.code",
+        "line": 167
+      },
+      "8": {
+        "filename": "UpgradeDrain.code",
+        "line": 168
+      },
+      "56": {
+        "filename": "UpgradeDrain.code",
+        "line": 169
+      },
+      "64": {
+        "filename": "UpgradeDrain.code",
+        "line": 170
+      }
+    }
+  }
+}

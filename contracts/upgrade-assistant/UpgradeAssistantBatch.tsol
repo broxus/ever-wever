@@ -102,7 +102,11 @@ contract UpgradeAssistantBatch is IUpgradeAssistantBatch {
                 bounce: false
             }();
         } else {
-            selfdestruct(fabric);
+            IUpgradeAssistantFabric(fabric).finishUpgrade{
+                value: 0,
+                flag: MsgFlag.ALL_NOT_RESERVED,
+                bounce: false
+            }(nonce);
         }
     }
 }

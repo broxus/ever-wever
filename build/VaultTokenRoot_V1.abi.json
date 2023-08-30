@@ -11,6 +11,19 @@
 			]
 		},
 		{
+			"name": "mint",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"recipient","type":"address"},
+				{"name":"deployWalletValue","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"notify","type":"bool"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "supportsInterface",
 			"inputs": [
 				{"name":"answerId","type":"uint32"},
@@ -72,6 +85,7 @@
 		{
 			"name": "getReserves",
 			"inputs": [
+				{"name":"answerId","type":"uint32"}
 			],
 			"outputs": [
 				{"name":"value0","type":"uint128"}
@@ -85,6 +99,33 @@
 				{"name":"remainingGasTo","type":"address"}
 			],
 			"outputs": [
+			]
+		},
+		{
+			"name": "getReceiveSafeFee",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "getWrapDeployWalletValue",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "getInitialBalance",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
 			]
 		},
 		{
@@ -290,24 +331,19 @@
 			]
 		},
 		{
-			"name": "mint",
-			"inputs": [
-				{"name":"amount","type":"uint128"},
-				{"name":"recipient","type":"address"},
-				{"name":"deployWalletValue","type":"uint128"},
-				{"name":"remainingGasTo","type":"address"},
-				{"name":"notify","type":"bool"},
-				{"name":"payload","type":"cell"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "sendSurplusGas",
 			"inputs": [
 				{"name":"to","type":"address"}
 			],
 			"outputs": [
+			]
+		},
+		{
+			"name": "legacy_vault_",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"legacy_vault_","type":"address"}
 			]
 		}
 	],
@@ -339,6 +375,7 @@
 		{"name":"randomNonce_","type":"uint256"},
 		{"name":"deployer_","type":"address"},
 		{"name":"platformCode_","type":"cell"},
-		{"name":"walletVersion_","type":"uint32"}
+		{"name":"walletVersion_","type":"uint32"},
+		{"name":"legacy_vault_","type":"address"}
 	]
 }

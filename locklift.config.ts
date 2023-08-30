@@ -109,6 +109,7 @@ const config: LockliftConfig = {
         accountId: 0,
       },
       keys: {
+        phrase: process.env.VENOM_SEED ?? '',
         amount: 20
       }
     }

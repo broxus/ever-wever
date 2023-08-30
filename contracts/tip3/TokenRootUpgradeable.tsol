@@ -23,7 +23,7 @@ import "./TokenWalletPlatform.tsol";
  * @dev This is an implementation of upgradable token root that implements
  * all the required methods of the TIP-3 standard.
  */
-abstract contract TokenRootUpgradeable is
+contract TokenRootUpgradeable is
     TokenRootTransferableOwnershipBase,
     TokenRootBurnPausableBase,
     TokenRootBurnableByRootBase,

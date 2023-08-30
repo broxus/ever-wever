@@ -7,7 +7,7 @@ export default async () => {
                 signerId: "0",
                 accountSettings: {
                     type: WalletTypes.EverWallet,
-                    value: locklift.utils.toNano(30),
+                    value: locklift.utils.toNano(300),
                 },
             },
         ],

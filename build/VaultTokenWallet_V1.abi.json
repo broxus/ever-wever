@@ -11,6 +11,17 @@
 			]
 		},
 		{
+			"name": "acceptMintLegacyCallback",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"notify","type":"bool"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "supportsInterface",
 			"inputs": [
 				{"name":"answerId","type":"uint32"},

@@ -1,0 +1,3967 @@
+{
+  "map": {
+    "013736f70d7e1c3dd9577a849b763e3d1cd5971a45ef5682890f9fe2d98f0368": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 4
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 5
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 6
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 7
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 10
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 11
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 12
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 13
+      },
+      "96": {
+        "filename": "Vault.code",
+        "line": 14
+      },
+      "104": {
+        "filename": "Vault.code",
+        "line": 15
+      },
+      "112": {
+        "filename": "Vault.code",
+        "line": 16
+      },
+      "120": {
+        "filename": "Vault.code",
+        "line": 18
+      },
+      "128": {
+        "filename": "Vault.code",
+        "line": 19
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 20
+      },
+      "152": {
+        "filename": "Vault.code",
+        "line": 21
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 22
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 23
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 24
+      },
+      "192": {
+        "filename": "Vault.code",
+        "line": 25
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 26
+      },
+      "208": {
+        "filename": "Vault.code",
+        "line": 27
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 28
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 29
+      },
+      "256": {
+        "filename": "Vault.code",
+        "line": 30
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 31
+      },
+      "280": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "296": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "304": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "312": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "320": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "328": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "336": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "344": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "360": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "368": {
+        "filename": "../node_modules/@broxus/contracts/contracts/utils/CheckPubKey.tsol",
+        "line": 9
+      },
+      "392": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 51
+      },
+      "408": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 53
+      },
+      "424": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 53
+      },
+      "440": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 55
+      },
+      "456": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 55
+      },
+      "472": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 55
+      },
+      "488": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 55
+      },
+      "496": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 55
+      },
+      "512": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 56
+      },
+      "528": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 56
+      },
+      "544": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 56
+      },
+      "552": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 56
+      },
+      "568": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 57
+      },
+      "584": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 57
+      },
+      "600": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 57
+      },
+      "608": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 57
+      },
+      "624": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 58
+      },
+      "632": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 58
+      },
+      "648": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 58
+      },
+      "656": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 58
+      },
+      "672": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 59
+      },
+      "680": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 59
+      },
+      "696": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 59
+      },
+      "712": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 61
+      },
+      "728": {
+        "filename": "Vault.code",
+        "line": 81
+      },
+      "744": {
+        "filename": "Vault.code",
+        "line": 84
+      }
+    },
+    "03a853035e78d2300a527025a0c10f6d630f6fadb18e95b39c476688f7e4b1bd": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1159
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1160
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 1161
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 1164
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 1165
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1166
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 1167
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 1168
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1169
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1170
+      },
+      "256": {
+        "filename": "Vault.code",
+        "line": 1171
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 1172
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 1173
+      },
+      "288": {
+        "filename": "Vault.code",
+        "line": 1175
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1176
+      }
+    },
+    "0a297de5776a1d37c08f80986b90abbc9c09c60270c849d435532a91283cf566": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 130
+      },
+      "200": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 130
+      },
+      "216": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "232": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "248": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "264": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "296": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 132
+      },
+      "312": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "328": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "336": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "360": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "368": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "384": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "400": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "408": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      },
+      "432": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 134
+      }
+    },
+    "0cb6c3a475ebcd6258859de08443a4cc6bf1b80c87e64e335680fac2086cf6b1": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
+      }
+    },
+    "140d6ac018500032fb0f5ded7747c551caf0e195d9bddcd3ee285c10066c9106": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 519
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 520
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 521
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 522
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 523
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 524
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "168": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "176": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "184": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "216": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 200
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 544
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 547
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 548
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 551
+      }
+    },
+    "14cfe5caa0fe7e88a16bc87ff9f898109338db1c654f5df45a76e8329e1dacd9": {
+      "0": {
+        "filename": "<internal-selector>",
+        "line": 1
+      },
+      "24": {
+        "filename": "<internal-selector>",
+        "line": 2
+      }
+    },
+    "1b2a56c1fcb94186882dda5c4e6b622201c033c22a22c5d72b8711a82fdb9d5c": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1085
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1086
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 1087
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 1090
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 1091
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1092
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 1093
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 1094
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1095
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1096
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 1097
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 1098
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 1099
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1101
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1102
+      }
+    },
+    "1bb32d20505fa4732883582d1ce0fc8b8043dccfe792b4cde5d8f9c42a728fc9": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 885
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 886
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 887
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 888
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 889
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 890
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 891
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 892
+      },
+      "96": {
+        "filename": "Vault.code",
+        "line": 893
+      },
+      "104": {
+        "filename": "Vault.code",
+        "line": 894
+      },
+      "128": {
+        "filename": "Vault.code",
+        "line": 896
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 897
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 899
+      },
+      "152": {
+        "filename": "Vault.code",
+        "line": 900
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 903
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 904
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 905
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 906
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 907
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 910
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 911
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 912
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 913
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 914
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 915
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 916
+      },
+      "328": {
+        "filename": "Vault.code",
+        "line": 917
+      },
+      "344": {
+        "filename": "Vault.code",
+        "line": 918
+      },
+      "360": {
+        "filename": "Vault.code",
+        "line": 919
+      },
+      "384": {
+        "filename": "Vault.code",
+        "line": 920
+      },
+      "400": {
+        "filename": "Vault.code",
+        "line": 921
+      },
+      "408": {
+        "filename": "Vault.code",
+        "line": 922
+      }
+    },
+    "20bc03b8a59a59adb6fa5cb91f6e67697461fbc5b745536d450dd41f82ae9ca6": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1025
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 1026
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 1027
+      },
+      "40": {
+        "filename": "Vault.code",
+        "line": 1028
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1029
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 1030
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 1033
+      },
+      "96": {
+        "filename": "Vault.code",
+        "line": 1034
+      },
+      "104": {
+        "filename": "Vault.code",
+        "line": 1035
+      },
+      "120": {
+        "filename": "Vault.code",
+        "line": 1038
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 1039
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 1040
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 1041
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 1042
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 1043
+      },
+      "208": {
+        "filename": "Vault.code",
+        "line": 1044
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1045
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 1046
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1047
+      },
+      "256": {
+        "filename": "Vault.code",
+        "line": 1048
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 1049
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 1050
+      },
+      "288": {
+        "filename": "Vault.code",
+        "line": 1051
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1053
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1054
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 1055
+      },
+      "328": {
+        "filename": "Vault.code",
+        "line": 1057
+      },
+      "336": {
+        "filename": "Vault.code",
+        "line": 1058
+      },
+      "344": {
+        "filename": "Vault.code",
+        "line": 1059
+      },
+      "360": {
+        "filename": "Vault.code",
+        "line": 1060
+      },
+      "376": {
+        "filename": "Vault.code",
+        "line": 1061
+      },
+      "392": {
+        "filename": "Vault.code",
+        "line": 1063
+      },
+      "400": {
+        "filename": "Vault.code",
+        "line": 1064
+      },
+      "416": {
+        "filename": "Vault.code",
+        "line": 1065
+      },
+      "424": {
+        "filename": "Vault.code",
+        "line": 1066
+      },
+      "440": {
+        "filename": "Vault.code",
+        "line": 1068
+      },
+      "448": {
+        "filename": "Vault.code",
+        "line": 1069
+      },
+      "464": {
+        "filename": "Vault.code",
+        "line": 1070
+      },
+      "472": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "488": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "496": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "504": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "520": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "528": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "544": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "568": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "576": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "616": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "624": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "632": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "648": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "664": {
+        "filename": "Vault.code",
+        "line": 1072
+      },
+      "680": {
+        "filename": "Vault.code",
+        "line": 1073
+      },
+      "688": {
+        "filename": "Vault.code",
+        "line": 1074
+      },
+      "704": {
+        "filename": "Vault.code",
+        "line": 1075
+      },
+      "712": {
+        "filename": "Vault.code",
+        "line": 1076
+      },
+      "728": {
+        "filename": "Vault.code",
+        "line": 1077
+      },
+      "744": {
+        "filename": "Vault.code",
+        "line": 1078
+      },
+      "752": {
+        "filename": "Vault.code",
+        "line": 1079
+      },
+      "768": {
+        "filename": "Vault.code",
+        "line": 1082
+      }
+    },
+    "220e36c1868bc7560821b9bfacd556ca250a9a2661f07af98047f47e78fe3ed3": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 112
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 112
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 114
+      },
+      "232": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 114
+      },
+      "240": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 114
+      },
+      "256": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 116
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 116
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 116
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 294
+      }
+    },
+    "2731472077ab7fe236a0ca77621ea201dfffdd359dcb2109c0e88a0898e8b26e": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 840
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 841
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 842
+      },
+      "40": {
+        "filename": "Vault.code",
+        "line": 843
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 844
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 845
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 846
+      },
+      "96": {
+        "filename": "Vault.code",
+        "line": 847
+      },
+      "104": {
+        "filename": "Vault.code",
+        "line": 848
+      },
+      "112": {
+        "filename": "Vault.code",
+        "line": 849
+      },
+      "120": {
+        "filename": "Vault.code",
+        "line": 850
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 851
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 852
+      },
+      "152": {
+        "filename": "Vault.code",
+        "line": 853
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 854
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 855
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 856
+      },
+      "192": {
+        "filename": "Vault.code",
+        "line": 857
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 858
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 859
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 860
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 861
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 862
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 863
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 864
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 865
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 866
+      },
+      "320": {
+        "filename": "Vault.code",
+        "line": 867
+      },
+      "328": {
+        "filename": "Vault.code",
+        "line": 868
+      },
+      "344": {
+        "filename": "Vault.code",
+        "line": 869
+      },
+      "360": {
+        "filename": "Vault.code",
+        "line": 870
+      },
+      "368": {
+        "filename": "Vault.code",
+        "line": 871
+      },
+      "384": {
+        "filename": "Vault.code",
+        "line": 872
+      },
+      "400": {
+        "filename": "Vault.code",
+        "line": 873
+      },
+      "416": {
+        "filename": "Vault.code",
+        "line": 874
+      },
+      "432": {
+        "filename": "Vault.code",
+        "line": 875
+      },
+      "448": {
+        "filename": "Vault.code",
+        "line": 876
+      },
+      "464": {
+        "filename": "Vault.code",
+        "line": 877
+      }
+    },
+    "2a33c8a2394d00261e9a6a3e89058ad369b66e244293d7fa196a81980fb74e0e": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 117
+      }
+    },
+    "3cf3b62a739a8b5a5f17f56a30c15711ba871f6b6be50cf19bc1d0c1bf025813": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 189
+      },
+      "16": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 189
+      },
+      "24": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 189
+      },
+      "40": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 189
+      }
+    },
+    "405512269a810a2d51caa5e2a2d534e48c018538cfe4222deb7e0476915d193d": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 46
+      },
+      "200": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 48
+      }
+    },
+    "4610bc5e455b500ab067a809b9eb3242ea139da59403201e68fc75e82b7f2d06": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1261
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1262
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1263
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 1264
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 1267
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 1268
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 1269
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 1270
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 1273
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 1274
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1275
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1276
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1279
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1280
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1281
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1282
+      }
+    },
+    "534e1ed290b1677c0c235aa59e799130f450bc7877b77aafb42090dc5d0bc1f4": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 298
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 299
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 300
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 301
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 302
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 303
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 127
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 317
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 320
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 321
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 324
+      }
+    },
+    "5367d06a18c6779ab6f90f2b84096be9af9bbd7d61e0bb5a8df71795fbb3cc88": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 984
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 985
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 986
+      },
+      "40": {
+        "filename": "Vault.code",
+        "line": 987
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 988
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 989
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 990
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 991
+      },
+      "104": {
+        "filename": "Vault.code",
+        "line": 992
+      },
+      "120": {
+        "filename": "Vault.code",
+        "line": 993
+      },
+      "128": {
+        "filename": "Vault.code",
+        "line": 994
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 995
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 996
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 997
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 998
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 999
+      },
+      "208": {
+        "filename": "Vault.code",
+        "line": 1000
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1001
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1002
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 1003
+      },
+      "256": {
+        "filename": "Vault.code",
+        "line": 1004
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 1005
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 1006
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1007
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1008
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 1009
+      },
+      "328": {
+        "filename": "Vault.code",
+        "line": 1011
+      },
+      "336": {
+        "filename": "Vault.code",
+        "line": 1013
+      },
+      "344": {
+        "filename": "Vault.code",
+        "line": 1014
+      },
+      "360": {
+        "filename": "Vault.code",
+        "line": 1017
+      },
+      "368": {
+        "filename": "Vault.code",
+        "line": 1018
+      },
+      "384": {
+        "filename": "Vault.code",
+        "line": 1021
+      }
+    },
+    "57896049de5667ec5e8fd0fd3fa237ef946bd5a8a23d881607b583c4d28e0186": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 223
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 224
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 225
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 226
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 227
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 228
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "160": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "168": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "176": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "240": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "256": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "280": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 109
+      },
+      "288": {
+        "filename": "Vault.code",
+        "line": 252
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 255
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 256
+      },
+      "328": {
+        "filename": "Vault.code",
+        "line": 259
+      }
+    },
+    "5cf5da35bf623233d29005e7a8bb9be5932d217dca043ae680c114c948f53993": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1125
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1126
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 1127
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 1130
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 1131
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1132
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 1133
+      },
+      "192": {
+        "filename": "Vault.code",
+        "line": 1134
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 1135
+      },
+      "208": {
+        "filename": "Vault.code",
+        "line": 1136
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1137
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1138
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 1139
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 1140
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1141
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 1142
+      },
+      "320": {
+        "filename": "Vault.code",
+        "line": 1143
+      },
+      "336": {
+        "filename": "Vault.code",
+        "line": 1144
+      },
+      "344": {
+        "filename": "Vault.code",
+        "line": 1145
+      },
+      "352": {
+        "filename": "Vault.code",
+        "line": 1146
+      },
+      "368": {
+        "filename": "Vault.code",
+        "line": 1147
+      },
+      "384": {
+        "filename": "Vault.code",
+        "line": 1148
+      },
+      "400": {
+        "filename": "Vault.code",
+        "line": 1149
+      },
+      "408": {
+        "filename": "Vault.code",
+        "line": 1150
+      },
+      "416": {
+        "filename": "Vault.code",
+        "line": 1151
+      },
+      "424": {
+        "filename": "Vault.code",
+        "line": 1152
+      },
+      "432": {
+        "filename": "Vault.code",
+        "line": 1153
+      },
+      "448": {
+        "filename": "Vault.code",
+        "line": 1155
+      },
+      "456": {
+        "filename": "Vault.code",
+        "line": 1156
+      }
+    },
+    "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1031
+      }
+    },
+    "6bff8e43dfa9cdc60ec9e49e98c40333447729faa078b5a159915a99fae29ccd": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 929
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 930
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 931
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 932
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 933
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 934
+      },
+      "96": {
+        "filename": "Vault.code",
+        "line": 935
+      },
+      "112": {
+        "filename": "Vault.code",
+        "line": 936
+      },
+      "120": {
+        "filename": "Vault.code",
+        "line": 937
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 938
+      },
+      "152": {
+        "filename": "Vault.code",
+        "line": 939
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 940
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 941
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 942
+      },
+      "208": {
+        "filename": "Vault.code",
+        "line": 943
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 944
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 945
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 946
+      },
+      "256": {
+        "filename": "Vault.code",
+        "line": 947
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 948
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 949
+      },
+      "288": {
+        "filename": "Vault.code",
+        "line": 950
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 951
+      },
+      "312": {
+        "filename": "Vault.code",
+        "line": 952
+      },
+      "320": {
+        "filename": "Vault.code",
+        "line": 953
+      },
+      "336": {
+        "filename": "Vault.code",
+        "line": 954
+      },
+      "352": {
+        "filename": "Vault.code",
+        "line": 955
+      },
+      "368": {
+        "filename": "Vault.code",
+        "line": 956
+      },
+      "376": {
+        "filename": "Vault.code",
+        "line": 957
+      },
+      "384": {
+        "filename": "Vault.code",
+        "line": 958
+      },
+      "392": {
+        "filename": "Vault.code",
+        "line": 959
+      },
+      "408": {
+        "filename": "Vault.code",
+        "line": 960
+      },
+      "416": {
+        "filename": "Vault.code",
+        "line": 961
+      },
+      "424": {
+        "filename": "Vault.code",
+        "line": 962
+      },
+      "432": {
+        "filename": "Vault.code",
+        "line": 963
+      },
+      "440": {
+        "filename": "Vault.code",
+        "line": 964
+      },
+      "448": {
+        "filename": "Vault.code",
+        "line": 965
+      }
+    },
+    "71da5c4315e46c0ac75ed8d82606d3f3888b6de9d5e7d8685fcf82858012b92d": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 238
+      },
+      "16": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 238
+      },
+      "32": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 238
+      },
+      "48": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 238
+      },
+      "64": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 238
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 239
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 239
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 239
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 239
+      },
+      "160": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 241
+      },
+      "168": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 241
+      },
+      "176": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 241
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "240": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "248": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "264": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 243
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "304": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "312": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "328": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "344": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "352": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "376": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "384": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "392": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "416": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "432": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "440": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "488": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "504": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "512": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "520": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "528": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "536": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "544": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "552": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "560": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "568": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "592": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 246
+      },
+      "608": {
+        "filename": "Vault.code",
+        "line": 704
+      }
+    },
+    "7719f7955c7c21eb62c705d287422a594b9aef371efeea661632a58b479512f6": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1199
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1200
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1201
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 1202
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 1228
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 1229
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 1230
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 1231
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 1257
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 1258
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1259
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1260
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1286
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1287
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1288
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1289
+      }
+    },
+    "7b6ec9117ee816a8ac453a7e1928f4ee64862822e318e5af853b995925c65011": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "240": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "248": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "264": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 99
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "296": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "320": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "328": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "344": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "360": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "368": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      },
+      "392": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 101
+      }
+    },
+    "7d0dd1857e06ac895644a1f18ae767133af670a6cef952a2ab54b42c195c8b70": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1232
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1233
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1234
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 1235
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 1238
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 1239
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 1240
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 1241
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 1244
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 1245
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1246
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1247
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1250
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1251
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1252
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1253
+      }
+    },
+    "857b8619328c34b53d58a4dcafdab532d0e79fc83e071fc673c0e86cc55f8e13": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1105
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1106
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 1107
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 1110
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 1111
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1112
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 1113
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 1114
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1115
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1116
+      },
+      "256": {
+        "filename": "Vault.code",
+        "line": 1117
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 1118
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 1119
+      },
+      "288": {
+        "filename": "Vault.code",
+        "line": 1121
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1122
+      }
+    },
+    "8997c2ddaca067c7e6d8cfa12207a0868cd3567b2000ba15c6a3e2fc0c6147ee": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1179
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1180
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 1181
+      },
+      "32": {
+        "filename": "Vault.code",
+        "line": 1184
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 1185
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1186
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 1187
+      },
+      "232": {
+        "filename": "Vault.code",
+        "line": 1188
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1189
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1190
+      },
+      "264": {
+        "filename": "Vault.code",
+        "line": 1191
+      },
+      "272": {
+        "filename": "Vault.code",
+        "line": 1192
+      },
+      "280": {
+        "filename": "Vault.code",
+        "line": 1193
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1195
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1196
+      }
+    },
+    "8ef7eb3beee769957c179b3dc3e09ea744810dec4becdfb6976783306f24d7f0": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1203
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1204
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1205
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 1206
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 1209
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 1210
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 1211
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 1212
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 1215
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 1216
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1217
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1218
+      },
+      "240": {
+        "filename": "Vault.code",
+        "line": 1221
+      },
+      "248": {
+        "filename": "Vault.code",
+        "line": 1222
+      },
+      "296": {
+        "filename": "Vault.code",
+        "line": 1223
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 1224
+      }
+    },
+    "9619d1d60125eb2e39a30fe015a70bb310cac943d96b35d6f6dc0c11044b8253": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 1290
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 1291
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 1292
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 1293
+      },
+      "80": {
+        "filename": "Vault.code",
+        "line": 1296
+      },
+      "88": {
+        "filename": "Vault.code",
+        "line": 1297
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 1298
+      },
+      "144": {
+        "filename": "Vault.code",
+        "line": 1299
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 1302
+      },
+      "168": {
+        "filename": "Vault.code",
+        "line": 1303
+      },
+      "216": {
+        "filename": "Vault.code",
+        "line": 1304
+      },
+      "224": {
+        "filename": "Vault.code",
+        "line": 1305
+      }
+    },
+    "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},
+    "9a1b5e22797c94496b94895d2745c7b66a58716da0057f2864d8264b690dab23": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 24
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 26
+      },
+      "24": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 26
+      },
+      "40": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "176": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "184": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "192": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "240": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "248": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "256": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "264": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "272": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "280": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "288": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "296": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "304": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      }
+    },
+    "a5328b40b2bffeb9d2773daa34f9065b4c145afdcf94f120e469d72066365714": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 86
+      },
+      "16": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 86
+      },
+      "32": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 86
+      },
+      "48": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 86
+      },
+      "64": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 86
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 88
+      }
+    },
+    "a83e82ab8a0d6caaa851f7241d31b07b5bd5303a563810e7790a066eef572423": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 368
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 369
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 370
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 371
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 372
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 373
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 143
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 387
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 390
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 391
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 394
+      }
+    },
+    "b90c5514d6f787af0e4646c16434828708fd9004824017a156cbd14a21125322": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 880
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 881
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 882
+      },
+      "40": {
+        "filename": "Vault.code",
+        "line": 883
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 884
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 924
+      }
+    },
+    "bb9f7928a942ae46b000cd1b0b79bec0504ebab48caa3d1965a837e9f10b74f5": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "8": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "24": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "32": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "40": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "56": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "72": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "80": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 206
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 211
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 211
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "168": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "184": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "200": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "232": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 213
+      },
+      "248": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "256": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "264": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "280": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "296": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "312": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "320": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "336": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "352": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "360": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "384": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "392": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "400": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "424": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "440": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "448": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "496": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "512": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "520": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "536": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "552": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "560": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "568": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "584": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "592": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "600": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "608": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "616": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      },
+      "640": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 215
+      }
+    },
+    "bf778e30b9bf335fd539247f83b96e0f108c32264ac2ccf305e2c07f46eaf6b5": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "200": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "208": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "224": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "248": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 39
+      }
+    },
+    "c1b6480a6f3ff9f8c02f81fa05d1917ad17ff3172df7f08d74251695f8ecfb85": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 115
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 116
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 117
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 118
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 119
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 120
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 83
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 134
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 137
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 138
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 141
+      }
+    },
+    "c3d3ff5fe407463fc95927de138c1d0340e9056343e0f6a4dbf97671e657bf19": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 155
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 156
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 157
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 158
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 159
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 160
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 96
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 174
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 177
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 178
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 181
+      }
+    },
+    "c7c7955c565d83eb817b5e1fc00cd42b6257af6ef04673fa704427fd36385243": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "16": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "32": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "48": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "64": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "80": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "304": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "312": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "392": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "400": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "408": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "416": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "432": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "440": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "448": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      },
+      "456": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 69
+      }
+    },
+    "d7a6ec0876d2204db26e19006d311bf0e1a7ab2abcd6e4ae5828214cf36e8df2": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 735
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 736
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 737
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 738
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 739
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 740
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "96": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "112": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "128": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "136": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "152": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "160": {
+        "filename": "Vault.code",
+        "line": 754
+      },
+      "176": {
+        "filename": "Vault.code",
+        "line": 757
+      },
+      "184": {
+        "filename": "Vault.code",
+        "line": 758
+      },
+      "200": {
+        "filename": "Vault.code",
+        "line": 761
+      }
+    },
+    "e3a617f19b493790252f3ac4277770c875796a86c3b4959998d349322ab840df": {
+      "0": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "8": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "16": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "32": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "40": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 146
+      },
+      "144": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 148
+      },
+      "160": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "176": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "216": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "232": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "240": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 150
+      },
+      "256": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "280": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "304": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "312": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "328": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "344": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "352": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      },
+      "376": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 152
+      }
+    },
+    "e7ed6e9e704e5568a994078d0fd35a525e8824d5ab39af65fdd2cbc16b0a1d0e": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 611
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 612
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 613
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 614
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 615
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 616
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "96": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "120": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "136": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "168": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "176": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "184": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "192": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "216": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "232": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "248": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "256": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "264": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "296": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 230
+      },
+      "304": {
+        "filename": "Vault.code",
+        "line": 644
+      },
+      "320": {
+        "filename": "Vault.code",
+        "line": 647
+      },
+      "328": {
+        "filename": "Vault.code",
+        "line": 648
+      },
+      "344": {
+        "filename": "Vault.code",
+        "line": 651
+      }
+    },
+    "ea337f349c6d7dfcef693d7bde1edf2984509c70ff2bd4cf1637ed2c66c27e0b": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 793
+      },
+      "8": {
+        "filename": "Vault.code",
+        "line": 794
+      },
+      "24": {
+        "filename": "Vault.code",
+        "line": 795
+      },
+      "48": {
+        "filename": "Vault.code",
+        "line": 796
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 797
+      },
+      "72": {
+        "filename": "Vault.code",
+        "line": 798
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 45
+      },
+      "96": {
+        "filename": "Vault.code",
+        "line": 804
+      },
+      "112": {
+        "filename": "Vault.code",
+        "line": 807
+      },
+      "120": {
+        "filename": "Vault.code",
+        "line": 808
+      },
+      "136": {
+        "filename": "Vault.code",
+        "line": 811
+      }
+    },
+    "eb766625102e227ca0edf43190e7bd7c23ee4cab75a82e6603827ba718b89dd5": {
+      "0": {
+        "filename": "Vault.code",
+        "line": 432
+      },
+      "16": {
+        "filename": "Vault.code",
+        "line": 433
+      },
+      "40": {
+        "filename": "Vault.code",
+        "line": 434
+      },
+      "56": {
+        "filename": "Vault.code",
+        "line": 435
+      },
+      "64": {
+        "filename": "Vault.code",
+        "line": 436
+      },
+      "80": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "88": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "104": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "112": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "128": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "144": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "152": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 164
+      },
+      "176": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "184": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "200": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "208": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "224": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "240": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "248": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 166
+      },
+      "264": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 168
+      },
+      "272": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 168
+      },
+      "288": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "304": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "320": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "336": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "344": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "360": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "368": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 170
+      },
+      "384": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 172
+      },
+      "392": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "400": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "416": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "432": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "448": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "464": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "480": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "496": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "512": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "520": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "544": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "552": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "560": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "584": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "600": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "608": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "656": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "672": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "680": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "696": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "712": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "720": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "728": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "744": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "752": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "760": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "768": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "776": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "800": {
+        "filename": "../contracts/legacy/Vault.tsol",
+        "line": 174
+      },
+      "816": {
+        "filename": "Vault.code",
+        "line": 502
+      }
+    }
+  }
+}

@@ -10,7 +10,8 @@
 				{"name":"worker_","type":"uint256"},
 				{"name":"root_","type":"address"},
 				{"name":"upgrade_assistant_batch_code_","type":"cell"},
-				{"name":"batches_","type":"uint32"}
+				{"name":"batches_","type":"uint32"},
+				{"name":"deploy_batch_value_","type":"uint128"}
 			],
 			"outputs": [
 			]
@@ -49,6 +50,29 @@
 		},
 		{
 			"name": "revokeOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "finishUpgrade",
+			"inputs": [
+				{"name":"nonce","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "isDone",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"done","type":"bool"}
+			]
+		},
+		{
+			"name": "destroy",
 			"inputs": [
 			],
 			"outputs": [
@@ -110,11 +134,27 @@
 			]
 		},
 		{
+			"name": "batches_done",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"batches_done","type":"uint32"}
+			]
+		},
+		{
 			"name": "batches_deployed",
 			"inputs": [
 			],
 			"outputs": [
 				{"name":"batches_deployed","type":"uint32"}
+			]
+		},
+		{
+			"name": "deploy_batch_value",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"deploy_batch_value","type":"uint128"}
 			]
 		},
 		{
@@ -158,7 +198,9 @@
 		{"name":"root","type":"address"},
 		{"name":"worker","type":"uint256"},
 		{"name":"batches","type":"uint32"},
+		{"name":"batches_done","type":"uint32"},
 		{"name":"batches_deployed","type":"uint32"},
+		{"name":"deploy_batch_value","type":"uint128"},
 		{"name":"upgrade_assistant_batch_code","type":"cell"}
 	]
 }

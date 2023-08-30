@@ -332,8 +332,8 @@ contract VaultTokenRoot_V1 is
         return totalSupply_ + INITIAL_BALANCE;
     }
 
-    function getReserves() external view returns (uint128) {
-        return _reserve();
+    function getReserves() external responsible override view returns (uint128) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false }_reserve();
     }
 
     function acceptWrap(
@@ -351,9 +351,21 @@ contract VaultTokenRoot_V1 is
     }
 
     // VAULT
-    uint128 constant public RECEIVE_SAFE_FEE = 1 ever;
-    uint128 constant public WRAP_DEPLOY_WALLET_VALUE = 0.05 ever;
-    uint128 constant public INITIAL_BALANCE = 1 ever;
+    uint128 constant RECEIVE_SAFE_FEE = 1 ever;
+    uint128 constant WRAP_DEPLOY_WALLET_VALUE = 0.05 ever;
+    uint128 constant INITIAL_BALANCE = 1 ever;
+
+    function getReceiveSafeFee() external responsible override pure returns (uint128) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false }RECEIVE_SAFE_FEE;
+    }
+
+    function getWrapDeployWalletValue() external responsible override pure returns (uint128) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false }WRAP_DEPLOY_WALLET_VALUE;
+    }
+
+    function getInitialBalance() external responsible override pure returns (uint128) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false }INITIAL_BALANCE;
+    }
 
     /**
         @notice Send EVERs to the vault without issuing wEVERs
