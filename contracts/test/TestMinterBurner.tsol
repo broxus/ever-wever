@@ -1,0 +1,123 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+
+import "../tip3/interfaces/ITokenRoot.tsol";
+import "../tip3/interfaces/ITransferableOwnership.tsol";
+import "../tip3/libraries/TokenGas.tsol";
+import "@broxus/contracts/contracts/utils/RandomNonce.tsol";
+import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
+import "../interfaces/ILegacyVault.tsol";
+import "./../tip3/interfaces/IAcceptTokensTransferCallback.tsol";
+import "./../tip3/interfaces/IAcceptTokensMintCallback.tsol";
+import "./../tip3/interfaces/IAcceptTokensBurnCallback.tsol";
+
+
+
+import "./../tip3/interfaces/ITokenWallet.tsol";
+
+
+
+
+contract TestMinterBurner is RandomNonce, IAcceptTokensTransferCallback, IAcceptTokensMintCallback, IAcceptTokensBurnCallback {
+
+    address public root;
+    address public vault;
+    address public wallet;
+
+
+    event BurnCallback(TvmCell payload);
+    event MintCallback(TvmCell payload);
+
+    constructor(
+        address root_,
+        address vault_
+    ) public {
+        tvm.accept();
+
+        root = root_;
+        vault = vault_;
+
+        ITokenRoot(root).deployWallet{
+            value: 1 ever,
+            callback: TestMinterBurner.onTokenWallet
+        }(
+            address(this),
+            0.2 ever
+        );
+    }
+
+    function mint(
+        uint128 amount, 
+        address to, 
+        address remainingGasTo, 
+        TvmCell payload
+    ) external {
+        // tvm.rawReserve(0, 1 ever);
+        ILegacyVault(vault).wrap{value: 0, flag: 64}(
+            amount, 
+            to, 
+            remainingGasTo, 
+            payload
+        );
+    }
+
+
+    function onAcceptTokensTransfer(
+        address tokenRoot,
+        uint128 amount,
+        address sender,
+        address senderWallet,
+        address remainingGasTo,
+        TvmCell payload
+    ) override external {
+        require(tokenRoot == root, 101);
+
+
+        if (msg.sender != root) {
+            ITokenWallet(wallet).transfer{value: 0, flag: 64}(
+                amount, 
+                vault, 
+                0.1 ever, 
+                msg.sender, 
+                true, 
+                payload
+            );
+        } 
+    }
+
+    function onAcceptTokensBurn(
+        uint128 amount,
+        address walletOwner,
+        address wallet,
+        address remainingGasTo,
+        TvmCell payload
+    ) override external {
+        emit BurnCallback(payload);
+    }
+
+
+    function onAcceptTokensMint (
+        address tokenRoot,
+        uint128 amount,
+        address remainingGasTo,
+        TvmCell payload
+    )
+    override external {
+        emit MintCallback(payload);
+    }
+
+    function buildPayload(address addr) public view returns (TvmCell) {
+        TvmBuilder builder; 
+        builder.store(addr);
+        return builder.toCell();
+    }
+
+
+    function onTokenWallet(address _wallet) external {
+        require(msg.sender == root, 102);
+        wallet = _wallet;
+    }
+
+
+}
