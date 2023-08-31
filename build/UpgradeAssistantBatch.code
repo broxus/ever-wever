@@ -19,15 +19,15 @@ IF
 LDU 256
 LDMSGADDR
 ENDS
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 50
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 54
 GETGLOB 9
 GETGLOB 10
 SDEQ
 THROWIFNOT 100
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 52
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 56
 SWAP
 SETGLOB 14
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 53
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 57
 SETGLOB 15
 .loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
 CALLREF {
@@ -44,7 +44,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 56
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 60
 LDU 32
 LDDICT
 ROTREV
@@ -62,7 +62,7 @@ CALLREF {
 THROW 0
 
 .macro addWallets_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 35
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 45
 GETGLOB 5
 DUP
 ISNULL
@@ -74,9 +74,9 @@ IF
 GETGLOB 14
 EQUAL
 THROWIFNOT 100
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 57
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 61
 ACCEPT
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 59
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 63
 SECOND
 PUSHINT 0
 NULL
@@ -92,7 +92,7 @@ PUSHCONT {
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 60
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 64
 	DUP
 	GETGLOB 12
 	UNPAIR
@@ -117,11 +117,11 @@ BLKDROP 3
 CALL $_getWalletsPack_internal_macro$
 
 .macro _getWalletsPack_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 64
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 68
 PUSHINT 0
 NEWDICT
 PAIR
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 65
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 69
 PUSHCONT {
 	GETGLOB 13
 	GETGLOB 12
@@ -133,7 +133,7 @@ PUSHCONT {
 	AND
 }
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 66
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 70
 	GETGLOB 13
 	GETGLOB 12
 	SECOND
@@ -148,7 +148,7 @@ PUSHCONT {
 	PUSHINT 32
 	DICTUSET
 	PAIR
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 67
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 71
 	GETGLOB 13
 	INC
 	SETGLOB 13
@@ -166,7 +166,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 73
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 77
 ENDS
 .loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
 CALLREF {
@@ -179,47 +179,16 @@ CALLREF {
 THROW 0
 
 .macro upgrade_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 23
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 33
 GETGLOB 9
 GETGLOB 10
 SDEQ
-THROWIFNOT 100
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 74
-CALLREF {
-	CALL $_upgrade_internal_macro$
-}
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
-
-.macro continueUpgrade
-DROP
-GETGLOB 6
-THROWIFNOT 76
-GETGLOB 2
-ISNULL
-IFREF {
-	CALL $c4_to_c7$
-}
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 77
-ENDS
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
-CALLREF {
-	CALL $continueUpgrade_internal_macro$
-}
-DROP
-CALLREF {
-	CALL $c7_to_c4$
-}
-THROW 0
-
-.macro continueUpgrade_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 41
 GETGLOB 9
 MYADDR
 SDEQ
+OR
 THROWIFNOT 100
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 78
-ACCEPT
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 80
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 79
 CALLREF {
 	CALL $_upgrade_internal_macro$
 }
@@ -230,38 +199,36 @@ CALLREF {
 CALL $_upgrade_internal_macro$
 
 .macro _upgrade_internal_macro
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 29
-PUSHINT 1000000000
-PUSHINT 2
-RAWRESERVE
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 84
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 83
 PUSHINT 0
 PUSHCONT {
 	DUP
-	LESSINT 10
+	LESSINT 5
 }
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 85
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 84
 	CALLREF {
 		CALL $_getWalletsPack_internal_macro$
 	}
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 87
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 86
 	DUP
+	FIRST
+	UFITS 128
+	PUSHINT 100000000
+	MUL
+	UFITS 128
+	PUSHINT 1000000000
+	ADD
+	UFITS 128
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 88
+	OVER
 	FIRST
 	GTINT 0
 	PUSHCONT {
-		.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 88
-		DUP
+		.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 89
+		OVER
 		GETGLOB 11
 		PUSH S2
-		FIRST
-		UFITS 128
-		PUSHINT 100000000
-		MUL
-		UFITS 128
-		PUSHINT 1000000000
-		ADD
-		UFITS 128
 		GETGLOB 10
 		TRUE
 		NEWC
@@ -286,27 +253,27 @@ PUSHCONT {
 		.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
 	}
 	PUSHCONT {
-		.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 94
-		DROP
+		.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 95
+		DROP2
 		RETALT
 		.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
 	}
 	IFELSE
-	DROP
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 84
+	DROP2
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 83
 	INC
 	UFITS 8
 	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
 }
 WHILEBRK
 DROP
-.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 98
+.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 99
 GETGLOB 13
 GETGLOB 12
 FIRST
 LESS
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 99
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 100
 	MYADDR
 	FALSE
 	NEWC
@@ -315,11 +282,13 @@ PUSHCONT {
 	PUSHINT 3
 	STZEROES
 	STSLICE
-	PUSHSLICE x00000000000000000000000000005f8e4c5d_
+	PUSHSLICE x000000000000000000000000000011e6c3e9_
 	STSLICER
+	ENDC
+	PUSHINT 128
 }
 PUSHCONT {
-	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 105
+	.loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 106
 	GETGLOB 11
 	GETGLOB 10
 	FALSE
@@ -332,10 +301,12 @@ PUSHCONT {
 	PUSHSLICE x00000000000000000000000000003085de8f_
 	STSLICER
 	STU 32
+	ENDC
+	PUSHINT 128
+	ADDCONST 32
+	UFITS 8
 }
 IFELSE
-ENDC
-PUSHINT 128
 SENDRAWMSG
 .loc ../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol, 0
 
@@ -690,12 +661,6 @@ IFJMPREF {
 	EQUAL
 	IFJMPREF {
 		CALL $worker$
-	}
-	DUP
-	PUSHINT 801580590
-	EQUAL
-	IFJMPREF {
-		CALL $continueUpgrade$
 	}
 	DUP
 	PUSHINT 1534670941

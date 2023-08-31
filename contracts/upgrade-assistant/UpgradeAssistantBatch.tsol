@@ -19,26 +19,20 @@ contract UpgradeAssistantBatch is IUpgradeAssistantBatch {
     uint public worker;
     address public owner;
 
-    modifier onlyFabric() {
-        require(msg.sender == fabric);
+    modifier onlyFabricOrMe() {
+        require(msg.sender == fabric || msg.sender == address(this));
 
         _;
     }
 
     modifier reserveMinBalance() {
-        tvm.rawReserve(constants.BATCH_INITIAL_BALANCE, 2);
+        tvm.rawReserve(constants.BATCH_INITIAL_BALANCE, 0);
 
         _;
     }
 
     modifier onlyWorker() {
         require(msg.pubkey() == worker);
-
-        _;
-    }
-
-    modifier onlySelfCall() {
-        require(msg.sender == address(this));
 
         _;
     }
@@ -70,23 +64,20 @@ contract UpgradeAssistantBatch is IUpgradeAssistantBatch {
         return pack;
     }
 
-    function upgrade() external override onlyFabric {
+    function upgrade() external override onlyFabricOrMe {
+        // tvm.accept();
         _upgrade();
     }
 
-    function continueUpgrade() external override onlySelfCall {
-        tvm.accept();
-
-        _upgrade();
-    }
-
-    function _upgrade() internal reserveMinBalance {
+    function _upgrade() internal {
         for (uint8 i = 0; i < constants.ACCEPT_UPGRADE_PER_TX; i++) {
             address[] wallets_pack = _getWalletsPack();
 
+            uint128 value = uint128(wallets_pack.length) * constants.ACCEPT_UPGRADE_VALUE + 1 ever;
+
             if (wallets_pack.length > 0) {
                 IUpgradeAssistantFabric(fabric).acceptUpgrade{
-                    value: uint128(wallets_pack.length) * constants.ACCEPT_UPGRADE_VALUE + 1 ever,
+                    value: value,
                     bounce: true,
                     flag: 0
                 }(nonce, wallets_pack);
@@ -96,7 +87,7 @@ contract UpgradeAssistantBatch is IUpgradeAssistantBatch {
         }
 
         if (wallets_pointer < wallets.length) {
-            IUpgradeAssistantBatch(address(this)).continueUpgrade{
+            IUpgradeAssistantBatch(address(this)).upgrade{
                 value: 0,
                 flag: MsgFlag.ALL_NOT_RESERVED,
                 bounce: false
@@ -104,7 +95,7 @@ contract UpgradeAssistantBatch is IUpgradeAssistantBatch {
         } else {
             IUpgradeAssistantFabric(fabric).finishUpgrade{
                 value: 0,
-                flag: MsgFlag.ALL_NOT_RESERVED,
+                flag: MsgFlag.ALL_NOT_RESERVED + MsgFlag.DESTROY_IF_ZERO,
                 bounce: false
             }(nonce);
         }

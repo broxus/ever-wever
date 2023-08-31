@@ -20,6 +20,7 @@ import "./interfaces/IVaultTokenRoot_V1.tsol";
 import "./interfaces/IVaultTokenWallet_V1.tsol";
 import "./libraries/ErrorCodes.tsol";
 
+// TODO: replace with local copy
 import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
 
 
@@ -82,6 +83,7 @@ contract VaultTokenRoot_V1 is
 
         tvm.rawReserve(_reserve(), 0);
 
+        // TODO: tunnel?
         if (msg.sender != legacy_vault_) {
             _mint(
                 amount,
@@ -464,7 +466,8 @@ contract VaultTokenRoot_V1 is
 
     function upgradeWallets(
         address[] wallets,
-        uint128 accept_upgrade_value
+        uint128 accept_upgrade_value,
+        address remainingGasTo
     ) external override onlyRootOwner {
         _reserve();
 
@@ -476,7 +479,7 @@ contract VaultTokenRoot_V1 is
             }(
                 walletCode_,
                 walletVersion_,
-                msg.sender
+                remainingGasTo
             );
         }
     }

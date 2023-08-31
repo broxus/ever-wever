@@ -165,7 +165,8 @@
 			"name": "upgradeWallets",
 			"inputs": [
 				{"name":"wallets","type":"address[]"},
-				{"name":"accept_upgrade_value","type":"uint128"}
+				{"name":"accept_upgrade_value","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"}
 			],
 			"outputs": [
 			]

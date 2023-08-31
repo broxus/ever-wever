@@ -28,13 +28,6 @@
 			]
 		},
 		{
-			"name": "continueUpgrade",
-			"inputs": [
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "wallets",
 			"inputs": [
 			],

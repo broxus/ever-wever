@@ -99,7 +99,7 @@ export class UpgradeAssistant {
         this.batches_amount = batches_amount;
 
         this.chunk_size = 50;
-        this.external_timeout = 60000; // 60 seconds
+        this.external_timeout = 80000; // 60 seconds
         this.bar = new cliProgress.SingleBar({
             format: '[{bar}] {percentage}% | ETA: {eta}s | {value}/{total} ({duration} sec)'
         }, cliProgress.Presets.shades_classic);

@@ -8,6 +8,6 @@ library UpgradeAssistantConstants {
 
     uint32 constant DEPLOY_BATCHES_PER_TX = 20;
 
-    uint32 constant ACCEPT_UPGRADE_PER_TX = 10;
+    uint32 constant ACCEPT_UPGRADE_PER_TX = 5;
     uint32 constant WALLETS_PER_PACK = 50;
 }

@@ -1,5 +1,5 @@
 1000.txt
-10_000.txt
+*.txt
 logs/
 node_modules/
 *.env

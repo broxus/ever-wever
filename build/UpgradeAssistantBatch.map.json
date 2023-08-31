@@ -1,355 +1,143 @@
 {
   "map": {
-    "0510d5abc03966d8ad146a6955e923288ae26ecc9d35fa77c4dfa7390c5b64b7": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 655
-      },
-      "8": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 656
-      },
-      "56": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 657
-      },
-      "64": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 658
-      },
-      "80": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 684
-      },
-      "88": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 685
-      },
-      "136": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 686
-      },
-      "144": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 687
-      }
-    },
-    "07d105557c3198a1d5878a5f44451cf78ab93f0a2450a544daef3b5b53dd9bab": {
-      "0": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 85
-      },
-      "16": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 87
-      },
-      "24": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 87
-      },
-      "40": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 87
-      },
-      "56": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 87
-      },
-      "72": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "80": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "96": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "104": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "120": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "136": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "184": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "192": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "208": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "256": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "264": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "280": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "296": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "304": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "312": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "336": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "352": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "360": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "376": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "384": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "392": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "408": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "568": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "584": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "600": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "608": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "624": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "632": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "648": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "664": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "672": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "680": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 88
-      },
-      "696": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 288
-      },
-      "704": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 94
-      },
-      "712": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 94
-      },
-      "728": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 294
-      },
-      "736": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 295
-      },
-      "744": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      },
-      "752": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      }
-    },
     "0cc9b7aa0aadafc7ec0152bb632586f5b2cdf0c40a602b086f8956ae2243f8cf": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 571
+        "line": 542
       },
       "8": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 572
+        "line": 543
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 573
+        "line": 544
       },
       "32": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 576
+        "line": 547
       },
       "48": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 577
+        "line": 548
       },
       "56": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 578
+        "line": 549
       },
       "72": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 579
+        "line": 550
       },
       "232": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 580
+        "line": 551
       },
       "240": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 581
+        "line": 552
       },
       "248": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 582
+        "line": 553
       },
       "256": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 583
+        "line": 554
       },
       "272": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 584
+        "line": 555
       },
       "280": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 585
+        "line": 556
       },
       "296": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 586
+        "line": 557
       },
       "312": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 587
+        "line": 558
       },
       "320": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 588
+        "line": 559
       },
       "328": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 589
+        "line": 560
       },
       "344": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 591
+        "line": 562
       },
       "352": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 592
+        "line": 563
       }
     },
     "1140c0931f340a6d1d0ccd51ca1cbc64239adfba3f440171347d560477acdcfe": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 595
+        "line": 566
       },
       "8": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 596
+        "line": 567
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 597
+        "line": 568
       },
       "32": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 600
+        "line": 571
       },
       "48": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 601
+        "line": 572
       },
       "56": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 602
+        "line": 573
       },
       "72": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 603
+        "line": 574
       },
       "232": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 604
+        "line": 575
       },
       "240": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 605
+        "line": 576
       },
       "248": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 606
+        "line": 577
       },
       "264": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 607
+        "line": 578
       },
       "272": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 608
+        "line": 579
       },
       "280": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 609
+        "line": 580
       },
       "296": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 611
+        "line": 582
       },
       "304": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 612
+        "line": 583
       }
     },
     "14cfe5caa0fe7e88a16bc87ff9f898109338db1c654f5df45a76e8329e1dacd9": {
@@ -360,296 +148,6 @@
       "24": {
         "filename": "<internal-selector>",
         "line": 2
-      }
-    },
-    "2158dd498ad264657e3181dd107512d9e46629665ff6def29a16563afa216e0c": {
-      "0": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 23
-      },
-      "16": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 23
-      },
-      "32": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 23
-      },
-      "48": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 23
-      },
-      "72": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 74
-      }
-    },
-    "26e6beba7292441c3e48768cf6ce6aeac0c73100657bee696434f5a83dfbb9e2": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 194
-      },
-      "8": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 195
-      },
-      "24": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 196
-      },
-      "48": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 197
-      },
-      "64": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 198
-      },
-      "72": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 199
-      },
-      "88": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 77
-      },
-      "96": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 205
-      },
-      "112": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 208
-      },
-      "120": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 209
-      },
-      "136": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 212
-      }
-    },
-    "28ba9c121041fe0075a48b83e9f35c0029993f05028efec47c886f4bbab20645": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 516
-      },
-      "16": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 517
-      },
-      "24": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 518
-      },
-      "40": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 519
-      },
-      "56": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 520
-      },
-      "72": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 521
-      },
-      "80": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 524
-      },
-      "96": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 525
-      },
-      "104": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 526
-      },
-      "120": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 529
-      },
-      "136": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 530
-      },
-      "144": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 531
-      },
-      "160": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 532
-      },
-      "184": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 533
-      },
-      "200": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 534
-      },
-      "208": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 535
-      },
-      "224": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 536
-      },
-      "232": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 537
-      },
-      "248": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 538
-      },
-      "256": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 539
-      },
-      "264": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 540
-      },
-      "280": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 541
-      },
-      "288": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 542
-      },
-      "296": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 544
-      },
-      "304": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 545
-      },
-      "312": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 546
-      },
-      "328": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 548
-      },
-      "336": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 549
-      },
-      "344": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 550
-      },
-      "360": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 551
-      },
-      "376": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 552
-      },
-      "392": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 554
-      },
-      "400": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 555
-      },
-      "416": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 556
-      },
-      "424": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 557
-      },
-      "440": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 559
-      },
-      "448": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 560
-      },
-      "464": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 561
-      },
-      "472": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "488": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "496": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "504": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "520": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "528": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "544": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "568": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "576": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "616": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "624": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "632": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "648": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "664": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 563
-      },
-      "680": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 564
-      },
-      "688": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 565
-      },
-      "704": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 568
       }
     },
     "302dac1420f50e33b0670937eae29546ee7b0ff2f36efe7d4575a88ed6f25c75": {
@@ -715,31 +213,31 @@
       },
       "168": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 50
+        "line": 54
       },
       "184": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 50
+        "line": 54
       },
       "200": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 50
+        "line": 54
       },
       "216": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 50
+        "line": 54
       },
       "240": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 52
+        "line": 56
       },
       "248": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 52
+        "line": 56
       },
       "264": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 53
+        "line": 57
       },
       "280": {
         "filename": "UpgradeAssistantBatch.code",
@@ -748,6 +246,40 @@
       "296": {
         "filename": "UpgradeAssistantBatch.code",
         "line": 36
+      }
+    },
+    "31cde2ff75741f4a1f1a369848212f53215c49cd9317564f489acd067f0509fc": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 626
+      },
+      "8": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 627
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 628
+      },
+      "64": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 629
+      },
+      "80": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 655
+      },
+      "88": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 656
+      },
+      "136": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 657
+      },
+      "144": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 658
       }
     },
     "3f45743a72a0c315183d85399cd47435a01c8d9b37a72c138201cdcecccd97df": {
@@ -777,27 +309,27 @@
       },
       "88": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 56
+        "line": 60
       },
       "104": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 56
+        "line": 60
       },
       "120": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 56
+        "line": 60
       },
       "128": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 56
+        "line": 60
       },
       "144": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 56
+        "line": 60
       },
       "152": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 56
+        "line": 60
       },
       "160": {
         "filename": "UpgradeAssistantBatch.code",
@@ -819,152 +351,876 @@
     "492880394198fded60852b9495246bfd82728593a00936484fced9f27340c010": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 433
+        "line": 404
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 434
+        "line": 405
       },
       "32": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 435
+        "line": 406
       },
       "48": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 436
+        "line": 407
       },
       "64": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 437
+        "line": 408
       },
       "80": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 438
+        "line": 409
       },
       "96": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 439
+        "line": 410
       },
       "112": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 440
+        "line": 411
       },
       "128": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 441
+        "line": 412
       },
       "136": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 442
+        "line": 413
       },
       "152": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 443
+        "line": 414
       },
       "168": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 444
+        "line": 415
       },
       "184": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 445
+        "line": 416
       },
       "192": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 446
+        "line": 417
       },
       "208": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 447
+        "line": 418
       },
       "216": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 448
+        "line": 419
       },
       "232": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 449
+        "line": 420
       },
       "240": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 450
+        "line": 421
       },
       "256": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 451
+        "line": 422
       },
       "272": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 452
+        "line": 423
       },
       "288": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 453
+        "line": 424
       },
       "296": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 454
+        "line": 425
       },
       "312": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 455
+        "line": 426
       },
       "328": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 456
+        "line": 427
       },
       "336": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 457
+        "line": 428
       },
       "344": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 458
+        "line": 429
       },
       "352": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 459
+        "line": 430
       },
       "360": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 460
+        "line": 431
       },
       "368": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 461
+        "line": 432
       },
       "376": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 462
+        "line": 433
       }
     },
     "49ce6e466994c70448e2f38007bc114d78c522988ed73891a63f0d235639bbbe": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 376
+        "line": 347
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 377
+        "line": 348
       },
       "24": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 378
+        "line": 349
       },
       "40": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 379
+        "line": 350
       },
       "56": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 380
+        "line": 351
       },
       "72": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 428
+        "line": 399
       }
     },
-    "52b86c5babb25cc9c446c0b5d26882e7b4f8cb03a8be7ed81617294a1b12cef7": {
+    "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 493
+      }
+    },
+    "67f3f68c7a43b63f50566143dc4403c07efa44807cf363fe347280fe2bdb68fe": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 659
+      },
+      "8": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 660
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 661
+      },
+      "64": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 662
+      },
+      "80": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 665
+      },
+      "88": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 666
+      },
+      "136": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 667
+      },
+      "144": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 668
+      },
+      "160": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 671
+      },
+      "168": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 672
+      },
+      "216": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 673
+      },
+      "224": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 674
+      }
+    },
+    "86b1c5d434c236094146b68774ac569e6f480caa768c3c89cc90b1e4b52aa493": {
+      "0": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "16": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "24": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "32": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "40": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "48": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "56": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "64": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "80": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "88": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 45
+      },
+      "112": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 61
+      },
+      "128": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "144": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "152": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "160": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "168": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "184": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "200": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "216": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "232": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "240": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "248": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "256": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "264": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "272": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 63
+      },
+      "288": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "296": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "312": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "328": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "336": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "344": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "360": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "376": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "392": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "408": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 64
+      },
+      "424": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 107
+      },
+      "432": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 108
+      },
+      "440": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 109
+      },
+      "448": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 111
+      },
+      "456": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 112
+      }
+    },
+    "897db244d19976c9f2302f2e419134efc849cd1fb17e4eb902c8a316a6120963": {
+      "0": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 68
+      },
+      "8": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 68
+      },
+      "16": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 68
+      },
+      "32": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "40": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "56": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "72": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "88": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "96": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "104": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "120": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "136": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "144": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 69
+      },
+      "160": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "176": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "192": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "208": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "224": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "240": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "256": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "264": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "280": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "288": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "296": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "312": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "328": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "344": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 70
+      },
+      "360": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 71
+      },
+      "376": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 71
+      },
+      "384": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 71
+      },
+      "400": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 157
+      }
+    },
+    "a28019844fd5eefacda0edb1f785b99556c71c5319f18ccfc3df2ff38b0a26a9": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 452
+      },
+      "16": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 453
+      },
+      "24": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 454
+      },
+      "40": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 455
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 456
+      },
+      "72": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 457
+      },
+      "80": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 458
+      },
+      "88": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 459
+      },
+      "104": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 460
+      },
+      "120": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 461
+      },
+      "128": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 462
+      },
+      "144": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 463
+      },
+      "168": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 464
+      },
+      "176": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 465
+      },
+      "184": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 466
+      },
+      "200": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 467
+      },
+      "216": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 471
+      },
+      "224": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 472
+      },
+      "248": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 473
+      },
+      "264": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 474
+      },
+      "272": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 475
+      },
+      "288": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 479
+      },
+      "296": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 480
+      },
+      "312": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 483
+      }
+    },
+    "a55c5e2d0f58a0cdd833c0c993bdb6e5523500910d668fb7f5ca64eba245e8f3": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 161
+      },
+      "8": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 162
+      },
+      "24": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 163
+      },
+      "48": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 164
+      },
+      "64": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 165
+      },
+      "72": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 166
+      },
+      "88": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 77
+      },
+      "96": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 172
+      },
+      "112": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 175
+      },
+      "120": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 176
+      },
+      "136": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 179
+      }
+    },
+    "a7b9a563b7f342c55bce7936592089898fb5197ad9ff9836887b9eda7588fe1a": {
+      "0": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      },
+      "8": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      },
+      "16": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      },
+      "24": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      },
+      "40": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 268
+      },
+      "72": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 269
+      },
+      "80": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 99
+      },
+      "96": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 99
+      },
+      "112": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 99
+      },
+      "128": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 99
+      },
+      "136": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 99
+      },
+      "152": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "168": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "176": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "184": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "208": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "224": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "232": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "248": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "256": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "424": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "440": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "448": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "472": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 100
+      },
+      "488": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "504": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "520": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "528": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "536": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "560": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "576": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "584": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "600": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "608": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "776": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "792": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "808": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "816": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "840": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "856": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "872": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      },
+      "880": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 106
+      }
+    },
+    "abc2e643e23dbbbc3a22ca9ef02dfa2da7d17dc6e8c80b727c7df4e6b58ed572": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 586
+      },
+      "8": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 587
+      },
+      "16": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 588
+      },
+      "32": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 591
+      },
+      "48": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 592
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 593
+      },
+      "72": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 594
+      },
+      "232": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 595
+      },
+      "240": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 596
+      },
+      "248": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 597
+      },
+      "264": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 598
+      },
+      "272": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 599
+      },
+      "280": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 600
+      },
+      "296": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 602
+      },
+      "304": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 603
+      }
+    },
+    "b402a6cb35ff05610a8db85c193cc30a6a94e725d443863d6b8a19b277c54c5d": {
       "0": {
         "filename": "<entry-selector>",
         "line": 1
@@ -1010,1190 +1266,870 @@
         "line": 11
       }
     },
-    "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 391
-      }
-    },
-    "6c5285d66fe898da43c82d9369b7204c4668d8ae7573a41bd423989016e4cb4b": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 481
-      },
-      "16": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 482
-      },
-      "24": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 483
-      },
-      "40": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 484
-      },
-      "56": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 485
-      },
-      "72": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 486
-      },
-      "80": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 487
-      },
-      "88": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 488
-      },
-      "104": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 489
-      },
-      "120": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 490
-      },
-      "128": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 491
-      },
-      "144": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 492
-      },
-      "168": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 493
-      },
-      "176": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 494
-      },
-      "184": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 495
-      },
-      "200": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 496
-      },
-      "216": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 500
-      },
-      "224": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 501
-      },
-      "248": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 502
-      },
-      "264": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 503
-      },
-      "272": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 504
-      },
-      "288": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 508
-      },
-      "296": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 509
-      },
-      "312": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 512
-      }
-    },
-    "72ff40e454798573d8cc82d3348a2befc21addbb1a26bbbaa3e687f9e6b890af": {
-      "0": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 29
-      },
-      "48": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 29
-      },
-      "56": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 29
-      },
-      "72": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      },
-      "80": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      },
-      "88": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      },
-      "96": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      },
-      "112": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 84
-      },
-      "128": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 301
-      },
-      "144": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 302
-      },
-      "152": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 98
-      },
-      "168": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 98
-      },
-      "184": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 98
-      },
-      "200": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 98
-      },
-      "208": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 98
-      },
-      "224": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "240": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "248": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "256": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "280": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "296": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "304": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "320": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "328": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "496": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "512": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 99
-      },
-      "528": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "544": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "560": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "568": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "576": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "600": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "616": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "624": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "640": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "648": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "816": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "832": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "848": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "856": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "864": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      },
-      "888": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 105
-      }
-    },
-    "823d210072fb7c9aba2340b0fbc0a526d47bc40101370ff8e05f23b2fb6d5bf9": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 688
-      },
-      "8": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 689
-      },
-      "56": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 690
-      },
-      "64": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 691
-      },
-      "80": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 694
-      },
-      "88": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 695
-      },
-      "136": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 696
-      },
-      "144": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 697
-      },
-      "160": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 700
-      },
-      "168": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 701
-      },
-      "216": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 702
-      },
-      "224": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 703
-      },
-      "240": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 706
-      },
-      "248": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 707
-      },
-      "296": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 708
-      },
-      "304": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 709
-      }
-    },
-    "86b1c5d434c236094146b68774ac569e6f480caa768c3c89cc90b1e4b52aa493": {
-      "0": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "16": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "24": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "32": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "40": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "48": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "56": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "64": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "80": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "88": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 35
-      },
-      "112": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 57
-      },
-      "128": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "144": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "152": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "160": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "168": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "184": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "200": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "216": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "232": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "240": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "248": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "256": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "264": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "272": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 59
-      },
-      "288": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "296": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "312": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "328": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "336": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "344": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "360": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "376": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "392": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "408": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 60
-      },
-      "424": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 107
-      },
-      "432": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 108
-      },
-      "440": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 109
-      },
-      "448": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 111
-      },
-      "456": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 112
-      }
-    },
-    "897db244d19976c9f2302f2e419134efc849cd1fb17e4eb902c8a316a6120963": {
-      "0": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 64
-      },
-      "8": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 64
-      },
-      "16": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 64
-      },
-      "32": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "40": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "56": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "72": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "88": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "96": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "104": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "120": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "136": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "144": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 65
-      },
-      "160": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "176": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "192": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "208": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "224": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "240": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "256": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "264": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "280": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "288": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "296": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "312": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "328": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "344": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 66
-      },
-      "360": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 67
-      },
-      "376": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 67
-      },
-      "384": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 67
-      },
-      "400": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 157
-      }
-    },
-    "94bc6ecef2654117345b4a56d5a8f6996fa95921c10baf0d61f46269ea0823a3": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 659
-      },
-      "8": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 660
-      },
-      "48": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 661
-      },
-      "56": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 662
-      },
-      "72": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 665
-      },
-      "80": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 666
-      },
-      "128": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 667
-      },
-      "136": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 668
-      },
-      "152": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 671
-      },
-      "160": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 672
-      },
-      "208": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 673
-      },
-      "216": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 674
-      },
-      "232": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 677
-      },
-      "240": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 678
-      },
-      "288": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 679
-      },
-      "296": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 680
-      }
-    },
-    "abc2e643e23dbbbc3a22ca9ef02dfa2da7d17dc6e8c80b727c7df4e6b58ed572": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 615
-      },
-      "8": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 616
-      },
-      "16": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 617
-      },
-      "32": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 620
-      },
-      "48": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 621
-      },
-      "56": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 622
-      },
-      "72": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 623
-      },
-      "232": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 624
-      },
-      "240": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 625
-      },
-      "248": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 626
-      },
-      "264": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 627
-      },
-      "272": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 628
-      },
-      "280": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 629
-      },
-      "296": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 631
-      },
-      "304": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 632
-      }
-    },
     "bcebd779d7d6e02df2474434927589263ac649d049cbda92b6391bb0de9f65f0": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 343
+        "line": 314
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 344
+        "line": 315
       },
       "24": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 345
+        "line": 316
       },
       "40": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 346
+        "line": 317
       },
       "56": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 347
+        "line": 318
       },
       "72": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 348
+        "line": 319
       },
       "80": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 349
+        "line": 320
       },
       "96": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 350
+        "line": 321
       },
       "112": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 351
+        "line": 322
       },
       "128": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 352
+        "line": 323
       },
       "144": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 353
+        "line": 324
       },
       "152": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 354
+        "line": 325
       },
       "168": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 355
+        "line": 326
       },
       "176": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 356
+        "line": 327
       },
       "184": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 357
+        "line": 328
       },
       "192": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 358
+        "line": 329
       },
       "200": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 359
+        "line": 330
       },
       "216": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 360
+        "line": 331
       },
       "232": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 361
+        "line": 332
       },
       "240": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 362
+        "line": 333
       },
       "248": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 363
+        "line": 334
       },
       "256": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 364
+        "line": 335
       },
       "272": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 365
+        "line": 336
       },
       "280": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 366
+        "line": 337
       },
       "296": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 367
+        "line": 338
       },
       "312": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 368
+        "line": 339
       },
       "328": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 369
+        "line": 340
       },
       "344": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 370
+        "line": 341
       },
       "360": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 371
+        "line": 342
       },
       "376": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 372
+        "line": 343
       },
       "392": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 373
+        "line": 344
       }
     },
     "bf96228cc71e8bf4a31a7ffaaa6adec70c361a6a0a982ba9e36948358802d961": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 635
+        "line": 606
       },
       "8": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 636
+        "line": 607
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 637
+        "line": 608
       },
       "32": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 640
+        "line": 611
       },
       "48": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 641
+        "line": 612
       },
       "56": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 642
+        "line": 613
       },
       "72": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 643
+        "line": 614
       },
       "232": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 644
+        "line": 615
       },
       "240": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 645
+        "line": 616
       },
       "248": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 646
+        "line": 617
       },
       "256": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 647
+        "line": 618
       },
       "264": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 648
+        "line": 619
       },
       "272": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 620
+      },
+      "288": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 622
+      },
+      "296": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 623
+      }
+    },
+    "c2bf65609a9cdb07f18c9327a617e419ad9e08f6b4318236a9b31c25d6673c1b": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 630
+      },
+      "8": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 631
+      },
+      "48": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 632
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 633
+      },
+      "72": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 636
+      },
+      "80": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 637
+      },
+      "128": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 638
+      },
+      "136": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 639
+      },
+      "152": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 642
+      },
+      "160": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 643
+      },
+      "208": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 644
+      },
+      "216": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 645
+      },
+      "232": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 648
+      },
+      "240": {
         "filename": "UpgradeAssistantBatch.code",
         "line": 649
       },
       "288": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 651
+        "line": 650
       },
       "296": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 652
+        "line": 651
+      }
+    },
+    "c843ef97b6b9c8629417d4134a3e5eafb00050430633d2e49dd7bc67e3b531df": {
+      "0": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 487
+      },
+      "16": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 488
+      },
+      "24": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 489
+      },
+      "40": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 490
+      },
+      "56": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 491
+      },
+      "72": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 492
+      },
+      "80": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 495
+      },
+      "96": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 496
+      },
+      "104": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 497
+      },
+      "120": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 500
+      },
+      "136": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 501
+      },
+      "144": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 502
+      },
+      "160": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 503
+      },
+      "184": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 504
+      },
+      "200": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 505
+      },
+      "208": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 506
+      },
+      "224": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 507
+      },
+      "232": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 508
+      },
+      "248": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 509
+      },
+      "256": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 510
+      },
+      "264": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 511
+      },
+      "280": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 512
+      },
+      "288": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 513
+      },
+      "296": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 515
+      },
+      "304": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 516
+      },
+      "312": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 517
+      },
+      "328": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 519
+      },
+      "336": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 520
+      },
+      "344": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 521
+      },
+      "360": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 522
+      },
+      "376": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 523
+      },
+      "392": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 525
+      },
+      "400": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 526
+      },
+      "416": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 527
+      },
+      "424": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 528
+      },
+      "440": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 530
+      },
+      "448": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 531
+      },
+      "464": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 532
+      },
+      "472": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "488": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "496": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "504": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "520": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "528": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "544": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "568": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "576": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "616": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "624": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "632": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "648": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "664": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 534
+      },
+      "680": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 535
+      },
+      "688": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 536
+      },
+      "704": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 539
       }
     },
     "d27bcf697f8897347abc7613386a1330613dcdaa98d696120398ebdea8f2fadb": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 381
+        "line": 352
       },
       "8": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 382
+        "line": 353
       },
       "24": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 383
+        "line": 354
       },
       "32": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 384
+        "line": 355
       },
       "48": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 385
+        "line": 356
       },
       "56": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 386
+        "line": 357
       },
       "64": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 387
+        "line": 358
       },
       "80": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 388
+        "line": 359
       },
       "96": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 389
+        "line": 360
       },
       "112": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 394
+        "line": 365
       },
       "120": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 395
+        "line": 366
       },
       "128": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 396
+        "line": 367
       },
       "136": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 397
+        "line": 368
       },
       "152": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 398
+        "line": 369
       },
       "168": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 399
+        "line": 370
       },
       "176": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 400
+        "line": 371
       },
       "200": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 402
+        "line": 373
       },
       "208": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 403
+        "line": 374
       },
       "216": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 405
+        "line": 376
       },
       "224": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 406
+        "line": 377
       },
       "232": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 407
+        "line": 378
       },
       "240": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 408
+        "line": 379
       },
       "256": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 409
+        "line": 380
       },
       "264": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 410
+        "line": 381
       },
       "272": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 411
+        "line": 382
       },
       "280": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 414
+        "line": 385
       },
       "296": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 415
+        "line": 386
       },
       "312": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 416
+        "line": 387
       },
       "328": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 417
+        "line": 388
       },
       "344": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 418
+        "line": 389
       },
       "360": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 419
+        "line": 390
       },
       "376": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 420
+        "line": 391
       },
       "392": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 421
+        "line": 392
       },
       "408": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 422
+        "line": 393
       },
       "424": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 423
+        "line": 394
       },
       "448": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 424
+        "line": 395
       },
       "464": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 425
+        "line": 396
       },
       "472": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 426
+        "line": 397
       }
     },
     "d558e53bf690afc8a76b8887a99a49a52db1bd24bec5da84780ea0e7bc0aad3f": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 390
+        "line": 361
       }
     },
-    "e8c37cfa7214d86e3f457015005b3a79cdc4d273d0f45653a00db45ceaeca586": {
+    "da4a35077b4c8290158dff9d46036028f2c3f1e64e074ea9fa56669b6b8e170a": {
       "0": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 41
+        "line": 84
       },
       "16": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 41
+        "line": 86
+      },
+      "24": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "40": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "56": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "104": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "112": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "128": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "176": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "184": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 86
+      },
+      "200": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 88
+      },
+      "208": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 88
+      },
+      "224": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 88
+      },
+      "240": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 88
+      },
+      "256": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "264": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "280": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "288": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "304": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "312": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "320": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "344": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "360": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "368": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "384": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "392": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "400": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "416": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "576": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "592": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "608": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "616": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "632": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "640": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "656": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "672": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "680": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "688": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 89
+      },
+      "704": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 255
+      },
+      "712": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 95
+      },
+      "720": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 95
+      },
+      "736": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 261
+      },
+      "744": {
+        "filename": "UpgradeAssistantBatch.code",
+        "line": 262
+      },
+      "752": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      },
+      "760": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 83
+      }
+    },
+    "efb02d35c7d48f04c5a0fbe974318c0832362395df429105151981a8cb30c378": {
+      "0": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 33
+      },
+      "16": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 33
       },
       "32": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 41
+        "line": 33
       },
       "48": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 41
+        "line": 33
       },
-      "72": {
+      "64": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 78
+        "line": 33
       },
-      "88": {
+      "80": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 80
+        "line": 33
+      },
+      "96": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 33
+      },
+      "104": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 33
+      },
+      "128": {
+        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
+        "line": 79
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 497
+        "line": 468
       },
       "16": {
         "filename": "UpgradeAssistantBatch.code",
-        "line": 498
-      }
-    },
-    "f67ea9f5e8b1e3f0fe4dfcc61a09408a0982ee5bf0d9c32241a01e8c567628fd": {
-      "0": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 161
-      },
-      "8": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 162
-      },
-      "24": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 163
-      },
-      "48": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 164
-      },
-      "64": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 165
-      },
-      "72": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 166
-      },
-      "88": {
-        "filename": "../contracts/upgrade-assistant/UpgradeAssistantBatch.tsol",
-        "line": 73
-      },
-      "96": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 172
-      },
-      "112": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 175
-      },
-      "120": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 176
-      },
-      "136": {
-        "filename": "UpgradeAssistantBatch.code",
-        "line": 179
+        "line": 469
       }
     }
   }

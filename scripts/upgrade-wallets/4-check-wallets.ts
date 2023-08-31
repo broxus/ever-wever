@@ -43,7 +43,7 @@ if (cluster.isMaster) {
     });
 
     const wallets = fs
-        .readFileSync('./10_000.txt')
+        .readFileSync('./30_000.txt')
         .toString()
         .split('\n')
         .filter(a => a !== '')

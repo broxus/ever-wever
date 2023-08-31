@@ -3,8 +3,8 @@ const logger = require("mocha-logger");
 
 
 const main = async () => {
-    const OWNER = '0:cfcf66505259c0221924bb3ab3759e9e5d9d532f66eb851efd4d0f135237a020';
-    const ROOT = '0:1795caddede4217bbfb332e387482ad24a32e86a6086e185b165f46e2823fd61';
+    const OWNER = '0:1bd84004df384f44018d649e56e8f7d524b02dd9367e3197cb1f4c1ba890462d';
+    const ROOT = '0:ef9454582730631bf7c6cd2e47baefdba84437f96a0dfaa4ab312f989c879063';
 
     const signer = await locklift.keystore.getSigner("0");
 
@@ -15,8 +15,8 @@ const main = async () => {
             constructorParams: {
                 owner_: new Address(OWNER),
                 root_: new Address(ROOT),
-                wallets_: 100_000,
-                airdrop_amount_: toNano('0.001')
+                wallets_: 30_000,
+                airdrop_amount_: toNano('0.0000001')
             },
             initParams: {
                 _randomNonce: getRandomNonce()

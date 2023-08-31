@@ -21,7 +21,8 @@ interface IVaultTokenRoot_V1 {
 
     function upgradeWallets(
         address[] wallets,
-        uint128 accept_upgrade_value
+        uint128 accept_upgrade_value,
+        address remainingGasTo
     ) external;
 
     function getReceiveSafeFee() external pure responsible returns(uint128);

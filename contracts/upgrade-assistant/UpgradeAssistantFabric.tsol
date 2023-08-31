@@ -153,7 +153,7 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
             value: 0,
             bounce: true,
             flag: MsgFlag.REMAINING_GAS
-        }(wallets, constants.ACCEPT_UPGRADE_VALUE);
+        }(wallets, constants.ACCEPT_UPGRADE_VALUE, owner);
     }
 
     function revokeOwnership() external override {

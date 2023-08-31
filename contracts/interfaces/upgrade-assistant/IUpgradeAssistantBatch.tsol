@@ -4,5 +4,4 @@ pragma ton-solidity >= 0.57.1;
 interface IUpgradeAssistantBatch {
     function addWallets(address[] wallets) external;
     function upgrade() external;
-    function continueUpgrade() external;
 }

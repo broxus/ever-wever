@@ -113,6 +113,8 @@ const main = async () => {
     }
 
     for (const [chunk_id, wallets] of wallet_chunks.entries()) {
+        const startTime = new Date().getTime();
+
         logger.log(`Processing chunk #${chunk_id+1} / ${wallet_chunks.length} (offset = ${response.offset + chunk_id * response.wallets_per_upgrade})`);
 
         const upgrade_assistant = new UpgradeAssistant(
@@ -134,10 +136,18 @@ const main = async () => {
         logger.log(`Uploading wallets...`);
     
         await upgrade_assistant.uploadWallets();
-    
+
+        
+        let max_wallets_per_batch = 0;
         for (const [batch_id, batch] of upgrade_assistant.batches.entries()) {
             logger.log(`Batch #${batch_id}: ${batch.address.toString()}`);
+
+            const {
+                wallets
+            } = await batch.methods.wallets({}).call();
+            max_wallets_per_batch = Math.max(max_wallets_per_batch, wallets.length);
         }
+        logger.log(`Max wallets per batch: ${max_wallets_per_batch}`);
 
         logger.log(`Transferring root ownership to upgrade assistant...`);
         await locklift.tracing.trace(
@@ -156,7 +166,7 @@ const main = async () => {
         logger.log(`Triggering upgrade...`);
         const tx = await upgrade_assistant.fabric.methods.upgrade({}).send({
             from: owner.address,
-            amount: toNano(wallets.length * 0.5),
+            amount: toNano(max_wallets_per_batch * upgrade_assistant.batches_amount * 1), // 1 VENOM per account upgrade
         });
 
         // Wait until fabric is done
@@ -182,6 +192,9 @@ const main = async () => {
                 amount: toNano('1')
             })
         );
+
+        const endTime = new Date().getTime();
+        logger.log(`Time taken ${(endTime - startTime)/1000} seconds`);
 
         // Sleep
         logger.log(`Sleeping for ${response.sleep_between_upgrades_seconds} seconds...`);

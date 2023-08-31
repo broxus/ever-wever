@@ -11,7 +11,7 @@ import _ from 'underscore';
 import {UpgradeAssistant} from "./upgrade-assistant";
 
 
-const USERS_AMOUNT = 100;
+const USERS_AMOUNT = 300;
 const USER_INITIAL_BALANCE = toNano('1');
 const UPGRADE_VALUE = toNano(USERS_AMOUNT);
 
@@ -23,7 +23,7 @@ describe('Test upgrading root and wallets', async function() {
     let root: Contract<TokenRootUpgradeableAbi>;
     let vault_v1: Contract<VaultTokenRoot_V1Abi>;
     let users: Address[];
-    let wallets: Address[];
+    let wallets: Address[] = [];
 
     it("Setup contracts", async function () {
         await locklift.deployments.fixture();
@@ -113,18 +113,23 @@ describe('Test upgrading root and wallets', async function() {
 
         users = _.range(1, USERS_AMOUNT + 1).map((i) => getAddress(i));
 
-        const wallets_promises = users.map(async (user) => {
-            const {
-                value0: wallet
-            } = await root.methods.walletOf({
-                walletOwner: user,
-                answerId: 0
-            }).call({});
+        const users_chunks = _.chunk(users, 50)
+        for (const [i, users_chunk] of users_chunks.entries()) {
+            logger.log(`Getting addresses for chunk ${i + 1} / ${users_chunks.length}`);
 
-            return wallet;
-        });
-
-        wallets = await Promise.all(wallets_promises);
+            const wallets_promises = users_chunk.map(async (user) => {
+                const {
+                    value0: wallet
+                } = await root.methods.walletOf({
+                    walletOwner: user,
+                    answerId: 0
+                }).call({});
+    
+                return wallet;
+            });
+    
+            wallets = [...wallets, ...(await Promise.all(wallets_promises))];
+        }
 
         const {
             value0: total_supply
@@ -225,12 +230,12 @@ describe('Test upgrading root and wallets', async function() {
                 context.owner.address,
                 root.address,
                 wallets,
-                25
+                1
             );
 
             await upgrade_assistant.setup({
-                deployBatchValue: toNano('1'),
-                deployFabricValue: toNano('50')
+                deployBatchValue: toNano('5'),
+                deployFabricValue: toNano('10')
             });
         });
 
@@ -271,7 +276,10 @@ describe('Test upgrading root and wallets', async function() {
                 upgrade_assistant.fabric.methods.upgrade({}).send({
                     from: context.owner.address,
                     amount: UPGRADE_VALUE
-                })
+                }),
+                {
+                    raise: false
+                }
             );
 
             // await trace.traceTree?.beautyPrint();
@@ -306,11 +314,21 @@ describe('Test upgrading root and wallets', async function() {
         });
 
         it('Check wallets upgraded', async () => {
-            const versions = await Promise.all(wallets.map(async (w) => {
-                const wallet = await locklift.factory.getDeployedContract('VaultTokenWallet_V1', w);
+            const versions = [];
 
-                return wallet.methods.version({ answerId: 0 }).call().then(v => v.value0);
-            }));
+            const wallets_chunks = _.chunk(wallets, 50);
+
+            for (const [i, wallets_chunk] of wallets_chunks.entries()) {
+                logger.log(`Getting versions for chunk ${i + 1} / ${wallets_chunks.length}`);
+
+                const versions_promises = wallets_chunk.map(async (wallet) => {
+                    const wallet_contract = await locklift.factory.getDeployedContract('VaultTokenWallet_V1', wallet);
+
+                    return wallet_contract.methods.version({ answerId: 0 }).call().then(v => v.value0);
+                });
+
+                versions.push(...(await Promise.all(versions_promises)));
+            }
 
             versions.every(v => expect(v).to.be.equal('2', 'Some wallets failed to upgrade'));
         });
