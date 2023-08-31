@@ -10,7 +10,7 @@ const setupUser = async (name: string, signerId: string) => {
                 signerId,
                 accountSettings: {
                     type: WalletTypes.EverWallet,
-                    value: locklift.utils.toNano(100),
+                    value: locklift.utils.toNano(1000),
                 },
             },
         ],

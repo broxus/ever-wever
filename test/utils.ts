@@ -6,7 +6,7 @@ import {
 
 import {
     TokenWalletUpgradeableAbi,
-    VaultAbi, VaultTokenRoot_V1Abi, VaultTokenWallet_V1Abi,
+    VaultAbi, VaultTokenRoot_V1Abi, VaultTokenWallet_V1Abi, TunnelAbi
 } from "../build/factorySource";
 
 import { Account } from "everscale-standalone-client";
@@ -82,6 +82,23 @@ export const setupWever = async () => {
         owner, ownerTokenWallet,
     };
 };
+
+export const setupLegacyWever = async() => {
+    const vault = await locklift.deployments.getContract<VaultAbi>('LegacyVault');
+
+    const vaultTokenWallet = await locklift.deployments.getContract<VaultTokenWallet_V1Abi>('LegacyVaultTokenWallet');
+
+    const { user: alice, userTokenWallet: aliceTokenWallet } = await getUser('Alice');
+    const { user: bob, userTokenWallet: bobTokenWallet } = await getUser('Bob');
+    const { user: owner, userTokenWallet: ownerTokenWallet } = await getUser('VaultOwner');
+
+    return {
+        vault, vaultTokenWallet,
+        alice, aliceTokenWallet,
+        bob, bobTokenWallet,
+        owner, ownerTokenWallet,
+    };
+}
 
 export const getVaultMetrics = async function (
   userTokenWallet: Contract<VaultTokenWallet_V1Abi>,

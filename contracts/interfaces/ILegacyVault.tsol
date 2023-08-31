@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+
+interface ILegacyVault {
+   
+    function wrap(
+        uint128 tokens,
+        address owner_address,
+        address remainingGasTo,
+        TvmCell payload
+    ) external;
+
+    
+}
