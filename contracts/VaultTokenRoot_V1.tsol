@@ -20,8 +20,6 @@ import "./interfaces/IVaultTokenRoot_V1.tsol";
 import "./interfaces/IVaultTokenWallet_V1.tsol";
 import "./libraries/ErrorCodes.tsol";
 
-// TODO: replace with local copy
-import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
 
 
 contract VaultTokenRoot_V1 is
@@ -192,7 +190,7 @@ contract VaultTokenRoot_V1 is
         walletCode_ = code;
         walletVersion_++;
 
-        _transfer(msg.sender, MsgFlag.ALL_NOT_RESERVED);
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
     function _transfer(address recipient, uint8 flags) internal pure {
@@ -349,7 +347,7 @@ contract VaultTokenRoot_V1 is
 
         tvm.rawReserve(_reserve(), 2);
 
-        _transfer(remainingGasTo, MsgFlag.ALL_NOT_RESERVED);
+        _transfer(remainingGasTo, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
     // VAULT
@@ -378,7 +376,7 @@ contract VaultTokenRoot_V1 is
     function grant() external override {
         tvm.rawReserve(_reserve(), 2);
 
-        _transfer(msg.sender, MsgFlag.ALL_NOT_RESERVED);
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
     /**

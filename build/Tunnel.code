@@ -1,0 +1,591 @@
+.version sol 0.57.1
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+OVER
+PUSHCONT {
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+	LDU 32
+	LDDICT
+	ROTREV
+	PAIR
+	SWAP
+}
+IFELSE
+LDMSGADDR
+ENDS
+.loc ../contracts/legacy/Tunnel.tsol, 33
+DROP
+PUSHREF {
+	.blob x54756e6e656c3a2057726f6e67206465706c6f79206b6579
+}
+GETGLOB 2
+GETGLOB 5
+DUP
+ISNULL
+PUSHCONT {
+	DROP
+	PUSHINT 0
+}
+IF
+EQUAL
+THROWARGIFNOT 101
+.loc ../contracts/legacy/Tunnel.tsol, 34
+PUSHREF {
+	.blob x54756e6e656c3a20736f7572636520616e642064657374696e6174696f6e732073697a6520646966666572656e74
+}
+PUSH S2
+FIRST
+PUSH S2
+FIRST
+EQUAL
+THROWARGIFNOT 101
+.loc ../contracts/legacy/Tunnel.tsol, 35
+ACCEPT
+.loc ../contracts/legacy/Tunnel.tsol, 37
+PUSHINT 0
+PUSHCONT {
+	PUSH2 S0, S2
+	FIRST
+	LESS
+}
+PUSHCONT {
+	.loc ../contracts/legacy/Tunnel.tsol, 38
+	PUSH2 S0, S1
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
+	PUSH2 S1, S3
+	SECOND
+	PUSHINT 32
+	DICTUGET
+	THROWIFNOT 50
+	GETGLOB 11
+	PUSHINT 267
+	DICTSET
+	SETGLOB 11
+	.loc ../contracts/legacy/Tunnel.tsol, 37
+	INC
+	.loc ../contracts/legacy/Tunnel.tsol, 0
+}
+WHILE
+BLKDROP 3
+.loc ../contracts/legacy/Tunnel.tsol, 0
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro fallback_macro
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/legacy/Tunnel.tsol, 24
+PUSHREF {
+	.blob x54756e6e656c3a204e6f7420736f75726365
+}
+GETGLOB 9
+GETGLOB 11
+PUSHINT 267
+DICTGET
+NULLSWAPIFNOT
+NIP
+THROWARGIFNOT 101
+.loc ../contracts/legacy/Tunnel.tsol, 43
+GETPARAM 7
+FIRST
+DEPTH
+ADDCONST -2
+PICK
+SUB
+UFITS 128
+PUSHINT 2
+RAWRESERVE
+.loc ../contracts/legacy/Tunnel.tsol, 46
+DEPTH
+ADDCONST -4
+PICK
+NEWC
+STSLICE
+.loc ../contracts/legacy/Tunnel.tsol, 48
+GETGLOB 9
+GETGLOB 11
+PUSHINT 267
+DICTGET
+PUSHCONT {
+	PUSHREFSLICE {
+		.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+	}
+}
+IFNOT
+NEWC
+STSLICECONST x62_
+STSLICE
+PUSHINT 1
+STUR 111
+STBREF
+ENDC
+PUSHINT 128
+SENDRAWMSG
+.loc ../contracts/legacy/Tunnel.tsol, 0
+DUP
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+
+.macro __getTunnels
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/legacy/Tunnel.tsol, 51
+ENDS
+.loc ../contracts/legacy/Tunnel.tsol, 0
+CALLREF {
+	CALL $__getTunnels_internal_macro$
+}
+PUSH S2
+PUSHCONT {
+	PUSH S4
+	CTOS
+	LDU 2
+	LDMSGADDR
+	DROP
+	NIP
+	NEWC
+	STSLICECONST xc
+	STSLICE
+	PUSHINT 98
+	STZEROES
+	REVERSE 2, 1
+	STSLICECONST x869c0210
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	SWAP
+	UNPAIR
+	XCHG S2
+	STU 32
+	STDICT
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+}
+PUSHCONT {
+	DROP2
+}
+IFELSE
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.globl	__getTunnels_internal
+.type	__getTunnels_internal, @function
+CALL $__getTunnels_internal_macro$
+
+.macro __getTunnels_internal_macro
+.loc ../contracts/legacy/Tunnel.tsol, 51
+PUSHINT 0
+NEWDICT
+PAIR
+DUP
+.loc ../contracts/legacy/Tunnel.tsol, 55
+GETGLOB 11
+DUP
+PUSHINT 267
+DICTMIN
+PUSHCONT {
+	DUP
+	ROT
+}
+PUSHCONT {
+	NULL
+	BLKPUSH 2, 0
+}
+IFELSE
+PUSHCONT {
+	PUSH S2
+	ISNULL
+	NOT
+}
+PUSHCONT {
+	.loc ../contracts/legacy/Tunnel.tsol, 56
+	PUSH2 S1, S5
+	UNPAIR
+	OVER
+	INC
+	ROLLREV 3
+	PUSHINT 32
+	DICTUSET
+	PAIR
+	POP S6
+	.loc ../contracts/legacy/Tunnel.tsol, 57
+	PUSH2 S0, S4
+	UNPAIR
+	OVER
+	INC
+	ROLLREV 3
+	PUSHINT 32
+	DICTUSET
+	PAIR
+	POP S5
+	.loc ../contracts/legacy/Tunnel.tsol, 0
+	PUSH2 S2, S3
+	PUSHINT 267
+	DICTGETNEXT
+	PUSHCONT {
+		DUP
+		ROT
+	}
+	PUSHCONT {
+		NULL
+		BLKPUSH 2, 0
+	}
+	IFELSE
+	BLKDROP2 3, 3
+}
+WHILE
+BLKDROP 4
+.loc ../contracts/legacy/Tunnel.tsol, 0
+
+.macro __updateTunnel
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/legacy/Tunnel.tsol, 61
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+LDREF
+ENDS
+CTOS
+LDMSGADDR
+ENDS
+.loc ../contracts/legacy/Tunnel.tsol, 0
+CALLREF {
+	CALL $__updateTunnel_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	__updateTunnel_internal
+.type	__updateTunnel_internal, @function
+CALL $__updateTunnel_internal_macro$
+
+.macro __updateTunnel_internal_macro
+.loc ../contracts/legacy/Tunnel.tsol, 65
+SWAP
+GETGLOB 11
+PUSHINT 267
+DICTSET
+SETGLOB 11
+.loc ../contracts/legacy/Tunnel.tsol, 0
+
+.macro __removeTunnel
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/legacy/Tunnel.tsol, 68
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDMSGADDR
+ENDS
+.loc ../contracts/legacy/Tunnel.tsol, 0
+CALLREF {
+	CALL $__removeTunnel_internal_macro$
+}
+DROP
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	__removeTunnel_internal
+.type	__removeTunnel_internal, @function
+CALL $__removeTunnel_internal_macro$
+
+.macro __removeTunnel_internal_macro
+.loc ../contracts/legacy/Tunnel.tsol, 71
+GETGLOB 11
+PUSHINT 267
+DICTDEL
+DROP
+SETGLOB 11
+.loc ../contracts/legacy/Tunnel.tsol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+LDU 256
+LDDICT
+ENDS
+SETGLOB 11
+SETGLOB 10
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 1
+	OVER
+	PUSHINT 64
+	DICTUGET
+	PUSHCONT {
+		PLDU 256
+	}
+	PUSHCONT {
+		PUSHINT 0
+	}
+	IFELSE
+	NEWDICT
+	SETGLOB 11
+	SETGLOB 10
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 11
+GETGLOB 10
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+STU 256
+STDICT
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+LDU 4 ; bounced tail
+LDMSGADDR ; bounced src tail
+DROP
+SETGLOB 9
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+PUSHCONT {
+	DROP
+	CALLREF {
+		CALL $fallback_macro$
+	}
+	THROW 0
+}
+IFNOT
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
+}
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSHREFSLICE {
+	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
+}
+SETGLOB 9
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHINT 512
+	LDSLICEX ; signatureSlice msgSlice
+	DUP
+	HASHSU ; signatureSlice msgSlice hashMsgSlice
+	SWAP
+	LDU 1 ; signatureSlice hashMsgSlice havePubkey msgSlice
+	SWAP
+	PUSHCONT {
+		LDU 256 ; signatureSlice hashMsgSlice pubkey msgSlice
+		XCHG S3
+		SWAP
+	}
+	PUSHCONT {
+		XCHG S2
+		GETGLOB 2
+	}
+	IFELSE
+	DUP
+	SETGLOB 5
+	CHKSIGNU ; msgSlice isSigned
+	THROWIFNOT 40
+}
+PUSHCONT {
+	LDU 1 ; havePubkey msgSlice
+	SWAP
+	THROWIF 58
+}
+IFELSE
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; expireAt msgSlice
+SWAP
+NOW ; msgSlice expireAt now
+GREATER ; msgSlice expireAt>now
+THROWIFNOT 57
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+DROP2
+CALLREF {
+	CALL $fallback_macro$
+}
+
+.macro public_function_selector
+DUP
+PUSHINT 110887440
+EQUAL
+IFJMPREF {
+	CALL $__getTunnels$
+}
+DUP
+PUSHINT 327451255
+EQUAL
+IFJMPREF {
+	CALL $__updateTunnel$
+}
+DUP
+PUSHINT 840284606
+EQUAL
+IFJMPREF {
+	CALL $constructor$
+}
+DUP
+PUSHINT 2114348389
+EQUAL
+IFJMPREF {
+	CALL $__removeTunnel$
+}
+
