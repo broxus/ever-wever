@@ -105,6 +105,17 @@
 			]
 		},
 		{
+			"name": "acceptNative",
+			"inputs": [
+				{"name":"amount","type":"uint128"},
+				{"name":"deployWalletValue","type":"uint128"},
+				{"name":"remainingGasTo","type":"address"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "acceptTransfer",
 			"id": "0x67A0B95F",
 			"inputs": [

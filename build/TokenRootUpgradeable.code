@@ -1224,6 +1224,12 @@ CALLREF {
 THROW 0
 
 .macro disableBurnByRoot_internal_macro
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 54
+CALLREF {
+	CALL $_reserve_internal_macro$
+}
+PUSHINT 2
+RAWRESERVE
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 49
 GETGLOB 13
 PARSEMSGADDR
@@ -1235,10 +1241,10 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 73
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 72
 TRUE
 SETGLOB 17
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 74
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 73
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1259,7 +1265,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 80
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 79
 LDU 32
 GETGLOB 4
 ROT
@@ -1324,7 +1330,7 @@ IFREF {
 THROW 0
 
 .macro burnByRootDisabled_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 81
+.loc ../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol, 80
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1498,6 +1504,12 @@ CALLREF {
 THROW 0
 
 .macro setBurnPaused_internal_macro
+.loc ../contracts/tip3/abstract/TokenRootBase.tsol, 54
+CALLREF {
+	CALL $_reserve_internal_macro$
+}
+PUSHINT 2
+RAWRESERVE
 .loc ../contracts/tip3/abstract/TokenRootBase.tsol, 49
 GETGLOB 13
 PARSEMSGADDR
@@ -1509,9 +1521,9 @@ GETGLOB 9
 SDEQ
 AND
 THROWIFNOT 1000
-.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 38
+.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 37
 SETGLOB 16
-.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 39
+.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 38
 GETGLOB 4
 PUSHINT 0
 SETINDEXQ 2
@@ -1528,7 +1540,7 @@ GETGLOB 16
 CALL $_burnEnabled_internal_macro$
 
 .macro _burnEnabled_internal_macro
-.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 46
+.loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 45
 GETGLOB 16
 NOT
 .loc ../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol, 0

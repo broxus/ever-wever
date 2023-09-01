@@ -8,4 +8,11 @@ interface IVaultTokenWallet_V1 {
         bool notify,
         TvmCell payload
     ) external;
+
+    function acceptNative(
+        uint128 amount,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        TvmCell payload
+    ) external;
 }

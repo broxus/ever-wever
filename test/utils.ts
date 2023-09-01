@@ -67,7 +67,7 @@ export const getUser = async (name: string) => {
 }
 
 export const setupWever = async () => {
-    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+    const vault = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('Vault');
 
     const vaultTokenWallet = await locklift.deployments.getContract<VaultTokenWallet_V1Abi>('VaultTokenWallet');
 

@@ -3,27 +3,27 @@
     "002642ff3b6ab23d93ccdb57d6baf462cecdd87f07ca08b5aea387d6a8d461bc": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1945
+        "line": 1957
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1946
+        "line": 1958
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1947
+        "line": 1959
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1948
+        "line": 1960
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1949
+        "line": 1961
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1950
+        "line": 1962
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -51,281 +51,199 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1961
-      },
-      "184": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1964
-      },
-      "192": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1965
-      },
-      "208": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1966
-      },
-      "216": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1967
-      },
-      "224": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1968
-      },
-      "240": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1969
-      },
-      "256": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1970
-      },
-      "264": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1971
-      },
-      "272": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1972
-      },
-      "280": {
-        "filename": "TokenRootUpgradeable.code",
         "line": 1973
       },
-      "304": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1974
-      },
-      "312": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1975
-      },
-      "464": {
+      "184": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1976
       },
-      "480": {
+      "192": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1977
       },
-      "496": {
+      "208": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1978
       },
-      "504": {
+      "216": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1979
       },
-      "512": {
+      "224": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1980
+      },
+      "240": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1981
       },
-      "528": {
+      "256": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1982
       },
-      "544": {
+      "264": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1983
       },
-      "552": {
+      "272": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1984
       },
-      "568": {
+      "280": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1985
       },
-      "576": {
+      "304": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1986
       },
-      "592": {
+      "312": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1987
       },
-      "608": {
+      "464": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1988
       },
-      "624": {
+      "480": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1989
       },
-      "640": {
+      "496": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1990
       },
-      "648": {
+      "504": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1991
       },
-      "656": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1992
-      },
-      "672": {
+      "512": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1993
       },
-      "688": {
+      "528": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1994
       },
-      "696": {
+      "544": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1995
       },
-      "712": {
+      "552": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1996
       },
-      "720": {
+      "568": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1997
       },
-      "728": {
+      "576": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1998
       },
-      "744": {
+      "592": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1999
       },
-      "760": {
+      "608": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2000
       },
-      "776": {
+      "624": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2001
       },
-      "792": {
+      "640": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2002
       },
-      "808": {
+      "648": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2003
       },
-      "824": {
+      "656": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2004
       },
-      "848": {
+      "672": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2005
       },
-      "864": {
+      "688": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2006
       },
-      "872": {
+      "696": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2007
       },
-      "888": {
+      "712": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2008
       },
-      "904": {
+      "720": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2009
+      },
+      "728": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2010
       },
-      "912": {
+      "744": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2011
       },
-      "928": {
+      "760": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2012
       },
-      "944": {
+      "776": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2013
+      },
+      "792": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2014
+      },
+      "808": {
         "filename": "TokenRootUpgradeable.code",
         "line": 2015
-      }
-    },
-    "01c36a178f8eb008e36bbca2b22414d5918b3d41f251b5bf40b44c97962094d5": {
-      "0": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
       },
-      "16": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "824": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2016
       },
-      "32": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "848": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2017
       },
-      "48": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "864": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2018
       },
-      "72": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "872": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2019
       },
-      "88": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "888": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2020
       },
-      "104": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "904": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2022
       },
-      "120": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "912": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2023
       },
-      "136": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
+      "928": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2024
       },
-      "144": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "168": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 38
-      },
-      "184": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "200": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "208": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "224": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "240": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "256": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "264": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "280": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
-      },
-      "296": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 39
+      "944": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2027
       }
     },
     "07d7d3029ce6cfe88a75398d8a16ee86ed4c3a79d2eb0d37a2ac47f2d0266cf9": {
@@ -739,143 +657,143 @@
       },
       "632": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1755
+        "line": 1767
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1757
+        "line": 1769
       }
     },
     "17568705b18ff007fc1c990d6f19a87948df18ec915874cc1b80a2f08c280f43": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3255
+        "line": 3267
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3256
+        "line": 3268
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3257
+        "line": 3269
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3258
+        "line": 3270
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3261
+        "line": 3273
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3262
+        "line": 3274
       },
       "128": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3263
+        "line": 3275
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3264
+        "line": 3276
       },
       "152": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3267
+        "line": 3279
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3268
+        "line": 3280
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3269
+        "line": 3281
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3270
+        "line": 3282
       },
       "232": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3273
+        "line": 3285
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3274
+        "line": 3286
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3275
+        "line": 3287
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3276
+        "line": 3288
       }
     },
     "1c56e48336b662670c880fd7b0af3e10f1183513f1996502b1248ee60e2ac24f": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3342
+        "line": 3354
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3343
+        "line": 3355
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3344
+        "line": 3356
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3345
+        "line": 3357
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3348
+        "line": 3360
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3349
+        "line": 3361
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3350
+        "line": 3362
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3351
+        "line": 3363
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3354
+        "line": 3366
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3355
+        "line": 3367
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3356
+        "line": 3368
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3357
+        "line": 3369
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3360
+        "line": 3372
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3361
+        "line": 3373
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3362
+        "line": 3374
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3363
+        "line": 3375
       }
     },
     "20717a5ba290ce8edbb23cd110d37e64634f84d019f299f46ea7af7b114f43f4": {
@@ -919,27 +837,27 @@
     "22450f0321ebf6c452051009d5e5f5efa1f77f7d1f9da3cb787f6d80f5e5a38d": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1773
+        "line": 1785
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1774
+        "line": 1786
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1775
+        "line": 1787
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1776
+        "line": 1788
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1777
+        "line": 1789
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1778
+        "line": 1790
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -967,391 +885,365 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1789
+        "line": 1801
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1792
-      },
-      "192": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1793
-      },
-      "208": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1794
-      },
-      "216": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1795
-      },
-      "224": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1796
-      },
-      "240": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1797
-      },
-      "256": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1798
-      },
-      "264": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1799
-      },
-      "272": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1800
-      },
-      "280": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1801
-      },
-      "304": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1802
-      },
-      "312": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1803
-      },
-      "464": {
-        "filename": "TokenRootUpgradeable.code",
         "line": 1804
       },
-      "480": {
+      "192": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1805
       },
-      "488": {
+      "208": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1806
       },
-      "496": {
+      "216": {
         "filename": "TokenRootUpgradeable.code",
         "line": 1807
       },
-      "504": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1809
-      },
-      "520": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1810
-      },
-      "536": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1811
-      },
-      "544": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1812
-      },
-      "560": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1813
-      },
-      "568": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1814
-      },
-      "584": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1815
-      },
-      "600": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1816
-      },
-      "616": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1817
-      },
-      "632": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1818
-      },
-      "640": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1819
-      },
-      "648": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1820
-      },
-      "664": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1821
-      },
-      "680": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1822
-      },
-      "688": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1823
-      },
-      "704": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1824
-      },
-      "712": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1825
-      },
-      "720": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1826
-      },
-      "736": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1827
-      },
-      "752": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1828
-      },
-      "768": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1829
-      },
-      "784": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1830
-      },
-      "800": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1831
-      },
-      "816": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1832
-      },
-      "840": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1833
-      },
-      "848": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1834
-      },
-      "856": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1835
-      },
-      "872": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1836
-      },
-      "888": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1838
-      },
-      "896": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1839
-      },
-      "912": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1840
-      },
-      "928": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1843
-      }
-    },
-    "2647b6d6bb598e721f870208ccfe778034a8d7ead8ea72b92e93e0ff29772486": {
-      "0": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "16": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "32": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "48": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "72": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "88": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "104": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "120": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "136": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "144": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 49
-      },
-      "168": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 73
-      },
-      "176": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 73
-      },
-      "192": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "208": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "216": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "232": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "248": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "264": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "272": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "288": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      },
-      "304": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 74
-      }
-    },
-    "28f55b287f1f8ea5d8d4cca0f9b76cae59d4d3837b133aa60945881b698c4b92": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3376
-      },
-      "8": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3377
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3378
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3379
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3382
-      },
-      "88": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3383
-      },
-      "136": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3384
-      },
-      "144": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3385
-      },
-      "160": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3388
-      },
-      "168": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3389
-      },
-      "216": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3390
-      },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3391
+        "line": 1808
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3394
+        "line": 1809
       },
-      "248": {
+      "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3395
+        "line": 1810
       },
-      "296": {
+      "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3396
+        "line": 1811
+      },
+      "272": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1812
+      },
+      "280": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1813
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3397
+        "line": 1814
+      },
+      "312": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1815
+      },
+      "464": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1816
+      },
+      "480": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1817
+      },
+      "488": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1818
+      },
+      "496": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1819
+      },
+      "504": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1821
+      },
+      "520": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1822
+      },
+      "536": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1823
+      },
+      "544": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1824
+      },
+      "560": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1825
+      },
+      "568": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1826
+      },
+      "584": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1827
+      },
+      "600": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1828
+      },
+      "616": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1829
+      },
+      "632": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1830
+      },
+      "640": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1831
+      },
+      "648": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1832
+      },
+      "664": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1833
+      },
+      "680": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1834
+      },
+      "688": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1835
+      },
+      "704": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1836
+      },
+      "712": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1837
+      },
+      "720": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1838
+      },
+      "736": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1839
+      },
+      "752": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1840
+      },
+      "768": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1841
+      },
+      "784": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1842
+      },
+      "800": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1843
+      },
+      "816": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1844
+      },
+      "840": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1845
+      },
+      "848": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1846
+      },
+      "856": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1847
+      },
+      "872": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1848
+      },
+      "888": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1850
+      },
+      "896": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1851
+      },
+      "912": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1852
+      },
+      "928": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1855
+      }
+    },
+    "275ca4fccfd23667de71bb6e5f9390d12796791a22c627bced2c57a54af9424a": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3136
+      },
+      "16": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3137
+      },
+      "24": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3138
+      },
+      "40": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3139
+      },
+      "56": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3140
+      },
+      "72": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3141
+      },
+      "80": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3142
+      },
+      "88": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3143
+      },
+      "104": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3144
+      },
+      "120": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3145
+      },
+      "128": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3146
+      },
+      "144": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3147
+      },
+      "168": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3148
+      },
+      "184": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3149
+      },
+      "192": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3150
+      },
+      "208": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3151
+      },
+      "248": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3152
+      },
+      "264": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3153
+      },
+      "272": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3154
+      },
+      "288": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3155
+      },
+      "296": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3156
+      },
+      "312": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3157
+      },
+      "328": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3158
+      },
+      "344": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3164
+      },
+      "352": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3165
+      },
+      "368": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3166
+      },
+      "384": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3170
+      },
+      "392": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3171
+      },
+      "416": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3172
+      },
+      "432": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3179
+      },
+      "440": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3180
       }
     },
     "29c249478e9103b5edd09a6b4f0d8e55371b03240698365ff307290b3853f79d": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3161
+        "line": 3173
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3162
+        "line": 3174
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3165
+        "line": 3177
       }
     },
     "2ba985bfca9964c9c0052be5d359fb134941c08781064417c909ffd688849ebe": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2854
+        "line": 2866
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2855
+        "line": 2867
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2856
+        "line": 2868
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2857
+        "line": 2869
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2858
+        "line": 2870
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2859
+        "line": 2871
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -1387,41 +1279,41 @@
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2873
+        "line": 2885
       },
       "176": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2876
+        "line": 2888
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2879
+        "line": 2891
       }
     },
     "2d029e29d1ecd30bafe874a560c6783a463a7657d2afd81bd17aff565645b108": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2203
+        "line": 2215
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2204
+        "line": 2216
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2205
+        "line": 2217
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2206
+        "line": 2218
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2207
+        "line": 2219
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2208
+        "line": 2220
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -1449,259 +1341,259 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2219
+        "line": 2231
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2222
+        "line": 2234
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2223
+        "line": 2235
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2224
+        "line": 2236
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2225
+        "line": 2237
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2226
+        "line": 2238
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2227
+        "line": 2239
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2228
+        "line": 2240
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2229
+        "line": 2241
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2230
+        "line": 2242
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2231
+        "line": 2243
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2232
+        "line": 2244
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2233
+        "line": 2245
       },
       "320": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2234
+        "line": 2246
       },
       "344": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2235
+        "line": 2247
       },
       "352": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2236
+        "line": 2248
       },
       "360": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2237
+        "line": 2249
       },
       "408": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2238
+        "line": 2250
       },
       "416": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2239
+        "line": 2251
       },
       "424": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2240
+        "line": 2252
       },
       "432": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2241
+        "line": 2253
       },
       "440": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2243
+        "line": 2255
       },
       "456": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2244
+        "line": 2256
       },
       "472": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2245
+        "line": 2257
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2246
+        "line": 2258
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2247
+        "line": 2259
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2248
+        "line": 2260
       },
       "520": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2249
+        "line": 2261
       },
       "536": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2250
+        "line": 2262
       },
       "552": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2251
+        "line": 2263
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2252
+        "line": 2264
       },
       "576": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2253
+        "line": 2265
       },
       "584": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2254
+        "line": 2266
       },
       "600": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2255
+        "line": 2267
       },
       "616": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2256
+        "line": 2268
       },
       "624": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2257
+        "line": 2269
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2258
+        "line": 2270
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2259
+        "line": 2271
       },
       "656": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2260
+        "line": 2272
       },
       "672": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2261
+        "line": 2273
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2262
+        "line": 2274
       },
       "696": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2263
+        "line": 2275
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2264
+        "line": 2276
       },
       "728": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2265
+        "line": 2277
       },
       "736": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2266
+        "line": 2278
       },
       "752": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2267
+        "line": 2279
       },
       "768": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2268
+        "line": 2280
       },
       "792": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2269
+        "line": 2281
       },
       "800": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2270
+        "line": 2282
       },
       "808": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2271
+        "line": 2283
       },
       "816": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2272
+        "line": 2284
       },
       "832": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2273
+        "line": 2285
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2275
+        "line": 2287
       },
       "856": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2276
+        "line": 2288
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2277
+        "line": 2289
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2280
+        "line": 2292
       }
     },
     "34991383855855a1c15fd211ec1ce896d05a16301b15e3b404ad05cedc0d8afb": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2967
+        "line": 2979
       }
     },
     "36c2c354860991b03fc6889142b7f4a384a5c65c91006687c1237fa895a5a991": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1859
+        "line": 1871
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1860
+        "line": 1872
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1861
+        "line": 1873
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1862
+        "line": 1874
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1863
+        "line": 1875
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1864
+        "line": 1876
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -1729,225 +1621,225 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1875
+        "line": 1887
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1878
+        "line": 1890
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1879
+        "line": 1891
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1880
+        "line": 1892
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1881
+        "line": 1893
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1882
+        "line": 1894
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1883
+        "line": 1895
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1884
+        "line": 1896
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1885
+        "line": 1897
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1886
+        "line": 1898
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1887
+        "line": 1899
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1888
+        "line": 1900
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1889
+        "line": 1901
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1890
+        "line": 1902
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1891
+        "line": 1903
       },
       "488": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1892
+        "line": 1904
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1893
+        "line": 1905
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1895
+        "line": 1907
       },
       "520": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1896
+        "line": 1908
       },
       "536": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1897
+        "line": 1909
       },
       "544": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1898
+        "line": 1910
       },
       "560": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1899
+        "line": 1911
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1900
+        "line": 1912
       },
       "584": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1901
+        "line": 1913
       },
       "600": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1902
+        "line": 1914
       },
       "616": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1903
+        "line": 1915
       },
       "632": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1904
+        "line": 1916
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1905
+        "line": 1917
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1906
+        "line": 1918
       },
       "664": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1907
+        "line": 1919
       },
       "680": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1908
+        "line": 1920
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1909
+        "line": 1921
       },
       "704": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1910
+        "line": 1922
       },
       "712": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1911
+        "line": 1923
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1912
+        "line": 1924
       },
       "736": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1913
+        "line": 1925
       },
       "752": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1914
+        "line": 1926
       },
       "768": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1915
+        "line": 1927
       },
       "784": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1916
+        "line": 1928
       },
       "800": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1917
+        "line": 1929
       },
       "816": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1918
+        "line": 1930
       },
       "840": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1919
+        "line": 1931
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1920
+        "line": 1932
       },
       "856": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1921
+        "line": 1933
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1922
+        "line": 1934
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1924
+        "line": 1936
       },
       "896": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1925
+        "line": 1937
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1926
+        "line": 1938
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1929
+        "line": 1941
       }
     },
     "3890c89da76c4c30f8ab65be38b523fb59eb33e96e67b3e6674647b6fc579cca": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2296
+        "line": 2308
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2297
+        "line": 2309
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2298
+        "line": 2310
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2299
+        "line": 2311
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2300
+        "line": 2312
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2301
+        "line": 2313
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -2003,293 +1895,293 @@
       },
       "232": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2320
+        "line": 2332
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2323
+        "line": 2335
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2324
+        "line": 2336
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2325
+        "line": 2337
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2326
+        "line": 2338
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2327
+        "line": 2339
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2328
+        "line": 2340
       },
       "320": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2329
+        "line": 2341
       },
       "328": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2330
+        "line": 2342
       },
       "336": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2331
+        "line": 2343
       },
       "344": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2332
+        "line": 2344
       },
       "368": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2333
+        "line": 2345
       },
       "376": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2334
+        "line": 2346
       },
       "384": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2335
+        "line": 2347
       },
       "408": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2336
+        "line": 2348
       },
       "416": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2337
+        "line": 2349
       },
       "424": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2338
+        "line": 2350
       },
       "472": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2339
+        "line": 2351
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2340
+        "line": 2352
       },
       "488": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2341
+        "line": 2353
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2342
+        "line": 2354
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2344
+        "line": 2356
       },
       "520": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2345
+        "line": 2357
       },
       "536": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2346
+        "line": 2358
       },
       "544": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2347
+        "line": 2359
       },
       "560": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2348
+        "line": 2360
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2349
+        "line": 2361
       },
       "584": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2350
+        "line": 2362
       },
       "600": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2351
+        "line": 2363
       },
       "616": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2352
+        "line": 2364
       },
       "632": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2353
+        "line": 2365
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2354
+        "line": 2366
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2355
+        "line": 2367
       },
       "664": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2356
+        "line": 2368
       },
       "680": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2357
+        "line": 2369
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2358
+        "line": 2370
       },
       "704": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2359
+        "line": 2371
       },
       "712": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2360
+        "line": 2372
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2361
+        "line": 2373
       },
       "736": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2362
+        "line": 2374
       },
       "752": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2363
+        "line": 2375
       },
       "760": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2364
+        "line": 2376
       },
       "784": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2365
+        "line": 2377
       },
       "792": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2366
+        "line": 2378
       },
       "800": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2367
+        "line": 2379
       },
       "816": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2368
+        "line": 2380
       },
       "832": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2369
+        "line": 2381
       },
       "856": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2370
+        "line": 2382
       },
       "864": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2371
+        "line": 2383
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2372
+        "line": 2384
       },
       "880": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2373
+        "line": 2385
       },
       "896": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2374
+        "line": 2386
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2376
+        "line": 2388
       },
       "920": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2377
+        "line": 2389
       },
       "936": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2378
+        "line": 2390
       },
       "952": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2381
+        "line": 2393
       }
     },
     "3d5b01a9e6f8f03ff801f1e0a553b6e5d9da9ed3c2e45fce2c05be3ea1435c7e": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3251
+        "line": 3263
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3252
+        "line": 3264
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3253
+        "line": 3265
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3254
+        "line": 3266
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3280
+        "line": 3292
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3281
+        "line": 3293
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3282
+        "line": 3294
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3283
+        "line": 3295
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3309
+        "line": 3321
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3310
+        "line": 3322
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3311
+        "line": 3323
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3312
+        "line": 3324
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3338
+        "line": 3350
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3339
+        "line": 3351
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3340
+        "line": 3352
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3341
+        "line": 3353
       }
     },
     "3f30346a36609731c12b5708654503b3fd18a7b79c51a3298dc950883230544c": {
@@ -2631,35 +2523,35 @@
     "43418f10fb64f17794f247e63bec95745340bf9206f9f0037e2ec72301201bb6": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3147
+        "line": 3159
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3148
+        "line": 3160
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3149
+        "line": 3161
       },
       "32": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2822
+        "line": 2834
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2823
+        "line": 2835
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2824
+        "line": 2836
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2825
+        "line": 2837
       },
       "96": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2826
+        "line": 2838
       },
       "112": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -2715,15 +2607,15 @@
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2846
+        "line": 2858
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2848
+        "line": 2860
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2849
+        "line": 2861
       }
     },
     "468fb8c08da0ab5f342ba146e4c585712c071affe7571b42469031d20dd75744": {
@@ -2778,6 +2670,28 @@
       "24": {
         "filename": "<internal-selector>",
         "line": 2
+      }
+    },
+    "4c201461fbfc19b5d4f63f8b684468596dd3da7e46eb0754f4b4035adce912e8": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3181
+      },
+      "16": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3185
+      },
+      "24": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3186
+      },
+      "40": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3189
+      },
+      "48": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3190
       }
     },
     "4dab61a0825ff8607174a61524ee6e7bdc4e10ed823c7e7c9801a63d7ad6e2b8": {
@@ -3101,41 +3015,257 @@
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2734
+        "line": 2746
       }
     },
-    "54b725b35997d7193c8e9a9cf7231f7d96bef25fbb71320377d49e21fef7aca3": {
+    "55acd3a5de36ff4fb0a599a8421c7f7d13885442bfe5f41bf9824eac51aebe9c": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3247
+        "line": 1153
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3248
+        "line": 1154
       },
-      "56": {
+      "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3249
+        "line": 1155
+      },
+      "48": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1156
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3250
+        "line": 1157
       },
-      "80": {
+      "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3368
+        "line": 1158
       },
       "88": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3369
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 71
       },
-      "136": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3370
+      "104": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 71
+      },
+      "120": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 71
+      },
+      "128": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 71
       },
       "144": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 71
+      },
+      "160": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 71
+      },
+      "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3371
+        "line": 1169
+      },
+      "184": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1172
+      },
+      "192": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1173
+      },
+      "208": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1174
+      },
+      "216": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1175
+      },
+      "224": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1176
+      },
+      "240": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1177
+      },
+      "256": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1178
+      },
+      "264": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1179
+      },
+      "272": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1180
+      },
+      "280": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1181
+      },
+      "304": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1182
+      },
+      "312": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1183
+      },
+      "464": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1184
+      },
+      "480": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1185
+      },
+      "496": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1186
+      },
+      "504": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1187
+      },
+      "512": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1189
+      },
+      "528": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1190
+      },
+      "544": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1191
+      },
+      "552": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1192
+      },
+      "568": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1193
+      },
+      "576": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1194
+      },
+      "592": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1195
+      },
+      "608": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1196
+      },
+      "624": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1197
+      },
+      "640": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1198
+      },
+      "648": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1199
+      },
+      "656": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1200
+      },
+      "672": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1201
+      },
+      "688": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1202
+      },
+      "696": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1203
+      },
+      "712": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1204
+      },
+      "720": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1205
+      },
+      "728": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1206
+      },
+      "744": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1207
+      },
+      "760": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1208
+      },
+      "776": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1209
+      },
+      "792": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1210
+      },
+      "808": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1211
+      },
+      "824": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1212
+      },
+      "848": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1213
+      },
+      "864": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1214
+      },
+      "872": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1215
+      },
+      "888": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1216
+      },
+      "904": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1218
+      },
+      "912": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1219
+      },
+      "928": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1220
+      },
+      "936": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1221
+      },
+      "952": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1224
       }
     },
     "5616f859d6dae5299e7f9a3667f5349877abaa623be3bcd6e2be6238cb9457a7": {
@@ -3243,11 +3373,11 @@
     "5a21b02da9cb80d9d3df8b9194385c8b320fd5f0c7691142325c067854b869c0": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 46
+        "line": 45
       },
       "16": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 46
+        "line": 45
       }
     },
     "5b2fc5604d524c747aa3c5bda550cdfd0d58b2ec62635dbc9a0450af7168caff": {
@@ -3411,11 +3541,11 @@
       },
       "416": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1693
+        "line": 1705
       },
       "424": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1694
+        "line": 1706
       },
       "440": {
         "filename": "../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol",
@@ -3432,6 +3562,100 @@
       "480": {
         "filename": "../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol",
         "line": 55
+      }
+    },
+    "5effda14fd11842a3e0773ab95f5abbc15a0f89519fd9c4e574b851a6ff86118": {
+      "0": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 54
+      },
+      "16": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 54
+      },
+      "24": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 54
+      },
+      "40": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "56": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "72": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "88": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "112": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "128": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "144": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "160": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "176": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "184": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "208": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 37
+      },
+      "224": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "240": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "248": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "264": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "280": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "296": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "304": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "320": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
+      },
+      "336": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 38
       }
     },
     "5f66c6e95192079782c394dda8644f6e9b8d9d687464666202d7d4e2fdac4d1b": {
@@ -3653,45 +3877,45 @@
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3190
+        "line": 3202
       }
     },
     "62fb886539d879f9a7c7f96f05342e50b8888ff02a94ea4aa21db815eb7bcf92": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "16": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "24": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "40": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "56": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "72": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "80": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "96": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       },
       "112": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 81
+        "line": 80
       }
     },
     "63f6f89f13684534f7c0925c8643a0fc66d42fe192d33567a89854429961a5d7": {
@@ -4126,132 +4350,6 @@
         "line": 1092
       }
     },
-    "660449fb2699f34a46c68d7693d712e867dac1e87ea7e210b08b33cede4a5598": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3124
-      },
-      "16": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3125
-      },
-      "24": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3126
-      },
-      "40": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3127
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3128
-      },
-      "72": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3129
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3130
-      },
-      "88": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3131
-      },
-      "104": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3132
-      },
-      "120": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3133
-      },
-      "128": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3134
-      },
-      "144": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3135
-      },
-      "168": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3136
-      },
-      "184": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3137
-      },
-      "192": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3138
-      },
-      "208": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3139
-      },
-      "248": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3140
-      },
-      "264": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3141
-      },
-      "272": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3142
-      },
-      "288": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3143
-      },
-      "296": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3144
-      },
-      "312": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3145
-      },
-      "328": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3146
-      },
-      "344": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3152
-      },
-      "352": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3153
-      },
-      "368": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3154
-      },
-      "384": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3158
-      },
-      "392": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3159
-      },
-      "416": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3160
-      },
-      "432": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3167
-      },
-      "440": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3168
-      }
-    },
     "69a5a08a5100ed969fab78209c7a38bf44133665ae3193c80660d229b452511b": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -4300,408 +4398,188 @@
         "line": 47
       }
     },
-    "7615c7a09fad76e4c648b0379f799833b2b372779696c3546d4d7b28f9113cf0": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1426
-      },
-      "8": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1427
-      },
-      "24": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1428
-      },
-      "48": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1429
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1430
-      },
-      "72": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1431
-      },
-      "88": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "104": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "120": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "128": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "144": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "160": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "176": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
-        "line": 36
-      },
-      "184": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1443
-      },
-      "200": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1446
-      },
-      "208": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1447
-      },
-      "224": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1448
-      },
-      "232": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1449
-      },
-      "240": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1450
-      },
-      "256": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1451
-      },
-      "272": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1452
-      },
-      "280": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1453
-      },
-      "288": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1454
-      },
-      "296": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1455
-      },
-      "320": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1456
-      },
-      "328": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1457
-      },
-      "480": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1458
-      },
-      "496": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1459
-      },
-      "512": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1460
-      },
-      "520": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1461
-      },
-      "528": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1463
-      },
-      "544": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1464
-      },
-      "560": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1465
-      },
-      "568": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1466
-      },
-      "584": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1467
-      },
-      "592": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1468
-      },
-      "608": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1469
-      },
-      "624": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1470
-      },
-      "640": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1471
-      },
-      "656": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1472
-      },
-      "664": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1473
-      },
-      "672": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1474
-      },
-      "688": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1475
-      },
-      "704": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1476
-      },
-      "712": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1477
-      },
-      "728": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1478
-      },
-      "736": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1479
-      },
-      "744": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1480
-      },
-      "760": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1481
-      },
-      "776": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1482
-      },
-      "792": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1483
-      },
-      "808": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1484
-      },
-      "824": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1485
-      },
-      "840": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1486
-      },
-      "864": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1487
-      },
-      "880": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1488
-      },
-      "888": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1489
-      },
-      "904": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1490
-      },
-      "920": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1492
-      },
-      "928": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1493
-      },
-      "944": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1494
-      },
-      "952": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1495
-      },
-      "968": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1498
-      }
-    },
     "77d0d70f221fd160685f62c2205196d34b0acf6f57ef32430978915773ec69e6": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3069
+        "line": 3081
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3070
+        "line": 3082
       },
       "32": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3071
+        "line": 3083
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3072
+        "line": 3084
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3073
+        "line": 3085
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3074
+        "line": 3086
       },
       "96": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3075
+        "line": 3087
       },
       "112": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3076
+        "line": 3088
       },
       "128": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3077
+        "line": 3089
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3078
+        "line": 3090
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3079
+        "line": 3091
       },
       "176": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3080
+        "line": 3092
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3081
+        "line": 3093
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3082
+        "line": 3094
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3083
+        "line": 3095
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3084
+        "line": 3096
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3085
+        "line": 3097
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3086
+        "line": 3098
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3087
+        "line": 3099
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3088
+        "line": 3100
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3089
+        "line": 3101
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3090
+        "line": 3102
       },
       "328": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3091
+        "line": 3103
       },
       "336": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3092
+        "line": 3104
       },
       "344": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3093
+        "line": 3105
       },
       "360": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3094
+        "line": 3106
       },
       "368": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3095
+        "line": 3107
       },
       "384": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3096
+        "line": 3108
       },
       "400": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3097
+        "line": 3109
       },
       "416": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3098
+        "line": 3110
       },
       "432": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3099
+        "line": 3111
       },
       "448": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3100
+        "line": 3112
       },
       "456": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3101
+        "line": 3113
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3102
+        "line": 3114
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3103
+        "line": 3115
       },
       "488": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3104
+        "line": 3116
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3105
+        "line": 3117
+      }
+    },
+    "793e54fd0b61dea4e67d4ebe480bca911cf4a9008e228be86c8715f0e0420344": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3446
+      },
+      "8": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3447
+      },
+      "56": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3448
+      },
+      "64": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3449
+      },
+      "80": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3452
+      },
+      "88": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3453
+      },
+      "136": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3454
+      },
+      "144": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3455
       }
     },
     "7a8cd099998b285e2fdd87cc118779d5fe0e99498c746266e81a4634362236dc": {
@@ -4954,142 +4832,96 @@
         "line": 255
       }
     },
-    "7c6a16ec65f19260151f7d02e6f36f4d73a75d0e7164d8a84e743d80091e9b61": {
-      "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
-      },
-      "48": {
-        "filename": "<entry-selector>",
-        "line": 5
-      },
-      "56": {
-        "filename": "<entry-selector>",
-        "line": 6
-      },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
-      },
-      "96": {
-        "filename": "<entry-selector>",
-        "line": 9
-      },
-      "112": {
-        "filename": "<entry-selector>",
-        "line": 10
-      },
-      "128": {
-        "filename": "<entry-selector>",
-        "line": 11
-      }
-    },
     "7cfa5e40ff49c8579f2efeefde8301efbf33553de01bfcdab9f8c9b78bbf66cf": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3313
+        "line": 3325
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3314
+        "line": 3326
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3315
+        "line": 3327
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3316
+        "line": 3328
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3319
+        "line": 3331
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3320
+        "line": 3332
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3321
+        "line": 3333
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3322
+        "line": 3334
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3325
+        "line": 3337
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3326
+        "line": 3338
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3327
+        "line": 3339
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3328
+        "line": 3340
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3331
+        "line": 3343
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3332
+        "line": 3344
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3333
+        "line": 3345
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3334
+        "line": 3346
       }
     },
     "88cdf2daf008afe81885c523ee29acfa77a565ae9b7127b6baf6295c105ef949": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1340
+        "line": 1346
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1341
+        "line": 1347
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1342
+        "line": 1348
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1343
+        "line": 1349
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1344
+        "line": 1350
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1345
+        "line": 1351
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
@@ -5117,199 +4949,199 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1356
+        "line": 1362
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1359
+        "line": 1365
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1360
+        "line": 1366
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1361
+        "line": 1367
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1362
+        "line": 1368
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1363
+        "line": 1369
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1364
+        "line": 1370
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1365
+        "line": 1371
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1366
+        "line": 1372
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1367
+        "line": 1373
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1368
+        "line": 1374
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1369
+        "line": 1375
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1370
+        "line": 1376
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1371
+        "line": 1377
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1372
+        "line": 1378
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1373
+        "line": 1379
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1374
+        "line": 1380
       },
       "512": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1376
+        "line": 1382
       },
       "528": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1377
+        "line": 1383
       },
       "544": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1378
+        "line": 1384
       },
       "552": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1379
+        "line": 1385
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1380
+        "line": 1386
       },
       "576": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1381
+        "line": 1387
       },
       "592": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1382
+        "line": 1388
       },
       "608": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1383
+        "line": 1389
       },
       "624": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1384
+        "line": 1390
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1385
+        "line": 1391
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1386
+        "line": 1392
       },
       "656": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1387
+        "line": 1393
       },
       "672": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1388
+        "line": 1394
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1389
+        "line": 1395
       },
       "696": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1390
+        "line": 1396
       },
       "712": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1391
+        "line": 1397
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1392
+        "line": 1398
       },
       "728": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1393
+        "line": 1399
       },
       "744": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1394
+        "line": 1400
       },
       "760": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1395
+        "line": 1401
       },
       "776": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1396
+        "line": 1402
       },
       "792": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1397
+        "line": 1403
       },
       "808": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1398
+        "line": 1404
       },
       "824": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1399
+        "line": 1405
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1400
+        "line": 1406
       },
       "864": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1401
+        "line": 1407
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1402
+        "line": 1408
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1403
+        "line": 1409
       },
       "904": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1405
+        "line": 1411
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1406
+        "line": 1412
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1407
+        "line": 1413
       },
       "944": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1410
+        "line": 1416
       }
     },
     "8b45c5045c9a5dd3a64c25c17381687fcade034fdd7ac80f9d14fcc612cc7eb9": {
@@ -5348,56 +5180,6 @@
       "104": {
         "filename": "../contracts/tip3/TokenRootUpgradeable.tsol",
         "line": 114
-      }
-    },
-    "8d2eb3d18c1864f89134c6c41321d8d75d7fabf1037113578c0f48358a189c96": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3372
-      },
-      "8": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3373
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3374
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3375
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3401
-      },
-      "88": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3402
-      },
-      "136": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3403
-      },
-      "144": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3404
-      },
-      "160": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3430
-      },
-      "168": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3431
-      },
-      "216": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3432
-      },
-      "224": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3433
       }
     },
     "8fa0ec72b604070c50f072a754b49c6954a55b7b0867a614c865b8e87fb319d9": {
@@ -5737,27 +5519,27 @@
     "92287732470ac333cc411d080a93daec9bd2c377b129e998b6bebf37b072999c": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1537
+        "line": 1549
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1538
+        "line": 1550
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1539
+        "line": 1551
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1540
+        "line": 1552
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1541
+        "line": 1553
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1542
+        "line": 1554
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootTransferableOwnershipBase.tsol",
@@ -5813,19 +5595,19 @@
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1561
+        "line": 1573
       },
       "232": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1564
+        "line": 1576
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1565
+        "line": 1577
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1568
+        "line": 1580
       }
     },
     "933a654dc728118c2245a11c3117470e11416556556e583b3cf591ca17246fff": {
@@ -6352,7 +6134,53 @@
       },
       "592": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2802
+        "line": 2814
+      }
+    },
+    "9c43834bc03c7b1a1a55fc534593da17a81bbbb9fcd10041c50dc6b604ef0efc": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
       }
     },
     "9e22d6ba8823902403b013aecbd5066183c0c931dedc38250f20c8f2311989f6": {
@@ -6550,39 +6378,39 @@
       },
       "608": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1674
+        "line": 1686
       },
       "616": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1676
+        "line": 1688
       },
       "632": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1677
+        "line": 1689
       },
       "656": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1678
+        "line": 1690
       },
       "672": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1679
+        "line": 1691
       },
       "680": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1680
+        "line": 1692
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1681
+        "line": 1693
       },
       "704": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1683
+        "line": 1695
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1691
+        "line": 1703
       }
     },
     "9edf223ecd0488ce1673ee6196c39ba5c80cc30daacded50b2a797b5e32176fc": {
@@ -6620,27 +6448,27 @@
     "a03e7a5bc6ce709ff8a89157a459af609f5de2769318bb7de23a58198259ff17": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2537
+        "line": 2549
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2538
+        "line": 2550
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2539
+        "line": 2551
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2540
+        "line": 2552
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2541
+        "line": 2553
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2542
+        "line": 2554
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -6708,173 +6536,173 @@
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2564
+        "line": 2576
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2567
+        "line": 2579
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2568
+        "line": 2580
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2571
+        "line": 2583
       }
     },
     "a1b70295ba2bb7a7ff8dcf288edb5cbdfeae7cf725b46f7d86a4c3381fccae6c": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2913
+        "line": 2925
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2914
+        "line": 2926
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2915
+        "line": 2927
       },
       "40": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2916
+        "line": 2928
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2917
+        "line": 2929
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2918
+        "line": 2930
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2919
+        "line": 2931
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2920
+        "line": 2932
       },
       "96": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2921
+        "line": 2933
       },
       "112": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2922
+        "line": 2934
       },
       "128": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2923
+        "line": 2935
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2924
+        "line": 2936
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2925
+        "line": 2937
       },
       "152": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2926
+        "line": 2938
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2927
+        "line": 2939
       },
       "176": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2928
+        "line": 2940
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2929
+        "line": 2941
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2930
+        "line": 2942
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2931
+        "line": 2943
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2932
+        "line": 2944
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2933
+        "line": 2945
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2934
+        "line": 2946
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2935
+        "line": 2947
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2936
+        "line": 2948
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2937
+        "line": 2949
       },
       "320": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2938
+        "line": 2950
       },
       "336": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2939
+        "line": 2951
       },
       "352": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2940
+        "line": 2952
       },
       "368": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2941
+        "line": 2953
       },
       "384": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2942
+        "line": 2954
       },
       "400": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2943
+        "line": 2955
       },
       "416": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2944
+        "line": 2956
       },
       "432": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2945
+        "line": 2957
       },
       "448": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2946
+        "line": 2958
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2947
+        "line": 2959
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2948
+        "line": 2960
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2949
+        "line": 2961
       },
       "512": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2950
+        "line": 2962
       }
     },
     "a46bb21f9eea530884776919f16982ee7f4d54df91c6369e11ce394303839b4d": {
@@ -6990,79 +6818,79 @@
     "a504e827674364886946dabf505426a22eab9650cc45382088079df8212c9fde": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2953
+        "line": 2965
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2954
+        "line": 2966
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2955
+        "line": 2967
       },
       "40": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2956
+        "line": 2968
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2957
+        "line": 2969
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3064
+        "line": 3076
       }
     },
     "a68e5aeea9076303d2e67c87b1ae9d2255f2e0547b7873a347797db098603301": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1760
+        "line": 1772
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1761
+        "line": 1773
       },
       "40": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1762
+        "line": 1774
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1763
+        "line": 1775
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1764
+        "line": 1776
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1768
+        "line": 1780
       }
     },
     "a6b15b03437ada0bf375d8f29f910f71e05439d201763e6d127a2a49be6cc6ac": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2409
+        "line": 2421
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2410
+        "line": 2422
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2411
+        "line": 2423
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2412
+        "line": 2424
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2413
+        "line": 2425
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2414
+        "line": 2426
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -7122,257 +6950,257 @@
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2434
+        "line": 2446
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2437
+        "line": 2449
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2438
+        "line": 2450
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2439
+        "line": 2451
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2440
+        "line": 2452
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2441
+        "line": 2453
       },
       "320": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2442
+        "line": 2454
       },
       "336": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2443
+        "line": 2455
       },
       "344": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2444
+        "line": 2456
       },
       "352": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2445
+        "line": 2457
       },
       "360": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2446
+        "line": 2458
       },
       "384": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2447
+        "line": 2459
       },
       "392": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2448
+        "line": 2460
       },
       "400": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2449
+        "line": 2461
       },
       "424": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2450
+        "line": 2462
       },
       "432": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2451
+        "line": 2463
       },
       "440": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2452
+        "line": 2464
       },
       "488": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2453
+        "line": 2465
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2454
+        "line": 2466
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2455
+        "line": 2467
       },
       "512": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2456
+        "line": 2468
       },
       "520": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2458
+        "line": 2470
       },
       "536": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2459
+        "line": 2471
       },
       "552": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2460
+        "line": 2472
       },
       "560": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2461
+        "line": 2473
       },
       "576": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2462
+        "line": 2474
       },
       "584": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2463
+        "line": 2475
       },
       "600": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2464
+        "line": 2476
       },
       "616": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2465
+        "line": 2477
       },
       "632": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2466
+        "line": 2478
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2467
+        "line": 2479
       },
       "656": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2468
+        "line": 2480
       },
       "664": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2469
+        "line": 2481
       },
       "680": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2470
+        "line": 2482
       },
       "696": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2471
+        "line": 2483
       },
       "704": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2472
+        "line": 2484
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2473
+        "line": 2485
       },
       "728": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2474
+        "line": 2486
       },
       "736": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2475
+        "line": 2487
       },
       "752": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2476
+        "line": 2488
       },
       "768": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2477
+        "line": 2489
       },
       "776": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2478
+        "line": 2490
       },
       "800": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2479
+        "line": 2491
       },
       "808": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2480
+        "line": 2492
       },
       "816": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2481
+        "line": 2493
       },
       "832": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2482
+        "line": 2494
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2483
+        "line": 2495
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2484
+        "line": 2496
       },
       "880": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2485
+        "line": 2497
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2486
+        "line": 2498
       },
       "896": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2487
+        "line": 2499
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2488
+        "line": 2500
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2490
+        "line": 2502
       },
       "936": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2491
+        "line": 2503
       },
       "952": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2492
+        "line": 2504
       },
       "960": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2493
+        "line": 2505
       },
       "976": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2496
+        "line": 2508
       }
     },
     "aaf9cf7cb49193504c991b9f7834214a55c95e1c8ae7790a3343ca3de0f4e0e2": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2117
+        "line": 2129
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2118
+        "line": 2130
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2119
+        "line": 2131
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2120
+        "line": 2132
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2121
+        "line": 2133
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2122
+        "line": 2134
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -7400,199 +7228,199 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2133
+        "line": 2145
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2136
+        "line": 2148
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2137
+        "line": 2149
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2138
+        "line": 2150
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2139
+        "line": 2151
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2140
+        "line": 2152
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2141
+        "line": 2153
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2142
+        "line": 2154
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2143
+        "line": 2155
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2144
+        "line": 2156
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2145
+        "line": 2157
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2146
+        "line": 2158
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2147
+        "line": 2159
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2148
+        "line": 2160
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2149
+        "line": 2161
       },
       "488": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2150
+        "line": 2162
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2151
+        "line": 2163
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2153
+        "line": 2165
       },
       "520": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2154
+        "line": 2166
       },
       "536": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2155
+        "line": 2167
       },
       "544": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2156
+        "line": 2168
       },
       "560": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2157
+        "line": 2169
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2158
+        "line": 2170
       },
       "584": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2159
+        "line": 2171
       },
       "600": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2160
+        "line": 2172
       },
       "616": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2161
+        "line": 2173
       },
       "632": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2162
+        "line": 2174
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2163
+        "line": 2175
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2164
+        "line": 2176
       },
       "664": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2165
+        "line": 2177
       },
       "680": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2166
+        "line": 2178
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2167
+        "line": 2179
       },
       "704": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2168
+        "line": 2180
       },
       "712": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2169
+        "line": 2181
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2170
+        "line": 2182
       },
       "736": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2171
+        "line": 2183
       },
       "752": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2172
+        "line": 2184
       },
       "768": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2173
+        "line": 2185
       },
       "784": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2174
+        "line": 2186
       },
       "800": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2175
+        "line": 2187
       },
       "816": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2176
+        "line": 2188
       },
       "840": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2177
+        "line": 2189
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2178
+        "line": 2190
       },
       "856": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2179
+        "line": 2191
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2180
+        "line": 2192
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2182
+        "line": 2194
       },
       "896": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2183
+        "line": 2195
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2184
+        "line": 2196
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2187
+        "line": 2199
       }
     },
     "b2a4d8d1a6efb01643d766a44e29f2b5f56db30923a29b45ba64db99f32fb213": {
@@ -7811,30 +7639,64 @@
         "line": 63
       }
     },
-    "b7a8487e9d7124025134f80ae6e0cde73c76192259e4ec69c8d0db5861c508c3": {
+    "b4af897ccbc41097ebd82d889a50a8f46d8d9e8c47b2954f291de86ac1d53cf1": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2031
+        "line": 3259
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2032
+        "line": 3260
       },
-      "24": {
+      "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2033
-      },
-      "48": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 2034
+        "line": 3261
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2035
+        "line": 3262
+      },
+      "80": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3380
+      },
+      "88": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3381
+      },
+      "136": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3382
+      },
+      "144": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3383
+      }
+    },
+    "b7a8487e9d7124025134f80ae6e0cde73c76192259e4ec69c8d0db5861c508c3": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2043
+      },
+      "8": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2044
+      },
+      "24": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2045
+      },
+      "48": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2046
+      },
+      "64": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2047
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2036
+        "line": 2048
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -7862,877 +7724,631 @@
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2047
+        "line": 2059
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2050
+        "line": 2062
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2051
+        "line": 2063
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2052
+        "line": 2064
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2053
+        "line": 2065
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2054
+        "line": 2066
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2055
+        "line": 2067
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2056
+        "line": 2068
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2057
+        "line": 2069
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2058
+        "line": 2070
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2059
+        "line": 2071
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2060
+        "line": 2072
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2061
+        "line": 2073
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2062
+        "line": 2074
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2063
+        "line": 2075
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2064
+        "line": 2076
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2065
+        "line": 2077
       },
       "512": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2067
+        "line": 2079
       },
       "528": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2068
+        "line": 2080
       },
       "544": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2069
+        "line": 2081
       },
       "552": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2070
+        "line": 2082
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2071
+        "line": 2083
       },
       "576": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2072
+        "line": 2084
       },
       "592": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2073
+        "line": 2085
       },
       "608": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2074
+        "line": 2086
       },
       "624": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2075
+        "line": 2087
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2076
+        "line": 2088
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2077
+        "line": 2089
       },
       "656": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2078
+        "line": 2090
       },
       "672": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2079
+        "line": 2091
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2080
+        "line": 2092
       },
       "696": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2081
+        "line": 2093
       },
       "712": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2082
+        "line": 2094
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2083
+        "line": 2095
       },
       "728": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2084
+        "line": 2096
       },
       "744": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2085
+        "line": 2097
       },
       "760": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2086
+        "line": 2098
       },
       "776": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2087
+        "line": 2099
       },
       "792": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2088
+        "line": 2100
       },
       "808": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2089
+        "line": 2101
       },
       "824": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2090
+        "line": 2102
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2091
+        "line": 2103
       },
       "864": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2092
+        "line": 2104
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2093
+        "line": 2105
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2094
+        "line": 2106
       },
       "904": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2096
+        "line": 2108
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2097
+        "line": 2109
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2098
+        "line": 2110
       },
       "944": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2101
+        "line": 2113
       }
     },
     "b923f903431687662b8e28df7a72bef7b04511c5e5b57f77fd19ef2fc4f2a6a9": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3005
+        "line": 3017
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3009
+        "line": 3021
       },
       "24": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3010
-      },
-      "32": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3011
-      },
-      "48": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3012
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3013
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3014
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3015
-      },
-      "96": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3016
-      },
-      "104": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3017
-      },
-      "128": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3019
-      },
-      "136": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3020
-      },
-      "144": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3022
       },
-      "152": {
+      "32": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3023
       },
-      "160": {
+      "48": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3024
       },
-      "168": {
+      "56": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3025
       },
-      "184": {
+      "64": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3026
       },
-      "200": {
+      "80": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3027
       },
-      "216": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3032
-      },
-      "224": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3033
-      },
-      "232": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3034
-      },
-      "240": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3035
-      },
-      "256": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3036
-      },
-      "272": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3037
-      },
-      "288": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3041
-      },
-      "296": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3042
-      },
-      "304": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3043
-      },
-      "320": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3044
-      },
-      "336": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3045
-      },
-      "352": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3046
-      },
-      "368": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3047
-      },
-      "384": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3048
-      },
-      "400": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3049
-      },
-      "416": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3050
-      },
-      "432": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3051
-      },
-      "448": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3052
-      },
-      "464": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3053
-      },
-      "480": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3054
-      },
-      "496": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3055
-      },
-      "512": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3056
-      },
-      "528": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3057
-      },
-      "544": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3058
-      },
-      "560": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3059
-      },
-      "584": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3060
-      },
-      "600": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3061
-      },
-      "608": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3062
-      }
-    },
-    "ba896e80435a331813b9a9df791f67f1c125c738256dc5b8fe82c3af3c97d8c9": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3184
-      },
-      "16": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3185
-      },
-      "24": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3186
-      },
-      "40": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3187
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3188
-      },
-      "72": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3189
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3192
-      },
       "96": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3193
+        "line": 3028
       },
       "104": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3194
+        "line": 3029
       },
-      "120": {
+      "128": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3197
+        "line": 3031
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3198
+        "line": 3032
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3199
+        "line": 3034
+      },
+      "152": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3035
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3200
+        "line": 3036
+      },
+      "168": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3037
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3201
+        "line": 3038
       },
       "200": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3202
+        "line": 3039
       },
-      "208": {
+      "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3203
+        "line": 3044
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3204
+        "line": 3045
       },
       "232": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3205
+        "line": 3046
       },
-      "248": {
+      "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3206
+        "line": 3047
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3207
+        "line": 3048
       },
-      "264": {
+      "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3208
-      },
-      "280": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3209
+        "line": 3049
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3210
+        "line": 3053
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3212
+        "line": 3054
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3213
+        "line": 3055
       },
-      "312": {
+      "320": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3214
-      },
-      "328": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3216
+        "line": 3056
       },
       "336": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3217
+        "line": 3057
       },
-      "344": {
+      "352": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3218
+        "line": 3058
       },
-      "360": {
+      "368": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3219
+        "line": 3059
       },
-      "376": {
+      "384": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3220
-      },
-      "392": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3222
+        "line": 3060
       },
       "400": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3223
+        "line": 3061
       },
       "416": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3224
+        "line": 3062
       },
-      "424": {
+      "432": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3225
-      },
-      "440": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3227
+        "line": 3063
       },
       "448": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3228
+        "line": 3064
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3229
+        "line": 3065
       },
-      "472": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "488": {
-        "filename": "stdlib.sol",
-        "line": 61
+      "480": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3066
       },
       "496": {
-        "filename": "stdlib.sol",
-        "line": 61
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3067
       },
-      "504": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "520": {
-        "filename": "stdlib.sol",
-        "line": 62
+      "512": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3068
       },
       "528": {
-        "filename": "stdlib.sol",
-        "line": 62
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3069
       },
       "544": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "568": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "576": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "616": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "624": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "632": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "648": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "664": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3231
+        "line": 3070
       },
-      "680": {
+      "560": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3232
+        "line": 3071
       },
-      "688": {
+      "584": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3233
+        "line": 3072
       },
-      "704": {
+      "600": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3234
+        "line": 3073
       },
-      "712": {
+      "608": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3235
-      },
-      "728": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3236
-      },
-      "744": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3237
-      },
-      "752": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3238
-      },
-      "768": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3241
-      },
-      "776": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3242
+        "line": 3074
       }
     },
     "bf9eeaf851c01f4f9d93917ed98b711c896b27506bc620781374fa8933001df5": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1254
+        "line": 1260
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1255
+        "line": 1261
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1256
+        "line": 1262
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1257
+        "line": 1263
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1258
+        "line": 1264
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1259
+        "line": 1265
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 80
+        "line": 79
       },
       "104": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 80
+        "line": 79
       },
       "120": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 80
+        "line": 79
       },
       "128": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 80
+        "line": 79
       },
       "144": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 80
+        "line": 79
       },
       "160": {
         "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 80
+        "line": 79
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1270
+        "line": 1276
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1273
+        "line": 1279
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1274
+        "line": 1280
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1275
+        "line": 1281
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1276
+        "line": 1282
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1277
+        "line": 1283
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1278
+        "line": 1284
       },
       "256": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1279
+        "line": 1285
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1280
+        "line": 1286
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1281
+        "line": 1287
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1282
+        "line": 1288
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1283
+        "line": 1289
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1284
+        "line": 1290
       },
       "464": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1285
+        "line": 1291
       },
       "480": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1286
+        "line": 1292
       },
       "496": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1287
+        "line": 1293
       },
       "504": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1288
+        "line": 1294
       },
       "512": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1290
+        "line": 1296
       },
       "528": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1291
+        "line": 1297
       },
       "544": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1292
+        "line": 1298
       },
       "552": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1293
+        "line": 1299
       },
       "568": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1294
+        "line": 1300
       },
       "576": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1295
+        "line": 1301
       },
       "592": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1296
+        "line": 1302
       },
       "608": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1297
+        "line": 1303
       },
       "624": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1298
+        "line": 1304
       },
       "640": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1299
+        "line": 1305
       },
       "648": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1300
+        "line": 1306
       },
       "656": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1301
+        "line": 1307
       },
       "672": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1302
+        "line": 1308
       },
       "688": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1303
+        "line": 1309
       },
       "696": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1304
+        "line": 1310
       },
       "712": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1305
+        "line": 1311
       },
       "720": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1306
+        "line": 1312
       },
       "728": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1307
+        "line": 1313
       },
       "744": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1308
+        "line": 1314
       },
       "760": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1309
+        "line": 1315
       },
       "776": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1310
+        "line": 1316
       },
       "792": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1311
+        "line": 1317
       },
       "808": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1312
+        "line": 1318
       },
       "824": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1313
+        "line": 1319
       },
       "848": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1314
+        "line": 1320
       },
       "864": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1315
+        "line": 1321
       },
       "872": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1316
+        "line": 1322
       },
       "888": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1317
+        "line": 1323
       },
       "904": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1319
+        "line": 1325
       },
       "912": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1320
+        "line": 1326
       },
       "928": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1321
+        "line": 1327
       },
       "944": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1324
+        "line": 1330
       }
     },
     "c01ee6074cfe1ea6b8d90a9a552df5cd1b7a200823d5e15d6098e1762788d245": {
@@ -8981,6 +8597,56 @@
         "line": 1030
       }
     },
+    "c4ad38ecc6ce793ed318576d36cb38dfc9c80473b57104471278917abaaa3f7d": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3384
+      },
+      "8": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3385
+      },
+      "56": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3386
+      },
+      "64": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3387
+      },
+      "80": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3413
+      },
+      "88": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3414
+      },
+      "136": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3415
+      },
+      "144": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3416
+      },
+      "160": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3442
+      },
+      "168": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3443
+      },
+      "216": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3444
+      },
+      "224": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3445
+      }
+    },
     "c5422ac44db10043652703bc875779d2f43a3fa73ec5524561c66a8774ed24d3": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -9175,30 +8841,284 @@
         "line": 56
       }
     },
-    "cba9b02bcaeb3ded16bd7792bb77a22a3795f53f4b51fd8eeaeaada17cdd8e38": {
+    "c8f54991ed56c1cae3751b5630ad538666413d0d5f24b66e4960ef60546aae33": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2614
+        "line": 1432
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2615
+        "line": 1433
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2616
+        "line": 1434
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2617
+        "line": 1435
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2618
+        "line": 1436
       },
       "72": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2619
+        "line": 1437
+      },
+      "88": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "104": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "120": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "128": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "144": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "160": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "176": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnPausableBase.tsol",
+        "line": 36
+      },
+      "184": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1449
+      },
+      "200": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1452
+      },
+      "208": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1453
+      },
+      "224": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1454
+      },
+      "232": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1455
+      },
+      "240": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1456
+      },
+      "256": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1457
+      },
+      "272": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1458
+      },
+      "280": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1459
+      },
+      "288": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1460
+      },
+      "296": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1461
+      },
+      "320": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1462
+      },
+      "328": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1463
+      },
+      "480": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1464
+      },
+      "496": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1465
+      },
+      "512": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1466
+      },
+      "520": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1467
+      },
+      "528": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1469
+      },
+      "544": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1470
+      },
+      "560": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1471
+      },
+      "568": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1472
+      },
+      "584": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1473
+      },
+      "592": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1474
+      },
+      "608": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1475
+      },
+      "624": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1476
+      },
+      "640": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1477
+      },
+      "656": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1478
+      },
+      "664": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1479
+      },
+      "672": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1480
+      },
+      "688": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1481
+      },
+      "704": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1482
+      },
+      "712": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1483
+      },
+      "728": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1484
+      },
+      "736": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1485
+      },
+      "744": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1486
+      },
+      "760": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1487
+      },
+      "776": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1488
+      },
+      "792": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1489
+      },
+      "808": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1490
+      },
+      "824": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1491
+      },
+      "840": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1492
+      },
+      "864": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1493
+      },
+      "880": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1494
+      },
+      "888": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1495
+      },
+      "904": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1496
+      },
+      "920": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1498
+      },
+      "928": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1499
+      },
+      "944": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1500
+      },
+      "952": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1501
+      },
+      "968": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 1504
+      }
+    },
+    "cba9b02bcaeb3ded16bd7792bb77a22a3795f53f4b51fd8eeaeaada17cdd8e38": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2626
+      },
+      "8": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2627
+      },
+      "24": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2628
+      },
+      "48": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2629
+      },
+      "64": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2630
+      },
+      "72": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 2631
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
@@ -9274,19 +9194,19 @@
       },
       "264": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2643
+        "line": 2655
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2646
+        "line": 2658
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2647
+        "line": 2659
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2650
+        "line": 2662
       }
     },
     "cc2c043de1d637315bd89affb49c7cbdfa8384de608794f6401ad143ce738c4a": {
@@ -9814,465 +9734,215 @@
     "d558e53bf690afc8a76b8887a99a49a52db1bd24bec5da84780ea0e7bc0aad3f": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2996
+        "line": 3008
       }
     },
     "d66e946592f78733364b45b91c54e530f0bb22a2152a6402f7bc56edd87782c7": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3284
-      },
-      "8": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3285
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3286
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3287
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3290
-      },
-      "88": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3291
-      },
-      "136": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3292
-      },
-      "144": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3293
-      },
-      "160": {
-        "filename": "TokenRootUpgradeable.code",
         "line": 3296
       },
-      "168": {
+      "8": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3297
       },
-      "216": {
+      "56": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3298
       },
-      "224": {
+      "64": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3299
       },
-      "240": {
+      "80": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3302
       },
-      "248": {
+      "88": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3303
       },
-      "296": {
+      "136": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3304
       },
-      "304": {
+      "144": {
         "filename": "TokenRootUpgradeable.code",
         "line": 3305
-      }
-    },
-    "d78b980f6f6877e7615d133deb2e4fec75146b814193c2b21aca5c0264ed1a2b": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1153
-      },
-      "8": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1154
-      },
-      "24": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1155
-      },
-      "48": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1156
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1157
-      },
-      "72": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1158
-      },
-      "88": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 71
-      },
-      "104": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 71
-      },
-      "120": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 71
-      },
-      "128": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 71
-      },
-      "144": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 71
       },
       "160": {
-        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
-        "line": 71
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3308
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1169
-      },
-      "184": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1172
-      },
-      "192": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1173
-      },
-      "208": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1174
+        "line": 3309
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1175
+        "line": 3310
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1176
+        "line": 3311
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1177
+        "line": 3314
       },
-      "256": {
+      "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1178
+        "line": 3315
       },
-      "264": {
+      "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1179
-      },
-      "272": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1180
-      },
-      "280": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1181
+        "line": 3316
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 1182
-      },
-      "312": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1183
-      },
-      "464": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1184
-      },
-      "480": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1185
-      },
-      "496": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1186
-      },
-      "504": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1187
-      },
-      "512": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1189
-      },
-      "528": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1190
-      },
-      "544": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1191
-      },
-      "552": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1192
-      },
-      "568": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1193
-      },
-      "576": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1194
-      },
-      "592": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1195
-      },
-      "608": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1196
-      },
-      "624": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1197
-      },
-      "640": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1198
-      },
-      "648": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1199
-      },
-      "656": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1200
-      },
-      "672": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1201
-      },
-      "688": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1202
-      },
-      "696": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1203
-      },
-      "712": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1204
-      },
-      "720": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1205
-      },
-      "728": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1206
-      },
-      "744": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1207
-      },
-      "760": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1208
-      },
-      "776": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1209
-      },
-      "792": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1210
-      },
-      "808": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1211
-      },
-      "824": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1212
-      },
-      "848": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1213
-      },
-      "864": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1214
-      },
-      "872": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1215
-      },
-      "888": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1216
-      },
-      "904": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1218
-      },
-      "912": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1219
-      },
-      "928": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1220
-      },
-      "936": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1221
-      },
-      "952": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 1224
+        "line": 3317
       }
     },
     "dde370af9704fa0ade290b560e0dc3841ae4ab251d5a9b61e876896fe55bdf22": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2958
+        "line": 2970
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2959
+        "line": 2971
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2960
+        "line": 2972
       },
       "32": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2961
+        "line": 2973
       },
       "48": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2962
+        "line": 2974
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2963
+        "line": 2975
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2964
+        "line": 2976
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2965
+        "line": 2977
       },
       "96": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2966
+        "line": 2978
       },
       "112": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2970
+        "line": 2982
       },
       "120": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2971
+        "line": 2983
       },
       "128": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2972
+        "line": 2984
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2973
+        "line": 2985
       },
       "152": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2974
+        "line": 2986
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2975
+        "line": 2987
       },
       "184": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2979
+        "line": 2991
       },
       "192": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2980
+        "line": 2992
       },
       "200": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2981
+        "line": 2993
       },
       "208": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2982
+        "line": 2994
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2983
+        "line": 2995
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2984
+        "line": 2996
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2985
+        "line": 2997
       },
       "272": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2987
+        "line": 2999
       },
       "280": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2988
+        "line": 3000
       },
       "288": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2990
+        "line": 3002
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2991
+        "line": 3003
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2992
+        "line": 3004
       },
       "312": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2993
+        "line": 3005
       },
       "328": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2994
+        "line": 3006
       },
       "344": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 2995
+        "line": 3007
       },
       "360": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3000
+        "line": 3012
       },
       "368": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3001
+        "line": 3013
       },
       "376": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3002
+        "line": 3014
       },
       "384": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3003
+        "line": 3015
       },
       "400": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3004
+        "line": 3016
       }
     },
     "e01dde42bc627e70e4dd7f3a0006a23290912ff5bfa751f99fed24f35c6c7f86": {
@@ -10296,55 +9966,301 @@
     "e6936e8f0e7b8fe98c2ca66eee9d4e9dafcfc747defef9cb795288fabb1b7ef3": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3108
+        "line": 3120
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3109
+        "line": 3121
       },
       "24": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3110
+        "line": 3122
       },
       "40": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3111
+        "line": 3123
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3112
+        "line": 3124
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3113
+        "line": 3125
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3114
+        "line": 3126
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3115
+        "line": 3127
       },
       "96": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3116
+        "line": 3128
       },
       "112": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3117
+        "line": 3129
       },
       "128": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3118
+        "line": 3130
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3119
+        "line": 3131
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3120
+        "line": 3132
+      }
+    },
+    "e7c97efc10ddfcbbf20caa62bf3180f85ab4fc38d3e3dd13ac84ca3f2b3762c4": {
+      "0": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3196
+      },
+      "16": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3197
+      },
+      "24": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3198
+      },
+      "40": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3199
+      },
+      "56": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3200
+      },
+      "72": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3201
+      },
+      "80": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3204
+      },
+      "96": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3205
+      },
+      "104": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3206
+      },
+      "120": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3209
+      },
+      "136": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3210
+      },
+      "144": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3211
+      },
+      "160": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3212
+      },
+      "184": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3213
+      },
+      "200": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3214
+      },
+      "208": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3215
+      },
+      "224": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3216
+      },
+      "232": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3217
+      },
+      "248": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3218
+      },
+      "256": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3219
+      },
+      "264": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3220
+      },
+      "280": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3221
+      },
+      "288": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3222
+      },
+      "296": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3224
+      },
+      "304": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3225
+      },
+      "312": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3226
+      },
+      "328": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3228
+      },
+      "336": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3229
+      },
+      "344": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3230
+      },
+      "360": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3231
+      },
+      "376": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3232
+      },
+      "392": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3234
+      },
+      "400": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3235
+      },
+      "416": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3236
+      },
+      "424": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3237
+      },
+      "440": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3239
+      },
+      "448": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3240
+      },
+      "464": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3241
+      },
+      "472": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "488": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "496": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "504": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "520": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "528": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "544": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "568": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "576": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "616": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "624": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "632": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "648": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "664": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3243
+      },
+      "680": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3244
+      },
+      "688": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3245
+      },
+      "704": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3246
+      },
+      "712": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3247
+      },
+      "728": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3248
+      },
+      "744": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3249
+      },
+      "752": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3250
+      },
+      "768": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3253
+      },
+      "776": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3254
       }
     },
     "e8a4cba9a2a029706ac409a42d7b8c21033070de1bcf76babac94a2d788d7da2": {
@@ -10353,36 +10269,178 @@
         "line": 235
       }
     },
-    "ee7cf26acd6e4b46274d01d2bae4baaab6a0c2bc8a4d9213b9cf0b1b7ac1119d": {
+    "e927745a845641933d538ca12b291a807f1232ac2637f36077eeb587fbdc3e62": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3169
+        "line": 3388
+      },
+      "8": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3389
+      },
+      "56": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3390
+      },
+      "64": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3391
+      },
+      "80": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3394
+      },
+      "88": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3395
+      },
+      "136": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3396
+      },
+      "144": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3397
+      },
+      "160": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3400
+      },
+      "168": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3401
+      },
+      "216": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3402
+      },
+      "224": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3403
+      },
+      "240": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3406
+      },
+      "248": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3407
+      },
+      "296": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3408
+      },
+      "304": {
+        "filename": "TokenRootUpgradeable.code",
+        "line": 3409
+      }
+    },
+    "e94c00e94eeeaededb562c8e0bcf87779da0feefc00761d56ca14b490401a5cb": {
+      "0": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 54
       },
       "16": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3173
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 54
       },
       "24": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3174
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 54
       },
       "40": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3177
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
       },
-      "48": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3178
+      "56": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "72": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "88": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "112": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "128": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "144": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "160": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "176": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "184": {
+        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
+        "line": 49
+      },
+      "208": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 72
+      },
+      "216": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 72
+      },
+      "232": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "248": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "256": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "272": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "288": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "304": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "312": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "328": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
+      },
+      "344": {
+        "filename": "../contracts/tip3/abstract/TokenRootBurnableByRootBase.tsol",
+        "line": 73
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3155
+        "line": 3167
       },
       "16": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3156
+        "line": 3168
       }
     },
     "f4bd30c0ff4495bf2e6187fe5c15bad5380f337cfd9ff8fce0b77558f49ddb45": {
@@ -10426,67 +10484,67 @@
     "f65835562964384f6d256f24c1cda58b457487d8b8d05ac17e0aeba81bdc3e2d": {
       "0": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3405
+        "line": 3417
       },
       "8": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3406
+        "line": 3418
       },
       "56": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3407
+        "line": 3419
       },
       "64": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3408
+        "line": 3420
       },
       "80": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3411
+        "line": 3423
       },
       "88": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3412
+        "line": 3424
       },
       "136": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3413
+        "line": 3425
       },
       "144": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3414
+        "line": 3426
       },
       "160": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3417
+        "line": 3429
       },
       "168": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3418
+        "line": 3430
       },
       "216": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3419
+        "line": 3431
       },
       "224": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3420
+        "line": 3432
       },
       "240": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3423
+        "line": 3435
       },
       "248": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3424
+        "line": 3436
       },
       "296": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3425
+        "line": 3437
       },
       "304": {
         "filename": "TokenRootUpgradeable.code",
-        "line": 3426
+        "line": 3438
       }
     },
     "f662dd1ef1e6a031a503b1f899ad77362573e73aaae6027d16492620409a4301": {
@@ -10737,40 +10795,6 @@
       "952": {
         "filename": "TokenRootUpgradeable.code",
         "line": 930
-      }
-    },
-    "f9afd52efacb0107e77fd8dd21ac8e3d24592e0b255821958e651143703f3e98": {
-      "0": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3434
-      },
-      "8": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3435
-      },
-      "56": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3436
-      },
-      "64": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3437
-      },
-      "80": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3440
-      },
-      "88": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3441
-      },
-      "136": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3442
-      },
-      "144": {
-        "filename": "TokenRootUpgradeable.code",
-        "line": 3443
       }
     },
     "fc6bcf8a9432b86d248bd5a97c5c84965e605f0186325fea2068fc0f12ef70ed": {

@@ -145,15 +145,12 @@ contract VaultTokenRoot_V1 is
      *    the wallet will be upgraded to the new version. Otherwise,
      *    the remaining gas will be transferred to `remainingGasTo`.
      */
-    // TODO: remove request upgrade functions
     function requestUpgradeWallet(
         uint32 currentVersion,
         address walletOwner,
         address remainingGasTo
-    ) override external {
+    ) override external reserve {
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
-
-        tvm.rawReserve(_reserve(), 2);
 
         if (currentVersion == walletVersion_) {
             remainingGasTo.transfer({
@@ -373,9 +370,7 @@ contract VaultTokenRoot_V1 is
         so the granted EVERs won't be withdrawn on the wrapping / unwrapping
         @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
     */
-    function grant() external override {
-        tvm.rawReserve(_reserve(), 2);
-
+    function grant() external override reserve {
         _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 

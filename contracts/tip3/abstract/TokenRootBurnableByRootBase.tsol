@@ -68,8 +68,7 @@ abstract contract TokenRootBurnableByRootBase is TokenRootBase, IBurnableByRootT
     /**
      * @dev See {IBurnableByRootTokenRoot-disableBurnByRoot}.
      */
-    function disableBurnByRoot() override external responsible onlyRootOwner returns (bool) {
-        // TODO: reserve?
+    function disableBurnByRoot() override external reserve responsible onlyRootOwner returns (bool) {
         burnByRootDisabled_ = true;
         return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } burnByRootDisabled_;
     }

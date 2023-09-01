@@ -33,8 +33,7 @@ abstract contract TokenRootBurnPausableBase is TokenRootBase, IBurnPausableToken
      *
      * - `burnPaused_` is set to the value of the `paused` parameter.
     */
-    function setBurnPaused(bool paused) override external responsible onlyRootOwner returns (bool) {
-        // TODO: reserve?
+    function setBurnPaused(bool paused) override external responsible reserve onlyRootOwner returns (bool) {
         burnPaused_ = paused;
         return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } burnPaused_;
     }

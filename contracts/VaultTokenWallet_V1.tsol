@@ -321,6 +321,48 @@ contract VaultTokenWallet_V1 is
         );
     }
 
+    function acceptNative(
+        uint128 amount,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        TvmCell payload
+    ) external override {
+        require(amount > 0, TokenErrors.WRONG_AMOUNT);
+
+        tvm.rawReserve(_reserve(), 2);
+
+        address sender = msg.sender;
+
+        TvmCell stateInit = _buildWalletInitData(sender);
+
+        address senderWallet;
+
+        if (deployWalletValue > 0) {
+            senderWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
+        } else {
+            senderWallet = address(tvm.hash(stateInit));
+        }
+
+        IVaultTokenRoot_V1(root_).acceptWrap{
+            value: amount + ACCEPT_WRAP_SAFE_FEE,
+            flag: 0,
+            bounce: false
+        }(owner_, amount, remainingGasTo);
+
+        IAcceptTokensTransferCallback(owner_).onAcceptTokensTransfer{
+            value: 0,
+            flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+            bounce: false
+        }(
+            root_,
+            amount,
+            sender,
+            senderWallet,
+            remainingGasTo,
+            payload
+        );
+    }
+
     function _transfer(
         uint128 amount,
         address recipient,
