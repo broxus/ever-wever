@@ -328,24 +328,6 @@
         "line": 38
       }
     },
-    "401d19ef9f9a66136fc1d13813a900234e6acd2aab4a12ae8c2df48e2927e7fc": {
-      "4": {
-        "filename": "TokenWalletPlatform.code",
-        "line": 209
-      },
-      "12": {
-        "filename": "TokenWalletPlatform.code",
-        "line": 211
-      },
-      "28": {
-        "filename": "TokenWalletPlatform.code",
-        "line": 214
-      },
-      "44": {
-        "filename": "TokenWalletPlatform.code",
-        "line": 215
-      }
-    },
     "43ce8fb4fbb31f86ede1d8448c34cc6222b16157074440c0a0f2803ca3aac703": {
       "0": {
         "filename": "TokenWalletPlatform.code",
@@ -536,6 +518,24 @@
       "480": {
         "filename": "../contracts/tip3/TokenWalletPlatform.tsol",
         "line": 112
+      }
+    },
+    "4e1e2a8d45bf0e789fa02db9f420229033b1060671c8e64c7d38e4fc540dba65": {
+      "38": {
+        "filename": "TokenWalletPlatform.code",
+        "line": 209
+      },
+      "46": {
+        "filename": "TokenWalletPlatform.code",
+        "line": 211
+      },
+      "62": {
+        "filename": "TokenWalletPlatform.code",
+        "line": 214
+      },
+      "78": {
+        "filename": "TokenWalletPlatform.code",
+        "line": 215
       }
     },
     "5be73f228aab890b915c570b9b9c45e86fb78092d01b8d11b9cd9c16fac90927": {
