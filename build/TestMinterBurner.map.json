@@ -1,5 +1,185 @@
 {
   "map": {
+    "07a0736e6e0a45560068deac6036a3c40a73ed287e846dbd8225e0465fb7955c": {
+      "0": {
+        "filename": "TestMinterBurner.code",
+        "line": 120
+      },
+      "8": {
+        "filename": "TestMinterBurner.code",
+        "line": 121
+      },
+      "24": {
+        "filename": "TestMinterBurner.code",
+        "line": 122
+      },
+      "48": {
+        "filename": "TestMinterBurner.code",
+        "line": 123
+      },
+      "64": {
+        "filename": "TestMinterBurner.code",
+        "line": 124
+      },
+      "72": {
+        "filename": "TestMinterBurner.code",
+        "line": 125
+      },
+      "88": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "96": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "104": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "112": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "120": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "128": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "136": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "152": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "168": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "176": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "184": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "192": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "208": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "216": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "224": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "232": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "248": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "256": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "264": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "272": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "288": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "296": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 66
+      },
+      "304": {
+        "filename": "TestMinterBurner.code",
+        "line": 153
+      },
+      "320": {
+        "filename": "TestMinterBurner.code",
+        "line": 156
+      },
+      "328": {
+        "filename": "TestMinterBurner.code",
+        "line": 157
+      },
+      "344": {
+        "filename": "TestMinterBurner.code",
+        "line": 160
+      }
+    },
+    "0bac105aec6c612113bea10589456036b0e336210717a7058aa3ab94ee56bd60": {
+      "0": {
+        "filename": "TestMinterBurner.code",
+        "line": 732
+      },
+      "8": {
+        "filename": "TestMinterBurner.code",
+        "line": 733
+      },
+      "56": {
+        "filename": "TestMinterBurner.code",
+        "line": 734
+      },
+      "64": {
+        "filename": "TestMinterBurner.code",
+        "line": 735
+      },
+      "80": {
+        "filename": "TestMinterBurner.code",
+        "line": 738
+      },
+      "88": {
+        "filename": "TestMinterBurner.code",
+        "line": 739
+      },
+      "136": {
+        "filename": "TestMinterBurner.code",
+        "line": 740
+      },
+      "144": {
+        "filename": "TestMinterBurner.code",
+        "line": 741
+      },
+      "160": {
+        "filename": "TestMinterBurner.code",
+        "line": 744
+      },
+      "168": {
+        "filename": "TestMinterBurner.code",
+        "line": 745
+      },
+      "216": {
+        "filename": "TestMinterBurner.code",
+        "line": 746
+      },
+      "224": {
+        "filename": "TestMinterBurner.code",
+        "line": 747
+      }
+    },
     "14cfe5caa0fe7e88a16bc87ff9f898109338db1c654f5df45a76e8329e1dacd9": {
       "0": {
         "filename": "<internal-selector>",
@@ -10,1342 +190,1224 @@
         "line": 2
       }
     },
-    "328a04f23a37c84a6300d80d6c2fe30328dffce614bf577858c4ed3a8dce08a2": {
+    "328781595a845034613d36254d44432af255036438a1178ff15d7da8b02080e4": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 559
+        "line": 670
       },
-      "16": {
+      "8": {
         "filename": "TestMinterBurner.code",
-        "line": 560
-      },
-      "24": {
-        "filename": "TestMinterBurner.code",
-        "line": 561
-      },
-      "40": {
-        "filename": "TestMinterBurner.code",
-        "line": 562
+        "line": 671
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 563
+        "line": 672
       },
-      "72": {
+      "64": {
         "filename": "TestMinterBurner.code",
-        "line": 564
+        "line": 673
       },
       "80": {
         "filename": "TestMinterBurner.code",
-        "line": 567
+        "line": 699
       },
-      "96": {
+      "88": {
         "filename": "TestMinterBurner.code",
-        "line": 568
-      },
-      "104": {
-        "filename": "TestMinterBurner.code",
-        "line": 569
-      },
-      "120": {
-        "filename": "TestMinterBurner.code",
-        "line": 572
+        "line": 700
       },
       "136": {
         "filename": "TestMinterBurner.code",
-        "line": 573
+        "line": 701
       },
       "144": {
         "filename": "TestMinterBurner.code",
-        "line": 574
+        "line": 702
       },
-      "152": {
+      "160": {
         "filename": "TestMinterBurner.code",
-        "line": 575
+        "line": 728
       },
-      "176": {
+      "168": {
         "filename": "TestMinterBurner.code",
-        "line": 576
-      },
-      "192": {
-        "filename": "TestMinterBurner.code",
-        "line": 577
-      },
-      "200": {
-        "filename": "TestMinterBurner.code",
-        "line": 578
+        "line": 729
       },
       "216": {
         "filename": "TestMinterBurner.code",
-        "line": 579
+        "line": 730
       },
       "224": {
         "filename": "TestMinterBurner.code",
-        "line": 580
-      },
-      "240": {
-        "filename": "TestMinterBurner.code",
-        "line": 581
-      },
-      "256": {
-        "filename": "TestMinterBurner.code",
-        "line": 582
-      },
-      "272": {
-        "filename": "TestMinterBurner.code",
-        "line": 584
-      },
-      "280": {
-        "filename": "TestMinterBurner.code",
-        "line": 585
-      },
-      "296": {
-        "filename": "TestMinterBurner.code",
-        "line": 586
-      },
-      "304": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "320": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "328": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "336": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "352": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "360": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "376": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "400": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "408": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "448": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "456": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "464": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "480": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "496": {
-        "filename": "TestMinterBurner.code",
-        "line": 588
-      },
-      "512": {
-        "filename": "TestMinterBurner.code",
-        "line": 589
-      },
-      "520": {
-        "filename": "TestMinterBurner.code",
-        "line": 590
-      },
-      "536": {
-        "filename": "TestMinterBurner.code",
-        "line": 593
+        "line": 731
       }
     },
     "32f156a267df4989b86149df7e6c2ec81a7745191b5b0591c5eda70afc02fc2f": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 210
+        "line": 209
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 211
+        "line": 210
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 212
+        "line": 211
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 213
+        "line": 212
       },
       "64": {
         "filename": "TestMinterBurner.code",
-        "line": 214
+        "line": 213
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 215
+        "line": 214
       },
       "88": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "96": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "104": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "120": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "128": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "136": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "144": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "152": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "168": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "176": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "192": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "200": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "208": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "216": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "232": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "240": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "248": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "256": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "272": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "280": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 89
+        "line": 88
       },
       "288": {
         "filename": "TestMinterBurner.code",
-        "line": 242
+        "line": 241
       },
       "304": {
         "filename": "TestMinterBurner.code",
-        "line": 245
+        "line": 244
       },
       "312": {
         "filename": "TestMinterBurner.code",
-        "line": 246
+        "line": 245
       },
       "328": {
         "filename": "TestMinterBurner.code",
-        "line": 249
+        "line": 248
       }
     },
     "381775768192bf13608179833c9d08c1c077078e56415ecd03a5ed5cc7ad3248": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 596
+        "line": 590
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 597
+        "line": 591
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 598
+        "line": 592
       },
       "32": {
         "filename": "TestMinterBurner.code",
-        "line": 601
+        "line": 595
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 602
+        "line": 596
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 603
+        "line": 597
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 604
+        "line": 598
       },
       "232": {
         "filename": "TestMinterBurner.code",
-        "line": 605
+        "line": 599
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 606
+        "line": 600
       },
       "248": {
         "filename": "TestMinterBurner.code",
-        "line": 607
+        "line": 601
       },
       "264": {
         "filename": "TestMinterBurner.code",
-        "line": 608
+        "line": 602
       },
       "272": {
         "filename": "TestMinterBurner.code",
-        "line": 609
+        "line": 603
       },
       "280": {
         "filename": "TestMinterBurner.code",
-        "line": 610
+        "line": 604
       },
       "296": {
         "filename": "TestMinterBurner.code",
-        "line": 612
+        "line": 606
       },
       "304": {
         "filename": "TestMinterBurner.code",
-        "line": 613
-      }
-    },
-    "39528abc07dbb76db8b184a865566680ffff93794c803ba7cb97c207e629d11f": {
-      "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
-      },
-      "48": {
-        "filename": "<entry-selector>",
-        "line": 5
-      },
-      "56": {
-        "filename": "<entry-selector>",
-        "line": 6
-      },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
-      },
-      "96": {
-        "filename": "<entry-selector>",
-        "line": 9
-      },
-      "112": {
-        "filename": "<entry-selector>",
-        "line": 10
-      },
-      "128": {
-        "filename": "<entry-selector>",
-        "line": 11
+        "line": 607
       }
     },
     "3ac344d13b22ad6be755f710ae0c79211646d2c2ed2b6594f395514ea66e56ed": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 445
+        "line": 439
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 446
+        "line": 440
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 447
+        "line": 441
       },
       "32": {
         "filename": "TestMinterBurner.code",
-        "line": 448
+        "line": 442
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 449
+        "line": 443
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 450
+        "line": 444
       },
       "64": {
         "filename": "TestMinterBurner.code",
-        "line": 451
+        "line": 445
       },
       "80": {
         "filename": "TestMinterBurner.code",
-        "line": 452
+        "line": 446
       },
       "96": {
         "filename": "TestMinterBurner.code",
-        "line": 453
+        "line": 447
       },
       "104": {
         "filename": "TestMinterBurner.code",
-        "line": 454
+        "line": 448
       },
       "128": {
         "filename": "TestMinterBurner.code",
-        "line": 456
+        "line": 450
       },
       "136": {
         "filename": "TestMinterBurner.code",
-        "line": 457
+        "line": 451
       },
       "144": {
         "filename": "TestMinterBurner.code",
-        "line": 459
+        "line": 453
       },
       "152": {
         "filename": "TestMinterBurner.code",
-        "line": 460
+        "line": 454
       },
       "160": {
         "filename": "TestMinterBurner.code",
-        "line": 463
+        "line": 457
       },
       "176": {
         "filename": "TestMinterBurner.code",
-        "line": 464
+        "line": 458
       },
       "192": {
         "filename": "TestMinterBurner.code",
-        "line": 465
+        "line": 459
       },
       "208": {
         "filename": "TestMinterBurner.code",
-        "line": 466
+        "line": 460
       },
       "224": {
         "filename": "TestMinterBurner.code",
-        "line": 467
+        "line": 461
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 468
+        "line": 462
       },
       "256": {
         "filename": "TestMinterBurner.code",
-        "line": 469
+        "line": 463
       },
       "272": {
         "filename": "TestMinterBurner.code",
-        "line": 470
+        "line": 464
       },
       "288": {
         "filename": "TestMinterBurner.code",
-        "line": 471
+        "line": 465
       },
       "312": {
         "filename": "TestMinterBurner.code",
-        "line": 472
+        "line": 466
       },
       "328": {
         "filename": "TestMinterBurner.code",
-        "line": 473
+        "line": 467
       },
       "336": {
         "filename": "TestMinterBurner.code",
-        "line": 474
+        "line": 468
       }
     },
     "40101ebdf22a1121dabf50a14ba476462f63ffe615e54d6aace296d217dbb297": {
       "0": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "160": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "168": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "176": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "184": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "192": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "200": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
+        "line": 95
       },
       "216": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 96
-      }
-    },
-    "42e2e6d0b083c66fc3d46d827771535a004a540e6875a55d92ba6caf9861e8a8": {
-      "0": {
-        "filename": "TestMinterBurner.code",
-        "line": 311
-      },
-      "8": {
-        "filename": "TestMinterBurner.code",
-        "line": 312
-      },
-      "24": {
-        "filename": "TestMinterBurner.code",
-        "line": 313
-      },
-      "48": {
-        "filename": "TestMinterBurner.code",
-        "line": 314
-      },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 315
-      },
-      "72": {
-        "filename": "TestMinterBurner.code",
-        "line": 316
-      },
-      "88": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "96": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "104": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "112": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "120": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "128": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "136": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "152": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 110
-      },
-      "160": {
-        "filename": "TestMinterBurner.code",
-        "line": 330
-      },
-      "176": {
-        "filename": "TestMinterBurner.code",
-        "line": 333
-      },
-      "184": {
-        "filename": "TestMinterBurner.code",
-        "line": 334
-      },
-      "200": {
-        "filename": "TestMinterBurner.code",
-        "line": 335
-      },
-      "208": {
-        "filename": "TestMinterBurner.code",
-        "line": 336
-      },
-      "216": {
-        "filename": "TestMinterBurner.code",
-        "line": 337
-      },
-      "232": {
-        "filename": "TestMinterBurner.code",
-        "line": 338
-      },
-      "248": {
-        "filename": "TestMinterBurner.code",
-        "line": 339
-      },
-      "256": {
-        "filename": "TestMinterBurner.code",
-        "line": 340
-      },
-      "264": {
-        "filename": "TestMinterBurner.code",
-        "line": 341
-      },
-      "272": {
-        "filename": "TestMinterBurner.code",
-        "line": 342
-      },
-      "296": {
-        "filename": "TestMinterBurner.code",
-        "line": 343
-      },
-      "304": {
-        "filename": "TestMinterBurner.code",
-        "line": 344
-      },
-      "456": {
-        "filename": "TestMinterBurner.code",
-        "line": 345
-      },
-      "472": {
-        "filename": "TestMinterBurner.code",
-        "line": 346
-      },
-      "480": {
-        "filename": "TestMinterBurner.code",
-        "line": 347
-      },
-      "488": {
-        "filename": "TestMinterBurner.code",
-        "line": 348
-      },
-      "496": {
-        "filename": "TestMinterBurner.code",
-        "line": 349
-      },
-      "512": {
-        "filename": "TestMinterBurner.code",
-        "line": 351
-      },
-      "520": {
-        "filename": "TestMinterBurner.code",
-        "line": 352
-      },
-      "528": {
-        "filename": "TestMinterBurner.code",
-        "line": 354
-      },
-      "536": {
-        "filename": "TestMinterBurner.code",
-        "line": 355
-      },
-      "552": {
-        "filename": "TestMinterBurner.code",
-        "line": 358
+        "line": 95
       }
     },
     "4e16175d39cac848b7dd29e168cd42f970d9d76be120f33f8cd99f795a4ac7a0": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 264
+        "line": 263
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 265
+        "line": 264
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 266
+        "line": 265
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 267
+        "line": 266
       },
       "64": {
         "filename": "TestMinterBurner.code",
-        "line": 268
+        "line": 267
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 269
+        "line": 268
       },
       "88": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "96": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "104": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "112": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "120": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "128": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "136": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "152": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "168": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "176": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "184": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "192": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "208": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "216": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 100
+        "line": 99
       },
       "224": {
         "filename": "TestMinterBurner.code",
-        "line": 289
+        "line": 288
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 292
+        "line": 291
       },
       "248": {
         "filename": "TestMinterBurner.code",
-        "line": 293
+        "line": 292
       },
       "264": {
         "filename": "TestMinterBurner.code",
-        "line": 296
+        "line": 295
+      }
+    },
+    "4e5348e70579959cf7ed0a978081aeecf0117807dde2ddfd2bcc77c58a93d6fa": {
+      "0": {
+        "filename": "TestMinterBurner.code",
+        "line": 58
+      },
+      "8": {
+        "filename": "TestMinterBurner.code",
+        "line": 59
+      },
+      "24": {
+        "filename": "TestMinterBurner.code",
+        "line": 60
+      },
+      "48": {
+        "filename": "TestMinterBurner.code",
+        "line": 61
+      },
+      "64": {
+        "filename": "TestMinterBurner.code",
+        "line": 62
+      },
+      "72": {
+        "filename": "TestMinterBurner.code",
+        "line": 63
+      },
+      "88": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "96": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "104": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "120": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "128": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "136": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "144": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "152": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "168": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "176": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "192": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "200": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "208": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "216": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "232": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "240": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 50
+      },
+      "248": {
+        "filename": "TestMinterBurner.code",
+        "line": 86
+      },
+      "264": {
+        "filename": "TestMinterBurner.code",
+        "line": 89
+      },
+      "280": {
+        "filename": "TestMinterBurner.code",
+        "line": 92
+      }
+    },
+    "503536481593fbff9cfb8b716c2820c649b2e485a4b34df061f7fc53b936ac33": {
+      "0": {
+        "filename": "TestMinterBurner.code",
+        "line": 674
+      },
+      "8": {
+        "filename": "TestMinterBurner.code",
+        "line": 675
+      },
+      "56": {
+        "filename": "TestMinterBurner.code",
+        "line": 676
+      },
+      "64": {
+        "filename": "TestMinterBurner.code",
+        "line": 677
+      },
+      "80": {
+        "filename": "TestMinterBurner.code",
+        "line": 680
+      },
+      "88": {
+        "filename": "TestMinterBurner.code",
+        "line": 681
+      },
+      "136": {
+        "filename": "TestMinterBurner.code",
+        "line": 682
+      },
+      "144": {
+        "filename": "TestMinterBurner.code",
+        "line": 683
+      },
+      "160": {
+        "filename": "TestMinterBurner.code",
+        "line": 686
+      },
+      "168": {
+        "filename": "TestMinterBurner.code",
+        "line": 687
+      },
+      "216": {
+        "filename": "TestMinterBurner.code",
+        "line": 688
+      },
+      "224": {
+        "filename": "TestMinterBurner.code",
+        "line": 689
+      },
+      "240": {
+        "filename": "TestMinterBurner.code",
+        "line": 692
+      },
+      "248": {
+        "filename": "TestMinterBurner.code",
+        "line": 693
+      },
+      "296": {
+        "filename": "TestMinterBurner.code",
+        "line": 694
+      },
+      "304": {
+        "filename": "TestMinterBurner.code",
+        "line": 695
       }
     },
     "594815b3ff25b07d7fcd8096950443ddcb98bb546f02b67b66cea9c0ada0a364": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 373
+        "line": 367
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 374
+        "line": 368
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 375
+        "line": 369
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 376
+        "line": 370
       },
       "64": {
         "filename": "TestMinterBurner.code",
-        "line": 377
+        "line": 371
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 378
+        "line": 372
       },
       "88": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "96": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "104": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "112": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "120": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "128": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "136": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "152": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 117
+        "line": 116
       },
       "160": {
         "filename": "TestMinterBurner.code",
-        "line": 392
+        "line": 386
       },
       "176": {
         "filename": "TestMinterBurner.code",
-        "line": 395
+        "line": 389
       },
       "184": {
         "filename": "TestMinterBurner.code",
-        "line": 396
+        "line": 390
       },
       "200": {
         "filename": "TestMinterBurner.code",
-        "line": 399
+        "line": 393
       }
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 565
+        "line": 559
       }
     },
     "696022e94d231a06bdd35f0f5b699d16b9766f2b0ae35b09bd455388785a7df6": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 656
+        "line": 650
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 657
+        "line": 651
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 658
+        "line": 652
       },
       "32": {
         "filename": "TestMinterBurner.code",
-        "line": 661
+        "line": 655
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 662
+        "line": 656
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 663
+        "line": 657
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 664
+        "line": 658
       },
       "232": {
         "filename": "TestMinterBurner.code",
-        "line": 665
+        "line": 659
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 666
+        "line": 660
       },
       "248": {
         "filename": "TestMinterBurner.code",
-        "line": 667
+        "line": 661
       },
       "256": {
         "filename": "TestMinterBurner.code",
-        "line": 668
+        "line": 662
       },
       "264": {
         "filename": "TestMinterBurner.code",
-        "line": 669
+        "line": 663
       },
       "272": {
         "filename": "TestMinterBurner.code",
-        "line": 670
+        "line": 664
       },
       "288": {
         "filename": "TestMinterBurner.code",
-        "line": 672
+        "line": 666
       },
       "296": {
         "filename": "TestMinterBurner.code",
-        "line": 673
-      }
-    },
-    "6a67419bc81e7ce671c24a37baa775560f1374817344f6f2a223558a8853f8ad": {
-      "0": {
-        "filename": "TestMinterBurner.code",
-        "line": 738
-      },
-      "8": {
-        "filename": "TestMinterBurner.code",
-        "line": 739
-      },
-      "56": {
-        "filename": "TestMinterBurner.code",
-        "line": 740
-      },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 741
-      },
-      "80": {
-        "filename": "TestMinterBurner.code",
-        "line": 744
-      },
-      "88": {
-        "filename": "TestMinterBurner.code",
-        "line": 745
-      },
-      "136": {
-        "filename": "TestMinterBurner.code",
-        "line": 746
-      },
-      "144": {
-        "filename": "TestMinterBurner.code",
-        "line": 747
-      },
-      "160": {
-        "filename": "TestMinterBurner.code",
-        "line": 750
-      },
-      "168": {
-        "filename": "TestMinterBurner.code",
-        "line": 751
-      },
-      "216": {
-        "filename": "TestMinterBurner.code",
-        "line": 752
-      },
-      "224": {
-        "filename": "TestMinterBurner.code",
-        "line": 753
+        "line": 667
       }
     },
     "6b2550a908ca9bc061080067fbc07a969279754e342ec408f50d20a8fdc45739": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 412
+        "line": 406
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 413
+        "line": 407
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 414
+        "line": 408
       },
       "40": {
         "filename": "TestMinterBurner.code",
-        "line": 415
+        "line": 409
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 416
+        "line": 410
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 417
+        "line": 411
       },
       "80": {
         "filename": "TestMinterBurner.code",
-        "line": 418
+        "line": 412
       },
       "96": {
         "filename": "TestMinterBurner.code",
-        "line": 419
+        "line": 413
       },
       "104": {
         "filename": "TestMinterBurner.code",
-        "line": 420
+        "line": 414
       },
       "112": {
         "filename": "TestMinterBurner.code",
-        "line": 421
+        "line": 415
       },
       "120": {
         "filename": "TestMinterBurner.code",
-        "line": 422
+        "line": 416
       },
       "136": {
         "filename": "TestMinterBurner.code",
-        "line": 423
+        "line": 417
       },
       "144": {
         "filename": "TestMinterBurner.code",
-        "line": 424
+        "line": 418
       },
       "152": {
         "filename": "TestMinterBurner.code",
-        "line": 425
+        "line": 419
       },
       "160": {
         "filename": "TestMinterBurner.code",
-        "line": 426
+        "line": 420
       },
       "176": {
         "filename": "TestMinterBurner.code",
-        "line": 427
+        "line": 421
       },
       "184": {
         "filename": "TestMinterBurner.code",
-        "line": 428
+        "line": 422
       },
       "192": {
         "filename": "TestMinterBurner.code",
-        "line": 429
+        "line": 423
       },
       "200": {
         "filename": "TestMinterBurner.code",
-        "line": 430
+        "line": 424
       },
       "216": {
         "filename": "TestMinterBurner.code",
-        "line": 431
+        "line": 425
       },
       "224": {
         "filename": "TestMinterBurner.code",
-        "line": 432
+        "line": 426
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 433
+        "line": 427
       },
       "256": {
         "filename": "TestMinterBurner.code",
-        "line": 434
+        "line": 428
       },
       "272": {
         "filename": "TestMinterBurner.code",
-        "line": 435
+        "line": 429
       },
       "288": {
         "filename": "TestMinterBurner.code",
-        "line": 436
+        "line": 430
       },
       "304": {
         "filename": "TestMinterBurner.code",
-        "line": 437
+        "line": 431
+      }
+    },
+    "6c25261d47851ad61d9e8b1319ad5e92b75ed3449f87feeec6016be12646ac5e": {
+      "0": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 74
+      },
+      "16": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 74
+      },
+      "32": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 74
+      },
+      "48": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 74
+      },
+      "72": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 76
+      },
+      "88": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 76
+      },
+      "104": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 76
+      },
+      "120": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 76
+      },
+      "136": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "144": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "152": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "160": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "208": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "224": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "232": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "248": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "256": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "280": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "288": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "296": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "320": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "336": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "344": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "392": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "408": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "416": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "432": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "448": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "456": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "464": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "480": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "488": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "496": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "504": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "512": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "528": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 77
+      },
+      "544": {
+        "filename": "TestMinterBurner.code",
+        "line": 204
+      },
+      "552": {
+        "filename": "TestMinterBurner.code",
+        "line": 206
       }
     },
     "6f0be127eb33370d1ac8a7dabe0fa057390cdb16240634f43dd7ab5e9bc1f7a7": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 709
+        "line": 703
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 710
+        "line": 704
       },
       "56": {
-        "filename": "TestMinterBurner.code",
-        "line": 711
-      },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 712
-      },
-      "80": {
-        "filename": "TestMinterBurner.code",
-        "line": 715
-      },
-      "88": {
-        "filename": "TestMinterBurner.code",
-        "line": 716
-      },
-      "136": {
-        "filename": "TestMinterBurner.code",
-        "line": 717
-      },
-      "144": {
-        "filename": "TestMinterBurner.code",
-        "line": 718
-      },
-      "160": {
-        "filename": "TestMinterBurner.code",
-        "line": 721
-      },
-      "168": {
-        "filename": "TestMinterBurner.code",
-        "line": 722
-      },
-      "216": {
-        "filename": "TestMinterBurner.code",
-        "line": 723
-      },
-      "224": {
-        "filename": "TestMinterBurner.code",
-        "line": 724
-      },
-      "240": {
-        "filename": "TestMinterBurner.code",
-        "line": 727
-      },
-      "248": {
-        "filename": "TestMinterBurner.code",
-        "line": 728
-      },
-      "296": {
-        "filename": "TestMinterBurner.code",
-        "line": 729
-      },
-      "304": {
-        "filename": "TestMinterBurner.code",
-        "line": 730
-      }
-    },
-    "9c92bf248f8f316c167d33d3bcb959ebbab557290298c0ee4650498b6efef913": {
-      "0": {
-        "filename": "TestMinterBurner.code",
-        "line": 676
-      },
-      "8": {
-        "filename": "TestMinterBurner.code",
-        "line": 677
-      },
-      "56": {
-        "filename": "TestMinterBurner.code",
-        "line": 678
-      },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 679
-      },
-      "80": {
         "filename": "TestMinterBurner.code",
         "line": 705
       },
-      "88": {
+      "64": {
         "filename": "TestMinterBurner.code",
         "line": 706
       },
+      "80": {
+        "filename": "TestMinterBurner.code",
+        "line": 709
+      },
+      "88": {
+        "filename": "TestMinterBurner.code",
+        "line": 710
+      },
       "136": {
         "filename": "TestMinterBurner.code",
-        "line": 707
+        "line": 711
       },
       "144": {
         "filename": "TestMinterBurner.code",
-        "line": 708
+        "line": 712
       },
       "160": {
         "filename": "TestMinterBurner.code",
-        "line": 734
+        "line": 715
       },
       "168": {
         "filename": "TestMinterBurner.code",
-        "line": 735
+        "line": 716
       },
       "216": {
         "filename": "TestMinterBurner.code",
-        "line": 736
+        "line": 717
       },
       "224": {
         "filename": "TestMinterBurner.code",
-        "line": 737
-      }
-    },
-    "adf5ba296ba6b1d2f4c1668214981cc9229089caacfb59b2a61800b5c186a983": {
-      "0": {
+        "line": 718
+      },
+      "240": {
         "filename": "TestMinterBurner.code",
-        "line": 121
-      },
-      "8": {
-        "filename": "TestMinterBurner.code",
-        "line": 122
-      },
-      "24": {
-        "filename": "TestMinterBurner.code",
-        "line": 123
-      },
-      "48": {
-        "filename": "TestMinterBurner.code",
-        "line": 124
-      },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 125
-      },
-      "72": {
-        "filename": "TestMinterBurner.code",
-        "line": 126
-      },
-      "88": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "96": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "104": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "112": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "120": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "128": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "136": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "152": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "168": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "176": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "184": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "192": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "208": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "216": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "224": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "232": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
+        "line": 721
       },
       "248": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "256": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "264": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "272": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
-      },
-      "288": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
+        "filename": "TestMinterBurner.code",
+        "line": 722
       },
       "296": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 66
+        "filename": "TestMinterBurner.code",
+        "line": 723
       },
       "304": {
         "filename": "TestMinterBurner.code",
-        "line": 154
-      },
-      "320": {
+        "line": 724
+      }
+    },
+    "aa56f64059047d078e0a8c46e240edc0c6c633a8944b7969b1a12b1ca8659108": {
+      "0": {
         "filename": "TestMinterBurner.code",
-        "line": 157
+        "line": 518
       },
-      "328": {
+      "16": {
         "filename": "TestMinterBurner.code",
-        "line": 158
+        "line": 519
       },
-      "344": {
+      "24": {
         "filename": "TestMinterBurner.code",
-        "line": 161
+        "line": 520
+      },
+      "40": {
+        "filename": "TestMinterBurner.code",
+        "line": 521
+      },
+      "56": {
+        "filename": "TestMinterBurner.code",
+        "line": 522
+      },
+      "72": {
+        "filename": "TestMinterBurner.code",
+        "line": 523
+      },
+      "80": {
+        "filename": "TestMinterBurner.code",
+        "line": 524
+      },
+      "88": {
+        "filename": "TestMinterBurner.code",
+        "line": 525
+      },
+      "104": {
+        "filename": "TestMinterBurner.code",
+        "line": 526
+      },
+      "120": {
+        "filename": "TestMinterBurner.code",
+        "line": 527
+      },
+      "128": {
+        "filename": "TestMinterBurner.code",
+        "line": 528
+      },
+      "144": {
+        "filename": "TestMinterBurner.code",
+        "line": 529
+      },
+      "168": {
+        "filename": "TestMinterBurner.code",
+        "line": 530
+      },
+      "176": {
+        "filename": "TestMinterBurner.code",
+        "line": 531
+      },
+      "184": {
+        "filename": "TestMinterBurner.code",
+        "line": 532
+      },
+      "200": {
+        "filename": "TestMinterBurner.code",
+        "line": 533
+      },
+      "216": {
+        "filename": "TestMinterBurner.code",
+        "line": 537
+      },
+      "224": {
+        "filename": "TestMinterBurner.code",
+        "line": 538
+      },
+      "248": {
+        "filename": "TestMinterBurner.code",
+        "line": 539
+      },
+      "264": {
+        "filename": "TestMinterBurner.code",
+        "line": 540
+      },
+      "272": {
+        "filename": "TestMinterBurner.code",
+        "line": 541
+      },
+      "288": {
+        "filename": "TestMinterBurner.code",
+        "line": 545
+      },
+      "296": {
+        "filename": "TestMinterBurner.code",
+        "line": 546
+      },
+      "312": {
+        "filename": "TestMinterBurner.code",
+        "line": 549
       }
     },
     "af88e52cf2165d030fe87cd634fc815a994ba0a1047fb79f115a2641267c6bc3": {
       "0": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 112
+        "line": 111
       },
       "8": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 112
+        "line": 111
       },
       "16": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 113
+        "line": 112
       }
     },
     "b41fa73b8f1ad10b6cb40b08bfbd0b23d6b3a50492f3568cd559f796e73ef3cd": {
@@ -1518,450 +1580,276 @@
         "line": 55
       }
     },
-    "be81fe11bbad8d928ed709f577cdac94b691d9b85af85fc07a15a2edc24e93c9": {
+    "bffb4d040ca3eedc87addcab3cee50729090180d981b19cf704f1bed84e89c8f": {
       "0": {
-        "filename": "TestMinterBurner.code",
-        "line": 58
+        "filename": "<entry-selector>",
+        "line": 1
       },
       "8": {
-        "filename": "TestMinterBurner.code",
-        "line": 59
+        "filename": "<entry-selector>",
+        "line": 2
       },
       "24": {
-        "filename": "TestMinterBurner.code",
-        "line": 60
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
       },
       "48": {
-        "filename": "TestMinterBurner.code",
-        "line": 61
+        "filename": "<entry-selector>",
+        "line": 5
       },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 62
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
       },
       "72": {
-        "filename": "TestMinterBurner.code",
-        "line": 63
+        "filename": "<entry-selector>",
+        "line": 7
       },
       "88": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
+        "filename": "<entry-selector>",
+        "line": 8
       },
       "96": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
+        "filename": "<entry-selector>",
+        "line": 9
       },
-      "104": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "120": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
       },
       "128": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "136": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "144": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "152": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "168": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "176": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "192": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "200": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "208": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "216": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "232": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "240": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 50
-      },
-      "248": {
-        "filename": "TestMinterBurner.code",
-        "line": 86
-      },
-      "264": {
-        "filename": "TestMinterBurner.code",
-        "line": 89
-      },
-      "272": {
-        "filename": "TestMinterBurner.code",
-        "line": 90
-      },
-      "288": {
-        "filename": "TestMinterBurner.code",
-        "line": 93
+        "filename": "<entry-selector>",
+        "line": 11
       }
     },
     "c1f81a91fd97fe6ca2d32a9ed5632826bef3c6ef2b09608464bbe11da2214247": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 440
+        "line": 434
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 441
+        "line": 435
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 442
+        "line": 436
       },
       "40": {
         "filename": "TestMinterBurner.code",
-        "line": 443
+        "line": 437
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 444
+        "line": 438
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 476
+        "line": 470
+      }
+    },
+    "c292c771969faa8a393219eb6c0c6237bd51345e216d00815b9744be709d3f3b": {
+      "0": {
+        "filename": "TestMinterBurner.code",
+        "line": 310
+      },
+      "8": {
+        "filename": "TestMinterBurner.code",
+        "line": 311
+      },
+      "24": {
+        "filename": "TestMinterBurner.code",
+        "line": 312
+      },
+      "48": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "56": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "64": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "72": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "80": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "88": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "96": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "112": {
+        "filename": "../contracts/test/TestMinterBurner.tsol",
+        "line": 109
+      },
+      "120": {
+        "filename": "TestMinterBurner.code",
+        "line": 324
+      },
+      "136": {
+        "filename": "TestMinterBurner.code",
+        "line": 327
+      },
+      "144": {
+        "filename": "TestMinterBurner.code",
+        "line": 328
+      },
+      "160": {
+        "filename": "TestMinterBurner.code",
+        "line": 329
+      },
+      "168": {
+        "filename": "TestMinterBurner.code",
+        "line": 330
+      },
+      "176": {
+        "filename": "TestMinterBurner.code",
+        "line": 331
+      },
+      "192": {
+        "filename": "TestMinterBurner.code",
+        "line": 332
+      },
+      "208": {
+        "filename": "TestMinterBurner.code",
+        "line": 333
+      },
+      "216": {
+        "filename": "TestMinterBurner.code",
+        "line": 334
+      },
+      "224": {
+        "filename": "TestMinterBurner.code",
+        "line": 335
+      },
+      "232": {
+        "filename": "TestMinterBurner.code",
+        "line": 336
+      },
+      "256": {
+        "filename": "TestMinterBurner.code",
+        "line": 337
+      },
+      "264": {
+        "filename": "TestMinterBurner.code",
+        "line": 338
+      },
+      "416": {
+        "filename": "TestMinterBurner.code",
+        "line": 339
+      },
+      "432": {
+        "filename": "TestMinterBurner.code",
+        "line": 340
+      },
+      "440": {
+        "filename": "TestMinterBurner.code",
+        "line": 341
+      },
+      "448": {
+        "filename": "TestMinterBurner.code",
+        "line": 342
+      },
+      "456": {
+        "filename": "TestMinterBurner.code",
+        "line": 343
+      },
+      "472": {
+        "filename": "TestMinterBurner.code",
+        "line": 345
+      },
+      "480": {
+        "filename": "TestMinterBurner.code",
+        "line": 346
+      },
+      "488": {
+        "filename": "TestMinterBurner.code",
+        "line": 348
+      },
+      "496": {
+        "filename": "TestMinterBurner.code",
+        "line": 349
+      },
+      "512": {
+        "filename": "TestMinterBurner.code",
+        "line": 352
       }
     },
     "c384dbb4a83a61cc743ca80f89b72f1c33edeba6ce7d2c1aa454c72293e73519": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 616
+        "line": 610
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 617
+        "line": 611
       },
       "16": {
+        "filename": "TestMinterBurner.code",
+        "line": 612
+      },
+      "32": {
+        "filename": "TestMinterBurner.code",
+        "line": 615
+      },
+      "48": {
+        "filename": "TestMinterBurner.code",
+        "line": 616
+      },
+      "56": {
+        "filename": "TestMinterBurner.code",
+        "line": 617
+      },
+      "72": {
         "filename": "TestMinterBurner.code",
         "line": 618
       },
-      "32": {
+      "232": {
+        "filename": "TestMinterBurner.code",
+        "line": 619
+      },
+      "240": {
+        "filename": "TestMinterBurner.code",
+        "line": 620
+      },
+      "248": {
         "filename": "TestMinterBurner.code",
         "line": 621
       },
-      "48": {
+      "256": {
         "filename": "TestMinterBurner.code",
         "line": 622
       },
-      "56": {
+      "264": {
         "filename": "TestMinterBurner.code",
         "line": 623
       },
-      "72": {
+      "272": {
         "filename": "TestMinterBurner.code",
         "line": 624
       },
-      "232": {
-        "filename": "TestMinterBurner.code",
-        "line": 625
-      },
-      "240": {
+      "288": {
         "filename": "TestMinterBurner.code",
         "line": 626
       },
-      "248": {
+      "296": {
         "filename": "TestMinterBurner.code",
         "line": 627
-      },
-      "256": {
-        "filename": "TestMinterBurner.code",
-        "line": 628
-      },
-      "264": {
-        "filename": "TestMinterBurner.code",
-        "line": 629
-      },
-      "272": {
-        "filename": "TestMinterBurner.code",
-        "line": 630
-      },
-      "288": {
-        "filename": "TestMinterBurner.code",
-        "line": 632
-      },
-      "296": {
-        "filename": "TestMinterBurner.code",
-        "line": 633
-      }
-    },
-    "c664daeb37fe28af01cd7cd46a0ebeb60fe84f45f86e03c1531adda8a081a6d6": {
-      "0": {
-        "filename": "TestMinterBurner.code",
-        "line": 524
-      },
-      "16": {
-        "filename": "TestMinterBurner.code",
-        "line": 525
-      },
-      "24": {
-        "filename": "TestMinterBurner.code",
-        "line": 526
-      },
-      "40": {
-        "filename": "TestMinterBurner.code",
-        "line": 527
-      },
-      "56": {
-        "filename": "TestMinterBurner.code",
-        "line": 528
-      },
-      "72": {
-        "filename": "TestMinterBurner.code",
-        "line": 529
-      },
-      "80": {
-        "filename": "TestMinterBurner.code",
-        "line": 530
-      },
-      "88": {
-        "filename": "TestMinterBurner.code",
-        "line": 531
-      },
-      "104": {
-        "filename": "TestMinterBurner.code",
-        "line": 532
-      },
-      "120": {
-        "filename": "TestMinterBurner.code",
-        "line": 533
-      },
-      "128": {
-        "filename": "TestMinterBurner.code",
-        "line": 534
-      },
-      "144": {
-        "filename": "TestMinterBurner.code",
-        "line": 535
-      },
-      "168": {
-        "filename": "TestMinterBurner.code",
-        "line": 536
-      },
-      "176": {
-        "filename": "TestMinterBurner.code",
-        "line": 537
-      },
-      "184": {
-        "filename": "TestMinterBurner.code",
-        "line": 538
-      },
-      "200": {
-        "filename": "TestMinterBurner.code",
-        "line": 539
-      },
-      "216": {
-        "filename": "TestMinterBurner.code",
-        "line": 543
-      },
-      "224": {
-        "filename": "TestMinterBurner.code",
-        "line": 544
-      },
-      "248": {
-        "filename": "TestMinterBurner.code",
-        "line": 545
-      },
-      "264": {
-        "filename": "TestMinterBurner.code",
-        "line": 546
-      },
-      "272": {
-        "filename": "TestMinterBurner.code",
-        "line": 547
-      },
-      "288": {
-        "filename": "TestMinterBurner.code",
-        "line": 551
-      },
-      "296": {
-        "filename": "TestMinterBurner.code",
-        "line": 552
-      },
-      "312": {
-        "filename": "TestMinterBurner.code",
-        "line": 555
-      }
-    },
-    "d0d2a5cabdd6a196dba711916ad7101b94d8a43fd6bacf4dfb9a73af6a3be94b": {
-      "0": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 74
-      },
-      "16": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 74
-      },
-      "32": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 74
-      },
-      "48": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 74
-      },
-      "72": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 77
-      },
-      "88": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 77
-      },
-      "104": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 77
-      },
-      "120": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 77
-      },
-      "136": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "144": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "152": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "168": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "216": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "232": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "240": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "256": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "264": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "288": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "296": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "304": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "328": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "344": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "352": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "400": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "416": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "424": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "440": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "456": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "464": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "472": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "488": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "496": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "504": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "512": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "520": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "536": {
-        "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 78
-      },
-      "552": {
-        "filename": "TestMinterBurner.code",
-        "line": 205
-      },
-      "560": {
-        "filename": "TestMinterBurner.code",
-        "line": 207
       }
     },
     "d3774578b34d7b7b1a3e52f6d59989cd8c2909f39838fc6f501f58c144e4f0cd": {
@@ -2050,354 +1938,450 @@
         "line": 57
       }
     },
+    "d3cf4465f88e996a9afd3abdc51fa2030bc49383c556d350863c55b4280b8a53": {
+      "0": {
+        "filename": "TestMinterBurner.code",
+        "line": 553
+      },
+      "16": {
+        "filename": "TestMinterBurner.code",
+        "line": 554
+      },
+      "24": {
+        "filename": "TestMinterBurner.code",
+        "line": 555
+      },
+      "40": {
+        "filename": "TestMinterBurner.code",
+        "line": 556
+      },
+      "56": {
+        "filename": "TestMinterBurner.code",
+        "line": 557
+      },
+      "72": {
+        "filename": "TestMinterBurner.code",
+        "line": 558
+      },
+      "80": {
+        "filename": "TestMinterBurner.code",
+        "line": 561
+      },
+      "96": {
+        "filename": "TestMinterBurner.code",
+        "line": 562
+      },
+      "104": {
+        "filename": "TestMinterBurner.code",
+        "line": 563
+      },
+      "120": {
+        "filename": "TestMinterBurner.code",
+        "line": 566
+      },
+      "136": {
+        "filename": "TestMinterBurner.code",
+        "line": 567
+      },
+      "144": {
+        "filename": "TestMinterBurner.code",
+        "line": 568
+      },
+      "152": {
+        "filename": "TestMinterBurner.code",
+        "line": 569
+      },
+      "176": {
+        "filename": "TestMinterBurner.code",
+        "line": 570
+      },
+      "192": {
+        "filename": "TestMinterBurner.code",
+        "line": 571
+      },
+      "200": {
+        "filename": "TestMinterBurner.code",
+        "line": 572
+      },
+      "216": {
+        "filename": "TestMinterBurner.code",
+        "line": 573
+      },
+      "224": {
+        "filename": "TestMinterBurner.code",
+        "line": 574
+      },
+      "240": {
+        "filename": "TestMinterBurner.code",
+        "line": 575
+      },
+      "256": {
+        "filename": "TestMinterBurner.code",
+        "line": 576
+      },
+      "272": {
+        "filename": "TestMinterBurner.code",
+        "line": 578
+      },
+      "280": {
+        "filename": "TestMinterBurner.code",
+        "line": 579
+      },
+      "296": {
+        "filename": "TestMinterBurner.code",
+        "line": 580
+      },
+      "304": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "320": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "328": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "336": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "352": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "360": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "376": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "400": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "408": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "448": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "456": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "464": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "480": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "496": {
+        "filename": "TestMinterBurner.code",
+        "line": 582
+      },
+      "512": {
+        "filename": "TestMinterBurner.code",
+        "line": 583
+      },
+      "520": {
+        "filename": "TestMinterBurner.code",
+        "line": 584
+      },
+      "536": {
+        "filename": "TestMinterBurner.code",
+        "line": 587
+      }
+    },
     "e53fedb1e558440db4d9e0831110da32f831929479ab6e94642063fdba06cda4": {
       "0": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "160": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "168": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "176": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "184": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "192": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "200": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       },
       "216": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 107
+        "line": 106
       }
     },
     "e6936e8f0e7b8fe98c2ca66eee9d4e9dafcfc747defef9cb795288fabb1b7ef3": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 508
+        "line": 502
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 509
+        "line": 503
       },
       "24": {
         "filename": "TestMinterBurner.code",
-        "line": 510
+        "line": 504
       },
       "40": {
         "filename": "TestMinterBurner.code",
-        "line": 511
+        "line": 505
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 512
+        "line": 506
       },
       "64": {
         "filename": "TestMinterBurner.code",
-        "line": 513
+        "line": 507
       },
       "80": {
         "filename": "TestMinterBurner.code",
-        "line": 514
+        "line": 508
       },
       "88": {
         "filename": "TestMinterBurner.code",
-        "line": 515
+        "line": 509
       },
       "96": {
         "filename": "TestMinterBurner.code",
-        "line": 516
+        "line": 510
       },
       "112": {
         "filename": "TestMinterBurner.code",
-        "line": 517
+        "line": 511
       },
       "128": {
         "filename": "TestMinterBurner.code",
-        "line": 518
+        "line": 512
       },
       "136": {
         "filename": "TestMinterBurner.code",
-        "line": 519
+        "line": 513
       },
       "144": {
         "filename": "TestMinterBurner.code",
-        "line": 520
-      }
-    },
-    "ebdbe10e919f25db30026c33354ef028269d65435ac0bd38feec770259a4fc77": {
-      "0": {
-        "filename": "TestMinterBurner.code",
-        "line": 680
-      },
-      "8": {
-        "filename": "TestMinterBurner.code",
-        "line": 681
-      },
-      "56": {
-        "filename": "TestMinterBurner.code",
-        "line": 682
-      },
-      "64": {
-        "filename": "TestMinterBurner.code",
-        "line": 683
-      },
-      "80": {
-        "filename": "TestMinterBurner.code",
-        "line": 686
-      },
-      "88": {
-        "filename": "TestMinterBurner.code",
-        "line": 687
-      },
-      "136": {
-        "filename": "TestMinterBurner.code",
-        "line": 688
-      },
-      "144": {
-        "filename": "TestMinterBurner.code",
-        "line": 689
-      },
-      "160": {
-        "filename": "TestMinterBurner.code",
-        "line": 692
-      },
-      "168": {
-        "filename": "TestMinterBurner.code",
-        "line": 693
-      },
-      "216": {
-        "filename": "TestMinterBurner.code",
-        "line": 694
-      },
-      "224": {
-        "filename": "TestMinterBurner.code",
-        "line": 695
-      },
-      "240": {
-        "filename": "TestMinterBurner.code",
-        "line": 698
-      },
-      "248": {
-        "filename": "TestMinterBurner.code",
-        "line": 699
-      },
-      "296": {
-        "filename": "TestMinterBurner.code",
-        "line": 700
-      },
-      "304": {
-        "filename": "TestMinterBurner.code",
-        "line": 701
+        "line": 514
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 540
+        "line": 534
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 541
+        "line": 535
       }
     },
     "f80a8716092ff8611e894bd1a10660c1b85bc64d23cd414e936b9b508e7deaa1": {
       "0": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 118
+        "line": 117
       },
       "16": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 118
+        "line": 117
       },
       "32": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 118
+        "line": 117
       },
       "48": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 118
+        "line": 117
       },
       "72": {
         "filename": "../contracts/test/TestMinterBurner.tsol",
-        "line": 119
+        "line": 118
       }
     },
     "face28bd6d412387e08d965606c6de4343fdadad2fcb75c0a6fab4f11833fb03": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 481
+        "line": 475
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 482
+        "line": 476
       },
       "32": {
         "filename": "TestMinterBurner.code",
-        "line": 483
+        "line": 477
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 484
+        "line": 478
       },
       "64": {
         "filename": "TestMinterBurner.code",
-        "line": 485
+        "line": 479
       },
       "80": {
         "filename": "TestMinterBurner.code",
-        "line": 486
+        "line": 480
       },
       "96": {
         "filename": "TestMinterBurner.code",
-        "line": 487
+        "line": 481
       },
       "104": {
         "filename": "TestMinterBurner.code",
-        "line": 488
+        "line": 482
       },
       "120": {
         "filename": "TestMinterBurner.code",
-        "line": 489
+        "line": 483
       },
       "136": {
         "filename": "TestMinterBurner.code",
-        "line": 490
+        "line": 484
       },
       "152": {
         "filename": "TestMinterBurner.code",
-        "line": 491
+        "line": 485
       },
       "168": {
         "filename": "TestMinterBurner.code",
-        "line": 492
+        "line": 486
       },
       "184": {
         "filename": "TestMinterBurner.code",
-        "line": 493
+        "line": 487
       },
       "192": {
         "filename": "TestMinterBurner.code",
-        "line": 494
+        "line": 488
       },
       "200": {
         "filename": "TestMinterBurner.code",
-        "line": 495
+        "line": 489
       },
       "208": {
         "filename": "TestMinterBurner.code",
-        "line": 496
+        "line": 490
       },
       "216": {
         "filename": "TestMinterBurner.code",
-        "line": 497
+        "line": 491
       },
       "224": {
         "filename": "TestMinterBurner.code",
-        "line": 498
+        "line": 492
       },
       "232": {
         "filename": "TestMinterBurner.code",
-        "line": 499
+        "line": 493
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 500
+        "line": 494
       },
       "248": {
         "filename": "TestMinterBurner.code",
-        "line": 501
+        "line": 495
       },
       "256": {
         "filename": "TestMinterBurner.code",
-        "line": 502
+        "line": 496
       },
       "264": {
         "filename": "TestMinterBurner.code",
-        "line": 503
+        "line": 497
       },
       "272": {
         "filename": "TestMinterBurner.code",
-        "line": 504
+        "line": 498
       },
       "280": {
         "filename": "TestMinterBurner.code",
-        "line": 505
+        "line": 499
       }
     },
     "feece0b99b57aeb544ba8a2f15bf46608dcf2d38bdc8ba62416f8c11e56f52cd": {
       "0": {
         "filename": "TestMinterBurner.code",
-        "line": 636
+        "line": 630
       },
       "8": {
         "filename": "TestMinterBurner.code",
-        "line": 637
+        "line": 631
       },
       "16": {
         "filename": "TestMinterBurner.code",
-        "line": 638
+        "line": 632
       },
       "32": {
         "filename": "TestMinterBurner.code",
-        "line": 641
+        "line": 635
       },
       "48": {
         "filename": "TestMinterBurner.code",
-        "line": 642
+        "line": 636
       },
       "56": {
         "filename": "TestMinterBurner.code",
-        "line": 643
+        "line": 637
       },
       "72": {
         "filename": "TestMinterBurner.code",
-        "line": 644
+        "line": 638
       },
       "232": {
         "filename": "TestMinterBurner.code",
-        "line": 645
+        "line": 639
       },
       "240": {
         "filename": "TestMinterBurner.code",
-        "line": 646
+        "line": 640
       },
       "248": {
         "filename": "TestMinterBurner.code",
-        "line": 647
+        "line": 641
       },
       "256": {
         "filename": "TestMinterBurner.code",
-        "line": 648
+        "line": 642
       },
       "264": {
         "filename": "TestMinterBurner.code",
-        "line": 649
+        "line": 643
       },
       "272": {
         "filename": "TestMinterBurner.code",
-        "line": 650
+        "line": 644
       },
       "288": {
         "filename": "TestMinterBurner.code",
-        "line": 652
+        "line": 646
       },
       "296": {
         "filename": "TestMinterBurner.code",
-        "line": 653
+        "line": 647
       }
     }
   }

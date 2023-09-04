@@ -1,4 +1,4 @@
-import {EMPTY_TVM_CELL, getMetricsChange, getVaultMetrics, logMetricsChange, setupWever, ZERO_ADDRESS} from "./utils";
+import {EMPTY_TVM_CELL, getMetricsChange, getVaultMetrics, logMetricsChange, setupVaultRoot, ZERO_ADDRESS} from "../utils";
 import {Address, toNano} from "locklift";
 import {expect} from "chai";
 
@@ -10,12 +10,12 @@ describe('Transfer tokens with additional wrap', async function() {
     this.timeout(200000);
 
     // @ts-ignore
-    let context: ReturnType<typeof setupWever> extends Promise<infer F> ? F : never = {};
+    let context: ReturnType<typeof setupVaultRoot> extends Promise<infer F> ? F : never = {};
 
     it("Setup contracts", async function () {
         await locklift.deployments.fixture();
 
-        context = await setupWever();
+        context = await setupVaultRoot();
     });
 
     it("Alice sends EVERs to vault", async function () {

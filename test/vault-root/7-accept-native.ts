@@ -1,20 +1,20 @@
 import { Account } from "everscale-standalone-client";
-import { EMPTY_TVM_CELL, getMetricsChange, getVaultMetrics, logMetricsChange, setupWever } from "./utils";
+import { EMPTY_TVM_CELL, getMetricsChange, getVaultMetrics, logMetricsChange, setupVaultRoot } from "../utils";
 import { Contract, WalletTypes, toNano } from "locklift";
 import logger from 'mocha-logger';
-import { VaultTokenWallet_V1Abi } from "../build/factorySource";
+import { VaultTokenWallet_V1Abi } from "../../build/factorySource";
 
 
 describe('Test token wallet accept native', () => {
     // @ts-ignore
-    let context: ReturnType<typeof setupWever> extends Promise<infer F> ? F : never = {};
+    let context: ReturnType<typeof setupVaultRoot> extends Promise<infer F> ? F : never = {};
     let user: Account;
     let userTokenWallet: Contract<VaultTokenWallet_V1Abi>
 
     it('Setup contracts', async () => {
         await locklift.deployments.fixture();
 
-        context = await setupWever();
+        context = await setupVaultRoot();
 
         const signer = await locklift.keystore.getSigner("0");
 

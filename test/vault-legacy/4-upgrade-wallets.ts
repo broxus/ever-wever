@@ -1,14 +1,14 @@
-import {EMPTY_TVM_CELL, expect, getAddress, setupWever} from "./utils";
+import {EMPTY_TVM_CELL, expect, getAddress, setupVaultLegacy} from "../utils";
 import {Address, Contract, fromNano, getRandomNonce, toNano, zeroAddress} from "locklift";
 import {
     TokenRootUpgradeableAbi,
     TokenWalletUpgradeableAbi,
     UpgradeAssistantFabricAbi,
     VaultTokenRoot_V1Abi
-} from "../build/factorySource";
+} from "../../build/factorySource";
 const logger = require("mocha-logger");
 import _ from 'underscore';
-import {UpgradeAssistant} from "./upgrade-assistant";
+import {UpgradeAssistant} from "../upgrade-assistant";
 
 
 const USERS_AMOUNT = 300;
@@ -28,7 +28,7 @@ describe('Test upgrading root and wallets', async function() {
     it("Setup contracts", async function () {
         await locklift.deployments.fixture();
 
-        context = await setupWever();
+        context = await setupVaultLegacy();
     });
 
     it('Setup legacy root', async () => {
@@ -153,12 +153,14 @@ describe('Test upgrading root and wallets', async function() {
         it('Upgrade root', async () => {
             const VaultTokenRoot_V1 = await locklift.factory.getContractArtifacts('VaultTokenRoot_V1');
 
+            const to_grant = USERS_AMOUNT * Number(USER_INITIAL_BALANCE);
+
             await locklift.tracing.trace(
                 root.methods.upgrade({
                     code: VaultTokenRoot_V1.code
                 }).send({
                     from: context.owner.address,
-                    amount: toNano('10')
+                    amount: (Number(to_grant) + Number(toNano('1'))).toString()
                 })
             );
 
@@ -198,16 +200,7 @@ describe('Test upgrading root and wallets', async function() {
                 .to.be.equal(oldWalletCode, 'Wrong wallet code after upgrading root');
         });
 
-        it('Grant EVERs', async () => {
-            const to_grant = USERS_AMOUNT * Number(USER_INITIAL_BALANCE);
-
-            logger.log(`Granting ${fromNano(to_grant)} EVERs`);
-
-            await locklift.tracing.trace(vault_v1.methods.grant().send({
-                from: context.owner.address,
-                amount: (Number(to_grant) + Number(toNano('1'))).toString()
-            }));
-
+        it('Validate wEVER stats', async () => {
             const total_supply = await vault_v1.methods.totalSupply({ answerId: 0 }).call().then(t => t.value0);
             const balance = await locklift.provider.getBalance(vault_v1.address);
             const reserves = await vault_v1.methods.getReserves({ answerId: 0 }).call().then(t => t.value0);

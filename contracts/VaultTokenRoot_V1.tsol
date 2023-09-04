@@ -36,7 +36,12 @@ contract VaultTokenRoot_V1 is
 
     TvmCell static platformCode_;
     uint32 walletVersion_;
-    address public legacy_vault_;
+
+    // Legacy vault variables
+    address public legacy_vault;
+    address public legacy_vault_token_wallet;
+    bool public legacy_mint_enabled;
+    uint128 public legacy_vault_reserves;
 
     constructor() public {
         if (msg.pubkey() != 0) {
@@ -62,6 +67,21 @@ contract VaultTokenRoot_V1 is
         );
     }
 
+    function setLegacyVault(
+        address legacy_vault_
+    ) external override reserve onlyRootOwner {
+        legacy_vault = legacy_vault_;
+        legacy_vault_token_wallet = _getExpectedWalletAddress(legacy_vault);
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
+    function toggleLegacyMint() external override reserve onlyRootOwner {
+        legacy_mint_enabled = !legacy_mint_enabled;
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
     function mint(
         uint128 amount,
         address recipient,
@@ -73,30 +93,27 @@ contract VaultTokenRoot_V1 is
         override(TokenRootBase,ITokenRoot)
         external
         virtual
-        onlyRootOwner
     {
+        require(
+            rootOwner_.value != 0 && (rootOwner_ == msg.sender || msg.sender == legacy_vault),
+            TokenErrors.NOT_OWNER
+        );
         require(_mintEnabled(), TokenErrors.MINT_DISABLED);
         require(amount > 0, TokenErrors.WRONG_AMOUNT);
         require(recipient.value != 0, TokenErrors.WRONG_RECIPIENT);
 
         tvm.rawReserve(_reserve(), 0);
 
-        // TODO: tunnel?
-        if (msg.sender != legacy_vault_) {
-            _mint(
-                amount,
-                recipient,
-                deployWalletValue,
-                remainingGasTo,
-                notify,
-                payload
-            );
-        } else {
+        if (msg.sender == legacy_vault) {
+            legacy_vault_reserves += amount;
+        }
+
+        if (msg.sender == legacy_vault && legacy_mint_enabled) {
             TvmCell stateInit = _buildWalletInitData(recipient);
 
             address recipientWallet;
 
-            if(deployWalletValue > 0) {
+            if (deployWalletValue > 0) {
                 recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
             } else {
                 recipientWallet = address(tvm.hash(stateInit));
@@ -110,6 +127,15 @@ contract VaultTokenRoot_V1 is
                 bounce: true
             }(
                 amount,
+                remainingGasTo,
+                notify,
+                payload
+            );
+        } else {
+            _mint(
+                amount,
+                recipient,
+                deployWalletValue,
                 remainingGasTo,
                 notify,
                 payload
@@ -304,6 +330,10 @@ contract VaultTokenRoot_V1 is
         require(_burnEnabled(), TokenErrors.BURN_DISABLED);
         require(msg.sender == _getExpectedWalletAddress(walletOwner), TokenErrors.SENDER_IS_NOT_VALID_WALLET);
 
+        if (msg.sender == legacy_vault_token_wallet) {
+            legacy_vault_reserves -= amount;
+        }
+
         _updateTotalSupply(-amount);
         tvm.rawReserve(_reserve(), 2);
 
@@ -326,7 +356,7 @@ contract VaultTokenRoot_V1 is
     }
 
     function _reserve() internal view override returns(uint128) {
-        return totalSupply_ + INITIAL_BALANCE;
+        return totalSupply_ - legacy_vault_reserves + INITIAL_BALANCE;
     }
 
     function getReserves() external responsible override view returns (uint128) {
@@ -348,6 +378,7 @@ contract VaultTokenRoot_V1 is
     }
 
     // VAULT
+    // TODO: gasToValue
     uint128 constant RECEIVE_SAFE_FEE = 1 ever;
     uint128 constant WRAP_DEPLOY_WALLET_VALUE = 0.05 ever;
     uint128 constant INITIAL_BALANCE = 1 ever;
@@ -370,7 +401,7 @@ contract VaultTokenRoot_V1 is
         so the granted EVERs won't be withdrawn on the wrapping / unwrapping
         @dev Be careful! Since you don't have WEVER tokens, you can't redeem granted EVERs
     */
-    function grant() external override reserve {
+    function grant() public override reserve {
         _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
@@ -520,5 +551,13 @@ contract VaultTokenRoot_V1 is
             burnByRootDisabled_,
             burnPaused_
         ) = params.decode(bool, bool, bool);
+
+        _deployWallet(
+            _buildWalletInitData(address(this)),
+            WRAP_DEPLOY_WALLET_VALUE,
+            rootOwner_
+        );
+
+        grant();
     }
 }

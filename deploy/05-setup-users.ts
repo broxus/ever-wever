@@ -1,5 +1,5 @@
 import {toNano, WalletTypes} from "locklift";
-import {VaultAbi} from "../build/factorySource";
+import {VaultAbi, VaultTokenRoot_V1Abi} from "../build/factorySource";
 import {getTokenWalletAddress} from "../test/utils";
 
 
@@ -21,9 +21,9 @@ const setupUser = async (name: string, signerId: string) => {
         account: user
     } = await locklift.deployments.getAccount(name);
 
-    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+    const root = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('VaultRoot');
 
-    await vault.methods
+    await root.methods
         .deployWallet({
             walletOwner: user.address,
             deployWalletValue: toNano(2),
@@ -34,10 +34,10 @@ const setupUser = async (name: string, signerId: string) => {
             amount: toNano(5),
         });
 
-    const userTokenWalletAddress = await getTokenWalletAddress(vault, user.address);
+    const userTokenWalletAddress = await getTokenWalletAddress(root, user.address);
 
     await locklift.deployments.saveContract({
-        deploymentName: `${name}TokenWallet`,
+        deploymentName: `VaultRoot${name}TokenWallet`,
         contractName: 'VaultTokenWallet_V1',
         address: userTokenWalletAddress
     }, true);

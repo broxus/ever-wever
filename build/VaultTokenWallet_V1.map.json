@@ -466,312 +466,6 @@
         "line": 778
       }
     },
-    "036d7aafa37fc93e4b91b1375742570287b00d090f2b90e50ad3db4967c3a5b9": {
-      "0": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "16": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "24": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "40": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "56": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "64": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "96": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "112": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "120": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "128": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "144": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "160": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "176": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "192": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "200": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 412
-      },
-      "224": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 417
-      },
-      "240": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 417
-      },
-      "248": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 417
-      },
-      "264": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 419
-      },
-      "280": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 419
-      },
-      "296": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 419
-      },
-      "312": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 419
-      },
-      "320": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 420
-      },
-      "336": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 420
-      },
-      "344": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 420
-      },
-      "352": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 420
-      },
-      "368": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 420
-      },
-      "384": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1461
-      },
-      "392": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 423
-      },
-      "400": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 423
-      },
-      "416": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "432": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "448": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "464": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "480": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "496": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "504": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "512": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "536": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "552": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "560": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "576": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "584": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "592": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "616": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "632": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "640": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "688": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "696": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "712": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "728": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "736": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "744": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "760": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "768": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "776": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "784": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "792": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "800": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "808": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "816": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "824": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "832": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "840": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 424
-      },
-      "848": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "856": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "864": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "888": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "896": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "912": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "928": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "936": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "944": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "968": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "984": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      },
-      "1000": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 437
-      }
-    },
     "0a3e3ab615152f99463609e59f86fbeffa7288c0a9f152d76d02d5e78f1de775": {
       "0": {
         "filename": "../contracts/VaultTokenWallet_V1.tsol",
@@ -1293,91 +987,91 @@
     "10eaae9aaa473aba644c05d12c21c42b373291c0d3e83eb948fc4c77c5efc1cd": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2651
+        "line": 2655
       },
       "16": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2652
+        "line": 2656
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2653
+        "line": 2657
       },
       "40": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2654
+        "line": 2658
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2655
+        "line": 2659
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2656
+        "line": 2660
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2657
+        "line": 2661
       },
       "96": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2658
+        "line": 2662
       },
       "104": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2659
+        "line": 2663
       },
       "112": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2660
+        "line": 2664
       },
       "120": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2661
+        "line": 2665
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2662
+        "line": 2666
       },
       "152": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2663
+        "line": 2667
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2664
+        "line": 2668
       },
       "176": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2665
+        "line": 2669
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2666
+        "line": 2670
       },
       "200": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2667
+        "line": 2671
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2668
+        "line": 2672
       },
       "232": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2669
+        "line": 2673
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2670
+        "line": 2674
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2671
+        "line": 2675
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2672
+        "line": 2676
       }
     },
     "11c22bbe275532fd08f946fc567337e021918461a23026b23b321d79a1079b5d": {
@@ -2137,85 +1831,85 @@
       },
       "520": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2509
+        "line": 2513
       },
       "528": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2511
+        "line": 2515
       },
       "536": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2513
+        "line": 2517
       },
       "544": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2514
+        "line": 2518
       }
     },
     "2929c509b49e7100b7a6a837c2ebd6cc7624c634bf0fe1da3054ce7862ba7576": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2881
+        "line": 2885
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2882
+        "line": 2886
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2883
+        "line": 2887
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2884
+        "line": 2888
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2887
+        "line": 2891
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2888
+        "line": 2892
       },
       "120": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2889
+        "line": 2893
       },
       "128": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2890
+        "line": 2894
       },
       "144": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2893
+        "line": 2897
       },
       "152": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2894
+        "line": 2898
       },
       "200": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2895
+        "line": 2899
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2896
+        "line": 2900
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2899
+        "line": 2903
       },
       "232": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2900
+        "line": 2904
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2901
+        "line": 2905
       },
       "288": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2902
+        "line": 2906
       }
     },
     "2a655f7edda5f3416ce8d77b959997610908feb057db965bf619f631854719c9": {
@@ -2737,93 +2431,103 @@
     "34224053eaddec6a3a9df08a9feb2a3f3eec767b2aefdd20e234c7d2c6e79f3f": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2877
+        "line": 2881
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2878
+        "line": 2882
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2879
+        "line": 2883
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2880
+        "line": 2884
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2906
+        "line": 2910
       },
       "88": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2907
+        "line": 2911
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2908
+        "line": 2912
       },
       "144": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2909
+        "line": 2913
       },
       "160": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2935
+        "line": 2939
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2936
+        "line": 2940
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2937
+        "line": 2941
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2938
+        "line": 2942
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2964
+        "line": 2968
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2965
+        "line": 2969
       },
       "296": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2966
+        "line": 2970
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2967
+        "line": 2971
+      }
+    },
+    "3a84559a48a4b9fa50da635b1c3912429c1bdd1236dff1c7d0b203a55b1099de": {
+      "0": {
+        "filename": "<save-my-code>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<save-my-code>",
+        "line": 7
       }
     },
     "3b6b4d0a3c1cf8ea5126ec36cc73af6dca4e74c4639920738a040449cb986b88": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1566
+        "line": 1570
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1567
+        "line": 1571
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1568
+        "line": 1572
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1569
+        "line": 1573
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1570
+        "line": 1574
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1571
+        "line": 1575
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletDestroyableBase.tsol",
@@ -2859,319 +2563,85 @@
       },
       "160": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1585
+        "line": 1589
       },
       "176": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1588
-      },
-      "184": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1589
-      },
-      "200": {
-        "filename": "VaultTokenWallet_V1.code",
         "line": 1592
-      }
-    },
-    "3c16005eff6fc2daf4116f0b4fde10ba65aea97754647504b8a11a0957715930": {
-      "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2815
-      },
-      "16": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2816
-      },
-      "24": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2817
-      },
-      "40": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2818
-      },
-      "56": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2819
-      },
-      "72": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2820
-      },
-      "80": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2823
-      },
-      "96": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2824
-      },
-      "104": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2825
-      },
-      "120": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2828
-      },
-      "136": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2829
-      },
-      "144": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2830
-      },
-      "160": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2831
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2832
+        "line": 1593
       },
       "200": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2833
-      },
-      "208": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2834
-      },
-      "224": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2835
-      },
-      "232": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2836
-      },
-      "248": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2837
-      },
-      "256": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2838
-      },
-      "264": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2839
-      },
-      "280": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2840
-      },
-      "288": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2841
-      },
-      "296": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2843
-      },
-      "304": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2844
-      },
-      "312": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2845
-      },
-      "328": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2847
-      },
-      "336": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2848
-      },
-      "352": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2849
-      },
-      "368": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2851
-      },
-      "376": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2852
-      },
-      "392": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2853
-      },
-      "400": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2854
-      },
-      "416": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2856
-      },
-      "424": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2857
-      },
-      "440": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2858
-      },
-      "448": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "464": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "472": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "480": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "496": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "504": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "520": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "544": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "552": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "592": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "600": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "608": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "624": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "640": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2860
-      },
-      "656": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2861
-      },
-      "664": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2862
-      },
-      "680": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2863
-      },
-      "688": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2864
-      },
-      "704": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2865
-      },
-      "720": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2866
-      },
-      "728": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2867
-      },
-      "744": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2870
+        "line": 1596
       }
     },
     "43e7d9a556f1252d03a7d0c183245766b6234acf6e7f1ac13d59fa3429787cc1": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2939
+        "line": 2943
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2940
+        "line": 2944
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2941
+        "line": 2945
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2942
+        "line": 2946
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2945
+        "line": 2949
       },
       "88": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2946
+        "line": 2950
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2947
+        "line": 2951
       },
       "144": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2948
+        "line": 2952
       },
       "160": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2951
+        "line": 2955
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2952
+        "line": 2956
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2953
+        "line": 2957
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2954
+        "line": 2958
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2957
+        "line": 2961
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2958
+        "line": 2962
       },
       "296": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2959
+        "line": 2963
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2960
+        "line": 2964
       }
     },
     "457b920c639afe6168679b1abde2505f73f24d4682d3faf5d99312585bb0df3e": {
@@ -3260,70 +2730,356 @@
         "line": 49
       }
     },
-    "4dd085d4342b000222f9bd8f93ab1a7c3324895ce870642e9ff0ab74ad831ebd": {
+    "48937b9f8aad2d78e37e86bf9bb193281f3ee7ac8e06d3c9d600ea9f9703bfa4": {
       "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3002
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
-      "8": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3003
+      "16": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
+      },
+      "24": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
+      },
+      "40": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
       "56": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3004
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
       "64": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3005
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
-      "80": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3008
+      "96": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
-      "88": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3009
+      "112": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
-      "136": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3010
+      "120": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
+      },
+      "128": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
       "144": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3011
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
       "160": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3014
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
-      "168": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3015
+      "176": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
-      "216": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3016
+      "192": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
+      },
+      "200": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 412
       },
       "224": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3017
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 417
       },
       "240": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3020
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 417
       },
       "248": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3021
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 417
+      },
+      "264": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 419
+      },
+      "280": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 419
       },
       "296": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3022
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 419
       },
-      "304": {
+      "312": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 419
+      },
+      "320": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 420
+      },
+      "336": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 420
+      },
+      "344": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 420
+      },
+      "352": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 420
+      },
+      "368": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 420
+      },
+      "384": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 3023
+        "line": 1461
+      },
+      "392": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 423
+      },
+      "400": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 423
+      },
+      "416": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 423
+      },
+      "432": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 423
+      },
+      "448": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 423
+      },
+      "456": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 423
+      },
+      "472": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "488": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "504": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "520": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "536": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "552": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "560": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "568": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "592": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "608": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "616": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "632": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "640": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "648": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "672": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "688": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "696": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "744": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "752": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "768": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "784": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "792": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "800": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "816": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "824": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "832": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "840": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "848": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "856": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "864": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "872": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "880": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "888": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "896": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 424
+      },
+      "904": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "912": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "920": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "944": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "952": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "968": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "984": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "992": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      }
+    },
+    "4e55737b46dcbce4f6a184ca967614ad00dbb7f869c6ab1e2b79cabf9b9f3cf5": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
       }
     },
     "4ecf7bc1f4471aec13bf771120d0c7f3c0a3fe6d01cd885be5123a00c7adffdc": {
@@ -3574,6 +3330,40 @@
         "line": 404
       }
     },
+    "5a24477d3e7e58b3b34993b087893a45de67ad6ffa2a11b490370fd0630c6151": {
+      "0": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3002
+      },
+      "8": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3003
+      },
+      "56": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3004
+      },
+      "64": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3005
+      },
+      "80": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3031
+      },
+      "88": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3032
+      },
+      "136": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3033
+      },
+      "144": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3034
+      }
+    },
     "5b2fc5604d524c747aa3c5bda550cdfd0d58b2ec62635dbc9a0450af7168caff": {
       "0": {
         "filename": "../contracts/VaultTokenWallet_V1.tsol",
@@ -3612,64 +3402,30 @@
         "line": 103
       }
     },
-    "5d65e8549a98975dbe317af76037aab31085aece2c7c246b357793e308883371": {
-      "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2998
-      },
-      "8": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2999
-      },
-      "56": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3000
-      },
-      "64": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3001
-      },
-      "80": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3027
-      },
-      "88": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3028
-      },
-      "136": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3029
-      },
-      "144": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 3030
-      }
-    },
     "5f56fced6c343d378c6b975e2c3a6ea3d21ccea8c7ace923f81214648e7bfc6d": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1664
+        "line": 1668
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1665
+        "line": 1669
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1666
+        "line": 1670
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1667
+        "line": 1671
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1668
+        "line": 1672
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1669
+        "line": 1673
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -3697,271 +3453,271 @@
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1680
+        "line": 1684
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1683
+        "line": 1687
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1684
+        "line": 1688
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1685
+        "line": 1689
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1686
+        "line": 1690
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1687
+        "line": 1691
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1688
+        "line": 1692
       },
       "256": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1689
+        "line": 1693
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1690
+        "line": 1694
       },
       "272": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1691
+        "line": 1695
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1692
+        "line": 1696
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1693
+        "line": 1697
       },
       "312": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1694
+        "line": 1698
       },
       "464": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1695
+        "line": 1699
       },
       "480": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1696
+        "line": 1700
       },
       "496": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1697
+        "line": 1701
       },
       "504": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1698
+        "line": 1702
       },
       "512": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1700
+        "line": 1704
       },
       "528": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1701
+        "line": 1705
       },
       "544": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1702
+        "line": 1706
       },
       "552": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1703
+        "line": 1707
       },
       "568": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1704
+        "line": 1708
       },
       "576": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1705
+        "line": 1709
       },
       "592": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1706
+        "line": 1710
       },
       "608": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1707
+        "line": 1711
       },
       "624": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1708
+        "line": 1712
       },
       "640": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1709
+        "line": 1713
       },
       "648": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1710
+        "line": 1714
       },
       "656": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1711
+        "line": 1715
       },
       "672": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1712
+        "line": 1716
       },
       "688": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1713
+        "line": 1717
       },
       "696": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1714
+        "line": 1718
       },
       "712": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1715
+        "line": 1719
       },
       "720": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1716
+        "line": 1720
       },
       "728": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1717
+        "line": 1721
       },
       "744": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1718
+        "line": 1722
       },
       "760": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1719
+        "line": 1723
       },
       "776": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1720
+        "line": 1724
       },
       "792": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1721
+        "line": 1725
       },
       "808": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1722
+        "line": 1726
       },
       "824": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1723
+        "line": 1727
       },
       "848": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1724
+        "line": 1728
       },
       "864": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1725
+        "line": 1729
       },
       "872": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1726
+        "line": 1730
       },
       "888": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1727
+        "line": 1731
       },
       "904": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1729
+        "line": 1733
       },
       "912": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1730
+        "line": 1734
       },
       "928": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1731
+        "line": 1735
       },
       "944": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1734
+        "line": 1738
       }
     },
     "5ffcffcbd6c3235e37e7a4dc91ebf185675c8514c59212bda59e8efb71b07c34": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2968
+        "line": 2972
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2969
+        "line": 2973
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2970
+        "line": 2974
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2971
+        "line": 2975
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2974
+        "line": 2978
       },
       "88": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2975
+        "line": 2979
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2976
+        "line": 2980
       },
       "144": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2977
+        "line": 2981
       },
       "160": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2980
+        "line": 2984
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2981
+        "line": 2985
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2982
+        "line": 2986
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2983
+        "line": 2987
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2986
+        "line": 2990
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2987
+        "line": 2991
       },
       "296": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2988
+        "line": 2992
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2989
+        "line": 2993
       }
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
         "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
+        "line": 338
       }
     },
     "61d0bb84418d0e0e1d7002fd91a5f28abc051248dd60263178556782964f41ec": {
@@ -4082,40 +3838,6 @@
       "304": {
         "filename": "stdlib.sol",
         "line": 79
-      }
-    },
-    "673708617582e11a687c836f822ce4369cec6f59609427e8f1b66c0b0d6087a8": {
-      "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2873
-      },
-      "8": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2874
-      },
-      "56": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2875
-      },
-      "64": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2876
-      },
-      "80": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2994
-      },
-      "88": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2995
-      },
-      "136": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2996
-      },
-      "144": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2997
       }
     },
     "6decc555c83ec998e8cc299309f31e7ed321d9428a4568a7aece83b9d9ebd094": {
@@ -4467,27 +4189,27 @@
     "78bdbc7d5082b21a8118fcc6cd816e65af1bfea5c179083b2d76173defe3a2f2": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1617
+        "line": 1621
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1618
+        "line": 1622
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1619
+        "line": 1623
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1620
+        "line": 1624
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1621
+        "line": 1625
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1622
+        "line": 1626
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBurnableBase.tsol",
@@ -4547,19 +4269,19 @@
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1642
+        "line": 1646
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1645
+        "line": 1649
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1646
+        "line": 1650
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1649
+        "line": 1653
       }
     },
     "7b3fd37b5db1856cc6579749ed2a480d30f4e56650253a398fb4aa744f18e265": {
@@ -4611,27 +4333,27 @@
     "7d29a1425d24992ce03689b73c2333298ba4e50e96defdff4ed543c34226b8a1": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1750
+        "line": 1754
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1751
+        "line": 1755
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1752
+        "line": 1756
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1753
+        "line": 1757
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1754
+        "line": 1758
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1755
+        "line": 1759
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -4659,353 +4381,353 @@
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1766
+        "line": 1770
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1769
+        "line": 1773
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1770
+        "line": 1774
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1771
+        "line": 1775
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1772
+        "line": 1776
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1773
+        "line": 1777
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1774
+        "line": 1778
       },
       "256": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1775
+        "line": 1779
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1776
+        "line": 1780
       },
       "272": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1777
+        "line": 1781
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1778
+        "line": 1782
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1779
+        "line": 1783
       },
       "312": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1780
+        "line": 1784
       },
       "320": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1781
+        "line": 1785
       },
       "344": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1782
+        "line": 1786
       },
       "352": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1783
+        "line": 1787
       },
       "360": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1784
+        "line": 1788
       },
       "408": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1785
+        "line": 1789
       },
       "416": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1786
+        "line": 1790
       },
       "424": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1787
+        "line": 1791
       },
       "432": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1788
+        "line": 1792
       },
       "440": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1790
+        "line": 1794
       },
       "456": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1791
+        "line": 1795
       },
       "472": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1792
+        "line": 1796
       },
       "480": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1793
+        "line": 1797
       },
       "496": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1794
+        "line": 1798
       },
       "504": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1795
+        "line": 1799
       },
       "520": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1796
+        "line": 1800
       },
       "536": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1797
+        "line": 1801
       },
       "552": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1798
+        "line": 1802
       },
       "568": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1799
+        "line": 1803
       },
       "576": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1800
+        "line": 1804
       },
       "584": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1801
+        "line": 1805
       },
       "600": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1802
+        "line": 1806
       },
       "616": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1803
+        "line": 1807
       },
       "624": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1804
+        "line": 1808
       },
       "640": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1805
+        "line": 1809
       },
       "648": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1806
+        "line": 1810
       },
       "656": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1807
+        "line": 1811
       },
       "672": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1808
+        "line": 1812
       },
       "688": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1809
+        "line": 1813
       },
       "696": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1810
+        "line": 1814
       },
       "720": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1811
+        "line": 1815
       },
       "728": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1812
+        "line": 1816
       },
       "736": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1813
+        "line": 1817
       },
       "752": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1814
+        "line": 1818
       },
       "768": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1815
+        "line": 1819
       },
       "792": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1816
+        "line": 1820
       },
       "800": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1817
+        "line": 1821
       },
       "808": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1818
+        "line": 1822
       },
       "816": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1819
+        "line": 1823
       },
       "832": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1820
+        "line": 1824
       },
       "848": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1822
+        "line": 1826
       },
       "856": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1823
+        "line": 1827
       },
       "872": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1824
+        "line": 1828
       },
       "888": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1827
+        "line": 1831
       }
     },
     "8045016bc7df4bfd6ba71d8798b0f8db9d9eb666767d2845616e8063a5ba733e": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2680
+        "line": 2684
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2681
+        "line": 2685
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2682
+        "line": 2686
       },
       "32": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2683
+        "line": 2687
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2684
+        "line": 2688
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2685
+        "line": 2689
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2686
+        "line": 2690
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2687
+        "line": 2691
       },
       "96": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2688
+        "line": 2692
       },
       "112": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2693
+        "line": 2697
       },
       "120": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2694
+        "line": 2698
       },
       "128": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2695
+        "line": 2699
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2696
+        "line": 2700
       },
       "152": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2697
+        "line": 2701
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2698
+        "line": 2702
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2703
+        "line": 2707
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2704
+        "line": 2708
       },
       "200": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2705
+        "line": 2709
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2706
+        "line": 2710
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2708
+        "line": 2712
       },
       "232": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2709
+        "line": 2713
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2710
+        "line": 2714
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2711
+        "line": 2715
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2712
+        "line": 2716
       },
       "296": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2713
+        "line": 2717
       },
       "312": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2714
+        "line": 2718
       },
       "328": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2715
+        "line": 2719
       },
       "344": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2716
+        "line": 2720
       },
       "368": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2717
+        "line": 2721
       },
       "384": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2718
+        "line": 2722
       },
       "392": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2719
+        "line": 2723
       }
     },
     "82e57798adbd4872a2d7763a690bb0d8d7f862f206c0ef93c40d819d07d1e52e": {
@@ -5348,6 +5070,28 @@
         "line": 341
       }
     },
+    "8bbb96485ddfb74bd549f94ab7c3ac615e9f0559b952a7d708804314d1b4b812": {
+      "0": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "24": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "40": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "56": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 437
+      },
+      "72": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1520
+      }
+    },
     "8d080d2e0045f191b8dd7a746f36869de0f1e7a7ee1b561c3c6b09faeaf2c69c": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -5410,76 +5154,30 @@
         "line": 75
       }
     },
-    "8e0d21a4fb3c9f6300ef93fdaf7b94914bd9763c679fb9bc2dcfeb61597efde7": {
-      "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
-      },
-      "48": {
-        "filename": "<entry-selector>",
-        "line": 5
-      },
-      "56": {
-        "filename": "<entry-selector>",
-        "line": 6
-      },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
-      },
-      "96": {
-        "filename": "<entry-selector>",
-        "line": 9
-      },
-      "112": {
-        "filename": "<entry-selector>",
-        "line": 10
-      },
-      "128": {
-        "filename": "<entry-selector>",
-        "line": 11
-      }
-    },
     "9083ad51085bc55b7bbbad79db622011f056ec45c3e2abe0e970305021b25116": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2675
+        "line": 2679
       },
       "16": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2676
+        "line": 2680
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2677
+        "line": 2681
       },
       "40": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2678
+        "line": 2682
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2679
+        "line": 2683
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2721
+        "line": 2725
       }
     },
     "91ed1c05abf8f4440f2343eb296e8f84246a4cffe8708a6f25e794594e346efe": {
@@ -5495,27 +5193,27 @@
     "92fc8e0e58e43076d3e52c06e6c3fe64b47b8576cae1f78c3ed6d245c21fffbf": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2136
+        "line": 2140
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2137
+        "line": 2141
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2138
+        "line": 2142
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2139
+        "line": 2143
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2140
+        "line": 2144
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2141
+        "line": 2145
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -5579,19 +5277,65 @@
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2162
+        "line": 2166
       },
       "256": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2165
+        "line": 2169
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2166
+        "line": 2170
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2169
+        "line": 2173
+      }
+    },
+    "966c43f6343be472d6deccb949417e59aae59305b4432748b49a4392d7865925": {
+      "40": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 180
+      },
+      "56": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 180
+      },
+      "64": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 180
+      },
+      "80": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "88": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "104": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "112": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "128": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "136": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "152": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
+      },
+      "160": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 181
       }
     },
     "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},
@@ -5664,27 +5408,27 @@
     "9f976f4e764d9b246c14e5e6caaf709ee8b54e7a553afb870312c0e5e968ba36": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1519
+        "line": 1523
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1520
+        "line": 1524
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1521
+        "line": 1525
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1522
+        "line": 1526
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1523
+        "line": 1527
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1524
+        "line": 1528
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBurnableByRootBase.tsol",
@@ -5744,19 +5488,121 @@
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1544
+        "line": 1548
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1547
+        "line": 1551
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1548
+        "line": 1552
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1551
+        "line": 1555
+      }
+    },
+    "a187c70cfcb8828ab7deafbf7791bf3c26ca4d6e4475f1759071c809dc3ab41c": {
+      "0": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1388
+      },
+      "8": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1389
+      },
+      "24": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1390
+      },
+      "48": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1391
+      },
+      "64": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1392
+      },
+      "72": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1393
+      },
+      "88": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "96": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "104": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "112": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "120": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "128": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "136": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "152": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "168": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "176": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "184": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "192": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "208": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "224": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "232": {
+        "filename": "../contracts/VaultTokenWallet_V1.tsol",
+        "line": 399
+      },
+      "240": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1414
+      },
+      "256": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1417
+      },
+      "264": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1418
+      },
+      "280": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 1421
       }
     },
     "a2603a7740bde6e121f3bfc613b09fc95c82f694e6d02f387a95a6c3b9e06731": {
@@ -6043,6 +5889,240 @@
         "line": 140
       }
     },
+    "ae2b44cba8719373f753fda5ccfcad254986d4d09dc62b1e74729b72afeccd53": {
+      "0": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2819
+      },
+      "16": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2820
+      },
+      "24": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2821
+      },
+      "40": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2822
+      },
+      "56": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2823
+      },
+      "72": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2824
+      },
+      "80": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2827
+      },
+      "96": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2828
+      },
+      "104": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2829
+      },
+      "120": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2832
+      },
+      "136": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2833
+      },
+      "144": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2834
+      },
+      "160": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2835
+      },
+      "184": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2836
+      },
+      "200": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2837
+      },
+      "208": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2838
+      },
+      "224": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2839
+      },
+      "232": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2840
+      },
+      "248": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2841
+      },
+      "256": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2842
+      },
+      "264": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2843
+      },
+      "280": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2844
+      },
+      "288": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2845
+      },
+      "296": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2847
+      },
+      "304": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2848
+      },
+      "312": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2849
+      },
+      "328": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2851
+      },
+      "336": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2852
+      },
+      "352": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2853
+      },
+      "368": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2855
+      },
+      "376": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2856
+      },
+      "392": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2857
+      },
+      "400": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2858
+      },
+      "416": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2860
+      },
+      "424": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2861
+      },
+      "440": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2862
+      },
+      "448": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "464": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "472": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "480": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "496": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "504": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "520": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "544": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "552": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "592": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "600": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "608": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "624": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "640": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2864
+      },
+      "656": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2865
+      },
+      "664": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2866
+      },
+      "680": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2867
+      },
+      "688": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2868
+      },
+      "704": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2869
+      },
+      "720": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2870
+      },
+      "728": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2871
+      },
+      "744": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2874
+      }
+    },
     "b2d5e87c09356f2b465cedd87ca700c42eaf10485a5e6244508b48b8ea361f6e": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -6113,108 +6193,6 @@
         "line": 387
       }
     },
-    "b37187b4a5c605101a583dedde4d353a79d34c79a2b7b416154e57d9387445f6": {
-      "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1388
-      },
-      "8": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1389
-      },
-      "24": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1390
-      },
-      "48": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1391
-      },
-      "64": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1392
-      },
-      "72": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1393
-      },
-      "88": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "96": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "104": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "112": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "120": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "128": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "136": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "152": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "168": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "176": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "184": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "192": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "208": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "224": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "232": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 399
-      },
-      "240": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1414
-      },
-      "256": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1417
-      },
-      "264": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1418
-      },
-      "280": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1421
-      }
-    },
     "b41664e0750da7d4f230ed75a93868ae9e6cf6b6ac51209585c01479cbe30a42": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -6251,6 +6229,40 @@
       "112": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
         "line": 68
+      }
+    },
+    "b89885c6d1a29a538259fd02c878740ef7ab81b037a3507bb3dff98a52cd8b4c": {
+      "0": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2877
+      },
+      "8": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2878
+      },
+      "56": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2879
+      },
+      "64": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2880
+      },
+      "80": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2998
+      },
+      "88": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2999
+      },
+      "136": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3000
+      },
+      "144": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3001
       }
     },
     "b8b2bebd3f69061c6f456f4d235faa6970a0bcc4947daf6494e067a2ca846921": {
@@ -6506,27 +6518,27 @@
     "bcebd5510e542e9a1086e75ede56240c1a29af2794ab329ebc928f3a415efa4e": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1936
+        "line": 1940
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1937
+        "line": 1941
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1938
+        "line": 1942
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1939
+        "line": 1943
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1940
+        "line": 1944
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1941
+        "line": 1945
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -6554,265 +6566,403 @@
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1952
+        "line": 1956
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1955
+        "line": 1959
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1956
+        "line": 1960
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1957
+        "line": 1961
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1958
+        "line": 1962
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1959
+        "line": 1963
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1960
+        "line": 1964
       },
       "256": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1961
+        "line": 1965
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1962
+        "line": 1966
       },
       "272": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1963
+        "line": 1967
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1964
+        "line": 1968
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1965
+        "line": 1969
       },
       "312": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1966
+        "line": 1970
       },
       "464": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1967
+        "line": 1971
       },
       "480": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1968
+        "line": 1972
       },
       "488": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1969
+        "line": 1973
       },
       "496": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1970
+        "line": 1974
       },
       "504": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1972
+        "line": 1976
       },
       "520": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1973
+        "line": 1977
       },
       "536": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1974
+        "line": 1978
       },
       "544": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1975
+        "line": 1979
       },
       "560": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1976
+        "line": 1980
       },
       "568": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1977
+        "line": 1981
       },
       "584": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1978
+        "line": 1982
       },
       "600": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1979
+        "line": 1983
       },
       "616": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1980
+        "line": 1984
       },
       "632": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1981
+        "line": 1985
       },
       "640": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1982
+        "line": 1986
       },
       "648": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1983
+        "line": 1987
       },
       "664": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1984
+        "line": 1988
       },
       "680": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1985
+        "line": 1989
       },
       "688": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1986
+        "line": 1990
       },
       "704": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1987
+        "line": 1991
       },
       "712": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1988
+        "line": 1992
       },
       "720": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1989
+        "line": 1993
       },
       "736": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1990
+        "line": 1994
       },
       "752": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1991
+        "line": 1995
       },
       "768": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1992
+        "line": 1996
       },
       "784": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1993
+        "line": 1997
       },
       "800": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1994
+        "line": 1998
       },
       "816": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1995
+        "line": 1999
       },
       "840": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1996
+        "line": 2000
       },
       "848": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1997
+        "line": 2001
       },
       "856": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1998
+        "line": 2002
       },
       "872": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1999
+        "line": 2003
       },
       "888": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2001
+        "line": 2005
       },
       "896": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2002
+        "line": 2006
       },
       "912": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2003
+        "line": 2007
       },
       "928": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2006
+        "line": 2010
       }
     },
     "bcec1006b324f822b97de254cd0453e7e333503fe4d7f0bd1522c11522c47f93": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2910
+        "line": 2914
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2911
+        "line": 2915
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2912
+        "line": 2916
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2913
+        "line": 2917
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2916
+        "line": 2920
       },
       "88": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2917
+        "line": 2921
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2918
+        "line": 2922
       },
       "144": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2919
+        "line": 2923
       },
       "160": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2922
+        "line": 2926
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2923
+        "line": 2927
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2924
+        "line": 2928
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2925
+        "line": 2929
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2928
+        "line": 2932
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2929
+        "line": 2933
       },
       "296": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2930
+        "line": 2934
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2931
+        "line": 2935
+      }
+    },
+    "c395c7f82285dfda9f94df3a40b1c41ca9beaefae70bbb341a07d4a24b3937b6": {
+      "0": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2769
+      },
+      "16": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2770
+      },
+      "24": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2771
+      },
+      "40": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2772
+      },
+      "56": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2773
+      },
+      "72": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2774
+      },
+      "80": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2775
+      },
+      "88": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2776
+      },
+      "104": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2777
+      },
+      "120": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2778
+      },
+      "128": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2779
+      },
+      "144": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2780
+      },
+      "168": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2781
+      },
+      "184": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2782
+      },
+      "192": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2783
+      },
+      "208": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2784
+      },
+      "248": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2785
+      },
+      "264": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2786
+      },
+      "272": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2787
+      },
+      "288": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2788
+      },
+      "296": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2789
+      },
+      "312": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2790
+      },
+      "328": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2791
+      },
+      "344": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2797
+      },
+      "352": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2798
+      },
+      "368": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2799
+      },
+      "384": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2803
+      },
+      "392": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2804
+      },
+      "416": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2805
+      },
+      "432": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2806
+      },
+      "440": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2807
+      },
+      "456": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2811
+      },
+      "464": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2812
+      },
+      "480": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 2815
       }
     },
     "cad258c6649cc57f240f88198b173693f3e28edca86c73195260a4327a7337bf": {
@@ -6963,12 +7113,6 @@
         "line": 130
       }
     },
-    "d082360653755262835885e042ffb0365b56f18cdb074a101d3ea551406583e8": {
-      "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 1516
-      }
-    },
     "d1df429c327e53600761d85c6eefb7a15ee0d14616b6c2d97f18a2d1130cd66a": {
       "0": {
         "filename": "../contracts/VaultTokenWallet_V1.tsol",
@@ -7114,35 +7258,35 @@
     "d285188478dd0384e861766a01fcdecd190acef5968173535792d47ce629ce43": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2788
+        "line": 2792
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2789
+        "line": 2793
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2790
+        "line": 2794
       },
       "32": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2407
+        "line": 2411
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2408
+        "line": 2412
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2409
+        "line": 2413
       },
       "88": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2410
+        "line": 2414
       },
       "96": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2411
+        "line": 2415
       },
       "112": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -7332,53 +7476,7 @@
     "d558e53bf690afc8a76b8887a99a49a52db1bd24bec5da84780ea0e7bc0aad3f": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2689
-      }
-    },
-    "dad3237cd0fc52438b6232b4093eb222faa5af21374f1b805fe9c6cba355e823": {
-      "4": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 180
-      },
-      "20": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 180
-      },
-      "28": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 180
-      },
-      "44": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "52": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "68": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "76": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "92": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "100": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "116": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
-      },
-      "124": {
-        "filename": "../contracts/VaultTokenWallet_V1.tsol",
-        "line": 181
+        "line": 2693
       }
     },
     "dff4d4263babcf266c21a51b3578ba1569479a94a56ccef91e03891cfa04607e": {
@@ -7693,40 +7791,30 @@
         "line": 1385
       }
     },
-    "e2753e6e16d0bdb0af0e0f8ff29ac9c98d710c464eb8b6136689a22f54077480": {
-      "0": {
-        "filename": "<save-my-code>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<save-my-code>",
-        "line": 7
-      }
-    },
     "e45decd17bf60dfd3afe79d082bd7e64ba8f4ff0d874e22bddfd51f99c57e52b": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2579
+        "line": 2583
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2580
+        "line": 2584
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2581
+        "line": 2585
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2582
+        "line": 2586
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2583
+        "line": 2587
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2584
+        "line": 2588
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -7762,15 +7850,15 @@
       },
       "160": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2598
+        "line": 2602
       },
       "176": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2601
+        "line": 2605
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2604
+        "line": 2608
       }
     },
     "e5bcdd2119476d1431fe608d0e167cc2a472cc103c84b8c2f7d0157c12a715a8": {
@@ -7786,55 +7874,55 @@
     "e6936e8f0e7b8fe98c2ca66eee9d4e9dafcfc747defef9cb795288fabb1b7ef3": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2749
+        "line": 2753
       },
       "16": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2750
+        "line": 2754
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2751
+        "line": 2755
       },
       "40": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2752
+        "line": 2756
       },
       "56": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2753
+        "line": 2757
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2754
+        "line": 2758
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2755
+        "line": 2759
       },
       "88": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2756
+        "line": 2760
       },
       "96": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2757
+        "line": 2761
       },
       "112": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2758
+        "line": 2762
       },
       "128": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2759
+        "line": 2763
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2760
+        "line": 2764
       },
       "144": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2761
+        "line": 2765
       }
     },
     "e705f95974ab50fa38b7120c670ee43c858a0626bf374a798a0167b0ade476cf": {
@@ -8160,27 +8248,27 @@
     "ebbce89e1b8c2cd66631e7f084be468c01d0e3147b6710c8c53b13aa0893fcf0": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1843
+        "line": 1847
       },
       "8": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1844
+        "line": 1848
       },
       "24": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1845
+        "line": 1849
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1846
+        "line": 1850
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1847
+        "line": 1851
       },
       "72": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1848
+        "line": 1852
       },
       "88": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -8208,237 +8296,237 @@
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1859
+        "line": 1863
       },
       "184": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1862
+        "line": 1866
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1863
+        "line": 1867
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1864
+        "line": 1868
       },
       "216": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1865
+        "line": 1869
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1866
+        "line": 1870
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1867
+        "line": 1871
       },
       "256": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1868
+        "line": 1872
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1869
+        "line": 1873
       },
       "272": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1870
+        "line": 1874
       },
       "280": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1871
+        "line": 1875
       },
       "304": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1872
+        "line": 1876
       },
       "312": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1873
+        "line": 1877
       },
       "320": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1874
+        "line": 1878
       },
       "344": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1875
+        "line": 1879
       },
       "352": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1876
+        "line": 1880
       },
       "360": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1877
+        "line": 1881
       },
       "408": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1878
+        "line": 1882
       },
       "416": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1879
+        "line": 1883
       },
       "424": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1880
+        "line": 1884
       },
       "432": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1881
+        "line": 1885
       },
       "440": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1883
+        "line": 1887
       },
       "456": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1884
+        "line": 1888
       },
       "472": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1885
+        "line": 1889
       },
       "480": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1886
+        "line": 1890
       },
       "496": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1887
+        "line": 1891
       },
       "504": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1888
+        "line": 1892
       },
       "520": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1889
+        "line": 1893
       },
       "536": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1890
+        "line": 1894
       },
       "552": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1891
+        "line": 1895
       },
       "568": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1892
+        "line": 1896
       },
       "576": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1893
+        "line": 1897
       },
       "584": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1894
+        "line": 1898
       },
       "600": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1895
+        "line": 1899
       },
       "616": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1896
+        "line": 1900
       },
       "624": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1897
+        "line": 1901
       },
       "640": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1898
+        "line": 1902
       },
       "648": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1899
+        "line": 1903
       },
       "656": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1900
+        "line": 1904
       },
       "672": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1901
+        "line": 1905
       },
       "688": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1902
+        "line": 1906
       },
       "696": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1903
+        "line": 1907
       },
       "720": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1904
+        "line": 1908
       },
       "728": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1905
+        "line": 1909
       },
       "736": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1906
+        "line": 1910
       },
       "752": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1907
+        "line": 1911
       },
       "768": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1908
+        "line": 1912
       },
       "792": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1909
+        "line": 1913
       },
       "800": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1910
+        "line": 1914
       },
       "808": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1911
+        "line": 1915
       },
       "816": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1912
+        "line": 1916
       },
       "832": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1913
+        "line": 1917
       },
       "848": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1915
+        "line": 1919
       },
       "856": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1916
+        "line": 1920
       },
       "872": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1917
+        "line": 1921
       },
       "888": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 1920
+        "line": 1924
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2796
+        "line": 2800
       },
       "16": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2797
+        "line": 2801
       }
     },
     "f2bcca6f347575c9c32d36b17d96323fccb9ea1fc9e3f91473eefb835a71ff59": {
@@ -8487,144 +8575,6 @@
         "line": 692
       }
     },
-    "f6c3d38e55d426c3219ab1d896607b86b6d2dcaaa4287072ddd5ca2ca4a6a537": {
-      "0": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2765
-      },
-      "16": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2766
-      },
-      "24": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2767
-      },
-      "40": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2768
-      },
-      "56": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2769
-      },
-      "72": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2770
-      },
-      "80": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2771
-      },
-      "88": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2772
-      },
-      "104": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2773
-      },
-      "120": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2774
-      },
-      "128": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2775
-      },
-      "144": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2776
-      },
-      "168": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2777
-      },
-      "184": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2778
-      },
-      "192": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2779
-      },
-      "208": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2780
-      },
-      "248": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2781
-      },
-      "264": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2782
-      },
-      "272": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2783
-      },
-      "288": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2784
-      },
-      "296": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2785
-      },
-      "312": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2786
-      },
-      "328": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2787
-      },
-      "344": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2793
-      },
-      "352": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2794
-      },
-      "368": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2795
-      },
-      "384": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2799
-      },
-      "392": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2800
-      },
-      "416": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2801
-      },
-      "432": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2802
-      },
-      "440": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2803
-      },
-      "456": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2807
-      },
-      "464": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2808
-      },
-      "480": {
-        "filename": "VaultTokenWallet_V1.code",
-        "line": 2811
-      }
-    },
     "f71663d06901ba3ed3ca6e722b61c5cc3c3ad01b9f58e268f37e88d2689d9472": {
       "0": {
         "filename": "../contracts/VaultTokenWallet_V1.tsol",
@@ -8634,87 +8584,153 @@
     "f9067c35c70b423d9958d729147bcd34e48fb16252f0d5b859d86c6c7de2903a": {
       "0": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2726
+        "line": 2730
       },
       "16": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2727
+        "line": 2731
       },
       "32": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2728
+        "line": 2732
       },
       "48": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2729
+        "line": 2733
       },
       "64": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2730
+        "line": 2734
       },
       "80": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2731
+        "line": 2735
       },
       "96": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2732
+        "line": 2736
       },
       "112": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2733
+        "line": 2737
       },
       "120": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2734
+        "line": 2738
       },
       "136": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2735
+        "line": 2739
       },
       "152": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2736
+        "line": 2740
       },
       "168": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2737
+        "line": 2741
       },
       "176": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2738
+        "line": 2742
       },
       "192": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2739
+        "line": 2743
       },
       "200": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2740
+        "line": 2744
       },
       "208": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2741
+        "line": 2745
       },
       "224": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2742
+        "line": 2746
       },
       "240": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2743
+        "line": 2747
       },
       "248": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2744
+        "line": 2748
       },
       "256": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2745
+        "line": 2749
       },
       "264": {
         "filename": "VaultTokenWallet_V1.code",
-        "line": 2746
+        "line": 2750
+      }
+    },
+    "fb5c297d9bdd44534b9cd94d5fc3c24d8a46b1b37b386bd871afae267bd0a2e3": {
+      "0": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3006
+      },
+      "8": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3007
+      },
+      "56": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3008
+      },
+      "64": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3009
+      },
+      "80": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3012
+      },
+      "88": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3013
+      },
+      "136": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3014
+      },
+      "144": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3015
+      },
+      "160": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3018
+      },
+      "168": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3019
+      },
+      "216": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3020
+      },
+      "224": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3021
+      },
+      "240": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3024
+      },
+      "248": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3025
+      },
+      "296": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3026
+      },
+      "304": {
+        "filename": "VaultTokenWallet_V1.code",
+        "line": 3027
       }
     },
     "fb6b8636562925118bd0e5e97b23ab3b408168ad4a0275d196bce91dcdc60c10": {

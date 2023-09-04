@@ -1,5 +1,5 @@
 import {getRandomNonce, toNano, zeroAddress} from "locklift";
-import {VaultAbi} from "../build/factorySource";
+import {VaultAbi, VaultTokenRoot_V1Abi} from "../build/factorySource";
 
 export default async () => {
     const keyPair = (await locklift.keystore.getSigner("0"))!;
@@ -25,20 +25,21 @@ export default async () => {
                 platformCode_: tokenWalletPlatformCode
             },
             publicKey: keyPair.publicKey,
+
         },
-        deploymentName: 'Vault',
+        deploymentName: 'VaultRoot',
         enableLogs: true
     });
 
-    const vault = await locklift.deployments.getContract<VaultAbi>('Vault');
+    const root = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('VaultRoot');
 
-    await vault.methods
+    await root.methods
         .grant()
         .send({
             from: owner.account.address,
-            amount: toNano(1),
+            amount: toNano(10),
         });
 }
 
 
-export const tag = 'Deploy_Vault';
+export const tag = 'Deploy_VaultRoot';

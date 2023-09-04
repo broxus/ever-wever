@@ -1461,6 +1461,10 @@ PUSHCONT {
 IFNOT
 .loc ../contracts/VaultTokenWallet_V1.tsol, 423
 SWAP
+GETGLOB 11
+GETGLOB 10
+SDEQ
+OR
 PUSHCONT {
 	.loc ../contracts/VaultTokenWallet_V1.tsol, 424
 	PUSH2 S0, S1

@@ -7,9 +7,9 @@ export default async () => {
         account: owner
     } = await locklift.deployments.getAccount('VaultOwner');
 
-    const vault = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('Vault');
+    const root = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('VaultRoot');
 
-    await vault.methods
+    await root.methods
         .deployWallet({
             walletOwner: owner.address,
             deployWalletValue: toNano(2),
@@ -20,13 +20,13 @@ export default async () => {
             amount: toNano(5),
         });
 
-    const ownerTokenWalletAddress = await getTokenWalletAddress(vault, owner.address);
+    const ownerTokenWalletAddress = await getTokenWalletAddress(root, owner.address);
 
     await locklift.deployments.saveContract({
-        deploymentName: 'VaultOwnerTokenWallet',
+        deploymentName: 'VaultRootOwnerTokenWallet',
         contractName: 'TokenWalletUpgradeable',
         address: ownerTokenWalletAddress
     }, true);
 }
 
-export const tag = 'Deploy_Owner_Token_Wallet';
+export const tag = 'Deploy_Owner_Vault_Root_Wallet';

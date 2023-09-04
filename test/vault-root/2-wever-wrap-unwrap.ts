@@ -4,9 +4,9 @@ import {
   getTokenWalletAddress,
   getVaultMetrics,
   logMetricsChange,
-  setupWever,
+  setupVaultRoot,
   stringToBytesArray,
-} from "./utils";
+} from "../utils";
 import { toNano, WalletTypes } from "locklift";
 
 const logger = require("mocha-logger");
@@ -16,12 +16,12 @@ const { expect } = require("chai");
 describe("Test wEVER wrap / unwrap", async function () {
   this.timeout(200000);
   // @ts-ignore
-  let context: ReturnType<typeof setupWever> extends Promise<infer F> ? F : never = {};
+  let context: ReturnType<typeof setupVaultRoot> extends Promise<infer F> ? F : never = {};
 
   it("Setup contracts", async function () {
     await locklift.deployments.fixture();
 
-    context = await setupWever();
+    context = await setupVaultRoot();
   });
 
   describe("Test wrapping", async function () {
@@ -29,7 +29,12 @@ describe("Test wEVER wrap / unwrap", async function () {
       it("Send EVERs to vault", async function () {
         const { alice, aliceTokenWallet, vaultTokenWallet, vault } = context;
 
-        const initialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
+        const initialMetrics = await getVaultMetrics(
+          aliceTokenWallet,
+          alice,
+          vaultTokenWallet,
+          vault
+        );
 
         const trace = await locklift.tracing.trace(
             locklift.provider.sendMessage({
@@ -42,7 +47,12 @@ describe("Test wEVER wrap / unwrap", async function () {
 
         await trace.traceTree?.beautyPrint();
 
-        const finalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
+        const finalMetrics = await getVaultMetrics(
+          aliceTokenWallet,
+          alice,
+          vaultTokenWallet,
+          vault
+        );
 
         const metricsChange = getMetricsChange(initialMetrics, finalMetrics);
 

@@ -19,6 +19,12 @@ interface IVaultTokenRoot_V1 {
         TvmCell payload
     ) external;
 
+    function setLegacyVault(
+        address legacy_vault_
+    ) external;
+
+    function toggleLegacyMint() external;
+
     function upgradeWallets(
         address[] wallets,
         uint128 accept_upgrade_value,

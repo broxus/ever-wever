@@ -1,13 +1,14 @@
 import {WalletTypes} from "locklift";
 
 export default async () => {
-    await locklift.deployments.deployAccounts([
+    await locklift.deployments.deployAccounts(
+        [
             {
-                deploymentName: "VaultOwner",
+                deploymentName: "Owner",
                 signerId: "0",
                 accountSettings: {
                     type: WalletTypes.EverWallet,
-                    value: locklift.utils.toNano(500),
+                    value: locklift.utils.toNano(1000),
                 },
             },
         ],
@@ -16,4 +17,4 @@ export default async () => {
 }
 
 
-export const tag = 'Deploy_Vault_Owner';
+export const tag = 'Deploy_Owner';

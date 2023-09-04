@@ -3,15 +3,15 @@ import {getTokenWalletAddress} from "../test/utils";
 import {VaultTokenRoot_V1Abi} from "../build/factorySource";
 
 export default async () => {
-    const vault = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('Vault');
+    const root = await locklift.deployments.getContract<VaultTokenRoot_V1Abi>('VaultRoot');
 
-    const vaultTokenWalletAddress = await getTokenWalletAddress(vault, vault.address);
+    const vaultRootWalletAddress = await getTokenWalletAddress(root, root.address);
 
     await locklift.deployments.saveContract({
-        deploymentName: 'VaultTokenWallet',
+        deploymentName: 'VaultRootRootTokenWallet',
         contractName: 'TokenWalletUpgradeable',
-        address: vaultTokenWalletAddress
+        address: vaultRootWalletAddress
     }, true);
 }
 
-export const tag = 'Setup_Vault_Token_Wallet'
+export const tag = 'Setup_Vault_Root_Wallet'

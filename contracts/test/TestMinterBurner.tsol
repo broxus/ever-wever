@@ -52,7 +52,7 @@ contract TestMinterBurner is RandomNonce, IAcceptTokensTransferCallback, IAccept
         address to, 
         address remainingGasTo, 
         TvmCell payload
-    ) external {
+    ) external view {
         // tvm.rawReserve(0, 1 ever);
         ILegacyVault(vault).wrap{value: 0, flag: 64}(
             amount, 
@@ -66,20 +66,19 @@ contract TestMinterBurner is RandomNonce, IAcceptTokensTransferCallback, IAccept
     function onAcceptTokensTransfer(
         address tokenRoot,
         uint128 amount,
-        address sender,
-        address senderWallet,
+        address,
+        address,
         address remainingGasTo,
         TvmCell payload
     ) override external {
         require(tokenRoot == root, 101);
-
 
         if (msg.sender != root) {
             ITokenWallet(wallet).transfer{value: 0, flag: 64}(
                 amount, 
                 vault, 
                 0.1 ever, 
-                msg.sender, 
+                remainingGasTo, 
                 true, 
                 payload
             );
@@ -87,10 +86,10 @@ contract TestMinterBurner is RandomNonce, IAcceptTokensTransferCallback, IAccept
     }
 
     function onAcceptTokensBurn(
-        uint128 amount,
-        address walletOwner,
-        address wallet,
-        address remainingGasTo,
+        uint128,
+        address,
+        address,
+        address,
         TvmCell payload
     ) override external {
         emit BurnCallback(payload);
@@ -98,16 +97,16 @@ contract TestMinterBurner is RandomNonce, IAcceptTokensTransferCallback, IAccept
 
 
     function onAcceptTokensMint (
-        address tokenRoot,
-        uint128 amount,
-        address remainingGasTo,
+        address,
+        uint128,
+        address,
         TvmCell payload
     )
     override external {
         emit MintCallback(payload);
     }
 
-    function buildPayload(address addr) public view returns (TvmCell) {
+    function buildPayload(address addr) public pure returns (TvmCell) {
         TvmBuilder builder; 
         builder.store(addr);
         return builder.toCell();
@@ -118,6 +117,4 @@ contract TestMinterBurner is RandomNonce, IAcceptTokensTransferCallback, IAccept
         require(msg.sender == root, 102);
         wallet = _wallet;
     }
-
-
 }

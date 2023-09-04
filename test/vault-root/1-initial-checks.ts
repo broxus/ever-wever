@@ -1,15 +1,15 @@
-import { getTokenWalletAddress, setupWever } from "./utils";
+import { getTokenWalletAddress, setupVaultRoot } from "../utils";
 import { expect } from "chai";
 import { toNano, zeroAddress } from "locklift";
 
-describe("Setup contracts", async function () {
+describe("Initial checks of root vault", async function () {
   // @ts-ignore
-  let context: ReturnType<typeof setupWever> extends Promise<infer F> ? F : never = {};
+  let context: ReturnType<typeof setupVaultRoot> extends Promise<infer F> ? F : never = {};
 
   it("Setup contracts", async function () {
     await locklift.deployments.fixture();
 
-    context = await setupWever();
+    context = await setupVaultRoot();
   });
 
   describe("Wrapped EVER token", async function () {
