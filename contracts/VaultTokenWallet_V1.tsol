@@ -333,6 +333,10 @@ contract VaultTokenWallet_V1 is
 
         address sender = msg.sender;
 
+        if (owner_ != root_) {
+            balance_ += amount;
+        }
+
         TvmCell stateInit = _buildWalletInitData(sender);
 
         address senderWallet;

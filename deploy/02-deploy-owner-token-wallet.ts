@@ -24,7 +24,7 @@ export default async () => {
 
     await locklift.deployments.saveContract({
         deploymentName: 'VaultRootOwnerTokenWallet',
-        contractName: 'TokenWalletUpgradeable',
+        contractName: 'VaultTokenWallet_V1',
         address: ownerTokenWalletAddress
     }, true);
 }

@@ -459,5 +459,106 @@ describe('E2E upgrade test', async function() {
                 payload: payload
             });
         });
+
+        it('Stats', async () => {
+            console.log('Total supply');
+            console.log(fromNano(await root.methods.totalSupply({ answerId: 0 }).call().then(r => r.value0)));
+            console.log('Vault reserves');
+            console.log(fromNano(await root.methods.legacy_vault_reserves().call().then(r => r.legacy_vault_reserves)));
+            console.log('Root balance');
+            console.log(fromNano(await locklift.provider.getBalance(root.address)));
+        });
+    });
+
+    describe('Test upgraded root, new wallets', async () => {
+        it('Upgrade vault wallet', async () => {
+            const VaultTokenWallet_V1 = await locklift.factory.getContractArtifacts('VaultTokenWallet_V1');
+
+            const trace = await locklift.tracing.trace(
+                context.root.methods.setWalletCode({
+                    code: VaultTokenWallet_V1.code
+                }).send({
+                    from: context.owner.address,
+                    amount: toNano(1)
+                })
+            );
+
+            // await trace.traceTree?.beautyPrint();
+        });
+
+        it('Stats', async () => {
+            console.log('Total supply');
+            console.log(fromNano(await root.methods.totalSupply({ answerId: 0 }).call().then(r => r.value0)));
+            console.log('Vault reserves');
+            console.log(fromNano(await root.methods.legacy_vault_reserves().call().then(r => r.legacy_vault_reserves)));
+            console.log('Root balance');
+            console.log(fromNano(await locklift.provider.getBalance(root.address)));
+        });
+
+        it('Upgrade vault wallet', async () => {
+            const trace = await locklift.tracing.trace(
+                root.methods.upgradeWallets({
+                    wallets: [context.vaultTokenWallet.address],
+                    accept_upgrade_value: toNano(0.1),
+                    remainingGasTo: context.owner.address,
+                }).send({
+                    from: context.owner.address,
+                    amount: toNano(1)
+                })
+            );
+
+            // await trace.traceTree?.beautyPrint();
+        });
+
+        it('Stats', async () => {
+            console.log('Total supply');
+            console.log(fromNano(await root.methods.totalSupply({ answerId: 0 }).call().then(r => r.value0)));
+            console.log('Vault reserves');
+            console.log(fromNano(await root.methods.legacy_vault_reserves().call().then(r => r.legacy_vault_reserves)));
+            console.log('Root balance');
+            console.log(fromNano(await locklift.provider.getBalance(root.address)));
+        });
+
+        it('Test vault wallet acceptNative', async () => {
+            const vaultTokenWallet = await locklift.factory.getDeployedContract(
+                'VaultTokenWallet_V1', 
+                context.vaultTokenWallet.address
+            );
+
+            const aliceInitialMetrics = await getVaultMetrics(
+                context.aliceTokenWallet,
+                context.alice,
+                context.vaultTokenWallet,
+                context.vault,
+                root
+            );
+    
+            const trace = await locklift.tracing.trace(
+                vaultTokenWallet.methods.acceptNative({
+                    amount: toNano('0.5'),
+                    deployWalletValue: toNano('0'),
+                    remainingGasTo: context.alice.address,
+                    payload: EMPTY_TVM_CELL
+                }).send({
+                    from: context.alice.address,
+                    amount: toNano('2')
+                })
+            );
+    
+            await trace.traceTree?.beautyPrint();
+    
+            // await trace.traceTree?.beautyPrint();
+            const aliceFinalMetrics = await getVaultMetrics(
+                context.aliceTokenWallet,
+                context.alice,
+                context.vaultTokenWallet,
+                context.vault,
+                root
+            );
+    
+            const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);    
+
+            logMetricsChange(aliceMetricsChange);
+        });
     });
 });

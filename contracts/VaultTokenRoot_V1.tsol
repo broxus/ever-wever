@@ -493,7 +493,7 @@ contract VaultTokenRoot_V1 is
         uint128 accept_upgrade_value,
         address remainingGasTo
     ) external override onlyRootOwner {
-        _reserve();
+        tvm.rawReserve(_reserve(), 0);
 
         for (address wallet: wallets) {
             ITokenWalletUpgradeable(wallet).acceptUpgrade{
@@ -506,6 +506,8 @@ contract VaultTokenRoot_V1 is
                 remainingGasTo
             );
         }
+
+        _transfer(remainingGasTo, TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS);
     }
 
     // UPGRADE
@@ -515,6 +517,7 @@ contract VaultTokenRoot_V1 is
             rootOwner_, totalSupply_,
             walletVersion_, platformCode_, walletCode_,
             mintDisabled_, burnByRootDisabled_, burnPaused_,
+            legacy_vault, legacy_vault_token_wallet, legacy_mint_enabled, legacy_vault_reserves,
             deployer_, randomNonce_
         );
 

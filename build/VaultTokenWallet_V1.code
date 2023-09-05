@@ -1201,26 +1201,40 @@ RAWRESERVE
 .loc ../contracts/VaultTokenWallet_V1.tsol, 334
 GETGLOB 9
 .loc ../contracts/VaultTokenWallet_V1.tsol, 336
+GETGLOB 11
+GETGLOB 10
+SDEQ
+PUSHCONT {
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 337
+	GETGLOB 12
+	PUSH S5
+	ADD
+	UFITS 128
+	SETGLOB 12
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 0
+}
+IFNOT
+.loc ../contracts/VaultTokenWallet_V1.tsol, 340
 DUP
 CALLREF {
 	CALL $_buildWalletInitData_internal_macro$
 }
-.loc ../contracts/VaultTokenWallet_V1.tsol, 338
+.loc ../contracts/VaultTokenWallet_V1.tsol, 342
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../contracts/VaultTokenWallet_V1.tsol, 340
+.loc ../contracts/VaultTokenWallet_V1.tsol, 344
 PUSH S5
 GTINT 0
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 341
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 345
 	PUSH3 S1, S5, S4
 	CALLREF {
 		CALL $_deployWallet_internal_macro$
 	}
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 343
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 347
 	OVER
 	HASHCU
 	NEWC
@@ -1231,7 +1245,7 @@ PUSHCONT {
 }
 IFELSE
 NIP
-.loc ../contracts/VaultTokenWallet_V1.tsol, 346
+.loc ../contracts/VaultTokenWallet_V1.tsol, 350
 PUSH2 S4, S6
 GETGLOB 11
 PUSH S9
@@ -1267,7 +1281,7 @@ STBREFR
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/VaultTokenWallet_V1.tsol, 352
+.loc ../contracts/VaultTokenWallet_V1.tsol, 356
 ROT
 ROLL 6
 XCHG S3, S5
@@ -1314,27 +1328,27 @@ DROP2
 CALL $_transfer_internal_macro$
 
 .macro _transfer_internal_macro
-.loc ../contracts/VaultTokenWallet_V1.tsol, 374
+.loc ../contracts/VaultTokenWallet_V1.tsol, 378
 ROLL 4
 CALLREF {
 	CALL $_buildWalletInitData_internal_macro$
 }
-.loc ../contracts/VaultTokenWallet_V1.tsol, 376
+.loc ../contracts/VaultTokenWallet_V1.tsol, 380
 PUSHREFSLICE {
 	.blob x8000000000000000000000000000000000000000000000000000000000000000001_
 }
-.loc ../contracts/VaultTokenWallet_V1.tsol, 378
+.loc ../contracts/VaultTokenWallet_V1.tsol, 382
 PUSH S5
 GTINT 0
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 379
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 383
 	PUSH3 S1, S5, S4
 	CALLREF {
 		CALL $_deployWallet_internal_macro$
 	}
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 381
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 385
 	OVER
 	HASHCU
 	NEWC
@@ -1345,13 +1359,13 @@ PUSHCONT {
 }
 IFELSE
 NIP
-.loc ../contracts/VaultTokenWallet_V1.tsol, 384
+.loc ../contracts/VaultTokenWallet_V1.tsol, 388
 GETGLOB 12
 PUSH S7
 SUB
 UFITS 128
 SETGLOB 12
-.loc ../contracts/VaultTokenWallet_V1.tsol, 386
+.loc ../contracts/VaultTokenWallet_V1.tsol, 390
 BLKSWAP 3, 2
 XCHG S2
 GETGLOB 11
@@ -1393,7 +1407,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/VaultTokenWallet_V1.tsol, 399
+.loc ../contracts/VaultTokenWallet_V1.tsol, 403
 OVER
 PUSHCONT {
 	LDREF
@@ -1421,7 +1435,7 @@ CALLREF {
 THROW 0
 
 .macro acceptTransfer_internal_macro
-.loc ../contracts/VaultTokenWallet_V1.tsol, 412
+.loc ../contracts/VaultTokenWallet_V1.tsol, 416
 GETGLOB 9
 PUSH S4
 CALLREF {
@@ -1439,18 +1453,18 @@ GETGLOB 10
 SDEQ
 OR
 THROWIFNOT 1100
-.loc ../contracts/VaultTokenWallet_V1.tsol, 417
+.loc ../contracts/VaultTokenWallet_V1.tsol, 421
 CALLREF {
 	CALL $_reserve_internal_macro$
 }
 PUSHINT 2
 RAWRESERVE
-.loc ../contracts/VaultTokenWallet_V1.tsol, 419
+.loc ../contracts/VaultTokenWallet_V1.tsol, 423
 GETGLOB 11
 GETGLOB 10
 SDEQ
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 420
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 424
 	GETGLOB 12
 	PUSH S5
 	ADD
@@ -1459,14 +1473,14 @@ PUSHCONT {
 	.loc ../contracts/VaultTokenWallet_V1.tsol, 0
 }
 IFNOT
-.loc ../contracts/VaultTokenWallet_V1.tsol, 423
+.loc ../contracts/VaultTokenWallet_V1.tsol, 427
 SWAP
 GETGLOB 11
 GETGLOB 10
 SDEQ
 OR
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 424
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 428
 	PUSH2 S0, S1
 	GETGLOB 9
 	PUSH2 S5, S6
@@ -1502,7 +1516,7 @@ PUSHCONT {
 	STBREFR
 }
 PUSHCONT {
-	.loc ../contracts/VaultTokenWallet_V1.tsol, 437
+	.loc ../contracts/VaultTokenWallet_V1.tsol, 441
 	OVER
 	NEWC
 	STSLICECONST x42_

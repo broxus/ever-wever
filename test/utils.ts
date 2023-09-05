@@ -88,10 +88,10 @@ export const setupVaultRoot = async () => {
   const [owner, ownerTokenWallet] = await getUser('Owner', VaultType.Root);
 
   return {
-      vault, vaultTokenWallet,
-      alice, aliceTokenWallet,
-      bob, bobTokenWallet,
-      owner, ownerTokenWallet,
+    vault, vaultTokenWallet,
+    alice, aliceTokenWallet,
+    bob, bobTokenWallet,
+    owner, ownerTokenWallet,
   };
 };
 
@@ -172,7 +172,7 @@ export const logMetricsChange = function (change: VaultMetrics) {
   logger.log(`Vault wEVER balance change: ${change.vaultWEVERBalance}`);
   logger.log(`Vault EVER balance change: ${change.vaultEVERBalance}`);
   logger.log(`wEVER total supply change: ${change.WEVERTotalSupply}`);
-  logger.log(`Root wEVER balance change: ${change.rootWEVERBalance}`)
+  logger.log(`Root EVER balance change: ${change.rootWEVERBalance}`)
 };
 
 export const isValidTonAddress = (address: string) => /^(?:-1|0):[0-9a-fA-F]{64}$/.test(address);

@@ -3,87 +3,115 @@ import { EMPTY_TVM_CELL, getMetricsChange, getVaultMetrics, logMetricsChange, se
 import { Contract, WalletTypes, toNano } from "locklift";
 import logger from 'mocha-logger';
 import { VaultTokenWallet_V1Abi } from "../../build/factorySource";
+import { expect } from "chai";
 
 
 describe('Test token wallet accept native', () => {
     // @ts-ignore
     let context: ReturnType<typeof setupVaultRoot> extends Promise<infer F> ? F : never = {};
-    let user: Account;
-    let userTokenWallet: Contract<VaultTokenWallet_V1Abi>
 
     it('Setup contracts', async () => {
         await locklift.deployments.fixture();
 
         context = await setupVaultRoot();
-
-        const signer = await locklift.keystore.getSigner("0");
-
-        const account = await locklift.factory.accounts.addNewAccount({
-            type: WalletTypes.EverWallet,
-            publicKey: signer?.publicKey as string,
-            value: toNano('10')
-        });
-
-        user = account.account;
-
-        const {
-            value0: userTokenWalletAddress
-        } = await context.vault.methods.walletOf({
-            walletOwner: user.address,
-            answerId: 0
-        }).call();
-
-        userTokenWallet = await locklift.factory.getDeployedContract('VaultTokenWallet_V1', userTokenWalletAddress);
     });
 
     it('Accept native, token wallet deployment disabled', async () => {
-        const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
-
-        // const aliceInitialMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
-        // const bobInitialMetrics = await getVaultMetrics(userTokenWallet, user, vaultTokenWallet, vault);
+        const aliceInitialMetrics = await getVaultMetrics(
+            context.aliceTokenWallet,
+            context.alice,
+            context.vaultTokenWallet,
+            context.vault
+        );
 
         const trace = await locklift.tracing.trace(
-            aliceTokenWallet.methods.acceptNative({
+            context.aliceTokenWallet.methods.acceptNative({
                 amount: toNano('1'),
                 deployWalletValue: toNano('0'),
-                remainingGasTo: user.address,
+                remainingGasTo: context.alice.address,
                 payload: EMPTY_TVM_CELL
             }).send({
-                from: alice.address,
+                from: context.alice.address,
                 amount: toNano('2')
             })
         );
 
-        await trace.traceTree?.beautyPrint();
+        // await trace.traceTree?.beautyPrint();
 
-        // const aliceFinalMetrics = await getVaultMetrics(aliceTokenWallet, alice, vaultTokenWallet, vault);
-        // const bobFinalMetrics = await getVaultMetrics(bobTokenWallet, user, vaultTokenWallet, vault);
+        const aliceFinalMetrics = await getVaultMetrics(
+            context.aliceTokenWallet,
+            context.alice,
+            context.vaultTokenWallet,
+            context.vault
+        );
 
-        // const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);
-        // const bobMetricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
+        const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);
 
-        // logger.success('Bob metrics change');
-        // logMetricsChange(bobMetricsChange);
+        logger.success('Alice metrics change');
+        logMetricsChange(aliceMetricsChange);
 
-        // logger.success('Alice metrics change');
-        // logMetricsChange(aliceMetricsChange);
+        expect(aliceMetricsChange.userEVERBalance)
+            .to.be.below(-1)
+            .to.be.above(-1.3, 'Wrong user EVER balance change');
+        expect(aliceMetricsChange.userWEVERBalance)
+            .to.be.equal(1, 'Wrong user WEVER balance change');
+        expect(aliceMetricsChange.vaultEVERBalance)
+            .to.be.equal(1, 'Wrong vault EVER balance change');
+        expect(aliceMetricsChange.vaultWEVERBalance)
+            .to.be.equal(0, 'Wrong vault WEVER balance change');
+        expect(aliceMetricsChange.rootWEVERBalance)
+            .to.be.equal(1, 'Wrong root WEVER balance change');
+        expect(aliceMetricsChange.WEVERTotalSupply)
+            .to.be.equal(1, 'WEVER total supply wrong');
     });
 
-    it('Accept native, token wallet deploy enabled', async () => {
-        const { aliceTokenWallet, alice, vaultTokenWallet, vault } = context;
+    it('Accept native on vault token wallet', async () => {
+        const aliceInitialMetrics = await getVaultMetrics(
+            context.aliceTokenWallet,
+            context.alice,
+            context.vaultTokenWallet,
+            context.vault
+        );
 
         const trace = await locklift.tracing.trace(
-            aliceTokenWallet.methods.acceptNative({
+            context.vaultTokenWallet.methods.acceptNative({
                 amount: toNano('1'),
-                deployWalletValue: toNano('0.2'),
-                remainingGasTo: user.address,
+                deployWalletValue: toNano('0'),
+                remainingGasTo: context.alice.address,
                 payload: EMPTY_TVM_CELL
             }).send({
-                from: alice.address,
+                from: context.alice.address,
                 amount: toNano('2')
             })
         );
 
         await trace.traceTree?.beautyPrint();
+
+        // await trace.traceTree?.beautyPrint();
+        const aliceFinalMetrics = await getVaultMetrics(
+            context.aliceTokenWallet,
+            context.alice,
+            context.vaultTokenWallet,
+            context.vault
+        );
+
+        const aliceMetricsChange = getMetricsChange(aliceInitialMetrics, aliceFinalMetrics);
+
+        logger.success('Alice metrics change');
+        logMetricsChange(aliceMetricsChange);
+
+        expect(aliceMetricsChange.userEVERBalance)
+            .to.be.below(-0.1)
+            .to.be.above(-0.2, 'Wrong user EVER balance change');
+        expect(aliceMetricsChange.userWEVERBalance)
+            .to.be.equal(0, 'Wrong user WEVER balance change');
+        expect(aliceMetricsChange.vaultEVERBalance)
+            .to.be.equal(0, 'Wrong vault EVER balance change');
+        expect(aliceMetricsChange.vaultWEVERBalance)
+            .to.be.equal(0, 'Wrong vault WEVER balance change');
+        expect(aliceMetricsChange.rootWEVERBalance)
+            .to.be.equal(0, 'Wrong root WEVER balance change');
+        expect(aliceMetricsChange.WEVERTotalSupply)
+            .to.be.equal(0, 'WEVER total supply wrong');
     });
 });
