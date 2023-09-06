@@ -23,8 +23,6 @@ interface IVaultTokenRoot_V1 {
         address legacy_vault_
     ) external;
 
-    function toggleLegacyMint() external;
-
     function upgradeWallets(
         address[] wallets,
         uint128 accept_upgrade_value,

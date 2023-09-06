@@ -19,13 +19,6 @@
 			]
 		},
 		{
-			"name": "toggleLegacyMint",
-			"inputs": [
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "mint",
 			"inputs": [
 				{"name":"amount","type":"uint128"},
@@ -371,14 +364,6 @@
 			]
 		},
 		{
-			"name": "legacy_mint_enabled",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"legacy_mint_enabled","type":"bool"}
-			]
-		},
-		{
 			"name": "legacy_vault_reserves",
 			"inputs": [
 			],
@@ -418,7 +403,6 @@
 		{"name":"walletVersion_","type":"uint32"},
 		{"name":"legacy_vault","type":"address"},
 		{"name":"legacy_vault_token_wallet","type":"address"},
-		{"name":"legacy_mint_enabled","type":"bool"},
 		{"name":"legacy_vault_reserves","type":"uint128"}
 	]
 }

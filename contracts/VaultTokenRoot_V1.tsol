@@ -40,7 +40,6 @@ contract VaultTokenRoot_V1 is
     // Legacy vault variables
     address public legacy_vault;
     address public legacy_vault_token_wallet;
-    bool public legacy_mint_enabled;
     uint128 public legacy_vault_reserves;
 
     constructor() public {
@@ -76,12 +75,6 @@ contract VaultTokenRoot_V1 is
         _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
-    function toggleLegacyMint() external override reserve onlyRootOwner {
-        legacy_mint_enabled = !legacy_mint_enabled;
-
-        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
-    }
-
     function mint(
         uint128 amount,
         address recipient,
@@ -106,32 +99,7 @@ contract VaultTokenRoot_V1 is
 
         if (msg.sender == legacy_vault) {
             legacy_vault_reserves += amount;
-        }
 
-        if (msg.sender == legacy_vault && legacy_mint_enabled) {
-            TvmCell stateInit = _buildWalletInitData(recipient);
-
-            address recipientWallet;
-
-            if (deployWalletValue > 0) {
-                recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
-            } else {
-                recipientWallet = address(tvm.hash(stateInit));
-            }
-
-            totalSupply_ += amount;
-
-            IVaultTokenWallet_V1(recipientWallet).acceptMintLegacyCallback{
-                value: 0,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED,
-                bounce: true
-            }(
-                amount,
-                remainingGasTo,
-                notify,
-                payload
-            );
-        } else {
             _mint(
                 amount,
                 recipient,
@@ -140,7 +108,49 @@ contract VaultTokenRoot_V1 is
                 notify,
                 payload
             );
+        } else {
+            _transferTokens(
+                amount,
+                recipient,
+                deployWalletValue,
+                remainingGasTo,
+                notify,
+                payload
+            );
         }
+    }
+
+    function _transferTokens(
+        uint128 amount,
+        address recipient,
+        uint128 deployWalletValue,
+        address remainingGasTo,
+        bool notify,
+        TvmCell payload
+    ) internal {
+        TvmCell stateInit = _buildWalletInitData(recipient);
+
+        address recipientWallet;
+
+        if (deployWalletValue > 0) {
+            recipientWallet = _deployWallet(stateInit, deployWalletValue, remainingGasTo);
+        } else {
+            recipientWallet = address(tvm.hash(stateInit));
+        }
+
+        totalSupply_ += amount;
+
+        ITokenWallet(recipientWallet).acceptTransfer{
+            value: 0,
+            flag: TokenMsgFlag.ALL_NOT_RESERVED,
+            bounce: true
+        }(
+            amount,
+            address(this),
+            remainingGasTo,
+            notify,
+            payload
+        );
     }
 
     /**
@@ -446,7 +456,7 @@ contract VaultTokenRoot_V1 is
 
         tvm.rawReserve(_reserve() + tokens, 2);
 
-        _mint(
+        _transferTokens(
             tokens,
             recipient,
             deployWalletValue,
@@ -517,7 +527,7 @@ contract VaultTokenRoot_V1 is
             rootOwner_, totalSupply_,
             walletVersion_, platformCode_, walletCode_,
             mintDisabled_, burnByRootDisabled_, burnPaused_,
-            legacy_vault, legacy_vault_token_wallet, legacy_mint_enabled, legacy_vault_reserves,
+            legacy_vault, legacy_vault_token_wallet, legacy_vault_reserves,
             deployer_, randomNonce_
         );
 

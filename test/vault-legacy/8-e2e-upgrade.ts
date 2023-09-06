@@ -265,58 +265,6 @@ describe('E2E upgrade test', async function() {
                 .to.be.equal(0, 'Root WEVER balance is not correct');
         });
 
-        it('Bob wraps tokens with root', async () => {
-            const bobInitialMetrics = await getVaultMetrics(
-                context.bobTokenWallet,
-                context.bob,
-                context.vaultTokenWallet,
-                context.vault,
-                root
-            );
-
-            const trace = await locklift.tracing.trace(
-                root.methods.wrap({
-                    tokens: toNano(3),
-                    recipient: context.bob.address,
-                    deployWalletValue: toNano(0.2),
-                    remainingGasTo: context.bob.address,
-                    notify: true,
-                    payload: EMPTY_TVM_CELL
-                }).send({
-                    from: context.bob.address,
-                    amount: toNano(5)
-                })
-            );
-
-            await trace.traceTree?.beautyPrint();
-
-            const bobFinalMetrics = await getVaultMetrics(
-                context.bobTokenWallet,
-                context.bob,
-                context.vaultTokenWallet,
-                context.vault,
-                root
-            );
-
-            const metricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
-
-            logMetricsChange(metricsChange);
-
-            expect(metricsChange.userWEVERBalance)
-                .to.be.equal(3, 'Bob\'s WEVER balance is not correct');
-            expect(metricsChange.userEVERBalance)
-                .to.be.above(-3.1)
-                .to.be.below(-3, 'Bob\'s EVER balance is not correct');
-            expect(metricsChange.vaultWEVERBalance)
-                .to.be.equal(0, 'Vault\'s WEVER balance is not correct');
-            expect(metricsChange.vaultEVERBalance)
-                .to.be.equal(0, 'Vault\'s EVER balance is not correct');
-            expect(metricsChange.WEVERTotalSupply)
-                .to.be.equal(3, 'WEVER total supply is not correct');
-            expect(metricsChange.rootWEVERBalance)
-                .to.be.equal(3, 'Root WEVER balance is not correct');
-        });
-
         it('Bob burns tokens with root', async () => {
             const bobInitialMetrics = await getVaultMetrics(
                 context.bobTokenWallet,
@@ -459,15 +407,6 @@ describe('E2E upgrade test', async function() {
                 payload: payload
             });
         });
-
-        it('Stats', async () => {
-            console.log('Total supply');
-            console.log(fromNano(await root.methods.totalSupply({ answerId: 0 }).call().then(r => r.value0)));
-            console.log('Vault reserves');
-            console.log(fromNano(await root.methods.legacy_vault_reserves().call().then(r => r.legacy_vault_reserves)));
-            console.log('Root balance');
-            console.log(fromNano(await locklift.provider.getBalance(root.address)));
-        });
     });
 
     describe('Test upgraded root, new wallets', async () => {
@@ -486,19 +425,14 @@ describe('E2E upgrade test', async function() {
             // await trace.traceTree?.beautyPrint();
         });
 
-        it('Stats', async () => {
-            console.log('Total supply');
-            console.log(fromNano(await root.methods.totalSupply({ answerId: 0 }).call().then(r => r.value0)));
-            console.log('Vault reserves');
-            console.log(fromNano(await root.methods.legacy_vault_reserves().call().then(r => r.legacy_vault_reserves)));
-            console.log('Root balance');
-            console.log(fromNano(await locklift.provider.getBalance(root.address)));
-        });
-
         it('Upgrade vault wallet', async () => {
             const trace = await locklift.tracing.trace(
                 root.methods.upgradeWallets({
-                    wallets: [context.vaultTokenWallet.address],
+                    wallets: [
+                        context.vaultTokenWallet.address,
+                        context.aliceTokenWallet.address,
+                        context.bobTokenWallet.address,
+                    ],
                     accept_upgrade_value: toNano(0.1),
                     remainingGasTo: context.owner.address,
                 }).send({
@@ -508,15 +442,6 @@ describe('E2E upgrade test', async function() {
             );
 
             // await trace.traceTree?.beautyPrint();
-        });
-
-        it('Stats', async () => {
-            console.log('Total supply');
-            console.log(fromNano(await root.methods.totalSupply({ answerId: 0 }).call().then(r => r.value0)));
-            console.log('Vault reserves');
-            console.log(fromNano(await root.methods.legacy_vault_reserves().call().then(r => r.legacy_vault_reserves)));
-            console.log('Root balance');
-            console.log(fromNano(await locklift.provider.getBalance(root.address)));
         });
 
         it('Test vault wallet acceptNative', async () => {
@@ -560,5 +485,57 @@ describe('E2E upgrade test', async function() {
 
             logMetricsChange(aliceMetricsChange);
         });
+
+        it('Bob wraps tokens with root', async () => {
+            const bobInitialMetrics = await getVaultMetrics(
+                context.bobTokenWallet,
+                context.bob,
+                context.vaultTokenWallet,
+                context.vault,
+                root
+            );
+
+            const trace = await locklift.tracing.trace(
+                root.methods.wrap({
+                    tokens: toNano(3),
+                    recipient: context.bob.address,
+                    deployWalletValue: toNano(0.2),
+                    remainingGasTo: context.bob.address,
+                    notify: true,
+                    payload: EMPTY_TVM_CELL
+                }).send({
+                    from: context.bob.address,
+                    amount: toNano(5)
+                })
+            );
+
+            await trace.traceTree?.beautyPrint();
+
+            const bobFinalMetrics = await getVaultMetrics(
+                context.bobTokenWallet,
+                context.bob,
+                context.vaultTokenWallet,
+                context.vault,
+                root
+            );
+
+            const metricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
+
+            logMetricsChange(metricsChange);
+
+            expect(metricsChange.userWEVERBalance)
+                .to.be.equal(3, 'Bob\'s WEVER balance is not correct');
+            expect(metricsChange.userEVERBalance)
+                .to.be.above(-3.1)
+                .to.be.below(-3, 'Bob\'s EVER balance is not correct');
+            expect(metricsChange.vaultWEVERBalance)
+                .to.be.equal(0, 'Vault\'s WEVER balance is not correct');
+            expect(metricsChange.vaultEVERBalance)
+                .to.be.equal(0, 'Vault\'s EVER balance is not correct');
+            expect(metricsChange.WEVERTotalSupply)
+                .to.be.equal(3, 'WEVER total supply is not correct');
+            expect(metricsChange.rootWEVERBalance)
+                .to.be.equal(3, 'Root WEVER balance is not correct');
+       });
     });
 });
