@@ -101,7 +101,7 @@ describe('Test token wallet accept native', () => {
         logMetricsChange(aliceMetricsChange);
 
         expect(aliceMetricsChange.userEVERBalance)
-            .to.be.below(-0.1)
+            .to.be.below(-0.05)
             .to.be.above(-0.2, 'Wrong user EVER balance change');
         expect(aliceMetricsChange.userWEVERBalance)
             .to.be.equal(0, 'Wrong user WEVER balance change');

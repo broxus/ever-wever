@@ -2292,52 +2292,6 @@
         "line": 47
       }
     },
-    "53690a67823383013a19f7186cc5d787b53c97073d375f20b5273e6e6e1a9f76": {
-      "38": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 146
-      },
-      "54": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 146
-      },
-      "62": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 146
-      },
-      "78": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "86": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "102": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "110": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "126": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "134": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "150": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      },
-      "158": {
-        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
-        "line": 147
-      }
-    },
     "5500846b77ace8189b8e89c24acbf1a88a9cea6292faa3f35e71b13223384b29": {
       "0": {
         "filename": "../contracts/tip3/abstract/TokenWalletBase.tsol",
@@ -4216,6 +4170,52 @@
       "280": {
         "filename": "TokenWalletUpgradeable.code",
         "line": 1484
+      }
+    },
+    "966c43f6343be472d6deccb949417e59aae59305b4432748b49a4392d7865925": {
+      "40": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 146
+      },
+      "56": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 146
+      },
+      "64": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 146
+      },
+      "80": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "88": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "104": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "112": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "128": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "136": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "152": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
+      },
+      "160": {
+        "filename": "../contracts/tip3/TokenWalletUpgradeable.tsol",
+        "line": 147
       }
     },
     "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},

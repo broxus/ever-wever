@@ -44,14 +44,14 @@ describe("Initial checks of root vault", async function () {
     });
   });
 
-  describe("Vault", async function () {
-    it("Check vault token wallet", async function () {
-      const vaultTokenWalletAddressExpected = await getTokenWalletAddress(context.vault, context.vault.address);
+  // describe("Vault", async function () {
+  //   it("Check vault token wallet", async function () {
+  //     const vaultTokenWalletAddressExpected = await getTokenWalletAddress(context.vault, context.vault.address);
 
-      expect(vaultTokenWalletAddressExpected.toString()).to.be.equal(
-        context.vaultTokenWallet.address.toString(),
-        "Wrong vault token wallet",
-      );
-    });
-  });
+  //     expect(vaultTokenWalletAddressExpected.toString()).to.be.equal(
+  //       context.vaultTokenWallet.address.toString(),
+  //       "Wrong vault token wallet",
+  //     );
+  //   });
+  // });
 });

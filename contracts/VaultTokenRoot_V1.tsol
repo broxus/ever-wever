@@ -58,12 +58,7 @@ contract VaultTokenRoot_V1 is
         walletVersion_ = 1;
 
         tvm.rawReserve(_targetBalance(), 0);
-
-        _deployWallet(
-            _buildWalletInitData(address(this)),
-            WRAP_DEPLOY_WALLET_VALUE,
-            rootOwner_
-        );
+        _transfer(rootOwner_, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
     function setLegacyVault(
@@ -261,6 +256,8 @@ contract VaultTokenRoot_V1 is
      * @return wallet init data cell.
      */
     function _buildWalletInitData(address walletOwner) override internal view returns (TvmCell) {
+        require(walletOwner != address(this), TokenErrors.NO_WALLET_FOR_ROOT);
+
         return tvm.buildStateInit({
             contr: TokenWalletPlatform,
             varInit: {
@@ -308,13 +305,13 @@ contract VaultTokenRoot_V1 is
         if (callbackTo.value == 0) {
             remainingGasTo.transfer({
                 value: 0,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED,
                 bounce: false
             });
         } else {
             IAcceptTokensBurnCallback(callbackTo).onAcceptTokensBurn{
                 value: 0,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
+                flag: TokenMsgFlag.ALL_NOT_RESERVED,
                 bounce: false
             }(
                 amount,
@@ -564,12 +561,6 @@ contract VaultTokenRoot_V1 is
             burnByRootDisabled_,
             burnPaused_
         ) = params.decode(bool, bool, bool);
-
-        _deployWallet(
-            _buildWalletInitData(address(this)),
-            WRAP_DEPLOY_WALLET_VALUE,
-            rootOwner_
-        );
 
         grant();
     }

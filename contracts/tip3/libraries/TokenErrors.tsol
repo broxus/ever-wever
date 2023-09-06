@@ -22,4 +22,7 @@ library TokenErrors {
 
     uint16 constant BURN_DISABLED                                   = 2200;
     uint16 constant BURN_BY_ROOT_DISABLED                           = 2210;
+
+    // Root Vault errors
+    uint16 constant NO_WALLET_FOR_ROOT                              = 2300;
 }

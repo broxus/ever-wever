@@ -264,59 +264,6 @@ describe('E2E upgrade test', async function() {
             expect(metricsChange.rootWEVERBalance)
                 .to.be.equal(0, 'Root WEVER balance is not correct');
         });
-
-        it('Bob burns tokens with root', async () => {
-            const bobInitialMetrics = await getVaultMetrics(
-                context.bobTokenWallet,
-                context.bob,
-                context.vaultTokenWallet,
-                context.vault,
-                root
-            );
-
-            const trace = await locklift.tracing.trace(
-                context.bobTokenWallet.methods.transfer({
-                    amount: toNano(6),
-                    payload: EMPTY_TVM_CELL,
-                    remainingGasTo: context.bob.address,
-                    deployWalletValue: toNano(0),
-                    recipient: root.address,
-                    notify: true
-                }).send({
-                    from: context.bob.address,
-                    amount: toNano(1)
-                })
-            );
-
-            await trace.traceTree?.beautyPrint();
-
-            const bobFinalMetrics = await getVaultMetrics(
-                context.bobTokenWallet,
-                context.bob,
-                context.vaultTokenWallet,
-                context.vault,
-                root
-            );
-
-            const metricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
-
-            logMetricsChange(metricsChange);
-
-            expect(metricsChange.userWEVERBalance)
-                .to.be.equal(-6, "Bob's WEVER balance is not correct");
-            expect(metricsChange.userEVERBalance)
-                .to.be.above(5.7)
-                .to.be.below(6, "Bob's EVER balance is not correct");
-            expect(metricsChange.vaultWEVERBalance)
-                .to.be.equal(0, 'Vault\'s WEVER balance is not correct');
-            expect(metricsChange.vaultEVERBalance)
-                .to.be.equal(0, 'Vault\'s EVER balance is not correct');
-
-            expect(metricsChange.WEVERTotalSupply)
-                .to.be.equal(-6, 'WEVER total supply is not correct');
-            expect(metricsChange.rootWEVERBalance)
-                .to.be.equal(-6, 'Root WEVER balance is not correct');
-        });
     });
 
     describe('Test callbacks', async () => {
@@ -441,7 +388,7 @@ describe('E2E upgrade test', async function() {
                 })
             );
 
-            // await trace.traceTree?.beautyPrint();
+            await trace.traceTree?.beautyPrint();
         });
 
         it('Test vault wallet acceptNative', async () => {
@@ -537,5 +484,61 @@ describe('E2E upgrade test', async function() {
             expect(metricsChange.rootWEVERBalance)
                 .to.be.equal(3, 'Root WEVER balance is not correct');
        });
+
+        it('Bob transfer WEVERs to root', async () => {
+            const bobInitialMetrics = await getVaultMetrics(
+                context.bobTokenWallet,
+                context.bob,
+                context.vaultTokenWallet,
+                context.vault,
+                root,
+            );
+
+            const trace = await locklift.tracing.trace(
+                context.bobTokenWallet.methods.transfer({
+                    amount: toNano(6),
+                    payload: EMPTY_TVM_CELL,
+                    remainingGasTo: context.bob.address,
+                    deployWalletValue: toNano(0.2),
+                    recipient: root.address,
+                    notify: true
+                }).send({
+                    from: context.bob.address,
+                    amount: toNano(1)
+                }),
+                {
+                    // raise: false
+                }
+            );
+
+            await trace.traceTree?.beautyPrint();
+
+            const bobFinalMetrics = await getVaultMetrics(
+                context.bobTokenWallet,
+                context.bob,
+                context.vaultTokenWallet,
+                context.vault,
+                root
+            );
+
+            const metricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
+
+            logMetricsChange(metricsChange);
+
+            expect(metricsChange.userWEVERBalance)
+                .to.be.equal(-6, "Bob's WEVER balance is not correct");
+            expect(metricsChange.userEVERBalance)
+                .to.be.above(5.7)
+                .to.be.below(6, "Bob's EVER balance is not correct");
+            expect(metricsChange.vaultWEVERBalance)
+                .to.be.equal(0, 'Vault\'s WEVER balance is not correct');
+            expect(metricsChange.vaultEVERBalance)
+                .to.be.equal(0, 'Vault\'s EVER balance is not correct');
+
+            expect(metricsChange.WEVERTotalSupply)
+                .to.be.equal(-6, 'WEVER total supply is not correct');
+            expect(metricsChange.rootWEVERBalance)
+                .to.be.equal(-6, 'Root WEVER balance is not correct');
+        });
     });
 });

@@ -137,7 +137,11 @@ contract VaultTokenWallet_V1 is
      * the latest version.
      */
     function upgrade(address remainingGasTo) override external onlyOwner {
-        ITokenRootUpgradeable(root_).requestUpgradeWallet{ value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false }(
+        ITokenRootUpgradeable(root_).requestUpgradeWallet{ 
+            value: 0,
+            flag: TokenMsgFlag.REMAINING_GAS,
+            bounce: false
+        }(
             version_,
             owner_,
             remainingGasTo
@@ -297,28 +301,37 @@ contract VaultTokenWallet_V1 is
         require(amount > 0, TokenErrors.WRONG_AMOUNT);
         require(recipient.value != 0 && recipient != owner_, TokenErrors.WRONG_RECIPIENT);
 
-        if (amount > balance_) {
-            uint128 amount_to_wrap = amount - balance_;
+        if (recipient == root_) {
+            _burn(
+                amount,
+                remainingGasTo,
+                msg.sender,
+                payload
+            );
+        } else {
+            if (amount > balance_) {
+                uint128 amount_to_wrap = amount - balance_;
 
-            IVaultTokenRoot_V1(root_).acceptWrap{
-                value: amount_to_wrap + gasToValue(ACCEPT_WRAP_SAFE_FEE_GAS, 0),
-                flag: 0,
-                bounce: false
-            }(owner_, amount_to_wrap, remainingGasTo);
+                IVaultTokenRoot_V1(root_).acceptWrap{
+                    value: amount_to_wrap + gasToValue(ACCEPT_WRAP_SAFE_FEE_GAS, 0),
+                    flag: 0,
+                    bounce: false
+                }(owner_, amount_to_wrap, remainingGasTo);
 
-            balance_ += amount_to_wrap;
+                balance_ += amount_to_wrap;
+            }
+
+            tvm.rawReserve(_reserve(), 0);
+
+            _transfer(
+                amount,
+                recipient,
+                deployWalletValue,
+                remainingGasTo,
+                notify,
+                payload
+            );
         }
-
-        tvm.rawReserve(_reserve(), 0);
-
-        _transfer(
-            amount,
-            recipient,
-            deployWalletValue,
-            remainingGasTo,
-            notify,
-            payload
-        );
     }
 
     function acceptNative(
