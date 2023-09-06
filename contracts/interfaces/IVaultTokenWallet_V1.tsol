@@ -2,13 +2,6 @@
 pragma ton-solidity >= 0.57.1;
 
 interface IVaultTokenWallet_V1 {
-    function acceptMintLegacyCallback(
-        uint128 amount,
-        address remainingGasTo,
-        bool notify,
-        TvmCell payload
-    ) external;
-
     function acceptNative(
         uint128 amount,
         uint128 deployWalletValue,

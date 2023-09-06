@@ -51,36 +51,6 @@ contract VaultTokenWallet_V1 is
         revert();
     }
 
-    function acceptMintLegacyCallback(
-        uint128 amount,
-        address remainingGasTo,
-        bool notify,
-        TvmCell payload
-    ) external override {
-        tvm.rawReserve(_reserve(), 2);
-
-        balance_ += amount;
-
-        if (notify) {
-            IAcceptTokensMintCallback(owner_).onAcceptTokensMint{
-                value: 0,
-                bounce: false,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS
-            }(
-                root_,
-                amount,
-                remainingGasTo,
-                payload
-            );
-        } else if (remainingGasTo.value != 0 && remainingGasTo != address(this)) {
-            remainingGasTo.transfer({
-                value: 0,
-                flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS,
-                bounce: false
-            });
-        }
-    }
-
     /**
      * @dev See {SID-supportsInterface}.
      */

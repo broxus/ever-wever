@@ -1,0 +1,125 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma ton-solidity >= 0.57.1;
+pragma AbiHeader pubkey;
+
+
+import "@broxus/contracts/contracts/libraries/MsgFlag.tsol";
+import "@broxus/contracts/contracts/access/InternalOwner.tsol";
+import "@broxus/contracts/contracts/utils/RandomNonce.tsol";
+
+import "./../tip3/interfaces/ITransferableOwnership.tsol";
+import "./../tip3/interfaces/ITokenRootUpgradeable.tsol";
+import "./../interfaces/IVaultTokenRoot_V1.tsol";
+
+import "./../legacy/Vault.tsol";
+import "./../legacy/Tunnel.tsol";
+
+
+contract RootUpgradeAssistant is RandomNonce, InternalOwner {
+    address public tunnel;
+    address public root;
+    address public vault;
+    TvmCell public rootCode;
+
+    uint128 public vault_receive_safe_fee;
+    uint128 public vault_settings_deploy_wallet_grams;
+    uint128 public vault_initial_balance;
+
+    constructor(
+        address _owner,
+        address _tunnel,
+        address _root,
+        address _vault,
+        TvmCell _rootCode,
+        uint128 _vault_receive_safe_fee,
+        uint128 _vault_settings_deploy_wallet_grams,
+        uint128 _vault_initial_balance
+    ) public {
+        tvm.accept();
+
+        setOwnership(_owner);
+
+        tunnel = _tunnel;
+        root = _root;
+        vault = _vault;
+        rootCode = _rootCode;
+        vault_receive_safe_fee = _vault_receive_safe_fee;
+        vault_settings_deploy_wallet_grams = _vault_settings_deploy_wallet_grams;
+        vault_initial_balance = _vault_initial_balance;
+    }
+
+    function trigger(
+        uint128 upgrade_value
+    ) external view onlyOwner {
+        // Upgrade root code
+        ITokenRootUpgradeable(tunnel).upgrade{
+            bounce: true,
+            value: upgrade_value,
+            flag: 0
+        }(rootCode);
+
+        // Set legacy vault
+        IVaultTokenRoot_V1(tunnel).setLegacyVault{
+            value: 0.1 ever,
+            flag: 0,
+            bounce: true
+        }(vault);
+
+        // Set root as tunnel in vault
+        Vault.Configuration vault_config = Vault.Configuration({
+            root_tunnel: root,
+            root: root,
+            receive_safe_fee: vault_receive_safe_fee,
+            settings_deploy_wallet_grams: vault_settings_deploy_wallet_grams,
+            initial_balance: vault_initial_balance
+        });
+        Vault(vault).setConfiguration(vault_config);
+
+        // Vault transfer ownership
+        revokeVaultOwnership();
+
+        // Root transfer ownership
+        revokeRootOwnership();
+    }
+
+    // TODO: upgrade
+    function revokeVaultOwnership() public view onlyOwner {
+        Vault(vault).transferOwnership{
+            bounce: true,
+            value: 0.1 ever,
+            flag: 0
+        }(owner);
+    }
+
+    function revokeRootOwnership() public view onlyOwner {
+        mapping(address => ITransferableOwnership.CallbackParams) callbacks;
+        ITransferableOwnership(tunnel).transferOwnership{
+            bounce: true,
+            value: 0.1 ever,
+            flag: 0
+        }(owner, owner, callbacks);
+    }
+
+    function upgrade(
+        TvmCell code
+    ) onlyOwner external {
+        TvmCell data = abi.encode(
+            _randomNonce,
+            owner,
+            tunnel,
+            root,
+            vault,
+            rootCode,
+            vault_receive_safe_fee,
+            vault_settings_deploy_wallet_grams,
+            vault_initial_balance
+        );
+
+        tvm.setcode(code);
+        tvm.setCurrentCode(code);
+
+        onCodeUpgrade(data);
+    }
+
+    function onCodeUpgrade(TvmCell data) private {}
+}

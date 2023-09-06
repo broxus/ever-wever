@@ -8,6 +8,7 @@ import {
     logMetricsChange 
 } from "../utils";
 import { 
+    RootUpgradeAssistantAbi,
     TestMinterBurnerAbi,
     TokenRootUpgradeableAbi, 
     TokenWalletUpgradeableAbi, 
@@ -90,64 +91,105 @@ describe('E2E upgrade test', async function() {
 
     describe('Upgrade root (not upgrading wallets)', async () => {
         let root_tunnel: Contract<TokenRootUpgradeableAbi>;
+        let root_upgrade_assistant: Contract<RootUpgradeAssistantAbi>;
 
-        it('Upgrade root through tunnel (whole supply is granted)', async () => {
+        it('Deploy root upgrade assistant', async () => {
             const VaultTokenRoot_V1 = await locklift.factory.getContractArtifacts('VaultTokenRoot_V1');
-    
-            root_tunnel = await locklift.factory.getDeployedContract('TokenRootUpgradeable', context.tunnel.address);
 
-            await locklift.tracing.trace(
-                root_tunnel.methods.upgrade({
-                    code: VaultTokenRoot_V1.code
-                }).send({
-                    from: context.owner.address,
-                    amount: toNano(2 * INITIAL_USER_BALANCE + 5)
-                })
-            );
-    
-            root = await locklift.factory.getDeployedContract('VaultTokenRoot_V1', context.root.address);
-        });
-
-        it('Transfer root ownership from tunnel to owner', async () => {
-            await locklift.tracing.trace(
-                root_tunnel.methods.transferOwnership({
-                    newOwner: context.owner.address,
-                    remainingGasTo: context.owner.address,
-                    callbacks: []
-                }).send({
-                    from: context.owner.address,
-                    amount: toNano(1)
-                })
-            );
-        });
-    
-        it('Set legacy vault in root', async () => {
-            await locklift.tracing.trace(
-                root.methods.setLegacyVault({
-                    legacy_vault_: context.vault.address
-                }).send({
-                    from: context.owner.address,
-                    amount: toNano(1)
-                })
-            );
-        });
-
-        it('Set root as tunnel in vault', async () => {
             const {
                 configuration
             } = await context.vault.methods.configuration().call();
-    
+
+            const keyPair = (await locklift.keystore.getSigner("0"))!;
+
+            const {
+                contract
+            } = await locklift.factory.deployContract({
+                contract: 'RootUpgradeAssistant',
+                constructorParams: {
+                    _owner: context.owner.address,
+                    _tunnel: context.tunnel.address,
+                    _root: context.root.address,
+                    _vault: context.vault.address,
+                    _rootCode: VaultTokenRoot_V1.code,
+                    _vault_receive_safe_fee: configuration.receive_safe_fee,
+                    _vault_settings_deploy_wallet_grams: configuration.settings_deploy_wallet_grams,
+                    _vault_initial_balance: configuration.initial_balance
+                },
+                initParams: {
+                    _randomNonce: getRandomNonce(),
+                },
+                publicKey: keyPair.publicKey,
+                value: toNano(10)
+            });
+           
+            root_upgrade_assistant = contract;
+        });
+
+        it('Add (root upgrade assistant, root) channel', async () => {
             await locklift.tracing.trace(
-                context.vault.methods.setConfiguration({
-                    _configuration: {
-                        ...configuration,
-                        root_tunnel: root.address,
-                    }
+                context.tunnel.methods.__updateTunnel({
+                    source: root_upgrade_assistant.address,
+                    destination: context.root.address,
                 }).send({
                     from: context.owner.address,
                     amount: toNano(1)
-                })    
+                })
             );
+        });
+
+        it('Transfer vault ownership', async () => {
+            await locklift.tracing.trace(
+                context.vault.methods.transferOwnership({
+                    newOwner: root_upgrade_assistant.address,
+                }).send({
+                    from: context.owner.address,
+                    amount: toNano(1)
+                })
+            );
+        });
+
+        it('Trigger upgrade', async () => {
+            const trace = await locklift.tracing.trace(
+                root_upgrade_assistant.methods
+                    .trigger({
+                        upgrade_value: toNano(2 * INITIAL_USER_BALANCE + 5)
+                    })
+                    .send({
+                        from: context.owner.address,
+                        amount: toNano(2 * INITIAL_USER_BALANCE + 20)
+                    })
+            );
+
+            await trace.traceTree?.beautyPrint();
+
+            root = await locklift.factory.getDeployedContract('VaultTokenRoot_V1', context.root.address);
+        });
+
+        it('Check vault ownership', async () => {
+            const vault_owner = await context.vault.methods.owner().call().then(e => e.owner);
+
+            expect(vault_owner.toString())
+                .to.be.equal(context.owner.address.toString(), 'Wrong vault owner');
+        });
+
+        // it('Check vault configuration', async () => {
+        //     const {
+        //         configuration
+        //     } = await context.vault.methods.configuration().call();
+        // });
+
+        it('Check root ownership', async () => {
+            const root_owner = await context.root.methods.rootOwner({ answerId: 0 })
+                .call().then(e => e.value0);
+
+            expect(root_owner.toString())
+                .to.be.equal(context.owner.address.toString(), 'Wrong root owner');
+        });
+
+        it('Check root balance', async () => {
+            expect(await locklift.provider.getBalance(context.root.address))
+                .to.be.equal(toNano(2 * INITIAL_USER_BALANCE + 1), 'Root balance is not correct');
         });
 
         it('Drain vault', async () => {

@@ -1,44 +1,8 @@
 {
 	"ABI version": 2,
 	"version": "2.2",
-	"header": ["pubkey", "time", "expire"],
+	"header": ["time"],
 	"functions": [
-		{
-			"name": "constructor",
-			"inputs": [
-				{"name":"sources","type":"address[]"},
-				{"name":"destinations","type":"address[]"},
-				{"name":"owner_","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "__getTunnels",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"sources","type":"address[]"},
-				{"name":"destinations","type":"address[]"}
-			]
-		},
-		{
-			"name": "__updateTunnel",
-			"inputs": [
-				{"name":"source","type":"address"},
-				{"name":"destination","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "__removeTunnel",
-			"inputs": [
-				{"name":"source","type":"address"}
-			],
-			"outputs": [
-			]
-		},
 		{
 			"name": "pause",
 			"inputs": [
@@ -69,6 +33,13 @@
 			]
 		},
 		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "owner",
 			"inputs": [
 			],
@@ -86,7 +57,6 @@
 		}
 	],
 	"data": [
-		{"key":1,"name":"_randomNonce","type":"uint256"}
 	],
 	"events": [
 		{
@@ -118,8 +88,6 @@
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
 		{"name":"owner","type":"address"},
-		{"name":"paused","type":"bool"},
-		{"name":"_randomNonce","type":"uint256"},
-		{"name":"tunnels","type":"map(address,address)"}
+		{"name":"paused","type":"bool"}
 	]
 }

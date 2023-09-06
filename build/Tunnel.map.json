@@ -1,195 +1,101 @@
 {
   "map": {
-    "016716eb4455fdd9ed830c50aff7e078f1af0662428bad6608da2eee6dead38a": {
+    "0bed800475e0f4d00e47d81e69c725623f5604b8f0f9e378aa428d07a6d3dfc8": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 494
-      },
-      "16": {
-        "filename": "Tunnel.code",
-        "line": 497
-      },
-      "24": {
-        "filename": "Tunnel.code",
-        "line": 498
-      }
-    },
-    "08480d5dcff86d6e70781ec27b2e22e2114b617f65f63d25042b63689b5aa89b": {
-      "0": {
-        "filename": "Tunnel.code",
-        "line": 101
-      },
-      "16": {
-        "filename": "Tunnel.code",
-        "line": 104
-      }
-    },
-    "0921fa3e8f2e83c46361e1402f4563771ae4aa18609942a628c7b283fcadf4bb": {
-      "0": {
-        "filename": "Tunnel.code",
-        "line": 459
-      },
-      "16": {
-        "filename": "Tunnel.code",
-        "line": 460
-      },
-      "24": {
-        "filename": "Tunnel.code",
-        "line": 461
-      },
-      "40": {
-        "filename": "Tunnel.code",
-        "line": 462
-      },
-      "56": {
-        "filename": "Tunnel.code",
-        "line": 463
-      },
-      "72": {
-        "filename": "Tunnel.code",
-        "line": 464
-      },
-      "80": {
-        "filename": "Tunnel.code",
-        "line": 465
-      },
-      "88": {
-        "filename": "Tunnel.code",
-        "line": 466
-      },
-      "104": {
-        "filename": "Tunnel.code",
-        "line": 467
-      },
-      "120": {
-        "filename": "Tunnel.code",
-        "line": 468
-      },
-      "128": {
-        "filename": "Tunnel.code",
-        "line": 469
-      },
-      "144": {
-        "filename": "Tunnel.code",
-        "line": 470
-      },
-      "168": {
-        "filename": "Tunnel.code",
-        "line": 471
-      },
-      "176": {
-        "filename": "Tunnel.code",
-        "line": 472
-      },
-      "184": {
-        "filename": "Tunnel.code",
-        "line": 473
-      },
-      "200": {
-        "filename": "Tunnel.code",
-        "line": 474
-      },
-      "216": {
-        "filename": "Tunnel.code",
-        "line": 478
-      },
-      "224": {
-        "filename": "Tunnel.code",
-        "line": 479
-      },
-      "248": {
-        "filename": "Tunnel.code",
-        "line": 480
-      },
-      "264": {
-        "filename": "Tunnel.code",
-        "line": 487
-      },
-      "272": {
-        "filename": "Tunnel.code",
-        "line": 488
-      },
-      "280": {
-        "filename": "Tunnel.code",
-        "line": 489
-      },
-      "296": {
-        "filename": "Tunnel.code",
-        "line": 493
-      }
-    },
-    "11e9ebc8383e302b8927d6327ab1f11d29f671094899b05226bd2a54fee740e2": {
-      "0": {
-        "filename": "Tunnel.code",
-        "line": 336
+        "line": 886
       },
       "8": {
         "filename": "Tunnel.code",
-        "line": 337
+        "line": 887
       },
-      "24": {
+      "56": {
         "filename": "Tunnel.code",
-        "line": 338
-      },
-      "48": {
-        "filename": "Tunnel.code",
-        "line": 339
+        "line": 888
       },
       "64": {
         "filename": "Tunnel.code",
-        "line": 340
+        "line": 889
       },
-      "72": {
+      "80": {
         "filename": "Tunnel.code",
-        "line": 341
+        "line": 892
       },
       "88": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
-      },
-      "96": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
-      },
-      "104": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
-      },
-      "112": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
-      },
-      "120": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
-      },
-      "128": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
+        "filename": "Tunnel.code",
+        "line": 893
       },
       "136": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
+        "filename": "Tunnel.code",
+        "line": 894
       },
-      "152": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 68
+      "144": {
+        "filename": "Tunnel.code",
+        "line": 895
       },
       "160": {
         "filename": "Tunnel.code",
-        "line": 355
+        "line": 898
       },
-      "176": {
+      "168": {
         "filename": "Tunnel.code",
-        "line": 358
+        "line": 899
       },
-      "184": {
+      "216": {
         "filename": "Tunnel.code",
-        "line": 359
+        "line": 900
       },
-      "200": {
+      "224": {
         "filename": "Tunnel.code",
-        "line": 362
+        "line": 901
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 904
+      },
+      "248": {
+        "filename": "Tunnel.code",
+        "line": 905
+      },
+      "296": {
+        "filename": "Tunnel.code",
+        "line": 906
+      },
+      "304": {
+        "filename": "Tunnel.code",
+        "line": 907
+      }
+    },
+    "12c7db266b94c29767ff058bf41f7abdac5c677d4e81d933b66759aa5b1572a9": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 653
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 654
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 655
+      },
+      "40": {
+        "filename": "Tunnel.code",
+        "line": 656
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 657
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 692
+      }
+    },
+    "13affe01c1d7479bed139cbf3e601a3192ecc00d36c9f61533c841c1e7798529": {
+      "0": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 17
       }
     },
     "14cfe5caa0fe7e88a16bc87ff9f898109338db1c654f5df45a76e8329e1dacd9": {
@@ -202,83 +108,759 @@
         "line": 2
       }
     },
-    "1ac086ef6f723637ea5531d2e624b34844a9a2aea622bbc63a93c039645bb9a2": {
+    "215408cd3fe0e2cc8e8295c8faa34ecb99f4b0a55c9ca1c473d66628f75faf92": {
       "0": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 71
+        "filename": "Tunnel.code",
+        "line": 882
       },
-      "16": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 71
-      },
-      "40": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 71
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 883
       },
       "56": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 71
+        "filename": "Tunnel.code",
+        "line": 884
       },
       "64": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 71
-      }
-    },
-    "1f9bba105533d8516bf468f26cd60e3d5b06ef060159269a298f83009273dc15": {
-      "0": {
         "filename": "Tunnel.code",
-        "line": 378
-      },
-      "16": {
-        "filename": "Tunnel.code",
-        "line": 379
-      },
-      "24": {
-        "filename": "Tunnel.code",
-        "line": 380
-      },
-      "40": {
-        "filename": "Tunnel.code",
-        "line": 381
-      },
-      "56": {
-        "filename": "Tunnel.code",
-        "line": 382
-      },
-      "72": {
-        "filename": "Tunnel.code",
-        "line": 383
+        "line": 885
       },
       "80": {
         "filename": "Tunnel.code",
-        "line": 384
+        "line": 911
       },
-      "96": {
+      "88": {
         "filename": "Tunnel.code",
-        "line": 385
-      },
-      "112": {
-        "filename": "Tunnel.code",
-        "line": 386
-      },
-      "120": {
-        "filename": "Tunnel.code",
-        "line": 387
+        "line": 912
       },
       "136": {
         "filename": "Tunnel.code",
-        "line": 388
+        "line": 913
       },
-      "152": {
+      "144": {
         "filename": "Tunnel.code",
-        "line": 389
+        "line": 914
+      },
+      "160": {
+        "filename": "Tunnel.code",
+        "line": 940
       },
       "168": {
         "filename": "Tunnel.code",
-        "line": 390
+        "line": 941
+      },
+      "216": {
+        "filename": "Tunnel.code",
+        "line": 942
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 943
       }
     },
-    "2d5036170c6edb7c8b0334e5c8d3103526b85dac27a3fb63d24580194b1acfa0": {
+    "2549be0aef3dba19d303aa48f6ae7f81df17f3798df221141a2d500411513598": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 171
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 172
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 173
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 174
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 175
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 176
+      },
+      "88": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 56
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 182
+      },
+      "112": {
+        "filename": "Tunnel.code",
+        "line": 185
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 186
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 187
+      },
+      "144": {
+        "filename": "Tunnel.code",
+        "line": 188
+      },
+      "152": {
+        "filename": "Tunnel.code",
+        "line": 189
+      },
+      "168": {
+        "filename": "Tunnel.code",
+        "line": 190
+      },
+      "184": {
+        "filename": "Tunnel.code",
+        "line": 191
+      },
+      "192": {
+        "filename": "Tunnel.code",
+        "line": 192
+      },
+      "200": {
+        "filename": "Tunnel.code",
+        "line": 193
+      },
+      "208": {
+        "filename": "Tunnel.code",
+        "line": 194
+      },
+      "232": {
+        "filename": "Tunnel.code",
+        "line": 195
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 196
+      },
+      "256": {
+        "filename": "Tunnel.code",
+        "line": 197
+      },
+      "272": {
+        "filename": "Tunnel.code",
+        "line": 198
+      },
+      "288": {
+        "filename": "Tunnel.code",
+        "line": 199
+      },
+      "336": {
+        "filename": "Tunnel.code",
+        "line": 200
+      },
+      "344": {
+        "filename": "Tunnel.code",
+        "line": 201
+      },
+      "360": {
+        "filename": "Tunnel.code",
+        "line": 202
+      },
+      "368": {
+        "filename": "Tunnel.code",
+        "line": 203
+      },
+      "384": {
+        "filename": "Tunnel.code",
+        "line": 204
+      },
+      "400": {
+        "filename": "Tunnel.code",
+        "line": 205
+      },
+      "408": {
+        "filename": "Tunnel.code",
+        "line": 206
+      },
+      "424": {
+        "filename": "Tunnel.code",
+        "line": 207
+      },
+      "432": {
+        "filename": "Tunnel.code",
+        "line": 208
+      },
+      "448": {
+        "filename": "Tunnel.code",
+        "line": 209
+      },
+      "464": {
+        "filename": "Tunnel.code",
+        "line": 210
+      },
+      "472": {
+        "filename": "Tunnel.code",
+        "line": 211
+      },
+      "480": {
+        "filename": "Tunnel.code",
+        "line": 212
+      },
+      "496": {
+        "filename": "Tunnel.code",
+        "line": 214
+      },
+      "504": {
+        "filename": "Tunnel.code",
+        "line": 215
+      },
+      "512": {
+        "filename": "Tunnel.code",
+        "line": 217
+      },
+      "520": {
+        "filename": "Tunnel.code",
+        "line": 218
+      },
+      "536": {
+        "filename": "Tunnel.code",
+        "line": 221
+      }
+    },
+    "2561ad1223d1bc83834c068cd5644f37538b847204463da5eee64b64d9d012c7": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 658
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 659
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 660
+      },
+      "32": {
+        "filename": "Tunnel.code",
+        "line": 661
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 662
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 665
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 666
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 667
+      },
+      "80": {
+        "filename": "Tunnel.code",
+        "line": 668
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 669
+      },
+      "112": {
+        "filename": "Tunnel.code",
+        "line": 670
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 671
+      },
+      "144": {
+        "filename": "Tunnel.code",
+        "line": 673
+      },
+      "152": {
+        "filename": "Tunnel.code",
+        "line": 674
+      },
+      "160": {
+        "filename": "Tunnel.code",
+        "line": 676
+      },
+      "168": {
+        "filename": "Tunnel.code",
+        "line": 677
+      },
+      "176": {
+        "filename": "Tunnel.code",
+        "line": 678
+      },
+      "192": {
+        "filename": "Tunnel.code",
+        "line": 679
+      },
+      "208": {
+        "filename": "Tunnel.code",
+        "line": 680
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 681
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 682
+      },
+      "256": {
+        "filename": "Tunnel.code",
+        "line": 683
+      },
+      "272": {
+        "filename": "Tunnel.code",
+        "line": 684
+      },
+      "288": {
+        "filename": "Tunnel.code",
+        "line": 685
+      },
+      "312": {
+        "filename": "Tunnel.code",
+        "line": 686
+      },
+      "328": {
+        "filename": "Tunnel.code",
+        "line": 687
+      },
+      "336": {
+        "filename": "Tunnel.code",
+        "line": 688
+      },
+      "352": {
+        "filename": "Tunnel.code",
+        "line": 689
+      },
+      "360": {
+        "filename": "Tunnel.code",
+        "line": 690
+      }
+    },
+    "311d98e2a482e95470dee44d2e75db731baa9815373c92dda9034bbeaafe451c": {
+      "0": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 36
+      }
+    },
+    "32d6e88e76bde897d4a218364672049bdc2ba736d3417a6ae623577ee46723e2": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 440
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 441
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 442
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 443
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 444
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 445
+      },
+      "88": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 40
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 451
+      },
+      "112": {
+        "filename": "Tunnel.code",
+        "line": 454
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 455
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 458
+      }
+    },
+    "36193f7d669c5a619662245bffab0ca85326d0a855c384f5137a3c7e84159f74": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 631
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 632
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 633
+      },
+      "40": {
+        "filename": "Tunnel.code",
+        "line": 634
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 635
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 636
+      },
+      "80": {
+        "filename": "Tunnel.code",
+        "line": 637
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 638
+      },
+      "112": {
+        "filename": "Tunnel.code",
+        "line": 639
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 640
+      },
+      "128": {
+        "filename": "Tunnel.code",
+        "line": 641
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 642
+      },
+      "152": {
+        "filename": "Tunnel.code",
+        "line": 643
+      },
+      "168": {
+        "filename": "Tunnel.code",
+        "line": 644
+      },
+      "176": {
+        "filename": "Tunnel.code",
+        "line": 645
+      },
+      "192": {
+        "filename": "Tunnel.code",
+        "line": 646
+      },
+      "208": {
+        "filename": "Tunnel.code",
+        "line": 647
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 648
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 649
+      },
+      "256": {
+        "filename": "Tunnel.code",
+        "line": 650
+      }
+    },
+    "3a1f8a7d2315bdfe3266bac15e3b611c0868318a4448265d019e69c133eb9515": {
+      "0": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      }
+    },
+    "3e6b186ec79404e901b8af16a46c6f701a64fcd19ce053e01497cb5dc495474d": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 756
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 757
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 760
+      }
+    },
+    "43eec3857cc5dd0c7c03dc4636aa055a87f5d626da614fc2b594cb8ceecd3c4b": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 24
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 26
+      },
+      "24": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 26
+      },
+      "40": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "176": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "184": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "192": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "240": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "248": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "256": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "264": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "272": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "280": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "288": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "296": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      },
+      "304": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 28
+      }
+    },
+    "4cbad355d952523294444a000d17ec257b303d2d4f0f9ff86c4ff439e37a987c": {
+      "0": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 76
+      },
+      "16": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 76
+      },
+      "40": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 76
+      },
+      "56": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 76
+      },
+      "64": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 76
+      }
+    },
+    "58de60c2bd50e7626f6f0c5f0da6369e41299f054caccebd279b7f6cb0578055": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 734
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 735
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 736
+      },
+      "40": {
+        "filename": "Tunnel.code",
+        "line": 737
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 738
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 739
+      },
+      "80": {
+        "filename": "Tunnel.code",
+        "line": 740
+      },
+      "88": {
+        "filename": "Tunnel.code",
+        "line": 741
+      },
+      "104": {
+        "filename": "Tunnel.code",
+        "line": 742
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 743
+      },
+      "128": {
+        "filename": "Tunnel.code",
+        "line": 744
+      },
+      "144": {
+        "filename": "Tunnel.code",
+        "line": 745
+      },
+      "168": {
+        "filename": "Tunnel.code",
+        "line": 746
+      },
+      "176": {
+        "filename": "Tunnel.code",
+        "line": 747
+      },
+      "184": {
+        "filename": "Tunnel.code",
+        "line": 748
+      },
+      "200": {
+        "filename": "Tunnel.code",
+        "line": 749
+      },
+      "216": {
+        "filename": "Tunnel.code",
+        "line": 753
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 754
+      },
+      "248": {
+        "filename": "Tunnel.code",
+        "line": 755
+      },
+      "264": {
+        "filename": "Tunnel.code",
+        "line": 762
+      },
+      "272": {
+        "filename": "Tunnel.code",
+        "line": 763
+      },
+      "280": {
+        "filename": "Tunnel.code",
+        "line": 764
+      },
+      "296": {
+        "filename": "Tunnel.code",
+        "line": 768
+      }
+    },
+    "5b8a67731c1cb79b1bdbba949a13e7c6d930792f9d8062cac94172df687ffdb3": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "200": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "208": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "224": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      },
+      "248": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 39
+      }
+    },
+    "60f807cee192779d5d754c28b27097f0c9526c872a12f393fde55e35ef0d36c0": {
       "0": {
         "filename": "Tunnel.code",
         "line": 4
@@ -421,737 +1003,441 @@
       },
       "432": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "440": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
-      "448": {
+      "456": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
-      "464": {
+      "472": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "480": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "488": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "496": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "504": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "512": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "520": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
       "528": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 36
       },
-      "536": {
+      "552": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
+        "line": 37
       },
       "560": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
+        "line": 37
       },
       "568": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
+        "line": 37
       },
-      "576": {
+      "584": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
+        "line": 37
       },
       "592": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
+        "line": 37
       },
-      "600": {
+      "608": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
+        "line": 37
       },
       "616": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
-      },
-      "624": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
-      },
-      "648": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 35
-      },
-      "664": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
         "line": 37
       },
-      "672": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 37
-      },
-      "680": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 37
-      },
-      "696": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 37
-      },
-      "712": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 37
-      },
-      "720": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 37
-      },
-      "736": {
+      "640": {
         "filename": "../contracts/legacy/Tunnel.tsol",
         "line": 38
-      },
-      "752": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "768": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "784": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "800": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "816": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "832": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "848": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "864": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "880": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "896": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "912": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "936": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "952": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 38
-      },
-      "968": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 37
-      },
-      "976": {
-        "filename": "Tunnel.code",
-        "line": 98
-      },
-      "984": {
-        "filename": "Tunnel.code",
-        "line": 99
-      }
-    },
-    "311d98e2a482e95470dee44d2e75db731baa9815373c92dda9034bbeaafe451c": {
-      "0": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 33
-      }
-    },
-    "3a1f8a7d2315bdfe3266bac15e3b611c0868318a4448265d019e69c133eb9515": {
-      "0": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
-      }
-    },
-    "56a429456e6047c34eadc4eddeae32b3f0897aa755b5fafdaa833cb5892ee4e3": {
-      "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
-      },
-      "48": {
-        "filename": "<entry-selector>",
-        "line": 5
-      },
-      "56": {
-        "filename": "<entry-selector>",
-        "line": 6
-      },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
-      },
-      "96": {
-        "filename": "<entry-selector>",
-        "line": 9
-      },
-      "112": {
-        "filename": "<entry-selector>",
-        "line": 10
-      },
-      "128": {
-        "filename": "<entry-selector>",
-        "line": 11
       }
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
+        "line": 53
       }
     },
-    "62f4bd4ccadc41ff2170f2ce748773c66b0aa5c5d2234c1417402ed3b6ce504b": {
+    "6e65c8d217286862f0e7bd67c3e70c068f1e28c1036cc8203920ec325c6c1f3d": {
+      "0": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 40
+      },
+      "16": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "24": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "32": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "48": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "64": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "72": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "88": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "104": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "120": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "136": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "152": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "168": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "184": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "200": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "216": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "232": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "248": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "264": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "288": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "304": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 43
+      },
+      "320": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 42
+      },
+      "328": {
+        "filename": "Tunnel.code",
+        "line": 101
+      },
+      "336": {
+        "filename": "Tunnel.code",
+        "line": 102
+      },
+      "352": {
+        "filename": "Tunnel.code",
+        "line": 104
+      },
+      "368": {
+        "filename": "Tunnel.code",
+        "line": 107
+      }
+    },
+    "756d3dddc8d4842311c630f41d981526e33d5b309cbc08250a95678bddeb9de7": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 567
+        "line": 862
       },
       "8": {
         "filename": "Tunnel.code",
-        "line": 568
+        "line": 863
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 864
+      },
+      "32": {
+        "filename": "Tunnel.code",
+        "line": 867
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 868
       },
       "56": {
         "filename": "Tunnel.code",
-        "line": 569
+        "line": 869
       },
-      "64": {
+      "72": {
         "filename": "Tunnel.code",
-        "line": 570
+        "line": 870
       },
-      "80": {
+      "232": {
         "filename": "Tunnel.code",
-        "line": 573
-      },
-      "88": {
-        "filename": "Tunnel.code",
-        "line": 574
-      },
-      "136": {
-        "filename": "Tunnel.code",
-        "line": 575
-      },
-      "144": {
-        "filename": "Tunnel.code",
-        "line": 576
-      },
-      "160": {
-        "filename": "Tunnel.code",
-        "line": 579
-      },
-      "168": {
-        "filename": "Tunnel.code",
-        "line": 580
-      },
-      "216": {
-        "filename": "Tunnel.code",
-        "line": 581
-      },
-      "224": {
-        "filename": "Tunnel.code",
-        "line": 582
+        "line": 871
       },
       "240": {
         "filename": "Tunnel.code",
-        "line": 585
+        "line": 872
       },
       "248": {
         "filename": "Tunnel.code",
-        "line": 586
+        "line": 873
+      },
+      "264": {
+        "filename": "Tunnel.code",
+        "line": 874
+      },
+      "272": {
+        "filename": "Tunnel.code",
+        "line": 875
+      },
+      "280": {
+        "filename": "Tunnel.code",
+        "line": 876
       },
       "296": {
         "filename": "Tunnel.code",
-        "line": 587
+        "line": 878
       },
       "304": {
         "filename": "Tunnel.code",
-        "line": 588
+        "line": 879
       }
     },
-    "7284c84d4c644752ed3308327a208e72371947a26f0085a50ee3c2bb55fa532f": {
+    "77191daa011d8839ed8dd691fbd58eca095df953fd5ddafcbedae3f2ac32c936": {
+      "0": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 34
+      }
+    },
+    "7a6ea416a6656e4dfcc247705b53e2a1dcc980f4f1974dff1bc788ad499c77ed": {
+      "0": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 25
+      }
+    },
+    "7c091c4d5fae56f3c1359fb26ac429831490767af9925d3755b02fc145a603ed": {
       "0": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 65
+        "line": 70
       },
       "8": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 65
+        "line": 70
       },
       "24": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 65
+        "line": 70
       },
       "48": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 65
+        "line": 70
       },
       "64": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 65
+        "line": 70
       }
     },
-    "979fed660dde08537c20b95294fafd7a4d5582aced7d2669b7bc5b726ca3a287": {
-      "0": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 51
-      },
-      "8": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 51
-      },
-      "16": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 51
-      },
-      "32": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 51
-      },
-      "40": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "56": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "64": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "88": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "104": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "112": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "120": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "128": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "136": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "144": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "160": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "168": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "176": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "184": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "192": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "200": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 55
-      },
-      "216": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "232": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "248": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "256": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "264": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "280": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "296": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "312": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "328": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 56
-      },
-      "336": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "352": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "368": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "376": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "384": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "400": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "416": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "432": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "448": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 57
-      },
-      "456": {
-        "filename": "Tunnel.code",
-        "line": 271
-      },
-      "472": {
-        "filename": "Tunnel.code",
-        "line": 272
-      },
-      "496": {
-        "filename": "Tunnel.code",
-        "line": 273
-      },
-      "512": {
-        "filename": "Tunnel.code",
-        "line": 274
-      },
-      "520": {
-        "filename": "Tunnel.code",
-        "line": 275
-      },
-      "528": {
-        "filename": "Tunnel.code",
-        "line": 276
-      },
-      "536": {
-        "filename": "Tunnel.code",
-        "line": 278
-      },
-      "544": {
-        "filename": "Tunnel.code",
-        "line": 279
-      },
-      "552": {
-        "filename": "Tunnel.code",
-        "line": 280
-      },
-      "568": {
-        "filename": "Tunnel.code",
-        "line": 282
-      },
-      "576": {
-        "filename": "Tunnel.code",
-        "line": 283
-      },
-      "592": {
-        "filename": "Tunnel.code",
-        "line": 285
-      },
-      "600": {
-        "filename": "Tunnel.code",
-        "line": 286
-      }
-    },
-    "a2844f6c2a0be8e83128fc3385f8780a7a2838e6488dfc9e596d7826852502f4": {
+    "854704540abccb1479224a7aa81c5fb4d15a0a7680a64734d59433a56c3532e3": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 429
+        "line": 779
       },
       "16": {
         "filename": "Tunnel.code",
-        "line": 430
-      },
-      "32": {
-        "filename": "Tunnel.code",
-        "line": 431
-      },
-      "48": {
-        "filename": "Tunnel.code",
-        "line": 432
-      },
-      "64": {
-        "filename": "Tunnel.code",
-        "line": 433
-      },
-      "72": {
-        "filename": "Tunnel.code",
-        "line": 434
-      },
-      "88": {
-        "filename": "Tunnel.code",
-        "line": 435
-      },
-      "104": {
-        "filename": "Tunnel.code",
-        "line": 436
-      },
-      "120": {
-        "filename": "Tunnel.code",
-        "line": 437
-      },
-      "136": {
-        "filename": "Tunnel.code",
-        "line": 438
-      },
-      "152": {
-        "filename": "Tunnel.code",
-        "line": 439
-      },
-      "160": {
-        "filename": "Tunnel.code",
-        "line": 440
-      }
-    },
-    "c3fc41842be1ea1f4e2e445fb07a7ed029a30a329de18f180c4eeb0825098118": {
-      "0": {
-        "filename": "Tunnel.code",
-        "line": 504
-      },
-      "16": {
-        "filename": "Tunnel.code",
-        "line": 505
+        "line": 780
       },
       "24": {
         "filename": "Tunnel.code",
-        "line": 506
+        "line": 781
       },
       "40": {
         "filename": "Tunnel.code",
-        "line": 507
+        "line": 782
       },
       "56": {
         "filename": "Tunnel.code",
-        "line": 508
+        "line": 783
       },
       "72": {
         "filename": "Tunnel.code",
-        "line": 509
+        "line": 784
       },
       "80": {
         "filename": "Tunnel.code",
-        "line": 512
+        "line": 787
       },
       "96": {
         "filename": "Tunnel.code",
-        "line": 513
+        "line": 788
       },
       "104": {
         "filename": "Tunnel.code",
-        "line": 514
+        "line": 789
       },
       "120": {
         "filename": "Tunnel.code",
-        "line": 517
+        "line": 792
       },
       "136": {
         "filename": "Tunnel.code",
-        "line": 518
+        "line": 793
       },
       "144": {
         "filename": "Tunnel.code",
-        "line": 519
+        "line": 794
       },
       "160": {
         "filename": "Tunnel.code",
-        "line": 520
+        "line": 795
       },
       "184": {
         "filename": "Tunnel.code",
-        "line": 521
+        "line": 796
       },
       "200": {
         "filename": "Tunnel.code",
-        "line": 522
+        "line": 797
       },
       "208": {
         "filename": "Tunnel.code",
-        "line": 523
+        "line": 798
       },
       "224": {
         "filename": "Tunnel.code",
-        "line": 524
+        "line": 799
       },
       "232": {
         "filename": "Tunnel.code",
-        "line": 525
+        "line": 800
       },
       "248": {
         "filename": "Tunnel.code",
-        "line": 526
+        "line": 801
       },
       "256": {
         "filename": "Tunnel.code",
-        "line": 527
+        "line": 802
       },
       "264": {
         "filename": "Tunnel.code",
-        "line": 528
+        "line": 803
       },
       "280": {
         "filename": "Tunnel.code",
-        "line": 529
+        "line": 804
       },
       "288": {
         "filename": "Tunnel.code",
-        "line": 530
+        "line": 805
       },
       "296": {
         "filename": "Tunnel.code",
-        "line": 532
+        "line": 807
       },
       "304": {
         "filename": "Tunnel.code",
-        "line": 533
+        "line": 808
       },
       "312": {
         "filename": "Tunnel.code",
-        "line": 534
+        "line": 809
       },
       "328": {
         "filename": "Tunnel.code",
-        "line": 536
+        "line": 811
       },
       "336": {
         "filename": "Tunnel.code",
-        "line": 537
+        "line": 812
       },
       "344": {
         "filename": "Tunnel.code",
-        "line": 538
+        "line": 813
       },
       "360": {
         "filename": "Tunnel.code",
-        "line": 539
+        "line": 814
       },
       "376": {
         "filename": "Tunnel.code",
-        "line": 540
+        "line": 815
       },
       "392": {
         "filename": "Tunnel.code",
-        "line": 542
+        "line": 817
       },
       "400": {
         "filename": "Tunnel.code",
-        "line": 543
+        "line": 818
       },
       "416": {
         "filename": "Tunnel.code",
-        "line": 544
+        "line": 819
       },
       "424": {
         "filename": "Tunnel.code",
-        "line": 545
+        "line": 820
       },
       "440": {
         "filename": "Tunnel.code",
-        "line": 547
+        "line": 822
       },
       "448": {
         "filename": "Tunnel.code",
-        "line": 548
+        "line": 823
       },
       "464": {
         "filename": "Tunnel.code",
-        "line": 549
+        "line": 824
       },
       "472": {
         "filename": "stdlib.sol",
@@ -1207,685 +1493,1377 @@
       },
       "664": {
         "filename": "Tunnel.code",
-        "line": 551
+        "line": 826
       },
       "680": {
         "filename": "Tunnel.code",
-        "line": 552
+        "line": 827
       },
       "688": {
         "filename": "Tunnel.code",
-        "line": 553
+        "line": 828
       },
       "704": {
         "filename": "Tunnel.code",
-        "line": 554
+        "line": 829
       },
       "712": {
         "filename": "Tunnel.code",
-        "line": 555
+        "line": 830
       },
       "728": {
         "filename": "Tunnel.code",
-        "line": 556
+        "line": 831
       },
       "744": {
         "filename": "Tunnel.code",
-        "line": 557
+        "line": 832
       },
       "752": {
         "filename": "Tunnel.code",
-        "line": 558
+        "line": 833
       },
       "768": {
         "filename": "Tunnel.code",
-        "line": 561
+        "line": 836
       },
       "776": {
         "filename": "Tunnel.code",
-        "line": 562
+        "line": 837
       }
     },
-    "ccc3cbf22b1cc728968302fa20c5663b07fbea8301230ae2841759ed33ea361f": {
+    "9daf4e6aa3f52d3ab98112510c8891c1e853b481384107286aaf6d044d8b1b04": {
+      "0": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 56
+      },
+      "8": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 56
+      },
+      "16": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 56
+      },
+      "32": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 56
+      },
+      "40": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "56": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "64": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "88": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "104": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "112": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "120": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "128": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "136": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "144": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "160": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "168": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "176": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "184": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "192": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "200": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 60
+      },
+      "216": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "232": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "248": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "256": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "264": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "280": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "296": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "312": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "328": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 61
+      },
+      "336": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "352": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "368": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "376": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "384": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "400": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "416": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "432": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "448": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 62
+      },
+      "456": {
+        "filename": "Tunnel.code",
+        "line": 274
+      },
+      "472": {
+        "filename": "Tunnel.code",
+        "line": 275
+      },
+      "496": {
+        "filename": "Tunnel.code",
+        "line": 276
+      },
+      "512": {
+        "filename": "Tunnel.code",
+        "line": 277
+      },
+      "520": {
+        "filename": "Tunnel.code",
+        "line": 278
+      },
+      "528": {
+        "filename": "Tunnel.code",
+        "line": 279
+      },
+      "536": {
+        "filename": "Tunnel.code",
+        "line": 281
+      },
+      "544": {
+        "filename": "Tunnel.code",
+        "line": 282
+      },
+      "552": {
+        "filename": "Tunnel.code",
+        "line": 283
+      },
+      "568": {
+        "filename": "Tunnel.code",
+        "line": 285
+      },
+      "576": {
+        "filename": "Tunnel.code",
+        "line": 286
+      },
+      "592": {
+        "filename": "Tunnel.code",
+        "line": 288
+      },
+      "600": {
+        "filename": "Tunnel.code",
+        "line": 289
+      }
+    },
+    "a0eb55b6b17dbdcadc2ff0e0f13ad131a7f1a6b18dc4c2f487a6389efbbc0ef4": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 481
+        "line": 293
       },
       "8": {
         "filename": "Tunnel.code",
-        "line": 482
+        "line": 294
       },
       "24": {
         "filename": "Tunnel.code",
-        "line": 485
+        "line": 295
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 296
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 297
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 298
+      },
+      "88": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "96": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "104": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "112": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "120": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "128": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "136": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "152": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "160": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "168": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "176": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "192": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 66
+      },
+      "200": {
+        "filename": "Tunnel.code",
+        "line": 316
+      },
+      "216": {
+        "filename": "Tunnel.code",
+        "line": 319
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 320
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 323
+      }
+    },
+    "a32c145b5b62983017617bb467427e01aadbb67ef7651e91851936f30409bd5c": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 381
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 382
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 383
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 384
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 385
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 386
+      },
+      "88": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 32
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 392
+      },
+      "112": {
+        "filename": "Tunnel.code",
+        "line": 395
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 396
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 399
+      }
+    },
+    "ac3942bf004a69777789bd92955653ca1f818e9bdd47635c0566a56a8b4f303f": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
+      }
+    },
+    "adce9b7d0c996d24828f9a380ad4b1886c956adb6515dafc2b7d06b30f14ac38": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 17
+      },
+      "200": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 17
+      },
+      "216": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 17
+      },
+      "224": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 17
+      },
+      "248": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 33
+      },
+      "256": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 33
+      },
+      "272": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 34
+      },
+      "280": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 34
+      },
+      "288": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 34
+      }
+    },
+    "aeaec0fb21d7c84a70da60e03dfda23a5823fc1eb3d53780f8d01ea42349a17c": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 25
+      },
+      "200": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 25
+      },
+      "216": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 25
+      },
+      "240": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 41
+      },
+      "248": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 41
+      },
+      "264": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 42
+      },
+      "272": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 42
+      },
+      "280": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 42
+      }
+    },
+    "b21445a2c1ccbd5942fad5d15d223df19452afec3ffae1d1c7fdb5c5b3a8c0c6": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 110
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 111
+      },
+      "40": {
+        "filename": "Tunnel.code",
+        "line": 112
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 113
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 114
+      },
+      "80": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "88": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "104": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "120": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "144": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "160": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "176": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "184": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 27
+      },
+      "208": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "224": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "240": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "248": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "264": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "272": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "280": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "296": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "304": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 48
+      },
+      "320": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 51
+      },
+      "328": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 51
+      },
+      "344": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 51
+      },
+      "352": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 51
+      },
+      "360": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 51
+      },
+      "368": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "384": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "400": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "424": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "440": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "456": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "464": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "472": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "496": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "504": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "512": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "536": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "552": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "560": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "584": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 53
+      },
+      "600": {
+        "filename": "Tunnel.code",
+        "line": 165
+      },
+      "608": {
+        "filename": "Tunnel.code",
+        "line": 166
+      }
+    },
+    "bc739c72643c96f0358c147b1ca3f58af438b14455efdadd2ae775e7776ceba5": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 526
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 527
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 528
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 529
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 530
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 531
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "96": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "112": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "128": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "136": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "152": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "160": {
+        "filename": "Tunnel.code",
+        "line": 545
+      },
+      "176": {
+        "filename": "Tunnel.code",
+        "line": 548
+      },
+      "184": {
+        "filename": "Tunnel.code",
+        "line": 549
+      },
+      "200": {
+        "filename": "Tunnel.code",
+        "line": 552
+      }
+    },
+    "c6b6dc2e914713902b38807ffa8a8fc16a6bb640e1bb4bd438eebd11709f5a65": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 915
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 916
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 917
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 918
+      },
+      "80": {
+        "filename": "Tunnel.code",
+        "line": 921
+      },
+      "88": {
+        "filename": "Tunnel.code",
+        "line": 922
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 923
+      },
+      "144": {
+        "filename": "Tunnel.code",
+        "line": 924
+      },
+      "160": {
+        "filename": "Tunnel.code",
+        "line": 927
+      },
+      "168": {
+        "filename": "Tunnel.code",
+        "line": 928
+      },
+      "216": {
+        "filename": "Tunnel.code",
+        "line": 929
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 930
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 933
+      },
+      "248": {
+        "filename": "Tunnel.code",
+        "line": 934
+      },
+      "296": {
+        "filename": "Tunnel.code",
+        "line": 935
+      },
+      "304": {
+        "filename": "Tunnel.code",
+        "line": 936
+      }
+    },
+    "cb0178dd1164e3db1c50beb70ec67033dfb95aefa3916c228588da7846870909": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 339
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 340
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 341
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 342
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 343
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 344
+      },
+      "88": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "96": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "104": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "112": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "120": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "128": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "136": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "152": {
+        "filename": "../contracts/legacy/Tunnel.tsol",
+        "line": 73
+      },
+      "160": {
+        "filename": "Tunnel.code",
+        "line": 358
+      },
+      "176": {
+        "filename": "Tunnel.code",
+        "line": 361
+      },
+      "184": {
+        "filename": "Tunnel.code",
+        "line": 362
+      },
+      "200": {
+        "filename": "Tunnel.code",
+        "line": 365
+      }
+    },
+    "d322f953dc57ded2fa9701a2fdca10bacffa3d71e364b0facf99d11507a925bd": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 584
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 585
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 586
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 587
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 588
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 589
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 45
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 595
+      },
+      "112": {
+        "filename": "Tunnel.code",
+        "line": 598
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 599
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 602
       }
     },
     "d558e53bf690afc8a76b8887a99a49a52db1bd24bec5da84780ea0e7bc0aad3f": {
       "0": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
+        "line": 53
+      }
+    },
+    "dba5a9836a0b37261b054d2d092e3bb2e58657f5ee6b2bf2b59d516d19890bb5": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 842
+      },
+      "8": {
+        "filename": "Tunnel.code",
+        "line": 843
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 844
+      },
+      "32": {
+        "filename": "Tunnel.code",
+        "line": 847
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 848
+      },
+      "56": {
+        "filename": "Tunnel.code",
+        "line": 849
+      },
+      "72": {
+        "filename": "Tunnel.code",
+        "line": 850
+      },
+      "232": {
+        "filename": "Tunnel.code",
+        "line": 851
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 852
+      },
+      "248": {
+        "filename": "Tunnel.code",
+        "line": 853
+      },
+      "256": {
+        "filename": "Tunnel.code",
+        "line": 854
+      },
+      "264": {
+        "filename": "Tunnel.code",
+        "line": 855
+      },
+      "272": {
+        "filename": "Tunnel.code",
+        "line": 856
+      },
+      "288": {
+        "filename": "Tunnel.code",
+        "line": 858
+      },
+      "296": {
+        "filename": "Tunnel.code",
+        "line": 859
+      }
+    },
+    "dd7b1e9535b98cb5b889a3519de5222d48dac5854885690faea35d15fbeafcc3": {
+      "0": {
+        "filename": "../contracts/utils/Pausable.tsol",
+        "line": 42
+      }
+    },
+    "df45ce97c87dba2b425dffcf0ea7539d2513e49787e0f866d6bc0b2e726a6fe6": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 769
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 772
+      },
+      "24": {
+        "filename": "Tunnel.code",
+        "line": 773
       }
     },
     "e6936e8f0e7b8fe98c2ca66eee9d4e9dafcfc747defef9cb795288fabb1b7ef3": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 443
+        "line": 718
       },
       "16": {
         "filename": "Tunnel.code",
-        "line": 444
+        "line": 719
       },
       "24": {
         "filename": "Tunnel.code",
-        "line": 445
+        "line": 720
       },
       "40": {
         "filename": "Tunnel.code",
-        "line": 446
+        "line": 721
       },
       "56": {
         "filename": "Tunnel.code",
-        "line": 447
+        "line": 722
       },
       "64": {
         "filename": "Tunnel.code",
-        "line": 448
+        "line": 723
       },
       "80": {
         "filename": "Tunnel.code",
-        "line": 449
+        "line": 724
       },
       "88": {
         "filename": "Tunnel.code",
-        "line": 450
+        "line": 725
       },
       "96": {
         "filename": "Tunnel.code",
-        "line": 451
+        "line": 726
       },
       "112": {
         "filename": "Tunnel.code",
-        "line": 452
+        "line": 727
       },
       "128": {
         "filename": "Tunnel.code",
-        "line": 453
+        "line": 728
       },
       "136": {
         "filename": "Tunnel.code",
-        "line": 454
+        "line": 729
       },
       "144": {
         "filename": "Tunnel.code",
-        "line": 455
-      }
-    },
-    "e830600a2d6113a89acb6e5ba6a985b6a0012f4c7ff00f4ec5a8e3b8558ef3d5": {
-      "0": {
-        "filename": "Tunnel.code",
-        "line": 168
-      },
-      "8": {
-        "filename": "Tunnel.code",
-        "line": 169
-      },
-      "24": {
-        "filename": "Tunnel.code",
-        "line": 170
-      },
-      "48": {
-        "filename": "Tunnel.code",
-        "line": 171
-      },
-      "64": {
-        "filename": "Tunnel.code",
-        "line": 172
-      },
-      "72": {
-        "filename": "Tunnel.code",
-        "line": 173
-      },
-      "88": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 51
-      },
-      "96": {
-        "filename": "Tunnel.code",
-        "line": 179
-      },
-      "112": {
-        "filename": "Tunnel.code",
-        "line": 182
-      },
-      "120": {
-        "filename": "Tunnel.code",
-        "line": 183
-      },
-      "136": {
-        "filename": "Tunnel.code",
-        "line": 184
-      },
-      "144": {
-        "filename": "Tunnel.code",
-        "line": 185
-      },
-      "152": {
-        "filename": "Tunnel.code",
-        "line": 186
-      },
-      "168": {
-        "filename": "Tunnel.code",
-        "line": 187
-      },
-      "184": {
-        "filename": "Tunnel.code",
-        "line": 188
-      },
-      "192": {
-        "filename": "Tunnel.code",
-        "line": 189
-      },
-      "200": {
-        "filename": "Tunnel.code",
-        "line": 190
-      },
-      "208": {
-        "filename": "Tunnel.code",
-        "line": 191
-      },
-      "232": {
-        "filename": "Tunnel.code",
-        "line": 192
-      },
-      "240": {
-        "filename": "Tunnel.code",
-        "line": 193
-      },
-      "256": {
-        "filename": "Tunnel.code",
-        "line": 194
-      },
-      "272": {
-        "filename": "Tunnel.code",
-        "line": 195
-      },
-      "288": {
-        "filename": "Tunnel.code",
-        "line": 196
-      },
-      "336": {
-        "filename": "Tunnel.code",
-        "line": 197
-      },
-      "344": {
-        "filename": "Tunnel.code",
-        "line": 198
-      },
-      "360": {
-        "filename": "Tunnel.code",
-        "line": 199
-      },
-      "368": {
-        "filename": "Tunnel.code",
-        "line": 200
-      },
-      "384": {
-        "filename": "Tunnel.code",
-        "line": 201
-      },
-      "400": {
-        "filename": "Tunnel.code",
-        "line": 202
-      },
-      "408": {
-        "filename": "Tunnel.code",
-        "line": 203
-      },
-      "424": {
-        "filename": "Tunnel.code",
-        "line": 204
-      },
-      "432": {
-        "filename": "Tunnel.code",
-        "line": 205
-      },
-      "448": {
-        "filename": "Tunnel.code",
-        "line": 206
-      },
-      "464": {
-        "filename": "Tunnel.code",
-        "line": 207
-      },
-      "472": {
-        "filename": "Tunnel.code",
-        "line": 208
-      },
-      "480": {
-        "filename": "Tunnel.code",
-        "line": 209
-      },
-      "496": {
-        "filename": "Tunnel.code",
-        "line": 211
-      },
-      "504": {
-        "filename": "Tunnel.code",
-        "line": 212
-      },
-      "512": {
-        "filename": "Tunnel.code",
-        "line": 214
-      },
-      "520": {
-        "filename": "Tunnel.code",
-        "line": 215
-      },
-      "536": {
-        "filename": "Tunnel.code",
-        "line": 218
+        "line": 730
       }
     },
     "eb072cb64698c44803bb21ece8179816a91bd5a4ca08aa0b915cb1a3fe27741c": {
       "0": {
         "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 34
+        "line": 37
+      }
+    },
+    "ed74b55f6a206c6d85bfdfb58f5782b9e9a713ada26dd5a6ce00e95881c86653": {
+      "0": {
+        "filename": "Tunnel.code",
+        "line": 697
+      },
+      "16": {
+        "filename": "Tunnel.code",
+        "line": 698
+      },
+      "32": {
+        "filename": "Tunnel.code",
+        "line": 699
+      },
+      "48": {
+        "filename": "Tunnel.code",
+        "line": 700
+      },
+      "64": {
+        "filename": "Tunnel.code",
+        "line": 701
+      },
+      "80": {
+        "filename": "Tunnel.code",
+        "line": 702
+      },
+      "96": {
+        "filename": "Tunnel.code",
+        "line": 703
+      },
+      "104": {
+        "filename": "Tunnel.code",
+        "line": 704
+      },
+      "120": {
+        "filename": "Tunnel.code",
+        "line": 705
+      },
+      "136": {
+        "filename": "Tunnel.code",
+        "line": 706
+      },
+      "152": {
+        "filename": "Tunnel.code",
+        "line": 707
+      },
+      "160": {
+        "filename": "Tunnel.code",
+        "line": 708
+      },
+      "176": {
+        "filename": "Tunnel.code",
+        "line": 709
+      },
+      "184": {
+        "filename": "Tunnel.code",
+        "line": 710
+      },
+      "192": {
+        "filename": "Tunnel.code",
+        "line": 711
+      },
+      "208": {
+        "filename": "Tunnel.code",
+        "line": 712
+      },
+      "224": {
+        "filename": "Tunnel.code",
+        "line": 713
+      },
+      "232": {
+        "filename": "Tunnel.code",
+        "line": 714
+      },
+      "240": {
+        "filename": "Tunnel.code",
+        "line": 715
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 475
+        "line": 750
       },
       "16": {
         "filename": "Tunnel.code",
-        "line": 476
+        "line": 751
       }
     },
-    "f3a24b12a3350a7dfa632633d80a0ea84032ac56c0608bd91d698aa2b379ab44": {
+    "f9cf078b1ee9bb5f8428c5cac6a83ef09103184df306b169e8f3e88359b5ef45": {
       "0": {
-        "filename": "Tunnel.code",
-        "line": 107
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "16": {
-        "filename": "Tunnel.code",
-        "line": 108
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
-      "40": {
-        "filename": "Tunnel.code",
-        "line": 109
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "56": {
-        "filename": "Tunnel.code",
-        "line": 110
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "64": {
-        "filename": "Tunnel.code",
-        "line": 111
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
-      "80": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "88": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "104": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "120": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "144": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
       "160": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
-      "176": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
       },
-      "184": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 24
-      },
-      "208": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "224": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "240": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "248": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "264": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "272": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "280": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "296": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "304": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 43
-      },
-      "320": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
+      "192": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
         "line": 46
       },
-      "328": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 46
-      },
-      "344": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 46
-      },
-      "352": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 46
-      },
-      "360": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 46
-      },
-      "368": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
+      "200": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
         "line": 48
-      },
-      "384": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "400": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "424": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "440": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "456": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "464": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "472": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "496": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "504": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "512": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "536": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "552": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "560": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "584": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 48
-      },
-      "600": {
-        "filename": "Tunnel.code",
-        "line": 162
-      },
-      "608": {
-        "filename": "Tunnel.code",
-        "line": 163
       }
     },
-    "f6cb591e5500dd843d4ae755f0f3f4810d704516fff37eebed85ae878a5863f9": {
+    "fa5cba381ac9c789f39032e4150771c205d1f9f47e1984327ce46f4e40aa95b2": {
       "0": {
         "filename": "Tunnel.code",
-        "line": 290
+        "line": 944
       },
       "8": {
         "filename": "Tunnel.code",
-        "line": 291
-      },
-      "24": {
-        "filename": "Tunnel.code",
-        "line": 292
-      },
-      "48": {
-        "filename": "Tunnel.code",
-        "line": 293
-      },
-      "64": {
-        "filename": "Tunnel.code",
-        "line": 294
-      },
-      "72": {
-        "filename": "Tunnel.code",
-        "line": 295
-      },
-      "88": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "96": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "104": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "112": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "120": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "128": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "136": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "152": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "160": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "168": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "176": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "192": {
-        "filename": "../contracts/legacy/Tunnel.tsol",
-        "line": 61
-      },
-      "200": {
-        "filename": "Tunnel.code",
-        "line": 313
-      },
-      "216": {
-        "filename": "Tunnel.code",
-        "line": 316
-      },
-      "224": {
-        "filename": "Tunnel.code",
-        "line": 317
-      },
-      "240": {
-        "filename": "Tunnel.code",
-        "line": 320
-      }
-    },
-    "fda0452a1b1b8f8617a73b823accf51b00aca394868009627a59d8aa35becef0": {
-      "0": {
-        "filename": "Tunnel.code",
-        "line": 393
-      },
-      "16": {
-        "filename": "Tunnel.code",
-        "line": 394
-      },
-      "24": {
-        "filename": "Tunnel.code",
-        "line": 395
-      },
-      "40": {
-        "filename": "Tunnel.code",
-        "line": 396
+        "line": 945
       },
       "56": {
         "filename": "Tunnel.code",
-        "line": 397
+        "line": 946
       },
-      "72": {
+      "64": {
         "filename": "Tunnel.code",
-        "line": 398
+        "line": 947
       },
       "80": {
         "filename": "Tunnel.code",
-        "line": 399
+        "line": 950
       },
-      "96": {
+      "88": {
         "filename": "Tunnel.code",
-        "line": 400
-      },
-      "104": {
-        "filename": "Tunnel.code",
-        "line": 401
-      },
-      "120": {
-        "filename": "Tunnel.code",
-        "line": 402
-      },
-      "128": {
-        "filename": "Tunnel.code",
-        "line": 403
+        "line": 951
       },
       "136": {
         "filename": "Tunnel.code",
-        "line": 404
+        "line": 952
       },
-      "152": {
+      "144": {
         "filename": "Tunnel.code",
-        "line": 405
-      },
-      "168": {
-        "filename": "Tunnel.code",
-        "line": 406
-      },
-      "176": {
-        "filename": "Tunnel.code",
-        "line": 407
-      },
-      "200": {
-        "filename": "Tunnel.code",
-        "line": 409
-      },
-      "208": {
-        "filename": "Tunnel.code",
-        "line": 410
-      },
-      "216": {
-        "filename": "Tunnel.code",
-        "line": 412
-      },
-      "224": {
-        "filename": "Tunnel.code",
-        "line": 413
-      },
-      "232": {
-        "filename": "Tunnel.code",
-        "line": 414
-      },
-      "248": {
-        "filename": "Tunnel.code",
-        "line": 415
-      },
-      "264": {
-        "filename": "Tunnel.code",
-        "line": 416
-      },
-      "280": {
-        "filename": "Tunnel.code",
-        "line": 417
-      },
-      "296": {
-        "filename": "Tunnel.code",
-        "line": 418
-      },
-      "312": {
-        "filename": "Tunnel.code",
-        "line": 419
-      },
-      "336": {
-        "filename": "Tunnel.code",
-        "line": 420
-      },
-      "352": {
-        "filename": "Tunnel.code",
-        "line": 421
-      },
-      "360": {
-        "filename": "Tunnel.code",
-        "line": 422
-      },
-      "376": {
-        "filename": "Tunnel.code",
-        "line": 424
+        "line": 953
       }
     }
   }

@@ -7,6 +7,9 @@ pragma AbiHeader pubkey;
 import "../interfaces/ITunnel.tsol";
 
 
+import "./../utils/Pausable.tsol";
+
+
 
 /**
     @title Tunnels contract which receives and pass messages.
@@ -15,7 +18,7 @@ import "../interfaces/ITunnel.tsol";
 
     @dev Only sources are authorized to send messages to Tunnel
 */
-contract Tunnels is ITunnel {
+contract Tunnels is ITunnel, Pausable {
     uint256 static _randomNonce;
 
     mapping(address => address) tunnels;
@@ -33,6 +36,8 @@ contract Tunnels is ITunnel {
         require(tvm.pubkey() == msg.pubkey(), 101, "Tunnel: Wrong deploy key");
         require(sources.length == destinations.length, 101, "Tunnel: source and destinations size different");
         tvm.accept();
+
+        setOwnership(owner_);
 
         for (uint i=0; i < sources.length; i++) {
             tunnels[sources[i]] = destinations[i];

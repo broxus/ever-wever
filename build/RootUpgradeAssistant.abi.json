@@ -1,0 +1,167 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_owner","type":"address"},
+				{"name":"_tunnel","type":"address"},
+				{"name":"_root","type":"address"},
+				{"name":"_vault","type":"address"},
+				{"name":"_rootCode","type":"cell"},
+				{"name":"_vault_receive_safe_fee","type":"uint128"},
+				{"name":"_vault_settings_deploy_wallet_grams","type":"uint128"},
+				{"name":"_vault_initial_balance","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "trigger",
+			"inputs": [
+				{"name":"upgrade_value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "revokeVaultOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "revokeRootOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"code","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_randomNonce",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_randomNonce","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		},
+		{
+			"name": "tunnel",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"tunnel","type":"address"}
+			]
+		},
+		{
+			"name": "root",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"root","type":"address"}
+			]
+		},
+		{
+			"name": "vault",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"vault","type":"address"}
+			]
+		},
+		{
+			"name": "rootCode",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"rootCode","type":"cell"}
+			]
+		},
+		{
+			"name": "vault_receive_safe_fee",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"vault_receive_safe_fee","type":"uint128"}
+			]
+		},
+		{
+			"name": "vault_settings_deploy_wallet_grams",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"vault_settings_deploy_wallet_grams","type":"uint128"}
+			]
+		},
+		{
+			"name": "vault_initial_balance",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"vault_initial_balance","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_randomNonce","type":"uint256"}
+	],
+	"events": [
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_randomNonce","type":"uint256"},
+		{"name":"owner","type":"address"},
+		{"name":"tunnel","type":"address"},
+		{"name":"root","type":"address"},
+		{"name":"vault","type":"address"},
+		{"name":"rootCode","type":"cell"},
+		{"name":"vault_receive_safe_fee","type":"uint128"},
+		{"name":"vault_settings_deploy_wallet_grams","type":"uint128"},
+		{"name":"vault_initial_balance","type":"uint128"}
+	]
+}

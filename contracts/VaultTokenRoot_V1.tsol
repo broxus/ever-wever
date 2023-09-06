@@ -40,6 +40,7 @@ contract VaultTokenRoot_V1 is
     // Legacy vault variables
     address public legacy_vault;
     address public legacy_vault_token_wallet;
+    bool public legacy_mint_enabled;
     uint128 public legacy_vault_reserves;
 
     constructor() public {
