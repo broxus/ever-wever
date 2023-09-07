@@ -49,13 +49,6 @@
 			]
 		},
 		{
-			"name": "revokeOwnership",
-			"inputs": [
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "finishUpgrade",
 			"inputs": [
 				{"name":"nonce","type":"uint32"}

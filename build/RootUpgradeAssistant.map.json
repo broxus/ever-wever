@@ -1010,8 +1010,8 @@
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 742
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
       }
     },
     "61c5bc987269b6b868d36011d9658cb766d0e44e2d630cb77097d34b53cc763f": {
@@ -1302,24 +1302,6 @@
         "line": 266
       }
     },
-    "71c39308fb25dbb2e4df581ffb39bd08453ca8f565076372155dfae69e317daf": {
-      "40": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 412
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 414
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 417
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 418
-      }
-    },
     "742abe84025bf4287dec1162d78a592c9c29fa56013385f37cba6eca4cd161f2": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
@@ -1380,6 +1362,24 @@
       "296": {
         "filename": "RootUpgradeAssistant.code",
         "line": 846
+      }
+    },
+    "765d1c61cc733706e482449174355ec33433b57965e773bc02c6a6ad4902c393": {
+      "4": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 412
+      },
+      "12": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 414
+      },
+      "28": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 417
+      },
+      "44": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 418
       }
     },
     "768b6d0aec9742173dd18ac39e7ca25d507a7eca555cdb16834b4827f3deb600": {

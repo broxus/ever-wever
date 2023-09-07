@@ -156,14 +156,6 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
         }(wallets, constants.ACCEPT_UPGRADE_VALUE, owner);
     }
 
-    function revokeOwnership() external override {
-        ITransferableOwnership(root).transferOwnership{
-            bounce: true,
-            flag: MsgFlag.ALL_NOT_RESERVED,
-            value: 0
-        }(owner, msg.sender, emptyMap);
-    }
-
     function finishUpgrade(
         uint32 nonce
     ) external override onlyBatch(nonce) {

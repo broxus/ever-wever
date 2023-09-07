@@ -62,7 +62,8 @@ contract VaultTokenWallet_V1 is
             interfaceID == bytes4(0x562548ad) ||    // IBurnableTokenWallet
             interfaceID == bytes4(0x0c2ff20d) ||    // IBurnableByRootTokenWallet
             interfaceID == bytes4(0x7edc1d37) ||    // ITokenWalletUpgradeable
-            interfaceID == bytes4(0x0f0258aa)       // IDestroyable
+            interfaceID == bytes4(0x0f0258aa) ||    // IDestroyable
+            interfaceID == bytes4(0x1DF32D06)       // SpecialWalletOwners
         );
     }
 

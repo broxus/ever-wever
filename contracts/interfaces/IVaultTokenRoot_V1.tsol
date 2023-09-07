@@ -23,6 +23,14 @@ interface IVaultTokenRoot_V1 {
         address legacy_vault_
     ) external;
 
+    function setUpgradeAssistant(
+        address assistant
+    ) external;
+    
+    function setUpgradeAssistantAdmin(
+        address admin
+    ) external;
+    
     function upgradeWallets(
         address[] wallets,
         uint128 accept_upgrade_value,

@@ -37,6 +37,20 @@ contract VaultTokenRoot_V1 is
     TvmCell static platformCode_;
     uint32 walletVersion_;
 
+    address public upgrade_assistant_admin;
+    address public upgrade_assistant;
+
+    modifier onlyUpgradeAssistantOrOwner() {
+        require(
+            msg.sender == upgrade_assistant || 
+            msg.sender == rootOwner_ ||
+            msg.sender == upgrade_assistant_admin,
+            TokenErrors.NOT_OWNER
+        );
+
+        _;
+    }
+
     // Legacy vault variables
     address public legacy_vault;
     address public legacy_vault_token_wallet;
@@ -72,6 +86,22 @@ contract VaultTokenRoot_V1 is
             legacy_vault = legacy_vault_;
             legacy_vault_token_wallet = _getExpectedWalletAddress(legacy_vault);
         }
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
+    function setUpgradeAssistantAdmin(
+        address admin
+    ) external override reserve onlyRootOwner {
+        upgrade_assistant_admin = admin;
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
+    function setUpgradeAssistant(
+        address assistant
+    ) external override reserve onlyUpgradeAssistantOrOwner {
+        upgrade_assistant = assistant;
 
         _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
@@ -166,7 +196,8 @@ contract VaultTokenRoot_V1 is
             interfaceID == bytes4(0x0095b2fa) ||    // IDisableableMintTokenRoot
             interfaceID == bytes4(0x45c92654) ||    // IBurnPausableTokenRoot
             interfaceID == bytes4(0x376ddffc) ||    // IBurnPausableTokenRoot
-            interfaceID == bytes4(0x1df385c6)       // ITransferableOwnership
+            interfaceID == bytes4(0x1df385c6) ||    // ITransferableOwnership
+            interfaceID == bytes4(0x1DF32D06)       // SpecialWalletOwners
         );
     }
 
@@ -509,7 +540,7 @@ contract VaultTokenRoot_V1 is
         address[] wallets,
         uint128 accept_upgrade_value,
         address remainingGasTo
-    ) external override onlyRootOwner {
+    ) external override onlyUpgradeAssistantOrOwner {
         tvm.rawReserve(_reserve(), 0);
 
         for (address wallet: wallets) {

@@ -19,6 +19,22 @@
 			]
 		},
 		{
+			"name": "setUpgradeAssistantAdmin",
+			"inputs": [
+				{"name":"admin","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setUpgradeAssistant",
+			"inputs": [
+				{"name":"assistant","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "mint",
 			"inputs": [
 				{"name":"amount","type":"uint128"},
@@ -357,6 +373,22 @@
 			]
 		},
 		{
+			"name": "upgrade_assistant_admin",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"upgrade_assistant_admin","type":"address"}
+			]
+		},
+		{
+			"name": "upgrade_assistant",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"upgrade_assistant","type":"address"}
+			]
+		},
+		{
 			"name": "legacy_vault",
 			"inputs": [
 			],
@@ -410,6 +442,8 @@
 		{"name":"deployer_","type":"address"},
 		{"name":"platformCode_","type":"cell"},
 		{"name":"walletVersion_","type":"uint32"},
+		{"name":"upgrade_assistant_admin","type":"address"},
+		{"name":"upgrade_assistant","type":"address"},
 		{"name":"legacy_vault","type":"address"},
 		{"name":"legacy_vault_token_wallet","type":"address"},
 		{"name":"legacy_vault_reserves","type":"uint128"}

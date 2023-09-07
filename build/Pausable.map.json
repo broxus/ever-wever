@@ -448,8 +448,8 @@
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 37
+        "filename": "Pausable.code",
+        "line": 386
       }
     },
     "6bb179cd3fc8aded241a5c0eb2cd46c96dda17cfdd4ff9f1bb4e88c10c150943": {

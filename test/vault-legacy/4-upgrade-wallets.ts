@@ -1,5 +1,5 @@
 import {EMPTY_TVM_CELL, expect, getAddress, setupVaultLegacy} from "../utils";
-import {Address, Contract, fromNano, getRandomNonce, toNano, zeroAddress} from "locklift";
+import {Address, Contract, WalletTypes, fromNano, getRandomNonce, toNano, zeroAddress} from "locklift";
 import {
     TokenRootUpgradeableAbi,
     TokenWalletUpgradeableAbi,
@@ -9,6 +9,7 @@ import {
 const logger = require("mocha-logger");
 import _ from 'underscore';
 import {UpgradeAssistant} from "../upgrade-assistant";
+import { Account } from "everscale-standalone-client";
 
 
 const USERS_AMOUNT = 300;
@@ -217,6 +218,7 @@ describe('Test upgrading root and wallets', async function() {
         // let upgrade_assistant_fabric: Contract<UpgradeAssistantFabricAbi>;
         // let worker_keys: Ed25519KeyPair[];
         let upgrade_assistant: UpgradeAssistant;
+        let upgrade_assistant_admin: Account;
 
         it('Setup upgrade assistant', async () => {
             upgrade_assistant = new UpgradeAssistant(
@@ -230,6 +232,18 @@ describe('Test upgrading root and wallets', async function() {
                 deployBatchValue: toNano('5'),
                 deployFabricValue: toNano('10')
             });
+
+            const keyPair = (await locklift.keystore.getSigner("0"))!;
+
+            const {
+                account
+            } = await locklift.factory.accounts.addNewAccount({
+                publicKey: keyPair.publicKey,
+                type: WalletTypes.WalletV3,
+                value: toNano('1')
+            });
+
+            upgrade_assistant_admin = account;
         });
 
         it('Upload wallets to batches', async () => {
@@ -249,17 +263,37 @@ describe('Test upgrading root and wallets', async function() {
             );
         });
 
-        it('Transfer root ownership to assistant', async () => {
+        it('Set up upgrade assistant addresses', async () => {
             await locklift.tracing.trace(
-                vault_v1.methods.transferOwnership({
-                    newOwner: upgrade_assistant.fabric.address,
-                    remainingGasTo: context.owner.address,
-                    callbacks: []
+                vault_v1.methods.setUpgradeAssistantAdmin({
+                    admin: upgrade_assistant_admin.address,
                 }).send({
                     from: context.owner.address,
                     amount: toNano('1')
                 })
             );
+
+            await locklift.tracing.trace(
+                vault_v1.methods.setUpgradeAssistant({
+                    assistant: upgrade_assistant.fabric.address
+                }).send({
+                    from: upgrade_assistant_admin.address,
+                    amount: toNano('1')
+                })
+            );
+
+            const {
+                upgrade_assistant_admin: upgrade_assistant_admin_address
+            } = await vault_v1.methods.upgrade_assistant_admin({}).call();
+
+            const {
+                upgrade_assistant: upgrade_assistant_address
+            } = await vault_v1.methods.upgrade_assistant({}).call();
+
+            expect(upgrade_assistant_admin_address.toString())
+                .to.be.equal(upgrade_assistant_admin.address.toString(), 'Wrong upgrade assistant admin address');
+            expect(upgrade_assistant_address.toString())
+                .to.be.equal(upgrade_assistant.fabric.address.toString(), 'Wrong upgrade assistant address');
         });
 
         it('Trigger upgrade', async () => {
@@ -271,7 +305,7 @@ describe('Test upgrading root and wallets', async function() {
                     amount: UPGRADE_VALUE
                 }),
                 {
-                    raise: false
+                    // raise: false
                 }
             );
 
@@ -289,21 +323,6 @@ describe('Test upgrading root and wallets', async function() {
 
             expect(done)
                 .to.be.equal(true, 'Fabric should be done after upgrade');
-        });
-
-        it('Revoke ownership', async () => {
-            await locklift.tracing.trace(
-                upgrade_assistant.fabric.methods.revokeOwnership({}).send({
-                    from: context.owner.address,
-                    amount: toNano('1')
-                })
-            );
-
-            expect(await vault_v1.methods.rootOwner({ answerId: 0 }).call().then(t => t.value0.toString()))
-                .to.be.equal(context.owner.address.toString(), 'Ownership revoke failed');
-
-            expect(await locklift.provider.getBalance(upgrade_assistant.fabric.address))
-                .to.be.equal('0', 'Factory should lose all its balance');
         });
 
         it('Check wallets upgraded', async () => {
