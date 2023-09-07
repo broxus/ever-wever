@@ -40,6 +40,14 @@ contract VaultTokenRoot_V1 is
     address public upgrade_assistant_admin;
     address public upgrade_assistant;
 
+    // Legacy vault section, used in case of migration, left empty in case of completely new VaultTokenRoot
+    // - Vault address (legacy/Vault.tsol)
+    address public legacy_vault;
+    // - Vault's token wallet
+    address public legacy_vault_token_wallet;
+    // - Vault reserves. Each time vault mints new tokens, reserves are increased and decreased on burn
+    uint128 public legacy_vault_reserves;
+
     modifier onlyUpgradeAssistantOrOwner() {
         require(
             msg.sender == upgrade_assistant || 
@@ -50,11 +58,6 @@ contract VaultTokenRoot_V1 is
 
         _;
     }
-
-    // Legacy vault variables
-    address public legacy_vault;
-    address public legacy_vault_token_wallet;
-    uint128 public legacy_vault_reserves;
 
     constructor() public {
         if (msg.pubkey() != 0) {
@@ -565,6 +568,7 @@ contract VaultTokenRoot_V1 is
             rootOwner_, totalSupply_,
             walletVersion_, platformCode_, walletCode_,
             mintDisabled_, burnByRootDisabled_, burnPaused_,
+            upgrade_assistant_admin, upgrade_assistant,
             legacy_vault, legacy_vault_token_wallet, legacy_vault_reserves,
             deployer_, randomNonce_
         );

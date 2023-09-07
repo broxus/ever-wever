@@ -34,56 +34,56 @@
         "line": 6
       }
     },
-    "4747a5af7a755986882ca586ab9f2aa1e21f91d248dc98635e13e305d4cf1ce6": {
-      "4": {
+    "2e42ac39d9d5c68a00669a424bf1782d5b4d182b125c0b46d80f6ff77e65c83e": {
+      "40": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "12": {
+      "48": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "28": {
+      "64": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "36": {
+      "72": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "60": {
+      "96": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "68": {
+      "104": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "84": {
+      "120": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "100": {
+      "136": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "108": {
+      "144": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "132": {
+      "168": {
         "filename": "../contracts/test/UpgradeDrain.tsol",
         "line": 10
       },
-      "148": {
+      "184": {
         "filename": "UpgradeDrain.code",
         "line": 31
       },
-      "164": {
+      "200": {
         "filename": "UpgradeDrain.code",
         "line": 34
       },
-      "180": {
+      "216": {
         "filename": "UpgradeDrain.code",
         "line": 35
       }

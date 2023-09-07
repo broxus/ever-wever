@@ -240,15 +240,13 @@ contract VaultTokenWallet_V1 is
         balance_ += amount;
 
         if (notify) {
-            IAcceptTokensTransferCallback(owner_).onAcceptTokensTransfer{
+            IAcceptTokensMintCallback(owner_).onAcceptTokensMint{
                 value: 0,
                 bounce: false,
                 flag: TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS
             }(
                 root_,
                 amount,
-                address.makeAddrStd(0, 0),
-                address.makeAddrStd(0, 0),
                 remainingGasTo,
                 payload
             );
