@@ -193,7 +193,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 86
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 85
 ENDS
 .loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
 CALLREF {
@@ -224,7 +224,7 @@ PUSHCONT {
 }
 IF
 THROWIFNOT 1101
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 87
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 86
 GETGLOB 14
 TRUE
 NEWC
@@ -254,7 +254,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 94
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 93
 ENDS
 .loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
 CALLREF {
@@ -285,9 +285,9 @@ PUSHCONT {
 }
 IF
 THROWIFNOT 1101
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 95
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 94
 NEWDICT
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 96
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 95
 GETGLOB 11
 DUP
 GETGLOB 12
@@ -324,7 +324,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 103
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 102
 LDREF
 ENDS
 .loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
@@ -353,7 +353,7 @@ PUSHCONT {
 }
 IF
 THROWIFNOT 1101
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 106
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 105
 GETGLOB 18
 GETGLOB 17
 GETGLOB 16
@@ -383,10 +383,10 @@ STBREFR
 STBREFR
 STBREFR
 ENDC
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 118
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 117
 OVER
 SETCODE
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 119
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 118
 SWAP
 CTOS
 DUP
@@ -401,7 +401,7 @@ PLDREF
 CTOS
 BLESS
 POP C3
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 121
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 120
 CALLREF {
 	CALL $:onCodeUpgrade$
 }

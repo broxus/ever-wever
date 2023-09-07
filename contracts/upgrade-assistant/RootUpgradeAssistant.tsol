@@ -82,7 +82,6 @@ contract RootUpgradeAssistant is RandomNonce, InternalOwner {
         revokeRootOwnership();
     }
 
-    // TODO: upgrade
     function revokeVaultOwnership() public view onlyOwner {
         Vault(vault).transferOwnership{
             bounce: true,

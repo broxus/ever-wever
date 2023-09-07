@@ -8,4 +8,6 @@ interface IVaultTokenWallet_V1 {
         address remainingGasTo,
         TvmCell payload
     ) external;
+
+    function specialWalletOwners() external view responsible returns (address[]);
 }

@@ -173,11 +173,22 @@ describe('E2E upgrade test', async function() {
                 .to.be.equal(context.owner.address.toString(), 'Wrong vault owner');
         });
 
-        // it('Check vault configuration', async () => {
-        //     const {
-        //         configuration
-        //     } = await context.vault.methods.configuration().call();
-        // });
+        it('Check vault configuration', async () => {
+            const {
+                configuration
+            } = await context.vault.methods.configuration().call();
+
+            expect(configuration.root.toString())
+                .to.be.equal(root.address.toString(), 'Wrong root address in vault configuration');
+            expect(configuration.root_tunnel.toString())
+                .to.be.equal(root.address.toString(), 'Wrong root tunnel address in vault configuration');
+            expect(Number(configuration.initial_balance))
+                .to.be.gt(0, 'Wrong initial balance in vault configuration');
+            expect(Number(configuration.settings_deploy_wallet_grams))
+                .to.be.gt(0, 'Wrong settings deploy wallet grams in vault configuration');
+            expect(Number(configuration.receive_safe_fee))
+                .to.be.gt(0, 'Wrong receive safe fee in vault configuration');
+        });
 
         it('Check root ownership', async () => {
             const root_owner = await context.root.methods.rootOwner({ answerId: 0 })

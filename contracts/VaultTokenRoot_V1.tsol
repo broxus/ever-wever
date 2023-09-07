@@ -40,7 +40,6 @@ contract VaultTokenRoot_V1 is
     // Legacy vault variables
     address public legacy_vault;
     address public legacy_vault_token_wallet;
-    bool public legacy_mint_enabled;
     uint128 public legacy_vault_reserves;
 
     constructor() public {
@@ -65,8 +64,14 @@ contract VaultTokenRoot_V1 is
     function setLegacyVault(
         address legacy_vault_
     ) external override reserve onlyRootOwner {
-        legacy_vault = legacy_vault_;
-        legacy_vault_token_wallet = _getExpectedWalletAddress(legacy_vault);
+        if (legacy_vault_ == address.makeAddrStd(0, 0)) {
+            // Turn off legacy vault
+            legacy_vault = legacy_vault_;
+            legacy_vault_token_wallet = legacy_vault_;
+        } else {
+            legacy_vault = legacy_vault_;
+            legacy_vault_token_wallet = _getExpectedWalletAddress(legacy_vault);
+        }
 
         _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
@@ -163,6 +168,10 @@ contract VaultTokenRoot_V1 is
             interfaceID == bytes4(0x376ddffc) ||    // IBurnPausableTokenRoot
             interfaceID == bytes4(0x1df385c6)       // ITransferableOwnership
         );
+    }
+
+    function specialWalletOwners() external view override responsible returns (address[]) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } [address(this)];
     }
 
     /**

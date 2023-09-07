@@ -21,6 +21,15 @@
 			]
 		},
 		{
+			"name": "specialWalletOwners",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address[]"}
+			]
+		},
+		{
 			"name": "platformCode",
 			"inputs": [
 				{"name":"answerId","type":"uint32"}

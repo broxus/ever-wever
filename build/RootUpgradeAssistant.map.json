@@ -1010,8 +1010,8 @@
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 37
+        "filename": "RootUpgradeAssistant.code",
+        "line": 742
       }
     },
     "61c5bc987269b6b868d36011d9658cb766d0e44e2d630cb77097d34b53cc763f": {
@@ -1287,7 +1287,7 @@
       },
       "88": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 94
+        "line": 93
       },
       "96": {
         "filename": "RootUpgradeAssistant.code",
@@ -1300,6 +1300,24 @@
       "128": {
         "filename": "RootUpgradeAssistant.code",
         "line": 266
+      }
+    },
+    "71c39308fb25dbb2e4df581ffb39bd08453ca8f565076372155dfae69e317daf": {
+      "40": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 412
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 414
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 417
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 418
       }
     },
     "742abe84025bf4287dec1162d78a592c9c29fa56013385f37cba6eca4cd161f2": {
@@ -1364,24 +1382,6 @@
         "line": 846
       }
     },
-    "765d1c61cc733706e482449174355ec33433b57965e773bc02c6a6ad4902c393": {
-      "4": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 412
-      },
-      "12": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 414
-      },
-      "28": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 417
-      },
-      "44": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 418
-      }
-    },
     "768b6d0aec9742173dd18ac39e7ca25d507a7eca555cdb16834b4827f3deb600": {
       "0": {
         "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
@@ -1437,107 +1437,107 @@
       },
       "192": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 95
+        "line": 94
       },
       "200": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "216": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "224": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "240": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "248": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "256": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "280": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "296": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "304": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "320": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "328": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "496": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "512": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "528": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "536": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "584": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "592": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "600": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "608": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "616": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "632": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "640": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "648": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "656": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       },
       "664": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 96
+        "line": 95
       }
     },
     "7e85560a01d5c6597477d3078b09721e432198aa89357ccee79f029edf3b2039": {
@@ -1815,183 +1815,183 @@
       },
       "192": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "208": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "224": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "240": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "256": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "272": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "288": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "304": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "320": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "336": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "344": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "360": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "368": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "384": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "392": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "400": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "416": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "424": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "432": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "448": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "456": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "464": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "472": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "488": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "504": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "520": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "528": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "536": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "544": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 106
+        "line": 105
       },
       "552": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 117
       },
       "560": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 117
       },
       "576": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "584": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "592": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "600": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "640": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "656": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "664": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "680": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "688": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "696": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "712": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "720": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "736": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 119
+        "line": 118
       },
       "752": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 121
+        "line": 120
       }
     },
     "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},
@@ -2096,11 +2096,11 @@
       },
       "88": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 103
+        "line": 102
       },
       "96": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 103
+        "line": 102
       },
       "104": {
         "filename": "RootUpgradeAssistant.code",
@@ -2174,75 +2174,75 @@
       },
       "192": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "208": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "216": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "224": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "248": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "264": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "272": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "288": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "296": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "464": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "480": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "496": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "504": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "552": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "560": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "568": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "576": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       },
       "584": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 87
+        "line": 86
       }
     },
     "a5714ff73e737c81ba0496ab0183561c2746244ceec6440d4ef3061dd98c3dd0": {
@@ -2924,7 +2924,7 @@
       },
       "88": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 86
+        "line": 85
       },
       "96": {
         "filename": "RootUpgradeAssistant.code",
@@ -3058,7 +3058,7 @@
     "e8a4cba9a2a029706ac409a42d7b8c21033070de1bcf76babac94a2d788d7da2": {
       "0": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 121
+        "line": 120
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {

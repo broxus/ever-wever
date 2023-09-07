@@ -66,6 +66,10 @@ contract VaultTokenWallet_V1 is
         );
     }
 
+    function specialWalletOwners() external view override responsible returns (address[]) {
+        return { value: 0, flag: TokenMsgFlag.REMAINING_GAS, bounce: false } [root_];
+    }
+
     /**
      * @dev See {ITokenWalletUpgradeable-platformCode}.
      */
