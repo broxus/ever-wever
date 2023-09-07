@@ -99,6 +99,16 @@ contract RootUpgradeAssistant is RandomNonce, InternalOwner {
         }(owner, owner, callbacks);
     }
 
+    function drain(
+        uint128 value
+    ) external view onlyOwner {
+        owner.transfer({
+            value: value,
+            bounce: true,
+            flag: 0
+        });
+    }
+
     function upgrade(
         TvmCell code
     ) onlyOwner external {

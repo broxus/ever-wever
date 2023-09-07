@@ -315,7 +315,7 @@ PUSHINT 0
 SENDRAWMSG
 .loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
 
-.macro upgrade
+.macro drain
 DROP
 GETGLOB 6
 THROWIFNOT 76
@@ -325,6 +325,57 @@ IFREF {
 	CALL $c4_to_c7$
 }
 .loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 102
+LDU 128
+ENDS
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
+CALLREF {
+	CALL $drain_internal_macro$
+}
+IFREF {
+	CALL $upd_only_time_in_c4$
+}
+THROW 0
+
+.macro drain_internal_macro
+.loc ../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol, 15
+GETGLOB 9
+GETGLOB 11
+SDEQ
+DUP
+PUSHCONT {
+	DROP
+	GETGLOB 9
+	PARSEMSGADDR
+	INDEX 3
+	PLDU 256
+	NEQINT 0
+}
+IF
+THROWIFNOT 1101
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 105
+GETGLOB 11
+NEWC
+STSLICECONST x62_
+STSLICE
+SWAP
+STGRAMS
+PUSHINT 107
+STZEROES
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
+
+.macro upgrade
+DROP
+GETGLOB 6
+THROWIFNOT 76
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7$
+}
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 112
 LDREF
 ENDS
 .loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 0
@@ -353,7 +404,7 @@ PUSHCONT {
 }
 IF
 THROWIFNOT 1101
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 105
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 115
 GETGLOB 18
 GETGLOB 17
 GETGLOB 16
@@ -383,10 +434,10 @@ STBREFR
 STBREFR
 STBREFR
 ENDC
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 117
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 127
 OVER
 SETCODE
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 118
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 128
 SWAP
 CTOS
 DUP
@@ -401,7 +452,7 @@ PLDREF
 CTOS
 BLESS
 POP C3
-.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 120
+.loc ../contracts/upgrade-assistant/RootUpgradeAssistant.tsol, 130
 CALLREF {
 	CALL $:onCodeUpgrade$
 }
@@ -967,119 +1018,130 @@ THROW 0
 
 .macro public_function_selector
 DUP
-PUSHINT 267708481
+PUSHINT 2010909768
 LEQ
 IFJMPREF {
-	DUP
-	PUSHINT 20162219
-	EQUAL
-	IFJMPREF {
-		CALL $trigger$
-	}
-	DUP
-	PUSHINT 209693379
-	EQUAL
-	IFJMPREF {
-		CALL $vault$
-	}
-	DUP
-	PUSHINT 235197086
-	EQUAL
-	IFJMPREF {
-		CALL $transferOwnership$
-	}
 	DUP
 	PUSHINT 267708481
-	EQUAL
+	LEQ
 	IFJMPREF {
-		CALL $revokeVaultOwnership$
-	}
-}
-DUP
-PUSHINT 925457952
-LEQ
-IFJMPREF {
-	DUP
-	PUSHINT 388172858
-	EQUAL
-	IFJMPREF {
-		CALL $upgrade$
-	}
-	DUP
-	PUSHINT 644092542
-	EQUAL
-	IFJMPREF {
-		CALL $vault_initial_balance$
-	}
-	DUP
-	PUSHINT 904229631
-	EQUAL
-	IFJMPREF {
-		CALL $revokeRootOwnership$
+		DUP
+		PUSHINT 20162219
+		EQUAL
+		IFJMPREF {
+			CALL $trigger$
+		}
+		DUP
+		PUSHINT 209693379
+		EQUAL
+		IFJMPREF {
+			CALL $vault$
+		}
+		DUP
+		PUSHINT 235197086
+		EQUAL
+		IFJMPREF {
+			CALL $transferOwnership$
+		}
+		DUP
+		PUSHINT 267708481
+		EQUAL
+		IFJMPREF {
+			CALL $revokeVaultOwnership$
+		}
 	}
 	DUP
 	PUSHINT 925457952
-	EQUAL
+	LEQ
 	IFJMPREF {
-		CALL $root$
-	}
-}
-DUP
-PUSHINT 1594609630
-LEQ
-IFJMPREF {
-	DUP
-	PUSHINT 966589957
-	EQUAL
-	IFJMPREF {
-		CALL $vault_settings_deploy_wallet_grams$
-	}
-	DUP
-	PUSHINT 995308319
-	EQUAL
-	IFJMPREF {
-		CALL $_randomNonce$
-	}
-	DUP
-	PUSHINT 1473905505
-	EQUAL
-	IFJMPREF {
-		CALL $rootCode$
+		DUP
+		PUSHINT 388172858
+		EQUAL
+		IFJMPREF {
+			CALL $upgrade$
+		}
+		DUP
+		PUSHINT 644092542
+		EQUAL
+		IFJMPREF {
+			CALL $vault_initial_balance$
+		}
+		DUP
+		PUSHINT 904229631
+		EQUAL
+		IFJMPREF {
+			CALL $revokeRootOwnership$
+		}
+		DUP
+		PUSHINT 925457952
+		EQUAL
+		IFJMPREF {
+			CALL $root$
+		}
 	}
 	DUP
 	PUSHINT 1594609630
-	EQUAL
+	LEQ
 	IFJMPREF {
-		CALL $owner$
+		DUP
+		PUSHINT 966589957
+		EQUAL
+		IFJMPREF {
+			CALL $vault_settings_deploy_wallet_grams$
+		}
+		DUP
+		PUSHINT 995308319
+		EQUAL
+		IFJMPREF {
+			CALL $_randomNonce$
+		}
+		DUP
+		PUSHINT 1473905505
+		EQUAL
+		IFJMPREF {
+			CALL $rootCode$
+		}
+		DUP
+		PUSHINT 1594609630
+		EQUAL
+		IFJMPREF {
+			CALL $owner$
+		}
+	}
+	DUP
+	PUSHINT 2010909768
+	LEQ
+	IFJMPREF {
+		DUP
+		PUSHINT 1627719288
+		EQUAL
+		IFJMPREF {
+			CALL $vault_receive_safe_fee$
+		}
+		DUP
+		PUSHINT 1720648598
+		EQUAL
+		IFJMPREF {
+			CALL $constructor$
+		}
+		DUP
+		PUSHINT 1729444094
+		EQUAL
+		IFJMPREF {
+			CALL $renounceOwnership$
+		}
+		DUP
+		PUSHINT 2010909768
+		EQUAL
+		IFJMPREF {
+			CALL $drain$
+		}
 	}
 }
 DUP
 PUSHINT 2072040473
-LEQ
+EQUAL
 IFJMPREF {
-	DUP
-	PUSHINT 1627719288
-	EQUAL
-	IFJMPREF {
-		CALL $vault_receive_safe_fee$
-	}
-	DUP
-	PUSHINT 1720648598
-	EQUAL
-	IFJMPREF {
-		CALL $constructor$
-	}
-	DUP
-	PUSHINT 1729444094
-	EQUAL
-	IFJMPREF {
-		CALL $renounceOwnership$
-	}
-	DUP
-	PUSHINT 2072040473
-	EQUAL
-	IFJMPREF {
-		CALL $tunnel$
-	}
+	CALL $tunnel$
 }
 

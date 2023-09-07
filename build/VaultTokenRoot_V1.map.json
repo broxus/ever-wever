@@ -1,39 +1,5 @@
 {
   "map": {
-    "032a82c9f8baa90cb759654808ca9859f15833a92f06d92ec5b7da95979626f1": {
-      "38": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "46": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "62": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "70": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "86": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "94": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "110": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      },
-      "118": {
-        "filename": "../contracts/VaultTokenRoot_V1.tsol",
-        "line": 583
-      }
-    },
     "053bef2a18fd3f89d5f5adf132c59340cc9de37016d0714a447e0aa7ef611d25": {
       "0": {
         "filename": "VaultTokenRoot_V1.code",
@@ -4170,6 +4136,40 @@
         "line": 5000
       }
     },
+    "5189bdab244569f5c04e11415e116f8b0b58aa7c1bc16576524b094bfc4e5b27": {
+      "4": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "12": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "28": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "36": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "52": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "60": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "76": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      },
+      "84": {
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
+      }
+    },
     "522e039cb8c9bc747df9df89d75b4fb3347a710a302a7c7f5d4ce268343d410c": {
       "0": {
         "filename": "VaultTokenRoot_V1.code",
@@ -4920,8 +4920,8 @@
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
-        "filename": "../contracts/tip3/abstract/TokenRootBase.tsol",
-        "line": 271
+        "filename": "../contracts/VaultTokenRoot_V1.tsol",
+        "line": 583
       }
     },
     "621b49833e4b15ae81d7edde48fe3404440d3205617bcd1eff16325cf9700288": {

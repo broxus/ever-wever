@@ -41,6 +41,14 @@
 			]
 		},
 		{
+			"name": "drain",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "upgrade",
 			"inputs": [
 				{"name":"code","type":"cell"}

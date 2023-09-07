@@ -3,125 +3,269 @@
     "027767566aedba453424e1f8e4b710098e5e64bcf2d7b8a27b79e55af260cf95": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 809
+        "line": 860
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 810
+        "line": 861
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 811
+        "line": 862
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 814
+        "line": 865
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 815
+        "line": 866
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 816
+        "line": 867
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 817
+        "line": 868
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 818
+        "line": 869
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 819
+        "line": 870
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 820
+        "line": 871
       },
       "256": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 821
+        "line": 872
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 822
+        "line": 873
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 823
+        "line": 874
       },
       "288": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 825
+        "line": 876
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 826
+        "line": 877
+      }
+    },
+    "04608cdfc44a582dddcb5d1fc14e00848dd07a7316960f08d4ba8b410b2f3941": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 752
+      },
+      "16": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 753
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 754
+      },
+      "40": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 755
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 756
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 757
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 758
+      },
+      "88": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 759
+      },
+      "104": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 760
+      },
+      "120": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 761
+      },
+      "128": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 762
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 763
+      },
+      "168": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 764
+      },
+      "176": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 765
+      },
+      "184": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 766
+      },
+      "200": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 767
+      },
+      "216": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 771
+      },
+      "224": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 772
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 773
+      },
+      "264": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 774
+      },
+      "272": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 775
+      },
+      "288": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 779
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 780
+      },
+      "312": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 783
       }
     },
     "0a50b007499893157e2ca9dd0c28458ceed7a955109cc819139d34a76cbae6d6": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 789
+        "line": 840
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 790
+        "line": 841
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 791
+        "line": 842
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 794
+        "line": 845
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 795
+        "line": 846
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 796
+        "line": 847
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 797
+        "line": 848
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 798
+        "line": 849
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 799
+        "line": 850
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 800
+        "line": 851
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 801
+        "line": 852
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 802
+        "line": 853
       },
       "280": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 803
+        "line": 854
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 805
+        "line": 856
       },
       "304": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 806
+        "line": 857
+      }
+    },
+    "0e0ab5cf5faa10a38dc2dbed0eb675229c4eaf468cddc41f7e8723e2f5534a2b": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 319
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 320
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 321
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 322
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 323
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 324
+      },
+      "88": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 102
+      },
+      "104": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 102
+      },
+      "112": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 331
+      },
+      "128": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 334
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 337
       }
     },
     "181a09b87174b5f28ea8f8c4291f6a1b8cb650258128ac9f1798e07b45c09f28": {
@@ -334,66 +478,230 @@
         "line": 69
       }
     },
-    "2af61c44619f176182c4ecd148e70c917f8eb6c79654ade59a94d17e42f11a7d": {
+    "1a3900cfcfdf19fe78ae751f3fe396fcae1e1cfcb634fd474def231b697e2b54": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "16": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "32": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "48": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "56": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "64": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "72": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "144": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "160": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "168": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 15
+      },
+      "192": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "208": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "216": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "240": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "248": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "256": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "272": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "288": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "304": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "312": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      },
+      "320": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 105
+      }
+    },
+    "1b34b02e7e0fc5e1bfca59b744d1614f671180c768db2f861967c58d46cc0e8c": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 949
+        "line": 1024
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 950
-      },
-      "16": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 951
-      },
-      "32": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 954
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 955
+        "line": 1025
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 956
+        "line": 1026
       },
-      "72": {
+      "64": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 957
+        "line": 1027
       },
-      "232": {
+      "80": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 958
+        "line": 1053
+      },
+      "88": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1054
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1055
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1056
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1082
+      },
+      "168": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1083
+      },
+      "216": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1084
+      },
+      "224": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1085
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 959
+        "line": 1111
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 960
-      },
-      "264": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 961
-      },
-      "272": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 962
-      },
-      "280": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 963
+        "line": 1112
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 965
+        "line": 1113
       },
       "304": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 966
+        "line": 1114
+      }
+    },
+    "2af61c44619f176182c4ecd148e70c917f8eb6c79654ade59a94d17e42f11a7d": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1000
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1001
+      },
+      "16": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1002
+      },
+      "32": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1005
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1006
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1007
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1008
+      },
+      "232": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1009
+      },
+      "240": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1010
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1011
+      },
+      "264": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1012
+      },
+      "272": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1013
+      },
+      "280": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1014
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1016
+      },
+      "304": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1017
       }
     },
     "405512269a810a2d51caa5e2a2d534e48c018538cfe4222deb7e0476915d193d": {
@@ -458,7 +766,641 @@
         "line": 48
       }
     },
-    "4ab7b857db20f1aad188729865c836e38df14225c072602526f520712bf94645": {
+    "52f0a017af769835a24cfd0216abdcf3668b8ae096fc4bc230c1b6c5a84ed8eb": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 900
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 901
+      },
+      "16": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 902
+      },
+      "32": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 905
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 906
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 907
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 908
+      },
+      "232": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 909
+      },
+      "240": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 910
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 911
+      },
+      "256": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 912
+      },
+      "264": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 913
+      },
+      "272": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 914
+      },
+      "288": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 916
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 917
+      }
+    },
+    "5462912c9dacbd599108ff949ea8a977234b55c802f37ca172b7ee7a344573e4": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1028
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1029
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1030
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1031
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1034
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1035
+      },
+      "128": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1036
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1037
+      },
+      "152": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1040
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1041
+      },
+      "208": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1042
+      },
+      "216": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1043
+      },
+      "232": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1046
+      },
+      "240": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1047
+      },
+      "288": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1048
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1049
+      }
+    },
+    "57be9369ec83630cb4e9772071424d00d708c74ac69140bbec77a587c61a6c64": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 651
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 652
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 653
+      },
+      "32": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 654
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 655
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 656
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 657
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 658
+      },
+      "96": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 659
+      },
+      "104": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 660
+      },
+      "128": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 662
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 663
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 665
+      },
+      "152": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 666
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 669
+      },
+      "176": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 670
+      },
+      "184": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 672
+      },
+      "192": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 673
+      },
+      "208": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 674
+      },
+      "224": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 675
+      },
+      "240": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 676
+      },
+      "256": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 677
+      },
+      "272": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 678
+      },
+      "288": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 679
+      },
+      "304": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 680
+      },
+      "320": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 681
+      },
+      "336": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 682
+      },
+      "352": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 683
+      },
+      "368": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 684
+      },
+      "384": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 685
+      },
+      "400": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 686
+      },
+      "424": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 687
+      },
+      "440": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 688
+      },
+      "448": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 689
+      }
+    },
+    "5b68595a37c6de2f9419a3ed8a516591b786feb6f09624cb748ae490930443fa": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 500
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 501
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 502
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 503
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 504
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 505
+      },
+      "88": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "96": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "104": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "112": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "120": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "128": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "136": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "152": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 34
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 519
+      },
+      "176": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 522
+      },
+      "184": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 523
+      },
+      "200": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 526
+      }
+    },
+    "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
+      "0": {
+        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
+        "line": 37
+      }
+    },
+    "61c5bc987269b6b868d36011d9658cb766d0e44e2d630cb77097d34b53cc763f": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 696
+      },
+      "16": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 697
+      },
+      "32": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 698
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 699
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 700
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 701
+      },
+      "96": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 702
+      },
+      "112": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 703
+      },
+      "128": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 704
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 705
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 706
+      },
+      "176": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 707
+      },
+      "184": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 708
+      },
+      "200": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 709
+      },
+      "216": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 710
+      },
+      "232": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 711
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 712
+      },
+      "264": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 713
+      },
+      "272": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 714
+      },
+      "280": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 715
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 716
+      },
+      "304": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 717
+      },
+      "312": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 718
+      },
+      "328": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 719
+      },
+      "336": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 720
+      },
+      "344": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 721
+      },
+      "360": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 722
+      },
+      "368": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 723
+      },
+      "376": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 724
+      },
+      "384": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 725
+      },
+      "400": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 726
+      },
+      "416": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 727
+      },
+      "432": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 728
+      },
+      "440": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 729
+      },
+      "448": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 730
+      },
+      "456": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 731
+      },
+      "464": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 732
+      },
+      "472": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 733
+      }
+    },
+    "640d8431e830cd28e654443b110268e6f5299f515af9af37264bb4b38d7ad570": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1057
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1058
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1059
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1060
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1063
+      },
+      "88": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1064
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1065
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1066
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1069
+      },
+      "168": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1070
+      },
+      "216": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1071
+      },
+      "224": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1072
+      },
+      "240": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1075
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1076
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1077
+      },
+      "304": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1078
+      }
+    },
+    "6c9335451b4ca11e83aebcd63732dac05612c55068e5c8be7d53fbce271ebe33": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 646
+      },
+      "16": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 647
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 648
+      },
+      "40": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 649
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 650
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 691
+      }
+    },
+    "6d75d9e2b6f74624c711d5a8f0dae8ebfa97eb6e21ddbeaa7d106bbb2a9a1ca2": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 249
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 250
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 251
+      },
+      "48": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 252
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 253
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 254
+      },
+      "88": {
+        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
+        "line": 93
+      },
+      "96": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 260
+      },
+      "112": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 263
+      },
+      "128": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 266
+      }
+    },
+    "71a0e0b5f877522fe485d7bcdb609d2921afce5fb081addd4260ef3c06d71e25": {
       "0": {
         "filename": "<entry-selector>",
         "line": 1
@@ -504,882 +1446,84 @@
         "line": 11
       }
     },
-    "4c4c3b698096302a6ba66e9e709e13214dc46fe89e6656126e16914a329cf1a4": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 701
-      },
-      "16": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 702
-      },
-      "24": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 703
-      },
-      "40": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 704
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 705
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 706
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 707
-      },
-      "88": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 708
-      },
-      "104": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 709
-      },
-      "120": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 710
-      },
-      "128": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 711
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 712
-      },
-      "168": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 713
-      },
-      "176": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 714
-      },
-      "184": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 715
-      },
-      "200": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 716
-      },
-      "216": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 720
-      },
-      "224": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 721
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 722
-      },
-      "264": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 723
-      },
-      "272": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 724
-      },
-      "288": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 728
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 729
-      },
-      "312": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 732
-      }
-    },
-    "4c892e8f696982db99b71a698ed46439cd3284e42eab838271ca97906baa5cc4": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1060
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1061
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1062
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1063
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1066
-      },
-      "88": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1067
-      },
-      "136": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1068
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1069
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1072
-      },
-      "168": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1073
-      },
-      "216": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1074
-      },
-      "224": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1075
-      },
-      "240": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1078
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1079
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1080
-      },
-      "304": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1081
-      }
-    },
-    "52f0a017af769835a24cfd0216abdcf3668b8ae096fc4bc230c1b6c5a84ed8eb": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 849
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 850
-      },
-      "16": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 851
-      },
-      "32": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 854
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 855
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 856
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 857
-      },
-      "232": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 858
-      },
-      "240": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 859
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 860
-      },
-      "256": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 861
-      },
-      "264": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 862
-      },
-      "272": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 863
-      },
-      "288": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 865
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 866
-      }
-    },
-    "5462912c9dacbd599108ff949ea8a977234b55c802f37ca172b7ee7a344573e4": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 973
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 974
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 975
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 976
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 979
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 980
-      },
-      "128": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 981
-      },
-      "136": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 982
-      },
-      "152": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 985
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 986
-      },
-      "208": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 987
-      },
-      "216": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 988
-      },
-      "232": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 991
-      },
-      "240": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 992
-      },
-      "288": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 993
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 994
-      }
-    },
-    "57be9369ec83630cb4e9772071424d00d708c74ac69140bbec77a587c61a6c64": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 600
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 601
-      },
-      "24": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 602
-      },
-      "32": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 603
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 604
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 605
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 606
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 607
-      },
-      "96": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 608
-      },
-      "104": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 609
-      },
-      "128": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 611
-      },
-      "136": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 612
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 614
-      },
-      "152": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 615
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 618
-      },
-      "176": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 619
-      },
-      "184": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 621
-      },
-      "192": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 622
-      },
-      "208": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 623
-      },
-      "224": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 624
-      },
-      "240": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 625
-      },
-      "256": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 626
-      },
-      "272": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 627
-      },
-      "288": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 628
-      },
-      "304": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 629
-      },
-      "320": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 630
-      },
-      "336": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 631
-      },
-      "352": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 632
-      },
-      "368": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 633
-      },
-      "384": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 634
-      },
-      "400": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 635
-      },
-      "424": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 636
-      },
-      "440": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 637
-      },
-      "448": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 638
-      }
-    },
-    "5b68595a37c6de2f9419a3ed8a516591b786feb6f09624cb748ae490930443fa": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 449
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 450
-      },
-      "24": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 451
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 452
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 453
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 454
-      },
-      "88": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "96": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "104": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "112": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "120": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "128": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "136": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "152": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 34
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 468
-      },
-      "176": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 471
-      },
-      "184": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 472
-      },
-      "200": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 475
-      }
-    },
-    "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 742
-      }
-    },
-    "61c5bc987269b6b868d36011d9658cb766d0e44e2d630cb77097d34b53cc763f": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 645
-      },
-      "16": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 646
-      },
-      "32": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 647
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 648
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 649
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 650
-      },
-      "96": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 651
-      },
-      "112": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 652
-      },
-      "128": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 653
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 654
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 655
-      },
-      "176": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 656
-      },
-      "184": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 657
-      },
-      "200": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 658
-      },
-      "216": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 659
-      },
-      "232": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 660
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 661
-      },
-      "264": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 662
-      },
-      "272": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 663
-      },
-      "280": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 664
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 665
-      },
-      "304": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 666
-      },
-      "312": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 667
-      },
-      "328": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 668
-      },
-      "336": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 669
-      },
-      "344": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 670
-      },
-      "360": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 671
-      },
-      "368": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 672
-      },
-      "376": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 673
-      },
-      "384": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 674
-      },
-      "400": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 675
-      },
-      "416": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 676
-      },
-      "432": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 677
-      },
-      "440": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 678
-      },
-      "448": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 679
-      },
-      "456": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 680
-      },
-      "464": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 681
-      },
-      "472": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 682
-      }
-    },
-    "640d8431e830cd28e654443b110268e6f5299f515af9af37264bb4b38d7ad570": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1002
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1003
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1004
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1005
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1008
-      },
-      "88": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1009
-      },
-      "136": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1010
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1011
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1014
-      },
-      "168": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1015
-      },
-      "216": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1016
-      },
-      "224": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1017
-      },
-      "240": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1020
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1021
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1022
-      },
-      "304": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1023
-      }
-    },
-    "6c9335451b4ca11e83aebcd63732dac05612c55068e5c8be7d53fbce271ebe33": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 595
-      },
-      "16": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 596
-      },
-      "24": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 597
-      },
-      "40": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 598
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 599
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 640
-      }
-    },
-    "6d75d9e2b6f74624c711d5a8f0dae8ebfa97eb6e21ddbeaa7d106bbb2a9a1ca2": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 249
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 250
-      },
-      "24": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 251
-      },
-      "48": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 252
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 253
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 254
-      },
-      "88": {
-        "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 93
-      },
-      "96": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 260
-      },
-      "112": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 263
-      },
-      "128": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 266
-      }
-    },
     "742abe84025bf4287dec1162d78a592c9c29fa56013385f37cba6eca4cd161f2": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 829
+        "line": 880
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 830
+        "line": 881
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 831
+        "line": 882
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 834
+        "line": 885
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 835
+        "line": 886
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 836
+        "line": 887
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 837
+        "line": 888
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 838
+        "line": 889
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 839
+        "line": 890
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 840
+        "line": 891
       },
       "256": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 841
+        "line": 892
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 842
+        "line": 893
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 843
+        "line": 894
       },
       "288": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 845
+        "line": 896
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 846
+        "line": 897
       }
     },
     "765d1c61cc733706e482449174355ec33433b57965e773bc02c6a6ad4902c393": {
       "4": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 412
+        "line": 463
       },
       "12": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 414
+        "line": 465
       },
       "28": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 417
+        "line": 468
       },
       "44": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 418
+        "line": 469
       }
     },
     "768b6d0aec9742173dd18ac39e7ca25d507a7eca555cdb16834b4827f3deb600": {
@@ -1543,221 +1687,221 @@
     "7e85560a01d5c6597477d3078b09721e432198aa89357ccee79f029edf3b2039": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 554
+        "line": 605
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 555
+        "line": 606
       },
       "24": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 556
+        "line": 607
       },
       "40": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 557
+        "line": 608
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 558
+        "line": 609
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 559
+        "line": 610
       },
       "80": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 560
+        "line": 611
       },
       "96": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 561
+        "line": 612
       },
       "104": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 562
+        "line": 613
       },
       "112": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 563
+        "line": 614
       },
       "120": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 564
+        "line": 615
       },
       "136": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 565
+        "line": 616
       },
       "144": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 566
+        "line": 617
       },
       "152": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 567
+        "line": 618
       },
       "160": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 568
+        "line": 619
       },
       "176": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 569
+        "line": 620
       },
       "184": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 570
+        "line": 621
       },
       "192": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 571
+        "line": 622
       },
       "200": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 572
+        "line": 623
       },
       "216": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 573
+        "line": 624
       },
       "224": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 574
+        "line": 625
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 575
+        "line": 626
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 576
+        "line": 627
       },
       "256": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 577
+        "line": 628
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 578
+        "line": 629
       },
       "280": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 579
+        "line": 630
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 580
+        "line": 631
       },
       "312": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 581
+        "line": 632
       },
       "320": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 582
+        "line": 633
       },
       "336": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 583
+        "line": 634
       },
       "352": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 584
+        "line": 635
       },
       "368": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 585
+        "line": 636
       },
       "384": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 586
+        "line": 637
       },
       "400": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 587
+        "line": 638
       },
       "416": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 588
+        "line": 639
       },
       "432": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 589
+        "line": 640
       },
       "448": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 590
+        "line": 641
       },
       "464": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 591
+        "line": 642
       },
       "480": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 592
+        "line": 643
       }
     },
     "8425b21dc92a07ed5252609f90ca0a31dd16db8a6c584ba6ba831c4a748655f6": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 909
+        "line": 960
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 910
+        "line": 961
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 911
+        "line": 962
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 914
+        "line": 965
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 915
+        "line": 966
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 916
+        "line": 967
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 917
+        "line": 968
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 918
+        "line": 969
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 919
+        "line": 970
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 920
+        "line": 971
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 921
+        "line": 972
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 922
+        "line": 973
       },
       "280": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 923
+        "line": 974
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 925
+        "line": 976
       },
       "304": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 926
+        "line": 977
       }
     },
     "8f2bc62c1ea6a264a7bcf9f4e2d687f98fcfc8866133eceec314aea5f575e53f": {
@@ -1815,183 +1959,183 @@
       },
       "192": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "208": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "224": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "240": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "256": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "272": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "288": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "304": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "320": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "336": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "344": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "360": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "368": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "384": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "392": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "400": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "416": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "424": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "432": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "448": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "456": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "464": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "472": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "488": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "504": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "520": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "528": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "536": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "544": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 105
+        "line": 115
       },
       "552": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 117
+        "line": 127
       },
       "560": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 117
+        "line": 127
       },
       "576": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "584": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "592": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "600": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "640": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "656": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "664": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "680": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "688": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "696": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "712": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "720": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "736": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 118
+        "line": 128
       },
       "752": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 120
+        "line": 130
       }
     },
     "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},
@@ -2072,51 +2216,85 @@
     "9b39f1881cd4eb98d39b8c41ea800fc78cdaa9112da81edcd979821543307aef": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 319
+        "line": 370
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 320
+        "line": 371
       },
       "24": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 321
+        "line": 372
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 322
+        "line": 373
       },
       "64": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 323
+        "line": 374
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 324
+        "line": 375
       },
       "88": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 102
+        "line": 112
       },
       "96": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 102
+        "line": 112
       },
       "104": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 331
+        "line": 382
       },
       "120": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 334
+        "line": 385
       },
       "128": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 335
+        "line": 386
       },
       "144": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 338
+        "line": 389
+      }
+    },
+    "a04f9b336ddbf416c421f79968a76d3cd8f28269affe7068c89358f8b057b96a": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1020
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1021
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1022
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1023
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1141
+      },
+      "88": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1142
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1143
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1144
       }
     },
     "a1873f8c0f2f6b1ea06b614b914ce7aea59a6b1d924ed8c066ffc0603bac70b8": {
@@ -2248,27 +2426,27 @@
     "a5714ff73e737c81ba0496ab0183561c2746244ceec6440d4ef3061dd98c3dd0": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 507
+        "line": 558
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 508
+        "line": 559
       },
       "24": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 509
+        "line": 560
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 510
+        "line": 561
       },
       "64": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 511
+        "line": 562
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 512
+        "line": 563
       },
       "88": {
         "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
@@ -2276,19 +2454,85 @@
       },
       "96": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 518
+        "line": 569
       },
       "112": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 521
+        "line": 572
       },
       "120": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 522
+        "line": 573
       },
       "136": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 525
+        "line": 576
+      }
+    },
+    "a67694a9a7ae684179fbf37366e2705e7a1925aaeaa79df49f2677309336c17e": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1115
+      },
+      "8": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1116
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1117
+      },
+      "64": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1118
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1121
+      },
+      "88": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1122
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1123
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1124
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1127
+      },
+      "168": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1128
+      },
+      "216": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1129
+      },
+      "224": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1130
+      },
+      "240": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1133
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1134
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1135
+      },
+      "304": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 1136
       }
     },
     "b27bba27f34030fc8083ae1884760747c9f5f5069d808e84b450db1b8b5a0df3": {
@@ -2301,280 +2545,66 @@
         "line": 2
       }
     },
-    "b715ad990924c58630d97ebab788b42bdb58e1441f5375646c59386e030af689": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 736
-      },
-      "16": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 737
-      },
-      "24": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 738
-      },
-      "40": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 739
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 740
-      },
-      "72": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 741
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 744
-      },
-      "96": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 745
-      },
-      "104": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 746
-      },
-      "120": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 749
-      },
-      "136": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 750
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 751
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 752
-      },
-      "184": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 753
-      },
-      "200": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 754
-      },
-      "208": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 755
-      },
-      "224": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 756
-      },
-      "232": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 757
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 758
-      },
-      "256": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 759
-      },
-      "264": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 760
-      },
-      "280": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 761
-      },
-      "288": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 762
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 764
-      },
-      "304": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 765
-      },
-      "312": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 766
-      },
-      "328": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 768
-      },
-      "336": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 769
-      },
-      "352": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 770
-      },
-      "368": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 772
-      },
-      "376": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 773
-      },
-      "392": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 774
-      },
-      "400": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 775
-      },
-      "416": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 777
-      },
-      "424": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 778
-      },
-      "440": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 779
-      },
-      "448": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "464": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "472": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "480": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "496": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "504": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "520": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "544": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "552": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "592": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "600": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "608": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "624": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "640": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 781
-      },
-      "656": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 782
-      },
-      "664": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 783
-      },
-      "680": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 786
-      }
-    },
     "b96eda968ec0b6a5635f343cf0df726e31654f579c46ac3a238ac4b8b904e6e1": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 929
+        "line": 980
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 930
+        "line": 981
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 931
+        "line": 982
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 934
+        "line": 985
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 935
+        "line": 986
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 936
+        "line": 987
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 937
+        "line": 988
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 938
+        "line": 989
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 939
+        "line": 990
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 940
+        "line": 991
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 941
+        "line": 992
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 942
+        "line": 993
       },
       "280": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 943
+        "line": 994
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 945
+        "line": 996
       },
       "304": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 946
+        "line": 997
       }
     },
     "bf778e30b9bf335fd539247f83b96e0f108c32264ac2ccf305e2c07f46eaf6b5": {
@@ -2654,63 +2684,63 @@
     "c0a095576f0f353f250b049f787dda8e50571e49c22a13763ab6261335ff7510": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 889
+        "line": 940
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 890
+        "line": 941
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 891
+        "line": 942
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 894
+        "line": 945
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 895
+        "line": 946
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 896
+        "line": 947
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 897
+        "line": 948
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 898
+        "line": 949
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 899
+        "line": 950
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 900
+        "line": 951
       },
       "256": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 901
+        "line": 952
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 902
+        "line": 953
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 903
+        "line": 954
       },
       "288": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 905
+        "line": 956
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 906
+        "line": 957
       }
     },
     "c3d5605ba1bfc548ebd4a0a7081621bb80d0fc8b673adf0917f460cb39179acd": {
@@ -2834,67 +2864,67 @@
     "cae6e89dc5152f58b254f410612b82037d66bde599c64ef67871a866686d967e": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1031
+        "line": 1086
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1032
+        "line": 1087
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1033
+        "line": 1088
       },
       "64": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1034
+        "line": 1089
       },
       "80": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1037
+        "line": 1092
       },
       "88": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1038
+        "line": 1093
       },
       "136": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1039
+        "line": 1094
       },
       "144": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1040
+        "line": 1095
       },
       "160": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1043
+        "line": 1098
       },
       "168": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1044
+        "line": 1099
       },
       "216": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1045
+        "line": 1100
       },
       "224": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1046
+        "line": 1101
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1049
+        "line": 1104
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1050
+        "line": 1105
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1051
+        "line": 1106
       },
       "304": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 1052
+        "line": 1107
       }
     },
     "d2e52968115949848a0fd131654c702741b2ba2131f17ec17455ab6b10e21d40": {
@@ -2942,199 +2972,133 @@
     "d7cbb4aa7fbdd11d9b62f46f74ddb582ea42bea974bebeb0ae5d1376b7e589da": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 869
+        "line": 920
       },
       "8": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 870
+        "line": 921
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 871
+        "line": 922
       },
       "32": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 874
+        "line": 925
       },
       "48": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 875
+        "line": 926
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 876
+        "line": 927
       },
       "72": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 877
+        "line": 928
       },
       "232": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 878
+        "line": 929
       },
       "240": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 879
+        "line": 930
       },
       "248": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 880
+        "line": 931
       },
       "256": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 881
+        "line": 932
       },
       "264": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 882
+        "line": 933
       },
       "272": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 883
+        "line": 934
       },
       "288": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 885
+        "line": 936
       },
       "296": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 886
+        "line": 937
       }
     },
     "e6936e8f0e7b8fe98c2ca66eee9d4e9dafcfc747defef9cb795288fabb1b7ef3": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 685
+        "line": 736
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 686
+        "line": 737
       },
       "24": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 687
+        "line": 738
       },
       "40": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 688
+        "line": 739
       },
       "56": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 689
+        "line": 740
       },
       "64": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 690
+        "line": 741
       },
       "80": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 691
+        "line": 742
       },
       "88": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 692
+        "line": 743
       },
       "96": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 693
+        "line": 744
       },
       "112": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 694
+        "line": 745
       },
       "128": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 695
+        "line": 746
       },
       "136": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 696
+        "line": 747
       },
       "144": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 697
+        "line": 748
       }
     },
     "e8a4cba9a2a029706ac409a42d7b8c21033070de1bcf76babac94a2d788d7da2": {
       "0": {
         "filename": "../contracts/upgrade-assistant/RootUpgradeAssistant.tsol",
-        "line": 120
+        "line": 130
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 717
+        "line": 768
       },
       "16": {
         "filename": "RootUpgradeAssistant.code",
-        "line": 718
-      }
-    },
-    "f340f897898aae366f64706978a1499d3d3a7a1848675ed96bf59efe56c92e31": {
-      "0": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 969
-      },
-      "8": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 970
-      },
-      "56": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 971
-      },
-      "64": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 972
-      },
-      "80": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 998
-      },
-      "88": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 999
-      },
-      "136": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1000
-      },
-      "144": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1001
-      },
-      "160": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1027
-      },
-      "168": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1028
-      },
-      "216": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1029
-      },
-      "224": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1030
-      },
-      "240": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1056
-      },
-      "248": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1057
-      },
-      "296": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1058
-      },
-      "304": {
-        "filename": "RootUpgradeAssistant.code",
-        "line": 1059
+        "line": 769
       }
     },
     "f7d0235ba36fbd5d9deabec32b466cb50a4782631f32ef23f333328c45ef2551": {
@@ -3181,6 +3145,220 @@
       "144": {
         "filename": "RootUpgradeAssistant.code",
         "line": 89
+      }
+    },
+    "fd750a7437b57b72adddf76ae8d9e2e238564a51af9aa846319954fda49965ea": {
+      "0": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 787
+      },
+      "16": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 788
+      },
+      "24": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 789
+      },
+      "40": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 790
+      },
+      "56": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 791
+      },
+      "72": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 792
+      },
+      "80": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 795
+      },
+      "96": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 796
+      },
+      "104": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 797
+      },
+      "120": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 800
+      },
+      "136": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 801
+      },
+      "144": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 802
+      },
+      "160": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 803
+      },
+      "184": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 804
+      },
+      "200": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 805
+      },
+      "208": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 806
+      },
+      "224": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 807
+      },
+      "232": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 808
+      },
+      "248": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 809
+      },
+      "256": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 810
+      },
+      "264": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 811
+      },
+      "280": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 812
+      },
+      "288": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 813
+      },
+      "296": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 815
+      },
+      "304": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 816
+      },
+      "312": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 817
+      },
+      "328": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 819
+      },
+      "336": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 820
+      },
+      "352": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 821
+      },
+      "368": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 823
+      },
+      "376": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 824
+      },
+      "392": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 825
+      },
+      "400": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 826
+      },
+      "416": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 828
+      },
+      "424": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 829
+      },
+      "440": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 830
+      },
+      "448": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "464": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "472": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "480": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "496": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "504": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "520": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "544": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "552": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "592": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "600": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "608": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "624": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "640": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 832
+      },
+      "656": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 833
+      },
+      "664": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 834
+      },
+      "680": {
+        "filename": "RootUpgradeAssistant.code",
+        "line": 837
       }
     },
     "fe049bdd5913eace835f3cd1423ffa3b28e058814cacf0343dab5af6f3ee693a": {
