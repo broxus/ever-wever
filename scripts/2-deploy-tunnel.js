@@ -1,40 +1,42 @@
 const logger = require("mocha-logger");
 const prompts = require("prompts");
-const utils = require("../test/utils");
 const ora = require("ora");
+const { isValidEverAddress } = require("locklift/utils");
+const { Address, getRandomNonce, toNano } = require("locklift");
 
-async function main() {
-    const [keyPair] = await locklift.keys.getKeyPairs();
+const main = async () => {
+    const signer = await locklift.keystore.getSigner("0");
 
     const response = await prompts([
         {
             type: 'text',
             name: 'owner',
             message: 'Tunnel owner',
-            validate: value => utils.isValidTonAddress(value) ? true : 'Invalid address'
+            validate: value => isValidEverAddress(value) ? true : 'Invalid address'
         }
     ]);
 
-    const Tunnel = await locklift.factory.getContract('Tunnel');
-
     const spinner = ora('Deploying tunnel').start();
 
-    const tunnel = await locklift.giver.deployContract({
-        contract: Tunnel,
+    const {
+        contract
+    } = await locklift.factory.deployContract({
+        contract: 'Tunnel',
         constructorParams: {
             sources: [],
             destinations: [],
-            owner_: response.owner,
+            owner_: new Address(response.owner),
         },
         initParams: {
-            _randomNonce: locklift.utils.getRandomNonce(),
+            _randomNonce: getRandomNonce()
         },
-        keyPair,
-    }, locklift.utils.convertCrystal(5, 'nano'));
+        publicKey: signer.publicKey,
+        value: toNano(10)
+    });
 
     spinner.stop();
 
-    logger.success(`Tunnel address: ${tunnel.address}`);
+    logger.success(`Tunnel address: ${contract.address}`);
 }
 
 

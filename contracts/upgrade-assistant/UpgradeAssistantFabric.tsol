@@ -17,7 +17,7 @@ import "../tip3/interfaces/ITransferableOwnership.tsol";
 
 
 contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, RandomNonce {
-    address public root;
+    address public tunnel;
     uint public worker;
     uint32 public batches;
     uint32 public batches_done;
@@ -79,7 +79,7 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
     constructor(
         address owner_,
         uint worker_,
-        address root_,
+        address tunnel_,
         TvmCell upgrade_assistant_batch_code_,
         uint32 batches_,
         uint128 deploy_batch_value_
@@ -89,7 +89,7 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
         setOwnership(owner_);
 
         worker = worker_;
-        root = root_;
+        tunnel = tunnel_;
         upgrade_assistant_batch_code = upgrade_assistant_batch_code_;
         batches = batches_;
         batches_deployed = 0;
@@ -149,7 +149,7 @@ contract UpgradeAssistantFabric is IUpgradeAssistantFabric, InternalOwner, Rando
         uint32 nonce,
         address[] wallets
     ) external override onlyBatch(nonce) reserve {
-        IVaultTokenRoot_V1(root).upgradeWallets{
+        IVaultTokenRoot_V1(tunnel).upgradeWallets{
             value: 0,
             bounce: true,
             flag: MsgFlag.REMAINING_GAS

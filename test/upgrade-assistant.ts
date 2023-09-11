@@ -74,7 +74,7 @@ export class UpgradeAssistant {
     worker_key: Ed25519KeyPair;
     wallets: Address[];
     owner: Address;
-    root: Address;
+    tunnel: Address;
     batches_amount: number;
     chunk_size: number;
     external_timeout: number;
@@ -89,12 +89,12 @@ export class UpgradeAssistant {
 
     constructor(
         owner: Address,
-        root: Address,
+        tunnel: Address,
         wallets: Address[],
         batches_amount: number
     ) {
         this.owner = owner;
-        this.root = root;
+        this.tunnel = tunnel;
         this.wallets = [...wallets];
         this.batches_amount = batches_amount;
 
@@ -125,24 +125,22 @@ export class UpgradeAssistant {
 
         const {
             contract: fabric
-        } = await locklift.tracing.trace(
-            locklift.factory.deployContract({
-                contract: 'UpgradeAssistantFabric',
-                initParams: {
-                    _randomNonce: getRandomNonce()
-                },
-                constructorParams: {
-                    owner_: this.owner,
-                    worker_: `0x${this.worker_key.publicKey}`,
-                    root_: this.root,
-                    upgrade_assistant_batch_code_: UpgradeAssistantBatch.code,
-                    batches_: this.batches_amount,
-                    deploy_batch_value_: deployBatchValue
-                },
-                publicKey: signer?.publicKey,
-                value: deployFabricValue // TODO: depends on batches amount
-            })
-        );
+        } = await locklift.factory.deployContract({
+            contract: 'UpgradeAssistantFabric',
+            initParams: {
+                _randomNonce: getRandomNonce()
+            },
+            constructorParams: {
+                owner_: this.owner,
+                worker_: `0x${this.worker_key.publicKey}`,
+                tunnel_: this.tunnel,
+                upgrade_assistant_batch_code_: UpgradeAssistantBatch.code,
+                batches_: this.batches_amount,
+                deploy_batch_value_: deployBatchValue
+            },
+            publicKey: signer?.publicKey,
+            value: deployFabricValue // TODO: depends on batches amount
+        });
 
         this.fabric = fabric;
     }

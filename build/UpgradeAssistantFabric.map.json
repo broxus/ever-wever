@@ -134,54 +134,70 @@
         "line": 842
       }
     },
-    "09d94be96fb76d57d1ce1f09feaea94e337f372e40e65005884db914ae4e20d0": {
+    "04bb4c78fdd4cddfc4bc8059072a3f9bdfebe91654685154497ebce4ad3ba93c": {
       "0": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1324
+        "line": 1203
       },
       "8": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1325
+        "line": 1204
       },
       "56": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1326
+        "line": 1205
       },
       "64": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1327
+        "line": 1206
       },
       "80": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1330
+        "line": 1232
       },
       "88": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1331
+        "line": 1233
       },
       "136": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1332
+        "line": 1234
       },
       "144": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1333
+        "line": 1235
       },
       "160": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1336
+        "line": 1261
       },
       "168": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1337
+        "line": 1262
       },
       "216": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1338
+        "line": 1263
       },
       "224": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1339
+        "line": 1264
+      },
+      "240": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1290
+      },
+      "248": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1291
+      },
+      "296": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1292
+      },
+      "304": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1293
       }
     },
     "09e39b0bad0cbcc18a5d15bedb1513f006ca4265d0c4310af1697957501121a2": {
@@ -1008,38 +1024,70 @@
         "line": 1176
       }
     },
-    "31a18cfa40fccc4d404345ca720bdd9ceb9abe6d964b10dadee7f4beb6cc362e": {
+    "2ff3e1be1f1e64f3b63c56879c4f1d44d7a364b07acbdfc90f9b4bd0dae9e8cb": {
       "0": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1199
+        "line": 1294
       },
       "8": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1200
+        "line": 1295
       },
       "56": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1201
+        "line": 1296
       },
       "64": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1202
+        "line": 1297
       },
       "80": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1320
+        "line": 1300
       },
       "88": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1321
+        "line": 1301
       },
       "136": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1322
+        "line": 1302
       },
       "144": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1323
+        "line": 1303
+      },
+      "160": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1306
+      },
+      "168": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1307
+      },
+      "216": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1308
+      },
+      "224": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1309
+      },
+      "240": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1312
+      },
+      "248": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1313
+      },
+      "296": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1314
+      },
+      "304": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1315
       }
     },
     "35d32d0db9d8d2ad5ed043c6682686a8b243b1bf446e65e147cba7511fa2739b": {
@@ -1188,6 +1236,52 @@
       "0": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol",
         "line": 117
+      }
+    },
+    "419dbf8231f8974fab2381cba48f708ea0ac8795ff0ff3da4158998e893f4abc": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
       }
     },
     "43eec3857cc5dd0c7c03dc4636aa055a87f5d626da614fc2b594cb8ceecd3c4b": {
@@ -1646,106 +1740,124 @@
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
-        "filename": "../node_modules/@broxus/contracts/contracts/access/InternalOwner.tsol",
-        "line": 37
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 988
       }
     },
-    "632803678ada4b03e1ef891a997119341ae5a6d9b15c0754eb4530ec18fa884d": {
+    "63ed504cb277644f2d062cdf2c89790901dd831f9ba87363529ee54ad69c0daa": {
       "0": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 947
+        "line": 1324
       },
-      "16": {
+      "8": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 948
-      },
-      "24": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 949
-      },
-      "40": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 950
+        "line": 1325
       },
       "56": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 951
+        "line": 1326
       },
-      "72": {
+      "64": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 952
+        "line": 1327
       },
       "80": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 953
+        "line": 1330
       },
       "88": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 954
+        "line": 1331
       },
-      "104": {
+      "136": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 955
-      },
-      "120": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 956
-      },
-      "128": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 957
+        "line": 1332
       },
       "144": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 958
+        "line": 1333
+      },
+      "160": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1336
       },
       "168": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 959
-      },
-      "176": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 960
-      },
-      "184": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 961
-      },
-      "200": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 962
+        "line": 1337
       },
       "216": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 966
+        "line": 1338
       },
       "224": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 967
+        "line": 1339
+      }
+    },
+    "6589ee58e71b067dc3ae7b7c28c27ecd9639a83353972ce621d4254cc456cd6b": {
+      "0": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1265
+      },
+      "8": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1266
+      },
+      "56": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1267
+      },
+      "64": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1268
+      },
+      "80": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1271
+      },
+      "88": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1272
+      },
+      "136": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1273
+      },
+      "144": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1274
+      },
+      "160": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1277
+      },
+      "168": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1278
+      },
+      "216": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1279
+      },
+      "224": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1280
+      },
+      "240": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1283
       },
       "248": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 968
-      },
-      "264": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 969
-      },
-      "272": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 970
-      },
-      "288": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 974
+        "line": 1284
       },
       "296": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 975
+        "line": 1285
       },
-      "312": {
+      "304": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 978
+        "line": 1286
       }
     },
     "6d3252f3e2bd7b842fa19bcdbcd2cb2bbdfff4f8a128090e1fde29c3105f2a02": {
@@ -1948,52 +2060,6 @@
         "line": 1096
       }
     },
-    "71635bc8d410bad6b0cf6d0c705111635913b8dfecb42eb57ac3bb82ff55e35d": {
-      "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
-      },
-      "48": {
-        "filename": "<entry-selector>",
-        "line": 5
-      },
-      "56": {
-        "filename": "<entry-selector>",
-        "line": 6
-      },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
-      },
-      "96": {
-        "filename": "<entry-selector>",
-        "line": 9
-      },
-      "112": {
-        "filename": "<entry-selector>",
-        "line": 10
-      },
-      "128": {
-        "filename": "<entry-selector>",
-        "line": 11
-      }
-    },
     "7376573114f37888f81a2039c74e760a58ba0285a94ca841056e12d1e09b91a9": {
       "0": {
         "filename": "UpgradeAssistantFabric.code",
@@ -2038,134 +2104,6 @@
       "136": {
         "filename": "UpgradeAssistantFabric.code",
         "line": 781
-      }
-    },
-    "7c6f1e2ad8bd72a113eeee931abe426303dda27e9ca25e65e2e9cab3bfce11b5": {
-      "0": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1294
-      },
-      "8": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1295
-      },
-      "56": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1296
-      },
-      "64": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1297
-      },
-      "80": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1300
-      },
-      "88": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1301
-      },
-      "136": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1302
-      },
-      "144": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1303
-      },
-      "160": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1306
-      },
-      "168": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1307
-      },
-      "216": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1308
-      },
-      "224": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1309
-      },
-      "240": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1312
-      },
-      "248": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1313
-      },
-      "296": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1314
-      },
-      "304": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1315
-      }
-    },
-    "7dc82b59c1c9f62b2aecd88796b3919b74db51610c3d3a1ba6be479ea3f3e2b2": {
-      "0": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1059
-      },
-      "8": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1060
-      },
-      "16": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1061
-      },
-      "32": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1064
-      },
-      "48": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1065
-      },
-      "56": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1066
-      },
-      "72": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1067
-      },
-      "232": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1068
-      },
-      "240": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1069
-      },
-      "248": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1070
-      },
-      "256": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1071
-      },
-      "264": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1072
-      },
-      "272": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1073
-      },
-      "288": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1075
-      },
-      "296": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1076
       }
     },
     "861ac3179f759b9adbd2625c5d1d3fedfedde12e387cb0b5bfea1e8f4b804642": {
@@ -2817,234 +2755,6 @@
         "line": 152
       }
     },
-    "a1f778937d1105247d661ac30906e34008c6f326596664783461a8c66dc691b5": {
-      "0": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1203
-      },
-      "8": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1204
-      },
-      "56": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1205
-      },
-      "64": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1206
-      },
-      "80": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1232
-      },
-      "88": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1233
-      },
-      "136": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1234
-      },
-      "144": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1235
-      },
-      "160": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1261
-      },
-      "168": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1262
-      },
-      "216": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1263
-      },
-      "224": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1264
-      },
-      "240": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1290
-      },
-      "248": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1291
-      },
-      "296": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1292
-      },
-      "304": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1293
-      }
-    },
-    "ac83fbed35aae5f57a681c27fa96668d22954f8f4b74c30cdeccfc285ad76a14": {
-      "0": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 982
-      },
-      "16": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 983
-      },
-      "24": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 984
-      },
-      "40": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 985
-      },
-      "56": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 986
-      },
-      "72": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 987
-      },
-      "80": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 990
-      },
-      "96": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 991
-      },
-      "104": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 992
-      },
-      "120": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 995
-      },
-      "136": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 996
-      },
-      "144": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 997
-      },
-      "152": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 998
-      },
-      "176": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 999
-      },
-      "192": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1000
-      },
-      "200": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1001
-      },
-      "216": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1002
-      },
-      "224": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1003
-      },
-      "240": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1004
-      },
-      "256": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1005
-      },
-      "272": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1007
-      },
-      "280": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1008
-      },
-      "296": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1009
-      },
-      "304": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "320": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "328": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "336": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "352": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "360": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "376": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "400": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "408": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "448": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "456": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "464": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "480": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "496": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1011
-      },
-      "512": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1012
-      },
-      "520": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1013
-      },
-      "536": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1016
-      }
-    },
     "b9c7f70f704cb89e8dea8cd5024e01093df2f2d291fac94a0954690a640352c0": {
       "0": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol",
@@ -3225,6 +2935,168 @@
         "line": 166
       }
     },
+    "ca863ced6a93e849aac47dd6318f151ec71f06e8867dd49c04331874c30a3a2d": {
+      "0": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 982
+      },
+      "16": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 983
+      },
+      "24": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 984
+      },
+      "40": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 985
+      },
+      "56": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 986
+      },
+      "72": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 987
+      },
+      "80": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 990
+      },
+      "96": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 991
+      },
+      "104": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 992
+      },
+      "120": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 995
+      },
+      "136": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 996
+      },
+      "144": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 997
+      },
+      "152": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 998
+      },
+      "176": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 999
+      },
+      "192": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1000
+      },
+      "200": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1001
+      },
+      "216": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1002
+      },
+      "224": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1003
+      },
+      "240": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1004
+      },
+      "256": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1005
+      },
+      "272": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1007
+      },
+      "280": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1008
+      },
+      "296": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1009
+      },
+      "304": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "320": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "328": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "336": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "352": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "360": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "376": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "400": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "408": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "448": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "456": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "464": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "480": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "496": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1011
+      },
+      "512": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1012
+      },
+      "520": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1013
+      },
+      "536": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1016
+      }
+    },
     "ce670fda871464864a86bdc2b7bedb94459ccabd3d0914be489a53bc80248663": {
       "0": {
         "filename": "UpgradeAssistantFabric.code",
@@ -3363,6 +3235,138 @@
       "368": {
         "filename": "../contracts/upgrade-assistant/UpgradeAssistantFabric.tsol",
         "line": 137
+      }
+    },
+    "dc91e6bef394296a4eb3e09aea8e336ea3005ad816dcd182ac2e8679ed0c4757": {
+      "0": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1199
+      },
+      "8": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1200
+      },
+      "56": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1201
+      },
+      "64": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1202
+      },
+      "80": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1320
+      },
+      "88": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1321
+      },
+      "136": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1322
+      },
+      "144": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1323
+      }
+    },
+    "dd559aea2fecc421ec3b2881cbbbe43b11c36da1a8833ca1d3b217bae59090e6": {
+      "0": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 947
+      },
+      "16": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 948
+      },
+      "24": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 949
+      },
+      "40": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 950
+      },
+      "56": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 951
+      },
+      "72": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 952
+      },
+      "80": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 953
+      },
+      "88": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 954
+      },
+      "104": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 955
+      },
+      "120": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 956
+      },
+      "128": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 957
+      },
+      "144": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 958
+      },
+      "168": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 959
+      },
+      "176": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 960
+      },
+      "184": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 961
+      },
+      "200": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 962
+      },
+      "216": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 966
+      },
+      "224": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 967
+      },
+      "248": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 968
+      },
+      "264": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 969
+      },
+      "272": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 970
+      },
+      "288": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 974
+      },
+      "296": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 975
+      },
+      "312": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 978
       }
     },
     "de0d5a8860d2a122538ea638587046579f9e1c4848bbbd177c4ef5cfb3e73ae1": {
@@ -3573,70 +3577,66 @@
         "line": 943
       }
     },
-    "e8b2b1bb2f4d7b4de1637cf2c73ed5f688d868175f563a21ece794ea12e9a46a": {
+    "e8b55f7065476f758bf988ac9d395610e9aa1f16bbdfe57d9dc2e3f187e0bd1c": {
       "0": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1265
+        "line": 1059
       },
       "8": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1266
+        "line": 1060
+      },
+      "16": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1061
+      },
+      "32": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1064
+      },
+      "48": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1065
       },
       "56": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1267
+        "line": 1066
       },
-      "64": {
+      "72": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1268
+        "line": 1067
       },
-      "80": {
+      "232": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1271
-      },
-      "88": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1272
-      },
-      "136": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1273
-      },
-      "144": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1274
-      },
-      "160": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1277
-      },
-      "168": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1278
-      },
-      "216": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1279
-      },
-      "224": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1280
+        "line": 1068
       },
       "240": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1283
+        "line": 1069
       },
       "248": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1284
+        "line": 1070
+      },
+      "256": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1071
+      },
+      "264": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1072
+      },
+      "272": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1073
+      },
+      "288": {
+        "filename": "UpgradeAssistantFabric.code",
+        "line": 1075
       },
       "296": {
         "filename": "UpgradeAssistantFabric.code",
-        "line": 1285
-      },
-      "304": {
-        "filename": "UpgradeAssistantFabric.code",
-        "line": 1286
+        "line": 1076
       }
     },
     "efbd98dd81c7d4c2aeeebde16fbc6f885c78066a38fc07c1f6a73d1c007de4d5": {

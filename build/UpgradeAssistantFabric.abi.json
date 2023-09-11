@@ -8,7 +8,7 @@
 			"inputs": [
 				{"name":"owner_","type":"address"},
 				{"name":"worker_","type":"uint256"},
-				{"name":"root_","type":"address"},
+				{"name":"tunnel_","type":"address"},
 				{"name":"upgrade_assistant_batch_code_","type":"cell"},
 				{"name":"batches_","type":"uint32"},
 				{"name":"deploy_batch_value_","type":"uint128"}
@@ -103,11 +103,11 @@
 			]
 		},
 		{
-			"name": "root",
+			"name": "tunnel",
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"root","type":"address"}
+				{"name":"tunnel","type":"address"}
 			]
 		},
 		{
@@ -188,7 +188,7 @@
 		{"name":"_constructorFlag","type":"bool"},
 		{"name":"owner","type":"address"},
 		{"name":"_randomNonce","type":"uint256"},
-		{"name":"root","type":"address"},
+		{"name":"tunnel","type":"address"},
 		{"name":"worker","type":"uint256"},
 		{"name":"batches","type":"uint32"},
 		{"name":"batches_done","type":"uint32"},

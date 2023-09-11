@@ -93,6 +93,36 @@ contract VaultTokenRoot_V1 is
         _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
     }
 
+    function setLegacyVaultReserves(
+        uint128 amount
+    ) external override onlyRootOwner {
+        legacy_vault_reserves = amount;
+
+        tvm.rawReserve(_reserve(), 2);
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
+    function decreaseLegacyVaultReserves(
+        uint128 delta
+    ) external override onlyRootOwner {
+        legacy_vault_reserves -= delta;
+
+        tvm.rawReserve(_reserve(), 2);
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
+    function increaseLegacyVaultReserves(
+        uint128 delta
+    ) external override onlyRootOwner {
+        legacy_vault_reserves += delta;
+
+        tvm.rawReserve(_reserve(), 2);
+
+        _transfer(msg.sender, TokenMsgFlag.ALL_NOT_RESERVED);
+    }
+
     function setUpgradeAssistantAdmin(
         address admin
     ) external override reserve onlyRootOwner {
@@ -383,19 +413,45 @@ contract VaultTokenRoot_V1 is
 
         if (msg.sender == legacy_vault_token_wallet) {
             legacy_vault_reserves -= amount;
+
+            _updateTotalSupply(-amount);
+            tvm.rawReserve(_reserve(), 2);
+
+            _burnCallback(
+                amount,
+                callbackTo,
+                walletOwner,
+                msg.sender,
+                remainingGasTo,
+                payload
+            );
+        } else {
+            if (_reserve() >= amount) {
+                _updateTotalSupply(-amount);
+                tvm.rawReserve(_reserve(), 2);
+
+                _burnCallback(
+                    amount,
+                    callbackTo,
+                    walletOwner,
+                    msg.sender,
+                    remainingGasTo,
+                    payload
+                );
+            } else {
+                tvm.rawReserve(_reserve(), 2);
+                _updateTotalSupply(-amount);
+
+                _mint(
+                    amount,
+                    walletOwner,
+                    0,
+                    remainingGasTo,
+                    true,
+                    payload
+                );
+            }
         }
-
-        _updateTotalSupply(-amount);
-        tvm.rawReserve(_reserve(), 2);
-
-        _burnCallback(
-            amount,
-            callbackTo,
-            walletOwner,
-            msg.sender,
-            remainingGasTo,
-            payload
-        );
     }
 
     function owner() internal view returns (address) {
@@ -407,7 +463,7 @@ contract VaultTokenRoot_V1 is
     }
 
     function _reserve() internal view override returns(uint128) {
-        return totalSupply_ - legacy_vault_reserves + INITIAL_BALANCE;
+        return totalSupply_ + INITIAL_BALANCE - legacy_vault_reserves;
     }
 
     function getReserves() external responsible override view returns (uint128) {
@@ -425,7 +481,7 @@ contract VaultTokenRoot_V1 is
 
         tvm.rawReserve(_reserve(), 2);
 
-        _transfer(remainingGasTo, TokenMsgFlag.ALL_NOT_RESERVED);
+        _transfer(remainingGasTo, TokenMsgFlag.ALL_NOT_RESERVED + TokenMsgFlag.IGNORE_ERRORS);
     }
 
     // VAULT

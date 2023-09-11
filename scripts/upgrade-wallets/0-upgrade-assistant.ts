@@ -22,19 +22,28 @@ const main = async () => {
             type: 'text',
             name: 'wallet_file',
             message: 'Path to file with wallets (one wallet address per line)',
-            default: './10_000.txt'
+            initial: './wvenom_500k.csv',
         },
         {
             type: 'text',
             name: 'root',
             message: 'WEVER / WVENOM root address',
-            validate: value => isValidEverAddress(value) ? true : 'Invalid address',
+            validate: (value: string) => isValidEverAddress(value) ? true : 'Invalid address',
+            initial: '0:2c3a2ff6443af741ce653ae4ef2c85c2d52a9df84944bbe14d702c3131da3f14'
         },
         {
             type: 'text',
             name: 'owner',
             message: 'Owner address (copy from ext wallet and do the satoshi test)',
-            validate: value => isValidEverAddress(value) ? true : 'Invalid address',
+            validate: (value: string) => isValidEverAddress(value) ? true : 'Invalid address',
+            initial: '0:1bd84004df384f44018d649e56e8f7d524b02dd9367e3197cb1f4c1ba890462d'
+        },
+        {
+            type: 'text',
+            name: 'tunnel',
+            message: 'Tunnel address (should be set as a Root.upgrade_assistant)',
+            validate: (value: string) => isValidEverAddress(value) ? true : 'Invalid address',
+            initial: '0:4fe8a5ce7acc1adf94335bbb0f4b303267f84b02ef72331846c225476cfa5de1'
         },
         {
             type: 'number',
@@ -46,7 +55,7 @@ const main = async () => {
             type: 'number',
             name: 'wallets_per_upgrade',
             message: 'How many wallets are upgraded per one upgrade',
-            initial: '1000'             
+            initial: '10000'             
         },
         {
             type: 'number',
@@ -100,16 +109,33 @@ const main = async () => {
         bounce: false
     });
 
-    const root = await locklift.factory.getDeployedContract('TokenRootUpgradeable', response.root);
+    const root = await locklift.factory.getDeployedContract('VaultTokenRoot_V1', response.root);
+    const tunnel = await locklift.factory.getDeployedContract('Tunnel', response.tunnel);
 
-    const root_owner = await root.methods.rootOwner({ answerId: 0 }).call();
+    // Check root.upgrade_assistant is tunnel
+    const {
+        upgrade_assistant
+    } = await root.methods.upgrade_assistant().call();
 
-    if (owner.address.toString() !== root_owner.value0.toString()) {
-        logger.error(`Root owner is not ${response.owner}`);
+    if (tunnel.address.toString() !== upgrade_assistant.toString()) {
+        logger.error(`Upgrade assistant is not tunnel`);
        
         process.exit(1);
     } else {
-        logger.log(`Root owner is correct, starting upgrade`);
+        logger.success(`Tunnel is correct`);
+    }
+
+    // Check tunnel owner is owner
+    const {
+        owner: owner_address
+    } = await tunnel.methods.owner().call();
+
+    if (owner_address.toString() !== owner.address.toString()) {
+        logger.error(`Tunnel owner is not owner`);
+
+        process.exit(1);
+    } else {
+        logger.success(`Tunnel owner is correct, starting upgrade`);
     }
 
     for (const [chunk_id, wallets] of wallet_chunks.entries()) {
@@ -119,7 +145,7 @@ const main = async () => {
 
         const upgrade_assistant = new UpgradeAssistant(
             owner.address,
-            new Address(response.root),
+            new Address(response.tunnel),
             wallets,
             response.batches_per_upgrade
         );
@@ -137,7 +163,6 @@ const main = async () => {
     
         await upgrade_assistant.uploadWallets();
 
-        
         let max_wallets_per_batch = 0;
         for (const [batch_id, batch] of upgrade_assistant.batches.entries()) {
             logger.log(`Batch #${batch_id}: ${batch.address.toString()}`);
@@ -149,12 +174,11 @@ const main = async () => {
         }
         logger.log(`Max wallets per batch: ${max_wallets_per_batch}`);
 
-        logger.log(`Transferring root ownership to upgrade assistant...`);
+        logger.log(`Adding (upgrade assistant, root) channel in root...`);
         await locklift.tracing.trace(
-            root.methods.transferOwnership({
-                newOwner: upgrade_assistant.fabric.address,
-                remainingGasTo: owner.address,
-                callbacks: []
+            tunnel.methods.__updateTunnel({
+                destination: new Address(response.root),
+                source: upgrade_assistant.fabric.address
             }).send({
                 from: owner.address,
                 amount: toNano('1')
@@ -169,8 +193,10 @@ const main = async () => {
             amount: toNano(max_wallets_per_batch * upgrade_assistant.batches_amount * 1), // 1 VENOM per account upgrade
         });
 
+        logger.log(`Upgrade transaction: ${tx.id.hash}`);
+
         // Wait until fabric is done
-        // TODO: or tracing?
+        // TODO: turn off?
         logger.log(`Waiting for all batches to finish...`);
         while (true) {
             const done = await upgrade_assistant.isDone();
@@ -184,17 +210,8 @@ const main = async () => {
             }
         }
 
-        // Revoke ownership
-        logger.log(`Revoke ownership...`);
-        await locklift.tracing.trace(
-            upgrade_assistant.fabric.methods.revokeOwnership({}).send({
-                from: owner.address,
-                amount: toNano('1')
-            })
-        );
-
         const endTime = new Date().getTime();
-        logger.log(`Time taken ${(endTime - startTime)/1000} seconds`);
+        logger.log(`Time taken ${(endTime - startTime) / 1000} seconds`);
 
         // Sleep
         logger.log(`Sleeping for ${response.sleep_between_upgrades_seconds} seconds...`);

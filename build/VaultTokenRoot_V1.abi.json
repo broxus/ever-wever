@@ -19,6 +19,30 @@
 			]
 		},
 		{
+			"name": "setLegacyVaultReserves",
+			"inputs": [
+				{"name":"amount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "decreaseLegacyVaultReserves",
+			"inputs": [
+				{"name":"delta","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "increaseLegacyVaultReserves",
+			"inputs": [
+				{"name":"delta","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "setUpgradeAssistantAdmin",
 			"inputs": [
 				{"name":"admin","type":"address"}

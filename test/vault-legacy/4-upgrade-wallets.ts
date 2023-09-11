@@ -3,6 +3,7 @@ import {Address, Contract, WalletTypes, fromNano, getRandomNonce, toNano, zeroAd
 import {
     TokenRootUpgradeableAbi,
     TokenWalletUpgradeableAbi,
+    TunnelAbi,
     UpgradeAssistantFabricAbi,
     VaultTokenRoot_V1Abi
 } from "../../build/factorySource";
@@ -218,12 +219,35 @@ describe('Test upgrading root and wallets', async function() {
         // let upgrade_assistant_fabric: Contract<UpgradeAssistantFabricAbi>;
         // let worker_keys: Ed25519KeyPair[];
         let upgrade_assistant: UpgradeAssistant;
+        let upgrade_assistant_tunnel: Contract<TunnelAbi>;
         let upgrade_assistant_admin: Account;
+
+        it('Set up upgrade assistant tunnel', async () => {
+            const keyPair = (await locklift.keystore.getSigner("0"))!;
+
+            const {
+                contract
+            } = await locklift.factory.deployContract({
+                contract: 'Tunnel',
+                constructorParams: {
+                    sources: [],
+                    destinations: [],
+                    owner_: context.owner.address,
+                },
+                initParams: {
+                    _randomNonce: getRandomNonce()
+                },
+                publicKey: keyPair.publicKey,
+                value: toNano(10)
+            });
+
+            upgrade_assistant_tunnel = contract;
+        });
 
         it('Setup upgrade assistant', async () => {
             upgrade_assistant = new UpgradeAssistant(
                 context.owner.address,
-                root.address,
+                upgrade_assistant_tunnel.address,
                 wallets,
                 1
             );
@@ -244,6 +268,18 @@ describe('Test upgrading root and wallets', async function() {
             });
 
             upgrade_assistant_admin = account;
+        });
+
+        it('Add (upgrade assistant, root) to tunnel', async () => {
+            await locklift.tracing.trace(
+                upgrade_assistant_tunnel.methods.__updateTunnel({
+                    source: upgrade_assistant.fabric.address,
+                    destination: vault_v1.address,
+                }).send({
+                    from: context.owner.address,
+                    amount: toNano('1'),
+                })
+            );
         });
 
         it('Upload wallets to batches', async () => {
@@ -275,7 +311,7 @@ describe('Test upgrading root and wallets', async function() {
 
             await locklift.tracing.trace(
                 vault_v1.methods.setUpgradeAssistant({
-                    assistant: upgrade_assistant.fabric.address
+                    assistant: upgrade_assistant_tunnel.address,
                 }).send({
                     from: upgrade_assistant_admin.address,
                     amount: toNano('1')
@@ -293,7 +329,7 @@ describe('Test upgrading root and wallets', async function() {
             expect(upgrade_assistant_admin_address.toString())
                 .to.be.equal(upgrade_assistant_admin.address.toString(), 'Wrong upgrade assistant admin address');
             expect(upgrade_assistant_address.toString())
-                .to.be.equal(upgrade_assistant.fabric.address.toString(), 'Wrong upgrade assistant address');
+                .to.be.equal(upgrade_assistant_tunnel.address.toString(), 'Wrong upgrade assistant address');
         });
 
         it('Trigger upgrade', async () => {

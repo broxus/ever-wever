@@ -15,6 +15,7 @@ import {
     VaultTokenRoot_V1Abi, 
     VaultTokenWallet_V1Abi
 } from "../../build/factorySource";
+const logger = require("mocha-logger");
 
 
 describe('E2E upgrade test', async function() {
@@ -43,7 +44,7 @@ describe('E2E upgrade test', async function() {
         );
     });
 
-    it('Alice mints tokens (legacy scheme)', async () => {
+    it('Alice mints 10 tokens (legacy scheme)', async () => {
         const trace = await locklift.tracing.trace(
             context.vault.methods.wrap({
                 tokens: toNano(INITIAL_USER_BALANCE),
@@ -60,9 +61,19 @@ describe('E2E upgrade test', async function() {
 
         expect(await context.aliceTokenWallet.methods.balance({ answerId: 0 }).call().then(r => r.value0))
             .to.be.equal(toNano(INITIAL_USER_BALANCE), 'Alice\'s balance is not correct');
+
+        // const vault_balance = await locklift.provider.getBalance(context.vault.address);
+        // const {
+        //     value0: total_supply
+        // } = await context.root.methods.totalSupply({ answerId: 0 }).call();
+
+        // expect(total_supply)
+        //     .to.be.equal(toNano(INITIAL_USER_BALANCE), 'Wrong total supply');
+        // expect(Number(vault_balance))
+        //     .to.be.equal(Number(toNano(INITIAL_USER_BALANCE)) + Number(toNano(1)), 'Wrong vault balance');
     });
 
-    it('Bob mints tokens (legacy scheme)', async () => {
+    it('Bob mints 10 tokens (legacy scheme)', async () => {
         await locklift.tracing.trace(
             context.vault.methods.wrap({
                 tokens: toNano(INITIAL_USER_BALANCE),
@@ -77,6 +88,16 @@ describe('E2E upgrade test', async function() {
 
         expect(await context.bobTokenWallet.methods.balance({ answerId: 0 }).call().then(r => r.value0))
             .to.be.equal(toNano(INITIAL_USER_BALANCE), 'Bob\'s balance is not correct');
+
+        // const vault_balance = await locklift.provider.getBalance(context.vault.address);
+        // const {
+        //     value0: total_supply
+        // } = await context.root.methods.totalSupply({ answerId: 0 }).call();
+
+        // expect(total_supply)
+        //     .to.be.equal(toNano(2 * INITIAL_USER_BALANCE), 'Wrong total supply');
+        // expect(Number(vault_balance))
+        //     .to.be.equal(Number(toNano(2 * INITIAL_USER_BALANCE)) + Number(toNano(1)), 'Wrong vault balance');
     });
 
     it('Check root total supply', async () => {
@@ -161,7 +182,7 @@ describe('E2E upgrade test', async function() {
                     })
             );
 
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
 
             root = await locklift.factory.getDeployedContract('VaultTokenRoot_V1', context.root.address);
         });
@@ -198,9 +219,24 @@ describe('E2E upgrade test', async function() {
                 .to.be.equal(context.owner.address.toString(), 'Wrong root owner');
         });
 
+        it('Set vautl legacy reserves (= total_wrapped)', async () => {
+            const {
+                total_wrapped
+            } = await context.vault.methods.total_wrapped().call();
+
+            const trace = await locklift.tracing.trace(
+                root.methods.setLegacyVaultReserves({
+                    amount: total_wrapped
+                }).send({
+                    from: context.owner.address,
+                    amount: toNano(1)
+                })
+            );
+        });
+
         it('Check root balance', async () => {
             expect(await locklift.provider.getBalance(context.root.address))
-                .to.be.equal(toNano(2 * INITIAL_USER_BALANCE + 1), 'Root balance is not correct');
+                .to.be.equal(toNano(1), 'Root balance is not correct');
         });
 
         it('Drain vault', async () => {
@@ -216,7 +252,11 @@ describe('E2E upgrade test', async function() {
     });
 
     describe('Test: upgraded root, legacy wallets', async () => {
-        it('Alice wraps tokens with vault', async () => {
+        it('Alice burns tokens with vault', async () => {
+
+        });
+
+        it('Alice wraps 15 tokens with vault', async () => {
             const aliceInitialMetrics = await getVaultMetrics(
                 context.aliceTokenWallet, 
                 context.alice, 
@@ -237,7 +277,7 @@ describe('E2E upgrade test', async function() {
                 })
             );
 
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
 
             const aliceFinalMetrics = await getVaultMetrics(
                 context.aliceTokenWallet, 
@@ -266,7 +306,7 @@ describe('E2E upgrade test', async function() {
                 .to.be.equal(0, 'Root WEVER balance is not correct');
         });
 
-        it('Alice burns tokens with vault', async () => {
+        it('Alice burns 1 tokens with vault', async () => {
             const aliceInitialMetrics = await getVaultMetrics(
                 context.aliceTokenWallet, 
                 context.alice, 
@@ -289,7 +329,7 @@ describe('E2E upgrade test', async function() {
                 })
             );
 
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
 
             const aliceFinalMetrics = await getVaultMetrics(
                 context.aliceTokenWallet, 
@@ -351,14 +391,14 @@ describe('E2E upgrade test', async function() {
             );
         });
 
-        it('Mint with contract', async () => {
+        it('Mint 1 token with contract', async () => {
             let payload = await minter_burner.methods.buildPayload({
                 addr: context.alice.address
             }).call().then(v => v.value0);
     
             const trace = await locklift.tracing.trace(
                 context.vault.methods.wrap({
-                    tokens: toNano(10), 
+                    tokens: toNano(3), 
                     owner_address: context.alice.address, 
                     gas_back_address: context.alice.address, 
                     payload: payload
@@ -369,23 +409,23 @@ describe('E2E upgrade test', async function() {
             );
     
             expect(trace.traceTree).to.call('acceptMint').withNamedArgs({
-                amount: toNano(10), 
+                amount: toNano(3), 
                 remainingGasTo: context.alice.address,
                 notify: true, 
                 payload: payload 
             });
         
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
         });
 
-        it('Burn with contract', async () => {
+        it('Burn 1 token with contract', async () => {
             const payload = await minter_burner.methods.buildPayload({
                 addr: context.alice.address
             }).call().then(v => v.value0);
                 
             const trace = await locklift.tracing.trace(
                 context.aliceTokenWallet.methods.transfer({
-                    amount: toNano(5), 
+                    amount: toNano(2), 
                     recipient: minter_burner.address, 
                     deployWalletValue: 0, 
                     remainingGasTo: context.alice.address, 
@@ -397,11 +437,11 @@ describe('E2E upgrade test', async function() {
                 })
             );
     
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
     
             expect(trace.traceTree).to.emit("BurnCallback").withNamedArgs({payload: payload});
             expect(trace.traceTree).to.call("acceptBurn").withNamedArgs({
-                amount: toNano(5),
+                amount: toNano(2),
                 walletOwner: context.vault.address, 
                 remainingGasTo: context.alice.address, 
                 payload: payload
@@ -441,7 +481,7 @@ describe('E2E upgrade test', async function() {
                 })
             );
 
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
         });
 
         it('Test vault wallet acceptNative', async () => {
@@ -460,7 +500,7 @@ describe('E2E upgrade test', async function() {
     
             const trace = await locklift.tracing.trace(
                 vaultTokenWallet.methods.acceptNative({
-                    amount: toNano('0.5'),
+                    amount: toNano('1'),
                     deployWalletValue: toNano('0'),
                     remainingGasTo: context.alice.address,
                     payload: EMPTY_TVM_CELL
@@ -470,9 +510,6 @@ describe('E2E upgrade test', async function() {
                 })
             );
     
-            await trace.traceTree?.beautyPrint();
-    
-            // await trace.traceTree?.beautyPrint();
             const aliceFinalMetrics = await getVaultMetrics(
                 context.aliceTokenWallet,
                 context.alice,
@@ -497,7 +534,7 @@ describe('E2E upgrade test', async function() {
 
             const trace = await locklift.tracing.trace(
                 root.methods.wrap({
-                    tokens: toNano(3),
+                    tokens: toNano(8),
                     recipient: context.bob.address,
                     deployWalletValue: toNano(0.2),
                     remainingGasTo: context.bob.address,
@@ -505,11 +542,9 @@ describe('E2E upgrade test', async function() {
                     payload: EMPTY_TVM_CELL
                 }).send({
                     from: context.bob.address,
-                    amount: toNano(5)
+                    amount: toNano(9)
                 })
             );
-
-            await trace.traceTree?.beautyPrint();
 
             const bobFinalMetrics = await getVaultMetrics(
                 context.bobTokenWallet,
@@ -524,19 +559,19 @@ describe('E2E upgrade test', async function() {
             logMetricsChange(metricsChange);
 
             expect(metricsChange.userWEVERBalance)
-                .to.be.equal(3, 'Bob\'s WEVER balance is not correct');
+                .to.be.equal(8, 'Bob\'s WEVER balance is not correct');
             expect(metricsChange.userEVERBalance)
-                .to.be.above(-3.1)
-                .to.be.below(-3, 'Bob\'s EVER balance is not correct');
+                .to.be.above(-8.1)
+                .to.be.below(-8, 'Bob\'s EVER balance is not correct');
             expect(metricsChange.vaultWEVERBalance)
                 .to.be.equal(0, 'Vault\'s WEVER balance is not correct');
             expect(metricsChange.vaultEVERBalance)
                 .to.be.equal(0, 'Vault\'s EVER balance is not correct');
             expect(metricsChange.WEVERTotalSupply)
-                .to.be.equal(3, 'WEVER total supply is not correct');
+                .to.be.equal(8, 'WEVER total supply is not correct');
             expect(metricsChange.rootWEVERBalance)
-                .to.be.equal(3, 'Root WEVER balance is not correct');
-       });
+                .to.be.equal(8, 'Root WEVER balance is not correct');
+        });
 
         it('Bob transfer WEVERs to root', async () => {
             const bobInitialMetrics = await getVaultMetrics(
@@ -564,7 +599,7 @@ describe('E2E upgrade test', async function() {
                 }
             );
 
-            await trace.traceTree?.beautyPrint();
+            // await trace.traceTree?.beautyPrint();
 
             const bobFinalMetrics = await getVaultMetrics(
                 context.bobTokenWallet,
@@ -592,6 +627,70 @@ describe('E2E upgrade test', async function() {
                 .to.be.equal(-6, 'WEVER total supply is not correct');
             expect(metricsChange.rootWEVERBalance)
                 .to.be.equal(-6, 'Root WEVER balance is not correct');
+        });
+
+        it('Log stats', async () => {
+            const vault_balance = await locklift.provider.getBalance(context.vault.address);
+            const {
+                total_wrapped
+            } = await context.vault.methods.total_wrapped().call();
+
+            logger.log(`Vault balance: ${fromNano(vault_balance)}`);
+            logger.log(`Vault total wrapped: ${fromNano(total_wrapped)}`);
+
+            const {
+                legacy_vault_reserves
+            } = await root.methods.legacy_vault_reserves().call();
+            const root_balance = await locklift.provider.getBalance(root.address);
+            const {
+                value0: total_supply
+            } = await root.methods.totalSupply({ answerId: 0 }).call();
+
+            logger.log(`Root legacy vault reserves: ${fromNano(legacy_vault_reserves)}`);
+            logger.log(`Root balance: ${fromNano(root_balance)}`);
+            logger.log(`Root total supply: ${fromNano(total_supply)}`);
+        });
+
+        it('Burn more tokens than root has', async () => {
+            const {
+                value0: bob_balance
+            } = await context.bobTokenWallet.methods.balance({ answerId: 0 }).call();
+
+            const bobInitialMetrics = await getVaultMetrics(
+                context.bobTokenWallet,
+                context.bob,
+                context.vaultTokenWallet,
+                context.vault,
+                root,
+            );
+
+            const trace = await locklift.tracing.trace(
+                context.bobTokenWallet.methods.transfer({
+                    amount: bob_balance,
+                    payload: EMPTY_TVM_CELL,
+                    remainingGasTo: context.bob.address,
+                    deployWalletValue: toNano(0.2),
+                    recipient: root.address,
+                    notify: true
+                }).send({
+                    from: context.bob.address,
+                    amount: toNano(1)
+                })
+            );
+
+            // await trace.traceTree?.beautyPrint();
+
+            const bobFinalMetrics = await getVaultMetrics(
+                context.bobTokenWallet,
+                context.bob,
+                context.vaultTokenWallet,
+                context.vault,
+                root
+            );
+
+            const metricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
+
+            logMetricsChange(metricsChange);
         });
     });
 });

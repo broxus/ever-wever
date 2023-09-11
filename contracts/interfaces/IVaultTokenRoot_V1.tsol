@@ -23,6 +23,18 @@ interface IVaultTokenRoot_V1 {
         address legacy_vault_
     ) external;
 
+    function setLegacyVaultReserves(
+        uint128 amount
+    ) external;
+
+    function decreaseLegacyVaultReserves(
+        uint128 delta
+    ) external;
+
+    function increaseLegacyVaultReserves(
+        uint128 delta
+    ) external;
+
     function setUpgradeAssistant(
         address assistant
     ) external;
