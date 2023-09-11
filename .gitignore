@@ -13,3 +13,4 @@ everscale/build/*.tvc
 *.log
 .DS_Store
 deployments/local/*
+*.csv

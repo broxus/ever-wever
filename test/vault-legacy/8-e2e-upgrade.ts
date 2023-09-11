@@ -691,6 +691,21 @@ describe('E2E upgrade test', async function() {
             const metricsChange = getMetricsChange(bobInitialMetrics, bobFinalMetrics);
 
             logMetricsChange(metricsChange);
+
+            expect(metricsChange.userWEVERBalance)
+                .to.be.equal(0, "Bob's WEVER balance is not correct");
+            expect(metricsChange.userEVERBalance)
+                .to.be.above(-0.5)
+                .to.be.below(-0.01, "Bob's EVER balance is not correct");
+            expect(metricsChange.vaultWEVERBalance)
+                .to.be.equal(0, 'Vault\'s WEVER balance is not correct');
+            expect(metricsChange.vaultEVERBalance)
+                .to.be.equal(0, 'Vault\'s EVER balance is not correct');
+
+            expect(metricsChange.WEVERTotalSupply)
+                .to.be.equal(0, 'WEVER total supply is not correct');
+            expect(metricsChange.rootWEVERBalance)
+                .to.be.equal(0, 'Root WEVER balance is not correct');
         });
     });
 });
